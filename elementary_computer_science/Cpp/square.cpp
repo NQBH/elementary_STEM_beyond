@@ -1,16 +1,19 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-#define N 1000
+#define inf 1000
+int n, xmin = inf, ymin = inf, xmax = -inf, ymax = -inf;
 int main() {
-	int n, x, y, xmin = N, ymin = N, xmax = -N, ymax = -N;
+	freopen("square.inp", "r", stdin);
+	freopen("square.out", "w", stdout);
 	cin >> n;
 	for (int i = 1; i <= n; ++i) {
+		int x, y;
 		cin >> x >> y;
-		xmin = min(x, xmin);
-		xmax = max(x, xmax);
-		ymin = min(y, ymin);
-		ymax = max(y, ymax);
+		xmin = min(xmin, x);
+		xmax = max(xmax, x);
+		ymin = min(ymin, y);
+		ymax = max(ymax, y);
 	}
 	int c = max(xmax - xmin, ymax - ymin);
-	cout << c*c << '\n';
+	cout << c*c;
 }
