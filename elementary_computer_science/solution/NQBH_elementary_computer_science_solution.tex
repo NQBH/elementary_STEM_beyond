@@ -52,10 +52,10 @@
 %------------------------------------------------------------------------------%
 
 \begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 1., p. 13, HSG Lớp 10 Vĩnh Phúc 2020--2021, Square -- Hình vuông]
-	Cho $n$ điểm có tọa độ là các số nguyên trên hệ trục tọa độ $Oxy$. Tìm diện tích hình vuông nhỏ nhất có các cạnh song song với các trục tọa độ sao cho tất cả các điểm đã cho đều thuộc hình vuông đó (điểm nằm trên cạnh hình vuông cũng được coi là thuộc hình vuông đó).
+	(a) Cho $n$ điểm có tọa độ là các số nguyên trên hệ trục tọa độ $Oxy$. Tìm diện tích hình vuông nhỏ nhất có các cạnh song song với các trục tọa độ sao cho tất cả các điểm đã cho đều thuộc hình vuông đó (điểm nằm trên cạnh hình vuông cũng được coi là thuộc hình vuông đó).
 	\begin{itemize}
-		\item {\sf Input.} Dòng 1: chứa số nguyên dương $n\in\mathbb{N}^\star$, $2\le n\le20$, là số lượng điểm có tọa độ là các số nguyên. $n$ dòng tiếp theo, mỗi dòng ghi 2 số nguyên $x,y\in\mathbb{Z}$, $1\le x,y\le100$, là tọa độ của mỗi điểm.
-		\item {\sf Output.} Ghi diện tích hình vuông nhỏ nhất tìm được.
+		\item {\sf Input.} Dòng 1: chứa số nguyên dương $n\in\mathbb{N}^\star$, $2\le n\le20$, là số lượng điểm có tọa độ là các số nguyên. $n$ dòng tiếp theo, mỗi dòng ghi 2 số nguyên $x,y\in\mathbb{Z}$, $1\le x,y\le100$, là tọa độ của mỗi điểm. \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Cpp/square.inp}{\tt[square.inp]}\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Cpp/square.inp}.}
+		\item {\sf Output.} Ghi diện tích hình vuông nhỏ nhất tìm được. \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Cpp/square.out}{\tt[square.out]}\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Cpp/square.out}.}
 		\item {\sf Sample.}
 		\begin{table}[H]
 			\centering
@@ -71,8 +71,71 @@
 			\end{tabular}
 		\end{table}
 	\end{itemize}
-	Mở rộng bài toán từ `hình vuông' sang `hình chữ nhật'.
+	(b) Mở rộng bài toán từ `hình vuông' sang `hình chữ nhật', \& từ `tọa độ nguyên' sang `tọa độ thực': (i) Cho $n$ điểm có tọa độ là các số thực trên hệ trục tọa độ $Oxy$. Tìm diện tích hình vuông, hình vuông ``nguyên'', hình chữ nhật, \& hình chữ nhật ``nguyên'' nhỏ nhất có các cạnh song song với các trục tọa độ sao cho tất cả các điểm đã cho đều thuộc hình chữ nhật đó (điểm nằm trên cạnh hình chữ nhật cũng được coi là thuộc hình chữ nhật đó), trong đó {\rm hình vuông, hình chữ nhật ``nguyên''} lần lượt là các hình vuông \& hình chữ nhật có các tọa độ của 4 đỉnh là 8 số nguyên.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Hình vuông nhỏ nhất chứa $n$ điểm $(x_i,y_i)$, $i = 1,2,\ldots,n$ trên mặt phẳng tọa độ đã cho là hình vuông mà cạnh của nó sẽ chứa điểm có \textit{hoành độ nhỏ nhất} $x_{\min}\coloneqq\min_{1\le i\le n} x_i$ (hoặc \textit{hoành độ lớn nhất} $x_{\max}\coloneqq\max_{1\le i\le n} x_i$) \& cạnh còn lại sẽ chứa điểm có \textit{tung độ nhỏ nhất} $y_{\min}\coloneqq\min_{1\le i\le n} y_i$ (hoặc \textit{tung độ lớn nhất} $y_{\max}\coloneqq\max_{1\le i\le n} y_i$). Suy ra cạnh hình vuông nhỏ nhất thỏa mãn sẽ bằng $\max\{x_{\max} - x_{\min},y_{\max} - y_{\min}\}$. Chú ý lý luận này áp dụng cho cả 2 trường hợp: (i) các điểm có tọa độ nguyên, i.e., $x_i,y_i\in\mathbb{Z}$, $\forall i = 1,2,\ldots,n$; (ii) các điểm có tọa độ thực, i.e., $x_i,y_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$.
+\end{proof}
+\noindent Python:
+\begin{multicols}{2}
+1st solution \cite[p. 85]{Trung_HSG_THPT_Tin}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Python/square.py}{\tt square.py}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Python/square.py}.}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+inf = 1000
+xmin, xmax, ymin, ymax = inf, -inf, inf, -inf
+file = open("square.inp", "r")
+n = int(file.readline())
+for _ in range(n):
+    x, y = map(int, file.readline().split())
+    xmin = min(xmin, x)
+    xmax = max(xmax, x)
+    ymin = min(ymin, y)
+    ymax = max(ymax, y)
+file.close()
+file = open("square.out", "w")
+c = max(xmax - xmin, ymax - ymin)
+file.write(str(c*c))
+file.close()
+\end{Verbatim}
+\columnbreak
+2nd solution: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Python/square_1.py}{\tt square\_1.py}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Python/square_1.py}.}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+n = int(input())
+x = [0]*n; y = [0]*n
+for i in range(n):
+    x[i], y[i] = map(int, input().split())
+x.sort(); y.sort()
+c = max(x[n-1] - x[0], y[n-1] - y[0])
+print(c*c)
+\end{Verbatim}
+\end{multicols}
+
+\begin{luuy}
+	Sau khi sắp xếp 2 mảng $x = (x_1,x_2,\ldots,x_n)$ \& $y = (x_1,y_2,\ldots,y_n)$ theo thứ tự tăng dần lần lượt thành 2 mảng $x' = (x_1',x_2',\ldots,x_n')$ \& $y' = (y_1',y_2',\ldots,y_n')$, sẽ có $x_1'\le x_2'\le\cdots x_n'$ \& $y_1'\le y_2'\le\cdots\le y_n'$, i.e., $x_1' = \min_{1\le i\le n} x_i' = \min_{1\le i\le n} x_i = x_{\min}$, $x_n' = \max_{1\le i\le n} x_i' = \max_{1\le i\le n} x_i = x_{\max}$, $y_1' = \min_{1\le i\le n} y_i' = \min_{1\le i\le n} y_i = y_{\min}$, \& $y_n' = \max_{1\le i\le n} y_i' = \max_{1\le i\le n} y_i = y_{\max}$, nên dòng lệnh \verb|c = max(x[n-1] - x[0], y[n-1] - y[0])| sẽ cho $c = \max\{x_{\max} - x_{\min},y_{\max} - y_{\min}\}$ như đã lý luận \& có thể viết dòng lệnh này 1 cách tương đương nhờ sử dụng chỉ số âm duyệt từ cuối mảng thành \verb|c = max(x[-1] - x[0], y[-1] - y[0])|.
+\end{luuy}
+C++: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Cpp/square.cpp}{\tt square.cpp}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Cpp/square.cpp}.}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+#include <iostream>
+using namespace std;
+#define N 1000
+int main() {
+    int n, x, y, xmin = N, ymin = N, xmax = -N, ymax = -N;
+    cin >> n;
+    for (int i = 1; i <= n; ++i) {
+        cin >> x >> y;
+        xmin = min(x, xmin);
+        xmax = max(x, xmax);
+        ymin = min(y, ymin);
+        ymax = max(y, ymax);
+    }
+    int c = max(xmax - xmin, ymax - ymin);
+    cout << c*c << '\n';
+}
+\end{Verbatim}
+
+\begin{nhanxet}
+	Nếu bài toán trên mở rộng cho hình vuông \& hình chữ nhật có cách cạnh không nhất thiết phải song song với các trục tọa độ thì bài toán sẽ khó hơn. Đặc biệt, nếu tổng quát bài toán thành: ``Cho $n$ điểm có tọa độ là các số nguyên{\tt/}thực trên hệ trục tọa độ $Oxy$. Tìm diện tích đa giác, đa giác ``nguyên'' $A_1A_2\ldots A_{n-1}A_n$ nhỏ nhất (i.e., đa giác có tọa độ các đỉnh là các số nguyên) sao cho tất cả các điểm đã cho đều thuộc đa giác đó.'' thì bài toán này thuộc mảng Tối Ưu Nguyên (Integral Optimization{\tt/}Programming) \& đặc biệt khó, see, e.g., \href{https://en.wikipedia.org/wiki/Integer_programming}{Wikipedia{\tt/}integer programming}.
+\end{nhanxet}
 
 \begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 2., pp. 13--14, HSG Lớp 10 Vĩnh Phúc 2020--2021, Divisible by 3 -- Chia hết cho 3]
 	Cho dãy $a$ gồm $n$ số nguyên dương. Cho biết có bao nhiêu cặp số trong dãy có tổng chia hết cho $3$, i.e., đếm xem có bao nhiêu cặp chỉ số $i,j$, $1\le i < j\le n$, sao cho $a_i + a_j\divby3$.
