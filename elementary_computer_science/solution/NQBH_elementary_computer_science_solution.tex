@@ -1,0 +1,370 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,color,fancyvrb,float,graphicx,mathtools,multicol}
+\usepackage{enumitem}
+\setlist{leftmargin=4mm}
+\setlength{\columnseprule}{.5pt}
+\def\columnseprulecolor{\color{black}}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problems {\it\&} Solutions in Elementary Computer Science -- Bài Tập {\it\&} Lời Giải Tin Học Sơ Cấp}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+%------------------------------------------------------------------------------%
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 1., p. 13, HSG Lớp 10 Vĩnh Phúc 2020--2021, Square -- Hình vuông]
+	Cho $n$ điểm có tọa độ là các số nguyên trên hệ trục tọa độ $Oxy$. Tìm diện tích hình vuông nhỏ nhất có các cạnh song song với các trục tọa độ sao cho tất cả các điểm đã cho đều thuộc hình vuông đó (điểm nằm trên cạnh hình vuông cũng được coi là thuộc hình vuông đó).
+	\begin{itemize}
+		\item {\sf Input.} Dòng 1: chứa số nguyên dương $n\in\mathbb{N}^\star$, $2\le n\le20$, là số lượng điểm có tọa độ là các số nguyên. $n$ dòng tiếp theo, mỗi dòng ghi 2 số nguyên $x,y\in\mathbb{Z}$, $1\le x,y\le100$, là tọa độ của mỗi điểm.
+		\item {\sf Output.} Ghi diện tích hình vuông nhỏ nhất tìm được.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				{\tt square.inp} & {\tt square.out} \\
+				\hline
+				3 & 16 \\
+				3 4 &  \\
+				5 7 &  \\
+				4 3 &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+	Mở rộng bài toán từ `hình vuông' sang `hình chữ nhật'.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 2., pp. 13--14, HSG Lớp 10 Vĩnh Phúc 2020--2021, Divisible by 3 -- Chia hết cho 3]
+	Cho dãy $a$ gồm $n$ số nguyên dương. Cho biết có bao nhiêu cặp số trong dãy có tổng chia hết cho $3$, i.e., đếm xem có bao nhiêu cặp chỉ số $i,j$, $1\le i < j\le n$, sao cho $a_i + a_j\divby3$.
+	\begin{itemize}
+		\item {\sf Input.} Dòng 1: 1 số nguyên duy nhất $n$, $1\le n\le10^5$. Dòng 2: Ghi $n$ số nguyên dương $a_1,a_2,\ldots,a_n$, $1\le a_i\le10^5$, $\forall i = 1,2,\ldots,n$, là các phần tử của dãy.
+		\item {\sf Output.} 1 dòng duy nhất ghi số lượng cặp số của dãy $a$ có tổng chia hết cho $3$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|l|}
+				\hline
+				{\tt div3.inp} & {\tt div3.out} & Giải thích \\
+				\hline
+				5 & 3 & 3 cặp số tìm được có chỉ số: $(1,4),(2,3),(3,5)$. \\
+				3 6 9 12 & & \\
+				\hline
+				4 & 6 & 6 cặp số tìm được có chỉ số: $(1,2),(1,3),(1,4),(2,3),(2,4),(3,4)$. \\
+				3 6 9 12 & & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 3., p. 14, HSG Lớp 10 Vĩnh Phúc 2020--2021, Delete element -- Xóa phần tử]
+	Cho dãy gồm $n$ số nguyên $a_1,a_2,\ldots,a_n$ với $1\le a_i\le3$, $\forall i = 1,2,\ldots,n$. Có bao nhiêu cách để xóa đi 1 số phần tử của dãy (không xóa phần tử nào cũng được coi là 1 cách) mà vẫn giữ nguyên thứ tự ban đầu để được 1 dãy mới thỏa mãn 2 yêu cầu sau: (i) Dãy còn ít nhất 3 phần  tử. (ii) Phần tử đầu tiên của dãy có giá trị $1$, tiếp theo là 1 số phần tử có giá trị là $2$ (ít nhất có 1 số $2$), \& kết thúc bằng đúng 1 phần tử có giá trị là $3$. E.g., các dãy $1,2,2,3$ \& $1,2,3$ thỏa mãn yêu cầu, các dãy $1,2,3,3$ \& $1,1,2,3$ không thỏa mãn yêu cầu.
+	\begin{itemize}
+		\item {\sf Input.} Dòng 1: 1 số nguyên dương $n\in\mathbb{N}^\star$, $n\le10^6$, là số lượng phần tử của dãy. Dòng 2: Ghi $n$ số nguyên dương $a_1,a_2,\ldots,a_n$ là giá trị của các phần tử của dãy ban đầu.
+		\item {\sf Output.} Gồm 1 dòng duy nhất là số cách xóa để được dãy mới thỏa mãn yêu cầu của đề bài. Do số lượng cách xóa phần tử có thể rất lớn nên chỉ cần ghi ra số lượng cách xóa sau khi chia lấy dư cho $10^9 + 7$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|delete_element.inp| & \verb|delete_element.out| \\
+				\hline
+				8 & 15 \\
+				1 2 1 2 3 1 2 3 &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 1., p. 15, HSG Lớp 11 Vĩnh Phúc 2020--2021, Game button -- Trò chơi bấm nút]
+	Người chơi đang tham gia 1 trò chơi như sau: Có 2 nút bấm A, B, trên nút A có ghi số $m_A$, trên nút B có ghi số $m_B$. Ở mỗi lượt chơi, người chơi phải chọn bấm 1 trong 2 nút \& sẽ nhận được số điểm thưởng bằng với số ghi trên nút đó, sau đó số trên nút bấm giảm đi $1$ đơn vị. Hỏi sau 2 lượt chơi, số điểm thưởng lớn nhất mà người chơi có thể nhận được là bao nhiêu?
+	\begin{itemize}
+		\item {\sf Input.} 1 dòng duy nhất ghi 2 số nguyên dương $m_A,m_B$ với $3\le A,B\le20$, tương ứng với 2 số ghi trên 2 nút A \& B.
+		\item {\sf Output.} Ghi số điểm thưởng lớn nhất mà người chơi có thể nhận được sau 2 lượt chơi.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|l|}
+				\hline
+				\verb|game_button.inp| & \verb|game_button.out| & Giải thích\\
+				\hline
+				5 3 & 9 & Bấm 2 lần nút A \& sẽ có tổng điểm thưởng: $5 + 4 = 9$. \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 2., p. 15, HSG Lớp 11 Vĩnh Phúc 2020--2021, Count number -- Đếm số]
+	Cho 4 số nguyên dương $a,b,c,d$. Đếm xem có bao nhiêu số nguyên dương $x\in\mathbb{N}^\star$ thỏa mãn các điều kiện sau: (i) $a\le x\le b$. (ii) $x\not{\divby}c$. (iii) $x\not{\divby}d$.
+	\begin{itemize}
+		\item {\sf Input.} 1 dòng duy nhất ghi 4 số $a,b,c,d$, $1\le a,b\le10^{18}$, $1\le c,d\le10^9$.
+		\item {\sf Output.} 1 dòng duy nhất ghi số lượng số nguyên dương $x\in\mathbb{N}^\star$ thỏa mãn điều kiện đề bài.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|l|}
+				\hline
+				\verb|count_number.inp| & \verb|count_number.out| & Giải thích \\
+				\hline
+				4 9 2 3 & 2 & Chỉ có số 5 \& 7 thỏa mãn điều kiện đề bài. \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 3., p. 16, HSG Lớp 11 Vĩnh Phúc 2020--2021, Reverse \& reverse -- Lật qua lật lại]
+	Cho dãy $a$ gồm $n\in\mathbb{N}^\star$ phần tử $1,2,\ldots,n$. Người ta thực hiện trên dãy số này đúng $k$ lần 2 thao tác sau: (i) Đầu tiên, đảo ngược thứ tự (lật đối xứng) đoạn phần tử có chỉ số từ $u$ đến $v$. (ii) Tiếp theo, đảo ngược thứ tự (lật đối xứng) đoạn phần tử có chỉ số từ $l$ đến $r$. Với $u,v,l,r$ là các hằng số cho trước. Đưa ra dãy $a$ sau khi thực hiện $k$ lần 2 thao tác nói trên.
+	\begin{itemize}
+		\item {\sf Input.} Dòng 1: 2 số nguyên dương $n,k\in\mathbb{N}^\star$, $1\le n\le100$, $1\le k\le10^9$. Dòng 2: gồm 2 số nguyên dương $u,v$, $1\le u < v\le n$. Dòng 3: gồm 2 số nguyên dương $l,r$, $1\le l < r\le n$.
+		\item {\sf Output.} Ghi trên $n$ dòng, dòng thứ $i$ ghi giá trị của phần tử thứ $i$ của dãy $a$ sau khi thực hiện $k$ lần 2 thao tác nói trên, $\forall i = 1,2,\ldots,n$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|l|}
+				\hline
+				\verb|reverse_reverse.inp| & \verb|reverse_reverse.out| & Giải thích\\
+				\hline
+				7 2 & 1 & Dãy ban đầu: \\
+				2 5 & 2 & 1 2 3 4 5 6 7 \\
+				3 7 & 4 & Lần 1: \\
+				& 3 & 1 \textit{5 4 3 2} 6 7 \\
+				& 5 & 1 5 \textit{7 6 2 3 4} \\
+				& 7 & Lần 2: \\
+				& 6 & 1 \textit{2 6 7 5} 3 4 \\
+				& & 1 2 4 3 5 7 6 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 3., p. 17, HSG Lớp 12 Vĩnh Phúc 2020--2021, Max gift -- Chọn quà mắc nhất]
+	Cuối năm công ty tổ chức phát qua cho nhân viên. Có $n\in\mathbb{N}^\star$ gói quà với giá trị khác nhau được xếp liên tiếp thành 1 hàng, trong đó gói quà thứ $i$ có giá trị là $a_i$. Mỗi nhân viên chỉ được chọn 2 gói quà liên tiếp. Mr. Bean là người may mắn được chọn đầu tiên. Giúp Mr. Bean chọn ra 2 gói quà liên tiếp có giá trị lớn nhất.
+	\begin{itemize}
+		\item {\sf Input.} Dòng 1: chứa số nguyên dương $n\in\mathbb{N}^\star$, $2\le n\le10^6$. Dòng 2: Giá trị của $n$ gói quà, $1\le a_i\le10^3$, $\forall i = 1,2,\ldots,n$, mỗi giá trị cách nhau bởi dấu cách.
+		\item {\sf Output.} 1 dòng duy nhất chứa tổng giá trị quà lớn nhất chọn được.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|max_gift.inp| & \verb|max_gift.out| \\
+				\hline
+				5 & 9 \\
+				1 3 5 4 2 &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 2., pp. 17--18, HSG Lớp 12 Vĩnh Phúc 2020--2021, Decrease value -- Giảm giá trị]
+	1 ngày rảnh rỗi, Mr. Bean chơi trò chơi với các con số. Mr. Bean lấy 1 số nguyên dương $n\in\mathbb{N}^\star$ rồi thực hiện không giới hạn số lần thao tác ``Chọn 1 chữ số $x$ của $n$ rồi giảm $n$ đi $x$ đơn vị''. Hỏi Mr. Bean phải thực hiện ít nhất bao nhiêu thao tác như vậy để giảm số $n$ về $0$. E.g., $n = 27$, Mr. Bean sẽ thực hiện 5 thao tác để biến đổi: (i) Chọn $x = 7\to n = 27 - 7 = 20$. (ii) Chọn $x = 2\to n = 20 - 2 = 18$. (iii) Chọn $x = 8\to n = 18 - 8 = 10$. (iv) Chọn $x = 1\to n = 10 - 1 = 9$. (v) Chọn $x = 9\to n = 9 - 9 = 0$.
+	\begin{itemize}
+		\item {\sf Input.} 1 dòng: 1 số nguyên dương duy nhất $n$, $1\le n\le10^6$.
+		\item {\sf Output.} 1 dòng duy nhất ghi số thao tác ít nhất để biến đổi $n$ về $0$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|decrease_value.inp| & \verb|decrease_value.out| \\
+				\hline
+				27 & 5 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 3., p. 18, HSG Lớp 12 Vĩnh Phúc 2020--2021, Difference degree of substrings -- Xâu con phân biệt]
+	1 lần Mr. Bean được bạn gái gửi cho 1 dãy ký tự $S$ độ dài $n$ chỉ gồm các chữ cái in hoa (`A',$\ldots$,`Z'). Bạn gái nhờ Mr. Bean xác định ``độ phân biệt'' của dãy ký tự trên. Trong đó {\rm độ phân biệt} của dãy ký tự là số nguyên dương $l$ nhỏ nhất sao cho tất cả các xâu con của $S$ độ dài $l$ là đôi một phân biệt. E.g., với $n = 7$, $S =$ `ABCDABC' thì $l = 4$ do tất cả các xâu con độ dài $4$ đều phân biệt. Giúp Mr. Bean việc đó.
+	\begin{itemize}
+		\item {\sf Input.} Dòng 1: số nguyên dương $n\in\mathbb{N}^\star$, $n\le100$. Dòng 2: chứa xâu ký tự S.
+		\item {\sf Output.} Gồm 1 dòng duy nhất ghi 1 số nguyên duy nhất là ``độ phân biệt'' của dãy ký tự S.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|diff_substring.inp| & \verb|diff_substring.out| \\
+				\hline
+				7 & 4 \\
+				ABCDABC &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 4., p. 18, HSG Lớp 12 Vĩnh Phúc 2020--2021, Ants meet -- Kiến tha mồi]
+	Trên đường đi làm về Mr. Bean quan sát thấy 2 ổ kiến cách nhau 1 khoảng $l$ đơn vị. Các con kiến đang tha mồi về 2 tổ trên đường thẳng nối 2 tổ kiến với nhau. Các con kiến khi tha mồi về tổ nào thì ở lại tổ đó. Nếu 2 con kiến gặp nhau trên đường đi thì cả 2 sẽ đổi hướng di chuyển.
+	
+	Giả sử đường nối giữa 2 tổ kiến được gắn tọa độ từ $0$ đến $l$. Tổ thứ nhất ở vị trí $0$ \& tổ thứ 2 ở vị trí $l$. Ở thời điểm Mr. Bean quan sát có $n$ con kiến đang tha mồi về tổ. Con thứ $i$ xuất phát ở tọa độ $x_i$, mang lượng mồi khối lượng $w_i$ \& có hướng di chuyển $d_i$. Nếu $d_i = 1$ thì con kiến thứ $i$ đang di chuyển theo hướng $0$ về $l$, $d_i = -1$ thì con kiến thứ $i$ đang di chuyển theo chiều ngược lại. Tất cả các con kiến có tốc độ di chuyển bằng nhau \& bằng $1$ đơn vị đo độ dài trên giây.
+	
+	Gọi $t$ là thời điểm sớm nhất tính từ thời điểm quan sát mà tổng lượng mồi được tha về 2 tổ đạt ít nhất $\frac{1}{2}$ tổng lượng mồi của đàn kiến. Mr. Bean đếm được trong thời gian đó các con kiến gặp nhau đúng $x$ lần, tính cả lần gặp nhau ở thời điểm $t$. Hỏi $x$ bằng bao nhiêu?
+	\begin{itemize}
+		\item {\sf Input.} Dòng 1: 2 số nguyên dương $n,l\in\mathbb{N}^\star$, $1\le n\le5\cdot10^4$, $1\le l\le10^9$. Dòng 2,$\ldots,n + 1$: Dòng $i + 1$ ghi 3 số nguyên $w_i,x_i,d_i$, $1\le w_i\le10^3$, $d_i = \pm1$, $0\le x_i\le l$, các số $x_i$, $i = 1,2,\ldots,n$, đôi một phân biệt. Các số nguyên cách nhau 1 dấu cách.
+		\item {\sf Output.} 1 dòng duy nhất chứa số nguyên $x\in\mathbb{N}^\star$ là số lần gặp nhau của các cặp kiến.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|ant_meet.inp| & \verb|ant_meet.out| \\
+				\hline
+				3 5 & 2 \\
+				1 1 1 & \\
+				2 2 -1 & \\
+				3 3 -1 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+		Giải thích: Thời điểm $0.5$, kiến 1 gặp kiến 2 ở tọa độ $1.5$, kiến 1 đổi hướng thành $-1$, kiến 2 đổi hướng thành $1$. Thời điểm 1, kiến 2 gặp kiến 3 ở tọa độ $2$, kiến 2 đổi hướng thành $-1$, kiến 3 đổi hướng thành $1$. Thời điểm 2: kiến 1 về đến tổ ở tọa độ $0$. Thời điểm 3: kiến 2 về đến tổ ở tọa độ $0$, lúc này lượng mồi đạt được ở 2 tổ là $3$, bằng  $\frac{1}{2}$ tổng lượng mồi của cả 3 kiến.
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 1., p. 20, HSG Lớp 12 Nam Định 2020--2021, Nearly perfect number -- Số gần hoàn hảo]
+	1 số nguyên dương $a\in\mathbb{N}^\star$ được gọi là {\rm số ``gần hoàn hảo''} nếu thỏa mãn điều kiện: $2a\le k$ với $k$ là tổng các ước số của $a$, e.g., $12$ là 1 số ``gần hoàn hảo'' vì $2\cdot12 < 1 + 2 + 3 + 4 + 6 + 12$ ($24 < 28$).
+	\begin{itemize}
+		\item {\sf Input.} Dòng đầu tiên chứa số nguyên dương $n\in\mathbb{N}^\star$, $1\le n\le10^4$. $n$ dòng tiếp theo, mỗi dòng là 1 số nguyên dương có giá trị $\le10^6$.
+		\item {\sf Output.} Dòng đầu tiên ghi số lượng số ``gần hoàn hảo''. Các dòng tiếp theo, mỗi dòng ghi 1 số ``gần hoàn hảo'', số gặp trước thì viết trước.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|near_perfect_number.inp| & \verb|near_perfect_number.out| \\
+				\hline
+				5 & 2 \\
+				8 & 12 \\
+				16 & 6 \\
+				12 & \\
+				6 & \\
+				7 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 2., pp. 20--21, HSG Lớp 12 Nam Định 2020--2021, Special number -- Số đặc biệt]
+	Cho 1 dãy gồm $n$ số nguyên $a_1,a_2,\ldots,a_n$. Đếm \& đưa ra số đặc biệt trong dãy $a$. {\rm Số đặc biệt} là số chỉ xuất hiện đúng 1 lần trong dãy số.
+	\begin{itemize}
+		\item {\sf Input.} Dòng đầu tiên là số $n\in\mathbb{N}^\star$, $1\le n\le10^6$. $n$ dòng tiếp theo, dòng thứ $i$ là số $a_i$, $|a_i|\le10^9$, $\forall i = 1,2,\ldots,n$.
+		\item {\sf Output.} Dòng đầu tiên ghi số lượng số đặc biệt. Các dòng tiếp theo, mỗi dòng ghi 1 số đặc biệt tính từ đầu dãy $a$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|special_number.inp| & \verb|special_number.out| \\
+				\hline
+				8 & 3 \\
+				9 & 6 \\
+				9 & 11 \\
+				7 & 5 \\
+				7 & \\
+				6 & \\
+				11 & \\
+				9 & \\
+				5 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 3., p. 21, HSG Lớp 12 Nam Định 2020--2021, Game of gifts -- Trò chơi tặng quà]
+	1 công ty có tổ chức trò chơi, tặng $n\in\mathbb{N}^\star$ gói quà đã được chuẩn bị theo giá trị phần quà từ thấp đến cao, để tri ân cho $n$ khách hàng. Công ty đó đã chuẩn bị 1 chiếc hộp đựng $n$ mảnh giấy, mỗi mảnh giấy được bí mật ghi 1 mã hóa gồm nhiều ký tự số \& chữ. Mỗi khách hàng được chọn 1 mảnh giấy trong chiếc hộp đó. Viết chương trình tặng quà từ thấp đến cao theo số lượng các ký tự số của mã hóa trong tờ giấy, nếu số lượng ký tự số trong mã hóa bằng nhau thì khách hàng chọn trước được tặng quà trước.
+	\begin{itemize}
+		\item {\sf Input.} Dòng đầu tiên chứa số nguyên dương $n\in\mathbb{N}^\star$, $1\le n\le10^4$. $n$ dòng tiếp theo, mỗi dòng chứa 1 mã hóa không dài quá $255$ ký tự tương ứng cho từng khách hàng.
+		\item {\sf Output.} Thứ tự tặng quà của trò chơi này cho $n$ khách hàng trên.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|game_gift.inp| & \verb|game_gift.out| \\
+				\hline
+				5 & G2Chuc \\
+				N123456Cao & A89Dat \\
+				A89Dat & L512Ket \\
+				G2Chuc & E3689Qua \\
+				L512Ket & N123456Cao \\
+				E3689Qua &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 4., pp. 21--22, HSG Lớp 12 Nam Định 2020--2021, Work -- Công việc]
+	Trong 1 dây chuyền làm việc của công ty có $n$ công nhân làm $n$ việc. Người ta đánh số cho công nhân từ $1$ đến $n$ theo thứ tự đứng trong dây chuyền. Thời gian hoàn thành 1 công việc của người thứ $i$ là $t_i$ phút. Mỗi người cần làm xong công việc của mình nhưng được quyền làm tối đa $2$ việc. Vì thế họ có thể phối hợp với người đứng ngay trước mình cùng làm, nếu người thứ $i$ \& người thứ $i + 1$ phối hợp thì thời gian làm xong việc cho $2$ người là $p_i$. Tìm phương án sao cho $n$ công việc đều hoàn thành với thời gian ít nhất.
+	\begin{itemize}
+		\item {\sf Input.} Dòng 1 ghi số $n$, $1 < n\le10^6$. Dòng 2 ghi thời gian làm xong việc của từng công nhân tương ứng trong dây chuyền $t_1,t_2,\ldots,t_n$, $1\le t_i\le60$, $\forall i = 1,2,\ldots,n$. Dòng 3 ghi $n - 1$ số thời gian cùng làm tương ứng cho số cặp công nhân nếu phối hợp $p_1,p_2,\ldots,p_{n-1}$, $1\le p_i\le100$, $\forall i = 1,2,\ldots,n$.
+		\item {\sf Output.} 1 số duy nhất ghi tổng thời gian hoàn thành công việc ít nhất của $n$ công nhân.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|work.inp| & \verb|work.out| \\
+				\hline
+				5 & 17 \\
+				2 5 7 8 4 & \\
+				3 9 10 10 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
