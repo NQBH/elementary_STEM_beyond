@@ -1,7 +1,7 @@
 n = int(input())
-a = [0]*n; b = [0]*n
+x = [0]*n; y = [0]*n
 for i in range(n):
-	a[i], b[i] = map(int, input().split())
-a.sort(); b.sort()
-c = max(a[n-1] - a[0], b[n-1] - b[0])
+	x[i], y[i] = map(int, input().split())
+x.sort(); y.sort()
+c = max(x[n-1] - x[0], y[n-1] - y[0]) # c = max(x[-1] - x[0], y[-1] - y[0])
 print(c*c)
