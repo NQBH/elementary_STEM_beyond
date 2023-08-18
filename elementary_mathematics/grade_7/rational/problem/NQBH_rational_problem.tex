@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Set $\mathbb{Q}$ of Rationals -- Bài Tập: Tập Hợp $\mathbb{Q}$ Các Số Hữu Tỷ}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Last updated version: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}natural calculus{\tt/}problem: calculus on set $\mathbb{N}$ of naturals [pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.pdf}.} [\href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.tex}.}. 
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 1, p. 5]
+	Cho $x = \dfrac{12}{b - 15}$ với $b\in\mathbb{Z}$. Xác định $b$ để: (a) $x\in\mathbb{Q}$. (b) $x$ là 1 số hữu tỷ dương. (c) $x$ là 1 số hữu tỷ âm. (d) $0 < x < 1$.\hfill{\sf Ans:} (a) $b\ne 15$. (b) $b > 15$. (c) $b < 15$. (d) $b > 27$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 2, p. 5]
+	So sánh: $\dfrac{-16}{27},\dfrac{-16}{29},\dfrac{-19}{27}$.\hfill{\sf Ans:} $\dfrac{-19}{27} < \dfrac{-16}{27} < \dfrac{-16}{29}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 1., p. 5]
+	Cho 2 số hữu tỷ $x = \dfrac{-5}{7}$, $y = \dfrac{-2}{3}$. 2 số hữu tỷ này còn được biểu diễn bởi phân số nào trong các phân số sau: $\dfrac{9}{11},\dfrac{4}{-6},\dfrac{15}{-21},\dfrac{-35}{49},\dfrac{-10}{15},\dfrac{-6}{-9}$.\hfill{\sf Ans:} $x = \dfrac{15}{-21} = \dfrac{-35}{49}$, $y = \dfrac{4}{-6} = \dfrac{-10}{15}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 2., p. 6]
+	Sắp xếp các số hữu tỷ sau theo thứ tự tăng dần: (a) $\dfrac{19}{33},\dfrac{6}{11},\dfrac{13}{22}$. (b) $\dfrac{-18}{12},\dfrac{-10}{7},\dfrac{-8}{5}$.\\\mbox{}\hfill{\sf Ans:} (a) $\dfrac{6}{11} < \dfrac{19}{33} < \dfrac{13}{22}$. (b) $\dfrac{-8}{5} < \dfrac{-18}{12} < \dfrac{-10}{7}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 3., p. 6]
+	So sánh các số hữu tỷ sau bằng cách nhanh nhất: (a) $-5$ \& $\dfrac{1}{63}$. (b) $\dfrac{-18}{17}$ \& $\dfrac{-999}{1000}$. (c) $\dfrac{-17}{35}$ \& $\dfrac{-43}{85}$. (d) $-0.76$ \& $\dfrac{-19}{28}$.\hfill{\sf Ans:} (a) $-5 < \dfrac{1}{63}$. (b) $\dfrac{-18}{17} < \dfrac{-999}{1000}$. (c) $\dfrac{-17}{35} > \dfrac{-43}{85}$. (d) $-0.76 < \dfrac{-19}{28}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 4., p. 6]
+	Tìm các số hữu tỷ biểu diễn dưới dạng phân số có mẫu số bằng $10$, lớn hơn $\dfrac{-7}{13}$ nhưng nhỏ hơn $\dfrac{-4}{13}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 5., p. 6]
+	Dùng $4$ chữ số $1$ \& dấu $-$ (nếu cần thiết) để biểu diễn (không dùng phép tính lũy thừa): (a) Các số nguyên $-1$, $-111$. (b) Số hữu tỷ âm lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 6., p. 6]
+	Cho các số nguyên dương $a < b < c < d < m < n$. Chứng minh: $\dfrac{a + c + m}{ a + b + c + d + m + n} < \dfrac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 7., p. 6]
+	Với cùng 1 khối lượng thành phẩm, vàng 4 số 9 \& vàng 3 số 9, loại nào có hàm lượng vàng nhiều hơn?\hfill{\sf Ans:} Vàng 4 số 9 nhiều hơn.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Phép $\pm,\cdot,:$ Số Hữu Tỷ}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
