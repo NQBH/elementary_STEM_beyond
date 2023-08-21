@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Circle -- Bài Tập: Đường Tròn}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Last updated version: \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.pdf}{GitHub{\tt/}NQBH{\tt/}elementary STEM \& beyond{\tt/}elementary mathematics{\tt/}grade 9{\tt/}circle{\tt/}problem: set $\mathbb{Q}$ of circles [pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.pdf}.} [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/rational/problem/NQBH_circle_problem.tex}.}. 
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Sự Xác Định Đường Tròn. Tính Chất Đối Xứng của Đường Tròn}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 8, p. 95]
+	Cho hình thang cân ABCD. Chứng minh tồn tại 1 đường tròn đi qua cả 4 đỉnh của hình thang.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 50., p. 95]
+	Cho $\Delta ABC$ cân tại A nội tiếp đường tròn $(O)$, $AC = 40$ {\rm cm}, $BC = 48$ {\rm cm}. Tính khoảng cách từ O đến BC. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 51., p. 96]
+	Cho $\Delta ABC$ cân tại A nội tiếp đường tròn $(O)$, cạnh bên bằng $b$, đường cao $AH = h$. Tính bán kính của đường tròn $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 52., p. 96]
+	Cho $\Delta ABC$ nhọn nội tiếp đường tròn $(O;R)$. Gọi M là trung điểm BC. Giả sử O nằm trong $\Delta AMC$ hoặc O nằm giữa A \& M. Gọi I là trung điểm của AC. Chứng minh: (a) Chu vi $\Delta IMC$ lớn hơn $2R$. (b) Chu vi $\Delta ABC$ lớn hơn $4R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 53., p. 96]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$. Gọi D, E, F lần lượt là trung điểm của BC, CA, AB. Kẻ 3 đường thẳng $DD',EE',FF'$ sao cho $DD'\parallel OA,EE'\parallel OB,FF'\parallel OC$. Chứng minh 3 đường thẳng $DD',EE',FF'$ đồng quy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 54., p. 96]
+	Cho 3 điểm A, B, C bất kỳ \& đường tròn $(O;1)$. Chứng minh tồn tại 1 điểm M nằm trên đường tròn $(O)$ sao cho $MA + MB + MC\ge3$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Đường Kính \& Dây của Đường Tròn. Liên Hệ Giữa Dây \& Khoảng Cách Từ Tâm Đến Dây}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
