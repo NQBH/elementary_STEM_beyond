@@ -39,7 +39,7 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 
-\title{Problem: Trigonometry In Triangles\\Bài Tập: Hệ Thức Lượng Trong Tam Giác}
+\title{Problem {\it\&} Solution: Trigonometry In Triangles\\Bài Tập \& Lời Giải: Hệ Thức Lượng Trong Tam Giác}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
@@ -56,7 +56,7 @@
 \textbf{\textsf{Ký hiệu.}} $\Delta ABC$ vuông tại $A$: $a\coloneqq BC$, $b\coloneqq CA$, $c\coloneqq AB$, $b'\coloneqq CH$, $c'\coloneqq BH$, $h\coloneqq AH$.\\\textbf{\textsf{Tính chất.}} \fbox{1} $b^2 = ab'$, $c^2 = ac'$. \fbox{2} \textit{Định lý Pythagore thuận \& đảo}: $\Delta ABC$ vuông tại $A\Leftrightarrow a^2 = b^2 + c^2$. \fbox{3} $h^2 = b'c'$. \fbox{4} $ah = bc = 2S_{ABC}$. \fbox{5} $\dfrac{1}{h^2} = \dfrac{1}{b^2} + \dfrac{1}{c^2}$.
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 1, p. 84]
-	Tính diện tích hình thang $ABCD$ có đường cao bằng {\rm12 cm}, 2 đường chéo $AC,BD$ vuông góc với nhau, $BD = 15$ {\rm cm}.
+	Tính diện tích hình thang ABCD có đường cao bằng {\rm12 cm}, 2 đường chéo AC, BD vuông góc với nhau, $BD = 15$ {\rm cm}.
 \end{baitoan}
 
 \begin{proof}[Giải]
@@ -104,6 +104,156 @@
 	\end{equation*}
 	Có $a + b + c = 72\Leftrightarrow b + c = 72 - a = 72 - 2x$. Từ hệ phương trình vừa thu được: $(b + c)^2 = b^2 + c^2 + 2bc = 4x^2 + 4x(x - 7) = 8x^2 - 28x\Leftrightarrow(72 - 2x)^2 = 8x^2 - 28x\Leftrightarrow72^2 - 2\cdot72\cdot2x + 4x^2 = 8x^2 - 28x\Leftrightarrow4x^2 + 260x - 72^2 = 0\Leftrightarrow x^2 + 65x - 1296 = 0\Leftrightarrow(x - 16)(x + 81) = 0\Leftrightarrow x = 16\lor x = -81$ (loại vì $x > 0$) $\Rightarrow x = 16\Rightarrow S_{ABC} = \frac{1}{2}bc = x(x - 7) = 16(16 - 7) = 144\ {\rm cm}^2$.
 \end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 1., p. 86]
+	Chứng minh định lý Pythagore bằng cách đặt 2 tam giác vuông bằng nhau $\Delta ABC = \Delta DCE$:
+	\begin{center}
+		\begin{tikzpicture}
+			\path
+			(0,0) coordinate (A)
+			(0,1) coordinate (B)
+			(2,0) coordinate (C)
+			(3,0) coordinate (D)
+			(3,2) coordinate (E)
+			;
+			\draw
+			(A)--(B)--(C)--cycle (C)--(D)--(E)--cycle
+			pic[draw, angle radius=1.5mm]{right angle=B--A--C}
+			pic[draw, angle radius=1.5mm]{right angle=C--D--E}
+			;
+			\foreach \x/\g in {A/-135,B/180,C/-90,D/-45,E/45} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+		\end{tikzpicture}
+	\end{center}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 2., p. 86]
+	Cho $\Delta ABC$ cân có $AB = AC = 9$ {\rm cm}, $BC = 12$ {\rm cm}, đường cao $AH$, I là hình chiếu của H trên AC. (a) Tính độ dài CI. (b) Kẻ đường cao BK của $\Delta ABC$. Chứng minh điểm K nằm giữa 2 điểm A, C.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 3., p. 86]
+	Cho $\Delta ABC$ có $\widehat{A} = 120^\circ$, $BC = a$, $AC = b$, $AB = c$. Chứng minh $a^2 = b^2 + c^2 + bc$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 4., p. 86]
+	Tính cạnh đáy BC của $\Delta ABC$ cân biết đường cao ứng với cạnh đáy bằng {\rm15.6 cm} \& đường cao ứng với cạnh bên bằng {\rm12 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 5., p. 86]
+	Cho $\Delta ABC$ vuông tại A, đường phân giác AD, đường cao AH. Biết $BD = 7.5$ {\rm cm}, $CD = 10$ {\rm cm}. Tính AH, BH, DH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 6., p. 86]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH, $AB = 20$ {\rm cm}, $CH = 9$ {\rm cm}. Tính độ dài AH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 7., p. 86]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH. Tia phân giác của $\widehat{HAC}$ cắt HC ở D. Gọi K là hình chiếu của D trên AC. Biết $BC = 25$ {\rm cm}, $DK = 6$ {\rm cm}. Tính AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 8., p. 86]
+	Cho $\Delta ABC$ có $AB = 6$ {\rm cm}, $AC = 8$ {\rm cm}, 2 đường trung tuyến BD, CE vuông góc với nhau. Tính BC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 9., p. 86]
+	Cho $\Delta ABC$ có $\widehat{B} = 60^\circ$, $BC = 8$ {\rm cm}, $AB + AC = 12$ {\rm cm}. Tính AB, AC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 10., p. 86]
+	Trong 1 tam giác vuông, đường cao ứng với cạnh huyền chia tam giác thành 2 phần có diện tích bằng $\rm54\ cm^2$ \& $\rm96\ cm^2$. Tính độ dài cạnh huyền.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 11., p. 86]
+	Cho $\Delta ABC$ vuông cân tại A, đường trung tuyến BM. Gọi D là hình chiếu của C trên BM, H là hình chiếu của D trên AC. Chứng minh $AH = 3DH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 12., pp. 86--87]
+	(a) 1 tam giác vuông có tỷ số các cạnh góc vuông bằng $k$. Tính tỷ số các hình chiếu của 2 cạnh góc vuông trên cạnh huyền. (b) Tính độ dài hình chiếu của các cạnh góc vuông trên cạnh huyền của 1 tam giác vuông, biết tỷ số 2 cạnh góc vuông bằng $5:4$ \& cạnh huyền dài {\rm82 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 13., p. 87]
+	Trong 1 tam giác vuông, đường phân giác của góc vuông chia cạnh huyền thành 2 đoạn thẳng tỷ lệ với $1:3$. Đường cao ứng với cạnh huyền chia cạnh đó theo tỷ số nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 14., p. 87]
+	Cho $\Delta ABC$ có độ dài 3 cạnh AB, BC, CA là 3 số tự nhiên liên tiếp tăng dần. Kẻ đường cao AH, đường trung tuyến AM. Chứng minh $HM = 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 15., p. 87]
+	1 hình thang cân có đường chéo vuông góc với cạnh bên. Tính chu vi \& diện tích hình thang biết đáy nhỏ dài {\rm14 cm}, đáy lớn dài {\rm50 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 16., p. 87]
+	1 hình thoi có diện tích bằng $\frac{1}{2}$ diện tích hình vuông có cạnh bằng cạnh của hình thoi. Tính tỷ số của đường chéo dài \& đường chéo ngắn của hình thoi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 17., p. 87]
+	Qua đỉnh A của hình vuông ABCD cạnh $a$, vẽ 1 đường thẳng cắt cạnh BC ở M \& cắt đường thẳng CD ở I. Chứng minh $\dfrac{1}{AM^2} + \dfrac{1}{AI^2} = \dfrac{1}{a^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 18., p. 87]
+	Cho hình vuông ABCD có cạnh {\rm1 dm}. Tính cạnh của $\Delta AEF$ đều có E thuộc cạnh CD \& F thuộc cạnh BC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 19., p. 87]
+	Trong 2 tam giác sau, tam giác nào là tam giác vuông, nếu độ dài 3 đường cao bằng: (a) $3,4,5$. (b) $12,15,20$.
+\end{baitoan}
+
+
+\begin{baitoan}[Mở rộng \cite{Binh_Toan_9_tap_1}, 19., p. 87]
+	Cho tam giác ABC có 3 đường cao có độ dài lần lượt là $h_a,h_b,h_c$. Tìm điều kiện cần \& đủ theo $h_a,h_b,h_c$ để $\Delta ABC$ vuông.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 20., p. 87]
+	Chứng minh $\Delta ABC$ là tam giác vuông nếu 2 đường phân giác BD, CE cắt nhau tại I thỏa mãn $BD\cdot CE = 2BI\cdot CI$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 21., p. 87]
+	Xét các $\Delta ABC$ vuông có cạnh huyền $BC = 2a$. Gọi AH là đường cao của tam giác, D, E lần lượt là hình chiếu của H trên AC, AB. Tìm {\rm GTLN} của: (a) DE. (b) Diện tích tứ giác $ADHE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 22., pp. 87--88]
+	Chứng minh trong 1 tam giác: (a) Bình phương của cạnh đối diện với góc nhọn bằng tổng các bình phương của 2 cạnh kia trừ đi 2 lần tích của 1 trong 2 cạnh ấy với hình chiếu của cạnh kia trên nó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 23., p. 88]
+	Cho $\Delta ABC$ có $BC = a$, $CA = b$, $AB = c$. Chứng minh: (a) $b^2 < c^2 + a^2\Rightarrow\widehat{B} < 90^\circ$. (b) $b^2 > c^2 + a^2\Rightarrow\widehat{B} > 90^\circ$. (c) $b^2 = c^2 + a^2\Rightarrow\widehat{B} = 90^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 24., p. 88]
+	$\Delta ABC$ vuông tại A, đường phân giác BD. Tia phân giác của $\widehat{A}$ cắt BD ở I. Biết $BI = 10\sqrt{5}$ {\rm cm}, $DI = 5\sqrt{5}$ {\rm cm}. Tính diện tích $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 25., p. 88]
+	$\Delta ABC$ vuông tại A, gọi I là giao điểm của 3 đường phân giác. (a) Biết $AB = 5$ {\rm cm}, $CI = 6$ {\rm cm}. Tính BC. (b) Biết $BI = \sqrt{5}$ {\rm cm}, $CI = \sqrt{10}$ {\rm cm}. Tính AB, AC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 26., p. 88]
+	Cho $\Delta ABC$ vuông tại A, gọi I là giao điểm của 3 đường phân giác, M là trung điểm của BC. (a) Biết $AB = 6$ {\rm cm}, $AC = 8$ {\rm cm}. Tính $\widehat{BIM}$. (b) Biết $\widehat{BIM} = 90^\circ$. 3 cạnh của $\Delta ABC$ tỷ lệ với 3 số nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 27., p. 88]
+	1 tam giác vuông có độ dài 1 cạnh bằng trung bình cộng của độ dài 2 cạnh kia. (a) ĐỘ dài 3 cạnh của tam giác vuông đó tỷ lệ với 3 số nào? (b) Nếu độ dài 3 cạnh của tam giác vuông đó là 3 số nguyên dương thì số nào trong 5 số sau có thể là độ dài 1 cạnh của tam giác đó: $17,13,35,41,22$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 28., p. 88]
+	Cho $\Delta ABC$ vuông tại A, $BC = 3\sqrt{5}$ {\rm cm}. Hình vuông ADEF cạnh {\rm2 cm} có $D\in AB$, $E\in BC$, $F\in CA$. Tính AB, AC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 29., p. 88]
+	$\Delta ABC$ cân tại A, gọi I là giao điểm của 3 đường phân giác. Biết $IA = 2\sqrt{5}$ {\rm cm}, $IB = 3$ {\rm cm}. Tính AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 30., p. 88]
+	$\Delta ABC$ cân tại A, đường cao AD, trực tâm H. Tính độ dài AD, biết $AH = 14$ {\rm cm}, $BH = CH = 30$ {\rm cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 31., p. 88]
+	$\Delta ABC$ có $BC = 40$ {\rm cm}, đường phân giác AD dài {\rm45 cm}, đường cao AH dài {\rm36 cm}. Tính BD, CD.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Tỷ Số Lượng Giác của Góc Nhọn}
 
 %------------------------------------------------------------------------------%
 
