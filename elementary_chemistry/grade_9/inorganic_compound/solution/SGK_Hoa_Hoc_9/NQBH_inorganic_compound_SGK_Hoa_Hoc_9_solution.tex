@@ -1,0 +1,564 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,diagbox,tikz,tipa}
+\usepackage[version=4]{mhchem}
+\usepackage{enumitem}
+\setlist{leftmargin=4mm}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{thinghiem}{Thí nghiệm}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+
+\title{Problem {\it\&} Solution Chemistry 9 Chap. 1: Inorganic Compound\\Bài Tập SGK Hóa Học 9 Chương 1: Hợp Chất Vô Cơ {\it\&} Lời Giải}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section*{Lý Thuyết}
+\textbf{\textsf{Phân loại các hợp chất vô cơ.}} Oxide: oxide base, e.g., CaO, \ce{Fe2O3}, oxide acid, e.g., \ce{CO2,SO2}. Acid: acid có oxygen, e.g., \ce{HNO3,H2SO4}, acid không có oxygen, e.g., HCl, HBr. Base: base tan, e.g., NaOH, KOH, base không tan \ce{Cu(OH)2,Fe(OH)3}. Muối: muối acid, e.g., \ce{KHSO4,NaHCO3}, muối trung hòa, e.g., NaCl, \ce{K2SO4}.
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Chất Hóa Học của Oxide}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 6]
+	Có 3 oxide: {\rm CaO, \ce{Fe2O3,SO3}}. Oxide nào có thể tác dụng được với: (a) nước? (b) hydrochloric acid? (c) sodium hydroxide? Viết {\rm PTHH}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Các oxide tác dụng với nước: CaO, \ce{SO3}, \ce{CaO + H2O -> Ca(OH)2, SO3 + H2O -> H2SO4}. (b) Các oxide tác dụng với hydrochloric acid: CaO, \ce{Fe2O3}, \ce{CaO + $2$HCl -> CaCl2 + H2O, Fe2O3 + $6$HCl -> $2$FeCl3 + $3$H2O}. (c) Các oxide tác dụng với sodium hydroxide: \ce{SO3}, \ce{SO3 + NaOH -> NaHSO4, SO3 + $2$NaOH -> Na2SO4 + H2O}.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 6]
+	Có 4 chất: {\rm\ce{H2O,KOH,K2O,CO2}}. Cho biết các cặp chất có thể tác dụng với nhau.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	4 cặp chất có thể tác dụng với nhau: \ce{H2O} \& \ce{CO2}, \ce{H2O} \& \ce{K2O}, \ce{CO2} \& \ce{K2O}, \ce{CO2} \& KOH. PTHH: \ce{CO2 + H2O <=> H2CO3, K2O + H2O -> $2$KOH, K2O + CO2 -> K2CO3, CO2 + KOH -> KHCO3, CO2 + $2$KOH -> K2CO3 + H2O}.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 6]
+	Từ 5 chất: calcium oxide, sulfur (lưu huỳnh) dioxide, carbon dioxide, sulfur (lưu huỳnh) trioxide, zinc oxide, chọn chất thích hợp điền vào các sơ đồ phản ứng: (a) sulfuric acid $+$ $\ldots\to$ zinc sulfate $+$ nước. (b) sodium hydroxide $+$ $\ldots\to$ sodium sulfate $+$ nước. (c) nước $+$ $\ldots\to$ acid sulfurous. (d) nước $+$ $\ldots\to$ calcium hydroxide. (e) calcium oxide $+$ $\ldots\to$ calcium carbonate. Dùng các {\rm CTHH} để viết tất cả các {\rm PTHH} của các sơ đồ phản ứng trên.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) sulfuric acid $+$ zinc oxide $\to$ zinc sulfate $+$ nước: \ce{H2SO4 + ZnO -> ZnSO4 + H2O}. (b) sodium hydroxide $+$ lưu huỳnh trioxide $\to$ sodium sulfate $+$ nước: \ce{$2$NaOH + SO3 -> Na2SO4 + H2O}. (c) nước $+$ lưu huỳnh dioxide $\to$ acid sulfurous: \ce{H2O + SO2 -> H2SO3}. (d) nước $+$ calcium oxide $\to$ calcium hydroxide: \ce{H2O + CaO -> Ca(OH)2}. (e) calcium oxide $+$ carbon dioxide $\to$ calcium carbonate: \ce{CaO + CO2 -> CaCO3 v}.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 6]
+	Cho 5 oxide: {\rm\ce{CO2,SO2,Na2O,CaO,CuO}}. Chọn các chất tác dụng được với: (a) nước, tạo thành dung dịch acid. (b) nước, tạo thành dung dịch base. (c) dung dịch acid, tạo thành muối \& nước. (d) dung dịch base, tạo thành muối \& nước. Viết các {\rm PTHH}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) \ce{CO2,SO2} tác dụng với nước tạo thành dung dịch acid: \ce{CO2 + H2O <=> H2CO3, SO2 + H2O -> H2SO3}. (b) \ce{Na2O}, CaO tác dụng với nước tạo thành dung dịch base: \ce{Na2O + H2O -> $2$NaOH, CaO + H2O -> Ca(OH)2}. (c) \ce{Na2O}, CaO, CuO tác dụng với dung dịch acid tạo thành muối \& nước: \ce{Na2O + $2$HCl -> $2$HCl + H2O, CaO + $2$HNO3 -> Ca(NO3)2 + H2O, CuO + H2SO4 -> CuSO4 + H2O}. (d) \ce{CO2,SO2} tác dụng với dung dịch base tạo thành muối \& nước: \ce{CO2 + Ca(OH)2 -> CaCO3 v + H2O, SO2 + Ca(OH)2 -> CaSO3 v + H2O}.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 5., p. 6]
+	Có hỗn hợp khí {\rm\ce{CO2,O2}}. Làm thế nào để có thể thu được khí {\rm\ce{O2}} từ hỗn hợp trên? Trình bày cách làm \& viết  {\rm PTHH}.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	\cite[p. 7]{Ninh_giai_BT_Hoa_Hoc_9}: Trong số các khí \& hơi của hỗn hợp, có 1 oxide acid là \ce{CO2}. Theo tính chất hóa học của oxide acid, chất này phản ứng với kiềm tạo thành muối \& nước. Chất khí oxygen không có tính chất này. Do đó ta chọn dung dịch \ce{Ca(OH)2} để tách riêng khí oxygen ra khỏi hỗn hợp. Cách làm: \textit{Bước 1}: Cho hỗn hợp khí đi qua bình đựng dung dịch \ce{Ca(OH)2} dư, toàn bộ khí \ce{CO2} trong hỗn hợp sẽ phản ứng \& oxygen đi qua vì không phản ứng. PTHH: \ce{CO2 + Ca(OH)2 -> CaCO3 v + H2O}. \textit{Bước 2}: Khí oxygen có lẫn 1 ít hơi nước (nước vôi trong chưa hấp thụ hết) ta dẫn qua bình đựng dung dịch acid sulfuric đặc. Hơi nước bị acid giữ lại, ta được khí oxygen sạch.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Dẫn hỗn hợp khí \ce{CO2,O2} đi qua bình đựng dung dịch kiềm lấy dư, e.g., \ce{Ca(OH)2}, NaOH, $\ldots$, khí \ce{CO2} bị hấp thụ hết do có phản ứng với kiềm: \ce{CO2 + Ca(OH)2 -> CaCO2 v + H2O} hoặc \ce{CO2 + $2$NaOH -> Na2CO3 + H2O}. Khí thoát ra khỏi bình chỉ có \ce{O2} nên sẽ thu được khí \ce{O2}.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 6., p. 6]
+	Cho \emph{1.6 g} copper {\rm(II)} oxide tác dụng với \emph{100 g} dung dịch acid sulfuric có nồng độ \emph{20\%}. (a) Viết PTHH. (b) Tính nồng độ \% của các chất có trong dung dịch sau khi phản ứng kết thúc.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	(a) $n_{\rm CuO} = \dfrac{1.6}{80} = 0.02$ mol, $n_{\ce{H2SO4}} = \dfrac{100\cdot20\%}{98} = \dfrac{10}{49}\approx0.204 > 0.02\Rightarrow$ \ce{H2SO4} dư, CuO phản ứng hết. PTHH: \ce{CuO + H2SO4 -> CuSO4 + H2O} với $n_{\rm CuO} = n_{\ce{H2SO4}\footnotesize\mbox{pư}} = n_{\ce{CuSO4}} = 0.02$ mol. (b) $C\%_{\ce{CuSO4}} = \dfrac{0.02\cdot160}{1.6 + 100}\cdot100\%\approx3.15\%$, $C\%_{\ce{H2SO4}} = \dfrac{20 - 0.02\cdot98}{1.6 + 100}\cdot100\%\approx17.756\%$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	$m_{\ce{H2SO4}} = m_{\rm dd\ce{H2SO4}}C\% = 100\cdot20\% = 20$ g, $n_{\rm CuO} = \dfrac{m_{\rm CuO}}{M_{\rm CuO}} = \dfrac{1.6}{80} = 0.02$ mol, $n_{\ce{H2SO4}} = \dfrac{m_{\ce{H2SO4}}}{M_{\ce{H2SO4}}} = \dfrac{20}{98} = \dfrac{10}{49}$ mol. (a) PTHH: \ce{CuO + H2SO4 -> CuSO4 + H2O}. Vì $n_{\rm CuO} < n_{\ce{H2SO4}}$ ($0.02 < \frac{10}{49}\approx0.204$) nên CuO phản ứng hết, \ce{H2SO4} dư, suy ra khối lượng \ce{CuSO4} tạo thành \& \ce{H2SO4} phản ứng tính theo số mol CuO. (b) Dung dịch sau phản ứng có 2 chất tan: \ce{CuSO4} \& \ce{H2SO4} còn dư. $C\%_{\ce{CuSO4}} = \dfrac{m_{\ce{CuSO4}}}{m_{\rm dd}}\cdot100\% = \dfrac{0.02\cdot160}{1.6 + 100}\cdot100\%\approx3.15\%$. $C\%_{\ce{H2SO4}} = \dfrac{m_{\ce{H2SO4}\footnotesize\mbox{dư}}}{m_{\rm dd}}\cdot100\% = \dfrac{20 - 0.02\cdot98}{1.6 + 100}\cdot100\%\approx17.756\%$.
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{SGK_Hoa_Hoc_9}, 6., p. 6]
+	Cho $m_1$ {\rm g} copper {\rm(II)} oxide tác dụng với $m_2$ {\rm g} dung dịch acid sulfuric có nồng độ $C\%$. Tính nồng độ \% của các chất có trong dung dịch sau khi phản ứng kết thúc theo $m_1,m_2,C\%$ biết sẽ lọc ra \emph{CuO} khỏi dung dịch nếu \emph{CuO} dư.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$m_{\ce{H2SO4}} = m_{\rm dd\ce{H2SO4}}C\% = m_2C\%$ g, $n_{\rm CuO} = \dfrac{m_{\rm CuO}}{M_{\rm CuO}} = \dfrac{m_1}{80}$ mol, $n_{\ce{H2SO4}} = \dfrac{m_{\ce{H2SO4}}}{M_{\ce{H2SO4}}} = \dfrac{m_2C\%}{98}$ mol. PTHH: \ce{CuO + H2SO4 -> CuSO4 + H2O}. Vì nếu CuO dư sẽ bị lọc ra, nên theo định luật bảo toàn khối lượng, $m_{\rm dd} = m_{\rm CuO\footnotesize\mbox{pư}} + m_{\rm dd\ce{H2SO4}}$ g. Xét 2 trường hợp:
+	\begin{itemize}
+		\item[(a)] Nếu $n_{\rm CuO} < n_{\ce{H2SO4}}$, i.e., nếu $m_1,m_2,C\%$ thỏa $\dfrac{m_1}{80} < \dfrac{m_2C\%}{98}$ thì CuO phản ứng hết, \ce{H2SO4} dư, suy ra $n_{\rm CuO} = n_{\ce{H2SO4}\footnotesize\mbox{pư}} = n_{\ce{CuSO4}} = \dfrac{m_1}{80}$ mol, $m_{\ce{H2SO4}\footnotesize\mbox{dư}} = m_{\ce{H2SO4}} - m_{\ce{H2SO4}\footnotesize\mbox{pư}} = m_2C\% - 98\dfrac{m_1}{80}$. Dung dịch sau phản ứng có 2 chất tan: \ce{CuSO4} \& \ce{H2SO4} còn dư.
+		\begin{align*}
+			C\%_{\ce{CuSO4}} &= \frac{m_{\ce{CuSO4}}}{m_{\rm dd}}\cdot100\% = \frac{\frac{m_1}{80}\cdot160}{m_1 + m_2}\cdot100\% = \frac{200m_1}{m_1 + m_2}\%,\\
+			C\%_{\ce{H2SO4}} &= \frac{m_{\ce{H2SO4}\footnotesize\mbox{dư}}}{m_{\rm dd}}\cdot100\% = \frac{100\left(m_2C\% - \dfrac{98m_1}{80}\right)}{m_1 + m_2}\% = \frac{100m_2C\% - 122.5m_1}{m_1 + m_2}\%.
+		\end{align*}
+		\item[(b)] Nếu $n_{\rm CuO} = n_{\ce{H2SO4}}$, i.e., nếu $m_1,m_2,C\%$ thỏa $\dfrac{m_1}{80} = \dfrac{m_2C\%}{98}$ thì cả CuO \& \ce{H2SO4} đều phản ứng hết. Dung dịch sau phản ứng có duy nhất 1 chất tan \ce{CuSO4} \& $n_{\ce{CuSO4}} = n_{\rm CuO} = n_{\ce{H2SO4}} = \dfrac{m_1}{80}$:
+		\begin{align*}
+			C\%_{\ce{CuSO4}} &= \frac{m_{\ce{CuSO4}}}{m_{\rm dd}}\cdot100\% = \frac{\frac{m_1}{80}\cdot160}{m_1 + m_2}\cdot100\% = \frac{200m_1}{m_1 + m_2}\%.
+		\end{align*}
+		\item[(c)] Nếu $n_{\rm CuO} > n_{\ce{H2SO4}}$, i.e., $\dfrac{m_1}{80} > \dfrac{m_2C\%}{98}$ thì \ce{H2SO4} phản ứng hết, CuO dư, suy ra $n_{\rm CuO\footnotesize\mbox{pư}} = n_{\ce{H2SO4}} = n_{\ce{CuSO4}} = \frac{m_2C\%}{98}$. Dung dịch sau phản ứng chỉ có duy nhất 1 chất tan \ce{CuSO4} \&
+		\begin{align*}
+			C\%_{\ce{CuSO4}} &= \frac{m_{\ce{CuSO4}}}{m_{\rm dd}}\cdot100\% = \frac{160\cdot\dfrac{m_2C\%}{98}}{\dfrac{m_2C\%}{98}\cdot80 + m_2} = \frac{80C\%}{40C\% + 49},
+		\end{align*}
+		không phụ thuộc vào $m_2$.
+	\end{itemize}
+	Vậy nồng độ \% của các chất có trong dung dịch sau khi phản ứng kết thúc:
+	\begin{equation*}
+		C\%_{\ce{CuSO4}} = \left\{\begin{split}
+			&\frac{200m_1}{m_1 + m_2}\%,&&\mbox{nếu }\frac{m_1}{80}\le\frac{m_2C\%}{98},\\
+			&\frac{80C\%}{40C\% + 49},&&\mbox{nếu }\frac{m_1}{80} > \frac{m_2C\%}{98},
+		\end{split}\right.
+	\end{equation*}
+	\begin{equation*}
+		C\%_{\ce{H2SO4}} = \left\{\begin{split}
+			&\frac{100m_2C\% - 122.5m_1}{m_1 + m_2}\%,&&\mbox{nếu }\frac{m_1}{80} < \frac{m_2C\%}{98},\\
+			&0,&&\mbox{nếu }\frac{m_1}{80}\ge\frac{m_2C\%}{98},
+		\end{split}\right. = \frac{100\max\left\{m_2C\% - \frac{49}{40}m_1,0\right\}}{m_1 + m_2}\%.
+	\end{equation*}
+\end{proof}
+
+%------------------------------------------------------------------------------%
+
+\section{1 Số Oxide Quan Trọng}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 9]
+	Bằng phương pháp hóa học nào có thể nhận biết được từng chất trong mỗi dãy chất sau? (a) 2 chất rắn màu trắng \emph{CaO, \ce{Na2O}}. (b) 2 chất khí không màu {\rm\ce{CO2,O2}}. Viết các {\rm PTHH}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Lấy mỗi chất cho vào mỗi cốc đựng nước, khuấy cho đến khi chất cho vào không tan nữa. Lọc để thu lấy 2 dung dịch. Dẫn khí \ce{CO2} vào mỗi dung dịch. Dung dịch nào xuất hiện kết tủa thì đó là dung dịch \ce{Ca(OH)2}, tương ứng với cốc lúc đầu là CaO. Dung dịch nào không thấy kết tủa thì tương ứng với cốc lúc đầu là \ce{Na2O}. PTHH: \ce{Na2O + H2O -> $2$NaOH, CaO + H2O -> Ca(OH)2, CO2 + $2$NaOH -> Na2CO3 + H2O, CO2 + Ca(OH)2 -> CaCO3 v + H2O}. (b) \textit{Cách 1.} Cho tàn đóm đỏ vào từng khí. Khí nào làm tàn đóm bùng cháy trở lại là khí \ce{O2}, còn lại là \ce{CO2}. \textit{Cách 2.} Sục 2 chất khí không màu vào 2 ống nghiệm chứa nước vôi \ce{Ca(OH)2} trong. Ống nghiệm nào bị vẩn đục, thì khí ban đầu là \ce{CO2}: \ce{CO2 + Ca(OH)2 -> CaCO3 v + H2O}, khí còn lại là \ce{O2}.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 9]
+	Nhận biết từng chất trong mỗi nhóm chất sau bằng phương pháp hóa học. (a) \emph{CaO, \ce{CaCO3}}. (b) \emph{CaO, MgO}. Viết các {\rm PTHH}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Lấy mỗi chất cho vào ống nghiệm hoặc cốc chứa sẵn nước. Ở ống nào thấy chất rắn tan \& nóng lên, chất cho vào là CaO. Ở ống nghiệm nào thấy chất rắn không tan \& không nóng lên, chất cho vào là \ce{CaCO3}. PTHH: \ce{CaO + H2O -> Ca(OH)2}. (b) Lấy mỗi chất cho vào ống nghiệm hoặc cốc chứa sẵn nước. Ở ống nào thấy chất rắn tan \& nóng lên, chất cho vào là CaO. Ở ống nghiệm nào thấy chất rắn không tan \& không nóng lên, chất cho vào là MgO. PTHH: \ce{CaO + H2O -> Ca(OH)2}.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 11]
+	Viết PTHH cho mỗi chuyển đổi: (a) \emph{S $\to$ \ce{SO2} $\to$ \ce{CaSO3}}. (b) {\rm\ce{SO2} $\to$ \ce{Na2SO3}}. (c) {\rm\ce{SO2} $\to$ \ce{H2SO3} $\to$ \ce{Na2SO3} $\to$ \ce{SO2}}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) \ce{S + O2 ->[$t^\circ$] SO2, SO2 + CaO -> CaSO3} hoặc \ce{SO2 + Ca(OH)2 -> CaSO3 + H2O}. (b) \ce{SO2 + H2O -> H2SO3, Na2O + H2SO3 -> Na2SO3 + H2O, Na2SO3 + H2SO4 -> Na2SO4 + SO2 ^ + H2O}. (c) \ce{SO2 + $2$NaOH -> Na2SO3 + H2O} hoặc \ce{Na2O + SO2 -> Na2SO3}.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 11]
+	Nhận biết từng chất trong mỗi nhóm chất sau bằng phương pháp hóa học. (a) 2 chất rắn màu trắng \emph{CaO, \ce{P2O5}}. (b) 2 chất khí không màu {\rm\ce{SO2,O2}}. Viết các PTHH.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	(a) Cho nước vào 2 ống nghiệm có chứa CaO \& \ce{P2O5}. Sau đó cho quỳ tím vào mỗi dung dịch. Dung dịch nào làm đổi màu quỳ tím thành xanh là dung dịch base, tương ứng với chất ban đầu là CaO. Dung dịch nào làm đổi màu quỳ tím thành đỏ là dung dịch acid, chất ban đầu là \ce{P2O5}. PTHH: \ce{CaO + H2O -> Ca(OH)2, P2O5 + $3$H2O -> $2$H3PO4}. (b) Lấy mẫu thử từng khí. Lấy quỳ tím ẩm cho vào từng mẫu thử. Mẫu nào làm quỳ tím hóa đỏ là \ce{SO2}, còn lại là \ce{O2}. PTHH: \ce{SO2 + H2O -> H2SO3}.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	(a) Cho nước vào 2 ống nghiệm có chứa CaO \& \ce{P2O5}. Sau đó cho phenolphthalein vào mỗi dung dịch. Dung dịch nào hóa hồng là dung dịch base, tương ứng với chất ban đầu là CaO. Dung dịch nào không đổi màu là dung dịch acid, chất ban đầu là \ce{P2O5}. (b) Dẫn lần lượt từng khí vào dung dịch nước vôi trong, nếu có kết tủa xuất hiện thì khí dẫn vào là \ce{SO2}: \ce{SO2 + Ca(OH)2 -> CaSO3 v + H2O}. Nếu không có hiện tượng gì thì khí dẫn vào là khí \ce{O2}. Hoặc có thể đưa que đóm con than hồng vào 2 khí, que đóm sẽ bùng cháy trong khí \ce{O2}.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 11]
+	Có các khí ẩm (khí có lẫn hơi nước): carbon dioxide, hydrogen, oxygen, lưu huỳnh dioxide. Khí nào có thể được làm khô bằng calcium oxide? Giải thích.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 11]
+	Có những chất khí sau: {\rm\ce{CO2,H2,O2,SO2,N2}}. Cho biết chất nào có tính chất sau: (a) nặng hơn không khí. (b) nhẹ hơn không khí. (c) cháy được trong không khí. (d) tác dụng với nước tạo thành dung dịch acid. (e) làm đục nước vôi trong. (f) đổi màu giấy quỳ tím ẩm thành đỏ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 5., p. 11]
+	Khí lưu huỳnh dioxide được tạo thành từ cặp chất nào sau đây? (a) {\rm\ce{K2SO3,H2SO4}}. (b) {\rm\ce{K2SO4}, HCl}. (c) {\rm\ce{Na2SO3}, NaOH}. (d) {\rm\ce{Na2SO4,CuCl2}}. (e) {\rm\ce{Na2SO3}, NaCl}. Viết PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 9]
+	\emph{200 mL} dung dịch \emph{HCl} có nồng độ \emph{3.5M} hòa tan vừa hết \emph{20 g} hỗn hợp 2 oxide \emph{CuO, \ce{Fe2O3}}. (a) Viết các PTHH. (b) Tính khối lượng của mỗi oxide có trong mỗi hỗn hợp ban đầu.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$n_{\rm HCl} = C_{\rm M,HCl}V_{\rm ddHCl} = 3.5\cdot0.2 = 0.7$ mol. Đặt $x = n_{\rm CuO}$, $y = n_{\ce{Fe2O3}}$. (a) PTHH: \ce{CuO + $2$HCl -> CuCl2 + H2O, Fe2O3 + $6$HCl -> $2$FeCl3 + $3$H2O}. (b) Có $n_{\rm HCl} = 2x + 6y = 0.7$ mol, $m_{\rm hh} = 80x + 160y = 20$ g, nên ta có hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			2x + 6y &= 0.7,\\
+			80x + 160y &= 20,
+		\end{split}\right.\Leftrightarrow\left\{\begin{split}
+			x &= 0.05,\\
+			y &= 0.1.
+		\end{split}\right.
+	\end{equation*}
+	$n_{\rm CuO} = 0.05$ mol $\Rightarrow m_{\rm CuO} = n_{\rm CuO}M_{\rm CuO} = 0.05\cdot80 = 4$ g, $n_{\ce{Fe2O3}} = 0.1$ mol $\Rightarrow m_{\ce{Fe2O3}} = n_{\ce{Fe2O3}}M_{\ce{Fe2O3}} = 0.1\cdot160 = 16$ g (hoặc $m_{\ce{Fe2O3}} = m_{\rm hh} - m_{\rm CuO} = 20 - 4 = 16$ g).
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{SGK_Hoa_Hoc_9}, 3., p. 9]
+	$V$ \emph{L} dung dịch \emph{HCl} có nồng độ $C_{\rm M}$\emph{M} hòa tan vừa hết $m$ {\rm g} hỗn hợp 2 oxide \emph{CuO, \ce{Fe2O3}}. Tính khối lượng của mỗi oxide có trong mỗi hỗn hợp ban đầu.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$n_{\rm HCl} = C_{\rm M,HCl}V_{\rm ddHCl} = C_{\rm M}V$ mol. Đặt $x = n_{\rm CuO}$, $y = n_{\ce{Fe2O3}}$. PTHH: \ce{CuO + $2$HCl -> CuCl2 + H2O, Fe2O3 + $6$HCl -> $2$FeCl3 + $3$H2O}. Có $n_{\rm HCl} = 2x + 6y = C_{\rm M}V$ mol, $m_{\rm hh} = 80x + 160y = m$ g, nên ta có hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			2x + 6y &= C_{\rm M}V,\\
+			80x + 160y &= m,
+		\end{split}\right.\Leftrightarrow\left\{\begin{split}
+			x + 3y &= \frac{C_{\rm M}V}{2},\\
+			x + 2y &= \frac{m}{80}.
+		\end{split}\right.\Leftrightarrow\left\{\begin{split}
+			x &= \frac{3m}{80} - C_{\rm M}V,\\
+			y &= \frac{C_{\rm M}V}{2} - \frac{m}{80}.
+		\end{split}\right.
+	\end{equation*}
+	$n_{\rm CuO} = \dfrac{3m}{80} - C_{\rm M}V$ mol $\Rightarrow m_{\rm CuO} = n_{\rm CuO}M_{\rm CuO} = 80\left(\dfrac{3m}{80} - C_{\rm M}V\right) = 3m - 80C_{\rm M}V$ g, $n_{\ce{Fe2O3}} = \dfrac{C_{\rm M}V}{2} - \dfrac{m}{80}$ mol $\Rightarrow m_{\ce{Fe2O3}} = n_{\ce{Fe2O3}}M_{\ce{Fe2O3}} = 160\left(\dfrac{C_{\rm M}V}{2} - \dfrac{m}{80}\right) = 80C_{\rm M}V - 2m$ g (hoặc $m_{\ce{Fe2O3}} = m_{\rm hh} - m_{\rm CuO} = m - (3m - 80C_{\rm M}V) = 80C_{\rm M}V - 2m$ g). Vậy $m_{\rm CuO} = 3m - 80C_{\rm M}V$ g, $m_{\ce{Fe2O3}} = 80C_{\rm M}V - 2m$ g.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 9]
+	Biết \emph{2.24 L} khí {\rm\ce{CO2}} (đktc) tác dụng vừa hết với \emph{200 mL} dung dịch {\rm\ce{Ba(OH)2}}, sản phẩm là {\rm\ce{BaCO3,H2O}}. (a) Viết PTHH. (b) Tính nồng độ mol của dung dịch {\rm\ce{Ba(OH)2}} đã dùng. (c) Tính khối lượng chất kết tủa thu được.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$n_{\ce{CO2}} = \dfrac{V_{\ce{CO2}}}{22.4} = \dfrac{2.24}{22.4} = 0.1$ mol. (a) \ce{CO2 + Ba(OH)2 -> BaCO3 v + H2O}. (b) Vì \ce{CO2} tác dụng vừa hết nên $n_{\ce{Ba(OH)2}} = n_{\ce{CO2}} = 0.1$ mol. $C_{\rm M,\ce{Ba(OH)2}} = \dfrac{n_{\ce{Ba(OH)2}}}{V_{\rm dd\ce{Ba(OH)2}}} = \dfrac{0.1}{0.2} = 0.5$M. (c) Chất kết tủa sau phản ứng là \ce{BaCO3} \& $n_{\ce{BaCO3}} = n_{\ce{CO2}} = 0.1$ mol $\Rightarrow m_{\ce{BaCO3}} = n_{\ce{BaCO3}}M_{\ce{BaCO3}} = 0.1\cdot197 = 19.7$ g.
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{SGK_Hoa_Hoc_9}, 4., p. 9]
+	Cho $V_1$ \emph{L} khí {\rm\ce{CO2}} (đktc) tác dụng với $V_2$ \emph{L} dung dịch {\rm\ce{Ba(OH)2}} nồng độ $C_{\rm M}$\emph{M}. (a) Viết PTHH. (b) Tính nồng độ mol của dung dịch {\rm\ce{Ba(OH)2}} đã dùng \& khối lượng chất kết tủa thu được theo $V_1,V_2,C_{\rm M}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 6., p. 11]
+	Dẫn \emph{112 mL} khí {\rm\ce{SO2}} (đktc) đi qua \emph{700 mL} dung dịch {\rm\ce{Ca(OH)2}} có nồng độ \emph{0.01M}, sản phẩm là muối calcium sulfite. (a) Viết PTHH. (b) Tính khối lượng các chất sau phản ứng.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Acid}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 14]
+	Từ \emph{Mg, MgO, \ce{Mg(OH)2}} \& dung dịch acid sulfuric loãng, viết các PTHH của phản ứng điều chế magnesium sulfate.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 14]
+	Có các chất sau: \emph{CuO, Mg, \ce{Al2O3,Fe(OH)3,Fe2O3}}. Chọn 1 trong các chất đã cho tác dụng với dung dịch \emph{HCl} sinh ra: (a) khí nhẹ hơn không khí \& cháy được trong không khí. (b) dung dịch có màu xanh lam. (c) dung dịch có màu vàng nâu. (d) dung dịch không có màu. Viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 14]
+	Viết các PTHH: (a) magnesium oxide \& acid nitric. (b) copper(II) oxide \& hydrochloric acid. (c) aluminium oxide \& sulfuric acid. (d) iron \& hydrochloric acid. (e) zinc \& sulfuric acid loãng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 19]
+	Có các chất: \emph{CuO, \ce{BaCl2}, Zn, ZnO}. Chất nào tác dụng với dung dịch \emph{HCl}, dung dịch {\rm\ce{H2SO4}} loãng sinh ra: (a) chất khí cháy được trong không khí? (b) dung dịch có màu xanh lam? (c) chất kết tủa màu trắng không tan trong nước \& acid? (d) dung dịch không màu \& nước? Viết tất cả các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 19]
+	Sản xuất acid sulfuric trong công nghiệp cần phải có các nguyên liệu chủ yếu nào? Cho biết mục đích của mỗi công đoạn sản xuất acid sulfuric \& dẫn ra các phản ứng hóa học.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 19]
+	Bằng cách nào có thể nhận biết được từng chất trong mỗi cặp chất sau theo phương pháp hóa học? (a) Dung dịch \emph{HCl} \& dung dịch \emph{H2SO4}. (b) Dung dịch \emph{NaCl} \& dung dịch {\rm\ce{Na2SO4}}. (c) Dung dịch {\rm\ce{Na2SO4}} \& dung dịch {\rm\ce{H2SO4}}. Viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 5., p. 19]
+	Sử dụng các chất có sẵn: \emph{Cu, Fe, CuO, KOH, \ce{C6H12O6}} (glucose), dung dịch {\rm\ce{H2SO4}} loãng, {\rm\ce{H2SO4}} đặc \& các dụng cụ thí nghiệm cần thiết để làm các thí nghiệm chứng minh: (a) Dung dịch {\rm\ce{H2SO4}} loãng có các tính chất hóa học của acid. (b) {\rm\ce{H2SO4}} đặc có các tính chất hóa học riêng. Viết PTHH cho mỗi thí nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 21]
+	Có các oxide: {\rm\ce{SO2, CuO, Na2O, CO2}}. Cho biết các oxide nào tác dụng được với: (a) nước. (b) hydrochloric acid. (c) sodium hydroxide. Viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 21]
+	Các oxide nào sau: {\rm\ce{H2O,CuO,Na2O,CO2,P2O5}} có thể điều chế bằng: (a) phản ứng hóa hợp? Viết PTHH. (b) phản ứng hóa hợp \& phản ứng phân hủy? Viết PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 21]
+	Khí \emph{CO} được dùng làm chất đốt trong công nghiệp, có lẫn tạp chất là các khí {\rm\ce{CO2,SO2}}. Làm thế nào có thể loại bỏ được các tạp chất ra khỏi \emph{CO} bằng hóa chất rẻ tiền nhất? Viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 21]
+	Cần phải điều chế 1 lượng muối copper(II) sulfate. Phương pháp nào sau đây tiết kiệm được acid sulfuric? (a) Acid sulfuric tác dụng với copper(II) oxide. (b) Acid sulfuric đặc tác dụng với kim loại đồng. Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 5., p. 21]
+	Thực hiện các chuyển đổi hóa học sau bằng cách viết các PTHH (ghi điều kiện của phản ứng, nếu có): (a) \emph{S $\to$ \ce{SO2} $\to$ \ce{SO3} $\to$ \ce{H2SO4}}. (b) {\rm\ce{SO2} $\to$ \ce{Na2SO3}}. (c) {\rm\ce{H2SO4} $\to$ \ce{SO2} $\to$ \ce{H2SO3} $\to$ \ce{Na2SO3} $\to$ \ce{SO2}}. (d) {\rm\ce{H2SO4} $\to$ \ce{Na2SO4} $\to$ \ce{BaSO4}}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 14]
+	Có \emph{10 g} hỗn hợp bột 2 kim loại đồng \& sắt. Giới thiệu phương pháp xác định thành phần \% (theo khối lượng) của mỗi kim loại trong hỗn hợp theo: (a) Phương pháp hóa học. Viết PTHH. (b) Phương pháp vật lý. (Biết copper không tác dụng với acid \emph{HCl} \& acid {\rm\ce{H2SO4}} loãng).
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 19]
+	Bảng sau cho biết kết quả của $6$ thí nghiệm xảy ra giữa \emph{Fe} \& dung dịch {\rm\ce{H2SO4}} loãng. Trong mỗi thí nghiệm người ta dùng \emph{0.2 g Fe} tác dụng với thể tích bằng nhau của acid, nhưng có nồng độ khác nhau.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			Thí nghiệm & Nồng độ acid & Nhiệt độ (${}^\circ$C) & Sắt ở dạng & Thời gian phản ứng xong (s) \\
+			\hline
+			1 & 1M & 25 & Lá & 190 \\
+			\hline
+			2 & 2M & 25 & Bột & 85 \\
+			\hline
+			3 & 2M & 35 & Lá & 62 \\
+			\hline
+			4 & 2M & 50 & Bột & 15 \\
+			\hline
+			5 & 2M & 35 & Bột & 45 \\
+			\hline
+			6 & 3M & 50 & Bột & 11 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\noindent Các thí nghiệm nào chứng tỏ: (a) Phản ứng xảy ra nhanh hơn khi tăng nhiệt độ? (b) Phản ứng xảy ra nhanh hơn khi tăng diện tích tiếp xúc? (c) Phản ứng xảy ra nhanh hơn khi tăng nồng độ acid?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 6., p. 19]
+	Cho 1 lượng mạt sắt dư vào \emph{50 mL} dung dịch \emph{HCl}. Phản ứng xong, thu được \emph{3.36 L} khí (đktc). (a) Viết PTHH. (b) Tính khối lượng mạt sắt đã tham gia phản ứng. (c) Tìm nồng độ mol của dung dịch \emph{HCl} đã dùng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 7., p. 19]
+	Hòa tan hoàn toàn \emph{12.1 g} hỗn hợp bột \emph{CuO, ZnO} cần \emph{100 mL} dung dịch \emph{HCl 3M}. (a) Viết các PTHH. (b) Tính \% theo khối lượng của mỗi oxide trong hỗn hợp ban đầu. (c) Tính khối lượng dung dịch {\rm\ce{H2SO4}} nồng độ \emph{20\%} để hòa tan hoàn toàn hỗn hợp các oxide trên.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Base}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 25]
+	Có phải tất cả các chất kiềm đều là base không? Dẫn ra CTHH của 3 chất kiềm để minh họa. Có phải tất cả các base đều là chất kiềm không? Dẫn ra CTHH của các base để minh họa.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 25]
+	Có các base sau: {\rm\ce{Cu(OH)2,NaOH,Ba(OH)2}}. Cho biết những base nào: (a) tác dụng được với dung dịch \emph{HCl}. (b) bị nhiệt phân hủy. (c) tác dụng được với {\rm\ce{CO2}}. (d) đổi màu quỳ tím thành xanh. Viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 25]
+	Từ các chất có sẵn: {\rm\ce{Na2O,CaO,H2O}}. Viết các PTHH điều chế các dung dịch base.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 25]
+	Có 4 lọ không nhãn, mỗi lọ đựng 1 dung dịch không màu sau: \emph{NaCl, \ce{Ba(OH)2}, NaOH, \ce{Na2SO4}}. Chỉ được dùng quỳ tím, làm thế nào nhận biết dung dịch đựng trong mỗi lọ bằng phương pháp hóa học? Viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 27]
+	Có 3 lọ không nhãn, mỗi lọ đựng 1 chất rắn sau: \emph{NaOH, NaCl, \ce{Ba(OH)2}}. Trình bày cách nhận biết chất đựng trong mỗi lọ bằng phương pháp hóa học. Viết các PTHH (nếu có).
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 27]
+	Có các chất: \emph{Zn, \ce{Zn(OH)2,NaOH,Fe(OH)3,CuSO4}, NaCl, HCl}. Chọn chất thích hợp điền vào mỗi sơ đồ phản ứng sau \& lập PTHH: (a) \emph{$\ldots$ \ce{->[$t^\circ$] Fe2O3 + H2O}}. (b) {\rm\ce{H2SO4 + $\ldots$ -> Na2SO4 + H2O}}. (c) {\rm\ce{H2SO4 + $\ldots$ -> ZnSO4 + H2O}}. (d) {\rm\ce{NaOH + $\ldots$ -> NaCl + H2O}}. (e) \emph{$\ldots$ \ce{+ CO2 -> Na2CO3 + H2O}}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 30]
+	Viết các PTHH thực hiện các chuyển đổi hóa học: (a) {\rm\ce{CaCO3} $\to$ CaO $\to$ \ce{Ca(OH)2} $\to$ \ce{CaCO3}}. (b) \emph{CaO $\to$ \ce{CaCl2}}. (c) {\rm\ce{Ca(OH)2} $\to$ \ce{Ca(NO3)2}}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 30]
+	Có 3 lọ không nhãn, mỗi lọ đựng 1 trong 3 chất rắn màu trắng: {\rm\ce{CaCO3,Ca(OH)2}, CaO}. Nhận biết chất đựng trong mỗi lọ bằng phương pháp hóa học. Viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 30]
+	Viết các PTHH của phản ứng khi dung dịch \emph{NaOH} tác dụng với dung dịch {\rm\ce{H2SO4}} tạo ra: (a) muối sodium hydrosunfate. (b) muối sodium sulfate.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 30]
+	1 dung dịch bão hòa khí {\rm\ce{CO2}} trong nước có $\rm pH = 4$. Giải thích \& viết PTHH của {\rm\ce{CO2}} với nước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 7.1., p. 9]
+	Nêu các tính chất hóa học giống \& khác nhau của base tan (kiềm) \& base không tan. Dẫn ra ví dụ, viết PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 7.2., p. 9]
+	Các base khi bị nung nóng tạo ra oxide là: {\sf A.} {\rm\ce{Mg(OH)2,Cu(OH2),Zn(OH)2,Fe(OH)3}}. {\sf B.} {\rm\ce{Ca(OH)2,Al(OH)3}, KOH, NaOH}. {\sf C.} {\rm\ce{Zn(OH)2,Mg(OH)2,Fe(OH)3}, KOH}. {\sf D.} {\rm\ce{Fe(OH)3,Al(OH)3,Zn(OH)2}, NaOH}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 7.3., p. 9]
+	Dung dịch \emph{HCl}, khí {\rm\ce{CO2}} đều tác dụng với: {\sf A.} {\rm\ce{Ca(OH)2,Ba(OH)2}, NaOH, KOH}. {\sf B.} {\rm\ce{Ca(OH)2,Al(OH)3}, KOH, NaOH}. {\sf C.} \emph{NaOH, KOH, \ce{Fe(OH)3, Ba(OH)3}}. {\sf D.} {\rm\ce{Ca(OH)2,Cr(OH)3}, KOH}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 7.4., p. 9]
+	Viết CTHH của các: (a) base ứng với các oxide: {\rm\ce{Na2O,Al2O3,Fe2O3}, BaO}. (b) oxide ứng với các base: \emph{KOH, \ce{Ca(OH)2,Zn(OH)2,Cu(OH)2}}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 7.5., p. 9]
+	Có 3 lọ không nhãn, mỗi lọ đựng 1 trong các chất rắn: {\rm\ce{Cu(OH)2,Ba(OH)2,Na2CO3}}. Chọn 1 thuốc thử để có thể nhận biết được cả 3 chất này. Viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 8.1., p. 9]
+	Bằng phương pháp hóa học nào có thể phân biệt được 2 dung dịch base: \emph{NaOH, \ce{Ca(OH)2}}? Viết PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 8.2., p. 9]
+	Có 4 lọ không nhãn, mỗi lọ đựng 1 trong các dung dịch sau: \emph{NaOH, \ce{Na2SO4,H2SO4}, HCl}. Nhận biết dung dịch trong mỗi lọ bằng phương pháp hóa học. Viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 8.3., p. 10]
+	Cho các chất: {\rm\ce{Na2CO3,Ca(OH)2}, NaCl}. (a) Từ các chất đã cho, viết các PTHH điều chế \emph{NaOH}. (b) Nếu các chất đã cho có khối lượng bằng nhau, ta dùng phản ứng nào để có thể điều chế được khối lượng \emph{NaOH} nhiều hơn?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 8.4., p. 10]
+	Bảng sau cho biết giá trị pH của dung dịch 1 số chất:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			Dung dịch & A & B & C & D & E \\
+			\hline
+			pH & 13 & 3 & 1 & 7 & 8 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\noindent(a) Dự đoán trong các dung dịch trên: (1) Dung dịch nào có thể là acid, e.g., \emph{HCl, \ce{H2SO4}}? (2) Dung dịch nào có thể là base, e.g., \emph{NaOH, \ce{Ca(OH)2}}? (3) Dung dịch nào có thể là đường, muối \emph{NaCl}, nước cất? (4) Dung dịch nào có thể là acid acetic (có trong giấm ăn)? (5) Dung dịch nào có tính base yếu, e.g., {\rm\ce{NaHCO3}}? (b) Cho biết: (1) Dung dịch nào có phản ứng với \emph{Mg}, với \emph{NaOH}? (2) Dung dịch nào có phản ứng với dung dịch \emph{HCl}? (3) Các dung dịch nào trộn với nhau từng đôi một sẽ xảy ra phản ứng hóa học?	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 25]
+	Cho \emph{15.5 g} sodium oxide {\rm\ce{Na2O}} tác dụng với nước, thu được \emph{0.5 L} dung dịch base. (a) Viết PTHH \& tính nồng độ mol của dung dịch base thu được. (b) Tính thể tích dung dịch {\rm\ce{H2SO4} 20\%}, có khối lượng riêng \emph{1.14 g\texttt{/}mL} cần dùng để trung hòa dung dịch base nói trên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 27]
+	Dẫn từ từ \emph{1.568 L} khí {\rm\ce{CO2}} (đktc) vào 1 dung dịch có hòa tan \emph{6.4 g NaOH}, sản phẩm là muối {\rm\ce{Na2CO3}}. (a) Chất nào đã lấy dư \& dư là bao nhiêu (\emph{L} hoặc {\rm g})? (b) Tính khối lượng muối thu được sau phản ứng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 8.5., p. 10]
+	\emph{3.04 g} hỗn hợp \emph{NaOH, KOH} tác dụng vừa đủ với dung dịch \emph{HCl}, thu được \emph{4.15 g} các muối clorua. (a) Viết các PTHH. (b) Tính khối lượng của mỗi hydroxide trong hỗn hợp ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 8.6., p. 10]
+	Cho \emph{10 g \ce{CaCO3}} tác dụng với dung dịch \emph{HCl} dư. (a) Tính thể tích khí {\rm\ce{CO2}} thu được ở đktc. (b) Dẫn khí {\rm\ce{CO2}} thu được ở trên vào lọ đựng \emph{50 g} dung dịch \emph{NaOH 40\%}. Tính khối lượng muối carbonate thu được.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 8.7., p. 10]
+	Cho $m$ {\rm g} hỗn hợp gồm {\rm\ce{Mg(OH)2,Cu(OH)2}, NaOH} tác dụng vừa đủ với \emph{400 mL} dung dịch \emph{HCl 1M} \& tạo thành \emph{24.1 g} muối clorua. Tính $m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 33]
+	Dẫn ra 1 dung dịch muối khi tác dụng với 1 dung dịch chất khác thì tạo ra: (a) chất khí. (b) chất kết tủa. Viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 33]
+	Có 3 lọ không nhãn, mỗi lọ đựng 1 dung dịch muối sau: {\rm\ce{CuSO4,AgNO3}, NaCl}. Dùng những dung dịch có sẵn trong phòng thí nghiệm để nhận biết chất đựng trong mỗi lọ. Viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 33]
+	Có các dung dịch muối: {\rm\ce{Mg(NO3)2,CuCl2}}. Cho biết muối nào có thể tác dụng với: (a) Dung dịch \emph{NaOH}. (b) Dung dịch \emph{HCl}. (c) Dung dịch {\rm\ce{AgNO3}}. Nếu có phản ứng, viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 33]
+	Cho các dung dịch muối sau phản ứng với nhau từng đôi một, viết dấu $\cdot$ nếu có phản ứng \& viết PTHH, dấu $\circ$ nếu không.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 5., p. 33]
+	Ngâm 1 đinh sắt sạch trong dung dịch copper(II) sulfate. Câu trả lời nào sau đây là đúng nhất cho hiện tượng quan sát được? {\sf A.} không có hiện tượng nào xảy ra. {\sf B.} Kim loại đồng màu đỏ bám ngoài đinh sắt, đinh sắt không có sự thay đổi. {\sf C.} 1 phần đinh sắt bị hòa tan, kim loại đồng bám ngoài đinh sắt \& màu xanh lam của dung dịch ban đầu nhạt dần. {\sf D.} Không có chất mới nào được sinh ra, chỉ có 1 phần đinh sắt bị hòa tan. Giải thích cho sự lựa chọn \& viết PTHH, nếu có.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 36]
+	Cho các muối: {\rm\ce{CaCO3,CaSO4,Pb(NO3)2}, NaCl}. Muối nào nói trên: (a) không được phép có trong nước ăn vì tính độc hại của nó? (b) không độc nhưng cũng không nên có trong nước ăn vì vị mặn của nó? (c) không tan trong nước, nhưng bị phân hủy ở nhiệt độ cao? (d) rất ít tan trong nước \& khó bị phân hủy ở nhiệt độ cao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 36]
+	2 dung dịch tác dụng với nhau, sản phẩm thu được có \emph{NaCl}. Cho biết 2 dung dịch chất ban đầu có thể là các chất nào. Minh họa bằng các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 36]
+	(a) Viết phương trình điện phân dung dịch muối ăn (có màng ngăn). (b) Các sản phẩm của sự điện phân dung dịch \emph{NaCl} có nhiều ứng dụng quan trọng: Khí clo dùng để: $\ldots$ Khí hydrogen dùng để: $\ldots$. Sodium hydroxide dùng để: $\ldots$ Điền các ứng dựng sau vào các chỗ trống cho phù hợp: tẩy trắng vải, giấy; nấu xà phòng; sản xuất hydrochloric acid; chế tạo hóa chất trừ sâu, diệt cỏ dại; hàn cắt kim loại; sát trùng, diệt khuẩn nước ăn; nhiên liệu cho động cơ tên lửa; bơm khí cầu, bóng thám không; sản xuất nhôm, sản xuất chất dẻo PVC; chế biến dầu mỏ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 36]
+	Dung dịch \emph{NaOH} có thể dùng để phân biệt 2 muối có trong mỗi cặp chất sau được không? (a) Dung dịch {\rm\ce{K2SO4}} \& dung dịch {\rm\ce{Fe2(SO4)3}}. (b) Dung dịch {\rm\ce{Na2SO4}} \& dung dịch {\rm\ce{CuSO4}}. (c) Dung dịch \emph{NaCl} \& dung dịch {\rm\ce{BaCl2}}. Viết các PTHH, nếu có.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 6., p. 33]
+	Trộn \emph{30 mL} dung dịch có chứa \emph{2.22 g \ce{CaCl2}} với \emph{70 mL} dung dịch có chứa \emph{1.7 g \ce{AgNO3}}. (a) Cho biết hiện tượng quan sát được \& viết PTHH. (b) Tính khối lượng chất rắn sinh ra. (c) Tính nồng độ mol của chất còn lại trong dung dịch sau phản ứng. Cho thể tích của dung dịch thay đổi không đáng kể.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 5., p. 36]
+	Trong phòng thí nghiệm có thể dùng các muối {\rm\ce{KClO3}} hoặc {\rm\ce{KNO3}} để điều chế khí oxygen bằng phản ứng phân hủy. (a) Viết các PTHH. (b) Nếu dùng \emph{0.1 mol} mỗi chất thì thể tích khí oxygen thu được có khác nhau không? Tính thể tích khí oxygen thu được. (c) Cần điều chế \emph{1.12 L} khí oxygen, tính khối lượng mỗi chất cần dùng. Các thể tích khí được đo ở đktc.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 39]
+	Có các loại phân bón hóa học: \emph{KCl, \ce{NH4NO3, NH4Cl, (NH4)2SO4, Ca3(PO4)2, Ca(H2PO4)2}, \ce{(NH4)2HPO4, KNO3}}. (a) Cho biết tên hóa học của các phân bón này. (b) Sắp xếp các phân bón này thành 2 nhóm phân bón đơn \& phân bón kép. (c) Trộn các phân bón nào với nhau ta được phân bón kép NPK?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 39]
+	Có 3 mẫu phân bón hóa học không ghi nhãn: phân kali \emph{KCl}, phân đạm {\rm\ce{NH4NO3}} \& phân supephotphat (phân lân) {\rm\ce{Ca(H2PO4)2}}. Nhận biết mỗi mẫu phân bón trên băng phương pháp hóa học.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 39]
+	1 người làm vườn đã dùng \emph{500 g \ce{(NH4)2SO4}} để bón rau. (a) Nguyên tố dinh dưỡng nào có trong loại phân bón này? (b) Tính thành phần \% của nguyên tố dinh dưỡng trong phân bón. (c) Tính khối lượng của nguyên tố dinh dưỡng bón cho ruộng rau.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Salt -- Muối}
+
+%------------------------------------------------------------------------------%
+
+\section{Phân Bón Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Mối Quan Hệ Giữa Các Loại Hợp Chất Vô Cơ}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 1., p. 41]
+	Chất nào trong các thuốc thử sau có thể dùng để phân biệt dung dịch sodium sulfate \& dung dịch sodium carbonate? (a) Dung dịch barium chloride. (b) Dung dịch hydrochloric acid. (c) Dung dịch chì nitrate. (d) Dung dịch bạc nitrate. (e) Dung dịch sodium hydroxide. Giải thích \& viết các PTHH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 41]
+	Cho các dung dịch sau lần lượt phản ứng với nhau từng đôi một, ghi $1$ nếu có phản ứng, $0$ nếu không có phản ứng. Viết các PTHH nếu có.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			& NaOH & HCl & \ce{H2SO4} \\
+			\hline
+			\ce{CuSO4} &  &  &  \\
+			\hline
+			HCl &  &  &  \\
+			\hline
+			\ce{Ba(OH)2} &  &  &  \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 4., p. 41]
+	Có các chất: {\rm\ce{Na2O}, Na, NaOH, \ce{Na2SO4,Na2CO3}, NaCl}. (a) Dựa vào mối quan hệ giữa các chất, sắp xếp các chất trên thành 1 dãy chuyển đổi hóa học. (b) Viết các PTHH cho dãy chuyển đổi hóa học ở (a).
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 2., p. 43]
+	Để 1 mẩu sodium hydroxide trên tấm kính trong không khí, sau vài ngày thấy có chất rắn màu trắng phủ ngoài. Nếu nhỏ vài giọt dung dịch \emph{HCl} vào chất rắn trắng thấy có khí thoát ra, khí này làm đục nước vôi trong. Chất rắn màu trắng là sản phẩm phản ứng của sodium hydroxide với chất nào sau đây? Giải thích \& viết PTHH minh họa. (a) Oxygen trong không khí. (b) Hơi nước trong không khí. (c) Carbon dioxide \& oxygen trong không khí. (d) Carbon dioxide \& hơi nước trong không khí. (e) Carbon dioxide trong không khí.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_9}, 3., p. 43]
+	Trộn 1 dung dịch có hòa tan \emph{0.2 mol \ce{CuCl2}} với 1 dung dịch có hòa tan \emph{20 g NaOH}. Lọc hỗn hợp các chất sau phản ứng, được kết tủa \& nước lọc. Nung kết tủa đến khi khối lượng không đổi. (a) Viết các PTHH. (b) Tính khối lượng chất rắn thu được sau khi nung. (c) Tính khối lượng các chất tan có trong nước lọc.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
