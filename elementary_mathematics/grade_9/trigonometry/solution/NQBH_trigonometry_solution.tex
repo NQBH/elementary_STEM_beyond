@@ -7,6 +7,8 @@
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\usepackage{enumitem}
+\setlist{leftmargin=4mm}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
@@ -126,12 +128,79 @@
 	\end{center}
 \end{baitoan}
 
+\begin{proof}[Giải]
+	James Garfield\footnote{20th President of the United States, see, e.g., \href{https://vi.wikipedia.org/wiki/James_A._Garfield}{vi.Wikipedia{\tt/}James A. Garfield} \& \href{https://en.wikipedia.org/wiki/James_A._Garfield}{Wikipedia{\tt/}James A. Garfield}.}'s proof: Đặt $a\coloneqq BC$, $b\coloneqq CA$, $c\coloneqq AB$. Tính diện tích hình thang ABED theo 2 cách: $S_{ABED} = S_{ABC} + S_{CDE} + S_{BCE}\Leftrightarrow\dfrac{(b + c)^2}{2} = \dfrac{bc}{2} + \dfrac{bc}{2} + \dfrac{a^2}{2}\Leftrightarrow b^2 + 2bc + c^2 = 2bc + a^2\Leftrightarrow b^2 + c^2 = a^2$, i.e., định lý Pythagore đúng.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 2., p. 86]
 	Cho $\Delta ABC$ cân có $AB = AC = 9$ {\rm cm}, $BC = 12$ {\rm cm}, đường cao $AH$, I là hình chiếu của H trên AC. (a) Tính độ dài CI. (b) Kẻ đường cao BK của $\Delta ABC$. Chứng minh điểm K nằm giữa 2 điểm A, C.
 \end{baitoan}
 
+\begin{center}
+	\begin{tikzpicture}
+		\pgfmathsetmacro\h{sqrt(5)}
+		\path
+		(0,0) coordinate (H)
+		(2,0) coordinate (C)
+		(-2,0) coordinate (B)
+		(0,\h) coordinate (A)
+		($(A)!(H)!(C)$) coordinate (I)
+		($(A)!(B)!(C)$) coordinate (K)
+		;
+		\draw
+		(A)--(B)--(C)--cycle (A)--(H) (A)--(M) (H)--(I) (B)--(K)
+		pic[draw, angle radius=1.5mm]{right angle=A--H--C}
+		pic[draw, angle radius=1.5mm]{right angle=A--I--H}
+		pic[draw, angle radius=1.5mm]{right angle=B--K--C}
+		;
+		\foreach \x/\g in {A/90,B/-135,C/-45,H/-90,I/45,K/45} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+	\end{tikzpicture}
+\end{center}
+
+\begin{proof}[Giải]
+	$\Delta ABC$ cân tại $A$ có $AH$ là đường cao nên $AH$ cũng là đường trung tuyến, suy ra $H$ là trung điểm của $BC$: $BH = CH = \dfrac{BC}{2} = \dfrac{12}{2} = 6$ cm. (a) Áp dụng hệ thức lượng $b^2 = ab'$ cho $\Delta ABC$ vuông tại $C$: $CH^2 = CI\cdot AC\Leftrightarrow CI = \dfrac{CH^2}{AC} = \dfrac{6^2}{9} = 4$ cm. (b) Vì $HI\bot AC$ \& $BK\bot AC$ nên $HI\parallel BK$. Áp dụng định lý Thales cho $\Delta BKC$ với $HI\parallel BK$: $\dfrac{CI}{CK} = \dfrac{CH}{BC} = \dfrac{1}{2}\Rightarrow CK = 2CI = 2\cdot4 = 8 < AC = 9\Rightarrow$ $K$ nằm giữa $A$ \& $C$.
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{Binh_Toan_9_tap_1}, 2., p. 86]
+	Cho $\Delta ABC$ cân có $AB = AC = b$ {\rm cm}, $BC = a$ {\rm cm}, đường cao $AH$, I là hình chiếu của H trên AC. (a) Tính độ dài CI. (b) Kẻ đường cao BK của $\Delta ABC$. Biện luận vị trí của K đối với 2 điểm A, C theo $a,b\in\mathbb{R}$, $a,b > 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$\Delta ABC$ cân tại $A$ có $AH$ là đường cao nên $AH$ cũng là đường trung tuyến, suy ra $H$ là trung điểm của $BC$: $BH = CH = \dfrac{BC}{2} = \dfrac{a}{2}$. (a) Áp dụng hệ thức lượng $b^2 = ab'$ cho $\Delta ABC$ vuông tại $C$: $CH^2 = CI\cdot AC\Leftrightarrow CI = \dfrac{CH^2}{AC} = \dfrac{a^2}{4b}$ cm. (b) Vì $HI\bot AC$ \& $BK\bot AC$ nên $HI\parallel BK$. Áp dụng định lý Thales cho $\Delta BKC$ với $HI\parallel BK$: $\dfrac{CI}{CK} = \dfrac{CH}{BC} = \dfrac{1}{2}\Rightarrow CK = 2\cdot\dfrac{a^2}{4b} = \dfrac{a^2}{2b}$. Xét 3 trường hợp sau theo giá trị của $a,b$:
+	\begin{itemize}
+		\item \textit{Trường hợp $0 < a < b\sqrt{2}$}: $0 < a < b\sqrt{2}\Leftrightarrow a^2 < 2b^2\Leftrightarrow\dfrac{a^2}{2b} < b\Leftrightarrow CK < CA\Leftrightarrow K$ nằm giữa $A$ \& $C$. (Vì trong trường hợp này, $\Delta ABC$ nhọn, nên chân đường cao $BK$ phải nằm trên cạnh $AC$.)
+		\item \textit{Trường hợp $a = b\sqrt{2} > 0$}: $a = b\sqrt{2} > 0\Leftrightarrow a^2 = 2b^2\Leftrightarrow\dfrac{a^2}{2b} = b\Leftrightarrow CK = CA\Leftrightarrow K\equiv C$. (Vì trong trường hợp này, $\Delta ABC$ vuông cân tại $A$ nên chân đường cao hạ từ 2 góc nhọn phải trùng với đỉnh góc vuông.)
+		\item \textit{Trường hợp $a > b\sqrt{2} > 0$}: $a > b\sqrt{2} > 0\Leftrightarrow a^2 > 2b^2\Leftrightarrow\dfrac{a^2}{2b} > b\Leftrightarrow CK > CA\Leftrightarrow A$ nằm giữa $K$ \& $C$. (Vì trong trường hợp này, $\Delta ABC$ tù tại $A$ nên chân đường cao hạ từ 2 góc nhọn phải nằm ngoài 2 cạnh bên.)
+	\end{itemize}
+	Biện luận vị trí của $K$ đối với $A,C$ theo $a,b$ hoàn tất.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 3., p. 86]
 	Cho $\Delta ABC$ có $\widehat{A} = 120^\circ$, $BC = a$, $AC = b$, $AB = c$. Chứng minh $a^2 = b^2 + c^2 + bc$.
+\end{baitoan}
+
+\begin{center}
+	\begin{tikzpicture}
+		\pgfmathsetmacro\h{sqrt(3)}
+		\path
+		(0,0) coordinate (H)
+		(1,0) coordinate (A)
+		(0,\h) coordinate (B)
+		(4,0) coordinate (C)
+		;
+		\draw
+		(A)--(B)--(C)--cycle (A)--(H) (B)--(H)
+		pic[draw, angle radius=1.5mm]{right angle=B--H--C}		;
+		\foreach \x/\g in {A/-90,B/90,C/-45,H/-135} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+	\end{tikzpicture}
+\end{center}
+
+\begin{proof}[Giải]
+	Kẻ $BH\bot AC$.
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{Binh_Toan_9_tap_1}, 3., p. 86]
+	Cho $\Delta ABC$ có $\widehat{A} = \alpha$, $BC = a$, $AC = b$, $AB = c$. Chứng minh $a^2 = b^2 + c^2 + 2bc\cos\alpha$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 4., p. 86]
