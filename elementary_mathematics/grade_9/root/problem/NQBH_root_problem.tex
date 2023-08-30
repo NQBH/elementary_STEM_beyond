@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Root -- Bài Tập: Căn Thức}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Last updated version: \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.pdf}{GitHub{\tt/}NQBH{\tt/}elementary STEM \& beyond{\tt/}elementary mathematics{\tt/}grade 9{\tt/}circle{\tt/}problem: set $\mathbb{Q}$ of circles [pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.pdf}.} [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/rational/problem/NQBH_circle_problem.tex}.}. 
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Bất Phương Trình}
+Ta xét các dạng bất đẳng thức \& bất phương trình được sử dụng nhiều để tìm điều kiện xác định (ĐKXĐ) của căn thức bậc 2 \& tổng quát hơn là căn thức bậc chẵn (căn thức bậc lẻ luôn xác định miễn là biểu thức dưới dấu căn có nghĩa, không nhất thiết phải không âm như căn bậc chẵn bắt buộc).
+
+\subsection{Bất phương trình chứa ẩn trong dấu giá trị tuyệt đối}
+Với $f:D\subset\mathbb{R}\to\mathbb{R}$, $x\mapsto f(x)$ là 1 hàm số biến $x$, có $\forall a\in\mathbb{R}$, $a > 0$:
+\begin{equation*}
+	\boxed{|f(x)| < a\Leftrightarrow -a < f(x) < a,\ |f(x)|\le a\Leftrightarrow -a\le f(x)\le a,\ |f(x)| > a\Leftrightarrow\left[\begin{split}
+		f(x) &< -a,\\
+		f(x) &> a,
+	\end{split}\right.,\ |f(x)| > a\Leftrightarrow\left[\begin{split}
+	f(x) &\le -a,\\
+	f(x) &\ge a.
+	\end{split}\right.}
+\end{equation*}
+Để giải bất phương trình tích, ta thường sử dụng:
+
+\begin{dinhly}[Dấu của nhị thức bậc nhất $ax + b$]
+	Nhị thức $ax + b$, $a,b\in\mathbb{R}$, $a\ne0$, cùng dấu với $a$ với mọi giá trị của $x$ lớn hơn nghiệm của nhị thức (i.e., $a(ax + b) > 0$, $\forall x > -\frac{b}{a}$), trái dấu với $a$ với mọi giá trị của $x$ nhỏ hơn nghiệm của nhị thức (i.e., $a(ax + b) < 0$, $\forall x < -\frac{b}{a}$).
+\end{dinhly}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 1, p. 5]
+	Giải bất phương trình bậc 2: (a) $x^2 - 4x - 5 < 0$. (b) $x^2 - 2x - 1 > 0$. (c) $2x^2 - 6x + 5 > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 1., p. 6]
+	Giải bất phương trình bậc 2: (a) $x^2 - 4x - 21 > 0$. (b) $x^2 - 4x + 1 < 0$. (c) $3x^2 - x + 1 > 0$. (d) $2x^2 - 5x + 4 < 0$.
+\end{baitoan}
+
+\begin{baitoan}[Giải bất phương trình bậc nhất tổng quát]
+	Giải \& biện luận theo $a,b,c\in\mathbb{R}$, $a\ne0$, bất phương trình: (a) $ax + b > 0$. (b) $ax + b < 0$. (c) $ax + b\le0$. (d) $ax + b\ge0$.
+\end{baitoan}
+
+\begin{baitoan}[Giải bất phương trình bậc nhất chứa trị tuyệt đối dạng tổng quát]
+	Giải \& biện luận theo $a,b,c\in\mathbb{R}$, $a\ne0$, bất phương trình: (a) $|ax + b| > c$. (b) $|ax + b| < c$. (c) $|ax + b|\le c$. (d) $|ax + b|\ge c$.
+\end{baitoan}
+
+\begin{baitoan}[Giải bất phương trình bậc 2 tổng quát]
+	Giải \& biện luận theo $a,b,c,d\in\mathbb{R}$, $a\ne0$, bất phương trình: (a) $ax^2 + bx + c > 0$. (b) $ax^2 + bx + c < 0$. (c) $ax^2 + bx + c\le0$. (d) $ax^2 + bx + c\ge0$.
+\end{baitoan}
+
+\begin{baitoan}[Giải bất phương trình bậc 2 chứa trị tuyệt đối dạng tổng quát]
+	Giải \& biện luận theo $a,b,c,d\in\mathbb{R}$, $a\ne0$, bất phương trình: (a) $|ax^2 + bx + c| > d$. (b) $|ax^2 + bx + c| < d$. (c) $|ax^2 + bx + c|\le d$. (d) $|ax^2 + bx + c|\ge d$.
+\end{baitoan}
+
+\begin{baitoan}[Giải bất phương trình dạng tích tổng quát]
+	Giải \& biện luận theo $a,x_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, với $n\in\mathbb{N}$, $a\ne0$, bất phương trình: (a) {\rm Bất phương trình bậc nhất dạng tích tổng quát:} $a(x - x_0) > 0$, $a(x - x_0) < 0$, $a(x - x_0)\le0$, $a(x - x_0)\ge0$. (b) {\rm Bất phương trình bậc 2 dạng tích tổng quát:} Với $x_1\le x_2$, $a(x - x_1)(x - x_2) > 0$, $a(x - x_1)(x - x_2) < 0$, $a(x - x_1)(x - x_2)\le0$, $a(x - x_1)(x - x_2)\ge0$. (c) {\rm Bất phương trình bậc 3 dạng tích tổng quát:} Với $x_1\le x_2\le x_3$, $a(x - x_1)(x - x_2)(x - x_3) > 0$, $a(x - x_1)(x - x_2)(x - x_3) < 0$, $a(x - x_1)(x - x_2)(x - x_3)\le0$, $a(x - x_1)(x - x_2)(x - x_3)\ge0$. (d) {\rm Bất phương trình bậc 4 dạng tích tổng quát:} Với $x_1\le x_2\le x_3\le x_4$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4) > 0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4) < 0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4)\le0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4)\ge0$. (e$\star$) {\rm Bất phương trình bậc $n$ dạng tích tổng quát:} Với $x_1\le x_2\le\cdots\le x_{n-1}\le x_n$, $a\prod_{i=1}^n (x - x_i) > 0$, $a\prod_{i=1}^n (x - x_i) < 0$, $a\prod_{i=1}^n (x - x_i)\le0$, $a\prod_{i=1}^n (x - x_i)\ge0$, trong đó sử dụng ký hiệu tích $\prod_{i=1}^n (x - x_i) = (x - x_1)(x - x_2)\cdots(x - x_n)$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
