@@ -9,7 +9,7 @@
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
-\newtheorem{baitoan}{Bài toán}
+\newtheorem{baitoan}{}%{Bài toán}
 \newtheorem{cauhoi}{Câu hỏi}
 \newtheorem{conjecture}{Conjecture}
 \newtheorem{corollary}{Corollary}
@@ -97,8 +97,83 @@ Với $f:D\subset\mathbb{R}\to\mathbb{R}$, $x\mapsto f(x)$ là 1 hàm số biế
 \end{baitoan}
 
 \begin{baitoan}[Giải bất phương trình dạng tích tổng quát]
-	Giải \& biện luận theo $a,x_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, với $n\in\mathbb{N}$, $a\ne0$, bất phương trình: (a) {\rm Bất phương trình bậc nhất dạng tích tổng quát:} $a(x - x_0) > 0$, $a(x - x_0) < 0$, $a(x - x_0)\le0$, $a(x - x_0)\ge0$. (b) {\rm Bất phương trình bậc 2 dạng tích tổng quát:} Với $x_1\le x_2$, $a(x - x_1)(x - x_2) > 0$, $a(x - x_1)(x - x_2) < 0$, $a(x - x_1)(x - x_2)\le0$, $a(x - x_1)(x - x_2)\ge0$. (c) {\rm Bất phương trình bậc 3 dạng tích tổng quát:} Với $x_1\le x_2\le x_3$, $a(x - x_1)(x - x_2)(x - x_3) > 0$, $a(x - x_1)(x - x_2)(x - x_3) < 0$, $a(x - x_1)(x - x_2)(x - x_3)\le0$, $a(x - x_1)(x - x_2)(x - x_3)\ge0$. (d) {\rm Bất phương trình bậc 4 dạng tích tổng quát:} Với $x_1\le x_2\le x_3\le x_4$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4) > 0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4) < 0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4)\le0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4)\ge0$. (e$\star$) {\rm Bất phương trình bậc $n$ dạng tích tổng quát:} Với $x_1\le x_2\le\cdots\le x_{n-1}\le x_n$, $a\prod_{i=1}^n (x - x_i) > 0$, $a\prod_{i=1}^n (x - x_i) < 0$, $a\prod_{i=1}^n (x - x_i)\le0$, $a\prod_{i=1}^n (x - x_i)\ge0$, trong đó sử dụng ký hiệu tích $\prod_{i=1}^n (x - x_i) = (x - x_1)(x - x_2)\cdots(x - x_n)$.
+	Giải \& biện luận theo $a,x_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, với $n\in\mathbb{N}$, $a\ne0$, bất phương trình: (a) {\rm Bất phương trình bậc nhất dạng tích tổng quát:} $a(x - x_0) > 0$, $a(x - x_0) < 0$, $a(x - x_0)\le0$, $a(x - x_0)\ge0$. (b) {\rm Bất phương trình bậc 2 dạng tích tổng quát:} Với $x_1\le x_2$, $a(x - x_1)(x - x_2) > 0$, $a(x - x_1)(x - x_2) < 0$, $a(x - x_1)(x - x_2)\le0$, $a(x - x_1)(x - x_2)\ge0$. (c) {\rm Bất phương trình bậc 3 dạng tích tổng quát:} Với $x_1\le x_2\le x_3$, $a(x - x_1)(x - x_2)(x - x_3) > 0$, $a(x - x_1)(x - x_2)(x - x_3) < 0$, $a(x - x_1)(x - x_2)(x - x_3)\le0$, $a(x - x_1)(x - x_2)(x - x_3)\ge0$. (d) {\rm Bất phương trình bậc 4 dạng tích tổng quát:} Với $x_1\le x_2\le x_3\le x_4$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4) > 0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4) < 0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4)\le0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4)\ge0$. (e${}^\star$) {\rm Bất phương trình bậc $n\in\mathbb{N}^\star$ dạng tích tổng quát:} Với $x_1\le x_2\le\cdots\le x_{n-1}\le x_n$, $a\prod_{i=1}^n (x - x_i) > 0$, $a\prod_{i=1}^n (x - x_i) < 0$, $a\prod_{i=1}^n (x - x_i)\le0$, $a\prod_{i=1}^n (x - x_i)\ge0$, trong đó sử dụng ký hiệu tích $\prod_{i=1}^n (x - x_i) = (x - x_1)(x - x_2)\cdots(x - x_n)$.
 \end{baitoan}
+
+\begin{baitoan}[Programming: Solve general inequations of product-form]
+	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải các bất phương trình $P(x) > 0$, $P(x) < 0$, $P(x)\le0$, $P(x)\ge0$, với $P(x)\coloneqq a\prod_{i=1}^n (x - x_i) = a(x - x_1)(x - x_2)\cdots(x - x_n)$, trong đó $n\in\mathbb{N}^\star$, $a\in\mathbb{R}$, $a\ne0$, $x_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$.
+	\begin{itemize}
+		\item {\sf Input.} Dòng 1: Số bộ test. Dòng 2: $n\in\mathbb{N}$, $a\in\mathbb{R}^\star$. Dòng 3: $n$ số thực không nhất thiết phân biệt chưa được sắp xếp thứ tự: $x_1,x_2,\ldots,x_n$. 
+		\item {\sf Output.} 4 tập nghiệm của 4 bất phương trình $P(x) > 0$, $P(x) < 0$, $P(x)\le0$, $P(x)\ge0$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering\tt
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|polynomial_inequation.inp| & \verb|polynomial_inequation.out| \\
+				\hline
+				2 & P(x) > 0: x < 2 \\
+				1 -1.5 & P(x) < 0: x > 2 \\
+				2 & P(x) <= 0: x >= 2 \\
+				2 100 & P(x) >= 0: x <= 2 \\
+				3 -4 & \\
+				& P(x) > 0: x < -4 or x > 3 \\
+				& P(x) < 0: -4 < x < 3 \\
+				& P(x) <= 0: -4 <= x <= 3 \\
+				& P(x) >= 0: x <= -4 or x => 3 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Căn Bậc 2 \& Số Vô Tỷ}
+Ở Toán 7 (xem, e.g., \cite[\S5, pp. 27--29]{SGK_Toan_7_Canh_Dieu_tap_1}), ta đã biết dạng biểu diễn thập phân của số hữu tỷ là hữu hạn hoặc vô hạn tuần hoàn, dạng biểu diễn thập phân của số vô tỷ là vô hạn không tuần hoàn. Số hữu tỷ $a\in\mathbb{Q}$ nào cũng viết được dưới dạng $a = \dfrac{m}{n}$ với $m\in\mathbb{Z}$, $n\in\mathbb{N}^\star$. Tổng, hiệu, tích, thương của 2 số hữu tỷ (số chia $\ne0$) là 1 số hữu tỷ vì:
+\begin{align*}
+	\frac{a}{b}\pm\frac{c}{d} = \frac{ad\pm bc}{bd},\ \frac{a}{b}\cdot\frac{c}{d} = \frac{ac}{bd},\ \forall a,b,c,d\in\mathbb{Z},\,bd\ne0; \frac{a}{b}:\frac{c}{d} = \frac{a}{b}\cdot\frac{d}{c} = \frac{ad}{bc},\ \forall a,b,c,d\in\mathbb{Z},\,bcd\ne0.
+\end{align*}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 2, p. 7]
+	Chứng minh tổng \& hiệu của 1 số hữu tỷ với 1 số vô tỷ là 1 số vô tỷ.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Chứng minh bằng phản chứng. Giả sử tồn tại 2 số $a\in\mathbb{Q}$ \& $b\in\mathbb{R}\backslash\mathbb{Q}$ sao cho $c = a + b\in\mathbb{Q}$. Ta có $b = c - a$, mà hiệu của 2 số hữu tỷ $c,a$ là 1 số hữu tỷ nên $b\in\mathbb{Q}$, mâu thuẫn với giả thiết, nên $c$ phải là số vô tỷ. Chứng minh tương tự cho hiệu.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 3, p. 7]
+	Xét xem 2 số $a,b$ có thể là số vô tỷ hay không, nếu: (a) $a + b$ \& $a - b$ là 2 số hữu tỷ. (b) $a - b$ \& $ab$ là 2 số hữu tỷ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 4, p. 7]
+	Chứng minh: Nếu số tự nhiên $a$ không là số chính phương thì $\sqrt{a}$ là số vô tỷ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 2., p. 8]
+	Chứng minh các số sau là số vô tỷ: (a) $\sqrt{1 + \sqrt{2}}$. (b) $m + \dfrac{\sqrt{3}}{n}$ với $m,n\in\mathbb{Q}$, $n\ne0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 3., p. 8]
+	Xét xem 2 số $a,b$ có thể là số vô tỷ hay không nếu: (a) $ab$ \& $\dfrac{a}{b}$ là các số hữu tỷ. (b) $a + b$ \& $\dfrac{a}{b}$ là các số hữu tỷ ($a + b\ne0$). (c) $a + b$, $a^2$, \& $b^2$ là các số hữu tỷ ($a + b\ne0$).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 4., p. 8]
+	So sánh 2 số: (a) $2\sqrt{3}$ \& $3\sqrt{2}$. (b) $6\sqrt{5}$ \& $5\sqrt{6}$. (c) $\sqrt{24} + \sqrt{45}$ \& $12$. (d) $\sqrt{37} - \sqrt{15}$ \& $2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 5., p. 8]
+	(a) Cho 1 ví dụ để chứng tỏ khẳng định $\sqrt{a}\le a$ với mọi số $a$ không âm là sai. (b) Cho $a > 0$. Với giá trị nào của $a$ thì $\sqrt{a} > a$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, $\rm6^\star$., pp. 8--9]
+	(a) Chỉ ra 1 số thực $x$ mà $x - \dfrac{1}{x}$ là số nguyên ($x\ne\pm1$). (b) Chứng minh nếu $x - \dfrac{1}{x}$ là số nguyên \& $x\ne\pm1$ thì $x$ \& $x + \dfrac{1}{x}$ là số vô tỷ. Khi đó $\left(x + \dfrac{1}{x}\right)^{2n}$ \& $\left(x + \dfrac{1}{x}\right)^{2n+1}$ là số hữu tỷ hay số vô tỷ?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Căn Thức Bậc 2 \& Hằng Đẳng Thức $\sqrt{A^2} = |A|$}
 
 %------------------------------------------------------------------------------%
 
