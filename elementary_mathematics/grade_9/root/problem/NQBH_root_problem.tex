@@ -500,9 +500,58 @@ Với $f:D\subset\mathbb{R}\to\mathbb{R}$, $x\mapsto f(x)$ là 1 hàm số biế
 	Cho $a,b\in\mathbb{R}$, $a,b > 0$. $m\coloneqq\dfrac{a + b}{2}$ được gọi là {\rm trung bình cộng} của $a,b$. $n\coloneqq\sqrt{ab}$ được gọi là {\rm trung bình nhân} của $a,b$. $p\coloneqq\dfrac{2}{\frac{1}{a} + \frac{1}{b}}$ được gọi là {\rm trung bình điều hòa} của $a,b$.
 \end{dinhnghia}
 
-\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, p. 21]
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, p. 22]
 	Cho $a,b\in\mathbb{R}$, $a,b > 0$. Gọi $m,n,p$ lần lượt là trung bình cộng, trung bình nhân, trung bình điều hòa của $a,b$. Chứng minh $p\le n\le m$. Đẳng thức xảy ra khi nào?
 \end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, p. 22]
+	Vẽ $\Delta ABC$ vuông tại $A$, đường cao $AH$, trung tuyến $AM$ sao cho $BH = a$, $CH = b$. Hạ $HD\bot AM$ tại $D$. Chứng minh $AD\le AH\le AO$. Từ đó suy ra bất đẳng thức $p\le n\le m$ với $m,n,p$ lần lượt là trung bình cộng, trung bình nhân, trung bình điều hòa của $a,b$.
+	\begin{center}
+		\begin{tikzpicture}
+			\def\r{2}
+			\path
+			(130:\r) coordinate (A)
+			(180:\r) coordinate (B)
+			(0:\r) coordinate (C)
+			($(B)!(A)!(C)$) coordinate (H)
+			($(B)!.5!(C)$) coordinate (M)
+			($(A)!(H)!(M)$) coordinate (D)
+			;
+			\draw
+			(A)--(B)--(C)--cycle (A)--(H) (A)--(M) (H)--(D)
+			pic[draw, angle radius=1.5mm]{right angle=B--A--C}
+			pic[draw, angle radius=1.5mm]{right angle=A--H--B}
+			pic[draw, angle radius=1.5mm]{right angle=A--D--H}			;
+			\foreach \x/\g in {A/90,B/180,C/0,D/0,H/-90,M/-90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+		\end{tikzpicture}
+	\end{center}
+\end{baitoan}
+
+\begin{dinhnghia}[Căn thức đồng dạng]
+	2 căn thức bậc 2 được gọi là {\rm đồng dạng} nếu chúng có cùng biểu thức dưới dấu căn.
+\end{dinhnghia}
+
+\begin{vidu}[\cite{Binh_boi_duong_Toan_9_tap_1}, p. 22]
+	(a) 3 biểu thức $\sqrt{7},2\sqrt{7},-5\sqrt{7}$ được gọi là {\rm đồng dạng} với nhau. (b) 3 biểu thức $\frac{1}{2}\sqrt{x},5\sqrt{x},-\frac{4}{7}\sqrt{x}$, $x\in\mathbb{R}$, $x\ge0$, được gọi là {\rm đồng dạng} với nhau.
+\end{vidu}
+Muốn cộng trừ các căn thức bậc 2 ta thu gọn các căn thức đồng dạng.
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, p. 23, Công thức căn phức tạp]
+	Chứng minh:
+	\begin{align}
+		\label{can phuc tap}
+		\sqrt{a\pm\sqrt{b}} = \sqrt{\frac{a + \sqrt{a^2 - b}}{2}}\pm\sqrt{\frac{a - \sqrt{a^2 - b}}{2}},\ \forall a,b\in\mathbb{R},\,a,b > 0,\,a^2\ge b.
+	\end{align}
+\end{baitoan}
+Công thức \eqref{can phuc tap} được gọi là \textit{công thức căn phức tạp}. Nhờ công thức này, biểu thức $a\pm\sqrt{b}$ có thể dễ dàng viết được thành bình phương của 1 tổng hoặc hiệu, do đó tính được $a\pm\sqrt{b}$.
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, p. 23]
+	Tính: (a) $A = 2\sqrt{3 + \sqrt{5 - \sqrt{13 + \sqrt{48}}}}$. (b) $B = \sqrt{4 + \sqrt{5\sqrt{3} + 5\sqrt{48 - 10\sqrt{7 + 4\sqrt{2}}}}}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Biến Đổi Đơn Giản Biểu Thức Chứa Căn Thức Bậc 2}
 
 %------------------------------------------------------------------------------%
 
