@@ -1,0 +1,173 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tipa}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Divisibility -- Bài Tập: Tính Chia Hết}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Last updated version: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}natural calculus{\tt/}problem: calculus on set $\mathbb{N}$ of naturals [pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.pdf}.} [\href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.tex}.}. 
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\begin{itemize}\sf
+	\item \textbf{divisible} [a] {\tt/}\textipa{d@'vIz@bl}{\tt/} [not before noun] \textit{divisible (by something)} that can be divided, usually with nothing remaining. {\sc opposite}: \textbf{indivisible}.
+	\item \textbf{divisibility}  [n] [uncountable] {\tt/}\textipa{d@'vIz@bIl@ti}{\tt/}.
+\end{itemize}
+
+\section{Divisibility of Sum -- Tính Chất Chia Hết của Tổng}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H1, p. 24]
+	{\rm Đ{\tt/}S? (a) $127\cdot5 + 40\divby5$. (b) $13\cdot48 + 12 + 17\divby6$. (c) $3\cdot300 - 12\divby9$. (d) $49 + 62\cdot7\divby7$.}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H2, p. 24]
+	Khi chia số $a$ cho số $b$, $a,b\in\mathbb{N}^\star$, $a > b$ ta được số dư là $r$. Khi đó: {\sf A.} $a + r\divby b$. {\sf B.} $a - r\divby b$. {\sf C.} $a + b\divby r$. {\sf D.} $a - b\divby r$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H3, p. 24]
+	Tìm số tự nhiên $x$ có 1 chữ số thỏa $121 + x\divby11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 1, p. 25]
+	Không tính các tổng \& hiệu, xét xem các tổng \& hiệu sau có chia hết cho $12$ không? Vì sao? (a) $600\cdot37 - 144$. (b) $96 + 34 + 48$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 2, p. 25]
+	Không tính ra kết quả, xét xem tổng $84 + 37 + 23$ có chia hết cho $12$ không? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 3, p. 25]
+	Chứng minh trong 3 số tự nhiên liên tiếp có 1 số chia hết cho $3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Mở rộng Ví dụ 4, p. 25]
+	Với $n\in\mathbb{N}^\star$ bất kỳ. Chứng minh: (a) Trong $n$ số tự nhiên liên tiếp luôn có 1 số chia hết cho $n$. (b) Tích của $n$ số tự nhiên liên tiếp là 1 số chia hết cho $n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 4, p. 26]
+	Chứng minh tổng của 3 số tự nhiên liên tiếp là 1 số chia hết cho $3$.
+\end{baitoan}
+
+\begin{baitoan}
+	Với $n\in\mathbb{N}^\star$ bất kỳ. Liệu tổng của $n$ số tự nhiên liên tiếp có chia hết cho $n$ không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 5, p. 26]
+	Chứng minh: (a) $\overline{ab} - \overline{ba}\divby9$ với $a > b$. (b) Nếu $\overline{ab} + \overline{cd}\divby11$ thì $\overline{abcd}\divby11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 6, p. 26]
+	Cho $A = 15 + 30 + 37 + x$ với $x\in\mathbb{N}$. Tìm điều kiện của $x$ để: (a) $A\divby3$. (b) $A\not{\divby}\ 9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 7, p. 26]
+	Tìm $n\in\mathbb{N}$ để: (a) $n + 4\divby n$. (b) $5n - 6\divby n$ với $n > 1$. (c) $143 - 12n\divby n$ với $n < 12$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 8, p. 27]
+	Tìm $n\in\mathbb{N}$ để: (a) $n + 9\divby n + 4$. (b) $3n + 40\divby n + 4$. (c) $5n + 2\divby2n + 9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 3.1., p. 27]
+	Cho $A = 2\cdot5\cdot9\cdot13 + 84$. Hỏi $A$ có chia hết cho $3$, cho $6$, cho $9$, cho $13$ không? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 3.2., p. 27]
+	Chứng minh tổng 5 số chẵn liên tiếp là 1 số chia hết cho $10$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 3.3., p. 27]
+	Khi chia số tự nhiên $a$ cho $27$, ta được số dư là $15$. Hỏi số $a$ có chia hết cho $3$, cho $9$ không? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 3.4., p. 27]
+	Chứng minh mọi số tự nhiên có 3 chữ số giống nhau đều chia hết cho $37$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 3.5., p. 28]
+	Chứng minh: (a) $\sum_{i=0}^{101} 5^i = 1 + 5 + 5^2 + 5^3 + \cdots + 5^{101}\divby6$. (b) $\sum_{i=1}^{100} 2^i = 2 + 2^2 + 2^3 + \cdots + 2^{100}$ vừa chia hết cho $31$, vừa chia hết cho $5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 3.6., p. 28]
+	Chứng minh: (a) Nếu $\overline{abc} - \overline{def}\divby11$ thì $\overline{abcdef}\divby11$. (b) Nếu $\overline{abc}\divby8$ thì $4a + 2b + c\divby8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 3.7., p. 28]
+	Tìm chữ số $a$ biết $\overline{21a21a21a}\divby31$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 3.8., p. 28]
+	Tìm $n\in\mathbb{N}$ sao cho: (a) $n + 21\divby n$. (b) $18 - 2n\divby n$ với $n < 9$. (c) $6n - 9\divby n$ với $n\ge2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 3.9., p. 28]
+	Tìm $n\in\mathbb{N}$ sao cho: (a) $n + 15\divby n - 3$ với $n > 5$. (b) $18 - 2n\divby n + 3$ với $n\le9$. (c) $3n + 13\divby2n + 3$ với $n\ge1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 3.10., p. 28]
+	Cho $a,b\in\mathbb{N}$. Chứng minh nếu $7a + 2b$ \& $31a + 9b$ cùng chia hết cho $2015$ thì $a,b$ cũng chia hết cho $2015$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 28]
+	Chứng minh: (a) Tích 2 số tự nhiên liên tiếp là 1 số chẵn. (b) Tích 3 số tự nhiên liên tiếp luôn chia hết cho $6$. (c) Tích của $n$ số tự nhiên liên tiếp bất kỳ luôn chia hết cho $n! = \prod_{i=1}^n i = 1\cdot2\cdot3\cdots n$, $\forall n\in\mathbb{N}^\star$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 28]
+	Với $n\in\mathbb{N}^\star$. (a) Khi nào thì tổng của $n$ số tự nhiên liên tiếp bất kỳ chia hết cho $n$? (b) Khi nào thì tổng của $n$ số tự nhiên chẵn liên tiếp bất kỳ chia hết cho $n$? (c) Khi nào thì tổng của $n$ số tự nhiên lẻ liên tiếp bất kỳ chia hết cho $n$?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Divisibility Rule -- Dấu Hiệu Chia Hết}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
