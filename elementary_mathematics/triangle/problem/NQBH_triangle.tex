@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usepackage{enumitem}
+\setlist{leftmargin=4mm}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}%{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Triangle -- Bài Tập: Tam Giác $\Delta$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+%------------------------------------------------------------------------------%
+
+\begin{baitoan}[\cite{Dang2018}, 1., p. 5]
+	 Cho $\Delta ABC$ vuông tại $A$ \& $\widehat{B} = 60^\circ$. Chia $\Delta ABC$ thành 4 tam giác vuông bằng nhau bằng nhiều cách nhất có thể.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $\Delta ABC$. Nêu nhiều nhất có thể các cách chia $\Delta ABC$ thành: (a) 4 tam giác bằng nhau. (b) 4 tam giác có diện tích bằng nhau. (c) 4 tam giác có chu vi bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 2., p. 6]
+	Có tồn tại hay không 1 tam giác có 2 đường trung tuyến nhỏ hơn nửa cạnh đối diện?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 3., p. 6]
+	Cho $\Delta ABC$, trung tuyến AD. Chứng minh $\dfrac{1}{2}|AB - AC| < AD < \dfrac{1}{2}(AB + AC)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 4., p. 7]
+	Cho $\Delta ABC$ nhọn, 2 đường cao $BD,CE$. Gọi $P,Q$ là hình chiếu của $B,C$ trên DE. Chứng minh $PE = DQ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 5., p. 7]
+	Cho hình vuông ABCD. Trên cạnh AB, AD lấy 2 điểm $P,Q$ sao cho $AP + AQ = AB$. Chứng minh $DP\bot CQ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 6., p. 8]
+	Cho hình vuông ABCD. Đường thẳng $m$ thay đổi luôn qua đỉnh B. Gọi $H,K$ là hình chiếu của $A,C$ trên $m$. AK cắt CH tại E. Chứng minh $DE\bot m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 7., p. 8]
+	Cho hình vuông ABCD. Lấy điểm M trên BC \& điểm N trên CD. Biết $BM + DN = MN$. Chứng minh $\widehat{MAN} = 45^\circ$. Điều ngược lại có đúng không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 8., p. 9]
+	Cho hình vuông ABCD. $\widehat{xAy} = 45^\circ$ quay quanh đỉnh A cắt 2 cạnh $BC,CD$ tại $M,N$. Chứng minh: (a) Chu vi $\Delta CMN$ không phụ thuộc vào vị trí chuyển động của $\widehat{xAy}$. (b) Khoảng cách từ A đến MN không đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 9., p. 10]
+	Cho hình vuông ABCD. Góc có số đo $45^\circ$ quay quanh đỉnh A cắt 2 cạnh $BC,CD$ tại $M,N$. Đường chéo BD cắt $AM,AN$ tại $P,Q$. Chứng minh $PQ^2 = BP^2 + DQ^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 10., p. 11]
+	Cho đa giác ABCDE thỏa mãn $AB = AE$, $BC = CD = DE$ \& $\widehat{ABC} = \widehat{AED} = 90^\circ$. BD cắt CE tại F. Chứng minh $AB = AF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 11., p. 11, định lý Carnot]
+	Cho $\Delta ABC$. Trên cạnh BC, CA, AB lần lượt lấy 3 điểm $D,E,F$. Qua D dựng đường thẳng $d_1\bot BC$, qua E dựng đường thẳng $d_2\bot CA$, qua F dựng đường thẳng $d_3\bot AB$. Chứng minh $d_1,d_2,d_3$ đồng quy khi \& chỉ khi $AF^2 + BD^2 + CE^2 = AE^2 + BF^2 + CD^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 12., p. 12]
+	Cho hình vuông ABCD. P là điểm trong hình vuông thỏa mãn $PA:PB:PC = 1:2:3$. Tính $\widehat{APB}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 13., p. 13]
+	Cho $\Delta ABC$ vuông tại A \& 2 đường phân giác $BD,CE$. Gọi $M,N$ là hình chiếu của A trên $BD,CE$. Tính $\widehat{MAN}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 14., p. 13]
+	Cho $\Delta ABC$ vuông tại A, $\widehat{ABC} = 40^\circ$. Trên cạnh AB lấy 2 điểm $D,E$ sao cho $\widehat{ACD} = \widehat{BCE} = 10^\circ$. Chứng minh $BE = 2AD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 15., p. 14]
+	Cho $\Delta ABC$ thỏa mãn $\widehat{B} = 50^\circ$, $\widehat{C} = 30^\circ$. Điểm D trên AC sao cho $AB = AD$. Chứng minh $BD = AC$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 16., p. 14]
+	Cho $\Delta ABC$ cân tại A, $ \widehat{A} = 20^\circ$. Lấy điểm D trên AB sao cho $AD = BC$. Tính 3 góc của $\Delta BDC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 17., p. 15]
+	Gọi I là giao điểm của 3 đường phân giác trong của $\Delta ABC$. Chứng minh $AB + BI = AC\Leftrightarrow\widehat{ABC} = 2\widehat{ACB}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 18., p. 16]
+	Cho $\Delta ABC$. Gọi $M,N$ là trung điểm của $BC,CA$ \& BH là đường cao. Gọi K là điểm trên AC sao cho $MK\bot ME$ với ME là phân giác của $\widehat{HMN}$. Biết $HK = \dfrac{1}{2}(AB + BC)$ \& $\widehat{HMN} = 45^\circ$. Chứng minh $\Delta ABC$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dang2018}, 19., p. 17]
+	Cho $\Delta ABC$. Gọi D là điểm nằm trong $\Delta ABC$ thỏa mãn $DB = DC = AB$, $\widehat{ABD} = 40^\circ$, $\widehat{DBC} = 10^\circ$. Tính $\widehat{DAC}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
