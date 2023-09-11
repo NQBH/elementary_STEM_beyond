@@ -6,6 +6,8 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tipa}
+\usepackage{enumitem}
+\setlist{leftmargin=4mm}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{}
@@ -45,7 +47,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	Last updated version: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}natural calculus{\tt/}problem: calculus on set $\mathbb{N}$ of naturals [pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.pdf}.} [\href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.tex}.}. 
+	Last updated version: \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}divisibility{\tt/}problem[pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.pdf}.} [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.tex}.}. 
 \end{abstract}
 \tableofcontents
 
@@ -161,6 +163,192 @@
 %------------------------------------------------------------------------------%
 
 \section{Divisibility Rule -- Dấu Hiệu Chia Hết}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H1, p. 29]
+	Nối cột để được kết quả đúng.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|l|}
+			\hline
+			(a) $230 + 175$ & (1) chia hết cho 2 nhưng không chia hết cho 5. \\
+			\hline
+			(b) $2070 - 590$ & (2) chia hết cho 5 nhưng không chia hết cho 2. \\
+			\hline
+			(c) $747 + 350$ & (3) chia hết cho cả 2 \& 5. \\
+			\hline
+			& (4) không chia hết cho cả 2 \& 5. \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H2, p. 30]
+	Khi giải bài toán: ``Thêm 1 chữ số vào bên phải \& 1 chữ số vào bên trái số $2015$ để được 1 số mới chia hết cho cả $2,3,5$.'' Tìm kết quả sai: {\sf A.} $120150$. {\sf B.} $420150$. {\sf C.} $620150$. {\sf D.} $720150$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Mở rộng H2, p. 29]
+	Thêm 1 chữ số vào bên phải \& 1 chữ số vào bên trái số $2015$ để được 1 số mới chia hết cho cả $2,3,5$. Tìm tất cả các cặp số có thể thêm vào.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H3, p. 30]
+	Trong khoảng từ $1010$ đến $1975$ có bao nhiêu số chia hết cho $3$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H4, p. 30]
+	Thay các chữ cái khác nhau bởi các chữ số khác nhau: $\rm HANOI + HANOI + HANOI = \overline{TT221}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 1, p. 30]
+	2 bạn Egg \& Chicken đi mua $18$ gói bánh \& $12$ gói kẹo để chuẩn bị cho buổi liên hoan lớp. Egg đưa cho cô bán hàng 3 tờ tiền, mỗi tờ có mệnh giá $50000$ đồng \& được trả lại $22000$ đồng. Thấy vậy, Chicken liền nói: ``Cô tính sai rồi!'' Chicken đúng hay sai? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 2, p. 30]
+	Chứng minh $(n + 29)(n + 30)\divby2$, $\forall n\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[Tính chia hết cho 2 của 1 tích]
+	(a) Với $a,b\in\mathbb{N}$ thỏa điều kiện nào thì $(n + a)(n + b)\divby2$, $\forall n\in\mathbb{N}$? (b) Với $a,b,c\in\mathbb{N}$ thỏa điều kiện nào thì $(n + a)(n + b)\divby2$, $\forall n\in\mathbb{N}$? (c) Cho $n\in\mathbb{N}^\star$. Với $a_1,a_2,\ldots,a_n\in\mathbb{N}$ thỏa điều kiện nào thì $\prod_{i=1}^n (m + a_i) = (m + a_1)(m + a_2)\cdots(m + a_n)\divby2$, $\forall n\in\mathbb{N}$?
+\end{baitoan}
+
+\begin{baitoan}[Tính chia hết cho 3 của 1 tích]
+	(a) Với $a,b\in\mathbb{N}$ thỏa điều kiện nào thì $(n + a)(n + b)\divby3$, $\forall n\in\mathbb{N}$? (b) Với $a,b,c\in\mathbb{N}$ thỏa điều kiện nào thì $(n + a)(n + b)\divby3$, $\forall n\in\mathbb{N}$? (c) Cho $n\in\mathbb{N}^\star$. Với $a_1,a_2,\ldots,a_n\in\mathbb{N}$ thỏa điều kiện nào thì $\prod_{i=1}^n (m + a_i) = (m + a_1)(m + a_2)\cdots(m + a_n)\divby3$, $\forall n\in\mathbb{N}$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 3, p. 31]
+	Chứng minh $39^{2015} + 11^{2016}\divby10$.
+\end{baitoan}
+
+\begin{baitoan}
+	Với $a,b\in\mathbb{N}$ thỏa điều kiện nào thì: (a) $39^a + 11^b\divby10$? (b) $\overline{a_ma_{m-1}\ldots a_19}^a + \overline{b_nb_{n-1}\ldots b_11}^b\divby10$ với $a_i,b_j\in\{0,1,2,\ldots,9\}$, $\forall i = 1,2,\ldots,m$, $\forall j = 1,2,\ldots,n$, $a_nb_m\ne0$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 4, p. 31]
+	Thay dấu $+$ hoặc $-$ vào các dấu $\star$ trong dãy tính sau để được kết quả là 1 số chia hết cho $2$: $10\star9\star8\star7\star6\star5\star4\star3\star2\star1$.
+\end{baitoan}
+
+\begin{baitoan}
+	Thay dấu $+$ hoặc $-$ vào các dấu $\star$ trong dãy tính sau để được kết quả là 1 số chia hết cho $2$: $n\star(n - 1)\star(n - 2)\star\cdots3\star2\star1$ với $n\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 5, p. 32]
+	Viết các số tự nhiên liên tiếp từ $10$ đến $99$ ta được số $A$. Hỏi $A$ có chia hết cho $9$ không? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $n\in\mathbb{N}^\star$. Viết các số tự nhiên liên tiếp từ $10^n$ (số tự nhiên nhỏ nhất có $n + 1$ chữ số) đến $10^{n+1} - 1$ (số tự nhiên lớn nhất có $n + 1$ chữ số) ta được số $A$. Hỏi $A$ có chia hết cho $9$ không? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 6, p. 32]
+	Tìm 2 chữ số $x,y$ biết: (a) $\overline{38x5y}$ chia hết cho $2,5,9$. (b) $\overline{12x3y}\divby45$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 7, p. 32]
+	Thay $a,b$ bằng các chữ số thích hợp để số $ \overline{2a83b}$ chia hết cho $3$ \& chia cho $5$ dư $1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 8, p. 33]
+	Tìm 2 số tự nhiên chia hết cho $9$, biết tổng của chúng bằng $\overline{35\star1}$ \& số lớn gấp đôi số bé.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 9, p. 33]
+	Tìm chữ số $a$ sao cho $\overline{95a14}\divby11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.1., p. 33]
+	Từ 3 trong 5 chữ số $2,5,7,8,0$, ghép thành số có 3 chữ số khác nhau thỏa mãn 1 trong các điều kiện: (a) Là số lớn nhất chia hết cho $2$. (b) Là số nhỏ nhất chia hết cho $2$. (c) Là số lớn nhất chia hết cho $5$. (d) Là số nhỏ nhất chia hết cho $5$. (e) Là số lớn nhất chia hết cho $9$. (f) Là số nhỏ nhất chia hết cho $9$. (g) Là số lớn nhất chia hết cho $3$. (h) Là số nhỏ nhất chia hết cho $3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.2., p. 33]
+	Dùng 3 trong 4 số $,2,4,6,8$, viết tất cả các số tự nhiên có 3 chữ số chia hết cho cả 3 số $2,3,9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.3., p. 33]
+	Có $10$ mẩu que lần lượt dài {\rm1 cm, 2cm, 3cm, $\ldots$, 10 cm}. Hỏi có thể dùng cả $10$ mẫu que đó để xếp thành 1 tam giác có 3 cạnh bằng nhau không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.4., p. 33]
+	Chứng minh: (a) $10^{2015} + 8\divby18$. (b) $10^{21} + 20\divby6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.5., p. 33]
+	Chứng minh $(n + 11)(n + 12)\divby2$, $\forall n\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.6., p. 33]
+	Chứng minh tích của 3 số tự nhiên chẵn liên tiếp chia hết cho $48$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.7., p. 33]
+	Tìm số tự nhiên có 5 chữ số, các chữ số giống nhau, biết số đó chia cho $5$ dư $4$ \& chia hết cho $2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.8., p. 34]
+	Tìm 2 chữ số $x,y$ biết: (a) $\overline{2x98y}$ chia hết cho $2,3,5$. (b) $\overline{43xy5}\divby45$. (c) $\overline{21x7y}$ chia hết cho $5,18$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.9., p. 34]
+	Tìm chữ số $a$ để $\overline{aaaaa96}$ chia hết cho cả $3$ \& $8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.10., p. 34]
+	Tìm chữ số $a$ để $\overline{1aaa1}\divby11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.11., p. 34]
+	Cho $a\in\mathbb{N}$. Đổi chỗ các chữ số của $a$ để được số $b$ gấp $3$ lần số $a$. Chứng minh $a\divby27$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.12., p. 34]
+	Cho $n\in\mathbb{N}^\star$. Chứng minh: (a) $6^n - 1\divby5$. (b) $10^n + 18n - 1\divby27$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.13., p. 34]
+	Tìm 2 chữ số $a,b$ sao cho: (a) $\overline{71ab}$ chia hết cho $9$, cho $2$, \& chia cho $5$ dư $3$. (b) $\overline{15a3b}$ chia hết cho $2$, chia hết cho $9$, \& chia cho $5$ dư $4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.14., p. 34]
+	Tìm 2 số tự nhiên liên tiếp có 2 chữ số, biết 1 số chia hết cho $4$, số kia chia hết cho $25$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.15., p. 34]
+	Tìm số tự nhiên có 4 chữ số sao cho khi nhân số đó với $9$ ta được số mới gồm chính các chữ số của số ấy nhưng viết theo thứ tự ngược lại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.16., p. 34, Thái Lan]
+	Nếu đem số $31513$ \& số $34369$ chia cho cùng 1 số có 3 chữ số thì 2 phép chia có số dư bằng nhau. Tìm số dư của 2 phép chia đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.17., p. 34]
+	Chứng minh hiệu của 1 số \& tổng các chữ số của nó chia hết cho $9$.
+\end{baitoan}
+
+\begin{dinhnghia}[Hàm tổng các chữ số]
+	Ký hiệu $S(n)$ là tổng các chữ số của $n\in\mathbb{N}$.
+\end{dinhnghia}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 4.18., p. 34]
+	 Tìm $n\in\mathbb{N}$ biết $n + S(n) = 88$.
+\end{baitoan}
+
+\begin{baitoan}
+	Tìm \& chứng minh dấu hiệu chia hết cho $11$.
+\end{baitoan}
+
+\begin{baitoan}[Tích 2 số tự nhiên liên tiếp]
+	Cho $n\in\mathbb{N}$. Xét tích 2 số tự nhiên liên tiếp $A_2(n) = n(n + 1)$. (a) Chứng minh $A_2(n)\divby2$, $\forall n\in\mathbb{N}$. (b) Chứng minh tổng của $n$ số chẵn dương đầu tiên bằng $A_2(n)$. (c) Tìm điều kiện của $n$ để $A_2(n)$ chia hết cho $4,8,16,\ldots,2^m$ với $m\in\mathbb{N}^\star$.
+\end{baitoan}
+
+\begin{baitoan}[Tích 2 số tự nhiên chẵn liên tiếp]
+	Cho $n\in\mathbb{N}$. Xét tích 2 số tự nhiên chẵn liên tiếp $E_2(n) = 2n(2n + 2)$. (a) Chứng minh $E_2(n)\divby8$, $\forall n\in\mathbb{N}$. (b) Chứng minh tổng của $n$ số chẵn dương đầu tiên bằng $4E_2(n)$. (c) Tìm điều kiện của $n$ để $E_2(n)$ chia hết cho $2^m$ với $m\in\mathbb{N}^\star$.
+\end{baitoan}
+
+\begin{baitoan}[Tích 3 số tự nhiên liên tiếp]
+	Cho $n\in\mathbb{N}$. Xét tích 3 số tự nhiên liên tiếp $A_3(n) = n(n + 1)(n + 2)$. (a) Chứng minh $A_3(n)\divby6$ với mọi $n$ lẻ. (b) Chứng minh $A_3(n)\divby24$ với mọi $n$ chẵn. (c${}^\star$) Tìm điều kiện của $n$ để $A_3(n)$ chia hết cho $2^a\cdot3^b$ với $a,b\in\mathbb{N}^\star$.
+\end{baitoan}
+
+\begin{baitoan}[Tích 4 số tự nhiên liên tiếp]
+	Cho $n\in\mathbb{N}$. Xét tích 4 số tự nhiên liên tiếp $A_4(n) = n(n + 1)(n + 2)(n + 3)$. (a) Chứng minh $A_4(n)\divby24$, $\forall n\in\mathbb{N}$. (b${}^\star$) Tìm điều kiện của $n$ để $A_4(n)$ chia hết cho $2^a\cdot3^b$ với $a,b\in\mathbb{N}^\star$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
