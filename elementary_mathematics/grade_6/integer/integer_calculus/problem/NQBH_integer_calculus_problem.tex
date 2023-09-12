@@ -1,0 +1,166 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tipa}
+\usepackage{enumitem}
+\setlist{leftmargin=4mm}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Set $\mathbb{Z}$ of Integers -- Bài Tập: Tập Hợp Số Nguyên $\mathbb{Z}$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Last updated version: \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}divisibility{\tt/}problem[pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.pdf}.} [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.tex}.}. 
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{$\pm$ on $\mathbb{R}$. Bracket Rule -- Phép $\pm$ Các Số Nguyên. Quy Tắc Dấu Ngoặc}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H1, p. 54]
+	{\rm Đ{\tt/}S?} (a) Tổng của 1 số nguyên dương với 1 số nguyên âm là 1 số nguyên âm. (b) Tổng của 1 số nguyên dương với 1 số nguyên âm là 1 số nguyên dương. (c) Tổng của 1 số nguyên dương với 1 số nguyên âm là số $0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H2, p. 54]
+	Archimedes là nhà bác học vĩ đại người Hy Lạp, ông sinh năm {\rm287 TCN} \& mất năm {\rm212 TCN}. Hỏi Archimedes sống thọ bao nhiêu tuổi?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H3, p. 55]
+	Cho $12$ quả bóng có ghi số \& chia thành $4$ rổ: Rổ 1: $-3,-2,19$. Rổ 2: $9,6,-2$. Rổ 3:$-5,25,-7$. Rổ 4: $-1,22,-9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 1, p. 55]
+	Chứng minh $a - b$ \& $b - a$ là 2 số đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 2, p. 55]
+	1 tòa nhà ở Thành phố Hồ Chí Minh có $25$ tầng được đánh số các tầng theo thứ tự cao dần là $0$ (tầng trệt)), $1,2,3,\ldots,24$ \& $3$ tầng hầm được đánh số là B1, B2, B3. 1 thang máy đang ở tầng $14$, nó đi lên $3$ tầng rồi đi xuống $19$ tầng. Hỏi thang máy dừng lại ở tầng mấy?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 3, p. 56]
+	Tính hợp lý: (a) $A = 49 + (-27 + 10 - 49 + 87)$. (b) $B = 1 + 2 - 3 - 4 + 5 + 6 - 7 - 8 + \ldots - 99 - 100 + 101$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 4, p. 56]
+	Tính hợp lý: (a) $A = 78 - [29 + (78 - 129)]$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 5, p. 56]
+	Chứng minh: $(a - b) - (b + c) + (c - a) - (a - b - c) = -(a + b - c)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 6, p. 56]
+	Tìm chữ số $a$ biết $-\overline{a5} + (-92) = -157$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 7, p. 57]
+	Tìm $x\in\mathbb{Z}$ biết: (a) $(-x + 42) - 38 = -68 + 12$. (b) $-129 - (35 - x) = 55$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.1., p. 57]
+	Tính hợp lý: (a) $(367 - 24) + (133 - 76)$. (b) $(338 - 635) - (165 - 162)$. (c) $-418 - \{-346 - 218 - [-146 - (-285) + 2015]\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.2., p. 57]
+	Tính hợp lý: (a) $(-3) + 8 + (-13) + 18 + \ldots + (-53) + 58$. (b) $(-40) + (-39) + \cdots + 33 + 34 + 35$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.3., p. 57]
+	Tìm giá trị của biểu thức: (a) $x + (-53)$ biết $x = -27$. (b) $-x + (-182)$ biết $x = -237$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.4., p. 57]
+	Rút gọn biểu thức: (a) $A = -(45 + x) - (-24 - x) + (-55 - x)$. (b) $B = x - 42 - [(13 + x) - (17 - x)]$. (c) $C = -(20 + x) - [17 + (-x)]$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.5., p. 57]
+	Tính $x - y$ biết điểm $x$ \& điểm $y$ đều cách điểm $0$ là $5$ đơn vị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.6., p. 57]
+	Tính tổng tất cả các số nguyên $x$ thỏa mãn: (a) $-11\le x < 15$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.7., p. 57]
+	Tìm chữ số $a,b\in\mathbb{N}$ biết: (a) $56 + (-\overline{a8}) = -32$. (b) $-\overline{ab7} - 45 = -172$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.8., p. 57]
+	Tìm $x\in\mathbb{Z}$ biết: (a) $x + (-42) = 92 + (-52)$. (b) $x - 27 = -48 - (-72)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.9., p. 57]
+	Tìm $x\in\mathbb{Z}$ biết: (a) $57 + (7 - 32) = 319 - (x + 319)$. (b) $(76 - x) - (67 - x) = 9 - (-2 + x)$. (c) $x - \{34 - [26 + (-66 - x)]\} = 27 - \{43 + [25 - (20 - x)]\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.10., p. 58]
+	Chứng minh đẳng thức: (a) $(a + b) - (c - d) - (a + d) = b - c$. (b) $(a - b) - (d - b) - (c - d) = a - c$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.11., p. 58]
+	Cho $A = -a + b - c$, $B = a - b + c$ với $a,b,c\in\mathbb{Z}$. Chứng minh $A,B$ là 2 số đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.12., p. 58]
+	Tìm $x\in\mathbb{Z}$ biết: (a) $(-2) + 4 + (-6) + 8 + \ldots + x = 2014$. (b) $1 + (-4) + 7 + (-10) + \ldots + (-x) = -3000$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.13., p. 58]
+	Cho $a + b = 1$. Tính $S = -(-a + b - c) + (-c - b - a) - (a - b)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.14., p. 58]
+	Viết tất cả các số nguyên lớn hơn $-51$ nhưng nhỏ hơn $51$ theo 1 thứ tự bất kỳ. Sau đó cứ mỗi số cộng với thứ tự của nó sẽ được 1 tổng. Tính tổng tất cả các số nhận được.
+\end{baitoan}
+
+\begin{conjecture}[Goldbach conjecture -- Giả thuyết Goldbach]
+	Mọi số nguyên dương chẵn lớn hơn $2$ đều có thể viết dưới dưới dạng tổng của 2 số nguyên tố.
+\end{conjecture}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 58]
+	(a) Cho $30$ số nguyên thỏa mãn: Tổng của $6$ số bất kỳ trong các số đó đều là 1 số âm. Chứng minh tổng của $30$ số nguyên đã cho cũng là 1 số âm. (b) Kết quả còn đúng không nếu thay $30$ số bởi $31$ số? (c${}^\star$) Kết quả còn đúng không nếu thay $30$ số bởi $a\in\mathbb{N}^\star$ số \& thay $6$ số bởi $b\in\mathbb{N}^\star$ số?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
