@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tipa}
+\usepackage{enumitem}
+\setlist{leftmargin=4mm}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Set $\mathbb{Z}$ of Integers -- Bài Tập: Tập Hợp Số Nguyên $\mathbb{Z}$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Last updated version: \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}divisibility{\tt/}problem[pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.pdf}.} [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.tex}.}. 
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Set $\mathbb{Z}$ of Integers -- Tập Hợp Số Nguyên $\mathbb{Z}$}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H1, p. 49]
+	{\rm Đ{\tt/}S?} (a) Số nguyên âm nhỏ hơn số tự nhiên. (b) Số nguyên âm nhỏ hơn số nguyên dương. (c) Số tự nhiên là số nguyên dương. (d) Số đối của 1 số nguyên dương là 1 số nguyên âm. (e) Trên trục số, 2 số nguyên đối nhau cách đều điểm $0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H2, p. 50]
+	Tìm: (a) Số đối của $3$. (b) Số đối của $-7$. (c) Số đối của $0$. (d) Số đối của $-(-7)$. (e) Số liền trước của số $0$. (f) Số liền sau của $-4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 1, p. 50]
+	Cho tập hợp $A = \{-2,3,0,-1,5,-(-4)\}$. (a) Viết tập hợp B gồm các phần tử là số đối của các phần tử trong tập hợp A. (b) Viết tập hợp C gồm các phần tử thuộc tập hợp A \& là số nguyên âm.
+\end{baitoan}
+
+\begin{luuy}
+	$\mathbb{N}^\star$ là tập hợp các số tự nhiên khác $0$, i.e., số nguyên dương, còn $\mathbb{Z}^\star$ là tập hợp các số nguyên khác $0$.
+\end{luuy}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 2, p. 50]
+	{\rm Đ{\tt/}S?} ``Nếu $a > b$ trên trục số, khoảng cách từ điểm $a$ đến điểm $0$ lớn hơn khoảng cách từ điểm $b$ đến điểm $0$.''
+\end{baitoan}
+
+\begin{luuy}
+	Để chứng tỏ 1 khẳng định nào đó là sai, ta chỉ cần đưa ra 1 ví dụ cụ thể phủ định kết quả đó. Ví dụ như thế được gọi là {\rm phản ví dụ (counterexample)}.
+\end{luuy}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 3, p. 51]
+	Đọc \& viết độ cao của các đối tượng: (a) Tàu ngầm ở vị trí thấp hơn mực nước biến {\rm60 m}. Tính độ cao của tàu ngầm. (b) Rãnh Mariana (thuộc vùng biển Philippines) có độ sâu tối đa là {\rm11035 m} dưới mực nước biến (nơi sâu nhất thế giới). Tính độ cao của rãnh Mariana so với mực nước biển.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 4, p. 51]
+	Liệt kê phần tử của tập hợp: (a) $A = \{a\in\mathbb{Z}|-5 < a < -1\}$. (b) $B = \{b\in\mathbb{Z}|-2\le b < 3\}$. (c) $C = \{c\in\mathbb{Z}|-1\le c\le4\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 5, p. 51]
+	So sánh $a,b,c\in\mathbb{Z}$ biết $a < -6$, $b > 2$, $-1 < c < 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.1., p. 52]
+	Tìm tập hợp: (a) $\mathbb{Z}^\star\cap\mathbb{N}$. (b) $\mathbb{Z}_-\cap\mathbb{N}$, trong đó $\mathbb{Z}_-\coloneqq\{a\in\mathbb{Z}|a\le0\}$ là tập hợp các số nguyên không dương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.2., p. 52]
+	{\rm Đ{\tt/}S?} Nếu sai, sửa lại cho đúng. ``Nếu $a\in\mathbb{Z}_-$ thì $-a\in\mathbb{N}^\star$.''
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.3., p. 52]
+	Tìm tất cả các giá trị thích hợp của chữ số $a$ sao cho: (a) $\overline{a00} < 102$. (b) $-155 < -\overline{15a}$. (c) $-\overline{a99} > -759 > -\overline{7a0}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.4., p. 52]
+	Viết số nguyên âm: (a) Nhỏ nhất có 1 chữ số. (b) Lớn nhất có 2 chữ số. (c) Nhỏ nhất có 5 chữ số khác nhau. (d) Lớn nhất có 5 chữ số khác nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.6., p. 52]
+	Người ta còn dùng số nguyên âm để chỉ thời gian trước Công nguyên (viết tắt là {\rm TCN}), e.g., nhà Toán học Pythagore sinh năm $-570$ nghĩa là ông sinh năm 570 trước Công nguyên ({\rm570 TCN}). (a) Viết số (nguyên âm) chỉ rõ năm tổ chức Thế vận hội đầu tiên, biết nó diễn ra năm {\rm776 TCN}. (b) Viết số (nguyên âm) chỉ rõ năm của sự kiện lịch sử: Bắt đầu thời kỳ Hồng Bàng {\rm2879 TCN}. Nhà nước Âu Lạc ra đời {\rm257 TCN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.7., p. 52]
+	Tìm $x\in\mathbb{Z}$ biết trên trục số: (a) Khoảng cách từ điểm $x$ đến điểm $0$ bằng $10$. (b) Khoảng cách từ điểm $x$ đến điểm $0$ lớn hơn $5$ nhưng nhỏ hơn $9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.8., p. 53]
+	Tìm 3 tập hợp $A\cap B,B\cap C,C\cap A$ với $A = \{x\in\mathbb{Z}|-5 < x < 8\}$, $B = \{x\in\mathbb{Z}|2 < x\le5\}$, $C = \{x\in\mathbb{Z}|\mbox{Khoảng cách từ điểm $x$ đến điểm 0 trên trục số lớn hơn hoặc bằng 5}\}$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.9., p. 53]
+	Chứng minh: Với $a,x\in\mathbb{Z}$, $a > 0$, \& tển trục số, khoảng cách từ điểm $x$ đến điểm $0$ bằng $a$, thì $x = a$ hoặc $x = -a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.10., p. 53]
+	Chứng minh: Với $a,x\in\mathbb{Z}$ \& trên trục số, điểm $x$ \& điểm $a$ cách điều điểm $0$ thì $x = a$ hoặc $x = -a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 52]
+	Cho $a,b\in\mathbb{Z}$. Chứng minh nếu $a < b$ thì $-a > -b$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 52]
+	Chứng minh nếu $a < b < 0$ thì trên trục số khoảng cách từ điểm $a$ đến điểm $0$ lớn hơn khoảng cách từ điểm $b$ đến điểm $0$.	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+\begin{baitoan}
+	Cho $a,b\in\mathbb{Z}$. (a) Giải phương trình $|a| = |b|$. (b) Giải bất phương trình $|a| < |b|$ \& $|a|\le|b|$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
