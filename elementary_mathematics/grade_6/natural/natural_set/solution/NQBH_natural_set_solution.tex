@@ -1,0 +1,427 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{kyhieu}{Ký hiệu}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem {\it\&} Solution: Set $\mathbb{N}$ of Naturals\\Bài Tập {\it\&} Lời Giải: Tập Hợp $\mathbb{N}$ Các Số Tự Nhiên}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Last updated version:
+	\begin{itemize}
+		\item Problem: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_set/problem/NQBH_natural_set_problem.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}natural set $\mathbb{N}${\tt/}problem: set $\mathbb{N}$ of naturals}.\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_set/problem/NQBH_natural_set_problem.pdf}.}
+		\item Solution: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_set/solution/NQBH_natural_set_solution.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}natural set $\mathbb{N}${\tt/}problem \& solution: set $\mathbb{N}$ of naturals}.\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_set/solution/NQBH_natural_set_solution.pdf}.}
+	\end{itemize}
+	
+	
+	
+	
+\end{abstract}
+
+%------------------------------------------------------------------------------%
+
+\section{Set -- Tập Hợp}
+
+\subsection{Kiến thức cơ bản}
+\fbox{\bf1} Tập hợp là 1 khái niệm cơ bản của Toán học. Đặt tên cho các tập hợp bằng các chữ cái in hoa, e.g., $A,B,C,\ldots$. \fbox{\bf2} Để viết 1 tập hợp, thường có 2 cách: (a) Liệt kê các phần tử của tập hợp; (b) Chỉ ra tính chất đặc trưng cho các phần tử của tập hợp đó. \fbox{\bf3} Khi liệt kê các phần tử của 1 tập hợp, mỗi phần tử \textit{chỉ liệt kê đúng 1 lần, thứ tự liệt kê tùy ý}. \fbox{\bf4} 1 tập hợp có thể có 1 phần tử, có nhiều phần tử, có vô số phần tử, cũng có thể không có phần tử nào, gọi là tập rỗng, ký hiệu là $\emptyset\coloneqq\{\}$. \fbox{\bf5} Cách viết tập hợp bằng phương pháp liệt kê các phần tử thích hợp cho các tập hợp có kích thước nhỏ, hoặc các tập hợp lớn nhưng có quy luật của các phần tử có thể nhận thấy 1 cách rõ ràng \& dễ dàng (e.g., $A = \{0,1,2,\ldots,100\}$ có quy luật: các phần tử là các số tự nhiên liên tiếp, $B = \{1,3,5,\ldots,99\}$ có quy luật: các phần tử là các số tự nhiên lẻ liên tiếp) \& có thể sử dụng dấu $\ldots$ để ám chỉ quy luật đó; còn cách viết tập hợp bằng phương pháp đặt trưng của các phần tử thích hợp với các tập hợp có kích thước lớn, có 1 hay nhiều quy luật, đặc biệt là các quy luật không dễ dàng mô tả bằng phương thức $\ldots$ như cách liệt kê.
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 1, p. 4]
+	Cho 2 tập hợp: $A = \{6;7;8;9;10\}$, $B = \{x;9;7;10;y\}$. (a) Viết tập hợp $A$ bằng cách chỉ ra tính chất đặc trưng cho các phần tử của nó. (b) Điền $\in,\notin$: $9\square A$, $x\square A$, $y\square B$. (c) Tìm $x,y$ để $A = B$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) 2 cách viết: $A = \{x\in\mathbb{N}|5 < x < 11\} = \{x\in\mathbb{N}|6\le x\le10\}$. (b) $9\in A$, $x\notin A$, $y\in B$. (c) $A = B\Leftrightarrow\{x,y\} = \{6,8\}\Leftrightarrow(x = 6\land y = 8)\lor(x = 8\land y = 6)$.
+\end{proof}
+
+\begin{kyhieu}[$\land,\lor$]
+	Ký hiệu logical and $\land$ nghĩa là ``và'', ``and'', còn ký hiệu logical or $\lor$ nghĩa là ``hoặc'', ``or''.
+\end{kyhieu}
+
+\begin{luuy}
+	Trong lời giải (c), có 2 đáp số vì thứ tự liệt kê của 1 tập hợp không quan trọng. Hơn nữa, nếu sử dụng bộ sắp thứ tự (pair of numbers) thì cũng có thể lý luận $\{x,y\} = \{6,8\}\Leftrightarrow(x,y) = (6,8)\lor(x,y) = (8,6)$. Tổng quát hơn, $\{x,y\} = \{a,b\}\Leftrightarrow(x,y) = (a,b)\lor(x,y) = (b,a)$, $\forall a,b\in\mathbb{N}$, $a\ne b$. Việc mở rộng lên $n$ số tự nhiên hoàn toàn tương tự: $\{x_1,x_2,\ldots,x_n\} = \{a_1,a_2,\ldots,a_n\}\Leftrightarrow(x_1,x_2,\ldots,x_n) = (a_1,a_2,\ldots,a_n)$ \& các hoán vị (i.e., đổi chỗ), $\forall a_i\in\mathbb{N}$, $i = 1,2,\ldots,n$ là $n$ số tự nhiên đôi một khác nhau (điều kiện khác nhau đảm bảo tập hợp $\{a_1,a_2,\ldots,a_n\}$ có đúng $n$ phần tử chứ không bị ``teo'' lại nếu có chứa các phần tử bằng nhau.
+\end{luuy}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 2., p. 5]
+	(a) Viết tập hợp $M$ các chữ cái của chữ {\rm``NGANG''}. (b) Với tất cả các phần tử của tập hợp $M$, viết thành 1 chữ thuộc loại danh từ (không sử dụng thêm dấu).
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $M = \{{\rm N,G,A}\}$. (b) NGA (nước Nga, Russia), GAN (lá gan -- 1 bộ phận trong tiêu hóa của cơ thể động vật), GANG (gang, cast iron, là 1 nhóm vật liệu hợp kim sắt-carbon có hàm lượng carbon $> 2.14\%$, xem, e.g., \href{https://vi.wikipedia.org/wiki/Gang}{Wikipedia{\tt/}gang}), NGAN (con ngan, 1 loại gia cầm, xem \href{https://vi.wikipedia.org/wiki/Ngan_nh%C3%A0}{Wikipedia{\tt/}ngan nhà}, \href{https://vi.wikipedia.org/wiki/Ngan_c%E1%BB%8F}{Wikipedia{\tt/}ngan cỏ}).
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 3., p. 5]
+	Viết tập hợp $P$ tên các tỉnh tiếp giáp với Thủ đô Hà Nội.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$P = \{\mbox{Bắc Giang, Bắc Ninh, Hà Nam, Hòa Bình, Hưng Yên, Phú Thọ, Thái Nguyên, Vĩnh Phúc}\}$.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 4., p. 5]
+	Cho tập hợp $A = \{a,b\}$, $B = \{1,2,3\}$. Viết tất cả các tập hợp có $3$ phần tử trong đó $1$ phần tử thuộc tập hợp $A$, $2$ phần tử thuộc tập hợp $B$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Có 6 tập hợp: $\{a,1,2\},\{a,1,3\},\{a,2,3\},\{b,1,2\},\{b,1,3\},\{b,2,3\}$.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 5., p. 5]
+	Cho các tập hợp: $P$ là tập hợp các số tự nhiên $x$ mà $x + 3\le10$, $Q$ là tập hợp các số tự nhiên $x$ mà $x\cdot3 = 5$, $R$ là tập hợp các số tự nhiên $x$ mà $x\cdot3 = 0$, $S$ là tập hợp các số tự nhiên $x$ mà $x\cdot3\le24$. (a) Tập hợp nào là tập hợp rỗng? (b) Tập hợp nào có đúng 1 phần tử? (c) 2 tập hợp nào bằng nhau?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$P = \{x\in\mathbb{N}|x + 3\le10\} = \{0,1,2,3,4,5,6,7\}$, $Q = \{x\in\mathbb{N}|x\cdot3 = 5\} = \emptyset$ (vì nghiệm duy nhất của phương trình $x\cdot3 = 5$ là $x = \frac{5}{3}\notin\mathbb{N}$, nghiệm này là số hữu tỷ nhưng không phải là số nguyên hay số tự nhiên), $R = \{x\in\mathbb{N}|x\cdot3 = 0\} = \{0\}$, $S = \{x\in\mathbb{N}|x\cdot3\le24\} = \{0,1,2,3,4,5,6,7,8\}$. (a) Tập hợp $Q$ là tập hợp rỗng. (b) Tập hợp $R$ có 1 phần tử. (c) Không có 2 tập hợp nào bằng nhau.
+\end{proof}
+
+\begin{baitoan}
+	Viết tập hợp: (a) Tập các màu sắc của cầu vồng. (b) Tập hợp các huyện của tỉnh Bến Tre. (c) Tập hợp các châu lục trên Trái Đất. (d) Tập hợp các hành tinh trong Hệ Mặt Trời.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $A = \{\mbox{đỏ, cam, vàng, xanh lá, xanh lam, chàm, tím}\}$. (b) Bến Tre có 09 đơn vị hành chính cấp huyện trực thuộc, bao gồm các huyện: Ba Tri, Bình Đại, Châu Thành, Chợ Lách, Giồng Trôm, Mỏ Cày Bắc, Mỏ Cày Nam, Thạnh Phú \& thành phố Bến Tre (xem, e.g., \href{https://vi.wikipedia.org/wiki/B%E1%BA%BFn_Tre}{Wikipedia{\tt/}Bến Tre}), nên $B = \{$Ba Tri, Bình Đại, Châu Thành, Chợ Lách, Giồng Trôm, Mỏ Cày Bắc, Mỏ Cày Nam, Thạnh Phú, thành phố Bến Tre$\}$. (c) $C = \{$Á, Phi, Nam Mỹ, Bắc Mỹ, Âu, Úc, Nam Cực$\}$. (d) Xem, e.g., \href{https://vi.wikipedia.org/wiki/H%E1%BB%87_M%E1%BA%B7t_Tr%E1%BB%9Di}{Wikipedia{\tt/}hệ Mặt Trời}: $D = \{$Sao Thủy, Sao Kim, Trái Đất, Sao Hỏa, Sao Mộc, Sao Thổ, Sao Thiên Vương, Sao Hải Vương$\}$.
+\end{proof}
+
+%------------------------------------------------------------------------------%
+
+\section{Set $\mathbb{N}$ of Natural Numbers -- Tập hợp $\mathbb{N}$ Các Số Tự Nhiên}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 2, p. 6]
+	Phố Hàng Ngang là 1 trong các phố cổ của Hà Nội. Các nhà được đánh số liên tục, dãy lẻ $1,3,5,7,\ldots,61$; dãy chẵn $2,4,6,\ldots,64$. (a) Bên số nhà chẵn, trong 1 phòng gác nhỏ, chủ tịch Hồ Chí Minh đã khởi thảo bản Tuyên Ngôn Độc Lập khai sinh cho nước Việt Nam Dân Chủ Cộng Hòa. Ngôi nhà có căn phòng đó là nhà thứ $24$ kể từ đầu phố (số $2$). Hỏi ngôi nhà này có số nào? (b) Bên số nhà lẻ chữ số nào được dùng nhiều nhất? Chữ số nào chưa được dùng đến? (c) Phải dùng tất cả bao nhiêu chữ số để ghi số nhà của phố này?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Ngôi nhà thứ 24 bên dãy số nhà chẵn có số $2\cdot24 = 48$. (b) Bên số lẻ chữ số 1 dùng tới 7 lần ở hàng đơn vị (nhiều nhất so với các chữ số khác); dùng tới 5 lần ở hàng chục (không kém so với các chữ số khác). Vậy chữ số 1 được dùng nhiều nhất (12 lần). Chữ số 0 không dùng ở hàng đơn vị cũng như ở hàng chục. Chữ số 8 không dùng ở hàng đơn vị còn ở hàng chục thì chưa dùng tới. Vậy bên số lẻ thì chữ số 0 \& chữ số 8 chưa được dùng đến. (c) Tạm chưa tính nhà 64 thì phố này có 62 nhà từ nhà $1,2,3,\ldots,62$. Trong dãy số này có 9 số có 1 chữ số \& có $62 - 9 = 53$ số có 2 chữ số. Số chữ số cần dùng để viết các số này trừ nhà 64 ra là $9\cdot1 + 53\cdot2 = 9 + 106 = 115$. Thêm 2 chữ số của nhà 64, tổng các chữ số cần dùng là $115 + 2 = 117$ chữ số.
+\end{proof}
+
+\begin{luuy}
+	Công thức tính số chữ số cần dùng để ghi các số tự nhiên liên tiếp: Gọi số các số có $1$ chữ số là $a_1$, số các số có $2$ chữ số là $a_2$, $\ldots$,  số các số có $n$ chữ số là $a_n$ (hay viết gọn: gọi số các số có $i$ chữ số là $a_i$, $\forall i = 1,2,\ldots,n$) thì số chữ số cần dùng là: $S = \sum_{i=1}^n a_i = a_1 + a_2 + \cdots + a_n$.
+\end{luuy}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 6., p. 6]
+	Viết tập hợp $4$ số tự nhiên liên tiếp lớn hơn $94$ nhưng không quá $100$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Có 3 tập hợp thỏa mãn: $\{95,96,97,98\},\{96,97,98,99\},\{97,98,99,100\}$.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 7., p. 6]
+	(a) Có bao nhiêu số tự nhiên nhỏ hơn $20$? (b) Có bao nhiêu số tự nhiên nhỏ hơn $n\in\mathbb{N}$? (c) Có bao nhiêu số tự nhiên chẵn nhỏ hơn $n\in\mathbb{N}$? (d) Có bao nhiêu số tự nhiên lẻ nhỏ hơn $n\in\mathbb{N}$?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Có 20 số tự nhiên nhỏ hơn 20: $0,1,2,\ldots,19$. (b) Có $n$ số tự nhiên nhỏ hơn $n$: $0,1,2,\ldots,n - 1$. (c) Xét 2 trường hợp: Nếu $n$ chẵn thì có $\frac{n}{2}$ số tự nhiên chẵn nhỏ hơn $n$: $0,2,\ldots,n - 2$. Nếu $n$ lẻ thì có $\frac{n + 1}{2}$ số tự nhiên chẵn nhỏ hơn $n$: $0,2,\ldots,n - 1$. (d) Xét 2 trường hợp: Nếu $n$ chẵn thì có $\frac{n}{2}$ số tự nhiên lẻ nhỏ hơn $n$: $1,3,\ldots,n - 1$. Nếu $n$ lẻ thì có $\frac{n + 1}{2}$ số tự nhiên lẻ nhỏ hơn $n$: $1,3,\ldots,n - 2$.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 8., p. 7]
+	(a) Có bao nhiêu số có $4$ chữ số mà cả $4$ chữ số đều giống nhau? (b) Có bao nhiêu số có $4$ chữ số? (c) Có bao nhiêu số có $n$ chữ số, với $n\in\mathbb{N}$?
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	(a) Có 9 số: $1111,2222,\ldots,9999$. (b) Có $9999 - 1000 + 1 = 9000$ số có 4 chữ số: $1000,1001,\ldots,9999$. (c) Có $\underbrace{99\ldots9}_n - 1\underbrace{00\ldots0}_{n-1} + 1 = 9\underbrace{00\ldots0}_{n-1}$ số có $n$ chữ số: $1\underbrace{00\ldots0}_{n-1},1\underbrace{00\ldots0}_{n-2}1,\ldots,\underbrace{99\ldots9}_n$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	(c) Các số có $n$ chữ số: $10^{n-1},10^{n-1} + 1,\ldots,10^n - 1$. Suy ra có $10^n - 1 - 10^{n-1} + 1 = 10^n - 10^{n-1}$ số có $n$ chữ số.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 9., p. 7]
+	Đèn hướng dẫn giao thông liên tục sáng màu xanh hoặc đỏ kế tiếp nhau. Bảng hiện số của đèn có 2 chữ số liên tục thay đổi theo từng giây. Hỏi trong 1 phút xe bị dừng vì đèn đỏ thì đèn có: (a) Bao nhiêu lần thay đổi các số? (b) Bao nhiêu lần thay đổi các chữ số?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Trong 1 phút $=$ 60 giây có 60 lần thay đổi số. (b) Hàng đơn vị thay đổi 60 lần, hàng chục thay đổi 6 lần ($6\to5\to4\to3\to2\to1\to0$) nên tổng cộng có $60 + 6 = 66$ lần thay đổi chữ số.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 10., p. 7]
+	Tìm $3$ số tự nhiên $a,b,c$ biết chúng thỏa mãn đồng thời 3 điều kiện: $a < b < c$, $101\le a\le103$, $101 < c < 104$.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	Từ điều kiện $101\le a\le103$ \& $a\in\mathbb{N}$, suy ra $a\in\{101,102,103\}$. Từ điều kiện $101 < c < 104$ \& $c\in\mathbb{N}$, suy ra $c\in\{102,103\}$. Mặt khác, kết hợp 2 điều vừa tập giá trị vừa thu được với điều kiện $a < b < c$, suy ra $a = 101$, $b = 102$, $c = 103$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Vì $a < b < c$ \& $a,b,c\in\mathbb{N}$ nên $c\ge b + 1\ge a + 2$ (1). Kết hợp (1) với điều kiện $101\le a$, suy ra $c\ge a + 2\ge101 + 2 = 103$ (2). Kết hợp (2) với điều kiện $c < 104$, suy ra $c = 103$. Dấu ``$=$'' xảy ra $\Leftrightarrow c = b + 1 = a + 2\Leftrightarrow(a,b,c) = (101,102,103)$.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 11., p. 7]
+	Cho số $4321$. Viết thêm chữ số $9$ xen giữa các chữ số của nó để được 1 số: (a) Lớn nhất có thể được. (b) Nhỏ nhất có thể được.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) 49321. (b) 43291.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 12., p. 7]
+	Với $9$ que diêm, sắp xếp thành 1 số La Mã: (a) Có giá trị lớn nhất. (b) Có giá trị nhỏ nhất.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) MMI: 2001. (b) XXVIII: 28.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 13., p. 7]
+	Có $13$ que diêm sắp xếp như sau: $\rm XII - V = VII$. (a) Đẳng thức trên đúng hay sai? (b) Đổi chỗ chỉ 1 que diêm để được 1 đẳng thức đúng.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Đẳng thức XII $-$ V = VII đúng vì $12 - 5 = 7$. (b) XI $-$ IV = VII: $11 - 4 = 7$, hoặc XII $-$ VI = VI: $12 - 6 = 6$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 1, p. 4]
+	Viết các tập hợp sau rồi tìm số phần tử của mỗi tập hợp đó: (a) Tập hợp $A$ các số tự nhiên $x$ mà $8:x = 2$. (b) Tập hợp $B$ các số tự nhiên $x$ mà $x + 3 < 5$. (c) Tập hợp $C$ các số tự nhiên $x$ mà $x - 2 = x + 2$. (d) Tập hợp $D$ các số tự nhiên $x$ mà $x:2 = x:4$. (e) Tập hợp $E$ các số tự nhiên $x$ mà $x + 0 = x$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $A = \{4\}$ có 1 phần tử. (b) $B = \{0,1\}$ có 2 phần tử. (c) $C = \emptyset$ không có phần tử nào. (d) $D = \{0\}$ có 1 phần tử. (e) $E = \{0,1,2,\ldots\} = \mathbb{N}$ có vô hạn đếm được số phần tử.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 2, p. 5]
+	Viết các tập hợp sau bằng cách liệt kê các phần tử của nó: (a) Tập hợp $A$ các số tự nhiên có 2 chữ số, trong đó chữ số hàng chục lớn hơn chữ số hàng đơn vị là $2$. (b) Tập hợp $B$ các số tự nhiên có 3 chữ số mà tổng các chữ số bằng $3$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $A = \{20,31,42,53,64,75,86,97\}$. (b) $B = \{102,111,120,201,210,300\}$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 3, p. 5]
+	Tìm số tự nhiên có 5 chữ số, biết nếu viết thêm chữ số $2$ vào đằng sau số đó thì được số lớn gấp 3 lần số có được bằng cách viết thêm chữ số $2$ vào đằng trước số đó.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	Gọi số phải tìm là $\overline{abcde}$, có phép nhân: $\overline{2abcde}\cdot3 = \overline{abcde2}$. Lần lượt tìm từng chữ số ở số bị nhân từ phải sang trái: $3e$ tận cùng $2\Rightarrow e = 4$, có: $3\cdot4 = 12$, nhớ 1 sang hàng chục. $3d + 1$ tận cùng $4\Rightarrow d = 1$. $3c$ tận cùng $1\Rightarrow c = 7$, có $3\cdot7 = 21$, nhớ 2 sang hàng nghìn. $3b + 2$ tận cùng $7\Rightarrow b = 5$, có $3\cdot5 = 15$, nhớ 1 sang hàng chục nghìn. $3a + 1$ tận cùng $5\Rightarrow a = 8$, có $3\cdot8 = 24$, nhớ 2 sang hàng trăm nghìn. $3\cdot2 + 2 = 8$. Tổng hợp lại: $285714\cdot3 = 857142$. Vậy số đó là 85714.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Gọi số cần tìm là $x = \overline{abcde}$, có $\overline{abcde2} = 3\overline{2abcde}\Leftrightarrow10x + 2 = 3(200000 + x)\Leftrightarrow10x + 2 = 600000 + 3x\Leftrightarrow7x = 599998\Leftrightarrow x = 599998:7 = 85714$. Vậy số đó là 85714.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Mở rộng Ví dụ 3, p. 5]
+	(a) Tìm số tự nhiên nhỏ nhất có chữ số đầu tiên ở bên trái là $2$, khi chuyển chữ số $2$ này xuống cuối cùng thì số đó tăng gấp 3 lần. (b) Tìm tất cả các số tự nhiên thỏa mãn câu (a).
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi số tự nhiên cần tìm là $\overline{2a_na_{n-1}\ldots a_1a_0}$, đặt $x\coloneqq\overline{a_na_{n-1}\ldots a_1a_0}$, có $3\overline{2a_na_{n-1}\ldots a_1a_0} = \overline{a_na_{n-1}\ldots a_1a_02}\Leftrightarrow3(2\cdot10^n + x) = 10x + 2\Leftrightarrow7x = 6\cdot10^n - 2\Leftrightarrow x = \dfrac{6\cdot10^n - 2}{7}$. Nếu $n = 1$, $x = \dfrac{58}{7}$. Nếu $n = 2$, $x = \dfrac{598}{7}$. Nếu $n = 3$, $x = \dfrac{5998}{7}$. Nếu $n = 4$, $x = \dfrac{59998}{7}$. Nếu $n = 5$, $x = \dfrac{599998}{7} = 85714$. Vậy số tự nhiên nhỏ nhất thỏa mãn là 285714. (b) 
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Mở rộng Ví dụ 3, p. 6]
+	Tìm số tự nhiên có 5 chữ số, biết nếu viết thêm 1 chữ số vào đằng sau số đó thì được số lớn gấp 3 lần số có được nếu viết thêm chính chữ số ấy vào đằng trước số đó.
+\end{baitoan}
+
+\begin{baitoan}
+	Tìm số tự nhiên sao cho khi thêm 1 chữ số vào đằng sau số đó thì được số lớn gấp $a\in\mathbb{N}^\star$ lần số có được nếu viết thêm chính chữ số ấy vào đằng trước số đó.
+\end{baitoan}
+
+\begin{baitoan}
+	Tìm số tự nhiên sao cho khi thêm 1 chữ số vào đằng trước số đó thì được số lớn gấp $a\in\mathbb{N}^\star$ lần số có được nếu viết thêm chính chữ số ấy vào đằng sau số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 2., p. 6]
+	Xác định các tập hợp sau bằng cách chỉ ra tính chất đặc trưng của các phần tử thuộc tập hợp đó: (a) $A = \{1,3,5,7,\ldots,49\}$. (b) $B = \{11,22,33,44,\ldots,99\}$. (c) $C = \{\mbox{tháng } 1,\mbox{tháng } 3,\mbox{tháng } 5,\mbox{tháng } 7,\mbox{tháng } 8,\mbox{tháng } 10,\mbox{tháng } 12\}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $A$ là tập hợp các số lẻ nhỏ hơn 50: $A = \{n\in\mathbb{N}|n\mbox{ không chia hết cho } 2,\,n < 50\} = \{n\in\mathbb{N}|n\not{\divby}\ 2,\,n < 50\} = \{n\in\mathbb{N}|n\equiv 1\mod2,\,n < 50\}$. (b) $B$ là tập hợp các số tự nhiên có 2 chữ số giống nhau: $B = \{\overline{aa}|a\in\{1,2,\ldots,9\}\} = \{\overline{aa}|a\in\mathbb{N},1\le a\le9\}$ hoặc $B$ là tập hợp các số tự nhiên có 2 chữ số \& chia hết cho 11: $B = \{n\in\mathbb{N}|n\divby11,\,10\le n\le99\}$. (c) $C$ là tập hợp các tháng có 31 ngày của năm dương lịch.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 3., p. 6]
+	Tìm tập hợp các số tự nhiên $x$ sao cho: (a) $x + 3 = 4$. (b) $8 - x = 5$. (c) $x:2 = 0$. (d) $0:x = 0$. (e) $5x = 12$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $A = \{1\}$. (b) $B = \{3\}$. (c) $C = \{0\}$. (d) $D = \mathbb{N}^\star$. (e) $E = \emptyset$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 4., p. 6]
+	Tìm $a,b\in\mathbb{N}$ sao cho $12 < a < b < 16$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$a,b\in\mathbb{N}$ \& $12 < a < b < 16\Leftrightarrow13\le a < b\le15$. $(a,b)\in\{(13,14),(13,15),(14,15)\}$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 5., p. 6]
+	Viết các số tự nhiên có 4 chữ số trong đó có 2 chữ số $3$, 1 chữ số $2$, 1 chữ số $1$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Có 12 số thỏa mãn: Chữ số 1 đứng đầu: 1233, 1323, 1332. Chữ số 2 đứng đầu: 2133, 2313, 2331. Chữ số 3 đứng đầu: 3123, 3132, 3213, 3231, 3312, 3321.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 6., p. 6]
+	Với cả 2 chữ số {\rm I} \& {\rm X}, viết được bao nhiêu số La Mã? (Mỗi chữ số có thể viết nhiều lần, nhưng không viết liên tiếp quá 3 lần).
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Có 13 chữ số thỏa mãn: Các số chứa 1 chữ số X: IX, XI, XII, XIII. Các số chứa 2 chữ số X: XIX, XXI, XXII, XXIII. Các số chứa 3 chữ số X: XXIX, XXXI, XXXII, XXXIII. Các số chứa 4 chữ số X: XXXIX.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 7., pp. 6--7]
+	(a) Dùng 3 que diêm, xếp được các số La Mã nào? (b) Để viết các số La Mã từ $4000$ trở lên, e.g. số $19520$, người ta viết {\rm XIXmDXX} (chữ {\rm m} biểu thị \emph{1 nghìn}, m là chữ đầu của từ \emph{mille}, tiếng Latin là 1 nghìn). Viết 2 số sau bằng chữ số La Mã: $7203, 121512$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Xếp được 7 số La Mã: III: 3, IV: 4, VI: 6, IX: 9, XI: 11, LI: 51, C: 100. (b) VIImCCIII: 7203, CXXImDXII: 121512.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 8., p. 7]
+	Tìm số tự nhiên có tận cùng bằng $3$, biết rằng nếu xóa chữ số hàng đơn vị thì số đó giảm đi $1992$ đơn vị.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi số cần tìm có dạng $\overline{x3}$, $x\in\mathbb{N}^\star$, có $\overline{x3} - x = 1992\Leftrightarrow10x + 3 - x = 1992\Leftrightarrow9x = 1992 - 3 = 1989\Leftrightarrow x = 1989:9 = 221$. Vậy số cần tìm là $2213$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 9., p. 7]
+	Tìm số tự nhiên có 6 chữ số, biết rằng chữ số hàng đơn vị là $4$ \& nếu chuyển chữ số đó lên hàng đầu tiên thì số đó tăng gấp 4 lần.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Số cần tìm có dạng $\overline{abcde4}$, đặt $x\coloneqq\overline{abcde}$, có: $4\overline{abcde4} = \overline{4abcde}\Leftrightarrow4(10x + 4) = 4\cdot10^5 + x\Leftrightarrow39x = 4\cdot10^5 - 4\cdot4 = 399984\Leftrightarrow x = 399984:39 = 10256$. Vậy số cần tìm là 102564.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 10., p. 7]
+	Cho 4 chữ số $a,b,c,d$ khác nhau \& khác $0$. Lập số tự nhiên lớn nhất \& số tự nhiên nhỏ nhất có 4 chữ số gồm cả 4 chữ số ấy. Tổng của 2 số này bằng $11330$. Tìm tổng các chữ số $a + b + c + d$.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	Không mất tính tổng quát (without loss of generality, abbr., w.l.o.g.), giả sử $a > b > c > d > 0$. Số lớn nhất \& số nhỏ nhất có thể lập được từ cả 4 chữ số này lần lượt là $\overline{abcd},\overline{dcba}$. Có $\overline{abcd} + \overline{dcba} = 11330$. Từ hàng đơn vị suy ra $a + d = 10$, viết 0 nhớ 1. Từ hàng chục \& hàng trăm suy ra $b + c = 12$ (vì nếu $b + c = 2$ thì hàng trăm của tổng phải bằng 2 thay vì 3, mâu thuẫn với giả thiết $\overline{abcd} + \overline{dcba} = 11330$). Suy ra $a + b + c + d = (a + d) + (b + c) = 10 + 12 = 22$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Giả sử $a > b > c > d > 0$. Số lớn nhất \& số nhỏ nhất có thể lập được từ cả 4 chữ số này lần lượt là $\overline{abcd},\overline{dcba}$. Có $\overline{abcd} + \overline{dcba} = 11330\Leftrightarrow1000a + 100b + 10c + d + 1000d + 100c + 10b + a = 1001(a + d) + 110(b + c) = 11330$. Nếu $a + d\ge11$ thì $11330 = 1001(a + d) + 110(b + c)\ge1001\cdot11 + 110(3 + 2) 11561 > 11330$, vô lý. Nếu $a + d\le9$ thì $110(b + c) = 11330 - 1001(a + d)\ge11330 - 1001\cdot9 = 2321\Rightarrow b + c\ge2321:110 = 21.1 > 20$, vô lý vì $b\le8$, $c\le7$ nên $b + c\le 8 + 7 = 15$. Suy ra $a + d = 10$, thay vào đẳng thức $1001(a + d) + 110(b + c) = 11330$ được: $110(b + c) = 11330 - 1001\cdot10 = 1320\Leftrightarrow b + c = 1320:110 = 12$. Suy ra $a + b + c + d = (a + d) + (b + c) = 10 + 12 = 22$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 11., p. 7]
+	Cho 3 chữ số $a,b,c$ sao cho $0 < a < b < c$. (a) Viết tập hợp $A$ các số tự nhiên có 3 chữ số gồm cả 3 chữ số $a,b,c$. (b) Biết tổng 2 số nhỏ nhất trong tập hợp $A$ bằng $488$. Tìm 3 chữ số $a,b,c$ nói trên.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	(a) $A = \{\overline{abc},\overline{acb},\overline{bac},\overline{bca},\overline{cab},\overline{cba}\}$. (b) 2 số nhỏ nhất trong tập $A$ là $\overline{abc},\overline{acb}$, có $\overline{abc} + \overline{acb} = 488$. Xét phép cộng ở cột hàng đơn vị \& cột hàng chục, ta thấy $c + b$ không có nhớ nên $b + c = 8$, $a + a = 4\Leftrightarrow$ suy ra $a = 2$. Vì $2 = a < b < c$ \& $b + c = 8$, suy ra $b = 3$, $c = 5$. Vậy $a = 2$, $b = 3$, $c = 5$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	(a) $A = \{\overline{abc},\overline{acb},\overline{bac},\overline{bca},\overline{cab},\overline{cba}\}$. (b) 2 số nhỏ nhất trong tập $A$ là $\overline{abc},\overline{acb}$, có $\overline{abc} + \overline{acb} = 488\Leftrightarrow200a + 11(b + c) = 488$. Nếu $a\ge3$ thì $488 = 200a + 11(b + c) > 200\cdot3 = 600 > 488$, vô lý. Nếu $a = 1$ thì $11(b + c) = 488 - 200 = 288\Leftrightarrow b + c = 288:11 = 26.(18)\notin\mathbb{Z}$, vô lý. Suy ra $a = 2$, thay vào đẳng thức $200a + 11(b + c) = 488$ được $11(b + c) = 488 - 200\cdot2 = 88\Leftrightarrow b + c = 88:11 = 8$, mà $2 = a < b < c$ \& $b + c = 8$, suy ra $b = 3$, $c = 5$. Vậy $a = 2$, $b = 3$, $c = 5$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 12., p. 7]
+	Tìm 3 chữ số khác nhau \& khác $0$, biết rằng nếu dùng cả 3 chữ số này lập thành các số tự nhiên có 3 chữ số thì 2 số lớn nhất có tổng bằng $1444$.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	Gọi 3 chữ số phải tìm là $a,b,c\in\{1,2,\ldots,9\}$, $a > b > c > 0$. 2 số lớn nhất lập bởi 3 chữ số này là $\overline{abc},\overline{acb}$, có $\overline{abc} + \overline{acb} = 1444$. So sánh 2 cột đơn vị \& cột hàng chục, ta thấy phép cộng $c + b$ không có nhớ nên $b + c = 4$, mà $b > c > 0$ nên $b = 3$, $c = 1$. Xét cột hàng trăm: $a + a  = 14\Leftrightarrow2a = 14\Leftrightarrow a = 7$. Vậy 3 chữ số phải tìm là $7,3,1$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Gọi 3 chữ số phải tìm là $a,b,c\in\{1,2,\ldots,9\}$, $a > b > c > 0$. 2 số lớn nhất lập bởi 3 chữ số này là $\overline{abc},\overline{acb}$, có $\overline{abc} + \overline{acb} = 1444\Leftrightarrow100a + 10b + c + 100a + 10c + b = 200a + 11(b + c) = 1444$. Nếu $a\ge8$ thì $1444 = 200a + 11(b + c) > 200\cdot8 = 1600 > 1444$ vô lý. Nếu $a\le6$, vì $a > b > c > 0$ nên $b\le5$, $c\le4$, suy ra $1444 = 200a + 11(b + c)\le200\cdot6 + 11(5 + 4) = 1299 < 1444$ vô lý. Suy ra $a = 7$. Thay vì phương trình, được $11(b + c) = 1444 - 200\cdot7 = 44\Leftrightarrow b + c = 4$ mà $b > c > 0$ nên suy ra $b = 3$, $c = 1$. Vậy 3 chữ số phải tìm là $7,3,1$.
+\end{proof}
+
+\begin{baitoan}[Even vs. odd -- Chẵn vs. lẻ]
+	Viết tập hợp theo nhiều cách nhất có thể: (a) Tập hợp các số tự nhiên chẵn. (b) Tập hợp các số tự nhiên lẻ. (c) Tập hợp các số nguyên dương chẵn. (d) Tập hợp các số nguyên dương lẻ. (e) Tập hợp các số nguyên chẵn. (f) Tập hợp các số nguyên lẻ.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Tập hợp các số tự nhiên chẵn $A = \{0,2,4,\ldots\} = \{n\in\mathbb{N}|n \mbox{ chia hết cho }2\} = \{n\in\mathbb{N}|n\divby2\} = \{n\in\mathbb{N}|n\equiv0\mod2\} = \{2n|n\in\mathbb{N}\} = {\rm B}(2)\cap\mathbb{N}$. (b) Tập hợp các số tự nhiên lẻ $B = \{1,3,5,\ldots\} = \{n\in\mathbb{N}|n \mbox{ không chia hết cho }2\} = \{n\in\mathbb{N}|n\not{\divby}\ 2\} = \{n\in\mathbb{N}|n\equiv1\mod2\} = \{2n + 1|n\in\mathbb{N}\} = \mathbb{N}\backslash{\rm B}(2)$. (c) Tập hợp các số nguyên dương chẵn $C = \{2,4,6,\ldots\} = \{n\in\mathbb{N}^\star|n \mbox{ chia hết cho }2\} = \{n\in\mathbb{N}^\star|n\divby2\} = \{n\in\mathbb{N}^\star|n\equiv0\mod2\} = \{2n|n\in\mathbb{N}^\star\} = {\rm B}(2)\cap\mathbb{N}\backslash\{0\} = {\rm B}(2)\cap\mathbb{N}^\star$. (d) Tập hợp các số nguyên dương lẻ $D\equiv B = \{1,3,5,\ldots\} = \{n\in\mathbb{N}|n \mbox{ không chia hết cho }2\} = \{n\in\mathbb{N}|n\not{\divby}\ 2\} = \{n\in\mathbb{N}|n\equiv1\mod2\} = \{2n + 1|n\in\mathbb{N}\} = \mathbb{N}\backslash{\rm B}(2)$. (e) Tập hợp các số nguyên chẵn $E = \{\ldots,-4,-2,0,2,4,\ldots\} = \{0,\pm2,\pm4,\ldots\} = \{n\in\mathbb{Z}|n \mbox{ chia hết cho }2\} = \{n\in\mathbb{Z}|n\divby2\} = \{n\in\mathbb{Z}|n\equiv0\mod2\} = \{2n|n\in\mathbb{Z}\} = {\rm B}(2)$.\footnote{Trong tài liệu này, ký hiệu ${\rm B}(n)$ dùng để ký hiệu tập hợp tất cả các \textit{bội số nguyên} của $n\in\mathbb{Z}$ bất kỳ, phân biệt với tập hợp ${\rm B}(n)\cap\mathbb{N}$ (chỉ giới hạn trên tập $\mathbb{N}$ các số tự nhiên) các \textit{bội số tự nhiên} của $n$. Theo định nghĩa này, hiển nhiên ta có đẳng thức ${\rm B}(n)\equiv{\rm B}(n)\cap\mathbb{Z}$, $\forall n\in\mathbb{Z}$.} (f) Tập hợp các số nguyên lẻ $F = \{\ldots,-5,-3,-1,1,3,5,\ldots\} = \{n\in\mathbb{Z}|n \mbox{ không chia hết cho }2\} = \{n\in\mathbb{Z}|n\not{\divby}\ 2\} = \{n\in\mathbb{Z}|n\equiv1\mod2\} = \{2n + 1|n\in\mathbb{Z}\} = \mathbb{Z}\backslash{\rm B}(2)$.
+\end{proof}
+
+\begin{baitoan}[1-sided bounded subset of $\mathbb{N}$ -- Tập con của $\mathbb{N}$ chỉ bị chặn 1 phía]
+	Cho $a\in\mathbb{N}$ cho trước. Viết các tập hợp sau theo nhiều cách nhất có thể: (a) Tập hợp các số tự nhiên nhỏ hơn $a$. (b) Tập hợp các số tự nhiên lớn hơn $a$. (c) Tập hợp các số tự nhiên nhỏ hơn hoặc bằng $a$. (d) Tập hợp các số tự nhiên lớn hơn hoặc bằng $a$. (e) Tập hợp các số tự nhiên chẵn nhỏ hơn $a$. (f) Tập hợp các số tự nhiên chẵn lớn hơn $a$. (g) Tập hợp các số tự nhiên chẵn nhỏ hơn hoặc bằng $a$. (h) Tập hợp các số tự nhiên chẵn lớn hơn hoặc bằng $a$. (i) Tập hợp các số tự nhiên lẻ nhỏ hơn $a$. (j) Tập hợp các số tự nhiên lẻ lớn hơn $a$. (k) Tập hợp các số tự nhiên lẻ nhỏ hơn hoặc bằng $a$. (l) Tập hợp các số tự nhiên lẻ lớn hơn hoặc bằng $a$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Tập hợp các số tự nhiên nhỏ hơn $a$: $A(a) = \{n\in\mathbb{N}|n < a\} = \{0,1,\ldots,a - 1\} = [0,a)\cap\mathbb{N} = (-\infty,a)\cap\mathbb{N}$. Chú ý $A(0) = \emptyset$, $A(1) = \{0\}$. (b) Tập hợp các số tự nhiên lớn hơn $a$: $B(a) = \{n\in\mathbb{N}|n > a\} = \{a + 1,a + 2,\ldots\} = (a,\infty)\cap\mathbb{N} = [a + 1,\infty)\cap\mathbb{N}$. Chú ý $B(0) = \mathbb{N}^\star$. (c) Tập hợp các số tự nhiên nhỏ hơn hoặc bằng $a$: $C(a) = \{n\in\mathbb{N}|n\le a\} = \{0,1,\ldots,a - 1,a\} = [0,a]\cap\mathbb{N} = [0,a + 1)\cap\mathbb{N} = (-\infty,a]\cap\mathbb{N} = (-\infty,a + 1)\cap\mathbb{N}$. Chú ý $C(0) = \{0\}$, $C(1) = \{0,1\}$. (d) Tập hợp các số tự nhiên lớn hơn hoặc bằng $a$: $D(a) = \{n\in\mathbb{N}|n\ge a\} = \{a,a + 1,a + 2,\ldots\} = (a - 1),\infty)\cap\mathbb{N} = [a,\infty)\cap\mathbb{N}$. (e) Tập hợp các số tự nhiên chẵn nhỏ hơn $a$. (f) Tập hợp các số tự nhiên chẵn lớn hơn $a$. (g) Tập hợp các số tự nhiên chẵn nhỏ hơn hoặc bằng $a$. (h) Tập hợp các số tự nhiên chẵn lớn hơn hoặc bằng $a$. (i) Tập hợp các số tự nhiên lẻ nhỏ hơn $a$. (j) Tập hợp các số tự nhiên lẻ lớn hơn $a$. (k) Tập hợp các số tự nhiên lẻ nhỏ hơn hoặc bằng $a$. (l) Tập hợp các số tự nhiên lẻ lớn hơn hoặc bằng $a$.
+\end{proof}
+
+\begin{baitoan}[2-sided bounded subset of $\mathbb{N}$ -- Tập con của $\mathbb{N}$ bị chặn cả 2 phía]
+	Với $a,b\in\mathbb{N}$ cho trước. Viết các tập hợp sau theo nhiều cách nhất có thể: (a) Tập hợp các số tự nhiên lớn hơn $a$ \& nhỏ hơn $b$. (b) Tập hợp các số tự nhiên lớn hơn hoặc bằng $a$ \& nhỏ hơn $b$. (c) Tập hợp các số tự nhiên lớn hơn $a$ \& nhỏ hơn hoặc bằng $b$. (d) Tập hợp các số tự nhiên lớn hơn hoặc bằng $a$ \& nhỏ hơn hoặc bằng $b$. (e) Tập hợp các số tự nhiên chẵn lớn hơn $a$ \& nhỏ hơn $b$. (f) Tập hợp các số tự nhiên chẵn lớn hơn hoặc bằng $a$ \& nhỏ hơn $b$. (g) Tập hợp các số tự nhiên chẵn lớn hơn $a$ \& nhỏ hơn hoặc bằng $b$. (h) Tập hợp các số tự nhiên chẵn lớn hơn hoặc bằng $a$ \& nhỏ hơn hoặc bằng $b$. (i) Tập hợp các số tự nhiên lẻ lớn hơn $a$ \& nhỏ hơn $b$. (j) Tập hợp các số tự nhiên lẻ lớn hơn hoặc bằng $a$ \& nhỏ hơn $b$. (k) Tập hợp các số tự nhiên lẻ lớn hơn $a$ \& nhỏ hơn hoặc bằng $b$. (l) Tập hợp các số tự nhiên lẻ lớn hơn hoặc bằng $a$ \& nhỏ hơn hoặc bằng $b$.
+\end{baitoan}
+
+\begin{baitoan}[Divisibility vs. Indivisibility (division with remainders) -- Chia hết vs. chia không hết{\tt/}có dư]
+	Với $b,r,m,n\in\mathbb{N}$ cho trước (i.e., số tự nhiên khác $0$), viết tập hợp theo 2 cách: (a) Tập hợp các số tự nhiên chia hết cho $b$. (b) Tập hợp các số tự nhiên chia hết cho $b$ \& nhỏ hơn{\tt/}lớn hơn{\tt/}nhỏ hơn hoặc bằng{\tt/}lớn hơn hoặc bằng $m$. (c) Tập hợp các số tự nhiên chia cho $b$ dư $r$. (d) Tập hợp các số tự nhiên chia cho $b$ dư $r$ \& lớn hơn{\tt/}lớn hơn hoặc bằng $m$ \& nhỏ hơn{\tt/}nhỏ hơn hoặc bằng $n$.
+\end{baitoan}
+
+\begin{baitoan}[$n$-digit natural number -- Số tự nhiên có $n$ chữ số]
+	Viết tập hợp theo nhiều cách nhất có thể: (a) Tập hợp các số tự nhiên có 1 chữ số. (b) Tập hợp các số tự nhiên có 2 chữ số. (c) Tập hợp các số tự nhiên có 3 chữ số. (d) Tập hợp các số tự nhiên có $n$ chữ số, với $n$ là 1 số tự nhiên cho trước.
+\end{baitoan}
+
+\begin{baitoan}[Biểu diễn thập phân $n$-digit natural number -- Số tự nhiên có $n$ chữ số]
+	Viết biễu diễn thập phân của các số tự nhiên có: (a) 1 chữ số. (b) 2 chữ số. (c) 3 chữ số. (d) 4 chữ số. (e) 5 chữ số. (f) 6 chữ số. (g) 7 chữ số. (h) 8 chữ số. (i) 9 chữ số. (j) 10 chữ số. (k) $n$ chữ số, với $n\in\mathbb{N}$ cho trước.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $a\in\{0,1,2,\ldots,9\}$. (b) $\overline{ab} = 10a + b$, $\forall a,b\in\{0,1,2,\ldots,9\}$, $a\ne0$. (c) $\overline{abc} = 100a + 10b + c = 10^2a + 10b + c$, $\forall a,b,c\in\{0,1,2,\ldots,9\}$, $a\ne0$. (d) (Nghìn) $\overline{abcd} = 1000a + 100b + 10c + d = 10^3a + 10^2b + 10c + d$, $\forall a,b,c,d\in\{0,1,2,\ldots,9\}$, $a\ne0$. (e) (Vạn) $\overline{abcde} = 10000a + 1000b + 100c + 10d + e = 10^4a + 10^3b + 10^2c + 10d + e$, $\forall a,b,c,d,e\in\{0,1,2,\ldots,9\}$, $a\ne0$. (f) $\overline{abcdef} = 100000a + 10000b + 1000c + 100d + 10e + f = 10^5a + 10^4b + 10^3c + 10^2d + 10e + f$, $\forall a,b,c,d,e,f\in\{0,1,2,\ldots,9\}$, $a\ne0$. (g) (Triệu) $\overline{abcdefg} = 1000000a + 100000b + 10000c + 1000d + 100e + 10f + g = 10^6a + 10^5b + 10^4c + 10^3d + 10^2e + 10f + g$, $\forall a,b,c,d,e,f,g\in\{0,1,2,\ldots,9\}$, $a\ne0$. (h) $\overline{abcdefgh} = 10000000a + 1000000b + 100000c + 10000d + 1000e + 100f + 10g + h = 10^7a + 10^6b + 10^5c + 10^4d + 10^3e + 10^2f + 10g + h$, $\forall a,b,c,d,e,f,g,h\in\{0,1,2,\ldots,9\}$, $a\ne0$. (i) $\overline{abcdefghi} = 100000000a + 10000000b + 1000000c + 100000d + 10000e + 1000f + 100g + 10h + i = 10^8a + 10^7b + 10^6c + 10^5d + 10^4e + 10^3f + 10^2g + 10h + i$, $\forall a,b,c,d,e,f,g,h,i\in\{0,1,2,\ldots,9\}$, $a\ne0$. (j) (Tỷ) $\overline{abcdefghij} = 1000000000a + 100000000b + 10000000c + 1000000d + 100000e + 10000f + 1000g + 100h + 10i + j = 10^9a + 10^8b + 10^7c + 10^6d + 10^5e + 10^4f + 10^3g + 10^2h + 10i + j$, $\forall a,b,c,d,e,f,g,h,i,j\in\{0,1,2,\ldots,9\}$, $a\ne0$. (k) Tổng quát $\overline{a_na_{n-1}\ldots a_1a_0} = 10^na_n + 10^{n-1}a_{n-1} + \cdots + 10^2a_2 + 10a_1 + a_0$, $\forall n\in\mathbb{N}^\star$, $\forall a_i\in\{0,1,2,\ldots,9\}$, $\forall i = 0,1,\ldots,n$, $a_n\ne0$.
+\end{proof}
+Dạng biểu diễn thập phân tổng quát của số tự nhiên $x\in\mathbb{N}$ bất kỳ:
+\begin{align*}
+	\boxed{x = \overline{a_na_{n-1}\ldots a_1a_0} = \sum_{i=0}^n 10^ia_i = 10^na_n + 10^{n-1}a_{n-1} + \cdots + 10^2a_2 + 10a_1 + a_0},\\\forall n\in\mathbb{N},\,\forall a_i\in\{0,1,2,\ldots,9\},\,\forall i = 0,1,\ldots,n,\,a_n\ne0.
+\end{align*}
+Chỉ cần thêm dấu $\pm$, ta suy ra dạng biểu diễn thập phân tổng quát của số nguyên $x\in\mathbb{Z}$ bất kỳ:
+\begin{align*}
+	\boxed{x = {\rm sgn}(x)\overline{a_na_{n-1}\ldots a_1a_0} = {\rm sgn}(x)\sum_{i=0}^n 10^ia_i = {\rm sgn}(x)\left(10^na_n + 10^{n-1}a_{n-1} + \cdots + 10^2a_2 + 10a_1 + a_0\right)},\\\forall n\in\mathbb{N},\,\forall a_i\in\{0,1,2,\ldots,9\},\,\forall i = 0,1,\ldots,n,\,a_n\ne0,
+\end{align*}
+trong đó ${\rm sgn}(x)$ là \textit{hàm dấu} (sign) của 1 số, được định nghĩa bởi công thức sau:
+\begin{equation*}
+	{\rm sgn}(x) = \left\{\begin{split}
+		-&1,&&\mbox{nếu } x < 0,\\
+		&0,&&\mbox{nếu } x = 0,\\
+		&1,&&\mbox{nếu } x > 0.
+	\end{split}\right.
+\end{equation*}
+
+\begin{baitoan}
+	Chứng minh: (a) Trong 2 số tự nhiên có số chữ số khác nhau: Số nào có nhiều chữ số hơn thì lớn hơn, số nào có ít chữ số hơn thì nhỏ hơn. (b) Trong 2 số tự nhiên có cùng số chữ số, nếu trong cặp chữ số khác nhau đầu tiên từ trái sang phải, số nào có chữ số tương ứng trong cặp đó lớn hơn thì lớn hơn.
+\end{baitoan}
+
+\begin{baitoan}
+	Viết tập hợp các ký hiệu La Mã. Có mấy ký hiệu trong hệ La Mã, i.e., tập hợp vừa viết có mấy phần tử?
+\end{baitoan}
+
+\begin{baitoan}[$\mathbb{N}^\star\subset\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}$]
+	Viết tập hợp theo nhiều cách nhất có thể: (a) Tập hợp các số tự nhiên. (b) Tập hợp các số tự nhiên khác $0$. (c) Tập hợp các số nguyên{\tt/}nguyên dương{\tt/}nguyên âm{\tt/}nguyên không âm{\tt/}nguyên không dương. (d) Tập hợp các phân số{\tt/}phân số dương{\tt/}phân số âm{\tt/}phân số không âm{\tt/}phân số không dương. (e) Tập hợp các số thập phân{\tt/}số thập phân dương{\tt/}số thập phân âm{\tt/}số thập phân không âm{\tt/}số thập phân không dương. (f) Tập hợp các phân số thập phân{\tt/}phân số thập phân dương{\tt/}phân số thập phân âm{\tt/}phân số thập phân không âm{\tt/}phân số thập phân không dương. (g) Tập hợp các số hữu tỷ{\tt/}số hữu tỷ dương{\tt/}số hữu tỷ âm{\tt/}số hữu tỷ không âm{\tt/}số hữu tỷ không dương. (h) Tập hợp các số thập phân hữu hạn{\tt/}số thập phân hữu hạn dương{\tt/}số thập phân hữu hạn âm{\tt/}số thập phân hữu hạn không âm{\tt/}số thập phân hữu hạn không dương. (i) Tập hợp các số thập phân vô hạn tuần hoàn{\tt/}số thập phân vô hạn tuần hoàn dương{\tt/}số thập phân vô hạn tuần hoàn âm{\tt/}số thập phân vô hạn tuần hoàn không âm{\tt/}số thập phân vô hạn tuần hoàn không dương. (j) Tập hợp các số thập phân vô hạn không tuần hoàn{\tt/}số thập phân vô hạn không tuần hoàn dương{\tt/}số thập phân vô hạn không tuần hoàn âm{\tt/}số thập phân vô hạn không tuần hoàn không âm{\tt/}số thập phân vô hạn không tuần hoàn không dương.  (k) Tập hợp các số thực{\tt/}số thực dương{\tt/}số thực âm{\tt/}số thực không âm{\tt/}số thực không dương. (l) Tập hợp các số vô tỷ{\tt/}số vô tỷ dương{\tt/}số vô tỷ âm{\tt/}số vô tỷ không dương{\tt/}số vô tỷ không âm. (m) Tập hợp các số phức{\tt/}số thuần thực{\tt/}số thuần ảo.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
