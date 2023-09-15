@@ -1,0 +1,217 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Set -- Bài Tập: Tập Hợp}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Set -- Tập Hợp}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 1, p. 4]
+	Cho 2 tập hợp: $A = \{6;7;8;9;10\}$, $B = \{x;9;7;10;y\}$. (a) Viết tập hợp $A$ bằng cách chỉ ra tính chất đặc trưng cho các phần tử của nó. (b) Điền $\in,\notin$: $9\square A$, $x\square A$, $y\square B$. (c) Tìm $x,y$ để $A = B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 2., p. 5]
+	(a) Viết tập hợp $M$ các chữ cái của chữ ``NGANG''. (b) Với tất cả các phần tử của tập hợp $M$, viết thành 1 chữ thuộc loại danh từ (không sử dụng thêm dấu).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 4., p. 5]
+	Cho tập hợp $A = \{a;b\}$, $B = \{1;2;3\}$. Viết tất cả các tập hợp có $3$ phần tử trong đó $1$ phần tử thuộc tập hợp $A$, $2$ phần tử thuộc tập hợp $B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 5., p. 5]
+	Cho các tập hợp: (a) $P$ là tập hợp các số tự nhiên $x$ mà $x + 3\le10$, $Q$ là tập hợp các số tự nhiên $x$ mà $x\cdot3 = 5$, $R$ là tập hợp các số tự nhiên $x$ mà $x\cdot3 = 0$, $S$ là tập hợp các số tự nhiên $x$ mà $x\cdot3\le24$. (a) Tập hợp nào là tập hợp rỗng? (b) Tập hợp nào có đúng 1 phần tử? (c) 2 tập hợp nào bằng nhau?
+\end{baitoan}
+
+\begin{baitoan}
+	Viết tập hợp: (a) Tập các màu sắc của cầu vồng. (b) Tập hợp các huyện của tỉnh Bến Tre. (c) Tập hợp các châu lục trên Trái Đất. (d) Tập hợp các hành tinh trong Hệ Mặt Trời.
+\end{baitoan}
+
+\begin{baitoan}[$\mathbb{N}^\star\subset\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}$]
+	Viết tập hợp theo nhiều cách nhất có thể: (a) Tập hợp các số tự nhiên. (b) Tập hợp các số nguyên dương, i.e., tập hợp các số tự nhiên khác $0$. (c) Tập hợp các số nguyên. (d) Tập hợp các số nguyên âm. (e) Tập hợp các số nguyên không âm. (f) Tập hợp các số nguyên không dương. (g) Tập hợp các phân số, i.e., tập hợp các số hữu tỷ. (h) Tập hợp các số hữu tỷ dương. (i) Tập hợp các số hữu tỷ âm. (j) Tập hợp các số thực. (k) Tập hợp các số thực âm. (l) Tập hợp các số thực dương. (m) Tập hợp các số thực không âm. (n) Tập hợp các thực không dương. (o) Tập hợp các số vô tỷ. (p) Tập hợp các số vô tỷ dương. (q) Tập hợp các số vô tỷ âm. (r) Tập hợp các số phức.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Set $\mathbb{N}$ of Natural Numbers -- Tập hợp $\mathbb{N}$ Các Số Tự Nhiên}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 2, p. 6]
+	Phố Hàng Ngang là 1 trong các phố cổ của Hà Nội. Các nhà được đánh số liên tục, dãy lẻ $1,3,5,7,\ldots,61$; dãy chẵn $2,4,6,\ldots,64$. (a) Bên số nhà chẵn, trong 1 phòng gác nhỏ, chủ tịch Hồ Chí Minh đã khởi thảo bản Tuyên Ngôn Độc Lập khai sinh cho nước Việt Nam Dân Chủ Cộng Hòa. Ngôi nhà có căn phòng đó là nhà thứ $24$ kể từ đầu phố (số $2$). Hỏi ngôi nhà này có số nào? (b) Bên số nhà lẻ chữ số nào được dùng nhiều nhất? Chữ số nào chưa được dùng đến? (c) Phải dùng tất cả bao nhiêu chữ số để ghi số nhà của phố này?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 6., p. 6]
+	Viết tập hợp $4$ số tự nhiên liên tiếp lớn hơn $94$ nhưng không quá $100$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 7., p. 6]
+	(a) Có bao nhiêu số tự nhiên nhỏ hơn $20$? (b) Có bao nhiêu số tự nhiên nhỏ hơn $n\in\mathbb{N}$? (c) Có bao nhiêu số tự nhiên chẵn nhỏ hơn $n\in\mathbb{N}$? (d) Có bao nhiêu số tự nhiên lẻ nhỏ hơn $n\in\mathbb{N}$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 8., p. 7]
+	(a) Có bao nhiêu số có $4$ chữ số mà cả $4$ chữ số đều giống nhau? (b) Có bao nhiêu số có $4$ chữ số? (c) Có bao nhiêu số có $n$ chữ số, với $n\in\mathbb{N}$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 9., p. 7]
+	Đèn hướng dẫn giao thông liên tục sáng màu xanh hoặc đỏ kế tiếp nhau. Bảng hiện số của đèn có 2 chữ số liên tục thay đổi theo từng giây. Hỏi trong 1 phút xe bị dừng vì đèn đỏ thì đèn có: (a) Bao nhiêu lần thay đổi các số? (b) Bao nhiêu lần thay đổi các chữ số?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 10., p. 7]
+	Tìm $3$ số tự nhiên $a,b,c$ biết chúng thỏa mãn đồng thời 3 điều kiện: $a < b < c$, $101\le a\le103$, $101 < c < 104$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 11., p. 7]
+	Cho số $4321$. Viết thêm chữ số $9$ xen giữa các chữ số của nó để được 1 số: (a) Lớn nhất có thể được. (b) Nhỏ nhất có thể được.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 12., p. 7]
+	Với $9$ que diêm, sắp xếp thành 1 số La Mã: (a) Có giá trị lớn nhất. (b) Có giá trị nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 13., p. 7]
+	Có $13$ que diêm sắp xếp như sau: $\rm XII - V = VII$. (a) Đẳng thức trên đúng hay sai? (b) Đổi chỗ chỉ 1 que diêm để được 1 đẳng thức đúng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 1, p. 4]
+	Viết các tập hợp sau rồi tìm số phần tử của mỗi tập hợp đó: (a) Tập hợp $A$ các số tự nhiên $x$ mà $8:x = 2$. (b) Tập hợp $B$ các số tự nhiên $x$ mà $x + 3 < 5$. (c) Tập hợp $C$ các số tự nhiên $x$ mà $x - 2 = x + 2$. (d) Tập hợp $D$ các số tự nhiên $x$ mà $x:2 = x:4$. (e) Tập hợp $E$ các số tự nhiên $x$ mà $x + 0 = x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 2, p. 5]
+	Viết các tập hợp sau bằng cách liệt kê các phần tử của nó: (a) Tập hợp $A$ các số tự nhiên có 2 chữ số, trong đó chữ số hàng chục lớn hơn chữ số hàng đơn vị là $2$. (b) Tập hợp $B$ các số tự nhiên có 3 chữ số mà tổng các chữ số bằng $3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 3, p. 5]
+	Tìm số tự nhiên có 5 chữ số, biết nếu viết thêm chữ số $2$ vào đằng sau số đó thì được số lớn gấp 3 lần số có được bằng cách viết thêm chữ số $2$ vào đằng trước số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Mở rộng Ví dụ 3, p. 5]
+	Tìm số tự nhiên nhỏ nhất có chữ số đầu tiên ở bên trái là $2$, khi chuyển chữ số $2$ này xuống cuối cùng thì số đó tăng gấp 3 lần.\hfill{\sf Ans:} $285714$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Mở rộng Ví dụ 3, p. 6]
+	Tìm số tự nhiên có 5 chữ số, biết nếu viết thêm 1 chữ số vào đằng sau số đó thì được số lớn gấp 3 lần số có được nếu viết thêm chính chữ số ấy vào đằng trước số đó.\hfill{\sf Ans:} $85714$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{2.}, p. 6]
+	Xác định các tập hợp sau bằng cách chỉ ra tính chất đặc trưng của các phần tử thuộc tập hợp đó: (a) $A = \{1,3,5,7,\ldots,49\}$. (b) $B = \{11,22,33,44,\ldots,99\}$. (c) $C = \{\mbox{tháng } 1,\mbox{tháng } 3,\mbox{tháng } 5,\mbox{tháng } 7,\mbox{tháng } 8,\mbox{tháng } 10,\mbox{tháng } 12\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{3.}, p. 6]
+	Tìm tập hợp các số tự nhiên $x$ sao cho: (a) $x + 3 = 4$. (b) $8 - x = 5$. (c) $x:2 = 0$. (d) $0:x = 0$. (e) $5x = 12$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{4.}, p. 6]
+	Tìm $a,b\in\mathbb{N}$ sao cho $12 < a < b < 16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{5.}, p. 6]
+	Viết các số tự nhiên có 4 chữ số trong đó có 2 chữ số $3$, 1 chữ số $2$, 1 chữ số $1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{6.}, p. 6]
+	Với cả 2 chữ số I \& X, viết được bao nhiêu số La Mã? (Mỗi chữ số có thể viết nhiều lần, nhưng không viết liên tiếp quá 3 lần).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{7.}, pp. 6--7]
+	(a) Dùng 3 que diêm, xếp được các số La Mã nào? (b) Để viết các số La Mã từ 4000 trở lên, e.g. số 19520, người ta viết XIXmDXX (chữ m biểu thị \emph{1 nghìn}, m là chữ đầu của từ \emph{mille}, tiếng Latin là 1 nghìn). Hãy viết các số sau bằng chữ số La Mã: 7203, 121512.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{8.}, p. 7]
+	Tìm số tự nhiên có tận cùng bằng $3$, biết rằng nếu xóa chữ số hàng đơn vị thì số đó giảm đi $1992$ đơn vị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{9.}, p. 7]
+	Tìm số tự nhiên có 6 chữ số, biết rằng chữ số hàng đơn vị là $4$ \& nếu chuyển chữ số đó lên hàng đầu tiên thì số đó tăng gấp 4 lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{10.}, p. 7]
+	Cho 4 chữ số $a,b,c,d$ khác nhau \& khác $0$. Lập số tự nhiên lớn nhất \& số tự nhiên nhỏ nhất có 4 chữ số gồm cả 4 chữ số ấy. Tổng của 2 số này bằng $11330$. Tìm tổng các chữ số $a + b + c + d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{11.}, p. 7]
+	Cho 3 chữ số $a,b,c$ sao cho $0 < a < b < c$. (a) Viết tập hợp $A$ các số tự nhiên có 3 chữ số gồm cả 3 chữ số $a,b,c$. (b) Biết tổng 2 số nhỏ nhất trong tập hợp $A$ bằng $488$. Tìm 3 chữ số $a,b,c$ nói trên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{12.}, p. 7]
+	Tìm 3 chữ số khác nhau \& khác $0$, biết rằng nếu dùng cả 3 chữ số này lập thành các số tự nhiên có 3 chữ số thì 2 số lớn nhất có tổng bằng $1444$.
+\end{baitoan}
+
+\begin{baitoan}[Even vs. odd -- Chẵn vs. lẻ]
+	Viết tập hợp theo nhiều cách nhất có thể: (a) Tập hợp các số tự nhiên chẵn. (b) Tập hợp các số tự nhiên lẻ. (c) Tập hợp các số nguyên dương chẵn. (d) Tập hợp các số nguyên dương lẻ. (e) Tập hợp các số nguyên chẵn. (f) Tập hợp các số nguyên lẻ.
+\end{baitoan}
+
+\begin{baitoan}
+	Với $b,r$ là 2 số nguyên dương cho trước (i.e., số tự nhiên khác $0$), viết tập hợp theo 2 cách: (a) Tập hợp các số tự nhiên chia hết cho $b$. (b) Tập hợp các số tự nhiên chia cho $b$ dư $r$.
+\end{baitoan}
+
+\begin{baitoan}[Tập con của $\mathbb{N}$ chỉ bị chặn 1 phía]
+	Cho $a$ là 1 số tự nhiên cho trước. Viết các tập hợp sau theo nhiều cách nhất có thể: (a) Tập hợp các số tự nhiên nhỏ hơn $a$. (b) Tập hợp các số tự nhiên lớn hơn $a$. (c) Tập hợp các số tự nhiên nhỏ hơn hoặc bằng $a$. (d) Tập hợp các số tự nhiên lớn hơn hoặc bằng $a$. (e) Tập hợp các số tự nhiên chẵn nhỏ hơn $a$. (f) Tập hợp các số tự nhiên chẵn lớn hơn $a$. (g) Tập hợp các số tự nhiên chẵn nhỏ hơn hoặc bằng $a$. (h) Tập hợp các số tự nhiên chẵn lớn hơn hoặc bằng $a$. (i) Tập hợp các số tự nhiên lẻ nhỏ hơn $a$. (j) Tập hợp các số tự nhiên lẻ lớn hơn $a$. (k) Tập hợp các số tự nhiên lẻ nhỏ hơn hoặc bằng $a$. (l) Tập hợp các số tự nhiên lẻ lớn hơn hoặc bằng $a$.
+\end{baitoan}
+
+\begin{baitoan}[Tập con của $\mathbb{N}$ bị chặn cả 2 phía]
+	Với $a,b$ là 2 số tự nhiên cho trước. Viết các tập hợp sau theo nhiều cách nhất có thể: (a) Tập hợp các số tự nhiên lớn hơn $a$ \& nhỏ hơn $b$. (b) Tập hợp các số tự nhiên lớn hơn hoặc bằng $a$ \& nhỏ hơn $b$. (c) Tập hợp các số tự nhiên lớn hơn $a$ \& nhỏ hơn hoặc bằng $b$. (d) Tập hợp các số tự nhiên lớn hơn hoặc bằng $a$ \& nhỏ hơn hoặc bằng $b$. (e) Tập hợp các số tự nhiên chẵn lớn hơn $a$ \& nhỏ hơn $b$. (f) Tập hợp các số tự nhiên chẵn lớn hơn hoặc bằng $a$ \& nhỏ hơn $b$. (g) Tập hợp các số tự nhiên chẵn lớn hơn $a$ \& nhỏ hơn hoặc bằng $b$. (h) Tập hợp các số tự nhiên chẵn lớn hơn hoặc bằng $a$ \& nhỏ hơn hoặc bằng $b$. (i) Tập hợp các số tự nhiên lẻ lớn hơn $a$ \& nhỏ hơn $b$. (j) Tập hợp các số tự nhiên lẻ lớn hơn hoặc bằng $a$ \& nhỏ hơn $b$. (k) Tập hợp các số tự nhiên lẻ lớn hơn $a$ \& nhỏ hơn hoặc bằng $b$. (l) Tập hợp các số tự nhiên lẻ lớn hơn hoặc bằng $a$ \& nhỏ hơn hoặc bằng $b$.
+\end{baitoan}
+
+\begin{baitoan}
+	Viết tập hợp theo nhiều cách nhất có thể: (a) Tập hợp các số tự nhiên có 1 chữ số. (b) Tập hợp các số tự nhiên có 2 chữ số. (c) Tập hợp các số tự nhiên có 3 chữ số. (d) Tập hợp các số tự nhiên có $n$ chữ số, với $n$ là 1 số tự nhiên cho trước.
+\end{baitoan}
+
+\begin{baitoan}
+	Viết biễu diễn thập phân của các số tự nhiên có: (a) 1 chữ số. (b) 2 chữ số. (c) 3 chữ số. (d) 4 chữ số. (e) 5 chữ số. (f) 6 chữ số. (g) 7 chữ số. (h) (d) 8 chữ số. (i) 9 chữ số. (j) (d) 10 chữ số. (k) $n$ chữ số, với $n\in\mathbb{N}$ cho trước. 
+\end{baitoan}
+
+\begin{baitoan}
+	Chứng minh: (a) Trong 2 số tự nhiên có số chữ số khác nhau: Số nào có nhiều chữ số hơn thì lớn hơn, số nào có ít chữ số hơn thì nhỏ hơn. (b) Trong 2 số tự nhiên có cùng số chữ số, nếu trong cặp chữ số khác nhau đầu tiên từ trái sang phải, số nào có chữ số tương ứng trong cặp đó lớn hơn thì lớn hơn.
+\end{baitoan}
+
+\begin{baitoan}
+	Viết tập hợp các ký hiệu La Mã. Có mấy ký hiệu trong hệ La Mã, i.e., tập hợp vừa viết có mấy phần tử?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
