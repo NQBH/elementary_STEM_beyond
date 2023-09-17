@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Trigonometric Equation -- Bài Tập: Phương Trình Lượng Giác}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Giá Trị Lượng Giác của Góc Lượng Giác}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, Ví dụ 1, p. 8]
+	Cho hình vuông $A_0A_1A_2A_3$ nội tiếp đường  tròn tâm O (4 đỉnh được sắp xếp theo chiều ngược chiều quay của kim đồng hồ). Tính số đo của các góc lượng giác $(OA_0,OA_i)$, $(OA_i,OA_j)$, $i,j = 0,1,2,3$, $i\ne j$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, Ví dụ 2, p. 9]
+	Tính giá trị biểu thức: (a) $A = \sin\dfrac{7\pi}{6} + \cos9\pi + \tan\left(-\dfrac{5\pi}{4}\right) + \cot\dfrac{7\pi}{2}$. (b) $B = \dfrac{1}{\tan368^\circ} + \dfrac{2\sin2550^\circ\cos(-188^\circ)}{2\cos638^\circ + \cos98^\circ}$. (c) $C = \sin^2 25^\circ + \sin^2 45^\circ + \sin^2 60^\circ + \sin^2 65^\circ$. (d) $D = \tan^2\dfrac{\pi}{8}\tan\dfrac{3\pi}{8}\tan\dfrac{5\pi}{8}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, Ví dụ 3, p. 9]
+	Chứng minh đẳng thức (giả sử các đẳng thức sau đều có nghĩa): (a) $\cos^4 + 2\sin^2x = 1 + \sin^4x$. (b) $\dfrac{\sin x + \cos x}{\sin^3x} = \cot^3x + \cot^2x + \cot x + 1$. (c) $\dfrac{\cot^2x - \cot^2y}{\cot^2x\cot^2y} = \dfrac{\cos^2x - \cos^2y}{\cos^2x\cos^2y}$. (d) $\sqrt{\sin^4x + 4\cos^2x} + \sqrt{\cos^4x + 4\sin^2x} = 3\tan\left(x + \dfrac{\pi}{3}\right)\tan\left(\dfrac{\pi}{6} - x\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, Ví dụ 4, p. 10]
+	Đơn giản biểu thức (giả sử các đẳng thức sau đều có nghĩa): (a) $A = \cos(5\pi - x) - \sin\left(\dfrac{3\pi}{2} + x\right) + \tan\left(\dfrac{3\pi}{2} - x\right) + \cot(3\pi - x)$. (b) $B = \dfrac{\sin(900^\circ + x) - \cos(450^\circ - x) + \cot(1080^\circ - x) + \tan(630^\circ - x)}{\cos(450^\circ - x) + \sin(x - 630^\circ) - \tan(810^\circ + x) - \tan(810^\circ - x)}$. (c) $C = \sqrt{2} - \dfrac{1}{\sin(x + 2013\pi)}\sqrt{\dfrac{1}{1 + \cos x} + \dfrac{1}{1 - \cos x}}$ với $\pi < x < 2\pi$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, Ví dụ 5, p. 11]
+	Chứng minh biểu thức không phụ thuộc vào $x$ (i.e., độc lập với biến $x$) (giả sử các biểu thức đều có nghĩa): (a) $A = \dfrac{\sin^6x + \cos^6x + 2}{\sin^4x + \cos^4x + 1}$. (b) $B = \dfrac{1 + \cot x}{1 - \cot x} - \dfrac{2 + 2\cot^2x}{(\tan x - 1)(\tan^2x + 1)}$. (c) $C = \sqrt{\sin^4x + 6\cos^2x + 3\cos^4x} + \sqrt{\cos^4x + 6\sin^2x + 3\sin^4x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, 1.1., p. 12]
+	Tìm số đo $a^\circ$ của góc lượng giác $(Ou,Ov)$ với $0\le a\le360$, biết 1 góc lượng giác cùng tia đầu, tia cuối với góc đó có số đo là: (a) $395^\circ$. (b) $-1052^\circ$. (c) $(20\pi)^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, 1.2., p. 12]
+	Không dùng máy tính bỏ túi, tính giá trị biểu thức: (a) $A = 5\sin^2\dfrac{151\pi}{6} + 3\cos^2\dfrac{85\pi}{3} - 4\tan^2\dfrac{193\pi}{6} + 7\cot^2\dfrac{37\pi}{3}$. (b) $B = \cos^2\dfrac{\pi}{5} + \cos^2\dfrac{2\pi}{5} + \cos^2\dfrac{\pi}{10} + \cos^2\dfrac{3\pi}{10}$. (c) $C = \tan\dfrac{\pi}{9}\tan\dfrac{2\pi}{9}\tan\dfrac{5\pi}{18}\tan\dfrac{7\pi}{18}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, 1.3., p. 12]
+	Rút gọn biểu thức: (a) $A = \cos\left(\dfrac{\pi}{2} + x\right) + \cos(2\pi - x) + \cos(3\pi + x)$. (b) $B = 2\cos x - 3\cos(\pi - x) + 5\sin\left(\dfrac{7x}{2} - x\right) + \cot\left(\dfrac{3\pi}{2} - x\right)$. (c) $C = 2\sin(90^\circ + x) + \sin(900^\circ - x) + \sin(270^\circ + x) - \cos(90^\circ - x)$. (d) $D = \dfrac{\sin(5\pi + x)\cos\left(x - \dfrac{9\pi}{2}\right)\tan(10\pi + x)}{\cos(5\pi - x)\sin\left(\dfrac{11\pi}{2} + x\right)\tan(7\pi - x)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, 1.4., p. 12]
+	Chứng minh đẳng thức (giả sử các biểu thức đều có nghĩa): (a) $\tan^2x - \sin^2x = \tan^2x\sin^2x$. (b) $\dfrac{\tan^3x}{\sin^2x} - \dfrac{1}{\sin x\cos x} + \dfrac{\cot^3x}{\cos^2x} = \tan^3x + \cot^3x$. (c) $\sin^2x - \tan^2x = \tan^6x(\cos^2x - \cot^2x)$. (d) $\dfrac{\tan^2a - \tan^2b}{\tan^2a\tan^2b} = \dfrac{\sin^2a - \sin^2b}{\sin^2a\sin^2b}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, 1.5., p. 12]
+	Chứng minh biểu thức không phụ thuộc vào $\alpha$: (a) $(\tan\alpha + \cot\alpha)^2 - (\tan\alpha - \cot\alpha)^2$. (b) $2(\sin^6\alpha + \cos^6\alpha) - 3(\sin^4\alpha + \cos^4\alpha)$. (c) $\cot^230^\circ(\sin^8\alpha - \cos^8\alpha) + 4\cos60^\circ(\cos^6\alpha - \sin^6\alpha) - \sin^6(90^\circ - \alpha)(\tan^2\alpha - 1)^3$. (d) $(\sin^4\alpha + \cos^4\alpha - 1)(\tan^2\alpha + \cot^2\alpha + 2)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, 1.6., p. 13]
+	Biết $\tan x + \cot x = m$. Tính: (a) $\tan^2x + \cot^2x$. (b) $\dfrac{\tan^6x + \cot^6x}{\tan^4x + \cot^4x}$. (c) Chứng minh $|m|\ge2$. (d) Biện luận theo tham số $m$ để tìm $x$ thỏa mãn phương trình $\tan x + \cot x = m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_nang_cao_phat_trien_Toan_11_tap_1}, 1.7., p. 13]
+	(a) Cho $\cos a = \dfrac{2}{3}$. Tính $A = \dfrac{\cot a + 3\tan a}{2\cot a + \tan a}$. (b) Cho $\sin a = \dfrac{1}{3}$. Tính $B = \dfrac{3\cot a + 2\tan a + 1}{\cot a + \tan a}$. (c) Cho $\tan a = 2$. Tính $C = \dfrac{2\sin a + 3\cos a}{\sin a + \cos a}$. (d) Cho $\cot a = 5$. Tính $D = 2\cos^2a + 5\sin a\cos a + 1$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Trigonometrical Formulas -- Công Thức Lượng Giác}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
