@@ -6,6 +6,8 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\usepackage{enumitem}
+\setlist{leftmargin=4mm}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{}
@@ -59,7 +61,15 @@
 \section{Set -- Tập Hợp}
 \fbox{\bf1} Tập hợp là 1 khái niệm cơ bản của Toán học. Đặt tên cho các tập hợp bằng các chữ cái in hoa, e.g., $A,B,C,\ldots$. \fbox{\bf2} Để viết 1 tập hợp, thường có 2 cách: (a) Liệt kê các phần tử của tập hợp; (b) Chỉ ra tính chất đặc trưng cho các phần tử của tập hợp đó. \fbox{\bf3} Khi liệt kê các phần tử của 1 tập hợp, mỗi phần tử \textit{chỉ liệt kê đúng 1 lần, thứ tự liệt kê tùy ý}. \fbox{\bf4} 1 tập hợp có thể có 1 phần tử, có nhiều phần tử, có vô số phần tử, cũng có thể không có phần tử nào, gọi là tập rỗng, ký hiệu là $\emptyset\coloneqq\{\}$. \fbox{\bf5} Cách viết tập hợp bằng phương pháp liệt kê các phần tử thích hợp cho các tập hợp có kích thước nhỏ, hoặc các tập hợp lớn nhưng có quy luật của các phần tử có thể nhận thấy 1 cách rõ ràng \& dễ dàng (e.g., $A = \{0,1,2,\ldots,100\}$ có quy luật: các phần tử là các số tự nhiên liên tiếp, $B = \{1,3,5,\ldots,99\}$ có quy luật: các phần tử là các số tự nhiên lẻ liên tiếp) \& có thể sử dụng dấu $\ldots$ để ám chỉ quy luật đó; còn cách viết tập hợp bằng phương pháp đặt trưng của các phần tử thích hợp với các tập hợp có kích thước lớn, có 1 hay nhiều quy luật, đặc biệt là các quy luật không dễ dàng mô tả bằng phương thức $\ldots$ như cách liệt kê. \fbox{\bf6} Mỗi số tự nhiên được biểu diễn bởi 1 điểm trên tia số. Điểm biểu diễn số tự nhiên $a$ trên tia số gọi là \textit{điểm} $a$. \fbox{\bf7} Trong hệ La Mã, dùng 7 ký hiệu: I, V, X, L, C, D, M với giá trị tương ứng trong hệ thập phân lần lượt là: $1,5,10,50,100,500,1000$.
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 1, p. 4]
+\begin{dinhnghia}[Số phần tử của tập hợp]
+	Với tập hợp $A$ bất kỳ có hữu hạn phần tử, {\rm số phần tử} của $A$ được ký hiệu là $|A|$.
+\end{dinhnghia}
+
+\begin{nhanxet}
+	Với mọi tập hợp $A$ có hữu hạn phần tử, $|A|\in\mathbb{N}$ nên $|A| < \infty$. Với mọi tập hợp $A$ có vô hạn phần tử, $|A|\notin\mathbb{N}$, e.g., $|\mathbb{N}| = |\mathbb{N}^\star| =  \infty$. Để đo số lượng phần tử của các tập hợp có vô hạn phần tử (đếm được hoặc không đếm được), các nhà toán học sử dụng khái niệm {\rm lực lượng (cardinality)} của tập hợp (xem, e.g., {\rm\cite{Halmos1960, Halmos1974}}).
+\end{nhanxet}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD1, p. 4]
 	Cho 2 tập hợp: $A = \{6;7;8;9;10\}$, $B = \{x;9;7;10;y\}$. (a) Viết tập hợp $A$ bằng cách chỉ ra tính chất đặc trưng cho các phần tử của nó. (b) Điền $\in,\notin$: $9\square A$, $x\square A$, $y\square B$. (c) Tìm $x,y$ để $A = B$.
 \end{baitoan}
 
@@ -119,7 +129,7 @@
 
 \section{Set $\mathbb{N}$ of Natural Numbers -- Tập hợp $\mathbb{N}$ Các Số Tự Nhiên}
 
-\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 1, p. 8]
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD1, p. 8]
 	Nhiệt độ thay đổi theo giờ trong 1 ngày tháng 8 \& 1 ngày tháng 9 lần lượt được ghi lại:
 	\begin{table}[H]
 		\centering
@@ -144,31 +154,103 @@
 	\noindent(a) Viết 2 tập hợp A, B gồm các giá trị nhiệt độ của mỗi bảng trên. (b) Viết tập hợp C gồm các phần tử thuộc tập hợp A mà không thuộc tập hợp B. (c) Viết tập hợp D gồm các phần tử thuộc tập hợp B mà không thuộc tập hợp A. (d) Viết tập hợp E gồm các phần tử thuộc cả 2 tập hợp A \& B. (e) Viết tập hợp F gồm các phần tử thuộc tập hợp A hoặc thuộc tập hợp B.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 2, p. 9]
+\begin{proof}[Giải]
+	(a) $A = \{24,25,26,27\}$, $B = \{22,23,24,25,26\}$. (b) $C = A\backslash B = \{27\}$. (c) $D = B\backslash A = \{22,23\}$. (d) $E = A\cap B = \{24,25,26\}$. (e) $F = \{22,23,24,25,26,27\}$.
+\end{proof}
+
+\begin{luuy}
+	Khi viết tập hợp bằng cách liệt kê, mỗi phần tử chỉ được viết 1 lần.
+\end{luuy}
+
+\begin{luuy}
+	Tập hợp C gồm các phần tử thuộc tập hợp A, trừ các phần tử của A mà cũng thuộc B. Trên biểu đồ Venn, tập hợp C có minh hoa là miền gạch chéo. Ký hiệu $C = A\backslash B$ (đọc là: C là {\rm hiệu} của A, B). Tương tự, tập hợp $D = B\backslash A$ (đọc là: D là hiệu của B \& A). Tập hợp E gồm các phần tử chung của 2 tập hợp A, B, ký hiệu $E = A\cap B$ (đọc là: E là {\rm giao} của A, B). Tập hợp F gồm các phần thử hoặc thuộc A, hoặc thuộc B, ký hiệu $F = A\cup B$ (đọc là: F là {\rm hợp} của A, B). Hiển nhiên cũng có $F = C\cup D\cup E$.
+\end{luuy}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD2, p. 9]
 	Cho A là tập hợp các số tự nhiên chẵn có 3 chữ số. Hỏi A có bao nhiêu phần tử?
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 3, p. 9]
+\begin{proof}[1st giải]
+	Khi liệt kê các phần tử của tập hợp $A$ theo giá trị tăng dần, ta được 1 dãy số cách đều có khoảng cách là 2 đơn vị: $100,102,104,\ldots,998$. Số phần tử của tập hợp $A$ bằng số số hạng của dãy số cách đều: $(998 - 100):2 + 1 = 898:2 + 1 = 449 + 1 = 450$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Các số thỏa mãn có dạng $\overline{abc}$ với $a\in\{1,2,\ldots,9\}$ nên có 9 cách chọn, $b\in\{0,1,2,\ldots,9\}$ nên có 10 cách chọn, $c$ chẵn nên $c\in\{0,2,4,6,8\}$ nên có 5 cách chọn. Theo quy tắc nhân, số số thỏa mãn bằng $9\cdot10\cdot5 = 45\cdot10 = 450$.
+\end{proof}
+
+\begin{baitoan}
+	Với $n\in\mathbb{N}^\star$, cho $A_n$ là tập hợp các số tự nhiên chẵn có $n$ chữ số, $B_n$ là tập hợp các số tự nhiên lẻ có $n$ chữ số. Hỏi $A,B$ có bao nhiêu phần tử?
+\end{baitoan}
+
+\begin{proof}[1st giải (sử dụng biểu diễn thập phân)]
+	Khi liệt kê các phần tử của tập hợp $A_n$ theo giá trị tăng dần, ta được 1 dãy số cách đều có khoảng cách là 2 đơn vị: $1\underbrace{0\ldots0}_{n-1},1\underbrace{0\ldots0}_{n-2}2,1\underbrace{0\ldots0}_{n-2}4,\ldots,\underbrace{9\ldots9}_{n-1}6,\underbrace{9\ldots9}_{n-1}8$. Số phần tử của tập hợp $A_n$ bằng số số hạng của dãy số cách đều: $(\underbrace{9\ldots9}_{n-1}8 - 1\underbrace{0\ldots0}_{n-1}):2 + 1 = 8\underbrace{9\ldots9}_{n-2}8:2 + 1 = \underbrace{4\ldots4}_{n-1}9 + 1 = 45\underbrace{0\ldots0}_{n-2} = 45\cdot10^{n-2}$. Tương tự, Khi liệt kê các phần tử của tập hợp $B_n$ theo giá trị tăng dần, ta được 1 dãy số cách đều có khoảng cách là 2 đơn vị: $1\underbrace{0\ldots0}_{n-2}1,1\underbrace{0\ldots0}_{n-2}3,1\underbrace{0\ldots0}_{n-2}5,\ldots,\underbrace{9\ldots9}_{n-1}7,\underbrace{9\ldots9}_n$. Số phần tử của tập hợp $B_n$ bằng số số hạng của dãy số cách đều: $(\underbrace{9\ldots9}_n - 1\underbrace{0\ldots0}_{n-2}1):2 + 1 = 8\underbrace{9\ldots9}_{n-2}8:2 + 1 = \underbrace{4\ldots4}_{n-1}9 + 1 = 45\underbrace{0\ldots0}_{n-2} = 45\cdot10^{n-2}$. Vậy $|A_n| = |B_n| = 45\cdot10^{n-2}$, $\forall n\in\mathbb{N}^\star$.
+\end{proof}
+
+\begin{nhanxet}
+	Để tính số phần tử của tập hợp $B_n$ dựa vào số phần tử của tập hợp $A_n$, có thể nhận xét: nếu tăng mỗi phần tử của $A_n$ thêm 1 đơn vị sẽ được 1 phần tử của $B$, \& ngược lại, nếu giảm mỗi phần tử của $B$ đi 1 đơn vị sẽ được 1 phần tử của $A_n$, nên số phần tử của 2 tập hợp $A,B$ phải bằng nhau, i.e., $|B_n| = |A_n| = 45\cdot10^{n-2}$, $\forall n\in\mathbb{N}^\star$.
+\end{nhanxet}
+
+\begin{proof}[2nd giải (sử dụng công thức lũy thừa)]
+	Khi liệt kê các phần tử của tập hợp $A_n$ theo giá trị tăng dần, ta được 1 dãy số cách đều có khoảng cách là 2 đơn vị: $10^{n-1},10^{n-1} + 2,10^{n-1} + 4,\ldots,10^n - 2$. Số phần tử của tập hợp $A_n$ bằng số số hạng của dãy số cách đều: $(10^n - 2 - 10^{n-1}):2 + 1 = (10^n - 10^{n-1}):2 - 1 + 1 = \frac{1}{2}(10^n - 10^{n-1})$. Tương tự, khi liệt kê các phần tử của tập hợp $B_n$ theo giá trị tăng dần, ta được 1 dãy số cách đều có khoảng cách là 2 đơn vị: $10^{n-1} + 1,10^{n-1} + 3,10^{n-1} + 5,\ldots,10^n - 1$. Số phần tử của tập hợp $B_n$ bằng số số hạng của dãy số cách đều: $[10^n - 1 - (10^{n-1} + 1)]:2 + 1 = (10^n - 10^{n-1} - 2):2 + 1 = (10^n - 10^{n-1}):2 - 1 + 1 = \frac{1}{2}(10^n - 10^{n-1})$. Vậy $|A_n| = |B_n| = \frac{1}{2}(10^n - 10^{n-1})$, $\forall n\in\mathbb{N}^\star$.
+\end{proof}
+
+\begin{proof}[3rd giải (sử dụng phương pháp đếm trong tổ hợp)]
+	Các phần tử của tập hợp $A_n$ có dạng $\overline{a_{n-1}\ldots a_1a_0}$ với $a_{n-1}\in\{1,2,\ldots,9\}$ nên có 9 cách chọn, $a_i\in\{0,1,2,\ldots,9\}$ nên có 10 cách chọn, $\forall i = 1,2,\ldots,n - 2$, $a_0$ chẵn nên $a_0\in\{0,2,4,6,8\}$ nên có 5 cách chọn. Theo quy tắc nhân, $|A_n| = 9\cdot10^{n-2}\cdot5 = 45\cdot10^{n-2}$. Tương tự, các phần tử của tập hợp $B$ có dạng $\overline{a_{n-1}\ldots a_1a_0}$ với $a_{n-1}\in\{1,2,\ldots,9\}$ nên có 9 cách chọn, $a_i\in\{0,1,2,\ldots,9\}$ nên có 10 cách chọn, $\forall i = 1,2,\ldots,n - 2$, $a_0$ lẻ nên $a_0\in\{1,3,5,7,9\}$ nên có 5 cách chọn. Theo quy tắc nhân, $|B_n| = 9\cdot10^{n-2}\cdot5 = 45\cdot10^{n-2}$. Vậy $|A_n| = |B_n| = 45\cdot10^{n-2}$, $\forall n\in\mathbb{N}^\star$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD3, p. 9]
 	Cho A là tập hợp các số tự nhiên lẻ lớn hơn $3$ \& không lớn hơn $99$. (a) Viết tập hợp A bằng cách chỉ ra tính chất đặc trưng của các phần tử. (b) Giả sử các phần tử của A được viết theo giá trị tăng dần. Tìm phần tử thứ $23$ của A.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 4, p. 10]
-	Để đánh số các trang sách (bắt đầu từ trang $1$) của 1 cuốn sách của $2015$ trang thì cần dùng bao nhiêu chữ số?
+\begin{proof}[1st giải]
+	(a) $A = \{n\in\mathbb{N}|n\not{\divby}\ 2,\,3 < n\le99\}$. (b) Khi được viết theo giá trị tăng dần, giá trị các phần tử của $A$ tạo thành 1 dãy số cách đều tăng dần: $5,7,9,\ldots,99$. Giả sử phần tử thứ 23 của $A$ là $x$, có: $(x - 5):2 + 1 = 23\Leftrightarrow(x - 5):2 = 22\Leftrightarrow x - 5 = 22\cdot2 = 44\Leftrightarrow x = 44 + 5 = 49$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	(a) $A = \{n\in\mathbb{N}|n\not{\divby}\ 2,\,3 < n\le99\}$. (b) Số hạng thứ $n$ của dãy số có dạng tổng quát là $5 + 2(n - 1)$ nên số hạng thứ 23 là $5 + 2(23 - 1) = 49$.
+\end{proof}
+
+\begin{luuy}
+	Tập hợp A có $(99 - 5):2 + 1 = 48$ phần tử nên A có phần tử thứ $23$. Tổng quát, với tập hợp A bất kỳ, ta phải đảm bảo phần tử thứ $n$ có nằm trong tập đã cho hay không nhờ bất đẳng thức về chỉ số của phần tử: $n\le|A|$, trong đó $|A|$ là số phần tử của tập hợp $A$. Nếu $n > |A|$ thì tập hợp A không có ``chỗ'' để chứa phần tử này nên phần tử thứ $n$ này của tập hợp A không có nghĩa, i.e., không tồn tại. Với (b), có thể viết tập hợp A dưới dạng liệt kê các phần tử cho tới phần tử thứ $23$ nhưng nhược điểm là ta phải liệt kê được tất cả các phần tử đứng trước phần tử cần tìm, nên nếu bài toán yêu cầu tìm phần tử ở vị trí càng lớn thì sẽ càng khó khăn. Tóm lại, thay vì liệt kê các phần tử của 1 tập hợp, nên thử tìm quy luật hoặc công thức tổng quát của các phần tử (nếu có) của tập hợp ấy để thuận tiện tính toán.
+\end{luuy}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD4, p. 10]
+	Để đánh số các trang sách (bắt đầu từ trang $1$) của 1 cuốn sách có $2015$ trang thì cần dùng bao nhiêu chữ số?
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 5, p. 10]
+\begin{proof}[Giải]
+	Chia các số trang của cuốn sách thành 4 nhóm: Nhóm các số có 1 chữ số (từ trang 1--9) nên số chữ số cần dùng là 9. Nhóm các số có 2 chữ số (từ trang 10--99) có số trang sách: $(99 - 10):1 + 1 = 90$ nên số chữ số cần dùng: $90\cdot2 = 180$. Nhóm các số có 3 chữ số (từ trang 100--999) có số trang sách: $(999 - 100):1 + 1 = 900$ nên số chữ số cần dùng: $900\cdot3 = 2700$. Nhóm các số có 4 chữ số (từ trang 1000--2015) có số trang sách: $(2015 - 1000):1 + 1 = 1016$ nên số chữ số cần dùng: $1016\cdot4 = 4064$. Suy ra tổng số chữ số cần dùng để đánh số trang của cuốn sách đó: $9 + 180 + 2700 + 4064 = 6953$.
+\end{proof}
+
+\begin{baitoan}
+	Để đánh số các trang sách (bắt đầu từ trang $1$) của 1 cuốn sách có $a\in\mathbb{N}^\star$ trang, với $a$ có $n$ chữ số, thì cần dùng bao nhiêu chữ số?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Chia các số trang của cuốn sách thành $n$ nhóm: $\forall i = 1,2,\ldots,n - 1$, nhóm các số có $i$ chữ số (từ trang $10^{i-1}$ đến trang $10^i - 1$) có số trang sách: $(10^i - 1 - 10^{i-1}):1 + 1 = 10^i - 10^{i-1}$ nên số chữ số cần dùng: $i(10^i - 10^{i-1})$, \& nhóm các số có $n$ chữ số (từ trang $10^{n-1}$ đến $a$) có số trang sách: $(a - 10^{n-1}):1 + 1 = a - 10^{n-1} + 1$ nên số chữ số cần dùng: $n(a - 10^{n-1} + 1)$. Suy ra tổng số chữ số cần dùng để đánh số trang của cuốn sách đó:
+	\begin{align*}
+		&\sum_{i=1}^{n-1} i(10^i - 10^{i-1}) + n(a - 10^{n-1} + 1) = \sum_{i=1}^{n-1} i10^i - \sum_{i=1}^{n-1} i10^{i-1} + n(a + 1) - n10^{n-1}\\
+		= &\sum_{i=1}^{n-1} i10^i - \sum_{i=0}^{n-2} (i + 1)10^i + n(a + 1) - n\cdot10^{n-1} = \sum_{i=1}^{n-2} [i - (i + 1)]10^i + (n - 1)10^{n-1} - 1\cdot10^0 + n(a + 1) - n\cdot10^{n-1}\\
+		= &-\sum_{i=1}^{n-2} 10^i + n10^{n-1} - n10^{n-1} - 10^{n-1} - 1 + n(a + 1) = -10\sum_{i=0}^{n-3} 10^i - 10^{n-1} - 1 + n(a + 1)\\
+		= &-10\dfrac{10^{n-2} - 1}{10 - 1} - 10^{n-1} - 1 + n(a + 1) = -\dfrac{10}{9}(10^{n-2} - 1) - 10^{n-1} - 1 + n(a + 1) = -\dfrac{10^{n-1}}{9} + \dfrac{10}{9} - 10^{n-1} - 1 + n(a + 1)\\
+		= &-\left(\dfrac{1}{9} + 1\right)10^{n-1} + \dfrac{1}{9} + n(a + 1) = n(a + 1) - \dfrac{10^n - 1}{9}.
+	\end{align*}
+	Vậy cần dùng $n(a + 1) - \dfrac{10^n - 1}{9}$ chữ số để đánh số các trang của cuốn sáchđó.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD5, p. 10]
 	Biết người ta đã dùng đúng $6793$ chữ số để đánh số trang của 1 cuốn sách (bắt đầu từ trang $1$), hỏi cuốn sách đó có bao nhiêu trang?
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 6, p. 11]
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD6, p. 11]
 	Gọi A là tập hợp các số tự nhiên có 2 chữ số mà chữ số hàng chục lớn hơn chữ số hàng đơn vị; B là tập hợp các số tự nhiên có 2 chữ số mà chữ số hàng chục nhỏ hơn chữ số hàng đơn vị. So sánh số phần tử của 2 tập hợp A, B.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 7, p. 12]
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD7, p. 12]
 	Tìm 1 số có 2 chữ số biết khi viết thêm chữ số $0$ vào giữa 2 chữ số của số đó thì được số mới gấp $6$ lần số đã cho.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, Ví dụ 8, p. 12]
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD8, p. 12]
 	Tìm số có 3 chữ số biết nếu viết thêm chữ số $1$ vào trước số đó thì được số mới gấp $9$ lần số ban đầu.	
 \end{baitoan}
 
@@ -180,25 +262,65 @@
 	Cho tập hợp $A = \{1,3,5\}$. {\rm Đ{\tt/}S?} (a) $1\in A$. (b) $\{1\}\in A$. (c) $3\notin A$. (d) $5\notin A$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) Đ. (b) S. Phải là $1\in A$ hoặc $\{1\}\subset A$ với ký hiệu $A\subset B$ nghĩa là: tập hợp $A$ là tập hợp con của tập hợp $B$. (c) S. Phải là $3\in A$. (d) S. Phải là $5\in A$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.2., p. 13]
 	Cho 2 tập hợp: $A = \{1,2,3,4,5\}$, $B = \{3,5,7,9\}$. (a) Mỗi tập hợp trên có bao nhiêu phần tử? (b) Viết các tập hợp trên bằng cách chỉ ra tính chất đặc trưng của các phần tử.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Tập hợp $A$ có 5 phần tử. Tập hợp $B$ có 4 phần tử. (b) $A = \{n\in\mathbb{N}^\star|n < 6\}$, $B = \{n\in\mathbb{N}^\star|n\mbox{  là chữ số lẻ lớn hơn 1}\} = \{n\in\mathbb{N}^\star|n\not{\divby}\ 2,\,n\le9\}$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.3., p. 13]
 	Viết các tập hợp sau \& cho biết mỗi tập hợp đó có bao nhiêu phần tử. (a) Tập hợp A các số tự nhiên $x$ thỏa $12 - x = 5$. (b) Tập hợp B các số tự nhiên $y$ thỏa $7 + y = 21$. (c) Tập hợp C các số tự nhiên $z$ mà $z\cdot0 = 0$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $12 - x = 5\Leftrightarrow x = 12 - 5 = 7\Rightarrow A = \{7\}$ có 1 phần tử. (b) $7 + y = 21\Leftrightarrow y = 21 - 7 = 14\Rightarrow B = \{14\}$ có 1 phần tử. (c) Có $0z = 0$, $\forall z\in\mathbb{N}\Rightarrow C = \mathbb{N}$ có vô số (vô hạn đếm được{\tt/}infinitely countable) phần tử.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.4., p. 14]
 	Tính số phần tử của tập hợp: (a) $A = \{2,4,6,\ldots,98\}$. (b) $B = \{6,10,14,18,22,\ldots,70\}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $|A| = (98 - 2):2 + 1 = 96:2 + 1 = 48 + 1 = 49$. (b) $|B| = (70 - 6):4 + 1 = 64:4 + 1 = 16 + 1 = 17$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.5., p. 14]
 	Cho dãy số $2,5,8,11,14,\ldots$. (a) Nêu quy luật của dãy số trên. (b) Viết tập hợp B gồm $5$ số hạng tiếp theo của dãy số trên. (c) Tính tổng $100$ số hạng đầu tiên của dãy số.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) Quy luật: Dãy số cách đều với khoảng cách là 3 đơn vị. (b) $B = \{17,20,23,26,29\}$. (c) Gọi số hạng thứ 100 của dãy là $n$, $n$ thỏa $(n - 2):3 + 1 = 100\Leftrightarrow(n - 2):3 = 100 - 1 = 99\Leftrightarrow n - 2 = 99\cdot3 = 297\Leftrightarrow n = 297 + 2 = 299$. Tổng 100 số hạng đầu của dãy: $(2 + 299)\cdot100:2 = 301\cdot50 = 15050$.
+\end{proof}
+
+\begin{baitoan}[Cấp số cộng]
+	Cho $a\in\mathbb{N}$, $b,n\in\mathbb{N}^\star$. Xét dãy số $a,a + b,a + 2b,a + 3b,\ldots$. (a) Nêu quy luật của dãy số trên. (b) Tính tổng $n$ số hạng đầu tiên của dãy số.
+\end{baitoan}
+	
+\begin{proof}[1st giải]
+	(a) Quy luật: Dãy số cách đều với khoảng cách là $n$ đơn vị. (b) Số hạng thứ $n$ của dãy là $a + (n - 1)b$. Tổng $n$ số hạng đầu của dãy: $[a + a + (n - 1)b]\cdot n:2 = [2a + (n - 1)b]\cdot n:2 = an + \dfrac{bn(n - 1)}{2}$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	(b) Số hạng thứ $n$ của dãy là $a + (n - 1)b$. Tổng $n$ số hạng đầu của dãy: $\sum_{i=0}^{n-1} a + ib = \sum_{i=0}^{n-1} a + \sum_{i=0}^{n-1} ib = (n - 1 - 0 + 1)a + b \sum_{i=0}^{n-1} i = na + b\dfrac{(n - 1)n}{2} = an + \dfrac{bn(n - 1)}{2}$.
+\end{proof}
+\noindent$\star$ \textsf{Công thức tính tổng $n$ số tự nhiên khác $0$, i.e., $n$ số nguyên dương đầu tiên}:
+\begin{align*}
+	\boxed{\sum_{i=1}^n i = 1 + 2 + \cdots + n = \dfrac{n(n + 1)}{2},\ \forall n\in\mathbb{N}.}
+\end{align*}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.6., p. 14]
 	Viết lại mỗi tập hợp bằng cách liệt kê các phần tử: $A = \{x\in\mathbb{N}|{x\not{\divby}\ 2},\,30 < x < 50\}$. (b) $B = \{x\in\mathbb{N}|x\divby5,\,x\divby2,\,10 < x\le90\}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $A = \{31,33,35,37,39,41,43,45,47,49\}$. $\forall x\in B$, vì $x\divby2$ \& $x\divby5$ mà $\mbox{\rm ƯCLN}(2,5) = 1$ nên suy ra $x\divby{\rm BCNN}(2,5)$, i.e., $x\divby10$, suy ra $B = \{20,30,40,50,60,70,80,90\}$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.7., p. 13]
 	Thực hiện yêu cầu phòng chống dịch Covid-19, tại 1 trường trung học, vào đầu giờ sáng trước khi vào lớp, các học sinh đều được yêu cầu khử khuẩn tay \& đo thân nhiệt. Kết quả đo thân nhiệt tại lớp 6H:
@@ -221,17 +343,45 @@
 	\noindent(a) Gọi A, B, C, D lần lượt là tập hợp gồm các phần tử là thân nhiệt của các bạn tổ 1, tổ 2, tổ 3, tổ 4. Viết các tập hợp A, B, C, D theo cách liệt kê các phần tử (mỗi phần tử chỉ liệt kê 1 lần). (b) Tìm cặp tập hợp bằng nhau trong các tập hợp A, B, C, D. Dùng ký hiệu ``$=$'' để thể hiện mối quan hệ đó.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $A = \{35.5,36,36.5,37\}$, $B = \{35.5,36,36.5,37\}$, $C = \{35,35.5,36,36.5,37\}$, $D = \{35,35.5,36,37\}$. (b) $A = B$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.8., p. 14]
 	Với 3 chữ số La Mã I, V, X có thể viết được bao nhiêu số La Mã mà mỗi chữ số chỉ xuất hiện 1 lần? Số nhỏ nhất là số nào? Số lớn nhất là số nào?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Có thể viết được 10 số: I, V, X, IV, VI, IX, XI, XV, XIV, XVI. Số nhỏ nhất: I: 1. Số lớn nhất: XVI: 16.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.9., p. 14]
 	Tìm số có 3 chữ số, biết nếu viết các chữ số theo thứ tự ngược lại thì được số mới nhỏ hơn số ban đầu $792$ đơn vị.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Gọi số cần tìm là $\overline{abc}$, $a,b,c\in\{0,1,2,\ldots,9\}$, $ac\ne0$. Có $\overline{abc} - \overline{cba} = 792\Leftrightarrow100a + 10b + c - (100c + 10b + a) = 792\Leftrightarrow99(a - c) = 792\Leftrightarrow a - c = 792:99 = 8\Rightarrow a = 9$, $c = 1$. Vậy các số cần tìm là $\overline{9b1}$, $\forall b = 0,1,2,\ldots,9$, i.e., $901,902,903,904,905,906,907,908,909$.
+\end{proof}
+
+\begin{baitoan}
+	(a) Tìm tất cả các giá trị có thể có của $n$ biết nếu viết các chữ số của 1 số có 3 chữ số theo thứ tự ngược lại thì được số mới nhỏ hơn số ban đầu $n$ đơn vị. (b) Với mỗi giá trị của $n$ vừa tìm được, tìm tất cả các số có 3 chữ số thỏa mãn.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Các số có 3 chữ số có dạng là $\overline{abc}$, $a,b,c\in\{0,1,2,\ldots,9\}$, $ac\ne0$ (điều kiện $c\ne0$ là cần thiết để viết đảo ngược số $\overline{abc}$ lại). Có $\overline{abc} - \overline{cba} = n\Leftrightarrow100a + 10b + c - (100c + 10b + a) = n\Leftrightarrow99(a - c) = n$ mà $a,c\in\{1,2,\ldots,9\}$ nên suy ra $a - c\in\{-8,-7,\ldots,7,8\} = \{0,\pm1,\pm2,\ldots,\pm8\}\Rightarrow n = 99(a - c)\in A\coloneqq\{0\cdot99,\pm1\cdot99,\pm2\cdot99,\ldots,\pm8\cdot99\} = \{0,\pm99,\pm198,\pm297,\pm396,\pm495,\pm594,\pm693,\pm792\}$. (b) Gọi $B$ là tập hợp các số có 3 chữ số thỏa mãn $\overline{abc} - \overline{cba} = n$. Với mỗi $n\in A$, theo câu (a), tương ứng với 1 trong các trường hợp sau: Nếu $n = 0\Rightarrow a - c = 0\Rightarrow a = c\Rightarrow B = \{\overline{aba}|a = 1,\ldots,9,\,b = 0,1,\ldots,9\}$. Nếu $n = -99\Rightarrow a - c = -1\Rightarrow B = \{\overline{1b2},\overline{2b3},\overline{3b4},\overline{4b5},\overline{5b6},\overline{6b7},\overline{7b8},\overline{8b9}|b = 0,1,\ldots,9\}$. Nếu $n = 99\Rightarrow a - c = 1\Rightarrow B = \{\overline{2b1},\overline{3b2},\overline{4b3},\overline{5b4},\overline{6b5},\overline{7b6},\overline{8b7},\overline{9b8}|b = 0,1,\ldots,9\}$. Nếu $n = -198\Rightarrow a - c = -2\Rightarrow B = \{\overline{1b3},\overline{2b4},\overline{3b5},\overline{4b6},\overline{5b7},\overline{6b8},\overline{7b9}|b = 0,1,\ldots,9\}$. Nếu $n = 198\Rightarrow a - c = 2\Rightarrow B = \{\overline{3b1},\overline{4b2},\overline{5b3},\overline{6b4},\overline{7b5},\overline{8b6},\overline{9b7}|b = 0,1,\ldots,9\}$. Nếu $n = -297\Rightarrow a - c = -3\Rightarrow B = \{\overline{1b4},\overline{2b5},\overline{3b6},\overline{4b7},\overline{5b8},\overline{6b9}|b = 0,1,\ldots,9\}$. Nếu $n = 297\Rightarrow a - c = 3\Rightarrow B = \{\overline{4b1},\overline{5b2},\overline{6b3},\overline{7b4},\overline{8b5},\overline{9b6}|b = 0,1,\ldots,9\}$. Nếu $n = -396\Rightarrow a - c = -4\Rightarrow B = \{\overline{1b5},\overline{2b6},\overline{3b7},\overline{4b8},\overline{5b9}|b = 0,1,\ldots,9\}$. Nếu $n = 396\Rightarrow a - c = 4\Rightarrow B = \{\overline{5b1},\overline{6b2},\overline{7b3},\overline{8b4},\overline{9b5}|b = 0,1,\ldots,9\}$. Nếu $n = -495\Rightarrow a - c = -5\Rightarrow B = \{\overline{1b6},\overline{2b7},\overline{3b8},\overline{4b9}|b = 0,1,\ldots,9\}$. Nếu $n = 495\Rightarrow a - c = 5\Rightarrow B = \{\overline{6b1},\overline{7b2},\overline{8b3},\overline{9b4}|b = 0,1,\ldots,9\}$. Nếu $n = -594\Rightarrow a - c = -6\Rightarrow B = \{\overline{1b7},\overline{2b8},\overline{3b9}|b = 0,1,\ldots,9\}$. Nếu $n = 594\Rightarrow a - c = 6\Rightarrow B = \{\overline{7b1},\overline{8b2},\overline{9b3}|b = 0,1,\ldots,9\}$. Nếu $n = -693\Rightarrow a - c = -7\Rightarrow B = \{\overline{1b8},\overline{2b9}|b = 0,1,\ldots,9\}$. Nếu $n = 693\Rightarrow a - c = 7\Rightarrow B = \{\overline{8b1},\overline{9b2}|b = 0,1,\ldots,9\}$. Nếu $n = -792\Rightarrow a - c = -8\Rightarrow B = \{\overline{1b9}|b = 0,1,\ldots,9\}$. Nếu $n = 792\Rightarrow a - c = 8\Rightarrow B = \{\overline{9b1}|b = 0,1,\ldots,9\}$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.10., p. 14]
 	Có bao nhiêu số tự nhiên có 2 chữ số mà: (a) Trong số đó có ít nhất 1 chữ số $9$? (b) Trong số đó chữ số hàng chục bé hơn chữ số hàng đơn vị? (c) Trong số đó chữ số hàng chục gấp đôi chữ số hàng đơn vị?
 \end{baitoan}
+
+\begin{proof}[1st giải]
+	(a) 18 số gồm 17 số có 1 chữ số 9: $19,29,39,49,59,69,79,89,90,91,92,93,94,95,96,97,98$ \& 1 số có 2 chữ số 9: 99. (b) 
+\end{proof}
+
+\begin{proof}[2nd giải]
+	(a) Các số cần tìm có dạng $\overline{ab}$ với $a,b\in\{0,1,2,\ldots,9\}$ với $a = 9$ hoặc $b = 9$. Nếu $a = 9$ thì $b\in\{0,1,2,\ldots,9\}$ có 10 cách chọn. Nếu $b = 9$ thì $a\in\{1,2,\ldots,9\}$ có 9 cách chọn. Nhưng số 99 được tính 2 lần nên tổng cộng có $10 + 9 - 1 = 18$ số thỏa mãn. (b) Các số cần tìm có dạng $\overline{ab}$
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.11., p. 14]
 	Cho 1 số có 2 chữ số. Nếu viết thêm chữ số 2 vào bên trái \& bên phải số đó ta được số mới gấp $32$ lần số đã cho. Tìm số đã cho.
@@ -277,7 +427,7 @@
 	Trong 1 lớp học, tất cả học sinh nam đều tham gia vào các câu lạc bộ thể thao: bóng đá, bóng chuyền, cầu lông. Biết có $7$ học sinh tham gia câu lạc bộ bóng đá, $6$ học sinh tham gia câu lạc bộ bóng chuyền, $5$ học sinh tham gia câu lạc bộ cầu lông; trong số đó có $4$ học sinh tham gia cả 2 câu lạc bộ bóng đá \& bóng chuyền, $3$ học sinh tham gia cả 2 câu lạc bộ bóng đá \& cầu lông, $2$ học sinh tham gia cả 2 câu lạc bộ bóng chuyền \& cầu lông, $1$ học sinh tham gia cả 3 câu lạc bộ. Hỏi lớp đó có bao nhiêu học sinh nam?
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 2, p. 6]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD2, p. 6]
 	Phố Hàng Ngang là 1 trong các phố cổ của Hà Nội. Các nhà được đánh số liên tục, dãy lẻ $1,3,5,7,\ldots,61$; dãy chẵn $2,4,6,\ldots,64$. (a) Bên số nhà chẵn, trong 1 phòng gác nhỏ, chủ tịch Hồ Chí Minh đã khởi thảo bản Tuyên Ngôn Độc Lập khai sinh cho nước Việt Nam Dân Chủ Cộng Hòa. Ngôi nhà có căn phòng đó là nhà thứ $24$ kể từ đầu phố (số $2$). Hỏi ngôi nhà này có số nào? (b) Bên số nhà lẻ chữ số nào được dùng nhiều nhất? Chữ số nào chưa được dùng đến? (c) Phải dùng tất cả bao nhiêu chữ số để ghi số nhà của phố này?
 \end{baitoan}
 
@@ -286,7 +436,7 @@
 \end{proof}
 
 \begin{luuy}
-	Công thức tính số chữ số cần dùng để ghi các số tự nhiên liên tiếp: Gọi số các số có $1$ chữ số là $a_1$, số các số có $2$ chữ số là $a_2$, $\ldots$,  số các số có $n$ chữ số là $a_n$ (hay viết gọn: gọi số các số có $i$ chữ số là $a_i$, $\forall i = 1,2,\ldots,n$) thì số chữ số cần dùng là: $S = \sum_{i=1}^n a_i = a_1 + a_2 + \cdots + a_n$.
+	Công thức tính số chữ số cần dùng để ghi các số tự nhiên liên tiếp: Gọi số các số có $1$ chữ số là $a_1$, số các số có $2$ chữ số là $a_2$, $\ldots$,  số các số có $n$ chữ số là $a_n$ (hay viết gọn: gọi số các số có $i$ chữ số là $a_i$, $\forall i = 1,2,\ldots,n$) thì số chữ số cần dùng là: $S = \sum_{i=1}^n ia_i = a_1 + 2a_2 + \cdots + na_n$.
 \end{luuy}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 6., p. 6]
@@ -361,7 +511,7 @@
 	(a) Đẳng thức XII $-$ V = VII đúng vì $12 - 5 = 7$. (b) XI $-$ IV = VII: $11 - 4 = 7$, hoặc XII $-$ VI = VI: $12 - 6 = 6$.
 \end{proof}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 1, p. 4]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD1, p. 4]
 	Viết các tập hợp sau rồi tìm số phần tử của mỗi tập hợp đó: (a) Tập hợp $A$ các số tự nhiên $x$ mà $8:x = 2$. (b) Tập hợp $B$ các số tự nhiên $x$ mà $x + 3 < 5$. (c) Tập hợp $C$ các số tự nhiên $x$ mà $x - 2 = x + 2$. (d) Tập hợp $D$ các số tự nhiên $x$ mà $x:2 = x:4$. (e) Tập hợp $E$ các số tự nhiên $x$ mà $x + 0 = x$.
 \end{baitoan}
 
@@ -369,7 +519,7 @@
 	(a) $A = \{4\}$ có 1 phần tử. (b) $B = \{0,1\}$ có 2 phần tử. (c) $C = \emptyset$ không có phần tử nào. (d) $D = \{0\}$ có 1 phần tử. (e) $E = \{0,1,2,\ldots\} = \mathbb{N}$ có vô hạn đếm được số phần tử.
 \end{proof}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 2, p. 5]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD2, p. 5]
 	Viết các tập hợp sau bằng cách liệt kê các phần tử của nó: (a) Tập hợp $A$ các số tự nhiên có 2 chữ số, trong đó chữ số hàng chục lớn hơn chữ số hàng đơn vị là $2$. (b) Tập hợp $B$ các số tự nhiên có 3 chữ số mà tổng các chữ số bằng $3$.
 \end{baitoan}
 
@@ -377,7 +527,7 @@
 	(a) $A = \{20,31,42,53,64,75,86,97\}$. (b) $B = \{102,111,120,201,210,300\}$.
 \end{proof}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 3, p. 5]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD3, p. 5]
 	Tìm số tự nhiên có 5 chữ số, biết nếu viết thêm chữ số $2$ vào đằng sau số đó thì được số lớn gấp 3 lần số có được bằng cách viết thêm chữ số $2$ vào đằng trước số đó.
 \end{baitoan}
 
@@ -389,7 +539,7 @@
 	Gọi số cần tìm là $x = \overline{abcde}$, có $\overline{abcde2} = 3\overline{2abcde}\Leftrightarrow10x + 2 = 3(200000 + x)\Leftrightarrow10x + 2 = 600000 + 3x\Leftrightarrow7x = 599998\Leftrightarrow x = 599998:7 = 85714$. Vậy số đó là 85714.
 \end{proof}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Mở rộng Ví dụ 3, p. 5]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Mở rộng VD3, p. 5]
 	(a) Tìm số tự nhiên nhỏ nhất có chữ số đầu tiên ở bên trái là $2$, khi chuyển chữ số $2$ này xuống cuối cùng thì số đó tăng gấp 3 lần. (b) Tìm tất cả các số tự nhiên thỏa mãn câu (a).
 \end{baitoan}
 
@@ -397,7 +547,7 @@
 	Gọi số tự nhiên cần tìm là $\overline{2a_na_{n-1}\ldots a_1a_0}$, đặt $x\coloneqq\overline{a_na_{n-1}\ldots a_1a_0}$, có $3\overline{2a_na_{n-1}\ldots a_1a_0} = \overline{a_na_{n-1}\ldots a_1a_02}\Leftrightarrow3(2\cdot10^n + x) = 10x + 2\Leftrightarrow7x = 6\cdot10^n - 2\Leftrightarrow x = \dfrac{6\cdot10^n - 2}{7}$. Nếu $n = 1$, $x = \dfrac{58}{7}$. Nếu $n = 2$, $x = \dfrac{598}{7}$. Nếu $n = 3$, $x = \dfrac{5998}{7}$. Nếu $n = 4$, $x = \dfrac{59998}{7}$. Nếu $n = 5$, $x = \dfrac{599998}{7} = 85714$. Vậy số tự nhiên nhỏ nhất thỏa mãn là 285714. (b) 
 \end{proof}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Mở rộng Ví dụ 3, p. 6]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Mở rộng VD3, p. 6]
 	Tìm số tự nhiên có 5 chữ số, biết nếu viết thêm 1 chữ số vào đằng sau số đó thì được số lớn gấp 3 lần số có được nếu viết thêm chính chữ số ấy vào đằng trước số đó.
 \end{baitoan}
 
@@ -567,14 +717,6 @@ trong đó ${\rm sgn}(x)$ là \textit{hàm dấu} (sign) của 1 số, được 
 
 \begin{proof}[Giải]
 	
-\end{proof}
-
-\begin{baitoan}
-	Viết tập hợp các ký hiệu La Mã. Có mấy ký hiệu trong hệ La Mã, i.e., tập hợp vừa viết có mấy phần tử?
-\end{baitoan}
-
-\begin{proof}[Giải]
-	$A = \{{\rm I,V,X,L,C,D,M,m}\}$.
 \end{proof}
 
 \begin{baitoan}[$\mathbb{N}^\star\subset\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}$]
