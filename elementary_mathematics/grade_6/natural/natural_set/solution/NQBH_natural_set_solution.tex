@@ -235,28 +235,60 @@
 		= &-10\dfrac{10^{n-2} - 1}{10 - 1} - 10^{n-1} - 1 + n(a + 1) = -\dfrac{10}{9}(10^{n-2} - 1) - 10^{n-1} - 1 + n(a + 1) = -\dfrac{10^{n-1}}{9} + \dfrac{10}{9} - 10^{n-1} - 1 + n(a + 1)\\
 		= &-\left(\dfrac{1}{9} + 1\right)10^{n-1} + \dfrac{1}{9} + n(a + 1) = n(a + 1) - \dfrac{10^n - 1}{9}.
 	\end{align*}
-	Vậy cần dùng $n(a + 1) - \dfrac{10^n - 1}{9}$ chữ số để đánh số các trang của cuốn sáchđó.
+	Vậy cần dùng \fbox{$n(a + 1) - (10^n - 1):9$} chữ số để đánh số các trang của cuốn sách đó.
 \end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD5, p. 10]
 	Biết người ta đã dùng đúng $6793$ chữ số để đánh số trang của 1 cuốn sách (bắt đầu từ trang $1$), hỏi cuốn sách đó có bao nhiêu trang?
 \end{baitoan}
 
+\begin{proof}[1st giải]
+	Để đánh số các trang có 1 chữ số (từ trang 1--9) cần 9 chữ số. Để đánh số các trang có 2 chữ số (từ trang 10--99, gồm 90 trang) cần $90\cdot2 = 190$ chữ số. Để đánh số các trang có 3 chữ số (từ trang 100--999, gồm 900 trang) cần $900\cdot3 = 2700$ chữ số. Số chữ số đã dùng: $9 + 180 + 2700 = 2889 < 6793$ nên cuốn sách có nhiều hơn 999 trang, i.e., số trang của cuốn sách có nhiều hơn 3 chữ số. Số chữ số còn lại: $6793 - 2889 = 3904$. Để đánh số tất cả các trang có 4 chữ số (từ trang 1000--9999, gồm 9000 trang) cần $9000\cdot4 = 36000$ chữ số (vượt quá 3904 chữ số) nên số trang của cuốn sách là số có 4 chữ số. Vì $3904:4 = 976$ nên có thêm 976 trang sau trang 999. Vậy cuốn sách có $976 + 999 = 1975$ trang.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Sử dụng công thức $A = n(a + 1) - (10^n - 1):9$. Với $n\le3$ thì $a\le999$ nên $A\le3(999 + 1) - (10^1 - 1):9 = 2999 < 6793$. Với $n = 5$ thì $a\ge10000$ nên $A\ge5(10000 + 1) - (10^5 - 1):9 = 38894 > 6793$. Với $n\ge6$, có $A > 38894 > 6793$. Suy ra $n = 4$, thay vào công thức của $A$ được: $4(a + 1) - (10^4 - 1):9 = 6793\Leftrightarrow4a = 6793 + 1111 - 4 = 7900\Leftrightarrow a = 7900:4 = 1975$. Vậy cuốn sách có 1975 trang.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD6, p. 11]
 	Gọi A là tập hợp các số tự nhiên có 2 chữ số mà chữ số hàng chục lớn hơn chữ số hàng đơn vị; B là tập hợp các số tự nhiên có 2 chữ số mà chữ số hàng chục nhỏ hơn chữ số hàng đơn vị. So sánh số phần tử của 2 tập hợp A, B.
 \end{baitoan}
+
+\begin{proof}[1st giải]
+	$A = \{\overline{ab}|a,b\in\{0,1,2,\ldots,9\},\,a\ne0,\,a > b\}$. Nếu $a = 1$ thì $b = 0$, có 1 số thỏa mãn: 10. Nếu $a = 2$ thì $b\in\{0,1\}$, có 2 số thỏa mãn: $20,21$. Nếu $a = 3$ thì $b\in\{0,1,2\}$, có 3 số thỏa mãn: $30,31,32$. $\ldots$ Nếu $a = 9$ thì $b\in\{0,1,2,\ldots,8\}$, có 9 số thỏa mãn: $90,91,\ldots,98$. Suy ra $|A| = 1 + 2 + \cdots + 9 = 9(9 + 1):2 = 9\cdot10:2 = 45$. $B = \{\overline{ab}|a,b\in\{0,1,2,\ldots,9\},\,a\ne0,\,a < b\}$. Nếu $a = 1$ thì $b\in\{2,3,\ldots,9\}$, có 8 số thỏa mãn: $12,13,\ldots,19$. Nếu $a = 2$ thì $b\in\{3,4,\ldots,9\}$, có 7 số thỏa mãn: $23,24,\ldots,29$. Nếu $a = 3$ thì $b\in\{4,5,\ldots,9\}$, có 6 số thỏa mãn: $34,35,\ldots,39$. $\ldots$ Nếu $a = 8$ thì $b = 9$, có 1 số thỏa mãn: 89. Suy ra $|B| = 1 + 2 + \cdots + 8 = 8(8 + 1):2 = 8\cdot9:2 = 36$. Vậy $|A| > |B|$ (hơn nữa $|A| - |B| = 45 - 36 = 9$).
+\end{proof}
+
+\begin{proof}[2nd giải]
+	$A = \{\overline{ab}|a,b\in\{0,1,2,\ldots,9\},\,a\ne0,\,a > b\}$. Nếu $a = 1$ thì $b = 0$, có 1 số thỏa mãn: 10. Nếu $a = 2$ thì $b\in\{0,1\}$, có 2 số thỏa mãn: $20,21$. Nếu $a = 3$ thì $b\in\{0,1,2\}$, có 3 số thỏa mãn: $30,31,32$. $\ldots$ Nếu $a = 9$ thì $b\in\{0,1,2,\ldots,8\}$, có 9 số thỏa mãn: $90,91,\ldots,98$. Suy ra $|A| = 1 + 2 + \cdots + 9 = 9(9 + 1):2 = 9\cdot10:2 = 45$. Để tính số phần tử của tập hợp $B$, nhận xét: có $99 - 10 + 1 = 90$ số có 2 chữ số, trong đó có 9 số có 2 chữ số giống nhau: $11,22,\ldots,99$, suy ra $|B| = 90 - 9 - |A| = 90 - 9 - 45 = 36$. Vậy Vậy $|A| > |B|$ (hơn nữa $|A| - |B| = 45 - 36 = 9$).
+\end{proof}
+
+\begin{proof}[3rd giải (sử dụng song ánh)]
+	Với mỗi số $\overline{ab}\in A$ với $a,b\in\{1,2,\ldots,9\}$, $a < b$, nếu ta đảo ngược số này lại thì sẽ được 1 phần tử của $B$: $\overline{ba}\in B$ vì $b > a$. Tương tự, với mỗi phần tử $\overline{ba}\in B$ với $a,b\in\{1,2,\ldots,9\}$, $a < b$, nếu đảo ngược lại ta được 1 phần tử $\overline{ab}\in A$. Suy ra tập hợp $A$ hơn tập hợp $B$ các phần tử có dạng $\overline{a0}$ với $a\in\{1,2,\ldots,9\}$, i.e., gồm 9 số: $10,20,\ldots,90$, suy ra $|A| - |B| = 9 > 0$. Vậy $|A| > |B|$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD7, p. 12]
 	Tìm 1 số có 2 chữ số biết khi viết thêm chữ số $0$ vào giữa 2 chữ số của số đó thì được số mới gấp $6$ lần số đã cho.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Gọi số cần tìm là $\overline{ab}$ với $a,b\in\{0,1,2,\ldots,9\}$, $a\ne0$, có: $\overline{a0b} = 6\overline{ab}\Leftrightarrow100a + b = 6(10a + b) = 60a + 6b\Leftrightarrow40a = 5b\Leftrightarrow8a = b\le9\Rightarrow a = 1$, $b = 8$. Vậy số cần tìm là 18.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD8, p. 12]
 	Tìm số có 3 chữ số biết nếu viết thêm chữ số $1$ vào trước số đó thì được số mới gấp $9$ lần số ban đầu.	
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Gọi số cần tìm là $x = \overline{abc}$ với $a,b,c\in\{0,1,2,\ldots,9\}$, $a\ne0$, có: $\overline{1abc} = 9\overline{abc}\Leftrightarrow1000 + \overline{abc} = 9\overline{abc}\Leftrightarrow1000 + x = 9x\Leftrightarrow8x = 1000\Leftrightarrow x = 1000:8 = 125$. Vậy số cần tìm là 125.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 13]
-	Ngày mùng 2 tháng 9 năm $\overline{abcd}$, tại quảng trường Ba Đình lịch sử, Chủ tịch Hồ Chí Minh đã đọc bản tuyên ngôn độc lập khai sinh nước Việt Nam Dân chủ Cộng hòa (nay là nước Cộng hòa xã hội chủ nghĩa Việt Nam). Năm $\overline{abcd}$ là năm nào? Biết $a$ là phần tử nhỏ nhất trong tập hợp $ \mathbb{N}^\star$, $b$ là chữ số lớn nhất, $c,d$ là 2 số tự nhiên liên tiếp \& $c + d = b$.
+	Ngày mùng 2 tháng 9 năm $\overline{abcd}$, tại quảng trường Ba Đình lịch sử, Chủ tịch Hồ Chí Minh đã đọc bản tuyên ngôn độc lập khai sinh nước Việt Nam Dân chủ Cộng hòa (nay là nước Cộng hòa xã hội chủ nghĩa Việt Nam). Năm $\overline{abcd}$ là năm nào? Biết $a$ là phần tử nhỏ nhất trong tập hợp $ \mathbb{N}^\star$, $b$ là chữ số lớn nhất, $c,d$ là 2 số tự nhiên liên tiếp, $c < d$, \& $c + d = b$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	$a$ là phần tử nhỏ nhất trong tập hợp $ \mathbb{N}^\star\Rightarrow a = 1$. $b$ là chữ số lớn nhất $\Rightarrow b = 9$. $c,d$ là 2 số tự nhiên liên tiếp, $c < d$ \& $c + d = b = 9$ suy ra $c = 4$, $d = 5$. Vậy $\overline{abcd} = 1945$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.1., p. 13]
 	Cho tập hợp $A = \{1,3,5\}$. {\rm Đ{\tt/}S?} (a) $1\in A$. (b) $\{1\}\in A$. (c) $3\notin A$. (d) $5\notin A$.
@@ -376,52 +408,104 @@
 \end{baitoan}
 
 \begin{proof}[1st giải]
-	(a) 18 số gồm 17 số có 1 chữ số 9: $19,29,39,49,59,69,79,89,90,91,92,93,94,95,96,97,98$ \& 1 số có 2 chữ số 9: 99. (b) 
+	(a) 18 số gồm 17 số có 1 chữ số 9: $19,29,39,49,59,69,79,89,90,91,92,93,94,95,96,97,98$ \& 1 số có 2 chữ số 9: 99. (b) 36 số. Từ số 12--19 có 8 số. Từ số 23--29 có 7 số. $\ldots$ Từ số 78--79 có 2 số. Số 89 có 1 số. Nên có tất cả $1 + 2 + \ldots + 8 = 8(8 + 1):2 = 36$ số thỏa mãn. (c) 4 số: $21,42,63,84$.
 \end{proof}
 
 \begin{proof}[2nd giải]
-	(a) Các số cần tìm có dạng $\overline{ab}$ với $a,b\in\{0,1,2,\ldots,9\}$ với $a = 9$ hoặc $b = 9$. Nếu $a = 9$ thì $b\in\{0,1,2,\ldots,9\}$ có 10 cách chọn. Nếu $b = 9$ thì $a\in\{1,2,\ldots,9\}$ có 9 cách chọn. Nhưng số 99 được tính 2 lần nên tổng cộng có $10 + 9 - 1 = 18$ số thỏa mãn. (b) Các số cần tìm có dạng $\overline{ab}$
+	(a) Các số cần tìm có dạng $\overline{ab}$ với $a,b\in\{0,1,2,\ldots,9\}$, $a\ne0$ thỏa mãn $a = 9$ hoặc $b = 9$. Nếu $a = 9$ thì $b\in\{0,1,2,\ldots,9\}$ có 10 cách chọn. Nếu $b = 9$ thì $a\in\{1,2,\ldots,9\}$ có 9 cách chọn. Nhưng số 99 được tính 2 lần nên tổng cộng có $10 + 9 - 1 = 18$ số thỏa mãn. (b) Các số cần tìm có dạng $\overline{ab}$ với $a,b\in\{0,1,2,\ldots,9\}$, $a\ne0$ thỏa mãn $a < b$. Với mỗi $a\in\{1,2,\ldots,8\}$, các chữ số $b$ thỏa mãn gồm $a + 1,a + 2,\ldots,9$. Suy ra số số thỏa mãn là $\sum_{a=1}^8 (9 - (a + 1) + 1) = \sum_{a=1}^8 9 - a = 9\cdot8 - \sum_{a=1}^8 a = 8\cdot9 - 8\cdot9:2 = 8\cdot9:2 = 36$. (c) 4 số: $21,42,63,84$.
 \end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.11., p. 14]
 	Cho 1 số có 2 chữ số. Nếu viết thêm chữ số 2 vào bên trái \& bên phải số đó ta được số mới gấp $32$ lần số đã cho. Tìm số đã cho.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Gọi số cần tìm là $\overline{ab}$ với $a,b\in\{0,1,2,\ldots,9\}$, $a\ne0$, có: $\overline{2ab2} = 32\overline{ab}\Leftrightarrow2000 + 10\overline{ab} + 2 = 32\overline{ab}\Leftrightarrow22\overline{ab} = 2002\Leftrightarrow\overline{ab} = 2002:22 = 91$. Vậy số cần tìm là 91.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.12., p. 14]
 	Mẹ mua cho Hà 1 quyển sổ tay có $358$ trang. Để tiện theo dõi, Hà đánh số trang từ $1$ đến $358$. Hỏi Hà đã phải viết bao nhiêu chữ số để đánh số trang hết cuốn sổ tay đó.
 \end{baitoan}
+
+\begin{proof}[1st giải]
+	Số chữ số Hà đã phải viết để đánh số trang hết cuốn sổ tay đó: $(9 - 1 + 1)\cdot1 + (99 - 10 + 1)\cdot2 + (358 -100 + 1)\cdot3 = 9 + 90\cdot2 + 259\cdot3 = 966$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Sử dụng công thức $n(a + 1) - \dfrac{10^n - 1}{9}$ với $a = 358$, $n = 3$. Số chữ số Hà đã phải viết để đánh số trang hết cuốn sổ tay đó: $3(358 + 1) - \dfrac{10^3 - 1}{9} = 966$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.13., p. 14]
 	Viết liền nhau các số tự nhiên $123456789101112\ldots$ (a) Hỏi các chữ số hàng đơn vị của các số $49,217,2401$ đứng ở vị trí thứ bao nhiêu kể từ trái sang phải? (b) Chữ số viết ở vị trí thứ $427$ là chữ số nào?
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) 9 chữ số đầu tiên: $1,2,\ldots,9$. 40 số có 2 chữ số tiếp theo: $10,11,\ldots,59$, su ra chữ số hàng đơn vị của số 49 ở vị trí thứ: $9 + 40\cdot2 = 89$. Tương tự, chữ số hàng đơn vị của số 217 ở vị trí thứ $9 + 90\cdot2 + (217 - 100 + 1)\cdot3 = 9 + 180 + 118\cdot3 = 189 + 354 = 543$. Chữ số hàng đơn vị của số 2401 ở vị trí thứ $9 + 90\cdot2 + 900\cdot3 + (2401 - 1000 + 1)\cdot4 = 9 + 180 + 2700 + 1402\cdot4 = 189 + 2700 + 5608 = 8497$. (b) Gọi $x$ là số có 1 chữ số ở vị trí 427. Xét 3 trường hợp: Nếu chữ số ở vị trí 427 là chữ số hàng đơn vị của $x$: $9 + 90\cdot2 + (x - 100 + 1)\cdot3 = 427\Leftrightarrow3x = 427 - 9 - 180 + 297 = 535\Leftrightarrow x = 535:3 = 178.(3)\notin\mathbb{N}$ (loại). Nếu chữ số ở vị trí 427 là chữ số hàng chục của $x$: $9 + 90\cdot2 + (x - 100 + 1)\cdot3 - 1 = 427\Leftrightarrow3x = 427 - 9 - 180 + 297 + 1 = 536\Leftrightarrow x = 536:3 = 178.(6)\notin\mathbb{N}$ (loại). Nếu chữ số ở vị trí 427 là chữ số hàng trăm của $x$: $9 + 90\cdot2 + (x - 100 + 1)\cdot3 - 2 = 427\Leftrightarrow3x = 427 - 9 - 180 + 297 + 2 = 537\Leftrightarrow x = 537:3 = 179$. Vậy chữ số viết ở vị trí thứ 427 là chữ số 1 (chữ số hàng trăm của số 179).
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.14., p. 15]
 	Cho 4 chữ số $a,b,c,d$ đôi một khác nhau \& khác $0$. Tập hợp các số tự nhiên có 3 chữ số gồm 3 trong 4 chữ số $a,b,c,d$ có bao nhiêu phần tử?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Các số có chữ số $a$ ở vị trí hàng trăm: $\overline{abc},\overline{acb},\overline{acd},\overline{adc},\overline{abd},\overline{adb}$ (có 6 số). Vì $a,b,c,d$ có vai trò bình đẳng nên khi đặt $b,c,d$ lần lượt là chữ số hàng trăm, ta được các kết quả tương tự. Vậy số các số tạo thành là $6\cdot4 = 24$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.15., p. 15]
 	Mỗi tập hợp sau đây có bao nhiêu phần tử? (a) Tập hợp các số có 2 chữ số. (b) Tập hợp các số có 2 chữ số được lập nên từ 2 số khác nhau. (c) Tập hợp các số có 3 chữ số được lập nên tử 3 chữ số đôi một khác nhau.
 \end{baitoan}
 
+\begin{proof}[1st giải (liệt kê)]
+	(a) $A = \{10,11,12,\ldots,99\}$ có $99 - 10 + 1 = 90$ phần tử. (b) Có 90 số có 2 chữ số, trong đó có 9 số có chữ số giống nhau: $11, 22,33,\ldots,99$, nên có $90 - 9 = 81$ số thỏa mãn. (c)Có $999 - 100 + 1 = 900$ số có 3 chữ số. Có 9 số có 3 chữ số mà 3 chữ số đó giống nhau: $111,222,\ldots,999$. Các số có 3 chữ số mà 2 chữ số hàng trăm \& hàng chục giống nhau nhưng khác hàng đơn vị: $110,112,113,\ldots,119,220,221,223,\ldots,229,\ldots,990,991,\ldots,998$, có $9\dot9 = 81$ số thỏa mãn. Các số có 3 chữ số mà 2 chữ số hàng trăm \& hàng đơn vị giống nhau nhưng khác hàng chục: $101,121,131,\ldots,191,202,212,232,\ldots,292,\ldots,909,919,\ldots,989$, có $9\dot9 = 81$ số thỏa mãn. Các số có 3 chữ số mà 2 chữ số hàng chục \& hàng đơn vị giống nhau nhưng khác hàng trăm: $100,122,133,\ldots,199,200,211,233,\ldots,299,\ldots,900,911,\ldots,988$, có $9\dot9 = 81$ số thỏa mãn. Vậy tập hợp này có $900 - 9 - 81 - 81 - 81 = 648$ phần tử.
+\end{proof}
+
+\begin{proof}[2nd giải (phương pháp đếm của Tổ hợp)]
+	(a) Các số cần tìm có dạng $\overline{aa}$ với $a\in\{1,2,\ldots,9\}$ nên tập hợp này có 9 phần tử. (b) Các số cần tìm có dạng $\overline{ab}$ với $a\in\{1,2,\ldots,9\}$ nên có 9 cách chọn. Vì $b\ne a$ nên với mỗi chữ số $a$ đã chọn, $b\in\{0,1,2,\ldots,9\}\backslash\{a\}$ nên có $10 - 1 = 9$ cách chọn. Theo quy tắc nhân, nên tập hợp này có $9\cdot9 = 81$ phần tử. (c) Các số cần tìm có dạng $\overline{abc}$ với $a\in\{1,2,\ldots,9\}$ nên có 9 cách chọn. Vì $b\ne a$ nên với mỗi chữ số $a$ đã chọn, $b\in\{0,1,2,\ldots,9\}\backslash\{a\}$ nên có $10 - 1 = 9$ cách chọn. Vì $c\ne a$, $c\ne b$ nên với mỗi 2 chữ số $a,b$ đã chọn, $c\in\{0,1,2,\ldots,9\}\backslash\{a,b\}$ nên có $10 - 2 = 8$ cách chọn. Theo quy tắc nhân, nên tập hợp này có $9\cdot9\cdot8 = 648$ phần tử.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.16., p. 15]
 	Tổng kết đợt thi đua, lớp 6A có $35$ bạn được 1 điểm $10$ trở lên, $21$ bạn được từ 2 điểm $10$ trở lên, $18$ bạn được 3 điểm $10$ trở lên, $5$ bạn được $4$ điểm $10$. Biết không có ai được trên $4$ điểm $10$, hỏi trong đợt thi đua đó lớp 6A có bao nhiêu điểm $10$?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	5 bạn được 4 điểm 10 có $5\cdot4 = 20$ điểm 10. $18 - 5 = 13$ bạn được 3 điểm 10 có $13\cdot3 = 39$ điểm 10. $21 - 18 = 3$ bạn được 2 điểm 10 có $3\cdot2 = 6$ điểm $10$. $35 - 21 = 14$ bạn được 1 điểm 10 có $14\cdot1 = 14$ điểm 10. Vậy có tất cả $20 + 39 + 6 + 14 = 20 + 20 + 39 = 79$ điểm 10.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.17., p. 15]
 	Tìm số tự nhiên có 4 chữ số, chữ số hàng đơn vị là $9$. Nếu chuyển chữ số hàng đơn vị lên đầu thì được 1 số mới lớn hơn số đã cho $2889$ đơn vị.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Gọi số cần tìm là $\overline{abc9}$ với $a,b,c\in\{0,1,2,\ldots,9\}$, $a\ne0$, có: $\overline{abc9} = \overline{9abc} - 2889\Leftrightarrow10\overline{abc} + 9 = 9000 + \overline{abc} - 2889\Leftrightarrow9\overline{abc} = 9000 - 2889 - 9 = 6102\Leftrightarrow\overline{abc} = 6102:9 = 678$. Vậy số cần tìm là 6789.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.18., p. 15]
 	Hiệu của 2 số tự nhiên là $53$. Chữ số hàng đơn vị của số bị trừ là $8$. Nếu bỏ chữ số hàng đơn vị của số bị trừ ta được số trừ. Tìm 2 số đó.
 \end{baitoan}
+
+\begin{proof}[1st giải]
+	Gọi $x\in\mathbb{N}^\star$ là số trừ ($x\ne0$ vì nếu ngược lại, $x = 0$ thì số bị trừ sẽ là $\overline{08}$ vô lý), có: $\overline{x8} - x = 53\Leftrightarrow10x + 8 - x = 53\Leftrightarrow9x = 45\Leftrightarrow x = 45:9 = 5$. Vậy 2 số cần là 58 \& 5.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Gọi $x\in\mathbb{N}^\star$ là số bị trừ ($x\ne0$ vì chữ số hàng đơn vị của $x$ là 8). Nếu bỏ chữ số hàng đơn vị của số bị trừ là 8 thì được số trừ, nên số trừ bằng $(x - 8):10$. Có $x - (x - 8):10 = 53\Leftrightarrow10x - (x - 8) = 53\cdot10 = 530\Leftrightarrow9x = 530 - 8 = 522\Leftrightarrow x = 522:9 = 58$. Vậy 2 số cần là 58 \& 5.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.19., p. 15]
 	Tìm 1 số có 5 chữ số biết nếu viết chữ số $7$ đằng trước số đó thì được số lớn gấp $5$ lần số có được bằng cách viết thêm chữ số $7$ vào đằng sau số đó.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Gọi số cần tìm là $x = \overline{abcde}$ với $a,b,c,d,e\in\{0,1,2,\ldots,9\}$, $a\ne0$, có: $\overline{7abcde} = 5\overline{abcde7}\Leftrightarrow700000 + x = 5(10x + 7)\Leftrightarrow700000 + x = 5(10x + 7) = 50x  + 35\Leftrightarrow49x = 700000 - 35 = 699965\Leftrightarrow x = 699965:49 = 14285$. Vậy số cần tìm là 14285.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.20., p. 15]
 	1 số gồm 3 chữ số tận cùng là chữ số $9$, nếu chuyển chữ số $9$ đó lên đầu thì được 1 số mới mà khi chia cho số cũ thì được thương là $3$ dư $61$. Tìm số đó.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi số cần tìm là $\overline{ab9}$ với $a,b\in\{0,1,2,\ldots,9\}$, $a\ne0$, có: $\overline{9ab} = 3\overline{ab9} + 61\Leftrightarrow900 + \overline{ab} = 3(10\overline{ab} + 9) + 61\Leftrightarrow900 + \overline{ab} = 30\overline{ab} + 27 + 61\Leftrightarrow29\overline{ab} = 900 - 27 - 61 = 812\Leftrightarrow\overline{ab} = 812:29 = 28$. Vậy số cần tìm là 289.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 15]
 	Trong 1 lớp học, tất cả học sinh nam đều tham gia vào các câu lạc bộ thể thao: bóng đá, bóng chuyền, cầu lông. Biết có $7$ học sinh tham gia câu lạc bộ bóng đá, $6$ học sinh tham gia câu lạc bộ bóng chuyền, $5$ học sinh tham gia câu lạc bộ cầu lông; trong số đó có $4$ học sinh tham gia cả 2 câu lạc bộ bóng đá \& bóng chuyền, $3$ học sinh tham gia cả 2 câu lạc bộ bóng đá \& cầu lông, $2$ học sinh tham gia cả 2 câu lạc bộ bóng chuyền \& cầu lông, $1$ học sinh tham gia cả 3 câu lạc bộ. Hỏi lớp đó có bao nhiêu học sinh nam?
@@ -718,10 +802,6 @@ trong đó ${\rm sgn}(x)$ là \textit{hàm dấu} (sign) của 1 số, được 
 \begin{proof}[Giải]
 	
 \end{proof}
-
-\begin{baitoan}[$\mathbb{N}^\star\subset\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}$]
-	Viết tập hợp theo nhiều cách nhất có thể: (a) Tập hợp các số tự nhiên. (b) Tập hợp các số tự nhiên khác $0$. (c) Tập hợp các số nguyên{\tt/}nguyên dương{\tt/}nguyên âm{\tt/}nguyên không âm{\tt/}nguyên không dương. (d) Tập hợp các phân số{\tt/}phân số dương{\tt/}phân số âm{\tt/}phân số không âm{\tt/}phân số không dương. (e) Tập hợp các số thập phân{\tt/}số thập phân dương{\tt/}số thập phân âm{\tt/}số thập phân không âm{\tt/}số thập phân không dương. (f) Tập hợp các phân số thập phân{\tt/}phân số thập phân dương{\tt/}phân số thập phân âm{\tt/}phân số thập phân không âm{\tt/}phân số thập phân không dương. (g) Tập hợp các số hữu tỷ{\tt/}số hữu tỷ dương{\tt/}số hữu tỷ âm{\tt/}số hữu tỷ không âm{\tt/}số hữu tỷ không dương. (h) Tập hợp các số thập phân hữu hạn{\tt/}số thập phân hữu hạn dương{\tt/}số thập phân hữu hạn âm{\tt/}số thập phân hữu hạn không âm{\tt/}số thập phân hữu hạn không dương. (i) Tập hợp các số thập phân vô hạn tuần hoàn{\tt/}số thập phân vô hạn tuần hoàn dương{\tt/}số thập phân vô hạn tuần hoàn âm{\tt/}số thập phân vô hạn tuần hoàn không âm{\tt/}số thập phân vô hạn tuần hoàn không dương. (j) Tập hợp các số thập phân vô hạn không tuần hoàn{\tt/}số thập phân vô hạn không tuần hoàn dương{\tt/}số thập phân vô hạn không tuần hoàn âm{\tt/}số thập phân vô hạn không tuần hoàn không âm{\tt/}số thập phân vô hạn không tuần hoàn không dương.  (k) Tập hợp các số thực{\tt/}số thực dương{\tt/}số thực âm{\tt/}số thực không âm{\tt/}số thực không dương. (l) Tập hợp các số vô tỷ{\tt/}số vô tỷ dương{\tt/}số vô tỷ âm{\tt/}số vô tỷ không dương{\tt/}số vô tỷ không âm. (m) Tập hợp các số phức{\tt/}số thuần thực{\tt/}số thuần ảo.
-\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
