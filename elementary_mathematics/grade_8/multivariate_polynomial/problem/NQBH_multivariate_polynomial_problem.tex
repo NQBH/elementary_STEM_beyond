@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Multivariate Polynomial -- Bài Tập: Đa Thức Nhiều Biến}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Multivariate Monomial Polynomial -- Đơn Thức \& Đa Thức Nhiều Biến}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_new}, Ví dụ 1, p. 4]
+	Cho 3 biểu thức $A = \dfrac{4xy}{x^2 - 2xy + y^2}$, $B = x^2 - 2xy + y^2$, $C = -4xy$. (a) Cho biết biểu thức nào là đơn thức nhiều biến, là đa thức nhiều biến? (b) Với $x = -\dfrac{1}{2}$, $y = \dfrac{1}{2}$, chứng minh 2 biểu thức $B,C$ có cùng 1 giá trị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_new}, 1., p. 5]
+	Cho đơn thức $A = -2mx^3y^4$, $m$ là hằng. Cho biết: (a) Hệ số \& phần biến của đơn thức A. (b) Bậc của đơn thức A đối với từng biến \& đối với tập hợp các biến.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_new}, 2., p. 5]
+	Cho $x^2 = 3$, $y^2 = \frac{1}{3}$. Tính giá trị của đa thức $A = x^4 - x^2y^2 + y^4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_new}, 3., p. 5]
+	Tìm các đơn thức đồng dạng trong 5 đơn thức sau ($a\ne0$ là hằng): $P = \frac{4}{5}x^4y^3xy$, $Q = \frac{2}{3}a^3x^3y^2x^2y$, $R = 6a^2x^2y^4ax^3$, $M = -10$, $N = \frac{7}{6}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_new}, 4., p. 5]
+	Cho 3 đơn thức nhiều biến: $A = ab^2x^4y^3$, $B = ax^4y^3$, $C = b^2x^4y^3$. Các đơn thức nào đồng dạng với nhau nếu: (a) $a,b$ là hằng $\ne0$ còn $x,y$ là biến. (b) $a\ne0$ là hằng còn $b,x,y$ là biến. (c) $b\ne0$ là hằng còn $a,x,y$ là biến.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_new}, 5., p. 5]
+	Cho biểu thức $A = \dfrac{-4ax^2y^5}{(b + 1)^3}$. Trong 3 trường hợp sau đây, trường hợp nào A là đơn thức? (a) $a,b$ là hằng. (b) $a$ là hằng. (c) $b$ là hằng. Trong trường hợp đó, cho biết hệ số \& bậc của đơn thức đối với mỗi biến \& đối với tập hợp của biến.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{$\pm$ Multivariate Polyonimals -- Phép $\pm$ Đa Thức Nhiều Biến}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
