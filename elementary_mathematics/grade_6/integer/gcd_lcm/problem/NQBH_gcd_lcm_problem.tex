@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Multiple \& Divisor of Integers -- Bài Tập: Bội \& Ước của Số Nguyên}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Bội \& Ước của 1 Số nguyên}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H1, p. 64]
+	Tìm dạng biểu diễn của: (a) Các số nguyên chẵn. (b) Các số nguyên lẻ. (c) Các số nguyên chia hết cho $3$. (d) Các số nguyên chia cho $3$ dư $1$. (e) Các số nguyên chia cho $3$ dư $2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H2, p. 64]
+	Gọi $A$ là tập hợp các ước của $12$ mà lớn hơn $-2$. Điền ký hiệu thích hợp vào ô trống: $-3\square A,4\square A,-6\square A,-1\square A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H3, p. 64]
+	{\rm Đ{\tt/}S?} Egg đưa ra 1 phát biểu: ``Nếu tổng các chữ số của số nguyên $a$ chia hết cho $6$ thì $a$ chia hết cho $6$.''
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD1, p. 65]
+	Tìm tất cả các ước chung của $12$ \& $-18$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD2, p. 65]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $x - 2$ là bội của $x + 5$. (b) $x + 2$ là ước của $3x - 7$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD3, p. 66]
+	Tìm $a,b\in\mathbb{Z}$ thỏa $ab - a - 3b = 8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD4, p. 66]
+	Cho $x,y\in\mathbb{Z}$. Chứng minh $6x + 11y$ là bội của $31$ khi \& chỉ khi $x + 7y$ là bội của $31$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.1., p. 66]
+	Tìm tập hợp các bội chung của $15$ \& $-25$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.2., p. 66]
+	Tìm tập hợp các ước chung của $-30,70,-90$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.3., p. 66]
+	Với $n\in\mathbb{Z}$, xét tính chẵn lẻ: (a) $(n - 4)(5n + 13)$. (b) $n^2 - n + 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.4., p. 66]
+	Tìm $a\in\mathbb{Z}$ thỏa: (a) $a + 3$ là ước của $7$. (b) $3a$ là ước của $-12$. (c) $12$ là bội của $3a + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.5., p. 66]
+	Chứng minh nếu $a\in\mathbb{Z}$ thì: (a) $A = a(a - 5) - a(a + 8) - 13$ là bội của $13$. (b) $B = (a + 5)(a - 3) - (a - 5)(a + 3)\divby4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.6., p. 67]
+	Tìm $x,y\in\mathbb{Z}$ thỏa: (a) $(3x - 1)(y + 4) = -13$. (b) $(5x - 1)(y + 1) = 4$. (c) $xy + x + 2y = 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.7., p. 67]
+	Cho $x,y\in\mathbb{Z}$. Chứng minh $7x + 11y$ là bội của $13$ khi \& chỉ khi $x - 4y$ là bội của $13$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.8., p. 67]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $x - 5$ là bội của $x + 1$. (b) $2x - 1$ là ước của $5x - 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.9., p. 67]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $x^2 + 1$ là bội của $x + 1$. (b) $x - 2$ là ước của $x^2 - 3x + 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.10., p. 67]
+	Tìm $a,b\in\mathbb{Z}$ thỏa: (a) $ab + 1 = 2a + 3b$. (b) $ab - 7b + 5a = 0$ với $b\ge3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.11., p. 67]
+	Chứng minh $\forall a\in\mathbb{Z}$: (a) $(a - 4)(a + 2) + 6$ không là bội của $9$. (b) $9$ không là ước của $(a - 2)(a + 5) + 11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.12., p. 67]
+	Egg \& Chicken cùng mua 1 số tờ giấy A4 \& 1 số phong bì có tổng số như nhau để viết thư cho các chú bộ đội ngoài đảo xa. Mỗi bức thư Egg chỉ dùng $1$ tờ giấy \& $1$ phong bì, còn Chicken thì dùng $3$ tờ giấy \& $1$ phong bì. Egg dùng hết số phong bì đã mua \& còn lại $50$ tờ giấy; trong khi Chicken thì dùng hết số tờ giấy \& còn lại $50$ phong bì. Hỏi mỗi bạn đã mua bao nhiêu tờ giấy? bao nhiêu phong bì?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.12., p. 67]
+	Với $a,b\in\mathbb{Z}^\star$. Chứng minh: nếu $a$ là bội của $b$ \& $b$ là bội của $a$ thì $a = b$ hoặc $a = -b$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
