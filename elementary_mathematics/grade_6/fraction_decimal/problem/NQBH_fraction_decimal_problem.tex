@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Fraction \& Decimal -- Bài Tập: Phân Số \& Số Thập Phân}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Fraction \& Its Basic Properties -- Phân Số. Tính Chất Cơ Bản của Phân Số}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, H1, p. 5]
+	Các cách viết nào sau đây là phân số? $\dfrac{6}{7},\dfrac{-1.3}{5},\dfrac{12}{-8},\dfrac{-7}{0},\dfrac{2.34}{-6.5},\dfrac{-0}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, H2, p. 5]
+	Rút gọn $\dfrac{30 + 6}{30 + 12}$ về phân số tối giản.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, H3, p. 6]
+	(a) Khi nào thì 1 phân số có thể viết được dưới dạng 1 số nguyên? (b) 2 phân số $\dfrac{a}{b}$ \& $\dfrac{-a}{-b}$ có bằng nhau không? (c) Nếu chia cả tử \& mẫu của 1 phân số cho cùng 1 số nguyên $n\ne0$ thì ta có được 1 phân số bằng nó không? (d) Khi chia cả tử \& mẫu của phân số $\dfrac{a}{b}$, $a,b > 0$, cho 1 ước chung của $a,b$ thì ta có thu được 1 phân số tối giản không? (e) Nếu $\dfrac{a}{b}$ là phân số tối giản thì mọi phân số bằng $\dfrac{a}{b}$ có dạng gì?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD1, p. 6]
+	Cho tập hợp $A = \{-2,0,7\}$. Viết tất cả các phân số $\dfrac{a}{b}$ với $a,b\in A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD2, p. 6]
+	Tìm $x,y\in\mathbb{Z}$ thỏa $\dfrac{x}{15} = \dfrac{24}{y} = \dfrac{-6}{5}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD3, p. 6]
+	Rút gọn: (a) $\dfrac{-64}{96}$. (b) $\dfrac{131313}{252525}$. (c) $\dfrac{3510 - 135}{4680 - 180}$. (d) $\dfrac{2^4\cdot3^2}{6^2\cdot5}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD4, p. 7]
+	Viết tất cả các phân số bằng $ \dfrac{30}{102}$ mà có tử \& mẫu là các số tự nhiên có 2 chữ số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD5, p. 7]
+	Tìm phân số bằng $\dfrac{35}{80}$ biết tổng của mẫu số \& 2 lần tử số bằng $210$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD6, p. 8]
+	Cho biểu thức $A = \dfrac{2n - 1}{n + 3}$ với $n\in\mathbb{Z}$. Tìm $n$ để $A\in\mathbb{Z}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD7, p. 8]
+	Cho phân số $\dfrac{25}{49}$. Hỏi cần bớt ở tử \& mẫu của phân số đã cho cùng 1 số nào để được 1 phân số mới bằng $\dfrac{5}{13}$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 1.1., p. 8]
+	Rút gọn các phân số trong trả lời của các câu hỏi sau thành phân số tối giản: (a) 1 mẫu Bắc Bộ bằng $\rm3600 m^2$. Hỏi 1 mẫu Bắc Bộ bằng mấy phần của 1 hecta? $\rm1\ ha = 10000\ m^2$. (b) Mỗi khoảng thời gian sau bằng bao nhiêu phần của 1 giờ: $15$ phút, $30$ phút, $45$ phút, $90$ phút, $4500$ giây? (c) Pound là đơn vị đo khối lượng được dùng phổ biến ở nước Anh \& 1 số nước khác. Biết $100$ pound $= 45$ {\rm kg}, hỏi 1 pound bằng mấy phần của {\rm1 kg}? (d) Inch là 1 trong các đơn vị đo chiều dài phổ biến trên thế giới. Biết $\rm1\ in = 2.54\ cm$, hỏi {\rm1 cm} bằng mấy phần của {\rm1 inch}?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 1.2., p. 8]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $\dfrac{x - 2}{15} = \dfrac{9}{5}$. (b) $\dfrac{2 - x}{16} = \dfrac{-4}{x - 2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 1.3., p. 9]
+	Tìm $x,y\in\mathbb{Z}$ thỏa: (a) $ \dfrac{x}{7} = \dfrac{5}{y}$ \& $x > y$. (b) $\dfrac{2}{x} = \dfrac{y}{-7}$ \& $x > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 1.4., p. 9]
+	Cho phân số $\dfrac{7}{11}$. Cần cộng vào tử số \& mẫu số của phân số đã cho với cùng 1 số nào để được phân số mới bằng $\dfrac{3}{4}$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 1.5., p. 9]
+	Cho phân số $\dfrac{89}{143}$. Tìm 1 số tự nhiên để khi thêm vào tử số \& bớt đi ở mẫu số của phân số đã cho với cùng số đó thì ta được 1 phân số mới bằng $\dfrac{12}{17}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 1.6., p. 9]
+	Tìm phân số bằng phân số $\dfrac{147}{252}$ biết phân số đó có: (a) Tổng của tử \& mẫu bằng $228$. (b) Hiệu của tử \& mẫu bằng $40$. (c) Tích của tử \& mẫu bằng $756$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 1.7., p. 9]
+	Tìm phân số có mẫu bằng $7$ biết khi cộng tử với $12$ \& nhân mẫu với $3$ thì ta được 1 phân số mới bằng phân số ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 1.8., p. 9]
+	Giải thích tại sao $\forall n\in\mathbb{N}^\star$, giá trị của 2 biểu thức sau là phân số tối giản: (a) $\dfrac{2n + 5}{3n + 7}$. (b) $\dfrac{6n - 14}{2n - 5}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 1.9., p. 9]
+	Tìm phân số $\dfrac{a}{b}$ bằng phân số $\dfrac{54}{126}$ biết: (a) $\mbox{\rm ƯCLN}(a,b) = 12$. (b) ${\rm BCNN}(a,b) = 105$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 1.10., p. 9]
+	Tìm $n\in\mathbb{Z}$ để 3 biểu thức sau đồng thời có giá trị nguyên: $\dfrac{-8}{n},\dfrac{13}{n - 1},\dfrac{4}{n + 2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, p. 10]
+	Làm sao để cắt ra được 1 đoạn dây dài {\rm10 m} từ 1 sợi dây dài{\rm16 m} mà không dùng thước đo?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Quy Đồng Mẫu Nhiều Phân Số. So Sánh Phân Số}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
