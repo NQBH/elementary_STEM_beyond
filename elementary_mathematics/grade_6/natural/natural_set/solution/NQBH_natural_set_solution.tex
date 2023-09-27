@@ -412,7 +412,7 @@
 \end{proof}
 
 \begin{proof}[2nd giải]
-	(a) Các số cần tìm có dạng $\overline{ab}$ với $a,b\in\{0,1,2,\ldots,9\}$, $a\ne0$ thỏa mãn $a = 9$ hoặc $b = 9$. Nếu $a = 9$ thì $b\in\{0,1,2,\ldots,9\}$ có 10 cách chọn. Nếu $b = 9$ thì $a\in\{1,2,\ldots,9\}$ có 9 cách chọn. Nhưng số 99 được tính 2 lần nên tổng cộng có $10 + 9 - 1 = 18$ số thỏa mãn. (b) Các số cần tìm có dạng $\overline{ab}$ với $a,b\in\{0,1,2,\ldots,9\}$, $a\ne0$ thỏa mãn $a < b$. Với mỗi $a\in\{1,2,\ldots,8\}$, các chữ số $b$ thỏa mãn gồm $a + 1,a + 2,\ldots,9$. Suy ra số số thỏa mãn là $\sum_{a=1}^8 (9 - (a + 1) + 1) = \sum_{a=1}^8 9 - a = 9\cdot8 - \sum_{a=1}^8 a = 8\cdot9 - 8\cdot9:2 = 8\cdot9:2 = 36$. (c) 4 số: $21,42,63,84$.
+	(a) Các số cần tìm có dạng $\overline{ab}$ với $a,b\in\{0,1,2,\ldots,9\}$, $a\ne0$ thỏa mãn $a = 9$ hoặc $b = 9$. Nếu $a = 9$ thì $b\in\{0,1,2,\ldots,9\}$ có 10 cách chọn. Nếu $b = 9$ thì $a\in\{1,2,\ldots,9\}$ có 9 cách chọn. Nhưng số 99 được tính 2 lần nên tổng cộng có $10 + 9 - 1 = 18$ số thỏa mãn. (b) Các số cần tìm có dạng $\overline{ab}$ với $a,b\in\{0,1,2,\ldots,9\}$, $a\ne0$ thỏa mãn $a < b$. Với mỗi $a\in\{1,2,\ldots,8\}$, các chữ số $b$ thỏa mãn gồm $a + 1,a + 2,\ldots,9$. Suy ra số số thỏa mãn là $\sum_{a=1}^8 [9 - (a + 1) + 1] = \sum_{a=1}^8 9 - a = 9\cdot8 - \sum_{a=1}^8 a = 8\cdot9 - 8\cdot9:2 = 8\cdot9:2 = 36$. (c) 4 số: $21,42,63,84$.
 \end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 1.11., p. 14]
@@ -511,6 +511,10 @@
 	Trong 1 lớp học, tất cả học sinh nam đều tham gia vào các câu lạc bộ thể thao: bóng đá, bóng chuyền, cầu lông. Biết có $7$ học sinh tham gia câu lạc bộ bóng đá, $6$ học sinh tham gia câu lạc bộ bóng chuyền, $5$ học sinh tham gia câu lạc bộ cầu lông; trong số đó có $4$ học sinh tham gia cả 2 câu lạc bộ bóng đá \& bóng chuyền, $3$ học sinh tham gia cả 2 câu lạc bộ bóng đá \& cầu lông, $2$ học sinh tham gia cả 2 câu lạc bộ bóng chuyền \& cầu lông, $1$ học sinh tham gia cả 3 câu lạc bộ. Hỏi lớp đó có bao nhiêu học sinh nam?
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Gọi $A,B,C$ lần lượt là 3 tập hợp các học sinh nam tham gia vào 3 câu lạc bộ bóng đá, bóng chuyền, cầu lông. Vẽ biểu đồ Venn, có số học sinh nam là: $|A\cup B\cup C| = |A| + |B| + |C| - |A\cap B| - |B\cap C| - |C\cap A| + |A\cap B\cap C| = 7 + 6 + 5 - 4 - 3 - 2 + 1 = 10$.
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_6}, VD2, p. 6]
 	Phố Hàng Ngang là 1 trong các phố cổ của Hà Nội. Các nhà được đánh số liên tục, dãy lẻ $1,3,5,7,\ldots,61$; dãy chẵn $2,4,6,\ldots,64$. (a) Bên số nhà chẵn, trong 1 phòng gác nhỏ, chủ tịch Hồ Chí Minh đã khởi thảo bản Tuyên Ngôn Độc Lập khai sinh cho nước Việt Nam Dân Chủ Cộng Hòa. Ngôi nhà có căn phòng đó là nhà thứ $24$ kể từ đầu phố (số $2$). Hỏi ngôi nhà này có số nào? (b) Bên số nhà lẻ chữ số nào được dùng nhiều nhất? Chữ số nào chưa được dùng đến? (c) Phải dùng tất cả bao nhiêu chữ số để ghi số nhà của phố này?
 \end{baitoan}
@@ -520,7 +524,7 @@
 \end{proof}
 
 \begin{luuy}
-	Công thức tính số chữ số cần dùng để ghi các số tự nhiên liên tiếp: Gọi số các số có $1$ chữ số là $a_1$, số các số có $2$ chữ số là $a_2$, $\ldots$,  số các số có $n$ chữ số là $a_n$ (hay viết gọn: gọi số các số có $i$ chữ số là $a_i$, $\forall i = 1,2,\ldots,n$) thì số chữ số cần dùng là: $S = \sum_{i=1}^n ia_i = a_1 + 2a_2 + \cdots + na_n$.
+	Công thức tính số chữ số cần dùng để ghi các số tự nhiên liên tiếp: Gọi số các số có $1$ chữ số là $a_1$, số các số có $2$ chữ số là $a_2$, $\ldots$,  số các số có $n$ chữ số là $a_n$ (hay viết gọn: gọi số các số có $i$ chữ số là $a_i$, $\forall i = 1,2,\ldots,n$) thì số chữ số cần dùng là: \fbox{$S = \sum_{i=1}^n ia_i = a_1 + 2a_2 + \cdots + na_n$}.
 \end{luuy}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 6., p. 6]
@@ -604,7 +608,7 @@
 \end{proof}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD2, p. 5]
-	Viết các tập hợp sau bằng cách liệt kê các phần tử của nó: (a) Tập hợp $A$ các số tự nhiên có 2 chữ số, trong đó chữ số hàng chục lớn hơn chữ số hàng đơn vị là $2$. (b) Tập hợp $B$ các số tự nhiên có 3 chữ số mà tổng các chữ số bằng $3$.
+	Viết 2 tập hợp sau bằng cách liệt kê các phần tử: (a) Tập hợp $A$ các số tự nhiên có 2 chữ số, trong đó chữ số hàng chục lớn hơn chữ số hàng đơn vị là $2$. (b) Tập hợp $B$ các số tự nhiên có 3 chữ số mà tổng các chữ số bằng $3$.
 \end{baitoan}
 
 \begin{proof}[Giải]
@@ -628,12 +632,16 @@
 \end{baitoan}
 
 \begin{proof}[Giải]
-	Gọi số tự nhiên cần tìm là $\overline{2a_na_{n-1}\ldots a_1a_0}$, đặt $x\coloneqq\overline{a_na_{n-1}\ldots a_1a_0}$, có $3\overline{2a_na_{n-1}\ldots a_1a_0} = \overline{a_na_{n-1}\ldots a_1a_02}\Leftrightarrow3(2\cdot10^n + x) = 10x + 2\Leftrightarrow7x = 6\cdot10^n - 2\Leftrightarrow x = \dfrac{6\cdot10^n - 2}{7}$. Nếu $n = 1$, $x = \dfrac{58}{7}$. Nếu $n = 2$, $x = \dfrac{598}{7}$. Nếu $n = 3$, $x = \dfrac{5998}{7}$. Nếu $n = 4$, $x = \dfrac{59998}{7}$. Nếu $n = 5$, $x = \dfrac{599998}{7} = 85714$. Vậy số tự nhiên nhỏ nhất thỏa mãn là 285714. (b) 
+	Gọi số tự nhiên cần tìm là $\overline{2a_na_{n-1}\ldots a_1a_0}$, đặt $x\coloneqq\overline{a_na_{n-1}\ldots a_1a_0}$, $x$ thỏa mãn $3\overline{2a_na_{n-1}\ldots a_1a_0} = \overline{a_na_{n-1}\ldots a_1a_02}\Leftrightarrow3(2\cdot10^n + x) = 10x + 2\Leftrightarrow7x = 6\cdot10^n - 2\Leftrightarrow x = \dfrac{6\cdot10^n - 2}{7}$. Nếu $n = 1$, $x = \dfrac{58}{7}$. Nếu $n = 2$, $x = \dfrac{598}{7}$. Nếu $n = 3$, $x = \dfrac{5998}{7}$. Nếu $n = 4$, $x = \dfrac{59998}{7}$. Nếu $n = 5$, $x = \dfrac{599998}{7} = 85714$. Vậy số tự nhiên nhỏ nhất thỏa mãn là 285714. (b) Từ câu (a), $x$ là số tự nhiên có $n$ chữ số sao cho $x = \dfrac{6\cdot10^n - 2}{7}\in\mathbb{N}$.
 \end{proof}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Mở rộng VD3, p. 6]
 	Tìm số tự nhiên có 5 chữ số, biết nếu viết thêm 1 chữ số vào đằng sau số đó thì được số lớn gấp 3 lần số có được nếu viết thêm chính chữ số ấy vào đằng trước số đó.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi số cần tìm là $x\coloneqq\overline{abcde}$, gọi $y$ là chữ số viết thêm vào, có: $\overline{abcdey} = 3\overline{yabcde}\Leftrightarrow10x + y = 3(100000y + x)\Leftrightarrow7x = 299999y\Leftrightarrow x = 42857y$. Do $x$ có 5 chữ số nên $y$ chỉ có thể bằng 1 hoặc 2. Với $y = 1$ có $x = 42857$, $y = 2$ có $x = 85714$.
+\end{proof}
 
 \begin{baitoan}
 	Tìm số tự nhiên sao cho khi thêm 1 chữ số vào đằng sau số đó thì được số lớn gấp $a\in\mathbb{N}^\star$ lần số có được nếu viết thêm chính chữ số ấy vào đằng trước số đó.
@@ -799,9 +807,30 @@ trong đó ${\rm sgn}(x)$ là \textit{hàm dấu} (sign) của 1 số, được 
 	Chứng minh: (a) Trong 2 số tự nhiên có số chữ số khác nhau: Số nào có nhiều chữ số hơn thì lớn hơn, số nào có ít chữ số hơn thì nhỏ hơn. (b) Trong 2 số tự nhiên có cùng số chữ số, nếu trong cặp chữ số khác nhau đầu tiên từ trái sang phải, số nào có chữ số tương ứng trong cặp đó lớn hơn thì lớn hơn.
 \end{baitoan}
 
-\begin{proof}[Giải]
-	
+\begin{dinhly}
+	Trong 2 số tự nhiên có số chữ số khác nhau: Số nào có nhiều chữ số hơn thì lớn hơn, số nào có ít chữ số hơn thì nhỏ hơn, i.e.:
+	\begin{equation}
+		\label{compare number of digits}
+		\left.\begin{split}
+			&a = \overline{a_ma_{m-1}\ldots a_1a_0},\ b = \overline{b_nb_{n-1}\ldots b_1b_0},\ m,n\in\mathbb{N}^\star,\ m > n,\\
+			&a_i,b_j\in\{0,1,2,3,4,5,6,7,8,9\},\,\forall i = 1,\ldots,m,\,j = 1,\ldots,n,\ a_m\ne 0,\,b_n\ne 0,
+		\end{split}\right\}\Rightarrow a > b.		
+	\end{equation}
+\end{dinhly}
+
+\begin{proof}[1st Chứng minh (sử dụng biểu diễn thập phân của số tự nhiên)]
+	Từ biểu diễn thập phân \eqref{compare number of digits}, xét $a - b$, nếu $a - b > 0$ thì $a > b$. Thật vậy, vì $m > n$,
+	\begin{align*}
+		a - b &= \overline{a_ma_{m-1}\ldots a_1a_0} - \overline{b_nb_{n-1}\ldots b_1b_0} = \sum_{i=0}^m a_i10^i - \sum_{i=0}^n b_i10^i = \sum_{i=0}^n a_i10^i + \sum_{i = n + 1}^m a_i10^i - \sum_{i=0}^n b_i10^i\\
+		&= \sum_{i=0}^n (a_i - b_i)10^i + \sum_{i = n + 1}^m a_i10^i\ge \sum_{i=0}^n -9\cdot 10^i + 10^m = -9\sum_{i=0}^n 10^i + 10^m = -9\frac{10^{n+1} - 1}{10 - 1} + 10^m = 10^m -10^{n+1} + 1 > 0,
+	\end{align*}
+	trong đó giả thiết $m > n$, tức $m\ge n + 1$ (do $m,n\in\mathbb{N}$\footnote{Đây chính là giả thiết được thêm, hay kỹ thuật \textit{siết chặt bất đẳng thức} khi làm việc với các bài toán trên tập số tự nhiên $\mathbb{N}$ hay rộng hơn xíu là tập số nguyên $\mathbb{Z}$, đặc biệt là các bài giải phương trình hàm trên tập số nguyên. Điều này không có được khi làm việc trên các tập số thực $\mathbb{R}$ hay tập số phức $\mathbb{C}$. Cf. \cite[Problem 3.1, p. 36--38]{Tao2006}.}) được sử dụng để tách tổng trong biểu diễn của $a$ thành 2 tổng con \textit{\&} dùng trong phép so sánh $10^m\ge 10^{n + 1}$, trong khi giả thiết thứ 2 $a_i,b_j\in\{0,1,2,3,4,5,6,7,8,9\}$, với mọi $i = 1,\ldots,m$, $j = 1,\ldots,n$ được dùng trong đánh giá hiển nhiên $a_i - b_i\ge -9$ vì trường hợp xấu nhất (the worst case) xảy ra khi $a_i = 0$ \textit{\&} $b_i = 9$, \textit{\&} đánh giá $a_i\ge 0$, với mọi $i = n + 1,\ldots,m - 1$ được dùng trong $a_i10^i\ge 0$, \textit{\&} đánh giá $a_m\ge 1$ được dùng trong $a^m10^m\ge 10^m$. 
 \end{proof}
+
+\begin{proof}[2nd Chứng minh (so sánh với số nhỏ nhất có \& số lớn nhất)]
+	Vì $a_m\in\mathbb{N}^\star$, $a_m\ge 1$. Ta có đánh giá: $a\ge 1\underbrace{0\ldots 0}_{m\mbox{ \footnotesize số } 0} = 10^m > \underbrace{9\ldots 9}_{m\mbox{ \footnotesize số } 9}\ge\underbrace{9\ldots 9}_{n + 1\mbox{ \footnotesize số } 9}\ge b$.
+\end{proof}
+Ý toán của chứng minh này đơn giản nhưng hiệu quả: vì $a$ có $m + 1$ chữ số, \& số tự nhiên nhỏ nhất có $m + 1$ chữ số là $10^m$, nên $a\ge 10^m$, lấy $10^m$ trừ đi 1, ta được $\overline{9\ldots 9}$ với số 9 xuất hiện $m$ lần, i.e., $10^m - 1$. Vì $m > n$, nên $m\ge n + 1$, \& ta có bất đẳng thức hiển nhiên tiếp theo. Cuối cùng, vì $b$ có $n + 1$ chữ số, \& số lớn nhất có $n + 1$ chữ số là $\overline{9\ldots 9}$ với số 9 xuất hiện $n + 1$ lần, nên ta có được đánh giá cuối trong ``lời giải 1 dòng tinh tế''.
 
 %------------------------------------------------------------------------------%
 
