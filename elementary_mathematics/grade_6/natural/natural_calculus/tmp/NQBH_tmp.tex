@@ -1,0 +1,427 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\begin{document}
+	
+%------------------------------------------------------------------------------%
+
+\section{Các Phép Tính về Số Tự Nhiên}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H1, p. 17]
+	Viết đủ 6 số $1,2,3,4,5,6$ vào 3 đỉnh \& 3 trung điểm của 3 cạnh của 1 tam giác sao cho tổng 3 số trên mỗi cạnh bằng $10$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H2, p. 17]
+	{\rm Đ{\tt/}S?} Cho $a,b,c,d,m,n,p,q\in\mathbb{N}^\star$ thỏa $a + m = b + n = c + p = a + b + c$. (a) $m + n > p$. (b) $n + p < m$. (c) $p + m > n$. (d) $m + n + p = a + b + c$. (e) $m + n + p = 2(a + b + c)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H3, p. 17]
+	Tính $3^4:3 + 2^3:2^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H4, p. 17]
+	{\rm Đ{\tt/}S?} (a) $(15 + 5)(4 + 1) = 20\cdot5 = 100$. (b) $5 + 20\cdot4 = 25\cdot4 = 100$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H5, p. 17]
+	Tính: (a) Hiệu của 2 số lẻ mà giữa chúng có $10$ số chẵn. (b) Hiệu của 2 số lẻ mà giữa chúng có $10$ số lẻ. (c) Hiệu của 2 số chẵn mà giữa chúng có $5$ số chẵn. (d) Hiệu của 2 số chẵn mà giữa chúng có $5$ số lẻ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD1, p. 17]
+	Tính hợp lý: (a) $A = 27\cdot36 + 73\cdot99 + 27\cdot14 - 49\cdot73$. (b) $B = (4^5\cdot10\cdot5^6 + 25^5\cdot2^8):(2^8\cdot5^4 + 5^7\cdot2^5)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD2, p. 18]
+	Egg \& Chicken cùng ra cửa hàng mua sách. Tổng số tiền ban đầu của 2 bạn là $78000$ đồng. Egg mua hết $32000$ đồng, Chicken mua hết $14000$ đồng. Khi đó số tiền còn lại của 2 bạn bằng nhau. Hỏi ban đầu mỗi bạn có bao nhiêu tiền?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD3, p. 18]
+	So sánh: (a) $(4 + 5)^2$ \& $4^2 + 5^2$. (b) $2^{30}$ \& $3^{20}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD4, p. 19]
+	Tế bào lớn lên đến 1 kích thước nhất định thì phân chia. Quá trình đó diễn ra như sau: Đầu tien từ $1$ nhân hình thành $2$ nhân, tách xa nhau. Sau đó chất tế bào được phân chia, xuất hiện $1$ vách ngăn, ngăn đôi tế bào cũ thành $2$ tế bào con. Các tế bào con tiếp tục lớn lên cho đến khi bằng tế bào mẹ. Các tế bào này lại tiếp tục phân chia thành $4$, rồi thành $8,\ldots$ tế bào. Từ $1$ tế bào ban đầu, tìm số tế bào có được sau lần phân chia thứ $5$, thứ $8$, thứ $10$, thứ $n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD5, p. 19]
+	Tìm $x\in\mathbb{N}$ thỏa: (a) $149 - (35:x + 3)\cdot17 = 13$. (b) $\overline{1x32} + \overline{7x8} + \overline{4x} = \overline{200x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD6, p. 20]
+	Tìm $x\in\mathbb{N}$ thỏa: (a) $(3x - 2)^3 = 2\cdot32$. (b) $5^{x+1} - 5^x = 500$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD7, p. 20]
+	Tìm các số mũ tự nhiên $n$ sao cho lũy thừa $3^n$ thỏa mãn điều kiện $25 < 3^n < 260$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD8, p. 21]
+	Tìm số chia \& số bị chia nhỏ nhất có thương số là $6$ \& số dư là $13$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.1., p. 21]
+	Tính hợp lý: (a) $21\cdot(271 + 29) + 79\cdot(271 + 29)$. (b) $1 + 2 - 3 - 4 + 5 + 6 - 7 - 8 + \cdots - 499 - 500 + 501 + 502$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.2., p. 21]
+	Quan hệ về cường độ của các nốt nhạc: 1 nốt tròn bằng 2 nốt trắng, 1 nốt trắng bằng 2 nốt đen, 1 nốt đen bằng 2 nốt móc, 1 nốt móc bằng 2 nốt móc đôi, 1 nốt móc đoi bằng 2 nốt móc 3, 1 nốt móc 3 bằng 2 nốt móc 4. Dùng lũy thừa của 1 số tự nhiên để diễn tả mối quan hệ về cường độ giữa: (a) Nốt tròn \& nốt đen. (b) Nốt tròn \& nốt móc 4. (c) Nốt trắng \& nốt móc đôi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.3., p. 21]
+	Tính giá trị của biểu thức: $A = 3ab^2 -  \dfrac{a^3}{d} + c$ với $a = 3$, $b = 5$, $c = 7$, $d = 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.4., p. 21]
+	So sánh: (a) $243^7$ \& $9^{10}\cdot27^5$. (b) $15^{15}$ \& $81^3\cdot125^5$. (c) $78^{15} - 78^{12}$ \& $78^{12} - 78^9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.5., p. 21]
+	Tìm $x\in\mathbb{N}$ thỏa: (a) $121:11 - (4x + 5):3 = 4$. (b) $2 + 4 + 6 + \cdots + x = 2450$ với $x$ là số tự nhiên chẵn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.6., p. 21]
+	Tìm $x\in\mathbb{N}$ thỏa: (a) $(3x - 7)^5 = 32$. (b) $(4x - 1)^3 = 27\cdot125$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.7., p. 21]
+	Cho 3 số $5,7,9$. Tìm tổng tất cả các số khác nhau viết bằng cả 3 số đó, mỗi chữ số dùng 1 lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.8., p. 21]
+	Tích của 2 số là $476$. Nếu thêm $22$ đơn vị vào 1 số thì tích của 2 số là $850$. Tìm 2 số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.9., p. 21]
+	Hiệu của 2 số là $12$. Nếu tăng số bị trừ lên $2$ lần, giữ nguyên số trừ thì hiệu của chúng là $49$. Tìm 2 số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.10., p. 21]
+	Tìm 2 số tự nhiên có thương bằng $7$. Nếu giảm số bị chia đi $124$ đơn vị thì thương của chúng bằng $3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.11., p. 21]
+	Rút gọn biểu thức: (a) $10\cdot\dfrac{4^6\cdot9^5 + 6^9\cdot120}{8^4\cdot3^{12} - 6^{11}}$. (b) $\sum_{i=0}^{50} 2^i = 1 + 2 + 2^2 + 2^3 + 2^4 + \cdots + 2^{49} + 2^{50}$. (c) $5 + 5^3 + 5^5 + \cdots + 5^{47} + 5^{49}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.12., p. 22]
+	Cho $\sum_{i=0}^{2000} 3^i = 1 + 3 + 3^2 + 3^3 + \cdots + 3^{1999} + 3^{2000}$. Chứng minh $A\divby13$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.13., p. 22]
+	Tìm $x\in\mathbb{N}$ thỏa: (a) $2^x + 2^{x + 1} = 96$. (b) $3^{4x + 4} = 81^{x + 3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.14., p. 22]
+	Tìm $x\in\mathbb{N}$ thỏa: (a) $(x - 5)^7 = (x - 5)^9$. (b) $x^{2015} = x^{2016}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.15., p. 22]
+	Tìm các số tự nhiên $x$ biết lũy thừa $5^{2x - 3}$ thỏa mãn điều kiện $100 < 5^{2x - 3}\le5^9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.16., p. 22]
+	Trong 1 phép chia, số bị chia bằng $69$, số dư bằng $3$. Tìm số chia \& thương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.17., p. 22]
+	Tổng của 3 số là $124$. Nếu lấy số thứ nhất chia cho số thứ 2 hoặc lấy số thứ 2 chia cho số thứ 3 đều được thương là $3$ \& dư $4$. Tìm 3 số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.18., p. 22]
+	Khi chia 1 số cho $54$ thì được số dư là $49$. Nếu chia số đó cho $18$ thì thương thay đổi thế nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.19., p. 22]
+	Tìm số bị chia \& số chia nhỏ nhất để được thương là $8$ \& dư là $45$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.20., p. 22]
+	Tổng của 2 số bằng $36000$. Chia số lớn cho số nhỏ được thương bằng $4$ \& còn dư $940$. Tìm 2 số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 2.21., p. 22, Hạt thóc \& bàn cờ vua]
+	1 nhà thông thái muốn thuyết phục vua Shilhram (Ấn Độ) về tầm quan trọng của mỗi người dân trong vương quốc. Vì thế, ông ta phát minh ra bàn cờ vua để thể hiện 1 vương quốc bao gồm vua, hoàng hậu, giáo sĩ trưởng, hiệp sĩ, \& quân lính, mọi thành phố đều quan trọng. Nhà vua trở nên cực kỳ thích \& ra lệnh cho mọi người trong vương quốc chơi cờ vua. Shilhram tuyên bố sẽ ban tặng nhà thông thái bất cứ số vàng \& bạc nào mà ông ta muốn, nhưng nhà thông thái không muốn nhận phần thưởng như vậy. Nhà thông thái cùng với nhà vua đi đến bàn cờ \& nhờ ông đặt 1 hạt thóc lên ô vuông đầu tiên, 2 hạt lên ô thứ 2, 4 hạt lên ô vuông thứ 3 \& xin với nhà vua tổng số hạt thóc được đặt theo cách như vậy đến ô cuối cùng của bàn cờ (số hạt đặt vào ô sau gấp đôi số hạt đặt vào ô trước). Nhà vua cảm thấy bị xúc phạm nhưng ông vẫn ra lệnh cho người hầu làm theo ước muốn của nhà thông thái. Những người hầu tuyệt vọng báo lại rằng số lượng hạt thóc dùng để thưởng cho nhà thông thái theo cách như vậy là không đủ. Nhà vua hiểu ngay nhà thông thái muốn dạy ông bài học thứ 2. Giống như quân tốt trong cờ vua, không nên đánh giá thấp những thứ nhỏ bé trong cuộc sống. Tính số hạt thóc mà nhà thông thái yêu cầu nhà vua Shilhram thưởng cho mình.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 23]
+	Có $79$ số tự nhiên, trong đó tổng của $13$ số bất kỳ đều là 1 số lẻ. Hỏi tổng của $79$ số tự nhiên đó là số lẻ hay số chẵn?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD1.1, p. 6]
+	Xét $100$ số tự nhiên đầu tiên $0,1,2,\ldots,99$. Tìm $k\in\mathbb{N}$ sao cho trong $100$ số này, có nhiều nhất các số có tổng các chữ số bằng $k$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{TLCT_THCS_Toan_6_so_hoc}, VD1.1, p. 6]
+	Xét $n$ số tự nhiên đầu tiên $0,1,2,\ldots,n - 1$. Tìm $k\in\mathbb{N}$ sao cho trong $n$ số này, có nhiều nhất các số có tổng các chữ số bằng $k$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD1.2, p. 6]
+	Tính: (a) $a = 234\cdot\underbrace{9\ldots9}_{50}$. (b) $b = \underbrace{1\ldots1}_{100}\cdot3456$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD1.3, p. 7]
+	Tính hiệu $a - b$ biết $a = 1\cdot2 + 2\cdot3 + 3\cdot4 + \cdots + 98\cdot99$, $b = 1^2 + 2^2 + 3^2 + \cdots + 98^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD1.4, p. 7]
+	Tìm $x,y\in\mathbb{R}$ thỏa $2^x + 2^y = 20$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD1.5, p. 8]
+	Trong 1 phép chia có dư, số bị chia bằng $24$, thương bằng $3$. Tìm số chia \& số dư.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD1.6, p. 8]
+	Tìm số tự nhiên có 2 chữ số biết nếu viết thêm chữ số $4$ vào trước chữ số hàng chục thì được số $a$, nếu viết thêm chữ số $8$ vào sau chữ số hàng đơn vị thì được số $b$, trong đó $b$ gấp đôi $a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD1.7, p. 9]
+	Điền chữu số thỏa mãn cả 2 phép cộng: $\rm one + one + one + one = four$, $\rm four + one = five$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD1.8, p. 10]
+	Tìm chữ số tận cùng của $3^{2015}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD1.9, p. 11]
+	Tìm 2 chữ số tận cùng của $6^{2011}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.1., p. 11]
+	Tính giá trị của biểu thức (tính nhanh nếu có thể): (a) $215\cdot62 + 42 - 52\cdot215$. (b) $14\cdot29 + 14\cdot71 + (1 + 2 + 3 + \cdots + 99)(199199\cdot198 - 198198\cdot199)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.2., p. 11]
+	Đánh số trang của 1 cuốn sách bằng dãy số tự nhiên $1,2,3,\ldots$ (a) Nếu quyển sách có $180$ trang thì phải viết tất cả bao nhiêu chữ số? (b) Nếu phải viết tất cả $327$ chữ số thì quyển sách có bao nhiêu trang?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.3., p. 11]
+	Tìm 2 số tự nhiên biết tổng của chúng gấp 3 hiệu của chúng \& bằng tích của chúng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.4., p. 11]
+	Tìm số tự nhiên lớn nhất có $3$ chữ biết khi chia nó cho $69$ thì thương \& số dư bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.5., p. 11]
+	Tìm số dư của phép chia số $\underbrace{1\ldots1}_{100}$ cho $1001$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.6., p. 11]
+	Điền chữ số thích hợp để $\overline{8aba} + \overline{c25d} = \overline{d52c}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.7., p. 11]
+	Điền chữ số $\overline{abc} + \overline{bca}$ sao cho tổng trên là lớn nhất \& $a,b,c$ nhận các giá trị $1,2,3$ (không nhất thiết tương ứng).
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.8., p. 12]
+	Điền chữ số thích hợp để $\overline{aa} + \overline{bb} + \overline{cc} = \overline{bac}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.9., p. 12]
+	Tìm chữ số thích hợp để $\overline{xyz1} = \overline{ab}\cdot\overline{ba}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.10., p. 12]
+	Có bao nhiêu số tự nhiên có 2 chữ số mà chữ số hàng chục nhỏ hơn chữ số hàng đơn vị?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.11., p. 12]
+	Có bao nhiêu số tự nhiên có 3 chữ số, trong đó có ít nhất 2 chữ số giống nhau?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.12., p. 12]
+	Trong các số tự nhiên từ $1$ đến $500$, có bao nhiêu số có ít nhất 1 chữ số $5$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.13., p. 12]
+	Trên $n\in\mathbb{N}^\star$ ô vuông cách đều nhau của 1 đường tròn, ghi $n$ số tự nhiên liên tiếp theo chiều kim đồng hồ. Biết ô ghi số $12$ đối diện với ô ghi số $60$. Tính $n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.14., p. 12]
+	Tìm $n\in\mathbb{N}^\star$ biết có đúng $100$ số lẻ nằm giữa $n$ \& $2n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.15., p. 12]
+	Ghép 2 chữ số $1$, 2 chữ số $2$, 2 chữ số $3$ làm thành 1 số có $6$ chữ số. Tìm số có $6$ chữ số ấy biết 2 chữ số $1$ cách nhau 1 chữ số, 2 chữ số $2$ cách nhau 2 chữ số, 2 chữ số $3$ cách nhau 3 chữ số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.18., p. 12]
+	Chia $a\in\mathbb{N}$ cho $72$ thì dư $69$. Chia số $a$ cho $18$ thì thương bằng số dư. Tìm $a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.19., p. 13]
+	Xét phép chia $a\in\mathbb{N}$ cho $b\in\mathbb{N}^\star$, có $a = bq + r$, $0\le r < b$. Nếu $r = 0$ thì $q$ gọi là {\rm thương đúng} của phép chia. Nếu $r\ne0$ thì $q$ gọi là {\rm thương hụt} của phép chia. Ký hiệu $[a:b]$ là thương đúng hoặc thương hụt của phép chia $a$ cho $b$. Tính: (a) $[32:4],[61:4]$. (b) $[800:5] + [800:5^2] + [800:5^3] + [800:5^4]$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.20., p. 13]
+	Điền chữ số thích hợp để $\overline{84**}:47 = \overline{*8*}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.21., p. 13]
+	Tính: (a) $(2^9\cdot16 + 2^9\cdot34):2^{10}$. (b) $(3^4\cdot57 - 9^2\cdot21):3^5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.22., p. 13]
+	Cho biết $\sum_{i=1}^9 i^3 = 1^3 + 2^3 + \cdots + 9^3 = 2025$. Tính $2^3 + 4^3 + 6^3 + \cdots + 18^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.23., p. 13]
+	Cho $a = \sum_{i=1}^{10} 2^i = 2 + 2^2 + 2^3 + \cdots + 2^{10}$. Không tính giá trị của biểu thức $a$, chứng minh $a + 2 = 2^11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.24., p. 13]
+	Tìm $x\in\mathbb{N}$ thỏa $(2x + 1)^2 = 625$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.25., p. 13]
+	Quan sát $11 - 2 = 9 = 3^2$, $1111 - 22 = 1089 = 33^2$. Chứng minh $\underbrace{1\ldots1}_{2n} - \underbrace{2\ldots2}_n$ là số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.26., p. 13]
+	Tìm chữ số tận cùng: (a) $7^{35} - 4^{31}$. (b) $2^{1930}\cdot9^{1945}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 1.27., p. 13]
+	Tìm 2 chữ số tận cùng: (a) $351^{2011}$. (b) $218^{218}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Bài Toán Thực Tế}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD2.1, p. 14]
+	Ông Toàn đi công tác trở về nhà thì chiếc đồng hồ lên dây cót của ông đã đứng. Ông lên dây cót, vặn kim đồng hồ chỉ {\rm8:00} rồi sang ngay nhà bạn gần đó để chơi \& hỏi giờ. Trên đường đi, ông phát hiện mình không mang theo đồng hồ. Do đó ông đã ghi lại lúc vừa đến nhà bạn là {\rm8:20} \& lúc bắt đầu rời nhà bạn để về nhà mình là {\rm8:50}. Khi về đến nhà, ông thấy đồng hồ của mình chỉ {\rm8:50}. Hỏi ông phải chỉnh đồng hồ của mình để kim đồng hồ chỉ mấy giờ?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD2.2, p. 14]
+	An về nghỉ hè ở quê trong 1 số ngày, trong đó có $10$ ngày mưa. Biết có $11$ buổi sáng không mưa, có $9$ buổi chiều không mưa \& không bao giờ trời mưa cả sáng lẫn chiều. Hỏi An về nghỉ ở quê trong bao nhiêu ngày?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD2.3, p. 15]
+	1 số học sinh dự thi học sinh giỏi toán. Nếu xếp $25$ học sinh 1 phòng thì thừa $5$ học sinh chưa có chỗ. Nếu xếp $28$ học sinh 1 phòng thì thừa 1 phòng. Tính số học sinh dự thi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD2.4, p. 15]
+	Trong 1 bảng đấu loại bóng đá, có 4 đội thi đấu vòng tròn 1 lượt: đội thắng được $3$ điểm, đội hòa được $1$ điểm, đội thua được $0$ điểm. Tổng số điểm của 4 đội khi kết thúc vòng đấu bảng là $16$ điểm. Tính số trận hòa.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD2.5, p. 16]
+	1 câu lạc bộ lúc đầu có 1 thành viên, sau 1 tháng thì thành viên đó phải tìm thêm 2 thành viên mới. Cứ như vậy, mỗi thành viên (cả cũ lẫn mới) sau 1 tháng phải tìm được thêm 2 thành viên mới. Nếu kế hoạch phát triển hội viên như trên được thực hiện thì số thành viên của câu lạc bộ đó là bao nhiêu: (a) Sau 6 tháng? (b) Sau 12 tháng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD2.6, p. 16]
+	Tính số sách Toán bán được trong mỗi ngày của 1 cửa hàng biết số sách đã bán ra như sau: Thứ 2, thứ 3, thứ 4: $115$ quyển. Thứ 4, thứ 5: $85$ quyển. Thứ 3, thứ 5: $90$ quyển. Thứ 2, thứ 6: $70$ quyển. Thứ 5, thứ 6: $80$ quyển.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, VD2.7, p. 17, Bài toán bò ăn cỏ của Newton]
+	Trên 1 cánh đồng cỏ, cỏ mọc đều như nhau \& lớn đều như nhau. Biết $70$ con bò ăn hết số cỏ có sẵn \& số cỏ mọc thêm trên cánh đồng ấy trong $24$ ngày, nếu có $30$ con bò thì chúng ăn hết cỏ trong $60$ ngày. (a) Gọi số cỏ 1 con bò ăn trong 1 ngày là 1 bó. Hỏi số cỏ mọc thêm trên cánh đồng trong $36$ ngày là bao nhiêu bó? (b) Bao nhiêu con bò sẽ ăn hết cỏ của cánh đồng trong $96$ ngày?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.1., p. 18]
+	1 cửa hàng mua 1 xe ôtô giá $1500$ triệu đồng, đem cho thuê $20$ tuần với giá cho thuê $30$ triệu đồng 1 tuần. Phí bảo hiểm cửa hàng phải nộp là $80$ triệu đồng, chi phí sửa chữa hết $120$ triệu đồng. Sau đó cửa hàng bán chiếc xe với giá $1300$ triệu đồng. Tính lợi nhận của thương vụ này.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.2., p. 18]
+	1 vòng xích có đường kính ngoài là {\rm40 mm}, độ dày của kim loại là {\rm3 mm}. Có $10$ vòng xích được nối với nhau. Tính chiều dài lớn nhất của dây xích.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.3., p. 18]
+	An \& Bích làm việc tại cùng 1 nhà máy. Cứ sau $9$ ngày làm việc thì An nghỉ $1$ ngày. Cứ sau $6$ ngày làm việc thì Bích nghỉ $1$ ngày. Hôm nay là ngày nghỉ của An \& ngày mai là ngày nghỉ của Bích. Hỏi sau ít nhất bao lâu (kể từ hôm nay) thì cả 2 người sẽ có cùng ngày nghỉ?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.4., p. 18]
+	Có $10$ người, tuổi của mỗi người là 1 số tự nhiên. Tổng số tuổi của $9$ người trong $10$ người đó là $82,83,84,85,87,89,90,91,92$. Tìm tuổi của người trẻ nhất, tuổi của người già nhất.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.5., p. 18]
+	Ta gọi {\rm số đối xứng} là số mà viết các chữ số của nó theo thứ tự ngược lại lẫn được chính số đó, e.g., $353,1221,\ldots$ Đồng hồ đo quãng đường của 1 xe máy chỉ số $15951$. Tìm số đối xứng nhỏ nhất tiếp theo xuất hiện trên mặt đồng hồ.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.6., p. 18]
+	Có 1 số con mèo chui vào chuồng bồ câu. Đếm trong chuồng thấy tổng cộng có $34$ cái đầu \& $80$ cái chân. Tính số mèo.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.7., p. 18]
+	Ở 1 bến cảng có $15$ con tàu, mỗi con tàu có $3$ cột buồm hoặc $5$ cột buồm, tổng cộng có $61$ cột buồm. Hỏi có bao nhiêu con tàu có $5$ cột buồm?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.8., p. 18]
+	Đội tuyển của 1 trường dự 1 cuộc thi đấu được chia đều thành 6 nhóm, mỗi học sinh dự thi đạt $8$ điểm hoặc $10$ điểm. Tổng số điểm của cả đội là $160$ điểm. Tính số học sinh đạt điểm $10$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.9., p. 18]
+	Có $64$ bạn tham gia giải bóng bàn theo thể thức đấu loại trực tiếp. Những người được chọn ở mỗi vòng chia thành từng nhóm 2 người, 2 người trong nhóm đấu với nhau 1 trận để chọn lấy 1 người. Tìm số trận đấu ở: (a) Vòng 1. (b) Vòng 5.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.10., p. 18]
+	Tâm có $5$ tờ tiền mệnh giá $2000$ đồng \& $4$ tờ tiền mệnh giá $5000$ đồng. Tâm có bao nhiêu cách khác nhau để trả tiền bằng cách dùng 1 hoặc cả 2 loại tiền trên?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.11., p. 19]
+	Có $40$ bạn lớp 6A \& $30$ bạn lớp 6B xếp hàng đôi để vào tham quan Viện bảo tàng. Gọi $a$ là số trường hợp 2 bạn lớp 6A xếp cùng hàng đôi, gọi $b$ là số trường hợp 2 bạn lớp 6B xếp cùng hàng đôi. So sánh $a,b$, số nào lớn hơn, \& lớn hơn bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_so_hoc}, 2.12., p. 19]
+	Tờ lịch của 1 tháng:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			S & M & T & W & Th & F & Sa \\
+			\hline
+			&  &  &  &  & 1 & 2 \\
+			3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+			10 & 11 & 12 & 13 & 14 & 15 & 16 \\
+			17 & 18 & 19 & 20 & 21 & 22 & 23 \\
+			24 & 25 & 26 & 27 & 28 & 29 & 30 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\noindent Biết 1 bảng $3\times3$ của 1 tờ lịch khác có tổng 9 số trong bảng là $162$. (a) Tính số ở chính giữa của bảng đó. (b) Lập bảng $3\times3$ đó.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
