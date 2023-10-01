@@ -1,0 +1,146 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Real $\mathbb{R}$ -- Bài Tập: Số Thực $\mathbb{R}$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Irrational. Real -- Số Vô Tỷ. Số Thực}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, H1, p. 26]
+	Hoàn thành: (a) $-\dfrac{1}{30}$ là số thập phân $\ldots$ (b) $0.222\ldots$ là số thập phân vô hạn $\ldots$ (c) $\dfrac{72}{75} = \ldots$ (d) $\sqrt{2}$ là số $\ldots$ (e) $\dfrac{4}{9} = \ldots$ (f) $0.(142857) = \ldots$
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, H2, p. 26]
+	{\rm Đ{\tt/}S?} (a) $\sqrt{a} > 0$ với $a\ge0$. (b) $-\sqrt{a}\le0$ với $a\ge0$. (c) Các điểm biểu diễn số hữu tỷ không lấp đầy trục số. (d) Các điểm biểu diễn số vô tỷ lấp đầy trục số. (e) Nếu $a$ là số thực thì $a$ là số vô tỷ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, VD1, p. 27]
+	Viết 4 phân số $-\dfrac{9}{40},\dfrac{5}{11},-\frac{28}{175},\dfrac{11}{24}$ dưới dạng 1 số thập phân hữu hạn hoặc 1 số thập phân vô hạn tuần hoàn \& giải thích vì sao viết được như vậy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, VD2, p. 27]
+	Tính diện tích của các hình chữ nhật có số đo 2 cạnh lần lượt là $a,b$ {\rm cm}, biết $a$ là tử \& $b$ là mẫu của {\rm phân số tối giản} viết từ 3 số thập phân $0.26,0.454545\ldots,0.13777\ldots$
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, VD3, p. 27]
+	Làm tròn mỗi số $12.064,9.272727\ldots,3.14159$ đến hàng đơn vị \& đến chữ số thập phân thứ 1, thứ 2, thứ 3.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, VD4, p. 28]
+	Tại SEA Games 27, vận động viên Nguyễn Thị Ánh Viên đã về Nhất nội dung {\rm200 m} bơi ngửa với thời gian $2$ phút $14$ giây $80$, giành Huy chương Vàng \& trở thành vận động viên đầu tiên phá kỷ lục của SEA Games 27. Về thứ Nhì là Yosaputra Venesia (Indonesia) với thời gian $2$ phút $20$ giây $35$ \& về thứ 3 là Lim Shen Meagan (Singapore) với thời gian $2$ phút $21$ giây $19$. Hỏi thời gian gần đúng đến hàng đơn vị giây của mỗi vận động viên là bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, VD5, p. 28]
+	Cho 6 phân số $\dfrac{1}{7},\dfrac{2}{7},\dfrac{3}{7},\dfrac{4}{7},\dfrac{5}{7},\dfrac{6}{7}$. (a) Các phân số trên đều đổi được ra số thập phân vô hạn tuần hoàn. Tìm chu kỳ \& nhận xét các chữ số trong chu kỳ của các số thập phân vô hạn tuần hoàn trên. (b) Làm tròn các số thập phân trên đến chữ số thập phân thứ 2, thứ 4, \& thứ 6. (c) Tìm chữ số thứ $100$ sau dấu phẩy của số thập phân viết từ phân số $\dfrac{5}{7}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, VD6, p. 29]
+	1 vệ tinh bay trên quỹ đạo tròn vòng quanh Trái Đất. Biết quỹ đạo của vệ tinh có độ dài là {\rm66000 km}. Hỏi độ dài quỹ đạo của vệ tinh sẽ tăng bao nhiêu {\rm km} nếu bán kính của quỹ đạo tăng lên {\rm7km}? 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, VD7, p. 29]
+	1 đơn vị đo chiều dài của Anh là inch, được ký hiệu là {\rm in} \& $\rm1\ in = 2.54\ cm$. (a) Hỏi {\rm1 cm} gần bằng bao nhiêu {\rm in} (làm tròn đến chữ số thập phân thứ 2)? (b) Tivi {\rm21 in} là màn hình tivi có đường chéo bằng {\rm21 in}. Tivi {\rm21 in, 23 in, 27 in, 29 in} có đường chéo màn hình bằng bao nhiêu {\rm cm} (làm tròn đến chữ số thập phân thứ nhất)? 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, 4.1., p. 29]
+	Viết 6 phân số $-\dfrac{11}{35},\dfrac{9}{80},-\dfrac{48}{150},\dfrac{44}{121},\dfrac{55}{75},\dfrac{73}{81}$ dưới dạng 1 số thập phân hữu hạn hoặc 1 số thập phân vô hạn tuần hoàn. Giải thích vì sao chúng viết được như vậy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, 4.2., p. 29]
+	Lấy số $\pi$ gần bằng $\dfrac{22}{7}$. Tính diện tích hình tròn biết bán kính là $0.(45)$ {\rm cm}, $\dfrac{21}{22}$ {\rm cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, 4.3., p. 29]
+	1 vệ tinh bay trên quỹ đạo hình tròn vòng quanh Trái Đất. Biết quỹ đạo của vệ tinh có độ dài là {\rm66000 km}. Hỏi độ dài quỹ đạo của vệ tinh giảm bao nhiêu {\rm km} nếu bán kính của quỹ đạo giảm {\rm70 km}?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, 4.4., p. 29]
+	Viết 4 số $0.(0001),-0.3(18),-2.37(1),3.24(81)$ dưới dạng 1 phân số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, 4.5., p. 30]
+	So sánh: (a) $A = \dfrac{2021}{\sqrt{2022}}$ \& $B = \dfrac{2022}{\sqrt{2021}}$. (b) $A = \dfrac{\sqrt{121}}{\sqrt{12321}}$ \& $B = \dfrac{\sqrt{12321}}{\sqrt{1234321}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, 4.6., p. 30]
+	Viết mỗi phân số sau dưới dạng số thập phân ta được 1 số thập phân hữu hạn hay số thập phân vô hạn tuần hoàn ($n\in\mathbb{N}^\star$): (a) $A = \dfrac{11n^2 + 121n}{55n}$. (b) $B = \dfrac{79! + 79}{5609}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, 4.7., p. 30]
+	Tìm 2 số thập phân $\overline{0.abc}$ \& $\overline{0.(abc)}$ biết: (a) $\dfrac{1}{\overline{0.abc}} = n$. (b) $\dfrac{1}{\overline{0.(abc)}} = n$, trong đó $n\in\mathbb{N}$ \&: (a) $a,b,c$ là 3 chữ số khác nhau. (b) $a,b,c$ là 3 chữ số không nhất thiết khác nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, 4.8., p. 30]
+	(a0 Các bánh xe của 1 chiếc xe tải chạy tới vận tốc {\rm60 km{\tt/}h}, thực hiện $4$ vòng quay trong 1 giây. Hỏi đường kính của bánh xe là bao nhiêu? (b) 1 hình tròn nằm ``khít'' trong 1 hình vuông. Biết cạnh hình vuông bằng {\rm3.72 cm} \& đường kính hình tròn bằng {\rm2.48 cm}. Tính diện tích phần hình vuông còn lại không bị hình tròn che.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, 4.9., p. 30]
+	Tìm số thập phân thứ $2021$ của phân số $\dfrac{15}{19}$ khi viết dưới dạng số thập phân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, 1, p. 30]
+	So sánh các số thập phân: (a) $0.(26)$ \& $0.261$. (b) $\overline{0.(a_1a_2)},\overline{0.a_1(a_2a_1)},\overline{0.(a_1a_2a_1a_2)}$. (c) $0.15$ \& $0.14(9)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_7_tap_1}, 2, p. 30]
+	Biết $a + b = 9$. Tính $\overline{0.a(b)} + \overline{0.b(a)}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Tỷ Lệ Thức. Tính Chất Dãy Tỷ Số Bằng Nhau}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
