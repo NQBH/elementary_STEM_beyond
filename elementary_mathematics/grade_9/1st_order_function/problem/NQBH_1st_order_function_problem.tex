@@ -1,0 +1,191 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: 1st-Order Function -- Bài Tập: Hàm Số Bậc Nhất $y = ax + b$, $a\ne0$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Khái Niệm Hàm Số}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H3, p. 49]
+	Tìm $a\in\mathbb{R}$ để điểm $A(-1,3)$ thuộc đồ thị hàm số $y = ax^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H4, p. 49]
+	Cho hàm số $y = f(x)$ xác định trên $\mathbb{R}$. (a) Nếu giá trị của biến $x$ tăng lên mà giá trị tương ứng $f(x)$ cũng tăng lên thì hàm số $y = f(x)$ được gọi là $\ldots$ trên $\mathbb{R}$. (b) Nếu giá trị của biến $x$ tăng lên mà giá trị tương ứng $f(x)$ $\ldots$ thì hàm số $y = f(x)$ được gọi là nghịch biến trên $\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H5, p. 49]
+	(a) Tìm {\rm TXĐ} của hàm số $y = \dfrac{1}{\sqrt{2 - x}}$. (b) Tìm {\rm TXĐ} của hàm số $y = \dfrac{2x + 1}{x^2 - 3x + 2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD1, p. 49]
+	Ở bưu điện, giá tiền cước gửi thư trong nước được niêm yết như sau (chưa tính {\rm VAT}):
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|c|}
+			\hline
+			Nấc khối lượng (g) & Mức cước (đồng) \\
+			\hline
+			Đến 20 g & 2000 \\
+			\hline
+			Trên 20 g đến 100 g & 3000 \\
+			\hline
+			Trên 100 g đến 250 g & 4500 \\
+			\hline
+			Mỗi 250 g tiếp theo đến 2000 g & 2000 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\noindent Nếu gọi khối lượng lá thư là $x$ {\rm g}, số tiền cước phải trả là $y$ đồng. (a) $y$ có là hàm số của $x$ không? Vì sao? (b) Tìm {\rm TXĐ} của hàm số $y$. (c) 1 lá thư nặng {\rm300 g} cần phải trả tiền cước là bao nhiêu? (d) Hỏi $x$ có là hàm số của $y$ không? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD2, p. 50]
+	1 ôtô có bình chứa xăng đựng được {\rm40 L} xăng. Cứ chạy {\rm100 km} thì ôtô tiêu thụ hết {\rm8 L} xăng. (a) Khi ôtô chạy $x$ {\rm km} thì số {\rm L} xăng $y$ tiêu thụ là bao nhiêu? (b) Hỏi $y$ có là 1 hàm số của $x$ không? (c) Hỏi $x$ có là 1 hàm số của $y$ không? (d) Khi ôtô chạy được {\rm200 km} thì số {\rm L} xăng còn lại trong bình là bao nhiêu nếu lúc đầu bình đầy?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD3, p. 51]
+	Vẽ trên mặt phẳng tọa độ $Oxy$ các điểm $A(0,5),B(4,5),C(4,0),M(x,0$ với $x > 4$, $N(0,2)$. (a) Tính diện tích S của tứ giác $OABC$. (b) Tính diện tích P của $\Delta BMN$ theo $x$. Chứng minh P là hàm số của $x$. (c) Tìm {\rm TXĐ} của $P$. Hàm số P đồng biến hay nghịch biến trên {\rm TXĐ} của nó? (d) Với giá trị nào của $x$ thì $S = P$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD4, p. 51]
+	Cho hình chữ nhật ABCD với $AB = 36,BC = 15$. Trên cạnh AB lấy điểm M. Gọi $AM = x$, $0 < x < 36$. Qua M kẻ $MN\parallel BD$ với $N\in AD$. Qua M kẻ $MP\parallel AC$ với $P\in BC$. (a) Chứng minh độ dài $MN,MP$ là 2 hàm số của $x$. (b) Trên cạnh CD lấy điểm Q sao cho $DQ = 36 - x$. Chứng minh chu vi tứ giác MNQP là 1 hàm hằng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD5, p. 52]
+	Đồ thị hàm số $y = f(x)$ trên mặt phẳng tọa độ: $A(-3,3),B(-1,-3),C(2,-3),D(4,0)$.
+	\begin{center}
+		\begin{tikzpicture}[>=stealth]
+			\draw[->](-2,0)--(5/2,0) node[above]{$x$};
+			\draw[->](0,-2)--(0,2) node[left]{$y$};
+			\draw[dashed](-3/2,0)--(-3/2,3/2)--(0,3/2) (-1/2,0)--(-1/2,-3/2) (1,0)--(1,-3/2);
+			\path
+			(0,0) coordinate (O)
+			(-3/2,3/2) coordinate (A)
+			(-1/2,-3/2) coordinate (B)
+			(1,-3/2) coordinate (C)
+			(2,0) coordinate (D);
+			\draw (A)--(B)--(C)--(D);
+			\foreach \x/\g in {A/90,B/-135,C/-45,D/-45} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+		\end{tikzpicture}
+	\end{center}
+	\noindent(a) Tìm {\rm TXĐ} của hàm số $y$. (b) Tính $f(-3),f(-1),f(1),f(2),f(3),f(4)$. (c) Hàm số $y = f(x)$ đồng biến \& nghịch biến trong khoảng nào? (d) {\rm Đ{\tt/}S?} Khi xét $x_1 = 2$, $f(x_1) = f(2) = -3$, $x_2 = -3$, $f(x_2) = f(-3) = 3$, ta thấy $x_2 < x_1$, $f(x_2) > f(x_1)$ nên hàm số nghịch biến trong khoảng $[-3,2]$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.1., p. 53]
+	Bảng sau ghi các giá trị tương ứng của 2 đại lượng $x,y$ phụ thuộc nhau.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			$x$ & 1 & 2 & 3 & 4 & 5 & 1 & 6 & 7 & 8 \\
+			\hline
+			$y$ & 0 & 2 & -1 & 5 & 4 & -4 & 3 & -2 & -6 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\noindent(a) $y$ có là hàm số của $x$ không? (b) $x$ có là hàm số của $y$ không? (c) Trường hợp là hàm số, nêu {\rm TXĐ}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.2., p. 53]
+	Cho hàm số $y = f(x) = 3x^2 + 1$. (a) Tính $f(-1),f(0),f(1)$. (b) Tìm $x$ để $f(x) = 4$. (c) Trong 3 điểm $A(0,1),B(2,3),C(3,4)$, điểm nào không thuộc đồ thị hàm số đã cho?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.3., p. 53]
+	Bảng giá bán lẻ điện cho các hộ gia đình (chưa tính {\rm VAT}) (theo QĐ số 2256{\tt/}QĐ-BCT 12.3.2015 của Bộ Công thương):
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|c|}
+			\hline
+			Mức độ sử dụng của mỗi hộ trong tháng & Giá bán điện (đồng{\tt/}kwh) \\
+			\hline
+			Bậc 1: cho kwh từ 0--50 & 1484 \\
+			\hline
+			Bậc 2: cho kwh từ 51--100 & 1533 \\
+			\hline
+			Bậc 3: cho kwh từ 101--200 & 1786 \\
+			\hline
+			Bậc 4: cho kwh từ 201--300 & 2242 \\
+			\hline
+			Bậc 5: cho kwh từ 301--400 & 2503 \\
+			\hline
+			Bậc 6: cho kwh từ 401 trở lên & 2587 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\noindent Gọi số điện sử dụng của hộ gia đình là $x$ {\rm kwh}, số tiền phải trả là $y$ đồng. (a) $y$ có phải là hàm số của $x$ không? (b) Nếu dùng hết $310$ {\rm kwh} điện thì phải trả bao nhiêu tiền?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.4., p. 53]
+	Chứng minh: (a) Hàm số $y = 2x + 3$ đồng biến trên $\mathbb{R}$. (b) Hàm số $y = -2x + 7$ nghịch biến trên $\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.5., p. 53]
+	Cho $\Delta ABC$ đều có độ dài cạnh bằng $a$. Lấy $M\in AB$ sao cho $AM = x$ với $0 < x < a$. Vẽ hình chữ nhật MNPQ với $N\in AC$, $P,Q\in BC$. (a) Chứng minh diện tích hình chữ nhật MNPQ là hàm số của $x$. (b) Xác định $x$ để diện tích hình chữ nhật MNPQ lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1},  p. 53, Công thức Lorentz cho số cân nặng lý tưởng tương ứng với chiều cao]
+	Cách đây hơn 1 thế kỷ, nhà khoa học người Hà Lan Hendrick Lorentz (1853--1928) đưa ra công thức tính số cân nặng lý tưởng của con người theo chiều cao:
+	\begin{align*}
+		\boxed{M = T - 100 - \dfrac{T - 150}{N}}
+	\end{align*}
+	trong đó $M$: số cân nặng {\rm kg}, $T$: chiều cao {\rm cm}, $N = 4$ với nam giới \& $N = 2$ với nữ giới. (a) Kiểm chứng công thức với cân nặng \& chiều cao của bản thân. (b) Viết công thức tính số cân nặng lý  tưởng của nam giới (ký hiệu là $P_1$) \& số cân nặng lý tưởng của nữ giới (ký hiệu là $P_2$) theo chiều cao. (c) Vẽ đồ thị hàm $M$ theo $T$. (d) $P_1,P_2$ có phải là hàm số của $T$ không? (c) Với $T$ bằng bao nhiêu thì $P_1 = P_2$?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{1st-Order Function \& Its Graph -- Hàm Số Bậc Nhất \& Đồ Thị Của Nó}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
