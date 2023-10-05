@@ -56,28 +56,52 @@
 \section{Basic Calculus on $\mathbb{N}$ -- Phép $\pm,\cdot,:$ trên $\mathbb{N}$}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H1, p. 17]
-	Viết đủ 6 số $1,2,3,4,5,6$ vào 3 đỉnh \& 3 trung điểm của 3 cạnh của 1 tam giác sao cho tổng 3 số trên mỗi cạnh bằng $10$.
+	(a) Viết đủ 6 số $1,2,3,4,5,6$ vào 3 đỉnh \& 3 trung điểm của 3 cạnh của 1 tam giác sao cho tổng 3 số trên mỗi cạnh bằng $10$. (b${}^\star$) Có bao nhiêu cách tất cả?
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) 1 cách điền thỏa mãn: {\bf1}-4-{\bf5}-2-{\bf3}-6 (in đậm: 3 đỉnh tam giác). (b) ***
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H2, p. 17]
-	{\rm Đ{\tt/}S?} Cho $a,b,c,d,m,n,p,q\in\mathbb{N}^\star$ thỏa $a + m = b + n = c + p = a + b + c$. (a) $m + n > p$. (b) $n + p < m$. (c) $p + m > n$. (d) $m + n + p = a + b + c$. (e) $m + n + p = 2(a + b + c)$.
+	{\rm Đ{\tt/}S?} Cho $a,b,c,m,n,p\in\mathbb{N}^\star$ thỏa $a + m = b + n = c + p = a + b + c$. (a) $m + n > p$. (b) $n + p < m$. (c) $p + m > n$. (d) $m + n + p = a + b + c$. (e) $m + n + p = 2(a + b + c)$. (f) $m,n,p$ là độ dài 3 cạnh của 1 tam giác.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Đ. Đặt $A\coloneqq a + m = b + n = c + p = a + b + c$. Có $2A = a + m + b + n = c + p + a + b + c\Rightarrow m + n = 2A - a - b$, $p = 2A - a - b - 2c$, mà $c\in\mathbb{N}^\star$ nên $c > 0$, suy ra $p = 2A - a - b - 2c < 2A - a - b = m + n$. (b) S. Tương tự (a), $2A = a + m + a + b + c = b + n + c + p\Rightarrow m = 2A - 2a - b - c$, $n + p = 2A - b - c$, mà $a\in\mathbb{N}^\star$ nên $a > 0$, suy ra $m = 2A - 2a - b - c < 2A - b - c = n + p$. (c) Đ. Tương tự (a)--(b), $2A = a + m + c + p = b + n + a + b + c\Rightarrow m + p = 2A - c - a$, $n = 2A - c - a - 2b$,  mà $b\in\mathbb{N}^\star$ nên $b > 0$, suy ra $n = 2A - c - a - 2b < 2A - c - a = m + p$. (d) S. (e) Đ. $3A = a + m + b + n + c + p = (a + b + c) + (m + n + p) = A + (m + n + p)\Rightarrow m + n + p = 3A - A = 2A$. (f) Đ. Theo (a)--(c), $m,n,p\in\mathbb{N}^\star$ thỏa mãn bất đẳng thức tam giác (triangle inequality): $m + n > p$, $n + p > m$, $p + n > m$, suy ra $m,n,p$ là độ dài 3 cạnh của 1 tam giác.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H3, p. 17]
 	Tính $3^4:3 + 2^3:2^2$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	$3^4:3 + 2^3:2^2 = 3^{4-1} + 2^{3-2} = 3^3 + 2^1 = 27 + 2 = 29$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H4, p. 17]
 	{\rm Đ{\tt/}S?} (a) $(15 + 5)(4 + 1) = 20\cdot5 = 100$. (b) $5 + 20\cdot4 = 25\cdot4 = 100$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Theo quy tắc dấu ngoặc \& nhân chia trước, cộng trừ sau: (a) Đ. (b) S. Sửa: $5 + 20\cdot4 = 5 + 80 = 85$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H5, p. 17]
 	Tính: (a) Hiệu của 2 số lẻ mà giữa chúng có $10$ số chẵn. (b) Hiệu của 2 số lẻ mà giữa chúng có $10$ số lẻ. (c) Hiệu của 2 số chẵn mà giữa chúng có $5$ số chẵn. (d) Hiệu của 2 số chẵn mà giữa chúng có $5$ số lẻ.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Liệt kê với $n\in\mathbb{N}$: (a) $2n + 1,2n + 2,2n + 4, 2n + 6,\ldots,2n + 20,2n + 21$ (10 số chẵn nằm giữa: $2n + 2i$, $\forall i = 1,2,\ldots,10$). Hiệu của $2n + 1$ \& $2n + 21$ bằng $2n + 21  - (2n + 1) = 2n + 21 - 2n - 1 = 21 - 1 = 20$. (b) $2n + 1, 2n + 3,2n + 5,\ldots,2n + 21,2n + 23$ (10 số lẻ nằm giữa: $2n + 2i + 1$, $\forall i = 1,2,\ldots,10$). Hiệu của $2n + 1$ \& $2n + 23$ bằng $2n + 23 - (2n + 1) = 2n + 23 - 2n - 1 = 23 - 1 = 22$. (c)  $2n,2n + 2,2n + 4,\ldots,2n + 10, 2n + 12$ (5 số chẵn ở giữa: $2n + 2i$, $\forall i = 1,2,\ldots,5$). Hiệu của $2n$ \& $2n + 12$ bằng $2n + 12 - 2n = 12$. (d) $2n,2n + 1,2n + 3,\ldots,2n + 2n + 9,2n + 10$ (5 số lẻ ở giữa: $2n + 2i + 1$, $\forall i = 0,1,\ldots,4$). Hiệu của $2n$ \& $2n + 10$ bằng $2n + 10 - 2n = 10$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD1, p. 17]
 	Tính hợp lý: (a) $A = 27\cdot36 + 73\cdot99 + 27\cdot14 - 49\cdot73$. (b) $B = (4^5\cdot10\cdot5^6 + 25^5\cdot2^8):(2^8\cdot5^4 + 5^7\cdot2^5)$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $A = 27\cdot36 + 27\cdot14 + 73\cdot99 - 49\cdot73 = 27(36 + 14) + 73(99 - 49) = 27\cdot50 + 73\cdot50 = 50(27 + 73) = 50\cdot100 = 5000$. (b) $B = (4^5\cdot10\cdot5^6 + 25^5\cdot2^8):(2^8\cdot5^4 + 5^7\cdot2^5)$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD2, p. 18]
 	Egg \& Chicken cùng ra cửa hàng mua sách. Tổng số tiền ban đầu của 2 bạn là $78000$ đồng. Egg mua hết $32000$ đồng, Chicken mua hết $14000$ đồng. Khi đó số tiền còn lại của 2 bạn bằng nhau. Hỏi ban đầu mỗi bạn có bao nhiêu tiền?
@@ -814,7 +838,7 @@ Về phân bào, see, e.g., \href{https://vi.wikipedia.org/wiki/Ph%C3%A2n_b%C3%A
 			\hline
 		\end{tabular}
 	\end{table}
-	Muốn tìm hàng Chi của 1 năm ta dùng công thức
+	\noindent Muốn tìm hàng Chi của 1 năm ta dùng công thức
 	\begin{align*}
 		\mbox{Hàng Chi} = \mbox{Số dư của }\frac{\mbox{năm} - 4}{12} + 1.
 	\end{align*}
