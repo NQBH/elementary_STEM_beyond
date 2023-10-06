@@ -1,0 +1,230 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Natural Science 6 -- Bài Tập: Khoa Học Tự Nhiên 6}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Mở Đầu về Khoa Học Tự Nhiên}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 1., p. 10]
+	Khoa học tự nhiên: {\sf A.} Nghiên cứu về các sự vật, hiện tượng tự nhiên, tìm ra quy luật chi phối chúng. {\sf B.} Nghiên cứu về các sự vật, hiện tượng xã hội, các ảnh hưởng của chúng đến đời sống con người \& môi trường. {\sf C.} Phát minh ra các giống vật nuôi \& cây trồng mới. {\sf D.} Cải tiến các phương tiện giao thông vận tải \& thông tin liên lạc.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 2., p. 10]
+	Trường hợp nào sau đây không thuộc đối tượng nghiên cứu của Khoa học tự nhiên? {\sf A.} Quy luật chuyển động của Mặt Trời \& các hành tinh. {\sf B.} Sự phát triển của các loại cây. {\sf C.} Trào lưu của tuổi học trò trong từng giai đoạn. {\sf D.} Điều chế vaccin trong phòng bệnh.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 3., p. 10]
+	Khoa học tự nhiên có vai trò gì đối với đời sống con người? Chọn các đáp án đúng. (a) Cung cấp thông tin cho con người về thế giới tự nhiên. (b) Cung cấp thông tin cho con người về quy luật hình thành \& phát triển của xã hội \& con người. (c) Góp phần vào công tác bảo vệ môi trường \& ứng phó với biến đổi khí hậu. (d) Giúp đưa ứng dụng công nghệ nhằm mở rộng sản xuất \& phát triển kinh tế. (e) Cung cấp thông tin cho con người về hoạt động văn hóa, tín ngưỡng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 4., p. 11]
+	Nối đáp án: 1. Khoa học tự nhiên. 2. Khoa học vật chất. 3. Khoa học đời sống. 4. Hóa học. 5. Vật lý học. 6. Thiên văn học. 7. Khoa học Trái Đất. (a) nghiên cứu về quy luật vận động \& sự biến đổi của các vật thể trên bầu trời (các hành tin, sao, $\ldots$). (b) nghiên cứu về các sinh vật \& sự sống (con người, động vật, thực vật, $\ldots$), mối quan hệ giữa chúng với nhau \& với môi trường. (c) nghiên cứu về Trái Đất \& bầu khí quyển của nó. (d) bao gồm vật lý, hóa học, thiên văn học, khoa học Trái Đất, $\ldots$ (e) nghiên cứu cấu tạo, các phản ứng hóa học, cấu trúc, các tính chất của vật chất \& các biến đổi lý hóa mà chúng trải qua. (f) nghiên cứu về vật chất, quy luật vận động, lực, năng lượng \& sự biến đổi năng lượng, $\ldots$ (g) bao gồm khoa học đời sống \& khoa học vật chất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 6., p. 12]
+	Quan sát các hiện tượng sau trong đời sống. Có quy luật{\tt/}chu trình nào đã được rút ra từ các hiện tượng đó? (a) Các mùa trong năm \& hiện tượng Mặt Trời mọc trong ngày. (b) Tung vật lên cao, vật sẽ rơi về phía Trái Đất. (c) Sự thay đổi trạng thái của hạt đậu xanh khi vùi trong đất ẩm. (d) Sự dịch chuyển của nam châm khi đặt 2 nam châm gần nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 7., p. 12]
+	Vật sống (vật hữu sinh) không có các đặc điểm nào? {\sf A.} Có sự trao đổi chất với môi trường. {\sf B.} Có khả năng sinh trưởng, phát triển. {\sf C.} Có khả năng sinh sản. {\sf D.} Không có sự trao đổi chất với môi trường.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 8., p. 13]
+	Vật không sống (vật vô sinh) không có đặc điểm nào? {\sf A.} Không trao đổi chất với môi trường. {\sf B.} Không có khả năng sinh trưởng, phát triển. {\sf C.} Không có khả năng sinh sản. {\sf D.} Không có màu sắc.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 9., p. 13]
+	Phân biệt vật sống \& vật không sống: vi khuẩn, máy tính, cây xanh, cái bàn, robot lau nhà, con mèo, hòn đá, quyển sách.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 10., p. 13]
+	Phân biệt khoa học về vật chất \& khoa học về sự sống.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 11., p. 13]
+	Lợi ích chính của việc chấp hành các quy định an toàn khi học trong phòng thực hành? {\sf A.} Giúp tiết kiệm thời gian. {\sf B.} Giúp tiết kiệm chi phí. {\sf C.} Giúp tránh phải các tình huống gây nguy hiểm. {\sf D.} Giúp ổn định trật tự lớp học.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 12., p. 13]
+	Học sinh phải tuân thủ yêu cầu gì khi làm thực hành? {\sf A.} Sử dụng găng tay, khẩu trang, kính bảo vệ mắt \& các thiết bị bảo vệ khác (nếu cần). {\sf B.} Chỉ được tiến hành thí nghiệm khi có người hướng dẫn. {\sf C.} Ngửi, nếm hóa chất để phát hiện ra chất an toàn \& không an toàn. {\sf D.} Sau khi thí nghiệm xong, thu dọn sạch sẽ, để dụng cụ vào đúng nơi quy định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 15., p. 14]
+	Sử dụng kính lúp trong trường hợp nào? {\sf A.} Quan sát vật không màu. {\sf B.} Quan sát vật có kích thước nhỏ. {\sf C.} Quan sát vật có kích thước vô cùng nhỏ mà mắt thường không thể thấy được. {\sf D.} Quan sát các vật ở rất xa.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 16., p. 14]
+	Tìm lưu ý sai khi sử dụng kính lúp. {\sf A.} Ban đầu đặt kính gần vật cần quan sát. {\sf B.} Điều chỉnh kính sao cho kích thước kính lớn nhất. {\sf C.} Chọn vật cần quan sát có kích thước đủ nhỏ. {\sf D.} Từ từ dịch chuyển kính ra xa vật cần quan sát.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 17., pp. 14--15]
+	Trường hợp sử dụng kính hiển vi: {\sf A.} Quan sát vật không màu. {\sf B.} Quan sát vật có kích thước nhỏ. {\sf C.} Quan sát vật có kích thước vô cùng nhỏ mà mắt thường không thể thấy được. {\sf D.} Cả 3 trường hợp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 18., p. 15]
+	Tìm lưu ý sai khi sử dụng kính hiển vi: {\sf A.} Chọn kính có vật kính thích hợp. {\sf B.} Điều chỉnh kính sao cho có thể quan sát được vật. {\sf C.} Tiêu bản cần được đặt trên bàn kính. {\sf D.} Vật kính có thể chọn tùy ý.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 19., p. 15]
+	Tác dụng của kính lúp \& kính hiển vi giống \& khác nhau ở điểm nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 20., p. 15]
+	Xác định {\rm GHĐ} \& {\rm ĐCNN} của cây thước học sinh.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 21., p. 15]
+	Để đo kích thước của chiếc bàn trong phòng, nên chọn thước nào trong các thước sau? {\sf A.} Thước thẳng có {\rm GHĐ 20 cm}. {\sf B.} Thước kẹp có {\rm GHĐ 10 cm}. {\sf C.} Thước dây có {\rm GHĐ 2 m}. {\sf D.} Thước thẳng có {\rm GHĐ 30 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 22., p. 15]
+	1 bạn dùng thước có {\rm ĐCNN} là {\rm0.2 cm} để đo chiều dài của cuốn sách. Cách ghi sai? {\sf A.} {\rm33.4 cm}. {\sf B.} {\rm334 mm}. {\sf C.} {\rm334 m}. {\sf D.} {\rm0.334 m}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 23., p. 15]
+	Dùng thước có {\rm ĐCNN 1 cm} đo chiều cao của cửa sổ. Kết quả đúng: {\sf A.} {\rm2 m}. {\sf B.} {\rm195 cm}. {\sf C.} {\rm19.7 cm}. {\sf D.} {\rm19.2 m}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 25., p. 16]
+	Thước thẳng có thể đo chiều dài các vật thế nào? {\sf A.} Chỉ đo được vật có hình dạng là các đoạn thẳng. {\sf B.} Vật có hình dạng bất kỳ (cần thêm dụng cụ hỗ trợ). {\sf C.} Tùy thuộc vào {\rm GHĐ} của thước. {\sf D.} Tùy thuộc vào {\rm ĐCNN} của thước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 26., p. 16]
+	Có 1 cái thước thẳng, {\rm GHĐ 30 cm}. Tìm cách dùng thước ấy để đo chu vi bánh xe đạp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 27., p. 16]
+	Làm thế nào để có thể đo được đường kính của 1 sợi dây đồng mảnh khi chỉ có dụng cụ đo là 1 chiếc thước kẹp có {\rm ĐCNN 1 mm}? Nêu phương án để ít sai số nhất có thể.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 28., p. 16]
+	Chỉ bằng 1 cái thước thẳng, làm thế nào để đo chu vi của mặt bàn có hình dạng xù xì?
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 29., p. 16]
+	Chỉ dùng 1 chiếc thước đo góc \& 1 thước dây. Không trèo lên cây, làm thế nào để đo được gần đúng chiều cao của 1 cây cổ thụ?
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, .30, p. 16]
+	Cần lấy {\rm200 mL} nước để pha sữa thì nên dùng dụng cụ nào? {\sf A.} Bình chia độ. {\sf B.} Ca đong. {\sf C.} Bình tràn. {\sf D.} Cốc uống nước thông thường.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 33., p. 17]
+	Nêu phương án để đo thể tích của 1 vật rắn thấm nước có hình dạng bất kỳ. Giả sử vật đó bỏ lọt bình chia độ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 34., p. 17]
+	Chỉ với 2 can {\rm3 L, 5 L}. Nêu các cách để lấy ra được {\rm4 L} nước. Cách nào ưu điểm hơn? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 35., p. 17]
+	1 bạn dùng cân với bộ quả cân {\rm1 kg, 0.5 kg, 0.2 kg, 100 g} (mỗi loại quả cân có 2 quả) để cân 1 vật. Kết quả thu được là {\rm3.2 kg}. Bạn đó đã dùng các quả cân nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 36., p. 17]
+	Khi cân 1 vật, 1 người đã dùng các quả cân {\rm0.5 kg, 0.2 kg, 100 g, 50 g}. Khối lượng vật: {\sf A.} {\rm150.7 kg}. {\sf B.} {\rm850 g}. {\sf C.} {\rm0.8 kg}. {\sf D.} Không xác định được.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 37., p. 17]
+	Có 8 viên bi với hình dạng \& kích thước giống hệt nhau. Dùng cân Roberval, nêu phương án để chỉ với 2 lần cân, có thể tìm ra 1 viên bi nhẹ hơn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 39., p. 18]
+	Tại sao ở các cửa hàng vàng bạc, người ta thường dùng cân tiểu ly (cân điện tử)? {\sf A.} Vì cân tiểu ly nhỏ gọn. {\sf B.} Vì cân tiểu ly có {\rm ĐCNN} nhỏ nên có tính chính xác cao. {\sf C.} Vì cân tiểu ly có {\rm GHĐ} nhỏ nên có tính chính xác cao. {\sf D.} Vì cả 3 lý do.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 40., p. 18]
+	Chọn loại cân phù hợp: cân đòn, cân tạ, cân tiểu ly, cân y tế, máy đo chiều cao cân nặng, cân Roberval, để cân: vàng, bạc, quả bí ngô, người trưởng thành, bao gạo, vật cần xác định khối lượng trong phòng thực hành, trẻ sơ sinh.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 41., p. 19]
+	Để đo nhiệt độ cơ thể người, sử dụng loại nhiệt kế nào không phù hợp? {\sf A.} Nhiệt kế thủy ngân. {\sf B.} Nhiệt kế y tế. {\sf C.} Nhiệt kế rượu. {\sf D.} Nhiệt kế hồng ngoại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{ncpt_KHTN_6_tap_1}, 42., p. 19]
+	Để đo thời gian chạy của vận động viên, nên dùng loại đồng hồ nào? {\sf A.} Đồng hồ bấm giây. {\sf B.} Đồng hồ treo tường. {\sf C.} Đồng hồ quả lắc. {\sf D.} Có thể dùng bất cứ đồng hồ nào.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Các Thể của Chất}
+
+%------------------------------------------------------------------------------%
+
+\section{Oxygen \& Không Khí}
+
+%------------------------------------------------------------------------------%
+
+\section{1 Số Vật Liệu, Nhiên Liệu, Nguyên Liệu, Lương Thực, Thực Phẩm Thông Dụng}
+
+%------------------------------------------------------------------------------%
+
+\section{Chất Tinh Khiết, Hỗn Hợp, Dung Dịch}
+
+%------------------------------------------------------------------------------%
+
+\section{Tách Chất Khỏi Hỗn Hợp}
+
+%------------------------------------------------------------------------------%
+
+\section{Tế Bào -- Đơn Vị Cơ Sở của Sự Sống}
+
+%------------------------------------------------------------------------------%
+
+\section{Từ Tế Bào Đến Cơ Thể}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
