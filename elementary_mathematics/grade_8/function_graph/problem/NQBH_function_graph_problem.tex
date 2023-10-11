@@ -1,0 +1,163 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Function {\it\&} Graph -- Bài Tập: Hàm Số {\it\&} Đồ Thị}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Function -- Hàm Số}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, 1, p. 55]
+	Tìm công thức tính chu vi $y$ \& diện tích $S$ của hình vuông có độ dài cạnh $x$. Phân loại 2 hàm số $y,S$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, 2, p. 55]
+	Thanh long là 1 loại cây chịu hạn, không kén đất, rất thích hợp với điều kiện khí hậu \& thổ nhưỡng của tỉnh Bình Thuận. Giá bán {\rm1 kg} thanh long loại I là $32000$ đồng. (a) Tính số tiền người bán thu được khi lần lượt bán {\rm2 kg, 3 kg} thanh long. (b) Gọi $y$ đồng là số tiền người bán thu được khi bán $x$ {\rm kg} thanh long. $y$ có phải là hàm số của $x$ không? $x$ có phải là hàm số của $y$ không? Nếu có, phân loại hàm số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, VD1, p. 56]
+	Viết công thức tính thể tích $V$ của hình lập phương có độ dài cạnh $x$. $V$ có phải là hàm số của $x$ không? $x$ có phải là hàm số của $V$ không? Nếu có, phân loại hàm số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, VD2, p. 56]
+	Để xem dự báo nhiệt độ $T^\circ${\rm C} tại 1 số thời điểm $t$ {\rm h} trong cùng 1 ngày, có thể truy cập trang \url{https://accuweather.com}. Bảng giá trị nhiệt độ dự báo ở Tp. Hồ Chí Minh tại 1 số thời điểm trong ngày 15.3.2022:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			$t$ h & 10 & 11 & 12 & 13 & 14 \\
+			\hline
+			$T^\circ$C & 30 & 32 & 33 & 34 & 34 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\noindent(a) Nhiệt độ $T$ có phải là hám ố của thời điểm $t$ không? (b) Thời điểm $t$ có phải là hàm số của nhiệt độ $T$ không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, VD3, pp. 56--57]
+	Đại lượng $y$ có phải là hàm số của đại lượng $x$ hay không nếu bảng giá trị tương ứng của chúng được cho bởi bảng sau?
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			$x$ & 1 & 2 & 3 & 4 & 5 \\
+			\hline
+			$y$ & 6 & 6 & 6 & 6 & 6 \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, 3, p. 57]
+	1xe ôtô chạy với tốc độ {\rm60 km{\tt/}h} trong thời gian $t$ {\rm h}. (a) Viết hàm số biểu thị quãng đường $S(t)$ {\rm km} mà ôtô đi được trong thời gian $t$ {\rm h}. (b) Tính quãng đường $S(t)$ {\rm km} mà ôtô đi được trong thời gian $t = 2$ {\rm h}, $t = 3$ {\rm h}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, VD4, p. 57]
+	Cho hàm số $f(x) = x + 5$. Tính $f(-2),f(0)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, 2, p. 57]
+	Cho hàm số $f(x) = -5x + 3$. Tính $f(0),f(-1),f\left(\dfrac{1}{2}\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, VD5, p. 57]
+	Nhà bác học Galileo Galilei (1564--1642) là người đầu tiên phát hiện ra quan hệ giữa quãng đường chuyển động $y$ {\rm m} \& thời gian chuyển động $x$ {\rm s} của 1 vật rơi tự do được biểu diễn gần đúng bởi hàm số $y = 5x^2$. Tính quãng đường (gần đúng) mà vật đó chuyển động được sau {\rm2 s}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, 1., p. 58]
+	Đại lượng $y$ có phải là hàm số của đại lượng $x$ không nếu bảng giá trị tương ứng của chúng được cho bởi:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			$x$ & 1 & 2 & 3 & 4 & 5 & 6 \\
+			\hline
+			$y$ & $-2$ & $-2$ & $-2$ & $-2$ & $-2$ & $-2$ \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			$x$ & 1 & 2 & 3 & 4 & 1 & 5 \\
+			\hline
+			$y$ & $-2$ & $-3$ & $-4$ & $-5$ & $-6$ & $-7$ \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, 2., p. 58]
+	(a) Cho hàm số $y = 2x + 10$. Tìm giá trị của $y$ tương ứng với mỗi giá trị sau của $x$: $x = -5,x = 0,x = \dfrac{1}{2}$. (b) Cho hàm số $f(x) = -2x^2 + 1$. Tính $f(-1),f(0),f(1),f\left(\dfrac{1}{3}\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, 3., p. 58]
+	Cho 1 thanh kim loại đồng chất có khối lượng riêng {\rm7.8 g{\tt/}$\rm cm^3$}. (a) Viết công thức tính khối lượng $m$ {\rm g} theo thể tích $V$ $\rm cm^3$. $m$ có phải là hàm số của $V$ không? $V$ có phải là hàm số của $m$ không? (b) Tính khối lượng của thanh kim loại đó khi biết thể tích của thanh kim loại đó là $V = 1000$ $\rm cm^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, 4., p. 58]
+	Dừa sáp là 1 trong các đặc sản lạ, quý hiểm, \& có giá trị dinh dưỡng cao, thường được trồng ở Bến Tre hoặc Trà Vinh. Giá bán mỗi quả dừa sáp là $200000$ đồng. (a) Viết công thức biểu thị số tiền $y$ đồng mà người mua phải trả khi mua $x$ quả dừa sáp. $y$ có phải là hàm số của $x$ không? $x$ có phải là hàm số của $y$ không? (b) Tính số tiền mà người mua phải trả khi mua $10$ quả dừa sáp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_1}, 5., p. 59]
+	Bác Ninh gửi tiết kiệm $10$ triệu đồng ở ngân hàng với kỳ hạn $12$ tháng \& không rút tiền trước kỳ hạn. Lãi suất ngân hàng quy định cho kỳ hạn $12$ tháng là $r\%${\tt/}năm. (a) Viết công thức biểu thị số tiền lãi $y$ đồng theo lãi suất $r\%${\tt/}năm mà bác Ninh nhận được khi hết kỳ hạn $12$ tháng. $y$ có phải là hàm số của $r$ không? $r$ có phải là hàm số của $y$ không? (b) Tính số tiền lãi mà bác Ninh nhận được khi hết kỳ hạn $12$ tháng, biết $r = 5.6$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Cartesian Coordinate System -- Mặt Phẳng Tọa Độ}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
