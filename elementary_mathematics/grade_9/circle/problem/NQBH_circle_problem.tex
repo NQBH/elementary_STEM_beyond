@@ -7,6 +7,22 @@
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\makeatletter
+\DeclareFontFamily{U}{tipa}{}
+\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
+\newcommand{\arc@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}%
+
+\newcommand{\arc}[1]{\mathpalette\arc@arc{#1}}
+
+\newcommand{\arc@arc}[2]{%
+	\sbox0{$\m@th#1#2$}%
+	\vbox{
+		\hbox{\resizebox{\wd0}{\height}{\arc@char}}
+		\nointerlineskip
+		\box0
+	}%
+}
+\makeatother
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{}
@@ -360,6 +376,146 @@
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 71., p. 102]
 	Cho $\Delta ABC$ cân tại A có $\widehat{A} = \alpha$, đường cao $AH = h$. Vẽ đường tròn tâm A bán kính $h$. 1 tiếp tuyến bất kỳ ($\ne BC$) của đường tròn $(A)$ cắt 2 tia AB, AC theo thứ tự tại $B',C'$. (a) Chứng minh $S_{ABC} = S_{AB'C'}$. (b) Trong các $\Delta ABC$ có $\widehat{A} = \alpha$ \& đường cao $AH = h$, tam giác nào có diện tích nhỏ nhất?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1, p. 28]
+	Chứng minh: Nếu I là tâm đường tròn nội tiếp $\Delta ABC$ thì $\widehat{BIC} = 90^\circ + \dfrac{\widehat{A}}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 2, p. 28]
+	Chứng minh: Nếu I nằm trong $\Delta ABC$ \& $\widehat{BIC} = 90^\circ + \dfrac{\widehat{A}}{2}$, $\widehat{AIC} = 90^\circ + \dfrac{\widehat{B}}{2}$ thì I là tâm đường tròn nội tiếp $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 3, p. 28]
+	Chứng minh: Nếu J là tâm đường tròn bàng tiếp $\widehat{A}$ của $\Delta ABC$ thì $\widehat{BJC} = 90^\circ - \dfrac{\widehat{A}}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4, p. 28]
+	Cho $\Delta ABC$, đặt $BC = a,CA = b,AB = c$, $a + b + c = 2p$, $r$ là bán kính đường tròn nội tiếp, $S$ là diện tích $\Delta ABC$. Chứng minh: $r = (p - a)\tan\dfrac{A}{2} = (p - b)\tan\dfrac{B}{2} = (p - c)\tan\dfrac{C}{2}$, $S = pr$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5, p. 28]
+	Đường tròn nội tiếp $\Delta ABC$ tiếp xúc với $AB,AC$ tại $F,E$. Chứng minh: $AE = AF = \frac{1}{2}(AB + AC - BC)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD1, p. 29]
+	Cho $\widehat{xOy} = 90^\circ$, đường tròn $(I)$ tiếp xúc với 2 cạnh $Ox,Oy$ tại $A,B$. 1 tiếp tuyến của đường tròn $(I)$ tại điểm E cắt $Ox,Oy$ tại $C,D$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD2, p. 29]
+	Cho $\widehat{xOy}$, 2 điểm $A,B$ lần lượt chuyển động trên Ox \& Oy sao cho chu vi $\Delta OAB$ không đổi. Chứng minh AB luôn tiếp xúc với đường tròn cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD3, p. 29]
+	Cho hình vuông $ABCD$, lấy điểm E trên cạnh BC \& điểm F trên cạnh CD sao cho $AB = 3BE = 2DF$. Chứng minh EF tiếp xúc với cung tròn tâm A, bán kính AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD4, p. 30]
+	Cho đường tròn $(O,R)$, \& đường thẳng $a$ cắt đường tròn tại $A,B$. Gọi M là điểm trên $a$ \& nằm ngoài đường tròn, qua M kẻ 2 tiếp tuyển $MC,MD$. Chứng minh khi M thay đổi trên $a$, đường thẳng CD luôn đi qua 1 điểm cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD5, p. 31]
+	Cho $\Delta ABC$, gọi I là tâm đường tròn nội tiếp tam giác. Qua I dựng đường thẳng vuông góc với IA cắt $AB,AC$ tại $M,N$. Chứng minh: (a) $\dfrac{BM}{CN} = \dfrac{BI^2}{CI^2}$. (b) $BM\cdot AC + CN\cdot AB + AI^2 = AB\cdot AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD6, p. 31]
+	Cho $\Delta ABC$, $D,E,F$ theo thứ tự là 3 tiếp điểm của đường tròn nội tiếp $\Delta ABC$ với 3 cạnh $BC,CA,AB$, H là hình chiếu của D trên EF. Chứng minh DH là tia phân giác của $\widehat{BHC}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD7, p. 32]
+	Gọi I là tâm đường tròn nội tiếp $\Delta ABC$. $D,E$ lần lượt là giao điểm của đường thẳng $BI,CI$ với cạnh $AC,AB$. Chứng minh $\Delta ABC$ vuông tại A $\Leftrightarrow BI\cdot CI = \frac{1}{2}BD\cdot CF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD8, p. 32]
+	Cho đường tròn $(O,R)$ \& điểm M cách tâm O 1 khoảng bằng $3R$. Từ M kẻ 2 đường thẳng tiếp xúc với đường tròn $(O,R)$ tại $A,B$, gọi $I,E$ lần lượt là trung điểm của $MA,MB$. Tính khoảng cách từ O đến IE.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD9, p. 33]
+	Cho $\Delta ABC$ cân tại A. Gọi O là trung điểm BC, dựng đường tròn $(O)$ tiếp xúc với $AB,AC$ tại $D,E$. M là điểm chuyển động trên cung nhỏ $\arc{DE}$, tiếp tuyến với đường tròn $(O)$ tại M cắt 2 cạnh $AB,AC$ lần lượt tại $P,Q$. Chứng minh: (a) $BC^2 = 4BP\cdot CQ$. Từ đó xác định vị trí của M để diện tích $\Delta APQ$ đạt {\rm GTLN}. (b) Nếu $BC^2 = 4BP\cdot CQ$ thì $PQ$ là tiếp tuyến.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD10, p. 34]
+	Cho đường tròn $(O)$, điểm M ở ngoài đường tròn. Qua M kẻ 2 tiếp tuyến cắt đường tròn tại $A,B$, $MA > MB$, gọi CD là đường kính vuông góc với AB, đường thẳng $MC,MD$ cắt đường tròn tại $E,K$, giao điểm của $DE,CK$ là H, I là trung điểm MH. Chứng minh $IE,IK$ là 2 tiếp tuyến của đường tròn $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD11, p. 34]
+	Cho $\Delta ABC$, đường cao AH. Gọi $AD,AE$ là đường phân giác của 2 góc $\widehat{BAH},\widehat{CAH}$. Chứng minh tâm đường tròn nội tiếp $\Delta ABC$ trùng với tâm đường tròn ngoại tiếp $\Delta ADE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD12, p. 35]
+	Cho $\Delta ABC$ vuông tại A. Gọi I là tâm đường tròn nội tiếp $\Delta ABC$, 3 tiếp điểm trên $BC,CA,AB$ lần lượt là $D,E,F$. Gọi M là trung điểm AC, đường thẳng MI cắt cạnh AB tại N, đường thẳng DF cắt đường cao AH của $\Delta ABC$ tại P. Chứng minh $\Delta ANP$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD13, p. 36]
+	Tính $\widehat{A}$ của $\Delta ABC$, biết đỉnh B cách đều tâm 2 đường tròn bàng tiếp của $\widehat{A},\widehat{B}$ của $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD14, p. 36]
+	Cho $\Delta ABC$ có $AB = 2AC$ \& đường phân giác AD. Gọi $r,r_1,r_2$ lần lượt là bán kính đường tròn nội tiếp $\Delta ABC,\Delta ACD,\Delta ABD$. Chứng minh $AD = \dfrac{pr}{3}\left(\dfrac{1}{r_1} + \dfrac{2}{r_2}\right) - p$ với $p$ là nửa chu vi $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD15, p. 37]
+	Cho đường tròn $(O)$ \& điểm A cố định nằm ngoài đường tròn. Kẻ tiếp tuyến AB \& cát tuyến qua A cắt đường tròn tại $C,D$, $AC < AD$. Hỏi trọng tâm $\Delta BCD$ chạy trên đường nào khi cát tuyến ACD thay đổi?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.1., p. 38]
+	Cho nửa đường tròn bán kính $AB = 2R$. C là điểm trên nửa đường tròn, khoảng cách từ C đến AB là $h$. Tính bán kính đường tròn nội tiếp $\Delta ABC$ theo $R,h$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.2., p. 38]
+	Cho $\Delta ABC$, D là điểm trên BC. Đường tròn nội tiếp $\Delta ABD$ tiếp xúc với cạnh BC tại E, đường tròn nội tiếp $\Delta ADC$ tiếp xúc với cạnh BC tại F, đồng thời 2 đường tròn này cùng tiếp xúc với đường thẳng $d\ne BC$, đường thẳng $d$ cắt AD tại I. Chứng minh $AI = \frac{1}{2}(AB + AC - BC)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.3., p. 38]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH. Đường tròn đường kính BH cắt cạnh AB tại M, đường tròn đường kính HC cắt cạnh AC tại N. Chứng minh MN là tiếp tuyến chung của 2 đường tròn đường kính $BH,CH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.4., p. 38]
+	Cho $\Delta ABC$ cân tại A, đường cao AK. Gọi H là trực tâm $\Delta ABC$, đường tròn đường kính AH cắt 2 cạnh $AB,AC$ tại $D,E$. Chứng minh $KD,KE$ là 2 tiếp tuyến của đường tròn đường kính AH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.5., p. 38]
+	Cho đường tròn $(O)$ \& điểm M ở ngoài đường tròn. Từ M kẻ tiếp tuyến $MA,MB$ với đường tròn, $A,B$ là 2 tiếp điểm, tia OM cắt đường tròn tại C, tiếp tuyến tại C cắt tiếp tuyến $MA,MB$ tại $P,Q$. Chứng minh diện tích $\Delta MPQ$ lớn hơn $\frac{1}{2}$ diện tích $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.6., p. 38]
+	Trong tất cả các tam giác có cùng cạnh $a$, đường cao kẻ từ đỉnh đối diện với cạnh $a$ bằng $h$, xác định tam giác có bán kính đường tròn nội tiếp lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.7., p. 38]
+	Cho $\Delta ABC$, I là tâm đường tròn nội tiếp tam giác. Qua I kẻ đường thẳng vuông góc với IA cắt 2 cạnh $AB,AC$ tại $D,E$. Chứng minh $\dfrac{BD}{CE} = \left(\dfrac{IB}{IC}\right)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.8., p. 38]
+	Cho 3 điểm $A,B,C$ cố định nằm trên 1 đường thẳng theo thứ tự đó. Đường tròn $(O)$ thay đổi luôn đi qua $B,C$. Từ A kẻ 2 tiếp tuyến $AM,AN$ với đường tròn $(O)$, $M,N$ là 2 tiếp điểm. Đường thẳng MN cắt AO tại H, gọi E là trung điểm BC. Chứng minh khi đường tròn $(O)$ thay đổi tâm của đường tròn ngoại tiếp $\Delta OHE$ nằm trên 1 đường thẳng cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.9., p. 39]
+	Cho $\Delta ABC$, $\widehat{A} = 30^\circ$, BC là cạnh nhỏ nhất. Trên AB lấy điểm D, trên AC lấy điểm E sao cho $BD = CE = BC$. Gọi $O,I$ là tâm đường tròn ngoại, nội tiếp $\Delta ABC$. Chứng minh $OI = DE$ \& $OI\bot DE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.10., p. 39]
+	Cho $\Delta ABC$ ngoại tiếp đường tròn $(I,r)$, kẻ các tiếp tuyến với đường tròn \& song song với 3 cạnh $\Delta ABC$. Các tiếp tuyến này tạo với 3 cạnh $\Delta ABC$ thành 3 tam giác nhỏ, gọi diện tích 3 tam giác nhỏ là $S_1,S_2,S_3$ \& diện tích $\Delta ABC$ là $S$. Tìm {\rm GTNN} của biểu thức $\dfrac{S_1 + S_2 + S_3}{S}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.11., p. 39]
+	Cho $\Delta ABC$, gọi I là tâm đường tròn nội tiếp, $I_A$ là tâm đường tròn bàng tiếp $\widehat{A}$ \& M là trung điểm BC. Gọi $H,D$ là hình chiếu của $I,I_A$ trên cạnh BC. Chứng minh M là trung điểm của DH, từ đó suy ra đường thẳng MI đi qua trung điểm AH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.12., p. 39]
+	Cho đường tròn $(O,r)$ \& điểm A cố định trên đường tròn. Qua A dựng tiếp tuyến $d$ với đường tròn $(O,r)$. M là điểm chuyển động trên $d$, từ M kẻ tiếp tuyến đến đường tròn $(O,r)$ có tiếp điểm là $B\ne A$. Tâm của đường tròn ngoại tiếp \& trực tâm của $\Delta AMB$ chạy trên đường nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.13., p. 39]
+	Cho nửa đường tròn đường kính AB, từ điểm M trên đường tròn kẻ tiếp tuyến $d$. Gọi $H,K$ là hình chiếu của $A,B$ trên $d$. Chứng minh $AH + BK$ không đổi từ đó suy ra đường tròn đường kính HK luôn tiếp xúc với $AH,BK,AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.14., p. 39]
+	Cho $\Delta ABC$, điểm M trong tam giác, gọi $H,D,E$ là hình chiếu của M thứ tự trên $BC,CA,AB$. Xác định vị trí của M sao cho giá trị của biểu thức $\dfrac{BC}{MH} + \dfrac{CA}{MD} + \dfrac{AB}{ME}$ đạt {\rm GTNN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.15., p. 39]
+	Cho $\Delta ABC$ vuông tại A. Gọi $O,I$ là tâm đường tròn ngoại \& nội tiếp $\Delta ABC$. Biết $\Delta BIO$ vuông tại I. Chứng minh $\dfrac{BC}{5} = \dfrac{CA}{4} = \dfrac{AB}{3}$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
