@@ -625,16 +625,20 @@ Giải \& biện luận phương trình:
 	Xét sự biến thiên của hàm số $f(x) = \sqrt{x - 1}$ trên tập xác định của hàm số.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	$f(x)$ xác định $\Leftrightarrow x - 1\ge0\Leftrightarrow x\ge1$. TXĐ $D_f = \{x\in\mathbb{R}|x\ge1\} = [1,\infty)$. $\forall x_1,x_2\in D_f$ thỏa mãn $1\le x_1 < x_2$, có $f(x_2) - f(x_1) = \sqrt{x_2 - 1} - \sqrt{x_1 - 1} = \dfrac{x_2 - x_1}{\sqrt{x_2 - 1} + \sqrt{x_1 - 1}} > 0$, suy ra $f(x)$ đồng biến trên $D_f$.
+\end{proof}
+
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD6.2, p. 36]
 	Cho hàm số $f(x) = x^4 + 2x^2 + m$. Khi đó: (a) Chứng minh hàm số đồng biến khi $x\ge0$. (b) Chứng minh hàm số nghịch biến khi $x\le0$. (c) Xác định $m$ để $f(x) > 0$ với mọi $x\in\mathbb{R}$. Với các giá trị đã tìm được của $m$, chứng minh $x^4 + 4x^3 + 14x^2 + 29x + m > -\dfrac{98}{5}$, $\forall x\in\mathbb{R}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD6.3, p. 36]
-	Xét tính chẵn lẻ của hàm số $f(x) = \sqrt{1 - x} + \sqrt{1 + x}$ với tập xác định $D = [-1,1]$.
+	Tìm {\rm TXĐ} rồi xét tính chẵn lẻ của hàm số $f(x) = \sqrt{1 - x} + \sqrt{1 + x}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD6.4, p. 37]
-	Xét tính chẵn lẻ của hàm số $y = x^3 + 3x$ với tập xác định $\mathbb{R}$.
+	Tìm {\rm TXĐ} rồi xét tính chẵn lẻ của hàm số $y = x^3 + 3x$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD6.5, p. 37]
@@ -644,6 +648,10 @@ Giải \& biện luận phương trình:
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 6.1., p. 37]
 	Tìm {\rm TXĐ} của hàm số $y = \sqrt{x^2 - 9} + \sqrt[4]{x^3 - 1}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	$y$ xác định $\Leftrightarrow x^2 - 9\ge0\land x^3 - 1\ge0\Leftrightarrow x^2\ge9\land x^3\ge1\Leftrightarrow|x|\ge\sqrt{9} = 3\land x\ge1\Leftrightarrow(x\le-3\lor x\ge3)\land x\ge1\Leftrightarrow x\ge 3$. TXĐ $D_y = \{x\in\mathbb{R}|x\ge3\} = [3,\infty)$.
+\end{proof}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 6.2., p. 37]
 	Tìm {\rm TXĐ} của hàm số $y = \sqrt{x^2 - 4x + 3} + \sqrt[4]{1 - x^4}$.
@@ -1329,9 +1337,17 @@ Giải \& biện luận phương trình:
 	Giả sử đường thẳng $(d)$ xác định bởi phương trình $y = x$. Xác định góc giữa $(d)$ \& tia Ox.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Đặt $\alpha = ((d),Ox)$, $\tan\alpha = a = 1\Rightarrow\alpha = \arctan1 = 45^\circ$.
+\end{proof}
+
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 9.2., p. 50]
 	Xác định góc giữa đường thẳng $(d')$ với tia Ox biết $(d')$ đi qua điểm $A(1,1)$ \& vuông góc với đường thẳng $(d):y = x$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi $(d'):y = ax + b$. $(d)\bot(d')\Leftrightarrow a = -1$. $A(1,1)\in(d')\Leftrightarrow 1 = -1\cdot1 + b\Leftrightarrow b = 2$, suy ra $(d'):y = -x + 2$. Đặt $\alpha = ((d'),Ox)\in[0^\circ,180^\circ]$, có $\tan\alpha = -1\Rightarrow\alpha = \arctan-1 = 135^\circ$.
+\end{proof}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 9.3., p. 50]
 	Trong mặt phẳng $Oxy$ cho 4 điểm $A(1,0),B(0,1),C(-1,0),D(0,-1)$. (a) Chứng minh tứ giác ABCD là 1 hình vuông. (b) Tìm phương trình xác định 4 cạnh $AB,BC,CD,DA$. (c) Tìm phương trình xác định đường thẳng đi qua trung điểm cạnh AB \& trung điểm cạnh CD.
@@ -1350,8 +1366,19 @@ Giải \& biện luận phương trình:
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 9.7., p. 50]
-	Cho 2 điểm $A(x_1,y_1),B(x_2,y_2)$. Lập phương trình đường thẳng AB \& tính hệ số góc của AB.
+	Cho 2 điểm phân biệt $A(x_1,y_1),B(x_2,y_2)$. Lập phương trình đường thẳng AB \& tính hệ số góc của AB.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi $(d):y = ax + b$ là đường thẳng đi qua 2 điểmA $A(x_1,y_1),B(x_2,y_2)$, có hệ phương trình bậc nhất 2 ẩn $a,b$:
+	\begin{equation*}
+		\left\{\begin{split}
+			ax_1 + b &= y_1,\\
+			ax_2 + b &= y_2.
+		\end{split}\right.
+	\end{equation*}
+	Trừ 2 phương trình của hệ, vế theo vế, được $a(x_2 - x_1) = y_2 - y_1$. Nếu $x_1 = x_2$, thay vào phương trình cuối được: $a\cdot 0 = 0 = y_2 - y_1\Rightarrow y_1 = y_2$ vô lý vì$A(x_1,y_1)\ne B(x_2,y_2)$. $\Rightarrow a = \dfrac{y_2 - y_1}{x_2 - x_1}$.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
