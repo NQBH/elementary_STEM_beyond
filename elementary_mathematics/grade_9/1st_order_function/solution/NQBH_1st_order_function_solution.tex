@@ -280,7 +280,7 @@ Giải \& biện luận phương trình:
 \begin{proof}[Giải]
 	Nếu $x_0 = y_0 = 0$, có $0 = a0^2$, $\forall a\in\mathbb{R}\Rightarrow A(0,0)\in(P)$, $\forall a\in\mathbb{R}$. Nếu $x_0 = 0,y_0\ne0$ thì $ax_0^2 = a0^2 = 0\ne y_0\Rightarrow A(x_0,y_0)\notin(P)$, $\forall a\in\mathbb{R}$. Nếu $x_0\ne0$ thì $A(x_0,y_0)\in(P)\Leftrightarrow y_0 = ax_0^2\Leftrightarrow a = \dfrac{y_0}{x_0^2}$. Vậy
 	\begin{equation*}
-		\{a\in\mathbb{R}|A(x_0,y_0)\in(P)\} = \left\{\begin{split}
+		\{a\in\mathbb{R}|A(x_0,y_0)\in(P):y = ax\} = \left\{\begin{split}
 			&\mathbb{R},&&\mbox{nếu } x_0 = y_0 = 0,\\
 			&\emptyset,&&\mbox{nếu } x_0 = 0,y_0\ne0,\\
 			&\left\{\frac{y_0}{x_0^2}\right\},&&\mbox{nếu } x_0\ne0.
@@ -301,6 +301,10 @@ Giải \& biện luận phương trình:
 	(a) Tìm {\rm TXĐ} của hàm số $y = \dfrac{1}{\sqrt{2 - x}}$. (b) Tìm {\rm TXĐ} của hàm số $y = \dfrac{2x + 1}{x^2 - 3x + 2}$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $y = \dfrac{1}{\sqrt{2 - x}}$ xác định $\Leftrightarrow2 - x > 0\Leftrightarrow x < 2\Rightarrow$ TXĐ $D_y = \{x\in\mathbb{R}|x < 2\}$. (b) $y = \dfrac{2x + 1}{x^2 - 3x + 2}$ xác định $\Leftrightarrow x^2 - 3x + 2\ne0\Leftrightarrow(x - 1)(x - 2)\ne0\Leftrightarrow x\ne1\land x\ne2\Rightarrow$ TXĐ $D_y = \{x\in\mathbb{R}|x\ne1\land x\ne2\}$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD1, p. 49]
 	Ở bưu điện, giá tiền cước gửi thư trong nước được niêm yết như sau (chưa tính {\rm VAT}):
 	\begin{table}[H]
@@ -319,20 +323,98 @@ Giải \& biện luận phương trình:
 			\hline
 		\end{tabular}
 	\end{table}
-	\noindent Nếu gọi khối lượng lá thư là $x$ {\rm g}, số tiền cước phải trả là $y$ đồng. (a) $y$ có là hàm số của $x$ không? Vì sao? (b) Tìm {\rm TXĐ} của hàm số $y$. (c) 1 lá thư nặng {\rm300 g} cần phải trả tiền cước là bao nhiêu? (d) Hỏi $x$ có là hàm số của $y$ không? Vì sao?
+	\noindent Nếu gọi khối lượng lá thư là $x$ {\rm g}, số tiền cước phải trả là $y$ đồng. (a) $y$ có là hàm số của $x$ không? Vì sao? (b) Tìm {\rm TXĐ} của hàm số $y$. (c) 1 lá thư nặng {\rm300 g} cần phải trả tiền cước là bao nhiêu? (d) Hỏi $x$ có là hàm số của $y$ không? Vì sao? (e) Tìm 1 công thức tường minh của hàm số $y$ theo $x$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $y$ là 1 hàm số của $x$ vì ứng với 1 giá trị xác định của $x$ ta tính được giá trị duy nhất của $y$. (b) TXĐ $D_y = \{x\in\mathbb{R}|0 < x\le2000\}$. (c) Vì 250 g $<$ 300 g $< 500 = 250 + 250$ g nên lá thư nặng 300 g phải trả tiền cước: $4500 + 2000 = 6500$ đồng. (d) $x$ không phải là hàm số của $y$ vì, e.g., ứng với giá trị xác định $y = 2000$, tìm được $x\in\{1,2,\ldots,20\}$. (e) Theo bảng niêm yết:
+	\begin{equation*}
+		y = \left\{\begin{split}
+			&2000,&&\mbox{khi } 0 < x\le20,\\
+			&3000,&&\mbox{khi } 20 < x\le100,\\
+			&4500,&&\mbox{khi } 100 < x\le250,\\
+			&4500 + 2000\left\lfloor\dfrac{x}{250}\right\rfloor,&&\mbox{khi } x > 250,
+		\end{split}\right.
+	\end{equation*}
+	hoặc $y = 2000{\bf1}_{0 < x\le20} + 3000{\bf1}_{20 < x\le100} + 4500{\bf1}_{100 < x\le250} + 2000\left\lfloor\dfrac{x}{250}\right\rfloor{\bf1}_{x > 250}$ với hàm đặc trưng của tập hợp $A\subset\mathbb{R}$:
+	\begin{equation*}
+		{\bf1}_A = \left\{\begin{split}
+			&1,&&\mbox{nếu } x\in A,\\
+			&0,&&\mbox{nếu } x\notin A.
+		\end{split}\right.
+	\end{equation*}
+\end{proof}
+
+\begin{nhanxet}
+	Theo định nghĩa hàm số: (a) $y$ là hàm số của $x$ trên tập xác định $X$ nếu với mỗi $x\in X$ luôn xác định được duy nhất 1 giá trị tương ứng của $y$. (b) $y$ không là hàm số của $x$ trên $X$ nếu tồn tại $x\in X$ sao cho xác định được ít nhất 2 giá trị tương ứng của $y$ hoặc không tìm được giá trị nào của $y$.
+\end{nhanxet}
+
+\begin{nhanxet}
+	Dạng công thức của hàm số được cho trong lời giải trên, i.e., $y = \sum_{i=1}^n a_i{\bf1}_{A_i}$, với $\bigcup_{i=1}^n A_i = A_1\cup A_2\cup\cdots\cup A_n = D_y$, $A_i\cap A_j= \emptyset$, $\forall i,j = 1,2,\ldots,n$, $i\ne j$, i.e., 1 phân hoạch của tập xác định $D_y$ của hàm số $y$, rất tiện lợi khi giải quyết các bài toán lập trình về tính tiền điện, nước, $\ldots$ với bảng giá niêm yết cho trước.
+\end{nhanxet}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD2, p. 50]
 	1 ôtô có bình chứa xăng đựng được {\rm40 L} xăng. Cứ chạy {\rm100 km} thì ôtô tiêu thụ hết {\rm8 L} xăng. (a) Khi ôtô chạy $x$ {\rm km} thì số {\rm L} xăng $y$ tiêu thụ là bao nhiêu? (b) Hỏi $y$ có là 1 hàm số của $x$ không? (c) Hỏi $x$ có là 1 hàm số của $y$ không? (d) Khi ôtô chạy được {\rm200 km} thì số {\rm L} xăng còn lại trong bình là bao nhiêu nếu lúc đầu bình đầy?
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) Khi ôtô chạy $x$ km thì tiêu thụ hết $y = \dfrac{8}{100}x = \dfrac{2}{25}x = 0.08x$ L xăng. (b) $y$ là 1 hàm số bậc nhất của $x$. (c) $y = \dfrac{2}{25}x\Leftrightarrow x = \dfrac{25}{2}y = 12.5y\Rightarrow x$ là 1 hàm số của $y$. (d) $x = 200\Rightarrow y = \dfrac{2}{25}\cdot200 = 16$ L. Số lượng xăng còn lại trong bình: $40 - 16 = 24$ L.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD3, p. 51]
 	Vẽ trên mặt phẳng tọa độ $Oxy$ các điểm $A(0,5),B(4,5),C(4,0),M(x,0$ với $x > 4$, $N(0,2)$. (a) Tính diện tích S của tứ giác $OABC$. (b) Tính diện tích P của $\Delta BMN$ theo $x$. Chứng minh P là hàm số của $x$. (c) Tìm {\rm TXĐ} của $P$. Hàm số P đồng biến hay nghịch biến trên {\rm TXĐ} của nó? (d) Với giá trị nào của $x$ thì $S = P$?
 \end{baitoan}
 
+\begin{center}
+	\begin{tikzpicture}[>=stealth]
+		\draw[->](-1/2,0)--(4,0) node[above]{$x$};
+		\draw[->](0,-1/2)--(0,3) node[left]{$y$};
+		\path
+		(0,0) coordinate (O)
+		(0,5/2) coordinate (A)
+		(2,5/2) coordinate (B)
+		(2,0) coordinate (C)
+		(3,0) coordinate (M)
+		(0,1) coordinate (N);
+		\draw (A)--(B)--(C) (B)--(M)--(N)--cycle (A)node[left]{$5$} (C) node[below left]{$4$} (M) node[below]{$x$} (N) node[below left]{$2$};
+		\foreach \x/\g in {A/45,B/45,C/-45,M/45,N/135,O/-135} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+	\end{tikzpicture}
+\end{center}
+
+\begin{proof}[1st giải]
+	(a) Tứ giác $OABC$ là hình chữ nhật có $OA = 5,OC = 4$, $S_{OABC} = OA\cdot OC = 5\cdot4 = 20$. (b) $P = S_{OABM} - S_{ABN} - S_{OMN} = \dfrac{(4 + x)\cdot5}{2} - \dfrac{3\cdot4}{2} - \dfrac{2x}{2} = \dfrac{3x}{2} + 4\Rightarrow P$ là hàm số bậc nhất của $x$. (c) TXĐ $D_P = \{x\in\mathbb{R}|x > 4\}$. Vì $P$ là hàm số bậc nhất của $x$ với hệ số góc $\dfrac{3}{2} > 0$ nên $P$ đồng biến trên $D_P$. (D) $S = P\Leftrightarrow\dfrac{3x}{2} + 4 = 20\Leftrightarrow x = \dfrac{32}{3} > 4$ (nhận vì $x\in D_P$).
+\end{proof}
+Để xét tính đơn điệu (i.e., đồng biến hoặc nghịch biến) của hàm số $P$, ta có thể sử dụng định nghĩa:
+
+\begin{proof}[2nd giải]
+	(c) TXĐ $D_P = \{x\in\mathbb{R}|x > 4\}$. Lấy $x_2 > x_1 > 4$: $P_2 - P_1 = \dfrac{3x_1}{2} + 4 - \left(\dfrac{3x_2}{2} + 4\right) = \dfrac{3}{2}(x_2 - x_1) > 0\Rightarrow P_2 > P_1$. Vậy hàm số $P$ đồng biến trên $D_P$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD4, p. 51]
 	Cho hình chữ nhật ABCD với $AB = 36,BC = 15$. Trên cạnh AB lấy điểm M. Gọi $AM = x$, $0 < x < 36$. Qua M kẻ $MN\parallel BD$ với $N\in AD$. Qua M kẻ $MP\parallel AC$ với $P\in BC$. (a) Chứng minh độ dài $MN,MP$ là 2 hàm số của $x$. (b) Trên cạnh CD lấy điểm Q sao cho $DQ = 36 - x$. Chứng minh chu vi tứ giác MNQP là 1 hàm hằng.
 \end{baitoan}
+
+\begin{center}
+	\begin{tikzpicture}[scale=.6]
+		\path
+		(0,3) coordinate (A)
+		(7.2,3) coordinate (B)
+		(7.2,0) coordinate (C)
+		(0,0) coordinate (D)
+		(2.4,3) coordinate (X)
+		(4.8,3) coordinate (M)
+		(0,1) coordinate (N)
+		(7.2,2) coordinate (P)
+		(2.4,0) coordinate (Q)
+		(1.2,0) coordinate (Y)		;
+		\draw (A)--(B)--(C)--(D)--cycle (A)--(C) (B)--(D) (M)--(N)--(Q)--(P)--cycle (X) node[above]{$x$} (Y) node[below]{$36 - x$};
+		\foreach \x/\g in {A/135,B/45,C/-45,D/-135,M/90,N/180,P/0,Q/-90} \draw[fill=white] (\x) circle (.1) + (\g:.5) node{$\x$};
+	\end{tikzpicture}
+\end{center}
+
+\begin{proof}[Giải]
+	(a) Áp dụng định lý Pythagore cho $\Delta ABC$ vuông tại A: $AC = \sqrt{AB^2 + BC^2} = \sqrt{36^2 + 15^2} = 39$. Vì $ABCD$ là hình chữ nhật, $BD = AC = 39$. Áp dụng định lý Thales cho $\Delta ABD$ với $MN\parallel BD$: $\dfrac{AM}{AB} = \dfrac{MN}{BD}\Leftrightarrow MN = \dfrac{AM\cdot BD}{AB} = \dfrac{x\cdot39}{36} = \dfrac{13}{12}x$ nên $MN$ là 1 hàm số bậc nhất của $x$. Tương tự, áp dụng định lý Thales cho $\Delta ABC$ với $MP\parallel AC$: $\dfrac{BM}{AB} = \dfrac{MP}{AC}\Leftrightarrow MP = \dfrac{BM\cdot AC}{AB} = \dfrac{(36 - x)\cdot39}{36} = -\dfrac{13}{12}x + 39$ nên $MP$ cũng là 1 hàm số bậc nhất của $x$. (b) Áp dụng định lý Thales cho $\Delta ABC$ với $MP\parallel AC$: $\dfrac{BP}{BC} = \dfrac{BM}{AB} = \dfrac{36 - x}{36} = \dfrac{DQ}{CD}$, áp dụng định lý Thales đảo cho $\Delta BCD$ suy ra $PQ\parallel BD$, mà $MN\parallel BD$ (giả thiết), suy ra $MN\parallel PQ$. Tương tự, áp dụng định lý Thales cho $\Delta ABD$ với $MN\parallel BD$: $\dfrac{DN}{AD} = \dfrac{BM}{AB} = \dfrac{36 - x}{36} = \dfrac{DQ}{CD}$, áp dụng định lý Thales đảo cho $\Delta ACD$ suy ra $QN\parallel AC$, mà $MP\parallel AC$ (giả thiết), suy ra $NQ\parallel MP$. Tứ giác $MNQP$ có 2 cặp cạnh đối song song $MN\parallel PQ$, $QN\parallel AC$, nên là hình bình hành. Suy ra $C_{MNPQ} = 2(MN + MP) = 2\left(\dfrac{13}{12}x -\dfrac{13}{12}x + 39\right) = 2\cdot39 = 78$ nên $C_{MNPQ}$ là hàm hằng (i.e., không phụ thuộc vào biến $x$).
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD5, p. 52]
 	Đồ thị hàm số $y = f(x)$ trên mặt phẳng tọa độ: $A(-3,3),B(-1,-3),C(2,-3),D(4,0)$.
@@ -347,12 +429,24 @@ Giải \& biện luận phương trình:
 			(-1/2,-3/2) coordinate (B)
 			(1,-3/2) coordinate (C)
 			(2,0) coordinate (D);
-			\draw (A)--(B)--(C)--(D);
-			\foreach \x/\g in {A/90,B/-135,C/-45,D/-45} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+			\draw (A)--(B)--(C)--(D) (0,3/2) node[right]{$3$} (0,-3/2) node[below right]{$-3$} (1,0) node[above]{$2$} (2,0) node[above]{$4$} (-1/2,0) node[above]{$-1$} (-3/2,0) node[below]{$-3$};
+			\foreach \x/\g in {A/90,B/-135,C/-45,D/-45,O/-135} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
 		\end{tikzpicture}
 	\end{center}
 	\noindent(a) Tìm {\rm TXĐ} của hàm số $y$. (b) Tính $f(-3),f(-1),f(1),f(2),f(3),f(4)$. (c) Hàm số $y = f(x)$ đồng biến \& nghịch biến trong khoảng nào? (d) {\rm Đ{\tt/}S?} Khi xét $x_1 = 2$, $f(x_1) = f(2) = -3$, $x_2 = -3$, $f(x_2) = f(-3) = 3$, ta thấy $x_2 < x_1$, $f(x_2) > f(x_1)$ nên hàm số nghịch biến trong khoảng $[-3,2]$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) TXĐ của hàm số $y$: $D_y = \{x\in\mathbb{R}|-3\le x\le4\} = [-3,4]$. (b) $f(-3) = 3,f(-1) = -3,f(1) = -3,f(2) = -3,f(3) = -1.5,f(4) = 0$. (c) Hàm số $y$ nghịch biến trên đoạn $[-3,-1]$, hằng trên đoạn $[-1,2]$, đồng biến trên đoạn $[2,4]$. (d) Khẳng định hàm số $y$ nghịch biến trong đoạn $[-3,2]$ là sai, e.g., cho $x_1 = -1,x_2 = 2$, $x_1 < x_2$ nhưng $f(-1) = f(2) = -3$.
+\end{proof}
+
+\begin{luuy}
+	Khi xét tính đơn điệu, i.e., đồng biến hoặc nghịch biến của 1 hàm số bất kỳ, ta xét từ trái sang phải, khoảng nào mà: Đồ thị hàm số đi lên thì hàm số đồng biến trong khoảng đó. Đồ thị hàm số đi xuống thì hàm số nghịch biến trong khoảng đó. 
+\end{luuy}
+
+\begin{luuy}
+	Khi xét tính đồng biến, nghịch biến của 1 hàm số $y = f(x)$ ta phải chọn 2 giá trị tùy ý $x_1,x_2\in D_y$, $x_1 < x_2$.
+\end{luuy}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.1., p. 53]
 	Bảng sau ghi các giá trị tương ứng của 2 đại lượng $x,y$ phụ thuộc nhau.
@@ -362,19 +456,27 @@ Giải \& biện luận phương trình:
 			\hline
 			$x$ & 1 & 2 & 3 & 4 & 5 & 1 & 6 & 7 & 8 \\
 			\hline
-			$y$ & 0 & 2 & -1 & 5 & 4 & -4 & 3 & -2 & -6 \\
+			$y$ & 0 & 2 & $-1$ & 5 & 4 & $-4$ & 3 & $-2$ & $-6$ \\
 			\hline
 		\end{tabular}
 	\end{table}
 	\noindent(a) $y$ có là hàm số của $x$ không? (b) $x$ có là hàm số của $y$ không? (c) Trường hợp là hàm số, nêu {\rm TXĐ}.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $y$ không là hàm số của $x$ vì với $x = 1$ lại có 2 giá trị tương ứng của $y$ là $y = 0,y = -4$. (b) $x$ là hàm số của $y$ vì mỗi $y$ xác định duy nhất 1 giá trị $x$ tương ứng. (c) TXĐ của hàm số $x = x(y)$: $D_x = \{-6,-4,-2,-1,0,2,3,4,5\}$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.2., p. 53]
 	Cho hàm số $y = f(x) = 3x^2 + 1$. (a) Tính $f(-1),f(0),f(1)$. (b) Tìm $x$ để $f(x) = 4$. (c) Trong 3 điểm $A(0,1),B(2,3),C(3,4)$, điểm nào không thuộc đồ thị hàm số đã cho?
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $f(-1) = 3(-1)^2 + 1 = 4,f(0) = 3\cdot0^2 + 1 = 1,f(1) = 3\cdot1^2 + 1 = 4$. (b) $f(x) = 4\Leftrightarrow3x^2 + 1 = 4\Leftrightarrow x^2 = 1\Leftrightarrow x = \pm1$. (c) Đặt $G_y\coloneqq\{(x,y)|x\in\mathbb{R},\,y = 3x^2 + 1\} = \{(x,3x^2 + 1)|x\in\mathbb{R}\}$. $f(0) = 1\Rightarrow A(0,1)\in G_y$, $f(2) = 3\cdot2^2 + 1 = 13\ne3\Rightarrow B(2,3)\notin G_y$, $f(3) = 3\cdot3^2 + 1 = 28\ne4\Rightarrow C(3,4)\notin G_y$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.3., p. 53]
-	Bảng giá bán lẻ điện cho các hộ gia đình (chưa tính {\rm VAT}) (theo QĐ số 2256{\tt/}QĐ-BCT 12.3.2015 của Bộ Công thương):
+	Bảng giá bán lẻ điện cho các hộ gia đình (chưa tính {\rm VAT 10\%}) (theo QĐ số 2256{\tt/}QĐ-BCT 12.3.2015 của Bộ Công thương):
 	\begin{table}[H]
 		\centering
 		\begin{tabular}{|l|c|}
@@ -395,16 +497,49 @@ Giải \& biện luận phương trình:
 			\hline
 		\end{tabular}
 	\end{table}
-	\noindent Gọi số điện sử dụng của hộ gia đình là $x$ {\rm kwh}, số tiền phải trả là $y$ đồng. (a) $y$ có phải là hàm số của $x$ không? (b) Nếu dùng hết $310$ {\rm kwh} điện thì phải trả bao nhiêu tiền?
+	\noindent Gọi số điện sử dụng của hộ gia đình là $x$ {\rm kwh}, số tiền phải trả là $y$ đồng. (a) $y$ có phải là hàm số của $x$ không? (b) Nếu dùng hết $310$ {\rm kwh} điện thì phải trả bao nhiêu tiền? (c) Tìm công thức của hàm số $y$ theo $x$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Ứng với mỗi mức tiêu thụ điện phải trả 1 số tiền tương ứng, nên $y$ là hàm số của $x$. (b) Nếu 1 hộ dùng hết 310 kwh điện thì phải trả (chưa tính VAT): $1484\cdot50 + 1533\cdot50 + 1786\cdot100 + 2242\cdot100 + 2503\cdot10 = 578680$ đồng. Sau khi tính cả VAT 10\%, hộ đó phải trả: $578680 + 578680\cdot10\% = 578680 + 57868 = 636548$ đồng.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.4., p. 53]
 	Chứng minh: (a) Hàm số $y = 2x + 3$ đồng biến trên $\mathbb{R}$. (b) Hàm số $y = -2x + 7$ nghịch biến trên $\mathbb{R}$.
 \end{baitoan}
 
+\begin{proof}[1st giải]
+	(a) Vì $y = 2x + 3$ là hàm số bậc nhất có hệ số góc $2 > 0$ nên $y$ đồng biến trên $D_y = \mathbb{R}$. (b) Vì $y = -2x + 7$ là hàm số bậc nhất có hệ số góc $-2 < 0$ nên $y$ nghịch biến trên $D_y = \mathbb{R}$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Sử đụng định nghĩa: Với $x_1,x_2\in\mathbb{R}$, $x_1 < x_2$ bất kỳ. (a) $y_1 - y_2 = (2x_1 + 3) - (2x_2 + 3) = 2(x_1 - x_2) < 0$ nên $y$ đồng biến trên $D_y = \mathbb{R}$. (b) $y_1 - y_2 = (-2x_1 + 7) - (-2x_2 + 7) = 2(x_2 - x_1) > 0$ nên $y$ nghịch biến trên $D_y = \mathbb{R}$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.5., p. 53]
 	Cho $\Delta ABC$ đều có độ dài cạnh bằng $a$. Lấy $M\in AB$ sao cho $AM = x$ với $0 < x < a$. Vẽ hình chữ nhật MNPQ với $N\in AC$, $P,Q\in BC$. (a) Chứng minh diện tích hình chữ nhật MNPQ là hàm số của $x$. (b) Xác định $x$ để diện tích hình chữ nhật MNPQ lớn nhất.
 \end{baitoan}
+
+\begin{center}
+	\begin{tikzpicture}
+		\path
+		(0:0) coordinate (B)
+		(0:3) coordinate (C)
+		($(B)!1!60:(C)$) coordinate (A)
+		($(A)!1/3!(B)$) coordinate (M)
+		($(A)!1/3!(C)$) coordinate (N)
+		($(B)!(M)!(C)$) coordinate (Q)
+		($(B)!(N)!(C)$) coordinate (P)
+		($(A)!.5!(M)$) coordinate (X)
+		($(B)!.5!(M)$) coordinate (Y);
+		\draw (A)--(B)--(C)--cycle (M)--(N)--(P)--(Q)--cycle (X) node[above left]{$x$} (Y) node[left]{$a - x$} pic[draw, angle radius = 1.5mm]{right angle = M--Q--P} pic[draw, angle radius = 1.5mm]{right angle = Q--M--N} pic[draw, angle radius = 1.5mm]{right angle = M--N--P} pic[draw, angle radius = 1.5mm]{right angle = N--P--Q};
+		\foreach \x/\g in {A/90,B/-135,C/-45,M/135,N/45,P/-90,Q/-90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+	\end{tikzpicture}
+\end{center}
+
+\begin{proof}[Giải]
+	(a) 
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1},  p. 53, Công thức Lorentz cho số cân nặng lý tưởng tương ứng với chiều cao]
 	Cách đây hơn 1 thế kỷ, nhà khoa học người Hà Lan Hendrick Lorentz (1853--1928) đưa ra công thức tính số cân nặng lý tưởng của con người theo chiều cao:
