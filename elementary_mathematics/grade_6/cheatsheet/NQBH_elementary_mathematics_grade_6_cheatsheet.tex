@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tipa}
+\usepackage{enumitem}
+\setlist{leftmargin=4mm}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Cheatsheet for Elementary Mathematics\texttt{/}Grade 6}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a cheatsheet of formulas in Elementary Mathematics Grade 6. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/cheatsheet/NQBH_elementary_mathematics_grade_6_cheatsheet.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}cheatsheet}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/cheatsheet/NQBH_elementary_mathematics_grade_6_cheatsheet.pdf}.}.
+	\vspace{2mm}
+
+	\textsc{[vi]} Tài liệu này là 1 bảng tóm tắt kiến thức \& công thức của Toán Sơ Cấp lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/cheatsheet/NQBH_elementary_mathematics_grade_6_cheatsheet.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}cheatsheet}.
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Số Tự Nhiên}
+\textbf{\S1. Tập hợp.} Cho tập hợp bằng cách liệt kê các phần tử: $A = \{a;b;c\}$, $a\in A$, $d\notin A$. Cho tập hợp bằng cách chỉ ra tính chất đặc trưng cho các phần tử: $B = \{x|x\mbox{ thỏa mãn các điều kiện được nêu rõ}\}$. Tập con: $A\subset B\Leftrightarrow B\supset A\Leftrightarrow(x\in A\Rightarrow x\in B,\,\forall x)$, $C\not\subset D\Leftrightarrow D\not\supset C\Leftrightarrow(\exists x\in C,\,x\notin D)$. \textbf{\S2. Tập hợp các số tự nhiên.} $\mathbb{N} = \{0;1;2;3;\ldots\} = \mathbb{N}^\star\cup\{0\}\supset\mathbb{N}^\star$. $\mathbb{N}^\star = \{1;2;3;\ldots\} = \mathbb{N}\backslash\{0\}\subset\mathbb{N}$. $a\in\mathbb{N}\Leftrightarrow a = \overline{a_na_{n-1}\ldots a_1a_0} = \sum_{i=0}^n 10^ia_i = a_0 + 10a_1 + 10^2a_2 + \cdots + 10^{n-1}a_{n-1} + 10^na_n$, với $n\in\mathbb{N}$, $\forall a_i\in\{0;1;2;3;4;5;6;7;8;9\}$, $i = 0,\ldots,n$, $a_n\ne 0$. Số La Mã: \textsc{i} $= 1$, \textsc{ii} $= 2$, \textsc{iii} $= 3$, \textsc{iv} $= 4$, \textsc{v} $= 5$, \textsc{vi} $= 6$, \textsc{vii} $= 7$, \textsc{viii} $= 8$, \textsc{ix} $= 9$, \textsc{x} = $10$, \textsc{xi} $= 11$, \textsc{xii} $= 12$, \textsc{xiii} $= 13$, \textsc{xiv} $= 14$, \textsc{xv} $= 15$, \textsc{xvi} $= 16$, \textsc{xvii} $= 17$, \textsc{xviii} $= 18$, \textsc{xix} $= 19$, \textsc{xx} = $20$, \textsc{xxi} $= 21$, \textsc{xxii} $= 22$, \textsc{xxiii} $= 23$, \textsc{xxiv} $= 24$, \textsc{xxv} $= 25$, \textsc{xxvi} $= 26$, \textsc{xxvii} $= 27$, \textsc{xxviii} $= 28$, \textsc{xxix} $= 29$, \textsc{xxx} = $30$, \textsc{l} $= 50$, \textsc{c} $= 100$, \textsc{d} $= 500$, \textsc{m} $= 1000$, \textsc{xl} $= 40$, \textsc{xc} $= 90$, \textsc{cd} $= 400$, \textsc{cm} $= 900$. $\forall a,b\in\mathbb{N}$, $(a < b)\lor(a = b)\lor(a > b)$. Tính chất bắc cầu: $((a < b)\land(b < c))\Rightarrow(a < c)$, $\forall a,b,c\in\mathbb{N}$. \textbf{\S3. $\boldsymbol{\pm}$ trên $\mathbb{N}$.} \textit{Tính chất của $+$ trên $\mathbb{N}$}: giao hoán: $a + b = b + a$, $\forall a,b\in\mathbb{N}$; kết hợp: $(a + b) + c = a + (b + c)$, $\forall a,b,c\in\mathbb{N}$; cộng với $0$: $a + 0 = 0 + a = a$, $\forall a\in\mathbb{N}$. $a - b = c\Rightarrow a = b + c$, $\forall a,b,c\in\mathbb{N}$, $a\ge b$. $a + b = c\Rightarrow(a = c - b\land b = c - a)$, $\forall a,b,c\in\mathbb{N}$, $c\ge\max\{a,b\}$. \textbf{\S4. $\boldsymbol{\cdot,:}$ trên $\mathbb{N}$.} \textit{Tính chất của $\cdot$ trên $\mathbb{N}$}: giao hoán: $ab = ba$, $\forall a,b\in\mathbb{N}$; kết hợp $(ab)c = a(bc)$, $\forall a,b,c\in\mathbb{N}$; nhân với số $1$: $a1 = 1a = a$, $\forall a\in\mathbb{N}$; phân phối của $\cdot$ đối với $\pm$: $a(b + c) = ab + ac$, $\forall a,b,c\in\mathbb{N}$, $a(b - c) = ab - ac$, $\forall a,b,c\in\mathbb{N}$, $b\ge c$. $a:b = \frac{a}{b} = q\Rightarrow a = bq$, $((a:b = q)\land(q\ne 0))\Rightarrow a:q = b$, $\forall a,b,q\in\mathbb{N}$, $b\ne 0$. $a = bq + r$, $a,b,q,r\in\mathbb{N}$, $b\ne 0$, $0\le r < b$; phép chia hết: $r = 0$, $a = bq$, $a\divby b$, $b|a$; phép chia có dư: $r\ne 0$, $a:b = q$ (dư $r$). \textbf{\S5. Phép  tính lũy thừa với số mũ tự nhiên.} $a^n = a\cdot a\cdot\cdots\cdot a$ ($n$ thừa số $a$), $\forall a\in\mathbb{N}$, $\forall n\in\mathbb{N}^\star$. $a^1 = a$, $\forall a\in\mathbb{N}$. $10^n = 10\ldots 0$ ($n$ số $0$), $\forall n\in\mathbb{N}$. $a^ma^n = a^{m+n}$, $\forall a,m,n\in\mathbb{N}$, $x^2 + m^2n^2\ne 0$. $a^m:a^n = \frac{a^m}{a^n} = a^{m-n}$, $\forall a\in\mathbb{N}^\star$, $\forall m,n\in\mathbb{N}$, $m\ge n$. Quy ước: $a^0 = 1$, $\forall a\in\mathbb{N}^\star$. \textbf{\S6. Thứ tự thực hiện các phép tính.} $()\to[]\to\{\}$, $\widehat{\ }\to\cdot,:\to\pm$. \textbf{\S7. Quan hệ chia hết. Tính chất chia hết.} $a,b,q\in\mathbb{N}$, $b\ne 0$, $a = bq\Leftrightarrow a\divby b\Leftrightarrow b|a\Leftrightarrow a\in\operatorname{B}(b)\Leftrightarrow b\in\mbox{Ư}(a)$. $a,b,q,r\in\mathbb{N}$, $b,r\ne 0$, $a = bq + r\Leftrightarrow a\not\divby b\Leftrightarrow b\not|\ a\Leftrightarrow a\notin\operatorname{B}(b)\Leftrightarrow b\notin\mbox{Ư}(a)$. $a|a$, $a\in\mbox{Ư}(a)$, $a\divby a$, $a\in\operatorname{B}(a)$, $0\divby a$, $0\in\operatorname{B}(a)$, $a|0$, $a\in\mbox{Ư}(0)$, $1|a$,$1\in\mbox{Ư}(1)$, $a\divby 1$,  $a\in\operatorname{B}(1)$, $\forall a\in\mathbb{N}^\star$. $\operatorname{B}(n)\cap\mathbb{N} = \{mn|m\in\mathbb{N}\}$, $\forall n\in\mathbb{N}^\star$. $\mbox{Ư}(n)\cap\mathbb{N} = \{m\in\mathbb{N}^\star|m\le n,\,n\divby m\}$. $(a\divby n)\land(b\divby n)\Rightarrow(a + b)\divby n$, $(a + b):n = a:n + b:n$, $\frac{a + b}{n} = \frac{a}{n} + \frac{b}{n}$, $\forall a,b,n\in\mathbb{N}$, $n\ne 0$. $(a\divby n)\land(b\divby n)\Rightarrow(a - b)\divby n$, $(a - b):n = a:n - b:n$, $\frac{a - b}{n} = \frac{a}{n} - \frac{b}{n}$, $\forall a,b,n\in\mathbb{N}$, $a\ge b$, $n\ne 0$. $(a\divby n)\Rightarrow(ab\divby n)$, $\forall a,b,n\in\mathbb{N}$, $n\ne 0$. \textbf{\S8. Dấu hiệu chia hết cho $2$, cho $5$.} $A = \overline{a_na_{n-1}\ldots a_2a_1a_0}$, $n\in\mathbb{N}$, $a_i\in\{0;1;2;3;4;5;6;7;8;9\}$, $\forall i = 1,\ldots,n$, $a_n\ne 0$ nếu $n\ne 0$. $A\divby 2\Leftrightarrow a_0\in\{0;2;4;6;8\}$. $A\divby 5\Leftrightarrow a_0\in\{0;5\}$. $A\divby 10\Leftarrow a_0 = 0$. $A\divby 4\Leftrightarrow\overline{a_1a_0}\divby 4\Leftrightarrow 2a_1 + a_0\divby 4$. \textbf{\S9. Dấu hiệu chia hết cho $3$, cho $9$.} $A\divby 3\Leftrightarrow\sum_{i=0}^n a_i = a_n + a_{n-1} + \cdots + a_1 + a_0\divby 3$. $A\divby 9\Leftrightarrow\sum_{i=0}^n a_i = a_n + a_{n-1} + \cdots + a_1 + a_0\divby 9$. $A\divby 9\Rightarrow A\divby 3$, nhưng $A\divby 3\not\Rightarrow A\divby 9$. \textbf{\S10. Số nguyên tố. Hợp số.} $p$ là số nguyên tố $\Leftrightarrow\mbox{Ư}(p)\cap\mathbb{N} = \{1,p\}\Leftrightarrow|\mbox{Ư}(p)\cap\mathbb{N}| = 2$. $n$ là hợp số $\Leftrightarrow\mbox{Ư}(n)\cap\mathbb{N}\ne \{1,n\}\Leftrightarrow|\mbox{Ư}(n)\cap\mathbb{N}|\ge 3\Leftrightarrow\exists a\in\mathbb{N}^\star,a\notin\{1;n\},n\divby a$. $0$ \& $1$ không là số nguyên tố, cũng không là hợp số. $p$ là ước nguyên tố của $a\Leftrightarrow$(($p$ là số nguyên tố)$\land(a\divby p)$). $2$: số nguyên tố nhỏ nhất, số nguyên tố chẵn duy nhất. \textbf{\S11. Phân tích 1 số ra thừa số nguyên tố.} Phân tích ra thừa số nguyên tố bằng máy tính Casio: nhập số $n$ \fbox{$=$} \fbox{\textsc{shift}} \fbox{\textsc{fact}}. Phân tích $a\in\mathbb{N}$ ra thừa số nguyên tố: $a = \prod_{i=1}^n p_i^{a_i} = p_1^{a_1}p_2^{a_2}\cdots p_n^{a_n}$, $n\in\mathbb{N}$, $p_i$ là số nguyên tố, $a_i\in\mathbb{N}^\star$, $\forall i = 1,\ldots,n$. \textbf{\S12. Ước chung \& ước chung lớn nhất.} ƯC \& ƯCLN của 2 số: $((a\divby n)\land(b\divby n))\Leftrightarrow((a\in\operatorname{B}(n))\land(b\in\operatorname{B}(n)))\Leftrightarrow((n|a)\land(n|b))\Leftrightarrow((n\in\mbox{Ư}(a))\land(n\in\mbox{Ư}(b)))\Leftrightarrow n\in\mbox{ƯC}(a,b)$. $n = \max\mbox{ƯC}(a,b)\Leftrightarrow n = \mbox{ƯCLN}(a,b)$. $\mbox{ƯC}(a,b)\in\mbox{Ư}(\mbox{ƯCLN}(a,b))$, $\mbox{ƯC}(a,b)|\mbox{ƯCLN}(a,b)$, $\mbox{ƯCLN}(a,b)\divby \mbox{ƯC}(a,b)$, $\mbox{ƯCLN}(a,b)\in\operatorname{B}(\mbox{ƯC}(a,b))$. ƯC \& ƯCLN của 3 số: $((a\divby n)\land(b\divby n)\land(c\divby n))\Leftrightarrow((a\in\operatorname{B}(n))\land(b\in\operatorname{B}(n))\land(c\in\operatorname{B}(n))\Leftrightarrow((n|a)\land(n|b)\land(n|c))\Leftrightarrow((n\in\mbox{Ư}(a))\land(n\in\mbox{Ư}(b))\land(n\in\mbox{Ư}(c)))\Leftrightarrow n\in\mbox{ƯC}(a,b,c)$. $n = \max\mbox{ƯC}(a,b,c)\Leftrightarrow n = \mbox{ƯCLN}(a,b,c)$. $\mbox{ƯC}(a,b,c)\in\mbox{Ư}(\mbox{ƯCLN}(a,b,c))$, $\mbox{ƯC}(a,b,c)|\mbox{ƯCLN}(a,b,c)$, $\mbox{ƯCLN}(a,b,c)\divby \mbox{ƯC}(a,b,c)$, $\mbox{ƯCLN}(a,b,c)\in\operatorname{B}(\mbox{ƯC}(a,b,c))$. ƯC \& ƯCLN của $n$ số: $(a_i\divby m,\,\forall i = 1,\ldots,n)\Leftrightarrow(a_i\in\operatorname{B}(m),\,\forall i = 1,\ldots,n)\Leftrightarrow(m|a_i,\,\forall i = 1,\ldots,n)\Leftrightarrow(m\in\mbox{Ư}(a_i),\,\forall i = 1,\ldots,n)\Leftrightarrow m\in\mbox{ƯC}(a_1,\ldots,a_n)$. $m = \max\mbox{ƯC}(a_1,\ldots,a_n)\Leftrightarrow m = \mbox{ƯCLN}(a_1,\ldots,a_n)$. $\mbox{ƯC}(a_1,\ldots,a_n)\in\mbox{Ư}(\mbox{ƯCLN}(a_1,\ldots,a_n))$, $\mbox{ƯC}(a_1,\ldots,a_n)|\mbox{ƯCLN}(a_1,\ldots,a_n)$, $\mbox{ƯCLN}(a_1,\ldots,a_n)\divby \mbox{ƯC}(a_1,\ldots,a_n)$, $\mbox{ƯCLN}(a_1,\ldots,a_n)\in\operatorname{B}(\mbox{ƯC}(a_1,\ldots,a_n))$. Tìm ƯCLN bằng cách phân tích các số ra thừa số nguyên tố: $a = \prod_{i=1}^n p_i^{a_i}$, $b = \prod_{i=1}^n p_i^{b_i}$, $\mbox{ƯCLN}(a,b) = \prod_{i=1}^n p_i^{\min\{a_i,b_i\}}$. $p,q$ nguyên tố cùng nhau $\Leftrightarrow\mbox{ƯCLN}(p,q) = 1\Leftrightarrow\mbox{BCNN}(p,q) = pq$. $\forall a,b\in\mathbb{N}$, $b\ne 0$, $\frac{a}{b}$ tối giản $\Leftrightarrow\mbox{ƯCLN}(a,b) = 1$. \textbf{\S13. Bội chung \& bội chung nhỏ nhất.} BC \& BCNN của 2 số: $((n\divby a)\land(n\divby b))\Leftrightarrow((n\in\operatorname{B}(a))\land(n\in\operatorname{B}(a)))\Leftrightarrow((a|n)\land(b|n))\Leftrightarrow\{a;b\}\subset\mbox{Ư}(n)\Leftrightarrow n\in\operatorname{BC}(a,b)$. $n = \min(\operatorname{BC}(a,b)\backslash\{0\})\Leftrightarrow n = \operatorname{BCNN}(a,b)$. BC \& BCNN của 3 số: $((n\divby a)\land(n\divby b)\land(n\divby c))\Leftrightarrow((n\in\operatorname{B}(a))\land(n\in\operatorname{B}(a))\land(n\in\operatorname{B}(c)))\Leftrightarrow((a|n)\land(b|n)\land(c|n))\Leftrightarrow\{a;b;c\}\subset\mbox{Ư}(n)\Leftrightarrow n\in\operatorname{BC}(a,b,c)$. $n = \min(\operatorname{BC}(a,b,c)\backslash\{0\})\Leftrightarrow n = \operatorname{BCNN}(a,b,c)$. BC \& BCNN của $n$ số: $(m\divby a_i,\,\forall i = 1,\ldots,n)\Leftrightarrow(m\in\operatorname{B}(a_i)\,\forall i = 1,\ldots,n)\Leftrightarrow(a_i|m,\,\forall i = 1,\ldots,n)\Leftrightarrow(a_i\in\mbox{Ư}(n))\Leftrightarrow m\in\operatorname{BC}(a_1,\ldots,a_n)$. $n = \min(\operatorname{BC}(a_1,\ldots,a_n)\backslash\{0\})\Leftrightarrow n = \operatorname{BCNN}(a_1,\ldots,a_n)$. Tìm BCNN bằng cách phân tích các số ra thừa số nguyên tố: $a = \prod_{i=1}^n p_i^{a_i}$, $b = \prod_{i=1}^n p_i^{b_i}$, $\mbox{BCNN}(a,b) = \prod_{i=1}^n p_i^{\max\{a_i,b_i\}}$. $a\divby b\Leftrightarrow\operatorname{BCNN}(a,b) = a\Leftrightarrow\mbox{ƯCLN}(a,b) = b$. Tính tổng các phân số cùng mẫu số: $\sum_{i=1}^{n} \frac{a_i}{b} = \frac{\sum_{i=1}^n a_i}{b}$, i.e., $\frac{a_1}{b} + \cdots + \frac{a_n}{b} = \frac{a_1 + \cdots + a_n}{b}$, $\forall a_i,b\in\mathbb{Z}$, $b\ne 0$, $\forall i = 1,\ldots,n$. Tính tổng các phân số khác mẫu số: Quy đồng mẫu số các phân số đó với mẫu số chung là BCNN của các mẫu số các phân số đó rồi cộng lại:
+\begin{align*}
+	\sum_{i=1}^{n} \frac{a_i}{b_i} = \frac{\sum_{i=1}^n a_i\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_i}}{\operatorname{BCNN}(b_1,\ldots,b_n)},\ \frac{a_1}{b_1} + \cdots + \frac{a_n}{b_n} = \frac{a_1\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_1} + \cdots + a_n\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_n}}{\operatorname{BCNN}(b_1,\ldots,b_n)},\forall a_i,b_i\in\mathbb{Z},\,b_i\ne 0,\,\forall i = 1,\ldots,n.
+\end{align*}
+
+%------------------------------------------------------------------------------%
+
+\section{Số Nguyên}
+
+$\operatorname{B}(n)\cap\mathbb{Z} = \{mn|m\in\mathbb{Z}\}$, $\forall n\in\mathbb{Z}^\star$.
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Học Trực Quan}
+
+%------------------------------------------------------------------------------%
+
+\section{1 Số Yếu Tố Thống Kê \& Xác Suất}
+
+%------------------------------------------------------------------------------%
+
+\section{Phân Số \& Số Thập Phân}
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Học Phẳng}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
