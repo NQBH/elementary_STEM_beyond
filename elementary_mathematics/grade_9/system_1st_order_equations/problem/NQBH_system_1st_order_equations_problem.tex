@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: System of 1st-Order Equations -- Bài Tập: Hệ Phương Trình Bậc Nhất}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{1st-Order Equations of 2 Unknowns -- Phương Trình Bậc Nhất 2 Ẩn}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD66, p. 5]
+	Cho đường thẳng: $d:(m - 2)x + (m - 1)y = 1$ với tham số $m$. (a) Chứng minh đường thẳng $d$ luôn đi qua 1 điểm cố định với mọi giá trị của $m$. (b) Tìm giá trị của $m$ để khoảng cách từ gốc tọa độ O đến $d$ lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD67, p. 6]
+	Tìm các điểm thuộc đường thẳng $3x - 5y = 8$ có tọa độ là các số nguyên \& nằm trên dải song song tạo bởi 2 đường thẳng $y = 10,y = 20$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 198., p. 8]
+	Xét các đường thẳng $d$ có phương trình: $(2m + 3)x + (m + 5)y + 4m - 1 = 0$ với tham số $m$. (a) Vẽ đường thẳng $d$ ứng với $m = -1$. (b) Tìm điểm cố định mà mọi đường thẳng $d$ đều đi qua.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 199., p. 8]
+	Tìm các giá trị của $b,c$ để các đường thẳng $4x + by + c = 0,cx - 3y + 9 = 0$ trùng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 200., p. 8]
+	Vẽ đồ thị biểu diễn tập nghiệm của phương trình $x^2 - 2xy + y^2 = 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 201., p. 8]
+	Đường thẳng $ax + by = 6$ với $a > 0,b > 0$, tạo với 2 trục tọa độ 1 tam giác có diện tích bằng $9$. Tính $ab$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 202., p. 8]
+	Cho đường thẳng $d:(m + 2)x - my = -1$ với tham số $m$. (a) Tìm điểm cố định mà $d$ luôn đi qua. (b) Tìm giá trị của $m$ để khoảng cách từ gốc tọa độ O đến $d$ lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 203., p. 8]
+	Trong hệ trục tọa độ $Oxy$, $A(1,1),B(9,1)$. Viết phương trình của đường thẳng $d\bot AB$ \& chia $\Delta OAB$ thành 2 phần có diện tích bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 204., p. 8]
+	Tìm các điểm nằm trên đường thẳng $8x + 9y = -79$, có hoành độ \& tung độ là các số nguyên \& nằm bên trong góc vuông phần tư {\rm III}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 205., p. 8]
+	Cho 2 điểm $A(3,17),B(33,193)$. (a) Viết phương trình của đường thẳng AB. (b) Có bao nhiêu điểm thuộc đoạn thẳng AB \& có hoành độ \& tung độ là các số nguyên?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 206., p. 8]
+	(a) Vẽ đồ thị hàm số $d:y = \dfrac{3}{2}x + \dfrac{7}{4}$. (b) Có bao nhiêu điểm nằm trên cạnh hoặc nằm trong tam giác tạo bởi 3 đường thẳng $x = 6,y = 0,d$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{System of 1st-Order Equations of 2 Unknowns -- Hệ Phương Trình Bậc Nhất 2 Ẩn}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
