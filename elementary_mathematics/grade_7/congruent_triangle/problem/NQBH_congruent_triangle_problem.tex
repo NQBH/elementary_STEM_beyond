@@ -1,0 +1,174 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Congruent Triangles -- Bài Tập: Tam Giác Bằng Nhau}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Congruent Triangles -- Bài Tập: Tam Giác Bằng Nhau}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.1., p. 26]
+	Cho 2 điểm $A,B$ chạy trên $Ox,Oy$ sao cho $OA + OB = m$. Chứng minh đường trung trực của đoạn thẳng AB luôn đi qua 1 điểm cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.2., p. 27]
+	Cho $\Delta ABC$ nhọn có điểm M là trung điểm AC. Lấy điểm K thuộc đoạn BM sao cho $AK = BC$. AK giao BC tại L. Chứng minh $LK = BL$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.3., p. 27]
+	Cho $\Delta ABC$ có $AB = AC$, $\widehat{A} = 40^\circ$. Điểm K thuộc cạnh AC sao cho $\widehat{KBC} = 30^\circ$. Điểm L nằm trong $\Delta ABC$ sao cho $\widehat{ABL} = 30^\circ$, AL là phân giác $\widehat{BAC}$. Chứng minh $AK = AL$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.4., p. 27]
+	Cho $\Delta ABC$ có $\widehat{A} = 60^\circ$, 2 điểm $E,F$ thuộc tia $BA,CA$ sao cho $BE = CF = BC$. I là tâm đường tròn nội tiếp $\Delta ABC$. Chứng minh $E,F,I$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.5., p. 28]
+	Cho $\Delta ABC$ có đường cao AH. Biết $\widehat{ABC} = 75^\circ$, $AH = \frac{1}{2}BC$. Chứng minh $\Delta ABC$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.6., p. 28]
+	Cho $\Delta ABC$ có trực tâm H, M là trung điểm BC. Đường thẳng qua H vuông góc HM cắt $AB,AC$ lần lượt ở $P,Q$. Chứng minh $HP = HQ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.7., p. 29]
+	Cho $\Delta ABC$ với điểm N nằm trong $\Delta ABC$ sao cho $\widehat{ABN} = \widehat{ACN}$. M là trung điểm BC. $NH,NK$ là đường vuông góc hạ từ N xuống $AB,AC$. Chứng minh $\Delta MHK$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.8., p. 29]
+	Cho $\Delta ABC$ cân tại A, đường phân giác BE. $F\in BC$ sao cho $\widehat{BEF} = 90^\circ$. Chứng minh $BF = 2CE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.9., p. 30]
+	Cho $\Delta ABC$ cân tại A, điểm M nằm trong $\Delta ABC$ sao cho $\widehat{AMB} = \widehat{AMC}$. Chứng minh AM là phân giác $\widehat{A}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.10., p. 30]
+	Cho $\Delta ABC$ là trung điểm BC. Dựng 2 tam giác vuông cân $AEB,AFC$ bên ngoài $\Delta ABC$. Chứng minh $\Delta MEF$ vuông cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.11., p. 31]
+	Cho $\Delta ABC$ vuông tại A, M là trung điểm AB, H là hình chiếu vuông góc hạ từ M xuống BC. Điểm K thuộc đoạn AM sao cho $AK = BH$. Chứng minh $\Delta CHK$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.12., p. 31]
+	Cho $\Delta ABC$ vuông cân tại A. Vẽ $\Delta BCK$ cân tại C sao cho $C,K$ nằm khác phía đối với AB, $\widehat{BCK} = 30^\circ$. Tính $\widehat{BAK}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.13., p. 32]
+	Cho $\Delta ABC$. Lấy $M\in AC,N\in AB$ sao cho $\widehat{MBC} = 2\alpha = 2\widehat{ABM},\widehat{BCN} = 2\beta = 2\widehat{ACN}$. P là giao điểm của $BM,CN$. Biết $PM = PN$. Chứng minh $\Delta ABC$ vuông hoặc cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.14., p. 32]
+	Cho $\Delta ABC$, M là trung điểm BC. Dựng 2 tam giác vuông cân $ABE,ACF$ bên ngoài $\Delta ABC$. Chứng minh $AM\bot EF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.15., p. 33]
+	Cho $\Delta ABC$ có đường cao AH, $M,N$ là chân đường vuông góc hạ từ H xuống $AB,AC$. Biết $MB = NC$. Chứng minh $\Delta ABC$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.16., p. 33]
+	Cho $\widehat{xOy}$. $A,B$ chạy trên $Ox,Oy$ sao cho $OA - OB = m$. Chứng minh trung trực AB đi qua 1 điểm cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.17., p. 33]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH. E thuộc tia AH, K thuộc tia đối của tia HA sao cho $AE = HK$. Kẻ đường thẳng qua E song song BC cắt AC tại F. Chứng minh $\widehat{BKF} = 90^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.18., p. 33]
+	Cho $\Delta ABC$ có đường phân giác $AA'$. Lấy 2 điểm $M,N$ nằm trong $\Delta ABC$ sao cho $AA'$ là trung trực của MN. Lấy $C',B'$ là 2 điểm đối xứng với M qua $AB,AC$. Chứng minh AN là trung trực của $B'C'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.19., p. 33]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH.  $I,J$ là tâm đường tròn nội tiếp $\Delta ABH,\Delta ACH$. IJ cắt $AB,AC$ lần lượt ở $E,F$. Chứng minh A là tâm đường tròn ngoại tiếp $\Delta EFH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.20., p. 34]
+	Cho $\Delta ABC$, dựng $\Delta ABZ,\Delta ACY$ đều bên ngoài $\Delta ABC$. Vẽ $\Delta BCX$ cân tại X bên ngoài $\Delta ABC$ sao cho $\widehat{BXC} = 120^\circ$. Chứng minh $AX\bot YZ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.21., p. 34]
+	Cho $\Delta ABC$, I là tâm đường tròn nội tiếp. $BE,CF$ là 2 đường phân giác trong. Biết $IE = IF$. Chứng minh $\widehat{BAC} = 60^\circ$ hoặc $\Delta ABC$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.22., p. 34]
+	Cho $\Delta ABC$, I là tâm đường tròn nội tiếp. $AD,BE,CF$ là 3 đường phân giác. Biết $ID = IE = IF$. Chứng minh $\Delta ABC$ đều.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.23., p. 34]
+	Cho $\Delta ABC$, $\widehat{A} = 60^\circ$. Đường phân giác $BE,CF$. Chứng minh $BF + CE = BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.24., p. 34]
+	Cho $\Delta ABC$, đường phân giác AD. Lấy $E,F$ thuộc cạnh $AB,AC$ sao cho $\Delta BDE$ cân tại B, $\Delta CDF$ cân tại C. Chứng minh $EF\parallel BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.25., p. 34]
+	Cho $\Delta ABC$, $\widehat{ABC} = 70^\circ,\widehat{ACB} = 50^\circ$. Lấy điểm D nằm khác phía A đối với BC sao cho $\widehat{CBD} = 40^\circ,\widehat{BCD} = 20^\circ$. Chứng minh $AD\bot BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.26., p. 34]
+	Cho $\Delta ABC$. Kẻ đường cao $BE,CF$. $X,Y,Z$ lần lượt là trung điểm $EF,BF,CE$. K là giao điểm của đường thẳng qua Y vuông góc BX, đường thẳng qua Z vuông góc CX. Chứng minh K thuộc trung trực BC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 3.27., p. 34]
+	Cho $\Delta ABC$, 3 đường cao $AD,BE,CF$ cắt nhau tại H. $X,Y,Z,T$ là chân đường vuông góc hạ từ D xuống $AB,BE,CF,AC$. Chứng minh $X,Y,Z,T$ thẳng hàng.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Pythagore Theorem -- Định Lý Pythagore}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
