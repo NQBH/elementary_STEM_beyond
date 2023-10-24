@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Angle {\it\&} Line -- Bài Tập: Góc {\it\&} Đường Thẳng}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{2 Góc Đối Đỉnh}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 1.1., p. 5]
+	Chứng minh: (a) Phân giác của 2 góc đối đỉnh là 2 tia đối nhau. (b) Phân giác ngoài của 2 góc đối đỉnh là 2 tia đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 1.2., p. 6]
+	Cho $\widehat{xOy}$ với Ot là phân giác $\widehat{xOy},\widehat{x'Oy'}$ với $Ot'$ là phân giác trong $\widehat{x'Oy'}$. Biết $Ox'$ là tia đối của $Ox,Ot'$ là tia đối của Ot. Chứng minh $Oy'$ là tia đối của Oy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 1.3., p. 7]
+	Cho 2 đường thẳng $xx',yy'$ cắt nhau tại O. Tia Om nằm giữa 2 tia $Ox',Oy'$. Ot là phân giác $\widehat{xOy}$. Chứng minh $\frac{1}{2}|\widehat{mOx'} - \widehat{mOy'}| + \widehat{mOt} = 180^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 1.4., p. 8]
+	Cho 2 đường thẳng $xx',yy'$ cắt nhau tại O. Tia Om nằm giữa 2 tia $Ox',Oy$. Ot là phân giác trong $\widehat{xOy}$. Chứng minh $\widehat{x'Om} + \widehat{y'Om} + 2\widehat{mOt} = 360^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 1.5., p. 8]
+	Cho $\widehat{xOy}$, tia Ot nằm giữa 2 tia $Ox,Oy$ sao cho $\widehat{yOt} = 2\widehat{xOt}$. $Ox'$ là tia đối của tia $Ox,Oy'$ là tia đối của tia Oy. Tia Om nằm giữa 2 tia $Ox',Oy$. Chứng minh: $\frac{1}{3}(2\widehat{mOx'} + \widehat{mOy'}) + \widehat{mOt} = 180^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 1.6., p. 9]
+	Cho $xx',yy',tt'$ cắt nhau tại O sao cho tia Ot nằm giữa 2 tia $Ox,Op$ với Op là phân giác trong $\widehat{xOy}$. Tia Oq nằm giữa 2 tia $Ot,Op$ sao cho $\widehat{tOp} = 3\widehat{qOp}$. Tia Om nằm giữa $Ox',Oy$. Chứng minh: $\frac{1}{3}(\widehat{mOx'} + \widehat{mOy'} + \widehat{mOt'}) + \widehat{mOq} = 180^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hung_Mai_Toan_7_hinh_hoc}, 1.7., p. 10]
+	Cho 4 đường thẳng $d_1,d_2,d_3,d_4$ đồng quy tại O. (a) Có bao nhiêu cặp góc đối đỉnh? (b) Chứng minh trong các góc tạo thành có 1 góc $\le45^\circ$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{2 Đường Thẳng Song Song \& 2 Đường Thẳng Vuông Góc}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
