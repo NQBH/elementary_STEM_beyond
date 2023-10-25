@@ -1,0 +1,203 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: 2nd-Order Function. Quadratic Equation\\Bài Tập: Hàm Số Bậc 2 $y = ax^2$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{2nd-Order Function -- Hàm Số $y = ax^2$, $a\ne0$}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD74, p. 18]
+	(a) Cho parabol $y = \frac{1}{4}x^2$, điểm $A(0,1)$ \& đường thẳng $d:y = -1$. Gọi M là 1 điểm bất kỳ thuộc parabol. Chứng minh MA bằng khoảng cách MH từ điểm M đến $d$. (b) Cho điểm $A(0,a)$, $d:y = -a$. Chứng minh quỹ tích của điểm $M(x,y)$ sao cho khoảng cách MH từ M tới $d$ bằng MA là 1 parabol.
+\end{baitoan}
+\cite[235., p. 19, 236., p. 20]{Binh_Toan_9_tap_2}.
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 237., p. 20]
+	(a) Xác định hệ số $a$ của parabol $y = ax^2$, biết parabol đi qua điểm $A(-2,-2)$. (b) Tìm tọa độ của điểm M thuộc parabol này, biết khoảng cách từ M đến trục hoành gấp đôi khoảng cách từ M đến trục tung.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 238., p. 20]
+	Vẽ đồ thị hàm số $y = \frac{1}{3}x|x|$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 239., p. 20]
+	(a) Vẽ đồ thị hàm số $y = -\frac{1}{2}x^2$. (b) Gọi C là 1 điểm tùy ý nằm trên parabol $y = -\frac{1}{2}x^2$. Gọi K là trung điểm OC. Khi điểm C di chuyển trên parabol đó thì điểm K di chuyển trên đường nào?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Quadratic Equation -- Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0$, $a\ne0$}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD75, p. 20]
+	Cho phương trình $(m^2 - m - 2)x^2 + 2(m + 1)x + 1 = 0$ với tham số $m$. (a) Giải phương trình khi $m = 1$. (b) Tìm các giá trị của $m$ để phương trình có 2 nghiệm phân biệt. (c) Tìm các giá trị của $m$ để tập nghiệm của phương trình chỉ có 1 phần tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD76, p. 21]
+	Chứng minh phương trình $(a + 1)x^2 - 2(a + b)x + b - 1 = 0$ có nghiệm $\forall a,b\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD77, p. 22]
+	Chứng minh phương trình $x^2 - (3m^2 - 5m + 1)x - (m^2 - 4m + 5) = 0$ có nghiệm $\forall a,b\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD78, p. 22]
+	Cho phương trình $x^2 + mx + n = 0$ với $m,n\in\mathbb{Z}$. (a) Chứng minh nếu phương trình có nghiệm hữu tỷ thì nghiệm đó là số nguyên. (b) Tìm nghiệm hữu tỷ của phương trình với $n = 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD79, p. 20]
+	Tìm $n\in\mathbb{Z}$ để các nghiệm của phương trình $x^2 - (4 + n)x + 2n = 0$ là các số nguyên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD80, p. 20]
+	Tìm các giá trị của $a$ để 2 phương trình $x^2 + ax + 8 = 0,x^2 + x + a = 0$ có ít nhất 1 nghiệm chung.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 240., p. 25]
+	Cho phương trình $mx^2 + 6(m - 2)x + 4m - 7 = 0$. Tìm các giá trị của $m$ để phương trình: (a) Có nghiệm kép. (b) Có 2 nghiệm phân biệt. (c) Vô nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 241., p. 25]
+	Giải phương trình với tham số $m$: (a) $x^2 - mx - 3(m + 3) = 0$. (b) $mx^2 - 4x + 4 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 242., p. 25]
+	Tìm các giá trị của $m$ biết phương trình $x^2 + mx + 12 = 0$ có hiệu 2 nghiệm bằng $1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 243., p. 25]
+	Cho 2 số thực dương $a,b$ thỏa $a + b = 4\sqrt{ab}$. Tính tỷ số $\dfrac{a}{b}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 244., p. 25]
+	Tìm $x,y\in\mathbb{Z}$ biết $2(x^2 + 1) + y^2 = 2y(x + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 245., p. 26]
+	Tìm các giá trị của $m$ để phương trình có nghiệm: (a) $(m^2 - m)x^2 + 2mx + 1 = 0$. (b) $(m + 1)x^2 - 2x + (m - 1) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 246., p. 26]
+	Chứng minh phương trình có nghiệm $\forall a,b\in\mathbb{R}$: (a) $x(x - a) + x(x - b) + (x - a)(x - b) = 0$. (b) $x^2 + (a + b)x - 2(a^2 - ab + b^2) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 247., p. 26]
+	Chứng minh phương trình có nghiệm $\forall a,b,c\in\mathbb{R}$: (a) $3x^2 - 2(a + b + c)x + (ab + bc + ca) = 0$. (b) $(x - a)(x - b) + (x - b)(x - c) + (x - c)(x - a) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 248., p. 26]
+	Chứng minh nếu $a,b,c\in\mathbb{R}^\star$ thì tồn tại 1 trong 3 phương trình bậc 2 $ax^2 + 2bx + c = 0,bx^2 + 2cx + a = 0,cx^2 + 2ax + b = 0$ có nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 249., p. 26]
+	Chứng minh phương trình $ax^2 + bx + c = 0,a\ne0$, có nghiệm, biết $5a + 2c = b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 250., p. 26]
+	Cho $a,b,c$ là độ dài 3 cạnh 1 tam giác. Chứng minh phương trình $(a^2 + b^2 - c^2)x^2 - 4abx + a^2 + b^2 - c^2 = 0$ có nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 251., p. 26]
+	Chứng minh phương trình $ax^2 + bx + c = 0,a\ne0$, có nghiệm nếu $\dfrac{2b}{a}\ge\dfrac{c}{a} + 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 252., p. 26]
+	Chứng minh nếu $bm = 2(c + n)$ thì ít nhất 1 trong 2 phương trình $x^2 + bx + c = 0,x^2 + mx + n = 0$ có nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 253., p. 26]
+	Cho $a,b,c\in\mathbb{Q},a\ne0,|b| = |a + c|$. Chứng minh các nghiệm của phương trình $ax^2 + bx + c = 0$ là các số hữu tỷ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 254., p. 26]
+	Chứng minh phương trình $ax^2 + bx + c = 0$ không có nghiệm hữu tỷ nếu $a,b,c$ là 3 số nguyên lẻ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 255., p. 26]
+	Chứng minh nếu $\overline{abc}$ là số nguyên tố thì phương trình $ax^2 + bx + c = 0$ không có nghiệm hữu tỷ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 256., p. 27]
+	Tìm các giá trị nguyên của $m$ để nghiệm của phương trình $mx^2 - 2(m - 1)x + m - 4 = 0$ là số hữu tỷ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 257., p. 27]
+	Tìm $n\in\mathbb{Z}$ để các nghiệm của phương trình $x^2 - (n + 4)x + 4n - 25 = 0$ là các số nguyên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 258., p. 27]
+	Tìm số nguyên tố $p$ biết phương trình $x^2 + px - 12p = 0$ có 2 nghiệm đều là các số nguyên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 259., p. 27]
+	Tìm các giá trị của $m$ để 2 phương trình có ít nhất 1 nghiệm chung: (a) $x^2 + 2x + m = 0,x^2 + mx + 2 = 0$. (b) $x^2 + mx + 1 = 0,x^2 - x - m = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 260., p. 27]
+	Tìm các giá trị của $m$ để 2 phương trình có ít nhất 1 nghiệm chung: (a) $x^2 + (m - 2)x + 3 = 0,2x^2 + mx + m + 2 = 0$. (b) $2x^2 + (3m - 5)x - 9 = 0,6x^2 + (7m - 15)x - 19 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 261., p. 27]
+	Tìm các giá trị của $m$ để 1 nghiệm của phương trình $2x^2 - 13x + 2m = 0$ gấp đôi 1 nghiệm của phương trình $x^2 - 4x + m = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 262., p. 27]
+	Cho 2 phương trình $ax^2 + bx + c = 0,cx^2 + bx + a = 0$. Biết phương trình thứ nhất có nghiệm dương $m$, chứng minh phương trình thứ 2 có nghiệm $n$ sao cho $m + n\ge2$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Hệ Thức Vi\`ete \& Ứng Dụng}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
