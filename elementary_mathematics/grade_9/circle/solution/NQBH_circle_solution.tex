@@ -1,0 +1,2709 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\makeatletter
+\DeclareFontFamily{U}{tipa}{}
+\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
+\newcommand{\arc@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}%
+
+\newcommand{\arc}[1]{\mathpalette\arc@arc{#1}}
+
+\newcommand{\arc@arc}[2]{%
+	\sbox0{$\m@th#1#2$}%
+	\vbox{
+		\hbox{\resizebox{\wd0}{\height}{\arc@char}}
+		\nointerlineskip
+		\box0
+	}%
+}
+\makeatother
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem {\it\&} Solution: Circle -- Bài Tập{ \it\&} Lời Giải: Đường Tròn}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Last updated version: \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.pdf}{GitHub{\tt/}NQBH{\tt/}elementary STEM \& beyond{\tt/}elementary mathematics{\tt/}grade 9{\tt/}circle{\tt/}problem: set $\mathbb{Q}$ of circles [pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.pdf}.} [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/rational/problem/NQBH_circle_problem.tex}.}. 
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Sự Xác Định Đường Tròn. Tính Chất Đối Xứng của Đường Tròn}
+\fbox{1} $(O,R)\coloneqq\{M|OM = R\}$. \fbox{2} Tâm của đường tròn là \textit{tâm đối xứng} của đường tròn đó. Mọi đường thẳng đi qua tâm là \textit{trục đối xứng} (\& chứa 1 đường kính) của đường tròn. \fbox{3} Qua 3 điểm $A,B,C$ không thẳng hàng, xác định duy nhất 1 đường tròn. Tâm của đường tròn là giao của 3 đường trung trực 3 cạnh $\Delta ABC$. \fbox{4} $A\in(O,R)\Leftrightarrow OA = R$. $A$ nằm ngoài $(O,R)\Leftrightarrow OA > R$. $A$ nằm trong $(O,R)\Leftrightarrow OA < R$.  \fbox{5} Đường kính là dây lớn nhất. Cho $(O,R)$, đường kính $AB = 2R$, dây $CD < 2R$, $AB\cap CD = \{M\}$: $AB\bot CD\Leftrightarrow MC = MD\Leftrightarrow\Delta ACD$ cân $\Leftrightarrow AC = AD\Leftrightarrow\Delta BCD$ cân $\Leftrightarrow BC = BD$.
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, p. 99]
+	Tại sao các nan hoa của bánh xe đạp dài bằng nhau?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Vì bánh xe đạp có dạng đường tròn nên các nan hoa của nó dài bằng nhau \& cùng bằng bán kính đường tròn đó.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H1, p. 101]
+	Có bao nhiêu đường tròn bán kính $R$ đi qua 1 điểm cho trước? Tâm các đường tròn đó nằm ở đâu?
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	Có vô số đường tròn bán kính $R$ đi qua 1 điểm cho trước. Tâm các đường tròn này nằm trên đường tròn có tâm là điểm đã cho \& bán kính $R$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Gọi điểm cho trước là $A$. $A\in(O,R)\Leftrightarrow OA = R$, nên tập hợp tâm các đường tròn bán kính $R$ đi qua $A$ là $\{O\in\mathbb{R}^2|OA = R\} = (A,R)$, suy ra có vô số đường tròn bán kính $R$ đi qua $A$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H2, p. 101]
+	Qua 3 điểm bất kỳ có luôn vẽ được 1 đường tròn?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Luôn tồn tại duy nhất 1 đường tròn đi qua 3 điểm không thẳng hàng bất kỳ (i.e., đường tròn ngoại tiếp tam giác tạo bởi 3 điểm đó) nhưng không tồn tại đường tròn nào đi qua 3 điểm phân biệt thẳng hàng bất kỳ.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H3, p. 101]
+	Vẽ đường tròn nhận đoạn thẳng AB cho trước làm đường kính.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi $M$ là trung điểm $AB$. Vẽ $(M,MA) = (M,\frac{1}{2}AB)$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H4, p. 101]
+	Tính đường kính các đường tròn $(O;2R),(O;aR)$, $\forall a\in\mathbb{R}$, $a > 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Đường kính các đường tròn $(O;2R),(O;aR)$ lần lượt là $4R,2aR$, $\forall a\in\mathbb{R}$, $a > 0$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H5, p. 101]
+	{\rm Đ{\tt/}S?} (a) Dây vuông góc với đường kính thì bị đường kính chia làm đôi. (b) Dây vuông góc với đường kính thì chia đôi đường kính. (c) Đường kính đi qua trung điểm 1 dây thì vuông góc với dây ấy. (d) Đường trung trực của 1 dây là trục đối xứng của đường tròn.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Đ. (b) S. (c) S. (d) Đ.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD1, p. 101]
+	Chứng minh: (a) Tâm của đường tròn ngoại tiếp tam giác vuông là trung điểm cạnh huyền. (b) Nếu 1 tam giác có 1 cạnh là đường kính đường tròn ngoại tiếp thì tam giác đó là tam giác vuông (đường kính là cạnh huyền). (c) Các đỉnh góc vuông của các tam giác vuông có chung cạnh huyền cùng thuộc 1 đường tròn đường kính là cạnh huyền chung đó. (d) Mọi hình chữ nhật đều nội tiếp được trong đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD2, p. 102]
+	Khi nào thì tâm của đường tròn ngoại tiếp tam giác nằm: (a) trong tam giác? (b) ngoài tam giác?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD3, p. 102]
+	Cho $\Delta ABC$ có $AB = 13$ {\rm cm}, $BC = 5$ {\rm cm}, $CA = 12$ {\rm cm}. Xác định tâm \& tính bán kính đường tròn ngoại tiếp $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD4, p. 103]
+	Cho đường tròn đường kính AB, điểm M bất kỳ. Chứng minh M nằm trong đường tròn khi \& chỉ khi $\widehat{AMB} > 90^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD5, p. 103]
+	Cho đường tròn $(O,R)$ \& 2 điểm $A,B$ nằm trong đường tròn. Chứng minh tồn tại 1 đường tròn $(C)$ đi qua 2 điểm $A,B$ \& nằm hoàn toàn bên trong $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD6, p. 103]
+	Có 1 miếng bìa hình tròn bị khoét đi 1 lỗ thủng cũng hình tròn. Dùng kéo cắt (theo 1 đường thẳng) để chia đôi miếng bìa đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD7, p. 104]
+	Cho đoạn thẳng AB, điểm M thuộc đoạn AB. Dựng 2 đường tròn đường kính AB \& đường kính BM. 1 đường thẳng $d$ vuông góc với AB tại N cắt đường tròn đường kính AB tại $E,F$, cắt đường tròn đường kính BM tại $P,Q$. Chứng minh: (a) $PE = QF$. (b) $\widehat{PMB} > \widehat{EAB}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD8, p. 104]
+	Cho đường tròn $(O,R)$ \& điểm A nằm ngoài đường tròn. Dựng qua A cát tuyến cắt đường tròn tại $B,C$ sao cho B là trung điểm AC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD9, p. 105]
+	Cho đường tròn $(O,6{\rm cm})$, 2 dây $AB\parallel CD$. (a) Chứng minh $AC = BD,AD = BC$. (b) Tính khoảng cách từ O đến AC biết khoảng cách tư O đến AB là {\rm2 cm}, khoảng cách từ O đến CD là {\rm4 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.1., p. 106]
+	Cho $\Delta ABC$ vuông tại A, đường trung tuyến AM, $AB = 6$ {\rm cm}, $AC = 8$ {\rm cm}. Trên tia AM lấy 3 điểm $D,E,F$ sao cho $AD = 9$ {\rm cm}, $AE = 11$ {\rm cm}, $AF = 10$ {\rm cm}. Xác định vị trí của mỗi điểm $D,E,F$ đối với đường tròn ngoại tiếp $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.2., p. 106]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH. Từ điểm M bất kỳ trên cạnh BC kẻ $MD\bot AB,ME\bot AC$. Chứng minh 5 điểm $A,D,M,H,E$ cùng nằm trên 1 đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.3., p. 106]
+	Tứ giác ABCD có $\widehat{A} = \widehat{C} = 90^\circ$. So sánh $AC,BD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.4., p. 106]
+	Cho đường tròn đường kính AB, $C,D$ là 2 điểm khác nhau thuộc đường tròn, $C,D$ không trùng với $A,B$. 2 điểm $E,F$ thuộc đường tròn sao cho $CE\bot AB,DF\bot AB$. Chứng minh $CF,ED,AB$ đồng quy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.5., p. 106]
+	Cho đường tròn $(O,R)$ \& dây $AB = 2a$, $a < R$. Từ O kẻ đường thẳng vuông góc với AB cắt đường tròn tại D. Tính AD theo $a,R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.6., p. 106]
+	Cho tứ giác ABCD có $\widehat{C} + \widehat{D} = 90^\circ$. $M,N,P,Q$ lần lượt là trung điểm $AB,BD,DC,CA$. Chứng minh 4 điểm $M,N,P,Q$ cùng thuộc 1 đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.7., p. 106]
+	Cho $\Delta ABC$ cân tại A, nội tiếp đường tròn $(O)$. Đường cao AH cắt $(O)$ ở D. Biết $BC = 24,AC = 20$. Tính chiều cao AH \& bán kính $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.8., p. 106]
+	Cho đường tròn $(O,R)$ \& dây AB. Kéo dài AB về phía B lấy điểm C sao cho $BC = R$. Chứng minh $\widehat{AOC} = 180^\circ - 3\widehat{ACO}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.9., p. 106]
+	Cho đường tròn $(O,R)$ \& điểm A nằm ngoài đường tròn. Xác định vị trí của điểm M trên đường tròn sao cho đoạn MA là ngắn nhất, dài nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.10., p. 107]
+	Cho đường tròn $(O,R)$ \& điểm P nằm bên trong nó. 2 dây $AB,CD$ thay đổi luôn đi qua P \& vuông góc với nhau. Chứng minh $AB^2 + CD^2$ là đại lượng không đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.11., p. 107]
+	Cho đường tròn $(O,R)$, đường kính AB, E là điểm nằm trong đường tròn, AE cắt đường tròn tại C, BE cắt đường tròn tại D. Chứng minh $AE\cdot AC + BE\cdot BD = 4R^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.12., p. 107]
+	Cho tứ giác ABCD. Chứng minh 4 hình tròn có đường kính $AB,BC,CD,DA$ phủ kín miền tứ giác ABCD.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 4.13., p. 107]
+	Cho nửa đường tròn đường kính AB \& điểm M nằm trong nửa đường tròn. Chỉ bằng thước kẻ, dựng qua M đường thẳng vuông góc với AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, Thí dụ 5, pp. 113--114]
+	Trên đường tròn $(O,R)$ đường kính $AB$ lấy 1 điểm $C$. Trên tia $AC$ lấy điểm $M$ sao cho $C$ là trung điểm $AM$. (a) Xác định vị trí của điểm $C$ để $AM$ lớn nhất. (b) Xác định vị trí của điểm $C$ để $AM = 2R\sqrt{3}$. (c) Chứng minh khi $C$ di động trên đường tròn $(O)$ thì điểm $M$ di động trên 1 đường tròn cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 36., p. 114]
+	Cho $\Delta ABC$ cân tại $A$, đường cao $AH = BC = a$. Tính bán kính đường tròn ngoại tiếp $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 37., p. 114]
+	Cho $\Delta ABC$. $D,E,F$ lần lượt là trung điểm $BC,CA,AB$. Chứng minh: các đường tròn $(AFE),(BFD),(CDE)$ bằng nhau \& cùng đi qua 1 điểm. Xác định điểm chung đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 38., p. 114]
+	Cho hình thoi $ABCD$ cạnh $1$, 2 đường chéo cắt nhau tại $O$. $R_1$ \& $R_2$ lần lượt là bán kính các đường tròn ngoại tiếp các $\Delta ABC,\Delta ABD$. Chứng minh: $\dfrac{1}{R_1^2} + \dfrac{1}{R_2^2} = 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 39., p. 115]
+	Cho hình bình hành $ABCD$, cạnh $AB$ cố định, đường chéo $AC = 2$ \emph{cm}. Chứng minh điểm $D$ di động trên 1 đường tròn cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 40., p. 115]
+	Cho đường tròn $(O,R)$ \& 1 dây $BC$ cố định. Trên đường tròn lấy 1 điểm $A$ ($A\not\equiv B$, $A\not\equiv C$). $G$ là trọng tâm của $\Delta ABC$. Chứng minh khi $A$ di động trên đường tròn $(O)$ thì điểm $G$ di động trên 1 đường tròn cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 41., p. 115]
+	Trong mặt phẳng cho $2n + 1$ điểm, $n\in\mathbb{N}$, sao cho $3$ điểm bất kỳ nào cũng tồn tại $2$ điểm có khoảng cách nhỏ hơn $1$. Chứng minh: trong các điểm này có ít nhất $n + 1$ điểm nằm trong 1 đường tròn có bán kính bằng $1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 42., p. 115]
+	Cho hình bình hành $ABCD$, 2 đường chéo cắt nhau tại $O$. Vẽ đường tròn tâm $O$ cắt các đường thẳng $AB,BC,CD,DA$ lần lượt ở $M,N,P,Q$. Xác định dạng của tứ giác $MNPQ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 43., p. 115]
+	2 người chơi 1 trò chơi như sau: Mỗi người lần lượt đặt lên 1 chiếc bàn hình tròn 1 cái cốc. Ai là người cuối cùng đặt được cốc lên bàn thì người đó thắng cuộc. Muốn chắc thắng thì phải chơi theo ``chiến thuật'' nào? (các chiếc cốc đều như nhau).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD8, p. 95]
+	Cho hình thang cân ABCD. Chứng minh tồn tại 1 đường tròn đi qua cả 4 đỉnh của hình thang.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 50., p. 95]
+	Cho $\Delta ABC$ cân tại A nội tiếp đường tròn $(O)$, $AC = 40$ {\rm cm}, $BC = 48$ {\rm cm}. Tính khoảng cách từ O đến BC. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 51., p. 96]
+	Cho $\Delta ABC$ cân tại A nội tiếp đường tròn $(O)$, cạnh bên bằng $b$, đường cao $AH = h$. Tính bán kính đường tròn $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 52., p. 96]
+	Cho $\Delta ABC$ nhọn nội tiếp đường tròn $(O,R)$. M là trung điểm BC. Giả sử O nằm trong $\Delta AMC$ hoặc O nằm giữa A \& M. I là trung điểm AC. Chứng minh: (a) Chu vi $\Delta IMC$ lớn hơn $2R$. (b) Chu vi $\Delta ABC$ lớn hơn $4R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 53., p. 96]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$. $D,E,F$ lần lượt là trung điểm $BC,CA,AB$. Kẻ 3 đường thẳng $DD',EE',FF'$ sao cho $DD'\parallel OA,EE'\parallel OB,FF'\parallel OC$. Chứng minh 3 đường thẳng $DD',EE',FF'$ đồng quy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 54., p. 96]
+	Cho 3 điểm A, B, C bất kỳ \& đường tròn $(O;1)$. Chứng minh tồn tại 1 điểm M nằm trên đường tròn $(O)$ sao cho $MA + MB + MC\ge3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD1, p. 20]
+	Cho đường tròn $(O)$, đường kính AB, 2 dây $AC,BD$. Chứng minh $AC\parallel BD\Leftrightarrow CD$ là đường kính.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD2, p. 20]
+	Cho đường tròn $(O)$, 2 dây $AB,CD$ song song với nhau. $E,F$ là trung điểm $AB,CD$. Chứng minh $E,F,O$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD3, p. 20]
+	Dựng 1 đường tròn nhận đoạn thẳng AB cho trước làm dây cung có bán kính $r$ cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD4, p. 21]
+	Cho đường tròn $(O,R)$ \& dây AB. Kéo dài AB về phía B lấy điểm C sao cho $BC = R$. Chứng minh $\widehat{AOC} = 180^\circ - 3\widehat{ACO}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD5, p. 21]
+	Cho $\Delta ABC$. Từ trung điểm 3 cạnh kẻ các đường vuông góc với 2 cạnh kia tạo thành 1 lục giác. Chứng minh diện tích $\Delta ABC$ gấp 2 lần diện tích lục giác.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD6, p. 21]
+	Cho đường tròn $(O)$, 2 dây $AB,CD$ kéo dài cắt nhau tại điểm M ở ngoài đường tròn. $H,E$ là trung điểm $AB,CD$. Chứng minh $AB < CD\Leftrightarrow MH < ME$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD7, p. 22]
+	Cho đường tròn $(O)$ \& điểm A nằm trong đường tròn, $A\ne O$. Tìm trên đường tròn điểm M sao cho $\widehat{OMA}$ lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD8, p. 22]
+	Cho đường tròn $(O)$, $A,B,C$ là 3 điểm trên đường tròn sao cho $AB = AC$. I là trung điểm AC, G là trọng tâm của $\Delta ABI$. Chứng minh $OG\bot BI$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD9, p. 23]
+	Dựng $\Delta ABC$. Biết $\widehat{A} = \alpha < 90^\circ$, đường cao $BH = h$ \& trung tuyến $CM = m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD10, p. 23]
+	Cho $\Delta ABC$ nhọn, nội tiếp đường tròn $(O,r)$, $AB = r\sqrt{3}$, $AC = r\sqrt{2}$. Giải $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD11, p. 23]
+	Cho đoạn thẳng BC cố định, I là trung điểm BC, điểm A trên mặt phẳng sao cho $AB = BC$. H là trung điểm AC, đường thẳng AI cắt đường thẳng BH tại M. Chứng minh M nằm trên 1 đường tròn cố định khi A thay đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD12, p. 24]
+	Cho hình chữ nhật ABCD, kẻ $BH\bot AC$. Trên cạnh $AC,CD$ lấy 2 điểm $M,N$ sao cho $\dfrac{AM}{AH} = \dfrac{DN}{CD}$. Chứng minh 4 điểm $B,C,M,N$ nằm trên 1 đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD13, p. 24]
+	Cho đường tròn $(O,R)$, dây $AB = 2a$, $a < R$. Từ O kẻ đường thẳng vuông góc với AB cắt đường tròn tại D. Tính AD theo $a,R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD14, p. 25]
+	Cho đường tròn $(O,R)$, đường kính AB, điểm E nằm trong đường tròn, AE cắt đường tròn tại C, BE cắt đường tròn tại D. Chứng minh $AE\cot AC + BE\cdot BD$ không phụ thuộc vào vị trí của điểm E.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD15, p. 25]
+	Cho tứ giác lồi ABCD. Chứng minh 4 hình tròn có đường kính $AB,BC,CD,DA$ phủ kín miền tứ giác ABCD.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4.1., p. 26]
+	Tính cạnh của tam giác đều, bát giác đều, $n$-giác đều nội tiếp đường tròn $(O,R)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4.2., p. 26]
+	Cho đường tròn $(O)$, điểm P ở trong đường tròn. Xác định dây lớn nhất \& dây ngắn nhất đi qua P.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4.3., p. 26]
+	Cho đường tròn $(O)$, 2 bán kính $OA,OB$ vuông góc với nhau. Kẻ tia phân giác của $\widehat{AOB}$, cắt đường tròn ở D, M là điểm chuyển động trên cung nhỏ AB, từ M kẻ $MH\bot OB$ cắt OD tại K. Chứng minh $MH^2 + KH^2$ có giá trị không phụ thuộc vào vị trí điểm M.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4.4., p. 26]
+	Chứng minh bao giờ cũng chia được 1 tam giác bất kỳ thành 7 tam giác cân, trong đó có 3 tam giác bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4.5., p. 26]
+	Cho đường tròn $(O)$, 1 dây cung EF có khoảng cách từ tâm O đến dây là $d$. Dựng 2 hình vuông nội tiếp trong mỗi phần đó, sao cho mỗi hình vuông có 2 đỉnh nằm trên đường tròn, 2 đỉnh còn lại nằm trên dây EF. Tính hiệu của 2 cạnh hình vuông đó theo $d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4.6., p. 26]
+	Cho 2 đường tròn đồng tâm. Dựng 1 dây cắt 2 đường tròn theo thứ tự tại $A,B,C,D$ sao cho $AB = BC = CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4.7., p. 26]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O,R)$, $AB = R\sqrt{2 - \sqrt{3}}$, $AC = R\sqrt{2 + \sqrt{3}}$. Giải $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4.8., p. 26]
+	Cho hình thoi ABCD. $R_1$ là bán kính đường tròn ngoại tiếp $\Delta ABC$, $R_2$ là bán kính đường tròn ngoại tiếp $\Delta ABD$. Tính cạnh của hình thoi ABCD theo $R_1,R_2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4.9., p. 26]
+	Mỗi điểm trên mặt phẳng được tô bởi 1 trong 3 màu xanh, đỏ, vàng. Chứng minh tồn tại ít nhất 2 điểm được tô cùng 1 màu mà khoảng cách giữa 2 điểm đó bằng $1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4.10., p. 26]
+	Cho đường tròn $(O,R)$ \& dây AB cố định. Từ điểm C thay đổi trên đường tròn dựng hình bình hành CABD. Chứng minh giao điểm 2 đường chéo của hình bình hành CABD nằm trên 1 đường tròn cố định.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Đường Kính \& Dây của Đường Tròn. Liên Hệ Giữa Dây \& Khoảng Cách Từ Tâm Đến Dây}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H1, p. 109]
+	Giải thích kết luận ``Đường kính là dây lớn nhất trong đường tròn'' dựa vào so sánh khoảng cách từ tâm đến dây.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H2, p. 109]
+	Cho đường tròn $(O)$, 2 dây $AB\parallel CD$ \& $AB = CD$, $A,D$ cùng thuộc nửa mặt phẳng bờ BC. Tứ giác ABCD là hình gì?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H3, p. 109]
+	Cho 1 đường tròn $(O,R)$ \& dây CD thay đổi nhưng có độ dài bằng $a$ không đổi. Tập hợp các trung điểm dây CD là đường nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H4, p. 110]
+	Cho 2 đường tròn đồng tâm O \& cát tuyến ABCD. So sánh $AB,CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD1, p. 110]
+	Cho đường tròn $(O,R)$ \& 1 điểm M nằm trong đường tròn. Vẽ qua M 2 dây $AB,CD$ sao cho $AB\bot OM$. (a) So sánh độ dài 2 dây $AB,CD$. (b) Chứng minh $\widehat{ODM} < \widehat{OBM}$. (c) Xác định vị trí của dây đi qua M sao cho độ dài của nó là nhỏ nhất, lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD2, p. 111]
+	Cho 2 dây $MN,EF$ bằng nhau \& cắt nhau tại 1 điểm A nằm trong đường tròn. Chứng minh $ME = NF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD3, p. 111]
+	Cho nửa đường tròn đường kính AB. Trên đoạn thẳng AB lấy 2 điểm $C,D$ sao cho $AC = BD$. Từ $C,D$ kẻ các đường thẳng song song với nhau cắt nửa đường tròn tương ứng tại $M,N$. (a) Chứng minh tứ giác CMND là hình thang vuông. (b) Xác định vị trí của $M,N$ để $CM + DN$ nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD4, p. 112]
+	Cho đường tròn $(O)$, 2 dây $AB,CD$ kéo dài cắt nhau tại điểm M ở ngoài đường tròn. $H,E$ lần lượt là trung điểm $AB,CD$. Chứng minh: $AB < CD\Leftrightarrow MH < ME$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 5.1., p. 112]
+	Cho đường tròn $(O)$ có tâm O nằm trên đường phân giác $\widehat{xIy}$, $(O)$ cắt tia Ix ở $A,B$, cắt tia $Iy$ ở $C,D$. Chứng minh $AB = CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 5.2., p. 112]
+	Cho 2 đường tròn đồng tâm O, bán kính $r_1 > r_2$. Từ điểm M trên $(O,r_1)$ vẽ 2 dây $ME,MF$ theo thứ tự cắt $(O,r_2)$ tại $A,B$ \& $C,D$. $H,K$ lần lượt là trung điểm $AB,CD$. Biết $AB > CD$. So sánh: (a) $ME,MF$. (b) $MH,MK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 5.3., p. 112]
+	Cho đường tròn tâm O, bán kính {\rm5 cm} \& dây $AB = 8$ {\rm cm}. (a) Tính khoảng cách từ tâm O đến dây AB. (b) Lấy điểm I trên dây AB sao cho $AI = 1$ {\rm cm}. Kẻ dây CD đi qua I \& vuông góc với AB. Chứng minh $AB = CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 5.4., p. 112]
+	Cho đường tròn tâm O đường kính AB \& dây CD. 2 đường vuông góc với CD tại $C,D$ tương ứng cắt AB ở $M,N$. Chứng minh $AM = BN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 5.5., p. 113]
+	Cho đường tròn $(O)$, 2 dây $AB,CD$ bằng nhau \& cắt nhau tại điểm I nằm trong đường tròn. Chứng minh: (a) IO là tia phân giác của 1 trong 2 góc tạo bởi 2 đường thẳng $AB,CD$. (b) Điểm I chia $AB,CD$ thành 2 cặp đoạn thẳng bằng nhau đôi một.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 5.6., p. 113]
+	Cho đường tròn $(O,6{\rm cm})$ \& 2 dây $AB = 8,CD = 10$. M là trung điểm AB, N là trung điểm CD. (a) So sánh $\widehat{OMN},\widehat{ONM}$ trong trường hợp 2 dây $AB,CD$ không song song. (b) So sánh diện tích $\Delta OCD,\Delta OAB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 5.7., p. 113]
+	Cho đường tròn $(O)$ đường kính AB \& dây CD cắt đường kính AB tại I. Hạ $AH,BK$ vuông góc với CD. Chứng minh $CH = DK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 5.8., p. 113]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau tại $A,B$. Qua A kẻ 2 cát tuyến $CAF,DAE$, $C,D\in(O)$, $E,F\in(O')$, sao cho $\widehat{CAB} = \widehat{EAB}$. Chứng minh $CF = DE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 5.9., p. 113]
+	Cho $\Delta ABC$ cân tại A nội tiếp đường  tròn $(O)$. I là trung điểm của AC, G là trọng tâm của $\Delta ABI$. Chứng minh $OG\bot BI$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 5.10., p. 113]
+	Cho $\Delta ABC$ nhọn nội tiếp đường tròn $(O,r)$ biết $AB = r\sqrt{3},AC = r\sqrt{2}$. Giải $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD9, p. 96]
+	Cho $\Delta ABC$ nhọn nội tiếp đường tròn $(O)$. Điểm M bất kỳ thuộc cung BC không chứa A. $D,E$ lần lượt là các điểm đối xứng với M qua $AB,AC$. Tìm vị trí của M để DE lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD10, p. 97]
+	Cho $(O)$ bán kính $OA = 11$ {\rm cm}. Điểm M thuộc bán kính OA \& cách O {\rm7 cm}. Qua M kẻ dây CD dài {\rm18 cm}. Tính MC, MD với $MC < MD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD11, p. 97]
+	Cho $(O)$ bán kính {\rm15 cm}, điểm M cách O {\rm9 cm}. (a) Dựng dây AB đi qua M \& dài {\rm26 cm}. (b) Có bao nhiêu dây đi qua M \& có độ dài là 1 số nguyên {\rm cm}?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 55., p. 98]
+	Tứ giác ABCD có $\widehat{A} = \widehat{C} = 90^\circ$. (a) Chứng minh $AC\le BD$. (b) Trong trường hợp nào thì $AC = BD$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 56., p. 98]
+	Cho $(O)$ đường kính AB, 2 dây AC, AD. Điểm E bất kỳ trên đường tròn, H, K lần lượt là hình chiếu của E trên AC, AD. Chứng minh $HK\le AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 57., p. 98]
+	Cho $(O)$, dây $AB = 24$ {\rm cm}, dây $AC = 20$ {\rm cm} ($\widehat{BAC} < 90^\circ$ \& điểm O nằm trong $\widehat{BAC}$). M là trung điểm AC. Khoảng cách từ M đến AB bằng {\rm8 cm}. (a) Chứng minh $\Delta ABC$ cân tại C. (b) Tính bán kính đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 58., p. 98]
+	Cho $(O)$ bán kính {\rm5 cm}, 2 dây AB \& CD song song với nhau có độ dài theo thứ tự bằng {\rm8 cm} \& {\rm6 cm}. Tính khoảng cách giữa 2 dây.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 59., p. 98]
+	Cho $(O)$, đường kính $AB = 13$ {\rm cm}. Dây CD dài {\rm 12 cm} vuông góc với AB tại H. (a) Tính AH, BH. (b) $M,N$ lần lượt là hình chiếu của H trên $AC,BC$. Tính diện tích tứ giác CMHN.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 60., p. 99]
+	Cho nửa đường tròn tâm O đường kính AB, dây CD. $H,K$ lần lượt là chân 2 đường vuông góc kẻ từ $A,B$ đến CD. (a) Chứng minh $CH = DK$. (b) Chứng minh $S_{AHKB} = S_{ABC} + S_{ABD}$. (c) Tính diện tích lớn nhất của tứ giác AHKB biết $AB = 30$ {\rm cm}, $CD = 18$ {\rm cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 61., p. 99]
+	Cho $\Delta ABC$, 3 đường cao $AD,BE,CF$. Đường tròn đi qua D, E, F cắt BC, CA, AB lần lượt ở M, N, P. Chứng minh 3 đường thẳng kẻ từ M vuông góc với BC, kẻ từ N vuông góc với AC, kẻ từ P vuông góc với AB đồng quy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 62., p. 99]
+	$\Delta ABC$ cân tại A nội tiếp $(O)$. D là trung điểm AB, E là trọng tâm của $\Delta ACD$. Chứng minh $OE\bot CD$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Vị Trí Tương Đối của Đường Thẳng \& Đường Tròn. Dấu Hiệu Nhận Biết Tiếp Tuyến của Đường Tròn}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H1, p. 116]
+	Đường thẳng \& đường tròn có thể có 3 điểm chung không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H2, p. 116]
+	Cho đường tròn $(O,a\ {\rm cm})$ \& 1 đường thẳng $d$ cắt đường tròn tại 2 điểm $A,B$. H là trung điểm của AB. Tìm khoảng giá trị của OH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H3, p. 116]
+	Qua 1 điểm nằm trong đường tròn có thể kẻ được tiếp tuyến với đường tròn này không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H4, p. 116]
+	Qua 1 điểm ở trên đường tròn có thể kẻ được bao nhiêu tiếp tuyến với đường tròn đó?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H5, p. 116]
+	Tập hợp tâm các đường tròn $(O,R)$ tiếp xúc với đường thẳng $d$ cố định là đường nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD1, p. 116]
+	Cho đường tròn $(O,R)$ tiếp xúc với đường thẳng $d$ tại A. Trên đường thẳng $d$ lấy điểm M. Vẽ đường tròn $(M,MA)$ cắt $(O,R)$ tại điểm thứ 2 là $B\ne A$. Chứng minh MB là tiếp tuyến của $(O,R)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD2, p. 117]
+	Cho hình thang ABCD, $\widehat{A} = \widehat{B} = 90^\circ$, có I là trung điểm AB \& $\widehat{CID} = 90^\circ$. Chứng minh CD là tiếp tuyến của đường tròn đường kính AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD3, p. 117]
+	Cho đường tròn $(O)$, đường kính AB. Trong cùng nửa mặt phẳng bờ AB vẽ 2 tiếp tuyến $Ax,By$ với đường tròn. 1 đường thẳng $d$ tiếp xúc với đường tròn tại E, cắt $Ax,By$ theo thứ tự tại $M,N$. (a) Chứng minh tích $AM\cdot BN$ không đổi khi $d$ thay đổi. (b) Xác định vị trí của $d$ để $AM + BN$ nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD4, p. 118]
+	Cho đường tròn $(I)$ nội tiếp $\Delta ABC$ vuông tại A, $BC = a,CA = b,AB = c$. Giả sử $(I)$ tiếp xúc với BC tại D. Chứng minh $S_{ABC} = BD\cdot CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD5, p. 118]
+	Cho tứ giác ABCD có tất cả các cạnh tiếp xúc với đường tròn $(O)$, đồng thời tất cả các cạnh kéo dài của nó tiếp xúc với đường tròn $(O')$. Chứng minh 2 đường chéo của tứ giác ABCD vuông góc với nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD6, p. 118]
+	Cho hình vuông ABCD. Tia Ax quay xung quanh A, luôn nằm trong $\widehat{BAD}$. 2 tia phân giác của $\widehat{BAx},\widehat{DAx}$ lần lượt cắt $BC,CD$ tại $M,N$. Chứng minh MN luôn tiếp xúc với 1 đường tròn cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD7, p. 119]
+	Cho đường tròn $(O,5\ {\rm cm})$ \& 1 điểm A nằm ngoài đường tròn. Dựng 1 cát tuyến đi qua A, cắt đường tròn theo 1 dây dài {\rm8 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD8, p. 119]
+	Trong các tam giác vuông có cùng cạnh huyền, tìm tam giác có bán kính đường tròn nội tiếp lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.1., p. 120]
+	Cho nửa đường tròn $(O)$, đường kính AB. 1 đường thẳng $d$ tiếp xúc với nửa đường tròn tại M. Từ $A,B$ hạ $AE,BF$ vuông góc với $d$, $E,F\in d$. (a) Chứng minh $AE + BF$ không đổi khi M chạy trên nửa đường tròn. (b) Kẻ $MD\bot AB$. Chứng minh $MD^2 = AE\cdot BF$. (c) Xác định vị trí của M để tích $AE\cdot BF$ lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.2., p. 120]
+	Cho 2 đường tròn $(O,R),(O,r)$ đồng tâm, $R > r$. Từ điểm $A\in(O,r)$ kẻ 2 tiếp tuyến với $(O,r)$, 2 tiếp điểm là $M,N$. 2 tiếp tuyến đó cắt $(O,R)$ tương ứng tại $B,C$. (a) Chứng minh $AB = AC$. (b) Chứng minh $AO\bot BC$. (c) Tính diện tích $\Delta ABC$ theo $R,r$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.3., p. 120]
+	Cho đường tròn $(O)$, dây AB khác đường kính. Tại $A,B$ kẻ 2 tiếp tuyến $Ax,By$ với đường tròn. Trên $Ax,By$ lấy lần lượt 2 điểm $M,N$ sao cho $AM = BN$. Chứng minh hoặc $AB\parallel MN$ hoặc AB đi qua trung điểm của MN.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.4., p. 120]
+	Cho $\Delta ABC$. Đường tròn $(I)$ nội tiếp \& đường tròn $(J)$ bàng tiếp trong $\widehat{A}$ của tam giác tiếp xúc với BC theo thứ tự tại $M,N$. Chứng minh $M,N$ đối xứng nhau qua trung điểm BC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.5., p. 120]
+	Cho 2 đường thẳng $d\parallel d'$. 1 đường tròn $(O)$ tiếp xúc với $d,d'$ tương ứng tại $C,D$, điểm A cố định trên $d$, nằm ngoài $(O)$. Chỉ dùng êke, tìm trên $d'$ điểm B sao cho AB là tiếp tuyến của $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.6., p. 120]
+	Từ điểm A ở ngoài đường tròn $(O,R)$, kẻ 2 tiếp tuyến $AB,AC$ với đường tròn, $B,C$ là 2 tiếp điểm. 1 điểm M bất kỳ trên đường thẳng đi qua 2 trung điểm $P,Q$ của $AB,AC$. Kẻ tiếp tuyến MK của $(O)$. Chứng minh $MK = MA$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.7., p. 121]
+	Từ 1 điểm A ở ngoài đường tròn $(O,R)$ kẻ 2 tiếp tuyến $AM,AN$ với đường tròn, MO cắt tia AN tại E, NO cắt tia AM tại F. (a) Chứng minh $EF\parallel MN$. (b) Biết $OA = 7,R = 5$, tính khoảng cách từ A đến MN.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.8., p. 121]
+	Cho nửa đường tròn $(O)$, đường kính $AB = 2R$. Điểm M di động trên nửa đường tròn đó, $M\ne A,M\ne B$. Vẽ đường tròn $(M)$ tiếp xúc với AB tại H. Từ $A,B$ kẻ 2 tiếp tuyến $AC,BD$ với $(M)$, $C,D$ là 2 tiếp điểm. (a) Chứng minh $C,M,D$ thẳng hàng. (b) Chứng minh CD là tiếp tuyến của $(O)$. (c) Giả sử CD cắt AB tại K. Chứng minh $OA^2 = OB^2 = OH\cdot OK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.9., p. 121]
+	Cho đường tròn $(O)$, đường kính AB, dây $CD\bot OA$ tại $H\in OA$. $A'$ là điểm đối xứng với A qua H, $DA'$ cắt $BC$ tại I. Chứng minh: (a) $DI\bot BC$m $HI = HC$. (b) HI là tiếp tuyến của đường tròn đường kính $A'B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.10., p. 121]
+	Cho đường tròn $(O)$ \& điểm A cố định nằm trên đường tròn đó. Kẻ tiếp tuyến $xAy$ với đường tròn. Trên tia Ax lấy điểm M, kẻ tiếp tuyến MB với đường tròn. (a) Chứng minh $M,O$, trọng tâm, trực tâm $\Delta AMB$ thẳng hàng. (b) H là trực tâm của $\Delta AMB$. Chứng minh tứ giác OAHB là hình thoi. (c) Tìm tập hợp các điểm H khi M thay đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.11., p. 121]
+	Cho 2 điểm $A,B$ nằm cùng phía đối với đường thẳng xy, AB không vuông góc với xy. Tìm điểm $M\in xy$ sao cho MB là phân giác của góc giữa 2 đường thẳng $AM,xy$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.12., p. 121]
+	Cho đường thẳng xy \& 2 điểm $A,B$ nằm cùng phía đối với xy. Tìm trên xy điểm M sao cho $\widehat{BMy} = 2\widehat{AMx}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.13., p. 121]
+	Tứ giác ABCD có 4 cạnh tiếp xúc với 1 đường tròn \& 2 đường chéo của nó vuông góc với nhau. Chứng minh 1 trong 2 đường chéo là trục đối xứng của tứ giác.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.14., p. 121]
+	Trong các $\Delta ABC$ có chung đáy BC \& có cùng diện tích $S$, tìm tam giác có bán kính đường tròn nội tiếp lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.15., p. 122]
+	Đường tròn $(O,r)$ nội tiếp $\Delta ABC$. Các tiếp tuyến với đường tròn $(O)$ song song với 3 cạnh của tam giác \& chia tam giác thành 3 tam giác nhỏ. $r_1,r_2,r_3$ lần lượt là bán kính đường tròn nội tiếp 3 tam giác nhỏ đó. Chứng minh $r_1 + r_2 + r_3 = r$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.16., p. 122]
+	Cho đường tròn $(I)$ nội tiếp $\Delta ABC$, tiếp xúc với cạnh AB tại D. Chứng minh: $\Delta ABC$ vuông tại C $\Leftrightarrow AC\cdot BC = 2AD\cdot BD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.17., p. 122]
+	Cho hình bình hành ABCD. Trong các tam giác tạo bởi 2 cạnh liên tiếp \& 1 đường chéo ta vẽ các đường tròn nội tiếp. Chứng minh các tiếp điểm của chúng với 2 đường chéo tạo thành 1 hình chữ nhật.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.18., p. 122]
+	Cho $\widehat{xOy}$, 2 điểm $A,B$ theo thứ tự chuyển động trên $Ox,Oy$ sao cho chu vi $\Delta OAB$ không đổi. Chứng minh AB luôn tiếp xúc với đường tròn cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.19., p. 122]
+	Cho $\widehat{xOy} = 90^\circ$, đường tròn $(I)$ tiếp xúc với 2 cạnh $Ox,Oy$ lần lượt ở $A,B$. 1 tiếp tuyến của $(I)$ tại điểm E cắt $Ox,Oy$ lần lượt ở $C,D$, $C\in OA,D\in OB$. Chứng minh: $\frac{1}{3}(OA + OB) < CD < \dfrac{1}{2}(OA + OB)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 6.20., p. 122]
+	Cho đường tròn $(O)$ \& điểm M ngoài đường tròn. Từ M kẻ 2 tiếp tuyến $MA,MB$ với $(O)$. Vẽ đường tròn $(M,MA)$. (a) Chứng minh $OA,OB$ là 2 tiếp tuyến của đường tròn $(M,MA)$. (b) Giả sử OM cắt $(M,MA)$ tại $E,F$, E nằm giữa $O,M$. Chứng minh $\widehat{OAE} = \widehat{AFM}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, p. 123]
+	Chứng minh: (a) Mọi đa giác đều luôn ngoại tiếp được 1 đường tròn, i.e., tồn tại 1 đường tròn tiếp xúc với tất cả các cạnh của đa giác đều. (b) Tứ giác ABCD ngoại tiếp được 1 đường tròn $\Leftrightarrow AB + CD = AD + BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD12, p. 99]
+	Cho $\Delta ABC$ vuông tại A, $AB < AC$, đường cao $AH$. Điểm E đối xứng với B qua H. Đường tròn có đường kính EC cắt AC ở K. Chứng minh HK là tiếp tuyến của đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD13, p. 100]
+	Cho 1 hình vuông $8\times8$ gồm $64$ ô vuông nhỏ. Đặt 1 tấm bìa hình tròn có đường kính $8$ sao cho tâm O của hình tròn trùng với tâm của hình vuông. (a) Chứng minh hình tròn tiếp xúc với 4 cạnh của hình vuông. (b) Có bao nhiêu ô vuông nhỏ bị tấm bìa che lấp hoàn toàn? (c) Có bao nhiêu ô vuông nhỏ bị tấm bìa che lấp (cả che lấp 1 phần \& che lấp hoàn toàn)?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 63., pp. 100--101]
+	Cho nửa đường tròn tâm O đường kính AB, điểm M thuộc nửa đường tròn. Qua M vẽ tiếp tuyến với nửa đường tròn. $D,C$ lần lượt là hình chiếu của $A,B$ trên tiếp tuyến ấy. (a) Chứng minh M là trung điểm CD. (b) Chứng minh $AB = BC + AD$. (c) Giả sử $ \widehat{AOM}\ge\widehat{BOM}$, gọi E là giao điểm của AD với nửa đường tròn. Xác định dạng của tứ giác BCDE. (d) Xác định vị trí của điểm M trên nửa đường tròn sao cho tứ giác ABCD có diện tích lớn nhất. Tính diện tích đó theo bán kính $R$ của nửa đường tròn đã cho.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 64., p. 101]
+	Cho $\Delta ABC$ cân tại A, I là giao điểm của 3 đường phân giác. (a) Xác định vị trí tương đối của đường thẳng AC với đường tròn $(O)$ ngoại tiếp $\Delta BIC$. (b) H là trung điểm BC, IK là đường kính đường tròn $(O)$. Chứng minh $\dfrac{AI}{AK} = \dfrac{HI}{HK}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 65., p. 101]
+	Cho nửa đường tròn tâm O đường kính AB, Ax là tiếp tuyến của nửa đường tròn (Ax \& nửa đường tròn nằm cùng phía đối với AB), điểm C thuộc nửa đường tròn, H là hình chiếu của C trên AB. Đường thẳng qua O \& vuông góc với AC cắt Ax tại M. I là giao điểm của $MB,CH$. Chứng minh $IC = IH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 66., p. 101]
+	Cho hình thang vuông ABCD, $\widehat{A} = \widehat{D} = 90^\circ$, có $\widehat{BMC} = 90^\circ$ với M là trung điểm AD. Chứng minh: (a) AD là tiếp tuyến của đường tròn có đường kính BC. (b) BC là tiếp tuyến của đường tròn có đường kính AD.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 67., p. 101]
+	Cho nửa đường tròn tâm O đường kính AB, điểm C thuộc nửa đường tròn, H là hình chiếu của C trên AB. Qua trung điểm M của CH, kẻ đường vuông góc với OC, cắt nửa đường tròn tại D \& E. Chứng minh AB là tiếp tuyến của $(C;CD)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 68., p. 101]
+	Cho đường tròn tâm O đường kính AB. $d,d'$ lần lượt là 2 tiếp tuyến tại $A,B$ của đường tròn, $C\in d$ bất kỳ. Đường vuông góc với OC tại O cắt $d'$ tại D. Chứng minh CD là tiếp tuyến của $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 69., p. 101]
+	Cho nửa đường tròn tâm O đường kính AB, điểm C thuộc nửa đường tròn. Qua C kẻ tiếp tuyến $d$ với nửa đường tròn. Kẻ 2 tia Ax, By song song với nhau, cắt $d$ theo thứ tự tại D, E. Chứng minh AB là tiếp tuyến của đường tròn đường kính DE.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 70., pp. 101--102]
+	Cho đường tròn tâm O có đường kính $AB = 2R$. $d$ là tiếp tuyến của đường tròn, A là tiếp điểm. Điểm M bất kỳ thuộc $d$. Qua O kẻ đường thẳng vuông góc với BM, cắt $d$ tại N. (a) Chứng minh tích $AM\cdot AN$ không đổi khi điểm M chuyển động trên đường thẳng $d$. (b) Tìm {\rm GTNN} của MN.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 71., p. 102]
+	Cho $\Delta ABC$ cân tại A có $\widehat{A} = \alpha$, đường cao $AH = h$. Vẽ đường tròn tâm A bán kính $h$. 1 tiếp tuyến bất kỳ ($\ne BC$) của đường tròn $(A)$ cắt 2 tia AB, AC theo thứ tự tại $B',C'$. (a) Chứng minh $S_{ABC} = S_{AB'C'}$. (b) Trong các $\Delta ABC$ có $\widehat{A} = \alpha$ \& đường cao $AH = h$, tam giác nào có diện tích nhỏ nhất?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1, p. 28]
+	Chứng minh: Nếu I là tâm đường tròn nội tiếp $\Delta ABC$ thì $\widehat{BIC} = 90^\circ + \dfrac{\widehat{A}}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 2, p. 28]
+	Chứng minh: Nếu I nằm trong $\Delta ABC$ \& $\widehat{BIC} = 90^\circ + \dfrac{\widehat{A}}{2}$, $\widehat{AIC} = 90^\circ + \dfrac{\widehat{B}}{2}$ thì I là tâm đường tròn nội tiếp $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 3, p. 28]
+	Chứng minh: Nếu J là tâm đường tròn bàng tiếp $\widehat{A}$ của $\Delta ABC$ thì $\widehat{BJC} = 90^\circ - \dfrac{\widehat{A}}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 4, p. 28]
+	Cho $\Delta ABC$, đặt $BC = a,CA = b,AB = c$, $a + b + c = 2p$, $r$ là bán kính đường tròn nội tiếp, $S$ là diện tích $\Delta ABC$. Chứng minh: $r = (p - a)\tan\dfrac{A}{2} = (p - b)\tan\dfrac{B}{2} = (p - c)\tan\dfrac{C}{2}$, $S = pr$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5, p. 28]
+	Đường tròn nội tiếp $\Delta ABC$ tiếp xúc với $AB,AC$ tại $F,E$. Chứng minh: $AE = AF = \frac{1}{2}(AB + AC - BC)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD1, p. 29]
+	Cho $\widehat{xOy} = 90^\circ$, đường tròn $(I)$ tiếp xúc với 2 cạnh $Ox,Oy$ tại $A,B$. 1 tiếp tuyến của đường tròn $(I)$ tại điểm E cắt $Ox,Oy$ tại $C,D$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD2, p. 29]
+	Cho $\widehat{xOy}$, 2 điểm $A,B$ lần lượt chuyển động trên Ox \& Oy sao cho chu vi $\Delta OAB$ không đổi. Chứng minh AB luôn tiếp xúc với đường tròn cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD3, p. 29]
+	Cho hình vuông $ABCD$, lấy điểm E trên cạnh BC \& điểm F trên cạnh CD sao cho $AB = 3BE = 2DF$. Chứng minh EF tiếp xúc với cung tròn tâm A, bán kính AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD4, p. 30]
+	Cho đường tròn $(O,R)$, \& đường thẳng $a$ cắt đường tròn tại $A,B$. M là điểm trên $a$ \& nằm ngoài đường tròn, qua M kẻ 2 tiếp tuyển $MC,MD$. Chứng minh khi M thay đổi trên $a$, đường thẳng CD luôn đi qua 1 điểm cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD5, p. 31]
+	Cho $\Delta ABC$, gọi I là tâm đường tròn nội tiếp tam giác. Qua I dựng đường thẳng vuông góc với IA cắt $AB,AC$ tại $M,N$. Chứng minh: (a) $\dfrac{BM}{CN} = \dfrac{BI^2}{CI^2}$. (b) $BM\cdot AC + CN\cdot AB + AI^2 = AB\cdot AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD6, p. 31]
+	Cho $\Delta ABC$, $D,E,F$ lần lượt là 3 tiếp điểm của đường tròn nội tiếp $\Delta ABC$ với 3 cạnh $BC,CA,AB$, H là hình chiếu của D trên EF. Chứng minh DH là tia phân giác của $\widehat{BHC}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD7, p. 32]
+	I là tâm đường tròn nội tiếp $\Delta ABC$. $D,E$ lần lượt là giao điểm của đường thẳng $BI,CI$ với cạnh $AC,AB$. Chứng minh $\Delta ABC$ vuông tại A $\Leftrightarrow BI\cdot CI = \frac{1}{2}BD\cdot CF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD8, p. 32]
+	Cho đường tròn $(O,R)$ \& điểm M cách tâm O 1 khoảng bằng $3R$. Từ M kẻ 2 đường thẳng tiếp xúc với đường tròn $(O,R)$ tại $A,B$, gọi $I,E$ lần lượt là trung điểm $MA,MB$. Tính khoảng cách từ O đến IE.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD9, p. 33]
+	Cho $\Delta ABC$ cân tại A. O là trung điểm BC, dựng đường tròn $(O)$ tiếp xúc với $AB,AC$ tại $D,E$. M là điểm chuyển động trên cung nhỏ $\arc{DE}$, tiếp tuyến với đường tròn $(O)$ tại M cắt 2 cạnh $AB,AC$ lần lượt ở $P,Q$. Chứng minh: (a) $BC^2 = 4BP\cdot CQ$. Từ đó xác định vị trí của M để diện tích $\Delta APQ$ đạt {\rm GTLN}. (b) Nếu $BC^2 = 4BP\cdot CQ$ thì $PQ$ là tiếp tuyến.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD10, p. 34]
+	Cho đường tròn $(O)$, điểm M ở ngoài đường tròn. Qua M kẻ 2 tiếp tuyến cắt đường tròn tại $A,B$, $MA > MB$, gọi CD là đường kính vuông góc với AB, đường thẳng $MC,MD$ cắt đường tròn tại $E,K$, giao điểm của $DE,CK$ là H, I là trung điểm MH. Chứng minh $IE,IK$ là 2 tiếp tuyến của đường tròn $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD11, p. 34]
+	Cho $\Delta ABC$, đường cao AH. $AD,AE$ là đường phân giác của 2 góc $\widehat{BAH},\widehat{CAH}$. Chứng minh tâm đường tròn nội tiếp $\Delta ABC$ trùng với tâm đường tròn ngoại tiếp $\Delta ADE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD12, p. 35]
+	Cho $\Delta ABC$ vuông tại A. I là tâm đường tròn nội tiếp $\Delta ABC$, 3 tiếp điểm trên $BC,CA,AB$ lần lượt là $D,E,F$. M là trung điểm AC, đường thẳng MI cắt cạnh AB tại N, đường thẳng DF cắt đường cao AH của $\Delta ABC$ tại P. Chứng minh $\Delta ANP$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD13, p. 36]
+	Tính $\widehat{A}$ của $\Delta ABC$ biết đỉnh B cách đều tâm 2 đường tròn bàng tiếp của $\widehat{A},\widehat{B}$ của $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD14, p. 36]
+	Cho $\Delta ABC$ có $AB = 2AC$ \& đường phân giác AD. $r,r_1,r_2$ lần lượt là bán kính đường tròn nội tiếp $\Delta ABC,\Delta ACD,\Delta ABD$. Chứng minh $AD = \dfrac{pr}{3}\left(\dfrac{1}{r_1} + \dfrac{2}{r_2}\right) - p$ với $p$ là nửa chu vi $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD15, p. 37]
+	Cho đường tròn $(O)$ \& điểm A cố định nằm ngoài đường tròn. Kẻ tiếp tuyến AB \& cát tuyến qua A cắt đường tròn tại $C,D$, $AC < AD$. Hỏi trọng tâm $\Delta BCD$ chạy trên đường nào khi cát tuyến ACD thay đổi?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.1., p. 38]
+	Cho nửa đường tròn bán kính $AB = 2R$. C là điểm trên nửa đường tròn, khoảng cách từ C đến AB là $h$. Tính bán kính đường tròn nội tiếp $\Delta ABC$ theo $R,h$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.2., p. 38]
+	Cho $\Delta ABC$, D là điểm trên BC. Đường tròn nội tiếp $\Delta ABD$ tiếp xúc với cạnh BC tại E, đường tròn nội tiếp $\Delta ADC$ tiếp xúc với cạnh BC tại F, đồng thời 2 đường tròn này cùng tiếp xúc với đường thẳng $d\ne BC$, đường thẳng $d$ cắt AD tại I. Chứng minh $AI = \frac{1}{2}(AB + AC - BC)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.3., p. 38]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH. Đường tròn đường kính BH cắt cạnh AB tại M, đường tròn đường kính HC cắt cạnh AC tại N. Chứng minh MN là tiếp tuyến chung của 2 đường tròn đường kính $BH,CH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.4., p. 38]
+	Cho $\Delta ABC$ cân tại A, đường cao AK. H là trực tâm $\Delta ABC$, đường tròn đường kính AH cắt 2 cạnh $AB,AC$ tại $D,E$. Chứng minh $KD,KE$ là 2 tiếp tuyến của đường tròn đường kính AH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.5., p. 38]
+	Cho đường tròn $(O)$ \& điểm M ở ngoài đường tròn. Từ M kẻ tiếp tuyến $MA,MB$ với đường tròn, $A,B$ là 2 tiếp điểm, tia OM cắt đường tròn tại C, tiếp tuyến tại C cắt tiếp tuyến $MA,MB$ tại $P,Q$. Chứng minh diện tích $\Delta MPQ$ lớn hơn $\frac{1}{2}$ diện tích $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.6., p. 38]
+	Trong tất cả các tam giác có cùng cạnh $a$, đường cao kẻ từ đỉnh đối diện với cạnh $a$ bằng $h$, xác định tam giác có bán kính đường tròn nội tiếp lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.7., p. 38]
+	Cho $\Delta ABC$, I là tâm đường tròn nội tiếp tam giác. Qua I kẻ đường thẳng vuông góc với IA cắt 2 cạnh $AB,AC$ tại $D,E$. Chứng minh $\dfrac{BD}{CE} = \left(\dfrac{IB}{IC}\right)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.8., p. 38]
+	Cho 3 điểm $A,B,C$ cố định nằm trên 1 đường thẳng theo thứ tự đó. Đường tròn $(O)$ thay đổi luôn đi qua $B,C$. Từ A kẻ 2 tiếp tuyến $AM,AN$ với đường tròn $(O)$, $M,N$ là 2 tiếp điểm. Đường thẳng MN cắt AO tại H, gọi E là trung điểm BC. Chứng minh khi đường tròn $(O)$ thay đổi tâm của đường tròn ngoại tiếp $\Delta OHE$ nằm trên 1 đường thẳng cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.9., p. 39]
+	Cho $\Delta ABC$, $\widehat{A} = 30^\circ$, BC là cạnh nhỏ nhất. Trên AB lấy điểm D, trên AC lấy điểm E sao cho $BD = CE = BC$. $O,I$ là tâm đường tròn ngoại, nội tiếp $\Delta ABC$. Chứng minh $OI = DE$ \& $OI\bot DE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.10., p. 39]
+	Cho $\Delta ABC$ ngoại tiếp đường tròn $(I,r)$, kẻ các tiếp tuyến với đường tròn \& song song với 3 cạnh $\Delta ABC$. Các tiếp tuyến này tạo với 3 cạnh $\Delta ABC$ thành 3 tam giác nhỏ, gọi diện tích 3 tam giác nhỏ là $S_1,S_2,S_3$ \& diện tích $\Delta ABC$ là $S$. Tìm {\rm GTNN} của biểu thức $\dfrac{S_1 + S_2 + S_3}{S}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.11., p. 39]
+	Cho $\Delta ABC$, gọi I là tâm đường tròn nội tiếp, $I_A$ là tâm đường tròn bàng tiếp $\widehat{A}$ \& M là trung điểm BC. $H,D$ là hình chiếu của $I,I_A$ trên cạnh BC. Chứng minh M là trung điểm DH, từ đó suy ra đường thẳng MI đi qua trung điểm AH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.12., p. 39]
+	Cho đường tròn $(O,r)$ \& điểm A cố định trên đường tròn. Qua A dựng tiếp tuyến $d$ với đường tròn $(O,r)$. M là điểm chuyển động trên $d$, từ M kẻ tiếp tuyến đến đường tròn $(O,r)$ có tiếp điểm là $B\ne A$. Tâm của đường tròn ngoại tiếp \& trực tâm của $\Delta AMB$ chạy trên đường nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.13., p. 39]
+	Cho nửa đường tròn đường kính AB, từ điểm M trên đường tròn kẻ tiếp tuyến $d$. $H,K$ là hình chiếu của $A,B$ trên $d$. Chứng minh $AH + BK$ không đổi từ đó suy ra đường tròn đường kính HK luôn tiếp xúc với $AH,BK,AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.14., p. 39]
+	Cho $\Delta ABC$, điểm M trong tam giác, gọi $H,D,E$ là hình chiếu của M thứ tự trên $BC,CA,AB$. Xác định vị trí của M sao cho giá trị của biểu thức $\dfrac{BC}{MH} + \dfrac{CA}{MD} + \dfrac{AB}{ME}$ đạt {\rm GTNN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 5.15., p. 39]
+	Cho $\Delta ABC$ vuông tại A. $O,I$ là tâm đường tròn ngoại \& nội tiếp $\Delta ABC$. Biết $\Delta BIO$ vuông tại I. Chứng minh $\dfrac{BC}{5} = \dfrac{CA}{4} = \dfrac{AB}{3}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Vị Trí Tương Đối của 2 Đường Tròn}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H1, p. 126]
+	Cho $\Delta ABC$. 2 đường tròn $(B,AB),(C,AC)$ có thể tiếp xúc nhau được không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H2, p. 126]
+	{\rm Đ{\tt/}S?} Cho 2 đường tròn $(O,R),(O',r)$ có $R > r$. (a) Nếu $OO' < R + r$ thì 2 đường tròn cắt nhau. (b) Nếu $OO' = R - r$ thì 2 đường tròn tiếp xúc nhau. (c) Nếu 2 đường tròn tiếp xúc ngoài nhau thì $OO' = R + r$. (d) Nếu $OO' > R + r$ thì 2 đường tròn ngoài nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD1, p. 127]
+	Cho đường tròn $(O,OA)$ \& đường tròn $(O',OA)$. (a) Xác định vị trí tương đối của 2 đường tròn $(O),(O')$. (b) Dây AD của đường tròn $(O)$ cắt đường tròn $(O')$ ở C. Chứng minh $AC = CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD2, p. 127]
+	Xác định vị trí tương đối của 2 đường tròn $(O,R),(O',R')$ trong 2 trường hợp: (a) $R = 6,R' = 4,d = OO' = 2$. (b) $R = 5,R' = 3,d = 6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD3, p. 127]
+	Cho 2 đường tròn $(O,6),(O',8)$ cắt nhau tại $A,B$ sao cho OA là tiếp tuyến của $(O')$. Tính độ dài dây chung AB \& khoảng cách từ O đến AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD4, p. 128]
+	 Cho 2 đường tròn $(O),(O')$ tiếp xúc với nhau tại A. Qua A vẽ cát tuyến cắt $(O),(O')$ lần lượt ở $M\ne A,N\ne A$. Chứng minh 2 tiếp tuyến với $(O),(O')$ lần lượt ở $M,N$ song song với nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD5, p. 128]
+	Cho $\Delta ABC$ cân tại A. (a) Chứng minh đường tròn bàng tiếp trong $\widehat{A}$ \& đường tròn nội tiếp $\Delta ABC$ tiếp xúc nhau tại 1 điểm thuộc BC. (b) Tính bán kính 2 đường tròn biết $AB = 8,BC = 6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD6, p. 129]
+	Cho 2 đường tròn $(O,R),(O',R')$ tiếp xúc ngoài tại A. Kẻ tiếp tuyến chung ngoài MN, $M\in(O),N\in(O')$. Tiếp tuyến chung tại A của 2 đường tròn cắt MN tại E. (a) Chứng minh E là trung điểm của MN. (b) Chứng minh $\Delta AMN$ vuông \& MN tiếp xúc với đường tròn đường kính $OO'$. (c) Tính MN biết bán kính $(O),(O')$ lần lượt là $R = 4,R' = 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD7, p. 129]
+	Cho $\Delta ABC$. Dựng 3 đường tròn tâm $A,B,C$ đôi một tiếp xúc ngoài nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD8, p. 130]
+	Cho 2 đường tròn $(O),(O')$ ngoài nhau, $AB,CD$ là 2 tiếp tuyến chung ngoài, đường thẳng AD cắt $(O),(O')$ theo thứ tự tại $M,N$. Chứng minh $AM = DN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD9, p. 130]
+	Cho 2 đường tròn $(O_1,r_1),(O_2,r_2)$ cắt nhau tại $A,B$, $O_1,O_2$ nằm khác phía đối với AB. 1 cát tuyến PAQ quay quanh A. Lấy $P\in(O_1),Q\in(O_2)$ sao cho A nằm giữa $P,Q$. Xác định vị trí của cát tuyến PAQ trong mỗi trường hợp: (a) PQ có độ dài lớn nhất. (b) Chu vi $\Delta BPQ$ đạt {\rm GTLN}. (c) Diện tích $\Delta BPQ$ đạt {\rm GTLN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.1., p. 131]
+	Cho 2 đường tròn $(O,R),(O',R')$, độ dài đường nối tâm $OO' = d$. Xác định vị trí tương đối của 2 đường tròn vào bảng:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|r|r|r|c|}
+			\hline
+			$R$ & $R'$ & $d$ & Vị trí tương đối \\
+			\hline
+			5 cm & 3 cm & 7 cm &  \\
+			\hline
+			11 cm & 4 cm & 3 cm &  \\
+			\hline
+			9 cm & 6 cm & 15 cm &  \\
+			\hline
+			7 cm & 2 cm & 10 cm &  \\
+			\hline
+			7 cm & 3 cm & 4 cm &  \\
+			\hline
+			6 cm & 2 cm & 7 cm &  \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.2., p. 131]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau tại $A,B$, $O,O'$ nằm khác phía đối với AB. Qua A kẻ đường thẳng vuông góc với AB cắt $(O)$ tại C \& cắt $(O')$ tại D. Cát tuyến EAF cắt $(O)$ tại E, cắt $(O')$ tại F. (a) Chứng minh $\widehat{CEB} = \widehat{DFB} = 90^\circ$. (b) Chứng minh $OO'\parallel CD$. Tính CD biết $AB = 9.6$ {\rm cm}, $OA = 8$  {\rm cm}, $O'A = 6$ {\rm cm}. (c) Dựng qua A cát tuyến EAF, $E\in(O),F\in(O')$, sao cho $AE = AF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.3., p. 132]
+	Cho 3 đường tròn $(O_1),(O_2),(O_3)$ tiếp xúc ngoài với nhau từng đôi một. 3 tiếp điểm $(O_1),(O_2)$ là A, $(O_2,(O_3)$ là B, $(O_3),(O_1)$ là C. 2 tia $AB,AC$ kéo dài cắt $(O_3)$ lần lượt ở $P,Q$. Chứng minh $P,Q,O_3$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.4., p. 132]
+	Cho 2 đường tròn $(O,2\ {\rm cm})$ \& $(O',3\ {\rm cm})$ có khoảng cách giữa 2 tâm là {\rm6 cm}. $E,F$ tương ứng là giao của tiếp tuyến chung trong \& ngoài với đường thẳng $OO'$. (a) Xác định vị trí tương đối của 2 đường tròn. (b) Tính độ dài đoạn EF.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.5., p. 132]
+	Cho 2 đường tròn đồng tâm O. 1 đường tròn $(O')$ cắt đường tròn nhỏ tâm O lần lượt ở $A,B$ \& cắt đường tròn còn lại lần lượt ở $C,D$. Chứng minh $AB\parallel CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.6., p. 132]
+	Cho 2 đường tròn $(O,R),(O',r)$ cắt nhau ở $A,B$ sao cho $O,O'$ thuộc 2 nửa mặt phẳng bờ AB. Dựng 1 cát tuyến PAQ, $P\in(O,R),Q\in(O',r)$, sao cho A nằm giữa $P,Q$ \& $2AP = AQ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.7., p. 132]
+	Cho 2 đường tròn bằng nhau $(O),(O')$ có bán kính $R$ cắt nhau tại $A,B$. Từ $O,O'$ dựng $Ox,O'y$ song song với nhau \& cùng thuộc nửa mặt phẳng bở $OO'$, 2 tia này cắt $(O)$ tại C \& $(O')$ tại D. $C'$ đối xứng với C qua O, $D'$ đối xứng với D qua $O'$. (a) Chứng minh $CD',OO',C'D$ đồng quy. (b) Tìm tập hợp trung điểm M của CD khi $Ox,O'y$ thay đổi. (c) Tính góc hợp bởi tiếp tuyến tại A của $(O)$ với $OO'$ biết $OO' = \frac{3}{2}R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.8., p. 132]
+	Cho 2 đường tròn $(O,3\ {\rm cm})$ tiếp xúc ngoài với đường tròn $(O',1\ {\rm cm})$ tại A. Vẽ 2 bán kính $OB,O'C$ song song với nhau thuộc cùng 1 nửa mặt phẳng bờ $OO'$. (a) Tính $\widehat{BAC}$. (b) I là giao điểm của $BC,OO'$. Tính độ dài OI.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.9., p. 132]
+	Cho đường tròn $(O,R),(I,2R)$ đi qua O. 2 tiếp tuyến chung ngoài của 2 đường tròn này là $ADB,AEC$. (a) Xác định dạng \& giải $\Delta ABC$. (b) Xác định dạng \& giải tứ giác $BDEC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.10., p. 133]
+	 Cho 2 đường tròn $(O_1),(O_2)$ cắt nhau tại $H,K$. Đường thẳng $O_1H$ cắt $(O_1)$ tại A, cắt $(O_2)$ tại $B\ne H$, $O_2H$ cắt $(O_1)$ tại C \& cắt $(O_2)$ tại $D\ne H$. Chứng minh 3 đường thẳng $AC,BD,HK$ đồng quy tại 1 điểm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.11., p. 133]
+	Cho 2 đường tròn $(O,R),(O',R')$ tiếp xúc ngoài, tiếp tuyến chung ngoài AB, $A\in(O,R)$, $B\in(O',R')$. Đường tròn $(I,r)$ tiếp xúc với AB \& 2 đường tròn $(O,R),(O',R')$. Chứng minh: $\dfrac{1}{\sqrt{r}} = \dfrac{1}{\sqrt{R}} + \dfrac{1}{\sqrt{R'}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.12., p. 133]
+	Cho $\Delta ABC$. Vẽ 3 đường tròn tâm $A,B,C$ đôi một tiếp xúc ngoài nhau tại $M,N,P$. Chứng minh đường tròn đi qua 3 điểm $M,N,P$ là đường tròn nội tiếp $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.13., p. 133]
+	Cho 1 tứ giác. Vẽ các đường tròn có đường kính là 4 cạnh của tứ giác đó. Chứng minh 4 đường thẳng chứa các dây chung của 4 đường tròn cắt nhau tạo thành 1 hình bình hành.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.14., p. 133]
+	Cho 3 đường tròn $(O_1),(O_2),(O_3)$ bằng nhau \& ở ngoài nhau. Dựng 1 đường tròn tiếp xúc ngoài (hoặc tiếp xúc trong) với cả 3 đường tròn $(O_1),(O_2),(O_3)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.15., p. 133]
+	Cho 3 đường tròn không biết tâm, tiếp xúc ngoài với nhau tại $A,B,C$. Tìm tâm của chúng chỉ bằng thước thẳng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 7.16., p. 133]
+	Cho đường tròn $(O)$ \& đường thẳng $d$ không cắt $(O)$. $P\in d$ là điểm cố định. Dựng đường tròn $(K)$ tiếp xúc với $(O)$ \& tiếp xúc với $d$ tại P.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD20, p. 112]
+	Cho 2 đường tròn $(O,R),(O',r)$ tiếp xúc ngoài tại A. Kẻ tiếp tuyến chung ngoài BC, $B\in(O),C\in(O')$. (a) Tính $\widehat{BAC}$. (b) Tính BC. (c) D là giao điểm của CA với $(O)$, $D\ne A$. Chứng minh 3 điểm $B,O,D$ thẳng hàng. (d) Tính $AB,AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD21, p. 112]
+	Cho điểm B nằm giữa $A,C$ sao cho $AB = 14$ {\rm cm}, $BC = 28$ {\rm cm}. Vẽ về 1 phía của AC 3 nửa đường tròn tâm $I,K,O$ có đường kính theo thứ tự $AB,BC,CA$. Tính bán kính đường tròn $(M)$ tiếp xúc ngoài với 2 nửa đường tròn $(I),(K)$ \& tiếp xúc trong với nửa đường tròn $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD22, p. 114]
+	Cho 2 đường tròn $(O),(O')$ có cùng bán kính, cắt nhau tại $A,B$. Kẻ cát tuyến chung DAE của 2 đường tròn, $D\in(O),E\in(O')$. Chứng minh $BD = BE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD23, p. 114]
+	Cho 2 đường tròn $(O),(O')$ ở ngoài nhau. Kẻ 2 tiếp tuyến chung ngoài $AB,CD$, $A,C\in(O)$, $B,D\in(O')$. Tiếp tuyến chung trong GH cắt $AB,CD$ lần lượt ở $E,F$, $G\in(O),H\in(O')$. Chứng minh: (a) $AB = EF$. (b) $EG = FH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 109., p. 115]
+	2 đường tròn $(O,R),(O',R)$ cắt nhau tại $A,B$. Đoạn nối tâm $OO'$ cắt 2 đường tròn $(O),(O')$ theo thứ tự ở $C,D$. Tính $R$ biết $AB = 24$ {\rm cm}, $CD = 12$ {\rm cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 110., p. 115]
+	2 đường tròn $(O,R),(O',R)$ cắt nhau tại $A,B$, với $\widehat{OAO'} = 90^\circ$. Vẽ cát tuyến chung MAN, $M\in(O),N\in(O')$. Tính $AM^2 + AN^2$ theo $R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 111., p. 115]
+	Cho 3 đường tròn tâm $O_1,O_2,O_3$ có cùng bán kính \& cùng đi qua 1 điểm I. 3 giao điểm khác I của 2 trong 3 đường tròn đó là $A,B,C$. Chứng minh: (a) $\Delta ABC = \Delta O_1O_2O_3$. (b) I là trực tâm $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 112., pp. 115--116]
+	Cho điểm A nằm ngoài đường tròn tâm O. Vẽ đường tròn tâm A bán kính AO. CD là tiếp tuyến chung của 2 đường tròn, $C\in(O),D\in(A)$. Đoạn nối tâm OA cắt đường tròn $(O)$ tại H. Chứng minh DH là tiếp tuyến của $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 113., p. 116]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau tại $A,B$. Vẽ hình bình hành $OBO'C$. Chứng minh $ACOO'$ là hình thang cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 114., p. 116]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau tại $A,B$. (a) Nêu cách dựng cát tuyến chung CAD, $C\in(O),D\in(O')$, sao cho A là trugn điểm CD. (b) Tính CD biết $OO' = 5$ {\rm cm}, $OA = 4$ {\rm cm}, $O'A = 3$ {\rm cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 115., p. 116]
+	Cho $\widehat{xOy} = 90^\circ$. 2 điểm $A,B$ theo thứ tự di chuyển trên 2 tia $Ox,Oy$ sao cho $OA + OB = k$ với hằng số $k$. Vẽ 2 đường tròn $(A,OB),(B,OA)$. (a) Chứng minh 2 đường tròn $(A),(B)$ luôn cắt nhau. (b) $M,N$ là 2 giao điểm của 2 đường tròn $(A),(B)$. Chứng minh đường thẳng MN luôn đi qua 1 điểm cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 116., p. 116]
+	2 đường tròn $(O,R),(O',r)$ tiếp xúc ngoài tại A. Kẻ tiếp tuyến chung ngoài BC, $B\in(O),C\in(O')$. (a) Cho $R = 3$ {\rm cm}, $r = 1$ {\rm cm}. Tính $AB,AC$. (b) Cho $AB = 19.2$ {\rm cm}, $AC = 14.4$ {\rm cm}. Tính $R,r$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 117., p. 116]
+	Cho 3 đường tròn $(O_1),(O_2),(O_3)$ tiếp xúc với 2 cạnh của 1 góc nhọn \& $(O_1)$ tiếp xúc ngoài với $(O_2)$, $(O_2)$ tiếp xúc ngoài với $(O_3)$. Biết bán kính 2 đường tròn $(O_1),(O_3)$ là $a,b$. Tính bán kính đường tròn $(O_2)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 118., p. 116]
+	Cho 2 đường tròn $(O),(O')$ tiếp xúc ngoài tại A. AB là đường kính của đường tròn $(O)$, AC là đường kính của đường tròn $(O')$, DE là tiếp tuyến chung của 2 đường tròn, $D\in(O),E\in(O')$, K là giao điểm của $BD,CE$. (a) Tứ giác ADKE là hình gì? (b) Chứng minh AK là tiếp tuyến chung của 2 đường tròn $(O),(O')$. (c) M là trung điểm BC. Chứng minh $MK\bot DE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 119., pp. 116--117]
+	2 đường tròn $(O,R),(O',r)$ tiếp xúc ngoài tại A. $BC,DE$ là 2 tiếp tuyến chung của 2 đường tròn, $B,D\in(O)$. (a) Chứng minh BDEC là hình thang cân. (b) Tính diện tích hình thang BDEC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 120., p. 117]
+	2 đường tròn $(O,R),(O',r)$ tiếp xúc ngoài nhau. AB là tiếp tuyến chung của 2 đường tròn, $A\in(O),B\in(O')$. (a) Tính độ dài AB. (b) Cho $R = 36$ {\rm cm}, $r = 9$ {\rm cm}. Tính bán kính đường tròn $(I)$ tiếp xúc với đường thẳng AB \& tiếp xúc ngoài với 2 đường tròn $(O),(O')$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 121., p. 117]
+	Trong 1 hình thang caan có 2 đường tròn tiếp xúc ngoài nhau, mỗi đường tròn tiếp xúc với 2 cạnh bên \& tiếp xúc với 1 đáy của hình thang. Biết bán kính 2 đường tròn đó bằng {\rm2 cm, 8 cm}. Tính diện tích hình thang.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 122., p. 117]
+	Cho $\Delta ABC$ đều nội tiếp dường tròn $(O,R)$. $(O')$ là đường tròn tiếp xúc trong với đường tròn $(O)$ \& tiếp xúc với 2 cạnh $AB,AC$ theo thứ tự tại $M,N$. (a) Chứng minh 3 điểm $M,O,N$ thẳng hàng. (b) Tính bán kính đường tròn $(O')$ theo $R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 123., p. 117]
+	Cho $\Delta ABC$ vuông cân tại A nội tiếp đường tròn $(O,R)$. $(O')$ là đường tròn tiếp xúc trong với đường tròn $(O)$ \& tiếp xúc 2 cạnh $AB,AC$. Tính bán kính đường tròn $(O')$ theo $R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 124., p. 117]
+	Cho đường tròn $(O)$ đường kính AB, đường tròn $(O')$ tiếp xúc trong với đường tròn $(O)$ tại A. 2 dây $BC,BD$ của đường tròn $(O)$ tiếp xúc với đường tròn $(O')$ lần lượt ở $E,F$. I là giao điểm của $EF,AB$. Chứng minh I là tâm của đường tròn nội tiếp $\Delta BCD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 125., p. 117]
+	Cho 3 đường tròn bán kính $r$ tiếp xúc ngoài đôi một. Tính bán kính của đường tròn tiếp xúc với cả 3 đường tròn đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 126., p. 117]
+	Cho đường tròn $(O,R)$. Vẽ về 1 phía của đường kính AB 2 tia tiếp tuyến $Am,Bn$. $(I),(K)$ là 2 đường tròn tiếp xúc ngoài nhau \& tiếp xúc ngoài đường tròn $(O)$, trong đó đường tròn $(I)$ tiếp xúc với tia Am, đường tròn $(K)$ tiếp xúc với tia Bn. $x,y$ là bán kính của 2 đường tròn $(I),(K)$. Chứng minh $R = 2\sqrt{xy}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 127., p. 117]
+	Cho nửa đường tròn $(O)$ đường kính AB. OC là bán kính vuông góc với AB, $d$ là tiếp tuyến với nửa đường tròn tại C. $(I)$ là đường tròn tiếp xúc trong với nửa đường tròn $(O)$ \& tiếp xúc với đường kính AB. Chứng minh điểm I cách đều đường thẳng $d$ \& điểm O.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 128., p. 118]
+	Cho nửa đường tròn $(O)$ với đường kính $AB = 2R$. OE là bán kính vuông góc với AB. Vẽ đường tròn $(C)$ có đường kính OE. $(D)$ là đường tròn tiếp xúc ngoài với đường tròn $(C)$, tiếp xúc trong với đường tròn $(O)$ \& tiếp xúc với đoạn thẳng OB. Tính bán kính của $(D)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 129., p. 118]
+	Cho điểm C thuộc đoạn thẳng AB, $AC = 4$ {\rm cm}, $BC = 8$ {\rm cm}. Vẽ về 1 phía của AB 2 nửa đường tròn có đường kính lần lượt là $AC,AB$. Tính bán kính của đường trình $(I)$ tiếp xúc v ới 2 nửa đường tròn đó \& tiếp xúc với đoạn thẳng AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 130., p. 118]
+	Cho $\Delta ABC$ vuông tại A, $AB = 6$ {\rm cm}, $BC = 10$ {\rm cm}. Tính bán kính của đường tròn $(O')$ tiếp xúc với $AB,AC$ \& tiếp xúc trong với đường tròn ngoại tiếp $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 131., p. 118]
+	Cho 2 đường tròn $(O,9\ {\rm cm}),(O',3\ {\rm cm})$ tiếp xúc ngoài nhau. 1 đường thẳng bị 2 đường tròn đó cắt tạo thành 3 đoạn thẳng bằng nhau. Tính độ dài mỗi đoạn thẳng đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 132., p. 118]
+	Cho 2 đường tròn $(O),(O')$ ở ngoài nhau, $OO' = 65$ {\rm cm}. AB là tiếp tuyến chung ngoài, CD là tiếp tuyến chung trong, $A,C\in(O)$, $B,D\in(O')$. Tính bán kính 2 đường tròn $(O),(O')$ biết $AB = 63$ {\rm cm}, $CD = 25$ {\rm cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 133., p. 118]
+	Cho 2 đường tròn $(O),(O')$ ở ngoài nhau. Kẻ tiếp tuyến chung ngoài AB \& tiếp tuyến chung trong EF, $A,E\in(O)$, $B,D\in(O')$. (a) M là giao điểm của $AB,EF$. Chứng minh $\Delta AOM\backsim\Delta BMO'$. (b) Chứng minh $AE\bot BF$. (c) N là giao điểm của $AE,BF$. Chứng minh 3 điểm $O,N,O'$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 134., p. 118]
+	Cho 2 đường tròn $(O),(O')$ ở ngoài nhau. Qua O, kẻ 2 tiếp tuyến với đường tròn $(O')$, chúng cắt đường tròn $(O)$ tại $A,B$. Qua $O'$, kẻ 2 tia tiếp tuyến với đường tròn $(O)$, chúng cắt đường tròn $(O')$ ở $C,D$. Chứng minh $A,B,C,D$ là 4 đỉnh của 1 hình chữ nhật.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 135., p. 118]
+	Cho 2 đường tròn $(O,R),(O,r)$, $R > r$. Dây BC của đường tròn lớn cắt đường tròn nhỏ tại $D,E$. EA là đường kính của đường tròn nhỏ. Chứng minh $AD^2 + BD^2 + CD^2 = 2(R^2 + r^2)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 136--137., p. 119]
+	2 dây $ABC\parallel CD$ của đường tròn $(O)$ là tiếp tuyến của đường tròn $(O')$. Biết đường kính của đường tròn $(O')$ bằng {\rm7 cm}, tính bán kính của đường tròn $(O)$ khi: (a) $AB = 10$ {\rm cm}, $CD = 24$ {\rm cm}. (b) $AB = 6$ {\rm cm}, $CD = 8$ {\rm cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD1, p. 42]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau tại $A,B$. Qua A kẻ cát tuyến CAD \& EAF, $C,E\in(O)$, $D,F\in(O')$, sao cho AB là phân giác của $\widehat{CAF}$. Chứng minh $CD = EF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD2, pp. 42--43]
+	Cho hình chữ nhật ABCD \& 4 đường tròn $(A,R_A),(B,R_B),(C,R_C),(D,R_D)$ sao cho $R_A + R_C = R_B + R_D < AC$. $d_1,d_3$ là 2 tiếp tuyến chung ngoài của $(A,R_A),(C,R_C)$, $d_2,d_4$ là 2 tiếp tuyến chung ngoài của $(B,R_B),(D,R_D)$. Chứng minh tồn tại 1 đường tròn tiếp xúc với cả 4 đường thẳng $d_1,d_2,d_3,d_4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD3, p. 43]
+	Cho 2 đường tròn $(O),(O')$ ngoài nhau, $AB,CD$ là 2 tiếp tuyến chung ngoài của 2 đường tròn, đường thẳng AD cắt đường tròn $(O)$ tại M, cắt đường tròn $(O')$ tại N. Chứng minh $AM = DN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD4, p. 44]
+	Cho 3 đường tròn $(O_1),(O_2),(O_3)$ tiếp xúc ngoài với nhau từng đôi một. các tiếp điểm của $(O_1),(O_2)$ là A, của $(O_2),(O_3)$ là B, của $(O_3),(O_1)$ là C. $AB,AC$ kéo dài cắt đường tròn $(O_3)$ tại $Q,P$. Chứng minh $P,O_3,Q$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD5, p. 44]
+	Cho 2 đường tròn $(O,R),(O',R')$ tiếp xúc ngoài, tiếp tuyến chung ngoài AB, $A\in(O),B\in(O')$. Đường tròn $(I,r)$ tiếp xúc với AB \& 2 đường tròn $(O),(O')$. Chứng minh: (a) $AB = 2\sqrt{RR'}$. (b) $\dfrac{1}{\sqrt{r}} = \dfrac{1}{\sqrt{R}} + \dfrac{1}{\sqrt{R'}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD6, p. 45]
+	Cho 3 đường tròn $(A,a),(B,b),(C,c)$ tiếp xúc với nhau từng đôi một. Tại tiếp điểm D của đường tròn $(A,a),(B,b)$, kẻ tiếp tuyến chung cắt đường tròn $(C,c)$ tại $M,N$. Tính MN theo $a,b,c$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD7, p. 45]
+	Cho 2 đường tròn $(O),(O')$ có bán kính bằng nhau, cắt nhau tại $A,B$. Trong nửa mặt phẳng bờ $OO'$ có chứa điểm B, kẻ 2 bán kính $OC\parallel O'D$. Chứng minh B là trực tâm của $\Delta ACD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD8, p. 46]
+	Cho 2 đường tròn $(O,R),(O',R')$ tiếp xúc ngoài tại A, $\widehat{xOy} = 90^\circ$  thay đổi luôn đi qua A, cắt đường tròn $(O,R),(O',R')$ tại $B,C$. H là hình chiếu của A trên BC. Xác định vị trí của $B,C$ để AH có độ dài lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD9, p. 47]
+	Cho 2 đường tròn $(O,R),(O',R')$, $R > R'$ cắt nhau tại $A,B$. Kẻ đường kính AC \& đường kính AD. Tính độ dài $BC,BD$ biết $CD = a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD10, p. 47]
+	Cho $\Delta ABC$. Tìm điểm M sao cho $\Delta MAB,\Delta MBC,\Delta MCA$ có chu vi bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD11, p. 48]
+	Cho đường tròn $(O)$ \& dây cung AB. M là điểm trên AB. Dựng đường tròn $(O_1)$ qua $A,M$ \& tiếp xúc với $(O)$, đường tròn $(O_2)$ qua $B,M$ \& tiếp xúc với $(O)$, 2 đường tròn này cắt nhau tại điểm thứ 2 là N. Chứng minh $\widehat{MNO} = 90^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD12, p. 48]
+	Cho 2 đường tròn $(O),(O')$ ngoài nhau, tiếp tuyến chung trong CD \& tiếp tuyến chung ngoài AB, $A,C\in(O)$, $B,D\in(O')$. Chứng minh $AC,BD,OO'$ đồng quy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, VD13, p. 49]
+	Dựng 2 đường tròn tiếp xúc ngoài với nhau có tâm là 2 điểm $A,B$ cho trước, sao cho 1 trong 2 tiếp tuyến chung ngoài đi qua điểm M cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 6.1., p. 50]
+	Cho đường tròn $(O,R)$ ngoại tiếp $\Delta ABC$ đều. Đường tròn $(O')$ tiếp xúc với 2 cạnh $AB,AC$ \& đường tròn $(O,R)$. Tính khoảng cách từ $O'$ đến B theo $R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 6.2., p. 50]
+	Cho nửa đường tròn đường kính AB, điểm C trên nửa đường tròn sao cho $CA < CB$, H là hình chiếu của C trên AB. I là trung điểm CH, đường tròn $(I,CH/2)$ cắt nửa đường tròn tại D \& cắt 2 cạnh $CA,CB$ thứ tự tại $M,N$, đường thẳng CD cắt AB tại E. Chứng minh: (a) CMHN là hình chữ nhật. (b) $E,I,M,N$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 6.3., p. 50]
+	Cho 3 đường tròn $O_1,O_2,O_3$ có cùng bán kính $R$ cắt nhau tại điểm O cho trước. $A,B,C$ là 3 giao điểm còn lại của 3 đường tròn. Chứng minh đường tròn ngoại tiếp $\Delta ABC$ có bán kính $R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 6.4., p. 50]
+	3 đường tròn có bán kính bằng nhau cùng đi qua điểm O, từng đôi cắt nhau tại điểm thứ 2 là $A,B,C$. Chứng minh O là trực tâm $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 6.5., p. 50]
+	Cho 2 đường tròn $(O_1),(O_2)$ cắt nhau tại $A,B$, kẻ dây AM của đường tròn $(O_1)$ tiếp xúc với đường tròn $(O_2)$ tại A, kẻ dây AN của $(O_2)$ tiếp xúc với đường tròn $(O_1)$ tại A. Trên đường thẳng AB lấy điểm D sao cho $BD = AB$. Chứng minh 4 điểm $A,M,N,D$ nằm trên 1 đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 6.6., p. 50]
+	Cho đường tròn $(O,R)$, 1 điểm A trên đường tròn \& đường thẳng $d$ không đi qua A. Dựng đường tròn tiếp xúc với $(O,R)$ tại A \& tiếp xúc với đường thẳng $d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 6.7., p. 51]
+	Cho 2 đường tròn $(O),(O')$ có cùng bán kính $R$ sao cho tâm của đường tròn này nằm trên đường tròn kia, chúng cắt nhau tại $A,B$. Tính bán kính đường tròn tâm I tiếp xúc với 2 cung nhỏ $\arc{AO},\arc{AO'}$ đồng thời tiếp xúc với $OO'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 6.8., p. 51]
+	Cho đường tròn $(O)$ \& dây AB cố định, điểm M tùy ý thay đổi trên đoạn thẳng AB. Qua $A,M$ dựng đường tròn tâm I tiếp xúc với đường tròn $(O)$ tại A. Qua $B,M$ dựng đường tròn tâm J tiếp xúc với $(O)$ tại B. 2 đường tròn tâm $I,J$ cắt nhau tại điểm thứ 2 N. Chứng minh MN luôn đi qua 1 điểm cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 6.9., p. 51]
+	Cho đoạn thẳng AB có độ dài bằng $a$ cho trước \& 2 tia $Ax,By$ vuông góc với AB, nằm về cùng 1 phía đối với AB. $(O),(O')$ là 2 đường tròn thay đổi thỏa mãn đồng thời: (a) $(O)$ tiếp xúc với $(O')$. (b) Đường tròn $(O)$ tiếp xúc với $Ax,AB$. (c) Đường tròn $(O')$ tiếp xúc với By \& tiếp xúc với BA. Tính {\rm GTLN} của diện tích hình thang $HOO'E$, trong đó $H,E$ là hình chiếu của $O,O'$ trên AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 6.10., p. 51]
+	Cho 2 đường tròn $(O_1,R_1),(O_2,R_2)$ tiếp xúc ngoài tại A. 1 đường tròn $(O)$ thay đổi tiếp xúc ngoài với 2 đường tròn $(O_1,R_1),(O_2,R_2)$. Giả sử MN là đường kính đường tròn $(O)$ sao cho $MN\parallel OO'$. H là giao điểm của $MO_2,NO_1$. Chứng minh điểm H thuộc 1 đường thẳng cố định.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Chất của 2 Tiếp Tuyến Cắt Nhau}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD14, p. 102]
+	Cho đoạn thẳng AB. Trên cùng 1 nửa mặt phẳng bờ AB, vẽ nửa đường tròn $(O)$ đường kính AB \& 2 tiếp tuyến Ax, By. Qua điểm M thuộc nửa đường tròn này, kẻ tiếp tuyến cắt Ax, By lần lượt ở C, D. N là giao điểm của AD \& BC. Chứng minh $MN\bot AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD15, p. 103]
+	Cho $(O)$, điểm K nằm bên ngoài đường tròn. Kẻ 2 tiếp tuyến KA, KB với đường tròn (A, B là 2 tiếp điểm). Kẻ đường kính AOC. Tiếp tuyến của đường tròn $(O)$ tại C cắt AB tại E. Chứng minh: (a) $\Delta KBC\backsim\Delta OBE$. (b) $CK\bot OE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 72., p. 103]
+	Cho nửa đường tròn tâm O có đường kính $AB = 2R$. Vẽ 2 tiếp tuyến $Ax,By$ với nửa đường tròn \& tia $Oz\bot AB$, 3 tia $Ax,By,Oz$ cùng phía với nửa đường tròn đối với AB. E là điểm bất kỳ của nửa đường tròn. Qua E vẽ tiếp tuyến với nửa đường tròn, cắt $Ax,By,Oz$ theo thứ tự ở $C,D,M$. Chứng minh khi điểm E thay đổi vị trí trên nửa đường tròn thì: (a) Tích $AC\cdot BD$ không đổi. (b) Điểm M chạy trên 1 tia. (c) Tứ giác ACDB có diện tích nhỏ nhất khí nó là hình chữ nhật. Tính diện tích nhỏ nhất đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 73., p. 104]
+	Cho đoạn thẳng AB. Vẽ về 1 phía của AB 2 tia $Ax\parallel By$. (a) Dựng đường tròn tâm O tiếp xúc với đoạn thẳng AB \& tiếp xúc với 2 tia $Ax,By$. (b) Tính $\widehat{AOB}$. (c) 3 tiếp điểm của đường tròn $(O)$ với $Ax,By,AB$ lần lượt là $M,N,H$. Chứng minh MN là tiếp tuyến của đường tròn có đường kính AB. (d) Tìm vị trí của 2 tia $Ax,By$ để $HM = HN$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 74., p. 104]
+	Cho hình thang vuông ABCD, $\widehat{A} = \widehat{D} = 90^\circ$, tia phân giác của $\widehat{C}$ đi qua trung điểm I của AD. (a) Chứng minh BC là tiếp tuyến của đường tròn $(I,IA)$. (b) Cho $AD = 2a$. Tính $AB\cdot CD$ theo $a$. (c) H là tiếp điểm của BC với đường tròn $(I)$. K là giao điểm của $AC,BD$. Chứng minh $KH\parallel CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 75., p. 104]
+	Cho đường tròn tâm O có đường kính AB, điểm D nằm trên đường tròn. 2 tiếp tuyến của đường tròn tại $A,D$ cắt nhau ở C. E là hình chiếu của D trên AB, gọi I là giao điểm của $BC,DE$. Chứng minh $ID = IE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 76., p. 104]
+	Cho $\Delta ABC$ cân tại A, O là trung điểm BC. Vẽ đường tròn $(O)$ tiếp xúc với $AB,AC$ tại $H,K$. 1 tiếp tuyến với đường tròn $(O)$ cắt 2 cạnh $AB,AC$ ở $M,N$. (a) Cho $\widehat{B} = \widehat{C} = \alpha$. Tính $\widehat{MON}$. (b) Chứng minh $OM,ON$ chia tứ giác BMNC thành 3 tam giác đồng dạng. (c) Cho $BC = 2a$. Tính $BM\cdot CN$. (d) Tìm vị trí tiếp tuyến MN để $BM + CN$ nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 77., p. 104]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH, $BH = 20$ {\rm cm}, $CH = 45$ {\rm cm}. Vẽ đường tròn tâm A bán kính AH. Kẻ 2 tiếp tuyến $BM,CN$ với đường tròn, $M\ne H,N\ne H$ là 2 tiếp điểm. (a) Tính diện tích tứ giác BMNC. (b) K là giao điểm của $CN,AH$. Tính $AK,KN$. (c) I là giao điểm của $AM,BC$. Tính $IB,IM$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 78., p. 105]
+	Cho đường tròn $(O,6\ {\rm cm})$ . 1 điểm A nằm bên ngoài đường tròn sao cho 2 tiếp tuyến $AB,AC$ với đường tròn vuông góc với nhau, $B,C$ là 2 tiếp điểm. Trên 2 cạnh $AB,AC$ của $\widehat{A}$, lấy 2 điểm $D,E$ sao cho $AD = 4$ {\rm cm}, $AE = 3$ {\rm cm}. Chứng minh DE là tiếp tuyến của đường tròn $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 79., p. 105]
+	Cho hình vuông ABCD có cạnh bằng $a$. Với tâm B \& bán kính $a$, vẽ cung AC nằm trong hình vuông. Qua điểm E thuộc cung đó, vẽ tiếp tuyến với cung AC, cắt $AD,CD$ theo thứ tự tại $M,N$. (a) Tính chu vi $\Delta DMN$. (b) Tính số đo $\widehat{MBN}$. (c) Chứng minh $\dfrac{2a}{3} < MN < a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 80., p. 105]
+	Cho hình vuông ABCD. 1 đường tròn tâm O tiếp xúc với 2 đường thẳng $AB,AD$ \& cắt mỗi cạnh $BC,CD$ thành 2 đoạn thẳng có độ dài {\rm2 cm, 23 cm}. Tính bán kính đường tròn.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Đường Tròn Nội Tiếp Tam Giác}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD16, p. 105]
+	Đường tròn $(O)$ nội tiếp $\Delta ABC$ tiếp xúc với cạnh AB tại D. Tính $\widehat{C}$ biết $AC\cdot BC = 2AD\cdot BD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD17, p. 106]
+	$\Delta ABC$ có chu vi {\rm80 cm} ngoại tiếp đường tròn $(O)$. Tiếp tuyến của đường tròn $(O)$ song song với BC cắt $AB,AC$ theo thứ tự ở $M,N$. (a) Biết $MN = 9.6$ {\rm cm}. Tính BC. (b) Biết $AC - AB = 6$ {\rm cm}. Tính $AB,BC,CA$ để MN có {\rm GTLN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD18, p. 107]
+	$r$ là bán kính đường tròn nội tiếp 1 tam giác vuông \& $h$ là đường cao ứng với cạnh huyền. Chứng minh $2 < \dfrac{h}{r} < 2.5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 81., p. 107]
+	Cho $\Delta ABC$ vuông tại A, $AB = 15$ {\rm cm}, $AC = 20$ {\rm cm}. I là tâm của đường tròn nội tiếp tam giác. Tính khoảng cách từ I đến đường cao AH của $\Delta ABC$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 82., p. 107]
+	Tính 3 cạnh của tam giác vuông ngoại tiếp đường tròn biết: (a) Tiếp điểm trên cạnh huyền chia cạnh đó thành 2 đoạn thẳng {\rm5 cm, 12 cm}. (b) 1 cạnh góc vuông bằng {\rm20 cm}, bán kính đường tròn nội tiếp bàng {\rm6 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 83., p. 107]
+	Tính diện tích tam giác vuông biết 1 cạnh góc vuông bằng {\rm12 cm}, tỷ số giữa bán kính 2 đường tròn nội tiếp \& ngoại tiếp tam giác đó bằng $2:5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 84., p. 107]
+	Cho 1 tam giác vuông có cạnh huyền bằng {\rm10 cm}, diện tích bằng $24\ {\rm cm}^2$. Tính bán kính đường tròn nội tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 85., p. 107]
+	Cho $\Delta ABC$ vuông tại A, $AB = 5$. Tính $AC,BC$ biết số đo chu vi $\Delta ABC$ bằng số đo diện tích $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 86., pp. 107--108]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH. $(O,r),(O_1,r_1),(O_2,r_2)$ lần lượt là 3 đường tròn nội tiếp $\Delta ABC,\Delta ABH,\Delta ACH$. (a) Chứng minh $r + r_1 + r_2 = AH$. (b) Chứng minh $r^2 = r_1^2 + r_2^2$. (c) Tính độ dài $O_1O_2$ biết $AB = 3$ {\rm cm}, $AC = 4$ {\rm cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 87., p. 108]
+	Đường tròn $(O,r)$ nội tiếp $\Delta ABC$. 3 tiếp tuyến với đường tròn $(O)$ song song với 3 cạnh của $\Delta ABC$ cắt từ  $\Delta ABC$ thành 3 tam giác nhỏ. $r_1,r_2,r_3$ lần lượt là bán kính đường tròn nội tiếp 3 tam giác nhỏ đó. Chứng minh $r_1 + r_2 + r_3 = r$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 88., p. 108]
+	Đường tròn tâm I nội tiếp $\Delta ABC$ tiếp xúc với $BC,AB,AC$ lần lượt ở $D,E,F$. Qua E kẻ đường thẳng song song với BC cắt $AD,DF$ lần lượt ở $M,N$. Chứng minh M là trung điểm EN.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 89., p. 108]
+	$\Delta ABC$ vuông tại A ngoại tiếp đường tròn tâm I bán kính $r$. G là trọng tâm $\Delta ABC$. Tính 3 cạnh $\Delta ABC$ theo $r$ biết $IG\parallel AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 90., p. 108]
+	$\Delta ABC$ vuông tại A có $AB = 9$ {\rm cm}, $AC = 12$ {\rm cm}. I là tâm của đường tròn nội tiếp, G là trọng tâm $\Delta ABC$. Tính IG.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 91., p. 108]
+	Cho $\Delta ABC$ ngoại tiếp đường tròn $(O)$. $D,E,F$ lần lượt là tiếp điểm trên 3 cạnh $BC,AB,AC$. H là chân đường vuông góc kẻ từ D đến EF. Chứng minh $\widehat{BHE} = \widehat{CHF}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 92., p. 108]
+	Cho $\Delta ABC$ có $AB = AC = 40$ {\rm cm}, $BC = 48$ {\rm cm}. $O,I$ lần lượt là tâm của 2 đường tròn ngoại tiếp \& nội tiếp $\Delta ABC$. Tính: (a) Bán kính đường tròn nội tiếp. (b) Bán kính đường tròn ngoại tiếp. (c) Khoảng cách OI.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 93., p. 108]
+	Tính 3 cạnh 1 tam giác cân biết bán kính đường tròn nội tiếp bằng {\rm6 cm}, bán kính đường tròn ngoại tiếp bằng {\rm12.5 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 94., p. 108]
+	Bán kính của đường tròn nội tiếp 1 tam giác bằng {\rm2 cm}, tiếp điểm trên 1 cạnh chia cạnh đó thành 2 đoạn thẳng {\rm4 cm, 6 cm}. Giải tam giác.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 95., p. 108]
+	Tính 3 góc của 1 tam giác vuông biết tỷ số giữa 2 bán kính đường tròn ngoại tiếp \& đường tròn nội tiếp bằng $\sqrt{3} + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 96., pp. 108--109]
+	Cho $\Delta ABC$. Đường tròn $(O)$ nội tiếp $\Delta ABC$ tiếp xúc với BC tại D. Vẽ đường kính DN của đường tròn $(O)$. Tiếp tuyến của đường tròn $(O)$ tại N cắt $AB,AC$ lần lượt ở $I,K$. (a) Chứng minh $\dfrac{NI}{NK} = \dfrac{DC}{DB}$. (b) F là giao điểm của $AN,BC$. Chứng minh $BD = CF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 97., p. 109]
+	Cho đường tròn $(O)$ nội tiếp $\Delta ABC$ đều. 1 tiếp tuyến của đường tròn cắt 2 cạnh $AB,AC$ lần lượt ở $M,N$. (a) Tính diện tích $\Delta AMN$ biết $BC = 8$ {\rm cm}, $MN = 3$ {\rm cm}. (b) Chứng minh $MN^2 = AM^2 + AN^2 - AM\cdot AN$. (c) Chứng minh $\dfrac{AM}{BM} + \dfrac{AN}{CN} = 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 98., p. 109]
+	Cho $\Delta ABC$ có $BC = a,CA = b,AB = c$. $(I)$ là đường tròn nội tiếp tam giác. Đường vuông góc với CI tại I cắt $AC,AB$ lần lượt ở $M,N$. Chứng minh: (a) $AM\cdot BN = IM^2 = IN^2$. (b) $\dfrac{IA^2}{bc} + \dfrac{IB^2}{ca} + \dfrac{IC^2}{ab} = 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 99., p. 109]
+	Cho $\Delta ABC$ có $AB < AC < AB$. Trên 2 cạnh $AB,AC$ lấy 2 điểm $D,E$ sao cho $BD = CE = BC$. $O,I$ lần lượt là tâm của 2 đường tròn ngoại tiếp, nội tiếp $\Delta ABC$. Chứng minh bán kính đường tròn ngoại tiếp $\Delta ADE$ bằng OI.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 100., p. 109]
+	$R,r$ lần lượt là 2 bán kính 2 đường tròn ngoại tiếp \& nội tiếp 1 tam giác vuông có diện tích $S$. Chứng minh $R + r\ge\sqrt{2S}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 101., p. 109]
+	Trong các $\Delta ABC$ có $BC = a$, chiều cao tương ứng bằng $h$, tam giác nào có bán kính đường tròn nội tiếp lớn nhất?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 102., p. 109]
+	Trong các tam giác vuông ngoại tiếp cùng 1 đường tròn, tam giác nào có đường cao ứng với cạnh huyền lớn nhất?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 103., p. 109]
+	(a) Cho đường tròn $(I,r)$ nội tiếp $\Delta ABC$. Chứng minh $IA + IB + IC\ge6r$. (b) Cho $\Delta ABC$  nhọn nội tiếp đường tròn $(O,R)$. $P,Q,N$ lần lượt là tâm của 3 đường tròn ngoại tiếp $\Delta BOC,\Delta COA,\Delta AOB$. Chứng minh $OP + OQ + ON\ge3R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 104., p. 109]
+	Độ dài 3 đường cao của $\Delta ABC$ là các số tự nhiên, bán kính đường tròn nội tiếp bằng $1$. Chứng minh $\Delta ABC$ đều \& tính độ dài 3 đường cao của $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 105., p. 110]
+	$h_a,h_b,h_c$ là 3 đường cao ứng với 3 cạnh $a,b,c$ của 1 tam giác, $r$ là bán kính đường tròn nội tiếp. Chứng minh: (a) $h_a + h_b + h_c\ge9r$. (b) $h_a^2 + h_b^2 + h_c^2\ge27r^2$. Khi nào xảy ra đẳng thức?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Đường Tròn Bàng Tiếp Tam Giác}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD19, p. 110]
+	Cho $\Delta ABC$. Chứng minh các tiếp điểm trên cạnh BC của đường tròn bàng tiếp trong $\widehat{A}$ \& của đường tròn nội tiếp đối xứng với nhau qua trung điểm của $BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 106., p. 111]
+	$a,b,c$ lần lượt là 3 cạnh của $\Delta ABC$, $h_a,h_b,h_c$ là 3 đường cao tương ứng, $R_a,R_b,R_c$ là bán kính 3 đường tròn bàng tiếp tương ứng, $r$ là bán kính đường tròn nội tiếp, $p$ là nửa chu vi $\Delta ABC$, $S$ là diện tích $\Delta ABC$. Chứng minh: (a) $S = R_a(p - a) = R_b(p - b) = R_c(p - c)$. (b) $\dfrac{1}{r} = \dfrac{1}{R_a} + \dfrac{1}{R_b} + \dfrac{1}{R_c}$. (c) $\dfrac{1}{R_a} = \dfrac{1}{h_b} + \dfrac{1}{h_c} - \dfrac{1}{h_a}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 107., p. 111]
+	Tính cạnh huyền của 1 tam giác vuông biết $r$ là bán kính đường tròn nội tiếp, $R$ là bán kính đường tròn bàng tiếp trong góc vuông.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 108., p. 111]
+	Cho $\Delta ABC$. $(P),(Q),(R)$ lần lượt là 3 đường tròn bàng tiếp trong $\widehat{A},\widehat{B},\widehat{C}$. (a) tiếp điểm của $(Q),(R)$ trên đường thẳng BC lần lượt là $E,F$. Chứng minh $CE = BF$. (b) $H,I,K$ lần lượt là tiếp điểm của 3 đường tròn $(P),(Q),(R)$ với 3 cạnh $BC,CA,AB$. Nếu $AH = BI = CK$ thì $\Delta ABC$ là tam giác gì?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Đường Tròn \& Phép Vị Tự}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD24, p. 120]
+	Đường tròn $(O)$ nội tiếp $\Delta ABC$ tiếp xúc với BC ở D. $M,E$ lần lượt là trung điểm $BC,AD$. (a) DN là đường của đường tròn $(O)$, F là tiếp điểm trên BC của đường tròn $(O')$ bàng tiếp trong $\widehat{A}$ của $\Delta ABC$. Chứng minh 3 điểm $A,N,F$ thẳng hàng. (b) Chứng minh 3 điểm $E,O,M$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 138., p. 120]
+	Cho 2 đường tròn $(I,r),(K,r)$ tiếp xúc trong với đường tròn $(O,R)$ theo thứ tự tại $A,B$. C là 1 điểm thuộc đường tròn $(O)$, CA cắt đường tròn $(I)$ tại điểm D, BC cắt đường tròn $(K)$ tại điểm E. Chứng minh $DE\parallel AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 139., p. 121]
+	Cho 2 đường tròn $(O,R),(O',R')$ tiếp xúc ngoài tại A, $R > R'$. Vẽ 2 bán kính $OB\parallel O'B'$, $B,B'$ thuộc ùng 1 nửa mặt phẳng có bờ $OO'$). 2 đường thẳng $BB',OO'$ cắt nhau tại K. (a) Tính $\widehat{BAB'}$. (b) Tính OK theo $R,R'$. (c) Chứng minh tiếp tuyến chung ngoài của 2 đường tròn trên cũng đi qua điểm K. (d) Khi 2 bán kính $OB,O'B'$ di chuyển thì trọng tâm G của $\Delta ABB'$ di chuyển trên đường nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 140., p. 121]
+	Cho 2 đường tròn $(O,R),(O',R')$ cắt nhau tại $A,B$, $R > R'$. Tiếp tuyến chung ngoài CD cắt $OO'$ ở K, $C\in(O),D\in(O')$. E là giao điểm thứ 2 của AK \& đường tròn $(O')$. Chứng minh $AC\parallel ED$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Dựng Hình}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD25, p. 122]
+	Dựng đường tròn đi qua 1 điểm cho trước \& tiếp xúc với 2 cạnh của 1 góc cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD26, p. 124]
+	Cho $\Delta ABC$ có $B,C$ là 2 góc nhọn. Dựng đường thẳng vuông góc với BC chia tam giác thành 2 phần có diện tích bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD27, p. 125]
+	Cho hình vuông ABCD. Dựng đường kính đi qua C cắt 2 tia $AB,AD$ theo thứ tự ở $M,N$ sao cho MN có độ dài bằng $k$ cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 141., p. 126]
+	Cho đường tròn $(O)$ với 2 bán kính $OA,OB$ \& $O,A,B$ không thẳng hàng. Dựng dây CD sao cho 2 bán kính $OA,OB$ chia dây CD thành 2 phần bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 142., p. 126]
+	Cho đường tròn $(O)$, đường kính AB, điểm C thuộc đường kính ấy. Dựng dây $DE\bot AB$ sao cho $AD\bot EC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 143., p. 126]
+	Cho đường tròn $(O)$ \& 2 điểm $A,B$ nằm bên ngoài đường tròn. Dựng 2 đường thẳng theo thứ tự đi qua $A,B$ song song với nhau \& cắt đường tròn $(O)$ tạo thành 2 dây bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 144., p. 127]
+	Cho đường tròn $(O)$ \& đường thẳng $d$ không giao với đường tròn. Dựng điểm $M\in d$ sao cho nếu vẽ 2 tiếp tuyến $MC,MD$ với đường tròn thì $\widehat{COD} = 130^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 145., p. 127]
+	Qua điểm M nằm bên trong đường tròn $(O)$ \& không trùng O, dựng dây AB sao cho $MA - MB = a$, $a$ là độ dài cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 146., p. 127]
+	Cho 2 đường tròn $(O),(O')$ bằng nhau, tiếp xúc ngoài tại B, có 2 đường kính theo thứ tự là $AB,BC$. Dựng đường thẳng đi qua A cắt $(O)$ tại D, cắt $(O')$ ở $E,F$ sao cho E là trung điểm của DF.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 147., p. 127]
+	Dựng tam giác vuông biết độ dài 2 đường trung tuyến ứng với 2 cạnh góc vuông.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 148., p. 127]
+	Dựng $\Delta ABC$ biết $\widehat{A} = \alpha$, đường cao $AH = h$, bán kính đường tròn nội tiếp bằng $r$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 149., p. 127]
+	Dựng $\Delta ABC$ biết $AC - AB = d$, đường cao $AH = h$, bán kính đường tròn nội tiếp bằng $r$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 150., p. 127]
+	Cho 2 điểm $O,O'$ nằm về 1 phía của đường thẳng $d$. Dựng 2 đường tròn $(O),(O')$ tiếp xúc ngoài sao cho tiếp tuyến chung ngoài song song với $d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 151., p. 127]
+	Cho đường tròn $(I)$ \& đường thẳng $m$ không giao nhau, điểm A thuộc đường tròn. Dựng đường tròn $(O)$ tiếp xúc với đường tròn $(I)$ tại $A$ \& tiếp xúc với đường thẳng $m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 152., p. 127]
+	Cho đường tròn $(I)$ \& đường thẳng $m$ không giao nhau, điểm C thuộc đường thẳng $m$. Dựng đường tròn $(O)$ tiếp xúc với đường thẳng $m$ tại C \& tiếp xúc với đường tròn $(I)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 153., p. 127]
+	Cho 2 đường thẳng $a,b$ cắt nhau \& điểm A nằm ngoài 2 đường thẳng ấy. Dựng đường tròn $(A)$ cắt 2 đường thẳng $a,b$ tạo thành 2 dây có tổng bằng $2k$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 154., p. 127]
+	Cho $\widehat{xOy}$ \& điểm M nằm trong góc đó. Dựng đường thẳng đi qua M cắt 2 cạnh của góc ở $A,B$ sao cho $OA + OB = k$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 155., p. 127]
+	Dựng tam giác cân biết độ dài của đoạn nối 2 tiếp điểm của đường tròn nội tiếp với 2 cạnh bên \& đường cao $h$ ứng với cạnh bên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 156., p. 127]
+	Cho 3 điểm $H,D,M$ thẳng hàng theo thứ tự ấy, trong đó $HD = 2,DM = 3$. Dựng $\Delta ABC$ vuông tại A nhận AH là đường cao, AD là đường phân giác, AM là trung tuyến.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 157., p. 128]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH, M là trung điểm BC, D là tiếp điểm của đường tròn nội tiếp trên cạnh huyền. (a) E là tâm của đường tròn nội tiếp $\Delta AHM$. Chứng minh $MD = ME$ bằng cách tính 2 tỷ số $\dfrac{ME}{MF},\dfrac{MD}{MF}$ theo 3 cạnh $\Delta ABC$. (b) Suy ra cách dựng $\Delta ABC$ vuông biết 3 điểm $H,D,M$ theo thứ tự thuộc 1 đường thẳng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 158., p. 128]
+	Cho đường thẳng $xy$, điểm A \& đường tròn $(O)$ nằm cùng phía đối với $xy$. Dựng điểm $M\in xy$ sao cho nếu vẽ tiếp tuyến MB với đường tròn $(O)$ thì $\widehat{AMx} = \widehat{BMy}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 159., p. 128]
+	Cho đường thẳng $xy$, điểm A \& đường tròn $(O)$ nằm cùng phía đối với $xy$. Dựng điểm $A\in xy$ sao cho 2 tiếp tuyến kẻ từ A đến 2 đường tròn nhận $xy$ là đường thẳng chứa tia phân giác.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 160., p. 128]
+	Cho đường thẳng $xy$, điểm A \& đường tròn $(O)$ nằm cùng phía đối với $xy$. Dựng hình vuông ABCD có $A\in(O),C\in(O')$, $B,D\in xy$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 161., p. 128]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau ở $A,B$. Dựng đường thẳng đi qua A bị 2 đường tròn cắt thành 2 dây có hiệu bằng $a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 162., p. 128]
+	Cho 2 đường tròn $(O),(O')$ \& 1 đường thẳng $d$. Dựng đường thẳng song song với $d$ \& bị 2 đường tròn cắt thành 2 dây bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 163., p. 128]
+	Cho 2 đường tròn $(O),(O')$ \& 1 đường thẳng $d$. Dựng đường thẳng song song với $d$ \& bị 2 đường tròn cắt thành 2 dây có tổng bằng $a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 164., p. 128]
+	Cho 2 đường tròn $(O),(O')$ \& 1 đường thẳng $d$. Dựng đường thẳng song song với $d$ \& bị 2 đường tròn cắt thành 2 dây có hiệu bằng $a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 165., p. 128]
+	Cho đường tròn $(O)$, điểm $A\ne O$ nằm bên trong đường tròn. Dựng dây BC đi qua A sao cho $AB = 2AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 166., p. 128]
+	Cho 2 đường tròn tâm O, điểm A thuộc đường tròn lớn. Dựng dây AB của đường tròn lớn sao cho đường tròn nhỏ chia AB thành 3 phần bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 167., p. 128]
+	Cho đoạn thẳng AB. Dựng điểm H thuộc đoạn thẳng ấy sao cho $AH\cdot BH = a^2$ với $a$ là 1 độ dài cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 168., p. 129]
+	Dựng hình vuông có diện tích bằng diện tích 1 hình thang cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 169., p. 129]
+	Dựng tam giác đều có diện tích bằng diện tích 1 tam giác cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 170., p. 129]
+	Dựng $\Delta ABC$ biết 2 cạnh $AB = c,AC = b$, đường phân giác $AD = d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 171., p. 129]
+	Cho $\Delta ABC$. Dựng đường thẳng song song với BC chia $\Delta ABC$ thành 2 phần có diện tích bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 172., p. 129]
+	Cho 1 hình thang. Dựng đường thẳng song song với 2 đáy chia hình thang thành 2 phần có diện tích bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 173., p. 129]
+	Cho hình thang ABCD, $AB\parallel CD$. Dựng đường thẳng EF song song với 2 đáy, $E\in AD,F\in BC$, sao cho $BE\parallel DF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 174., p. 129]
+	Cho nửa đường tròn $(O)$ đường kính $AB = 2R$. $BB'$ là tiếp tuyến của nửa đường tròn. Dựng điểm M nằm trên nửa đường tròn sao cho MA bằng khoảng cách từ M đến $BB'$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Toán Cực Trị}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD28, p. 130]
+	Cho điểm A nằm bên trong dải tạo bởi 2 đường thẳng song song $d\parallel d'$. Dựng điểm $B\in d,C\in d'$ sao cho $\Delta ABC$ vuông tại A \& có diện tích nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD29, p. 131]
+	Cho $\widehat{x'Oy'}$ \& điểm M nằm trong góc. Dựng đường thẳng đi qua M cắt $Ox',Oy'$ lần lượt ở $A,B$ sao cho tổng $OA + OB$ có {\rm GTNN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, VD30, p. 131]
+	Cho $\Delta ABC$ cân tại A. Đường tròn $(O)$ tiếp xúc với AB tại B, tiếp xúc với AC tại C. Qua A vẽ cát tuyến ADE bất kỳ. Vẽ dây $CK\parallel DE$. Xác định vị trí của cát tuyến ADE để $\Delta AKE$ có diện tích lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 175., p. 132]
+	Cho nửa đường tròn $(O)$ đường kính $AB = 2R$. Dựng điểm $C\in(O)$ sao cho $\Delta CÈ$ có diện tích lớn nhất, trong đó CH là đường cao của $\Delta ABC$, $CE,CF$ là 2 đường phân giác của $\Delta CHA,\Delta CHB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 176., p. 132]
+	Cho đường tròn $(O)$, điểm $A\ne O$ nằm bên trong đường tròn. Dựng điểm $B\in(O)$ sao cho $\widehat{OBA}$ có số đo lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 177., p. 132]
+	Cho đường tròn $(O)$, điểm A nằm bên ngoài đường tròn. Dựng đường thẳng đi qua A, cắt đường tròn ở $B,C$ sao cho tổng $AB + AC$ có {\rm GTLN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 178., p. 132]
+	Cho đường tròn $(O)$ \& đường thẳng $d$ không giao nhau. Dựng điểm $M\in d$ sao cho nếu  kẻ 2 tiếp tuyến $MA,MB$ với đường tròn thì AB có độ dài nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 179., p. 132]
+	Cho 2 đường tròn $(O),(O')$ tiếp xúc ngoài tại A. Qua A, dựng 2 tia vuông góc với nhau sao cho chúng cắt 2 đường tròn $(O),(O')$ lần lượt ở $B,C$ tạo thành $\Delta ABC$ có diện tích lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 180., p. 132]
+	Cho đoạn thẳng AB, 2 tia $Ax,By$ vuông góc với AB \& nằm về 1 phía của AB. Dựng 2 đường tròn $(I),(K)$ tiếp xúc ngoài với nhau, tiếp xúc với đoạn AB, đường tròn $(I)$ tiếp xúc với tia Ax, đường tròn $(K)$ tiếp xúc với tia By sao cho tứ giác CIKD có diện tích lớn nhất với $C,D$ lần lượt là 2 tiếp điểm của 2 đường tròn $(I),(K)$ với AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 181., p. 133]
+	Cho $\widehat{xAy}$, đường tròn $(O)$ nằm trong góc ấy. Dựng điểm $M\in(O)$ sao cho tổng các khoảng cách từ M đến 2 cạnh của góc có {\rm GTNN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 182., p. 133]
+	Cho đường tròn $(O,2)$ \& đường thẳng $d$ đi qua O. Dựng điểm A nằm bên ngoài đường tròn sao cho 2 tiếp tuyến kẻ từ A tới đường tròn cắt $d$ tại $B,C$ tạo thành $\Delta ABC$ có diện tích nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 183., p. 133]
+	Cho $\widehat{xOy}$, đường tròn $(I)$ tiếp xúc với 2 cạnh của góc tại $A,B$. Dựng tiếp tuyến với cung nhỏ AB của đường tròn $(I)$ cắt 2 cạnh của góc tại $C,D$ sao cho: (a) CD có độ dài nhỏ nhất. (b) $\Delta OCD$ có diện tích lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 184., p. 133]
+	(a) Cho $\widehat{xOy}$ \& điểm M nằm bên trong góc đó. Dựng đường thẳng đi qua M cắt 2 cạnh của góc ở $A,B$ sao cho chu vi $\Delta OAB$ bằng $2p$. (b) Cho $\widehat{xOy}$. Dựng 2 điểm $C,D$ lần lượt nằm trên $Ox,Oy$ sao cho chu vi $\Delta OCD$ bằng $2p$ cho trước \& $\Delta OCD$ có diện tích lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 185., p. 133]
+	Cho $\widehat{xOy}$ \& 1 điểm M nằm bên trong góc đó. Dựng đường thưangr đi qua M cắt $Ox,Oy$ ở $A,B$ sao cho $\Delta OAB$ có chu vi nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 186., p. 133]
+	Cho đoạn thẳng AD \& trung điểm của nó. Dựng $\Delta ABC$ nhận AD là đường cao, H là trực tâm sao cho BC có độ dài nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 187., p. 133]
+	Cho đường tròn $(O)$. Dựng điểm A nằm bên ngoài đường tròn sao cho đường vuông góc với OA tại O tạo thành với 2 tiếp tuyến của đường tròn kẻ từ A 1 tam giác có diện tích nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 188., p. 133]
+	Chứng minh trong các tam giác có cùng chu vi, tam giác đều có diện tích lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 189., p. 133]
+	Cho hình vuông ABCD cạnh $a$. 2 điểm $M,N$ lần lượt chuyển động trên 2 cạnh $BC,CD$ sao cho $\widehat{MAN} = 45^\circ$. (a) Chứng minh khoảng cách từ A đến MN \& chu vi $\Delta CMN$ không đổi. (b) Dựng 2 điểm $M,N$ để MN có độ dài nhỏ nhất. (c) Chứng minh khi MN có độ dài nhỏ nhất thì $\Delta CMN$ có diện tích lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 190., p. 133]
+	Cho hình vuông ABCD. Dựng đường thẳng đi qua C cắt 2 tia $AB,AD$ tại 2 điểm $M,N$ sao cho đoạn thẳng MN có độ dài nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 191., p. 134]
+	Cho điểm C thuộc tia phân giác của $\widehat{A}$. Dựng đường thẳng đi qua C cắt 2 cạnh của $\widehat{A}$ tại 2 điểm $M,N$ sao cho đoạn thẳng MN có độ dài nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 192., p. 134]
+	(a) Chứng minh trong các $\Delta ABC$ có diện tích $S$ \& có số đo $\widehat{A}$ không đổi, tam giác có cạnh BC nhỏ nhất là tam giác cân tại A. (b) Cho $\Delta ABC$. Dựng điểm M thuộc tia AB, điểm N thuộc tia AC sao cho $S_{AMN} = \frac{1}{2}S_{ABC}$  \& MN có độ dài nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 193., p. 134]
+	Cho nửa đường tròn $(O)$ đường kính MN. Dựng hình chữ nhật ABCD nội tiếp nửa đường tròn với $A,D\in MN$, $B,C$ thuộc nửa đường tròn, sao cho hình chữ nhật đó: (a) Có diện tích lớn nhất. (b) Có chu vi lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, p. 134, Golden ratio -- Tỷ lệ vàng $\varphi$]
+	Cho 1 đoạn thẳng có độ dài $a$. Dựng đoạn thẳng có độ dài $x$ sao cho $x$ bằng trung bình nhân của đoạn thẳng đã cho $a$ \& phần còn lại $a - x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, p. 136]
+	Dùng thước \& compa, chia 1 đường tròn thành 5 phần bằng nhau.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Liên Hệ Giữa Cung \& Dây}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD31, p. 83]
+	Cho đường tròn $(O)$, dây AB. 2 điểm $C,D$ di chuyển trên đường tròn sao cho $\arc{AC} = \arc{BD}$. Trong trường hợp nào thì dây CD có độ dài không đổi?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 194., p. 84]
+	Tính bán kính của đường tròn $(O)$ biết dây AB của đường tròn có độ dài bằng $2a$ \& khoảng cách từ điểm chính giữa của cung AB đến dây AB bằng $h$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 195., p. 84]
+	Cho nửa đường tròn đường kính $AB = 2$ {\rm cm}, dây $CD\parallel AB$, $C\in\arc{AD}$. Tính độ dài các cạnh của hình thang ABDC biết chu vi hình thang bằng {\rm5 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 196., p. 84]
+	Cho nửa đường tròn $(O)$ đường kính $AB = 20$ {\rm cm}. C là điểm chính giữa của nửa đường tròn. Điểm H thuộc bán kính OA sao cho $OH = 6$ {\rm cm}. Đường vuông góc với OA tại H cắt nửa đường tròn ở D. Vẽ dây $AE\parallel CD$. K là hình chiếu của E trên AB. Tính diện tích $\Delta AEK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 197., p. 84]
+	Cho $\Delta ABC$ đều có diện tích $S$, nội tiếp đường tròn $(O)$. Trên 3 cung $AB,BC,CA$, lấy lần lượt 3 điểm $A',B',C'$ sao cho 3 cung $\arc{AA'},\arc{BB'},\arc{CC'}$ đều có số đo bằng $30^\circ$. Tính diện tích phần chung của $\Delta ABC,\Delta A'B'C'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 198., p. 84]
+	$R,r$ lần lượt là bán kính 2 đường tròn ngoại tiếp, nội tiếp 1 tam giác. Chứng minh $R\ge2r$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Góc Nội Tiếp}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD32, p. 85]
+	$\Delta ABC$ nội tiếp đường tròn $(O,R)$ có $AB = 8$ {\rm cm}, $AC = 15$ {\rm cm}, đường cao $AH = 5$ {\rm cm}. Tính bán kính đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD33, p. 85]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O,R)$, gọi $(I,r)$ là đường tròn nội tiếp $\Delta ABC$, H là tiếp điểm của AB với đường tròn $(I)$, D là giao điểm của AI với đường tròn $(O)$, DK là đường kính của đường tròn $(O)$. $d$ là độ dài OI. Chứng minh: (a) $\Delta AHI\backsim\Delta KCD$. (b) $DI = DB = DC$. (c) $IA\cdot ID = R^2 - d^2$. (d) {\rm(định lý Euler)} $d^2 = R^2 - 2Rr$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 199., p. 86]
+	Cho $\Delta ABC$ nhọn có $BC = a,CA = b,AB = c$ \& nội tiếp đường tròn $(O,R)$. Chứng minh $\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 200., p. 86]
+	Cho đường tròn $(O)$ có đường kính $AB = 12$ {\rm cm}. 1 đường thẳng $d$ đi qua A cắt đường tròn $(O)$ ở M \& cắt tiếp tuyến của đường tròn tại B ở N. I là trung điểm MN. Tính AM biết $AI = 13$ {\rm cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 201., p. 86]
+	Cho đường tròn $(O,R)$, 2 đường kính $AB\bot CD$. I là trung điểm OB. Tia CI cắt đường tròn ở E, EA cắt CD ở K. Tính DK.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 202.,. p. 86]
+	Cho nửa đường tròn đường kính BC. 2 điểm $M,N$ thuộc nửa đường tròn sao cho $\arc{BM} = \arc{MN} = \arc{NC}$. 2 điểm $D,E$ thuộc đường kính BC sao cho $BD = DE = EC$. A là giao điểm của $MD,NE$. Chứng minh $\Delta ABC$ đều.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 203., p. 86]
+	Cho $\Delta ABC$ nhọn nội tiếp đường tròn $(O)$, 3 đường cao $AD,BE,CF$ cắt đường $(O)$ lần lượt ở $M,N,K$. Chứng minh: $\dfrac{AM}{AD} + \dfrac{BN}{BE} + \dfrac{CK}{CF} = 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 204., p. 87]
+	Cho đường tròn $(O)$, đường kính AB có dây $CD\bot AB$. Điểm $M\in(O)$ bất kỳ, MC không song song với AB, E là giao điểm của $MD,AB$, F là giao điểm của $MC,AB$. Chứng minh $\dfrac{AE}{BE} = \dfrac{AF}{BF}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 205., p. 87]
+	Qua điểm A nằm bên ngoài đường tròn $(O)$ vẽ cát tuyến ABC. E là điểm chính giữa cung BC, DE là đường kính của đường tròn. AD cắt đường tròn tại I, IE cắt BC tại K. Chứng minh $AC\bot BK = AB\cdot KC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 206., p. 87]
+	Cho nửa đường tròn $(O)$, đường kính AB, bán kính $OC = R$. 2 điểm $M,N$ lần lượt thuộc 2 cung $AC,BC$. $E,G$ lần lượt là hình chiếu của $M,N$ trên AB. $F,H$ lần lượt là hình chiếu của $M,N$ trên OC. Chứng minh $EF = GH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 207., p. 87]
+	Trong đường tròn ngoại tiếp $\Delta ABC$, vẽ 3 dây $AA'\parallel BC,BB'\parallel AC,CC'\parallel AB$. Trên 3 cung $AA',BB',CC'$, lấy 3 cung $AD,BE,CF$ lần lượt bằng $\frac{1}{3}$ các cung trên. Chứng minh $\Delta DEF$ đều.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 208., p. 87]
+	2 đường cao $BH,CK$ của $\Delta ABC$ cắt đường tròn ngoại tiếp lần lượt ở $D,E$. Tính $\widehat{A}$ biết DE là đường kính đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 209., p. 87]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$. H là trực tâm, I là tâm đường tròn nội tiếp $\Delta ABC$. (a) Chứng minh AI là tia phân giác $\widehat{OAH}$. (b) Cho $\widehat{BAC} = 60^\circ$, chứng minh $IO = IH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 210., p. 87]
+	Tính $\widehat{A}$ của $\Delta ABC$ biết khoảng cách từ A đến trực tâm $\Delta ABC$ bằng bán kính đường tròn ngoại tiếp $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 211., p. 87]
+	Cho $\Delta ABC$ đều nội tiếp đường tròn $(O,R)$. 1 điểm M bất kỳ thuộc cung BC. (a) Chứng minh $MA = MB + MC$. (b) D là giao điểm của $MA,BC$. Chứng minh $\dfrac{DM}{BM}  + \dfrac{DM}{CM} = 1$. (c) Tính $MA^2 + MB^2 + MC^2$ theo $R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 212., p. 87]
+	Cho $\Delta ABC$ có $\widehat{B} = 54^\circ,\widehat{C} = 18^\circ$ nội tiếp đường tròn $(O,R)$. Chứng minh $AC - AB = R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 213., pp. 87--88]
+	2 đường tròn $(O,R),(O',R)$ cắt nhau ở $A,B$. 1 đường thẳng $d\parallel OO'$ cắt 2 đường tròn này tại 4 điểm $C,D,E,F$ theo thứ tự trên $d$, $C,E\in(O),D,F\in(O')$. (a) Chứng minh $CDO'O$ là hình bình hành. (b) Tính CD biết $AB = a$. (c) Chứng minh $\widehat{CAD}$ không phụ thuộc vào vị trí của đường thẳng $d$, $d$ luôn luôn song song với $OO'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 214., p. 88]
+	Cho điểm C thuộc nửa đường tròn đường kính AB, H là hình chiếu của C trên AB. 2 điểm $D,E$ thuộc nửa đường tròn đó sao cho HC là tia phân giác của $\widehat{DHE}$. Chứng minh $CH^2 = DH\cdot EH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 215., p. 88]
+	1 đường tròn $(O)$ đi qua đỉnh A \& 2 trung điểm $D,E$ của 2 cạnh $AB,AC$ của $\Delta ABC$ sao cho BC tiếp xúc với $(O)$ tại K. Chứng minh $KA^2 = KB\cdot KC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 216., p. 88]
+	Cho $\Delta ABC$ có $AB = 5,BC = 7,CA = 6$. Chứng minh tồn tại 1 điểm E thuộc cạnh AC sao cho 3 độ dài $AE,BE,CE$ là 3 số tự nhiên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 217., p. 88]
+	Cho $\Delta ABC$ cân tại A, điểm M thuộc cạnh BC. Chứng minh $AB^2 - AM^2 = MB\cdot MC$ (bằng cách vẽ đường tròn $(A,AB)$).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 218., p. 88]
+	Cho $\Delta ABC$, đường phân giác AD. Chứng minh $AD^2 = AB\cdot AC - DB\cdot DC$ (bằng cách vẽ giao điểm E của AD với đường tròn ngoại tiếp $\Delta ABC$).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 219., p. 88]
+	2 đường tròn $(O),(O')$ cắt nhau ở $A,B$. 2 điểm $M,N$ lần lượt di chuyển trên 2 đường tròn $(O),(O')$ sao cho chiều từ A đến M \& từ A đến N trên 2 đường tròn đều theo chiều quay của kim đồng hồ \& 2 cung $\arc{AM},\arc{AN}$ có số đo bằng nhau. Chứng minh đường trung trực của MN luôn đi qua 1 điểm cố định.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Góc Tạo Bởi Tia Tiếp Tuyến \& Dây Cung}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD34, p. 89]
+	Cho 2 đường tròn $(O),(O')$ ở ngoài nhau. Đường nối tâm $OO'$ cắt $(O),(O')$ tại 4 điểm $A,B,C,D$ theo thứ tự trên đường thẳng. Kẻ tiếp tuyến chung ngoài EF, $E\in(O),F\in(O')$. M là giao điểm của $AE,DF$, N là giao điểm của $BE,CF$. Chứng minh: (a) MENF là hình chữ nhật. (b) $MN\bot AD$. (c) $MA\cdot ME = MD\cdot MF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD35, p. 89]
+	Từ điểm A ở bên ngoài đường tròn $(O)$, kẻ 2 tiếp tuyến $AB,AC$ với $(O)$. Dây BD của $(O)$ song song với AC, E là giao điểm của AD với $(O)$, I là giao điểm của $BE,C$. Chứng minh I là trung điểm AC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 220., p. 90]
+	Cho $\Delta ABC$. Vẽ đường tròn $(O)$ đi qua A \& tiếp xúc với BC tại B. Kẻ dây $BD\parallel AC$. I là giao điểm của CD với $(O)$. Chứng minh $\widehat{IAB} = \widehat{IBC} = \widehat{ICA}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 221., p. 90]
+	Cho đường tròn $(O')$ tiếp xúc trong với đường tròn $(O)$ tại A. Dây BC của đường tròn lớn tiếp xúc với đường tròn nhỏ tại H. $D,E$ lần lượt là giao điểm $\ne A$ của $AB,AC$ với đường tròn nhỏ. Chứng minh: (a) $DE\parallel BC$. (b) AH là tia phân giác $\widehat{BAC}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 222., p. 90]
+	Cho điểm B thuộc đoạn thẳng AC. Vẽ về 1 phía của AC 3 nửa đường tròn có đường kính $AC,AB,BC$ có tâm lần lượt là $O,O_1,O_2$. EF là tiếp tuyến chung của 2 nửa đường tròn $(O_1),(O_2)$, $E\in(O_1),F\in(O_2)$. Đường vuông góc với AC tại B cắt nửa đường tròn $(O)$ ở D. Chứng minh BEDF là hình chữ nhật.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 223., p. 90]
+	Cho đường tròn $(O)$ đường kính AB. Vẽ đường tròn $(A)$ cắt đường tròn $(O)$ ở $C,D$. Kẻ dây BN của $(O)$, cắt $(A)$ tại điểm E ở bên trong $(O)$. Chứng minh: (a) $\widehat{CEN} = \widehat{EDN}$. (b) $NE^2 = NC\cdot ND$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 224., p. 91]
+	$\Delta ABC$ vuông tại A nội tiếp đường tròn $(O,2.5\ {\rm cm})$. Tiếp tuyến với $(O)$ tại C cắt tia phân giác của $\widehat{B}$ tại K. Tính BK biết BK cắt AC tại D, $BD = 4$ {\rm cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 225., p. 91]
+	Tứ giác ABCD có 2 đường chéo cắt nhau ở E. Vẽ 2 đường tròn ngoại tiếp $\Delta ABE,\Delta CDE$. Tìm điều kiện của tứ giác để 2 đường tròn tiếp xúc nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 226., p. 91]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$. Tiếp tuyến tại A cắt BC ở I. (a) Chứng minh $\dfrac{BI}{CI} = \dfrac{AB^2}{AC^2}$. (b) Tính $IA,IC$ biết $AB = 20$ {\rm cm}, $BC = 24$ {\rm cm}, $CA = 28$ {\rm cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 227., p. 91]
+	Cho hình vuông ABCD có cạnh dài {\rm2 cm}. Tính bán kính của đường tròn đi qua $A,B$ biết đoạn tiếp tuyến kẻ từ D đến đường tròn đó bằng {\rm4 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 228., p. 91]
+	Cho $\Delta ABC$ cân tại A, đường trung trực của AB cắt BC ở K. Chứng minh AB là tiếp tuyến của đường tròn ngoại tiếp $\Delta ACK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 229., p. 91]
+	Cho hình thang ABCD, $AB\parallel CD$, có $BD^2 = AB\cdot CD$. Chứng minh đường tròn ngoại tiếp $\Delta ABD$ tiếp xúc với BC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 230., p. 91]
+	Cho hình bình hành ABCD, $\widehat{A}\le90^\circ$. Đường tròn ngoại tiếp $\Delta BCD$ cắt AC ở E. Chứng minh BD là tiếp tuyến của đường tròn ngoại tiếp $\Delta ABE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 231., p. 91]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau ở $A,B$. tiêpKẻ tiếp tuyến chugn $CC'$, $C\in(O),C'\in(O')$, kẻ đường kính COD. $E,F$ lần lượt là giao điểm của $OO'$ với $C'D,CC'$. Chứng minh: (a) $\widehat{EAF} = 90^\circ$, $A,C,C'$ nằm cùng phía đối với $OO'$. (b) FA là tiếp tuyến của đường tròn ngoại tiếp $\Delta ACC'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 232., p. 91]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau ở $A,B$, trong đó tiếp tuyến chung CD song song với cát tuyến chung EBF, $C,E\in(O)$, $D,F\in(O')$, B nằm giữa $E,F$. $M,N$ lần lượt là giao điểm của $AD,AC$ với EF. I là giao điểm của $CE,DF$. Chứng minh: (a) $\Delta ICD = \Delta BCD$. (b) IB là đường trung trực của MN.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Góc Có Đỉnh Ở Bên Trong, Bên Ngoài Đường Tròn}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD36, p. 92]
+	Cho $\Delta ABC$ đều nội tiếp đường tròn $(O)$. Điểm D di chuyển trên cung AC. E là giao điểm của $AC,BD$, F là giao điểm của $AD,BC$. Chứng minh: (a) $\widehat{AFB} = \widehat{ABD}$. (b) $AE\cdot BF$ không đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 233., p. 92]
+	Tứ giác ABCD có 2 góc $\widehat{B},\widehat{D}$ tù. Chứng minh $AC > BD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 234., p. 92]
+	Cho đường tròn $(O,2\ {\rm cm})$ , 2 bán kính $OA\bot OB$. M là điểm chính giữa của cung AB. C là giao điểm của $AM,OB$, H là hình chiếu của M trên OA. Tính diện tích hình thang OHMC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 235., p. 92]
+	$\Delta ABC$ nội tiếp đường tròn $(O)$, 3 điểm $M,N,P$ là điểm chính giữa của 3 cung $AB,BC,CA$. D là giao điểm của $MN,AB$, E là giao điểm của $PN,AC$. Chứng minh $DE\parallel BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 236., p. 93]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O,R)$. I là tâm đường tròn nội tiếp $\Delta ABC$, $M,N,P$ lần lượt là tâm của 3 đường tròn bàng tiếp trong 3 góc $\widehat{A},\widehat{B},\widehat{C}$. K là điểm đối xứng với I qua O. Chứng minh K là tâm của đường tròn ngoại tiếp $\Delta MNP$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Cung Chứa Góc}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD37, p. 93]
+	Từ điểm M ở bên ngoài đường tròn $(O)$, kẻ cát tuyến MAB đi qua O \& 2 tiếp tuyến $MC,MD$. K là giao điểm của $AC,BD$. Chứng minh: (a) 4 điểm $B,C,M,K$ thuộc cùng 1 đường tròn. (b) $MK\bot AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 237., p. 94]
+	Cho hình bình hành ABCD có $\widehat{A} < 90^\circ$. Đường tròn $(A,AB)$ cắt đường thẳng BC ở điểm thứ 2 E. Đường tròn $(C,BC)$ cắt đường thẳng AB ở điểm thứ 2 K. Chứng minh: (a) $DE = DK$. (b) 5 điểm $A,C,D,E,K$ thuộc cùng 1 đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 238., p. 94]
+	Qua điểm M thuộc cạnh đáy BC của $\Delta ABC$ cân, kẻ 2 đường thẳng song song với 2 cạnh bên, chúng cắt $AB,AC$ lần lượt ở $D,E$. I là điểm đối xứng với M qua DE. Chứng minh: (a) Điểm I thuộc đường tròn ngoại tiếp $\Delta ABC$. (b) Khi điểm M di chuyển trên cạnh BC thì đường thẳng IM đi qua 1 điểm cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 239., p. 94]
+	Cho $\Delta ABC$ nhọn có đường cao AD, điểm M nằm giữa $B,C$. Đường trung trực của BM cắt AB ở E, đường trung trực của CM cắt AC ở F. N là điểm đối xứng với M qua EF, I là giao điểm của $MN,AD$. Chứng minh 5 điểm $A,B,C,I,N$ thuộc cùng 1 đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 240., p. 94]
+	Cho hình thang ABCD, $AB\parallel CD$, O là giao điểm của 2 đường chéo. Trên tia OA lấy điểm M sao cho $OM = OB$. Trên tia OB lấy điểm N sao cho $ON = OA$. Chứng minh: (a) 4 điểm $C,D,M,N$ thuộc cùng 1 đường tròn. (b) $\widehat{ACN} = \widehat{BDM}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 241., p. 94]
+	Cho $\Delta ABC$, $AB < AC$. Đường tròn $(O)$ nội tiếp $\Delta ABC$ tiếp xúc với $AB,BC$ ở $D,E$. $M,N$ lần lượt là trung điểm của $AC,BC$. K là giao điểm của $MN,AI$. Chứng minh: (a) $C,E,I,K$ thuộc cùng 1 đường tròn. (b) $D,E,K$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 242., p. 94]
+	Cho $\Delta ABC$, đường cao AH, đường trung tuyến AM, $H,M$ phân biệt \& thuộc cạnh BC, thỏa mãn $\widehat{BAH} = \widehat{MAC}$. Chứng minh $\widehat{BAC} = 90^\circ$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Tứ Giác Nội Tiếp}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD38, p. 95]
+	$\Delta ABC$ nội tiếp đường tròn $(O,R)$ có $AB = 8$ {\rm cm}, $AC = 15$ {\rm cm}, đường cao $AH = 5$ {\rm cm}, H nằm ngoài cạnh BC. Tính $R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD39, p. 95]
+	Chứng minh chân các đường vuông góc kẻ từ 1 điểm thuộc đường tròn ngoại tiếp 1 tam giác đến 3 cạnh của tam giác ấy nằm trên 1 đường thẳng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD40, p. 96]
+	Qua điểm A ở bên ngoài đường tròn $(O)$, kẻ cát tuyến ABC với $(O)$. 2 tiếp tuyến của $(O)$ tại $B,C$ cắt nhau ở K. Qua K kẻ đường thẳng vuông góc với AO, cắt AO tại H \& cắt $(O)$ tại $E,F$, E nằm giữa $K,F$. M là giao điểm của $OK,BC$. Chứng minh: (a) EMOF là tứ giác nội tiếp. (b) $AE,AF$ là 2 tiếp tuyến của $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 243., pp. 96--97]
+	Cho $\Delta ABC$ vuông tại A, $AB < AC$. Lấy điểm I thuộc cạnh AC sao cho $\widehat{ABI} = \widehat{C}$. Đường tròn $(O)$ đường kính IC cắt BI ở D \& cắt BC ở M. Chứng minh: (a) CI là tia phân giác của $\widehat{DCM}$. (b) DA là tiếp tuyến của $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 244., p. 97]
+	Cho $\Delta ABC$ vuông tại A, I là trung điểm BC, D là điểm nằm giữa $I,C$. $E,F$ lần lượt là tâm của 2 đường tròn ngoại tiếp $\Delta ABD,\Delta ACD$. Chứng minh $E,F$ nằm trên đường tròn ngoại tiếp $\Delta AID$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 245., p. 97]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$, đường phân giác AD. $H,K$ lần lượt là tâm của 2 đường tròn ngoại tiếp $\Delta ABD,\Delta ACD$. Chứng minh $OH = OK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 246., p. 97]
+	Cho $\Delta ABC$ nhọn, 3 đường cao $AD,BE,CF$ cắt nhau tại H. Chứng minh: (a) $BH\cdot BE + CH\cdot CF = BC^2$. (b) $AH\cdot AD + BH\cdot BE + CH\cdot CF = \frac{1}{2}(AB^2 + BC^2 + CA^2)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 247., p. 97]
+	Cho $\Delta ABC$ nhọn, đường cao AD, trực tâm H. $AM,AN$ là 2 tiếp tuyến với đường tròn $(O)$ đường kính BC, $M,N$ là 2 tiếp điểm. Chứng minh: (a) AMDN là tứ giác nội tiếp. (b) $M,H,N$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 248., p. 97]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O,R)$, đường cao AH. Chứng minh: (a) $AB\cdot AC = 2R\cdot AH$. (b) $S = \dfrac{abc}{4R}$ với $BC = a,CA = b,AB = c$, $S$ là diện tích $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 249., p. 97]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$. 3 tia phân giác của $\widehat{A},\widehat{B},\widehat{C}$ cắt $(O)$ lần lượt ở $D,E,F$. Chứng minh: (a) $2AD > AB + AC$. (b) $AD + BE + CF$ lớn hơn chu vi $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 250., pp. 97--98]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$. Tia phân giác của $\widehat{A}$ cắt BC ở D, cắt $(O)$ ở E. $M,N$ lần lượt là hình chiếu của D trên $AB,AC$. $I,K$ lần lượt là hình chiếu của E trên $AB,AC$. Chứng minh: (a) $AI + AK = AB + AC$. (b) Diện tích tứ giác AMEN bằng diện tích $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 251., p. 98]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$, điểm M thuộc cung BC không chứa A. $MH,MI,MK$ lần lượt là 3 đường vuông góc kẻ từ M đến $BC,AB,AC$. Chứng minh $\dfrac{BC}{MH} = \dfrac{AB}{MI} + \dfrac{AC}{MK}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 252., p. 98]
+	Cho $\Delta ABC$ nhọn, 3 đường cao $AD,BE,CF$. $I,K$ lần lượt là hình chiếu của $B,C$ trên EF. Chứng minh $DE + DF = IK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 253., p. 98]
+	Cho $\Delta ABC$ nhọn, 2 đường cao $BD,CE$. Vẽ ở phía ngoài $\Delta ABC$ 2 nửa đường tròn có đường kính lần lượt là $AC,AB$. $I,K$ lần lượt là giao điểm của $BD,CE$ với 2 nửa đường tròn đó. Chứng minh $AI = AK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 254., p. 98]
+	Cho đường tròn $(O)$ \& 2 điểm $B,C\in(O)$, 2 tiếp tuyến với đường tròn tại $B,C$ cắt nhau ở A. M là 1 điểm thuộc cung nhỏ BC. Tiếp tuyến với $(O)$ tại M cắt $AB,AC$ lần lượt ở $D,E$. $I,K$ lần lượt là giao điểm của $OD,OE$ với BC. Chứng minh: (a) $OBDK,DIKE$ là 2 tứ giác nội tiếp. (b) 3 đường thẳng $OM,DK,EI$ đồng quy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 255., p. 98]
+	Từ điểm A ở bên ngoài đường tròn $(O)$, vẽ 2 tiếp tuyến $AB,AC$, $B,C$ là 2 tiếp điểm. H là giao điểm của $OA,BC$. Kẻ dây EF bất kỳ đi qua H. Chứng minh AO là tia phân giác của $\widehat{EAF}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 256., p. 98]
+	Từ điểm A ở bên ngoài đường tròn $(O)$, vẽ 2 tiếp tuyến $AB,AC$, $B,C$ là 2 tiếp điểm, \& cát tuyến ADE. Đường thẳng đi qua D \& vuông góc với OB cắt $BC,BE$ lần lượt ở $H,K$. Chứng minh $DH = HK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 257., p. 98]
+	Cho đường tròn $(O)$. Qua điểm K ở bên ngoài đường tròn, kẻ 2 tiếp tuyến $KB,KD$, $B,D$ là 2 tiếp điểm, kẻ cát tuyến KAC. (a) Chứng minh $AB\cdot CD = AD\cdot BC$. (b) Vẽ dây $CN\parallel BD$. I là giao điểm của $AN,BD$. Chứng minh I là trung điểm BD.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 258., p. 98]
+	Cho 2 đường tròn $(O),(O')$ tiếp xúc ngoài tại A. Từ điểm $B\in(O')$, kẻ 2 tiếp tuyến $BC,BD$ với $(O)$, $C,D$ là 2 tiếp điểm. $E,F$ lần lượt là 2 giao điểm thứ 2 của $AC,AD$ với $(O')$. Chứng minh $AF\cdot BE = AE\cdot BF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 259., p. 99]
+	Cho $\Delta ABC$ nhọn, $AB > AC$, nội tiếp đường tròn $(O)$ đường kính AD. E là hình chiếu của B trên AD, H là hình chiếu của A trên BC, M là trung điểm BC. Chứng minh $\Delta MEH$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 260., p. 99]
+	Tứ giác ABCD có $AB = AD + BC$, cạnh AB \& 2 tia phân giác của $\widehat{C},\widehat{D}$ đồng quy. Chứng minh tứ giác ABCD là hình thang hoặc tứ giác nội tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 261., p. 99]
+	Cho $\Delta ABC$. I là tâm của đường tròn nội tiếp $\Delta ABC$, K là tâm của đường tròn bàng tiếp trong $\widehat{A}$. Chứng minh $AI\cdot AK = AB\cdot AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 262., p. 99]
+	Đường tròn $(O)$ ngoại tiếp $\Delta ABC$ cắt đoạn nối 2 tâm $B',C'$ của 2 đường tròn bàng tiếp trong $\widehat{B},\widehat{C}$ tại điểm $M\ne A$. Chứng minh M là trung điểm $B'C'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 263., p. 99]
+	1 hình thang cân nội tiếp đường tròn $(O)$, cạnh bên được nhìn từ O dưới góc $120^\circ$. Tính diện tích hình thang biết đường cao của hình thang bằng $h$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 264., p. 99]
+	Cho hình thang ABCD, $AB\parallel CD$, $AB = a,CD = b,a < b$. 1 đường tròn $(O)$ đi qua $A,B$, cắt 2 cạnh bên $AD,BC$ lần lượt ở $M,N$. Tính độ dài Mn theo $a,b$ biết 2 tứ giác $ABNM,CDMN$ có diện tích bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 265., p. 99]
+	Cho $\Delta ABC$ nhọn, 3 đường cao $AD,BE,CF$. $R$ là bán kính đường tròn ngoại tiếp $\Delta ABC$, $r$ là bán kính đường tròn nội tiếp $\Delta DEF$. (a) Chứng minh $OA\bot EF$. (b) Tính tỷ số diện tích $\Delta DEF,\Delta ABC$ theo $R,r$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 266., p. 99]
+	Cho $\Delta ABC$ vuông tại A, $\widehat{C} = 40^\circ$, đường cao AH, điểm I thuộc cạnh AC sao cho $AI = \frac{1}{3}AC$, điểm K thuộc tia đối của tia HA sao cho $HK = \frac{1}{3}AH$. Tính $\widehat{BIK}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 267., p. 99]
+	$\Delta ABC$ cân có $\widehat{A} = 100^\circ$. Điểm D thuộc nửa mặt phẳng không chứa A có bờ BC sao cho $\widehat{CBD} = 15^\circ,\widehat{BCD} = 35^\circ$. Tính $\widehat{ADB}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 268., p. 99]
+	$\Delta ABC$ nhọn, trực tâm H. Vẽ hình bình hành ABCD. Chứng minh $\widehat{ABH} = \widehat{ADH}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 269., p. 100]
+	Cho $\Delta ABC$. I nằm trong $\Delta ABC$ sao cho $\widehat{ABI} = \widehat{ACI}$. Vẽ hình bình hành BICK. Chứng minh $\widehat{BAI} = \widehat{CAK}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 270., p. 100]
+	Cho điểm I nằm trong hình bình hành ABCD sao cho $\widehat{IAB} = \widehat{ICB}$. Chứng minh $\widehat{IBC} = \widehat{IDC}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 271., p. 100]
+	Cho $\Delta ABC$ đều, M thuộc cạnh BC. D đối xứng với M qua AB, E đối xứng với M qua AC. Vẽ hình bình hành DMEI. Chứng minh: (a) $D,A,I,E$ thuộc cùng 1 đường tròn. (b) $AI\parallel BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 272., p. 100]
+	Cho hình thang cân ABCD, $AB\parallel CD$, E nằm giữa $C,D$. Vẽ đường tròn $(O)$ đi qua E \& tiếp xúc với AD tại D. Vẽ đường tròn $(O')$ đi qua E \& tiếp xúc với AC tại C. K là giao điểm thứ 2 của 2 đường tròn đó. Chứng minh: (a) $A,B,C,D,K$ thuộc cùng 1 đường tròn. (b) $B,E,K$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 273., p. 100]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$, I là điểm chính giữa của $\arc{BC}$ không chứa A. Vẽ đường tròn $(O_1)$ đi qua I \& tiếp xúc với AB tại B, vẽ đường tròn $(O_2)$ đi qua I \& tiếp xúc với AC tại C. K là giao điểm thứ 2 của 2 đường tròn $(O_1),(O_2)$. (a) Chứng minh $B,C,K$ thẳng hàng. (b) Lấy điểm D bất kỳ thuộc cạnh AB, điểm E thuộc tia đối của tia CA sao cho $BD = CE$. Chứng minh đường tròn ngoại tiếp $\Delta ADE$ luôn đi qua 1 điểm cố định khác A.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 274., p. 100]
+	Cho đường tròn $(O)$ đường kính AB, điểm C cố định trên đường kính ấy, $C\ne O$. M chuyển động trên $(O)$. Đường vuông góc với AB tại C cắt $MA,MB$ lần lượt ở $E,F$. Chứng minh đường tròn ngoại tiếp $\Delta AEF$ luôn đi qua 1 điểm cố định khác A.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 275., p. 100]
+	Cho $\widehat{xAy} = 90^\circ$, $B\in Ay$ cố định, C di chuyển trên $Ax$. Đường tròn $(I)$ nội tiếp $\Delta ABC$ tiếp xúc với $AC,BC$ lần lượt ở $M,N$. Chứng minh đường thẳng MN luôn đi qua 1 điểm cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 276., pp. 100--101]
+	Cho đường tròn $(O)$ đường kính BC, $A\in(O)$. H là hình chiếu của A trên BC. Vẽ đường tròn $(I)$ có đường kính AH, cắt $AB,AC$ lần lượt ở $M,N$. (a) Chứng minh $OA\bot MN$. (b) Vẽ đường kính AOK của $(O)$. E là trung điểm HK. Chứng minh E là tâm của đường tròn ngoại tiếp tứ giác BMNC. (c) Cho BC cố định. Xác định vị trí của điểm A để bán kính đường tròn ngoại tiếp tứ giác BMNC lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 277., p. 101]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH. $(P),(Q)$ lần lượt là đường tròn nội tiếp $\Delta ABH,\Delta ACH$. Kẻ tiếp tuyến chung ngoài khác BC của $(P),(Q)$, cắt $AB,AH,AC$ lần lượt ở $M,K,N$. Chứng minh: (a) $\Delta ABC\backsim\Delta HPQ$. (b) $KP\parallel AB,KQ\parallel AC$. (c) BMNC là tứ giác nội tiếp. (d) $A,M,N,P,Q$ thuộc cùng 1 đường tròn. (e) $\Delta ADE$ vuông cân, $D,E$ lần lượt là giao điểm của PQ với $AB,AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 278., p. 101]
+	Cho đường tròn $(O)$, dây AB. M di chuyển trên cung lớn AB. 2 đường cao $AE,BF$ của $\Delta ABM$ cắt nhau ở H. (a) Chứng minh $OM\bot EF$. (b) Đường tròn $(H,HM)$ cắt $MA,MB$ lần lượt ở $C,D$. Chứng minh đường thẳng kẻ từ M \& vuông góc với CD luôn đi qua 1 điểm cố định. (c) Chứng minh đường thẳng kẻ từ H \& vuông góc với CD cũng đi qua 1 điểm cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 279., p. 101]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$. 1 đường tròn $(I)$ tùy ý đi qua $B,C$, cắt $AB,AC$ lần lượt ở $M,N$. Đường tròn $(K)$ ngoại tiếp $\Delta AMN$ cắt $(O)$ tại điểm thứ 2 D. Chứng minh: (a) AKIO là hình bình hành. (b) $\widehat{ADI} = 90^\circ$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 280., p. 101]
+	Dựng ra phía ngoài 1 tứ giác nội tiếp các hình chữ nhật mà mỗi hình chữ nhật có 1 cạnh là của tứ giác, cạnh kia bằng cạnh đối diện của tứ giác. Chứng minh giao điểm các đường chéo của 4 hình chữ nhật là 4 đỉnh của 1 hình chữ nhật.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 281., p. 102]
+	Cho đường tròn đường kính AC, dây $BD\bot AC$. $E,F,G,H$ lần lượt là tâm của 4 đường tròn nội tiếp $\Delta ABC,\Delta ABD,\Delta ACD,\Delta BCD$. Chứng minh EFGH là hình vuông.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 282., p. 102]
+	Cho đường tròn $(O)$, dây AB, $M\in(O)$. $Ax,By$ là 2 tiếp tuyến của đường tròn, $H,I,K$ lần lượt là chân các đường vuông góc kẻ từ M đến $AB,Ax,By$. Chứng minh: (a) $MH^2 = MI\cdot MK$. (b) $MI + MK\ge2MH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 283., p. 102]
+	M bất kỳ thuộc đường tròn $(O)$ ngoại tiếp tứ giác ABCD. Khoảng cách từ M đến 4 đường thẳng $AB,BC,CD,DA$ lần lượt là $MH,MK,MI,MN$. Chứng minh $MH\cdot MI = MK\cdot MN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 284., p. 102]
+	Cho $\Delta ABC$, đường trung tuyến AM, đường phân giác AD. Đường tròn ngoại tiếp $\Delta ADM$ cắt $AB,AC$ lần lượt ở $E,F$. Chứng minh $BE = CF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 285., p. 102]
+	Cho nửa đường tròn $(O)$ đường kính AB, C thuộc bán kính OA. Đường vuông góc với AB tại C cắt $(O)$ ở D. Đường tròn $(I)$ tiếp xúc với nửa đường tròn \& tiếp xúc với 2 đoạn thẳng $AC,CD$. E là tiếp điểm trên AC của $(I)$. (a) Chứng minh $BD = BE$. (b) Suy ra cách dựng $(I)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 286., p. 102]
+	Cho $\Delta ABC$ cân tại A, $AB = 16,BC = 24$, đường cao AE. Đường tròn $(O)$ nội tiếp $\Delta ABC$ tiếp xúc với AC tại F. (a) Chứng minh OECF là tứ giác nội tiếp \& BF là tiếp tuyến của đường tròn ngoại tiếp tứ giác đó. (b) M là giao điểm của BF với $(O)$. Chứng minh BMOC là tứ giác nội tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 287., p. 102]
+	Cho đường tròn $(O')$ tiếp xúc trong với đường tròn $(O)$ tại A. 2 dây $BC,BD$ của $(O)$ tiếp xúc với $(O')$ lần lượt ở $E,F$. I là giao điểm của EF với tia phân giác $\widehat{CAD}$. Chứng minh: (a) $\widehat{DAF} = \frac{1}{2}\widehat{DCB}$. (b) $\widehat{DAF} = \widehat{IAE}$. (c) I là tâm đường tròn nội tiếp $\Delta BCD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 288., p. 103]
+	Cho $\Delta ABC$ nhọn, 3 đường cao $AD,BE,CF$. Lấy điểm $M\in DF$ bất kỳ, kẻ $MN\parallel BC$, $N\in DE$. Lấy điểm I trên đường thẳng DE sao cho $\widehat{MAI} = \widehat{BAC}$. Chứng minh: (a) $\Delta AMN$ cân. (b) AMNI là tứ giác nội tiếp. (c) MA là tia phân giác $\widehat{FMI}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 289., p. 103]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau ở $A,B$. Kẻ tiếp tuyến chung CD, $C\in(Oin),D\in(O')$. $H,K$ lần lượt là hình chiếu của $C,D$ trên $OO'$. Chứng minh $\widehat{OAO'} = \widehat{HAK}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 290., p. 103]
+	Cho 2 hình vuông $ABCD,AB'C'D'$ sao cho nếu vẽ các đường tròn ngoại tiếp các hình vuông thì chiều từ A lần lượt qua $B,C,D$ \& chiều từ A lần lượt qua $B',C',D'$ đều theo chiều quay của kim đồng hồ. I là giao điểm của $BB',DD'$. Chứng minh: (a) I thuộc đường tròn ngoại tiếp mỗi hình vuông. (b) $CC'$ cũng đi qua điểm I.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 291., p. 103]
+	Cho tứ giác ABCD nội tiếp đường tròn $(O)$. Đường vuông góc với AD tại A cắt BC ở E. Đường vuông góc với AB tại A cắt CD ở F. Chứng minh $E,F,O$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 292., p. 103]
+	Cho $\Delta ABC$. Đường tròn nội tiếp $\Delta ABC$ tiếp xúc với $BC,CA,AB$ lần lượt ở $D,E,F$. Biết $\Delta ABC\backsim\Delta DEF$, chứng minh $\Delta ABC$ đều.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 293., p. 103]
+	Cho 2 đường tròn $(O),(O')$ ở ngoài nhau. Kẻ 2 tiếp tuyến chung ngoài $AB,A'B'$, 2 tiếp tuyến chung trong $CD,EF$, $A,A',C,E\in(O),B,B',D,F\in(O')$. M là giao điểm của $AB,EF$, N là giao điểm của $A'B',CD$, H là giao điểm của $MN,OO'$. Chứng minh: (a) $MN\bot OO'$. (b) $O',B,M,H,F$ thuộc cùng 1 đường tròn. (c) $O,A,M,E,H$ thuộc cùng 1 đường tròn. (d) $B,D,H$ thẳng hàng. (e) $A,C,H$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 294., pp. 103--104]
+	Cho đường tròn $(O)$, 2 điểm $A,B$ ở vị trí đối xứng với nhau qua 1 bán kính của $(O)$. Vẽ dây CD đi qua A, dây EF đi qua B. 2 đường thẳng $CE,DF$ cắt đường thẳng AB lần lượt ở $M,N$. Chứng minh $AN = BM$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 295., p. 104]
+	Cho ABCD là tứ giác nội tiếp có các cạnh đối không song song, F là giao điểm của $AB,CD$, E là giao điểm của $AD,BC$. $H,G$ lần lượt là trung điểm $AC,BD$. Chứng minh: (a) Tia phân giác $\widehat{BED}$ cũng là tia phân giác $\widehat{HEG}$. (b) 2 tia phân giác $\widehat{BED},\widehat{BFD}$ gặp nhau tại 1 điểm nằm trên GH.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 296., p. 104]
+	Cho tứ giác ABCD. Vẽ 4 đường tròn, mỗi đường tròn đi qua trung điểm các cạnh của 1 trong $\Delta ABC,\Delta BCD,\Delta CDA,\Delta DAB$. Chứng minh 4 đường tròn đó cùng giao nhau tại 1 điểm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 297., p. 104]
+	Cho $\Delta ABC$, đường cao AH. Kẻ ra ngoài $\Delta ABC$ 2 tia $Ax,Ay$ lần lượt tạo với $AB,AC$ các góc nhọn bằng nhau. I là hình chiếu của B trên Ax, K là hình chiếu của C trên Ay, M là trung điểm BC. Chứng minh: (a) $MI = MK$. (b) $I,H,K,M$ thuộc cùng 1 đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 298., p. 104]
+	Cho $\Delta ABC$, trực tâm H. Kẻ 3 đường thẳng $AA',BB',CC'$ sao cho 3 tia phân của $\widehat{A'AH},\widehat{B'BH},\widehat{C'CH}$ song song với nhau. Chứng minh 3 đường thẳng $AA',BB',CC'$ đồng quy tại 1 điểm thuộc đường tròn ngoại tiếp $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 299., p. 104]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$, M thuộc cung AC, Ax là tiếp tuyến tại A. $H,I,K,N$ lần lượt là chân 4 đường vuông góc kẻ từ M đến $AB,AC,BC,Ax$. Chứng minh $MH\cdot MI = MK\cdot MN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 300., p. 104]
+	Cho $\Delta ABC$ \& 2 điểm $M,N$ thuộc đường tròn ngoại tiếp $\Delta ABC$. Biết các đường thẳng Simpson của $M,N$ vuông góc với nhau. Chứng minh MN là đường kính của đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 301., p. 104]
+	Cho tứ giác ABCD nội tiếp đường tròn $(O)$. $H,I$ lần lượt là hình chiếu của B trên $AC,CD$. $M,N$ lần lượt là trung điểm của $AD,HI$. Chứng minh: (a) $\Delta ABD\backsim\Delta HBI$. (b) $\widehat{MNB} = 90^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 302., p. 105]
+	Cho $\Delta ABC$, điểm M bất kỳ thuộc đường tròn $(O)$ ngoại tiếp $\Delta ABC$. D đối xứng với M qua AB, E đối xứng với M qua BC. Chứng minh khi điểm M di chuyển trên $(O)$ thì DE luôn đi qua 1 điểm cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 303., p. 105, định lý Plol\'em\'ee]
+	Chứng minh trong 1 tứ giác nội tiếp, tích 2 đường chéo bằng tổng các tích của 2 cặp cạnh đối.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 304., p. 105, định lý Carnot]
+	Vận dụng định lý Plol\'em\'ee để chứng minh tổng các khoảng cách từ tâm của đường tròn ngoại tiếp 1 tam giác nhọn đến 3 cạnh của tam giác bằng tổng các bán kính đường tròn ngoại tiếp \& đường tròn nội tiếp tam giác đó.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Đường Tròn Ngoại Tiếp, Nội Tiếp Đa Giác}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD41, p. 105]
+	Chứng minh định lý ``Nếu tứ giác ABCD có tổng các cạnh đối bằng nhau $AB + CD = BC + AD$ thì tứ giác đó ngoại tiếp được 1 đường tròn'' bằng cách chứng minh 4 tia phân giác của $\widehat{A},\widehat{B},\widehat{C},\widehat{D}$ cùng gặp nhau tại 1 điểm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD42, p. 106]
+	2 đường trung tuyến $BD,CE$ của $\Delta ABC$ cắt nhau tại I. Cho biết tứ giác ADIE ngoại tiếp được 1 đường tròn. Chứng minh $\Delta ABC$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD43, p. 107]
+	Cho 1 lục giác đều nội tiếp đường tròn bán kính $R$. Kẻ các đường chéo nối các đỉnh cách nhau 1 đỉnh. Tính diện tích lục giác có đỉnh là giao điểm của các đường chéo đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 305., p. 107]
+	Hình thang vuông ABCD, $\widehat{A} = \widehat{D} = 90^\circ$, ngoại tiếp đường tròn $(O)$. Tính diện tích hình thang biết: (a) $OB = 10$ {\rm cm}, $OC = 20$ {\rm cm}. (b) $AB = b,CD = a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 306., p. 107]
+	Hình thang ABCD ngoại tiếp đường tròn $(O)$, đáy nhỏ $AB = 2$ {\rm cm}, E là tiếp điểm của $(O)$ trên cạnh BC. Biết $BE = 1$ {\rm cm}, $CE = 4$ {\rm cm}. Chứng minh ABCD là hình thang cân \& tìm diện tích của nó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 307., p. 107]
+	Tính các cạnh của 1 hình thang cân ngoại tiếp đường tròn $(O,10\ {\rm cm})$ biết khoảng cách giữa 2 tiếp điểm trên cạnh bên bằng {\rm16 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 308., p. 107]
+	Đường tròn $(O)$ nội tiếp hình vuông ABCD, tiếp điểm trên AB là M. 1 tiếp tuyến với đường tròn $(O)$ cắt 2 cạnh $BC,CD$ lần lượt ở $E,F$. Chứng minh: (a) $\Delta DFO\backsim\Delta BOE$. (b) $ME\parallel AF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 309., p. 107]
+	Cho tứ giác ABCD, 2 đường tròn nội tiếp $\Delta ABC,\Delta ACD$ tiếp xúc nhau. Chứng minh các đường tròn nội tiếp $\Delta ABD,\Delta BCD$ tiếp xúc nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 310., p. 108]
+	Cho tứ giác ABCD ngoại tiếp 1 đường tròn. Chứng minh nếu 1 đường thẳng chia tứ giác thành 2 phần có diện tích bằng nhau \& chu vi bằng nhau thì đường thẳng đó đi qua tâm của đường tròn đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 311., p. 108]
+	Cho hình thang ABCD, $AB\parallel CD$, ngoại tiếp đường tròn $(O)$, tiếp điểm trên $AB,CD$ lần lượt là $E,F$. Chứng minh $AC,BD,EF$ đồng quy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 312., p. 108]
+	Chứng minh trong 1 tứ giác ngoại tiếp đường tròn, các đường thẳng nối các tiếp điểm trên các cạnh đối đồng quy tại giao điểm 2 đường chéo của tứ giác.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 313., p. 108]
+	Cho tứ giác ABCD ngoại tiếp được tròn $(O)$. $I,K$ lần lượt là trung điểm của 2 đường chéo $BD,AC$. Chứng minh: (a) $S_{OAB} + S_{OCD} = \frac{1}{2}S_{ABCD}$. (b) $I,K,O$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 314., p. 108]
+	Cho đường tròn $(O)$, 2 dây $AB\bot CD$. 4 tiếp tuyến với $(O)$ tại $A,B,C,D$ cắt nhau lần lượt ở $E,F,G,H$. Chứng minh EFGH là tứ giác nội tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 315., p. 108]
+	Tứ giác ABCD ngoại tiếp đường tròn $(O)$, đồng thời nội tiếp 1 đường tròn khác, $AB = 14$ {\rm cm}, $BC = 18$ {\rm cm}, $CD = 26$ {\rm cm}. H là tiếp điểm của CD \& $(O)$. Tính $CH,DH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 316., p. 108]
+	Tứ giác ABCD ngoại tiếp đường tròn $(O,r)$, đồng thời nội tiếp 1 đường tròn khác. $E,F,G,H$ lần lượt là hình chiếu của O trên $AB,BC,CD,DA$. Chứng minh: (a) $r^2 = AE\cdot CG = BF\cdot DH$. (b) Diện tích tứ giác ABCD bằng $\sqrt{abcd}$ với $AB = a,BC = b,CD = c,dA = d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 317., p. 108]
+	Cho lục giác ABCDEF nội tiếp 1 đường tròn \& có 2 cặp cạnh đối song song là $AB\parallel DE,BC\parallel EF$. Chứng minh 2 cạnh đối còn lại cũng song song với nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 318., p. 108]
+	Lục giác ABCDEF nội tiếp 1 đường tròn có 3 cạnh $AB,CD,EF$ bằng bán kính của đường tròn. Chứng minh 3 trung điểm của 3 cạnh còn lại là 3 đỉnh của 1 tam giác đều.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 319., p. 109]
+	Tính diện tích bát giác đều cạnh $a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 320., p. 109]
+	Cho đa giác đều $20$ cạnh $A_1A_2\ldots A_{20}$ nội tiếp đường tròn $(O,R)$. $M\in(O,R)$ bất kỳ. Tính tổng $\sum_{i=1}^{20} MA_i^2 = MA_1^2 + MA_2^2 + \cdots + MA_{20}^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 321., p. 109]
+	Cho $\Delta ABC$ đều \& hình vuông ADEF cùng nội tiếp đường tròn $(O,R)$. Tính diện tích phần chung của tam giác \& hình vuông.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Độ Dài Đường Tròn}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD44, p. 109]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$. Độ dài 3 cung $AB,BC,CA$ lần lượt bằng $3\pi,4\pi,5\pi$. Tính diện tích $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 322., p. 110]
+	Cho đường tròn $(O)$, cung AB bằng $120^\circ$. 2 tiếp tuyến của $(O)$ tại $A,B$ cắt nhau ở C. $(I)$ là đường tròn tiếp xúc với 2 đoạn thẳng $AC,BC$ \& cung AB. So sánh độ dài của $(I)$ với độ dài cung AB của $(O)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 323., p. 110]
+	Cho 2 đường tròn đồng tâm. Biết khoảng cách ngắn nhất giữa 2 điểm thuộc 2 đường tròn bằng {\rm1 m}. Tính hiệu các độ dài của 2 đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 324., p. 110]
+	Cho hình quạt tròn có cung BC bằng $120^\circ$, tâm A bán kính $R$. Tính độ dài đường tròn nội tiếp hình quạt đó với đường tròn nội tiếp hình quạt là đường tròn tiếp xúc với cung BC \& với 2 bán kính $AB,AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 325., p. 110]
+	Lấy 4 điểm $A,B,C,D$ lần lượt trên đường tròn $(O)$ sao cho $\mbox{\rm sđ}\arc{AB} = 60^\circ,\mbox{\rm sđ}\arc{BC} = 90^\circ,\mbox{\rm sđ}\arc{CD} = 120^\circ$. (a) Tứ giác ABCD là hình gì? (b) Tính độ dài $(O)$ biết diện tích tứ giác ABCD bằng $\rm100\ m^2$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Diện Tích Hình Tròn}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD45, p. 110]
+	Cho tam giác đều tâm O, cạnh {\rm3 cm}. Vẽ đường tròn $(O,1\ {\rm cm})$. Tính diện tích phần tam giác nằm ngoài hình tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 326., p. 111]
+	Cho 1 hình thang ngoại tiếp 1 đường tròn. So sánh tỷ số giữa diện tích hình tròn \& diện tích hình thang với tỷ số giữa chu vi hình tròn \& chu vi hình thang.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 327., p. 111]
+	Cho 1 hình tròn \& 1 hình vuông có cùng chu vi, hình nào có diện tích lớn hơn?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 328., pp. 111--112]
+	O là trung điểm của đoạn thẳng $AB = 2R$. Vẽ về 1 phía của AB 3 nửa đường tròn có đường kính lần lượt là $OA,OB,AB$. Vẽ đường tròn $(I)$ tiếp xúc 3 nửa đường tròn này. (a) Tính bán kính đường tròn $(I)$. (b) Tính diện tích phần hình tròn lớn nằm ngoài hình tròn $(I)$ \& nằm ngoài 2 nửa hình tròn nhỏ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 329., p. 112]
+	Cho 2 đường tròn đồng tâm, đường tròn nhỏ chia hình tròn lớn thành 2 phần có diện tích bằng nhau. Chứng minh diện tích phần hình vành khăn giới hạn bởi 2 tiếp tuyến song song của đường tròn nhỏ bằng diện tích hình vuông nội tiếp đường tròn nhỏ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 330., p. 112]
+	Cho đa giác đều $n$ cạnh, độ dài mỗi cạnh bằng $a$. Vẽ 2 đường tròn ngoại tiếp \& nội tiếp đa giác. (a) Tính diện tích hình vành khăn giới hạn bởi 2 đường tròn. (b) Tính chiều rộng của hình vành khăn đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 331., p. 112]
+	1 hình quạt có chu vi bằng {\rm28 cm} \& diện tích bằng $\rm49\ cm^2$ (chu vi hình quạt bằng độ dài cung hình quạt cộng với 2 lần bán kính). Tính bán kính của hình quạt.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 332., p. 112]
+	Cho 3 đường tròn cùng bán kính $r$ \& tiếp xúc ngoài đôi một. (a) Tính diện tích ``tam giác cong'' có đỉnh là các tiếp điểm của 2 trong 3 đường tròn đó. (b) Kẻ 3 đường thẳng, mỗi đường thẳng tiếp xúc với 2 đường tròn \& không giao với đường tròn thứ 3. Tính diện tích tam giác tạo bởi 3 đường thẳng đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 333., p. 112]
+	Cho $\Delta ABC$ vuông tại A, $AB = 15,AC = 20$, đường cao AH. Vẽ đường tròn $(A,AH)$. Kẻ 2 tiếp tuyến $BD,CE$ với đường tròn, $D,E$ là 2 tiếp điểm. Tính diện tích hình giới hạn bởi 3 đoạn thẳng $BD,BC,CE$ \& cung DE không chứa H của đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 334., p. 112]
+	1 hình viên phân có số đo cung $90^\circ$, diện tích $2\pi - 4$. Tính độ dài dây của hình viên phân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 335., p. 112]
+	Cho $\Delta ABC$ đều có cạnh bằng $2a$. $(I)$ là đường tròn nội tiếp $\Delta ABC$. Tính diện tích phần chung của hình tròn $(I)$ \& hình tròn $(A,a)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 336., p. 112]
+	Cho đường tròn $(O,R)$, cung AB bằng $60^\circ$. Vẽ cung OB có tâm A bán kính $R$. Vẽ cung OA có tâm B bán kính $R$. Chứng minh diện tích hình giới hạn bởi 3 cung $OA,OB,AB$ nhỏ hơn $\frac{1}{4}$ diện tích hình tròn $(O,R)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 337., p. 113]
+	Cho đường tròn $(O,R)$. 1 đường tròn $(O')$ cắt đường tròn $(O)$ ở $A,B$ sao cho cung AB của $(O')$ chia $(O)$ thành 2 phần có diện tích bằng nhau. Chứng minh độ dài cung AB của $(O')$ lớn hơn $2R$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 338., p. 113]
+	Cho $\Delta ABC$ có diện tích $S$. $S_1$ là diện tích hình tròn ngoại tiếp $\Delta ABC$, $S_2$ là diện tích hình tròn nội tiếp $\Delta ABC$. Chứng minh $2S < S_1 + S_2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 339., p. 113]
+	Cho hình viên phân BC có dây $BC = a$, cung $\arc{BC} = 90^\circ$. (a) Tính diện tích hình viên phân. (b) Tính diện tích hình vuông DEFG nội tiếp trong viên phân đó, $D,E\in BC$, $G,H$ thuộc cung BC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 340., p. 113]
+	Tính bán kính hình viên phân BC có dây $BC = 6$ {\rm cm}, cạnh hình vuông MNPQ nội tiếp viên phân ấy bằng {\rm2 cm}, $M,N\in BC$, $P,Q$ thuộc cung BC.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Quỹ Tích}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD49, p. 118]
+	Cho cung AB cố định tạo bởi 2 bán kính $OA\bot OB$, I chuyển động trên cung AB. Trên tia OI lấy điểm M sao cho OM bằng tổng các khoảng cách từ I đến OA \& đến OB. Tìm quỹ tích các điểm M.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD50, p. 120]
+	Cho $\Delta ABC$ cân tại A. 2 điểm $M,N$ lần lượt di chuyển trên 2 cạnh $AB,AC$ sao cho $AM = CN$. Tìm quỹ tích các tâm O của đường tròn ngoại tiếp $\Delta AMN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD51, p. 121]
+	Tìm quỹ tích trực tâm H của các $\Delta ABC$ có BC cố định, $\widehat{A} = \alpha$ không đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD52, p. 122]
+	Cho ABCD là 1 tứ giác nội tiếp. $(I)$ là đường tròn bất kỳ đi qua $A,B$, $(K)$ là đường tròn đi qua $C,D$ \& tiếp xúc với $(I)$. M là tiếp điểm của $(I),(K)$. Điểm M di chuyển trên đường nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD53, p. 123]
+	Cho đường tròn $(O)$ \& dây BC cố định. Điểm A di chuyển trên đường tròn. Đường trung trực của AB cắt AC ở M. Tìm quỹ tích các điểm M.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD54, p. 124]
+	Tìm quỹ tích các điểm M mà từ đó ta nhìn 1 hình vuông cho trước dưới 1 góc vuông (điểm M gọi là {\rm nhìn 1 hình vuông dưới $\widehat{AMB}$} nếu 2 điểm $A,B$ thuộc cạnh hình vuông \& hình vuông thuộc miền trong của $\widehat{AMB}$).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 356., p. 124]
+	Cho nửa đường tròn đường kính AB, C là điểm chính giữa của nửa đường tròn. Điểm M di chuyển trên cung BC. N là giao điểm của $AM,OC$. Tìm quỹ tích các tâm I của đường tròn ngoại tiếp $\Delta CMN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 357., pp. 124--125]
+	Tứ giác ABCD có AC cố định, $\widehat{A} = 45^\circ$, $\widehat{B} = \widehat{D} = 90^\circ$. (a) Chứng minh BD có độ dài không đổi. (b) E là giao điểm của $BC,AD$, F là giao điểm của $AB,CD$. Chứng minh EF có độ dài không đổi. (c) Tìm quỹ tích các tâm I của đường tròn ngoại tiếp $\Delta AEF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 358., p. 125]
+	Cho $\widehat{xOy}$ \& 1 điểm I cố định thuộc tia phân giác của $\widehat{xOy}$. 1 đường tròn $(I)$ bán kính thay đổi cắt 2 tia $Ox,Oy$ lần lượt ở $M,N$, M không đối xứng với N qua OI. (a) Tìm quỹ tích các tâm $O'$ của đường tròn ngoại tiếp $\Delta OMN$. (b) Đường vuông góc với $Ox$ tại M \& đường vuông góc với $Oy$ tại N cắt nhau ở P. Tìm quỹ tích các điểm P.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 359., p. 125]
+	Cho $\Delta ABC$ đều. Tìm quỹ tích các điểm M nằm trong $\Delta ABC$ sao cho $MA^2 = MB^2 + MC^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 360., p. 125]
+	Cho $\Delta ABC$ vuông cân tại A. Tìm quỹ tích các điểm M nằm trong $\Delta ABC$ sao cho $2MA^2 = MB^2 - MC^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 361., p. 125]
+	Cho M là 1 điểm thuộc đường tròn $(O',R)$. Đường tròn này lăn (không trượt) trong đường tròn $(O,2R)$. Tìm quỹ tích các điểm M.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 362., p. 125]
+	Tìm quỹ tích đỉnh C của các $\Delta ABC$ có AB cố định, đường cao BH bằng cạnh AC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 363., p. 125]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau ở $A,B$. 1 đường thẳng $d$ bất kỳ luôn đi qua A cắt $(O),(O')$ lần lượt ở $C,D$. (a) Tìm quỹ tích các trung điểm M của CD. (b) Cho biết bán kính của $(O),(O')$ là {\rm3 cm, 2 cm}. Tính tỷ số $BC:BD$. (c) Đường thẳng $d$ có vị trí nào thì đoạn thẳng CD có độ dài lớn nhất, với A nằm giữa $C,D$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 364., p. 125]
+	Cho đường tròn $(O)$, điểm A cố định trên đường tròn. Trên tiếp tuyến tại A lấy 1 điểm B cố định. Gọi $(O')$ là đường tròn tiếp xúc với AB tại B \& có bán kính thay đổi. Tìm quỹ tích các điểm I là trung điểm của dây chung MN của $(O),(O')$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 365., p. 125]
+	Cho đường tròn $(O)$, 1 điểm A ở bên trong đường tròn. Điểm B di chuyển trên đường tròn. Qua O kẻ đường vuông góc với AB, cắt tiếp tuyến tại B của $(O)$ ở điểm M. Tìm quỹ tích các điểm M.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 366., p. 126]
+	Cho đường tròn $(O)$, đường kính AB vuông góc với dây CD. Điểm E di chuyển trên $(O)$. 2 đường thẳng $AE,BE$ cắt đường thẳng CD lần lượt ở $I,K$. Tìm quỹ tích tâm $O'$ của đường tròn ngoại tiếp $\Delta BIK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 367., p. 126]
+	Cho 3 điểm cố định $A,B,C$ thẳng hàng theo thứ tự đó. 1 đường tròn $(O)$ thay đổi luôn đi qua $A,B$. Kẻ 2 tiếp tuyến $CD,CE$ với đường tròn, $D,E$ là 2 tiếp điểm. (a) Tìm quỹ tích các điểm $D,E$. (b) Tìm quỹ tích các trung điểm K của DE. (c) MN là đường kính của $(O)$ vuông góc với AB, F là giao điểm của CM với $(O)$. Chứng minh $AB,DE,FN$ đồng quy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 368., p. 126]
+	Cho đường tròn $(O)$, dây AB. Điểm C di chuyển trên đường thẳng AB \& nằm ngoài $(O)$. Kẻ 2 tiếp tuyến $CD,CE$ với $(O)$, $D,E$ là 2 tiếp điểm. Tìm quỹ tích giao điểm K của $OC,DE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 369., p. 126]
+	Cho đường tròn $(O,R)$, điểm A cố định ở bên ngoài đường tròn. BC là 1 đường kính thay đổi. (a) Tìm quỹ tích tâm $O_1$ của đường tròn ngoại tiếp $\Delta ABC$. (b) $D,E$ lần lượt là giao điểm của $AB,AC$ với $(O)$. Tìm quỹ tích tâm $O_2$ của đường tròn ngoại tiếp $\Delta ADE$. (c) F là giao điểm khác A của $(O_1),(O_2)$. Chứng minh $AF,BC,DE$ đồng quy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 370., p. 126]
+	Cho đường tròn $(O)$, dây BC cố định. Điểm A di chuyển trên $(O)$. M là trung điểm AC. Tìm quỹ tích hình chiếu H của M trên AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 371., p. 126]
+	Cho $\widehat{xOy} = 90^\circ$, 1 điểm A cố định nằm trong $\widehat{xOy}$. 1 góc vuông đỉnh A có 2 cạnh thay đổi cắt $Ox,Oy$ lần lượt ở $B,C$. M đối xứng với A qua BC. (a) Tìm quỹ tích các điểm M. (b) Chứng minh $\dfrac{AB}{AC}$ là hằng số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 372., p. 126]
+	Cho đường tròn $(O)$, điểm A cố định ở bên ngoài đường tròn. Kẻ tiếp tuyến AB, B là tiếp điểm. 1 cát tuyến AMN luôn đi qua A. Tìm quỹ tích trọng tâm G của $\Delta BMN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 373., p. 127]
+	Cho đường tròn $(O,R)$, 1 điểm H cố định ở bên trong đường tròn. Xét các $\Delta ABC$ nội tiếp $(O)$ \& nhận H làm trực tâm. Tìm quỹ tích: (a) Chân các đường cao của $\Delta ABC$. (b) Chân các đường trung tuyến của $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 374., p. 127]
+	Cho đường tròn $(O)$, 2 đường kính $AB\bot CD$. 2 điểm $E,F$ chuyển động trên $(O)$ sao cho $OE\bot OF$. Qua E kẻ đường thẳng vuông góc với CD, qua F kẻ đường thẳng vuông góc với AB, chúng cắt nhau ở M. Tìm quỹ tích các điểm M.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 375., p. 127]
+	Cho đường tròn $(O)$, dây AB cố định. 2 điểm $M,N$ di chuyển trên $(O)$ sao cho $AM = BN$. Tìm quỹ tích giao điểm I của 2 đường thẳng $AM,BN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 376., p. 127]
+	Cho $\Delta ABC$ cân tại A. Tìm quỹ tích các điểm M sao cho MA là tia phân giác $\widehat{BMC}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 377., p. 127]
+	Cho $\Delta ABC$ cân tại A. 1 đường thẳng $d$ thay đổi luôn đi qua A. Trên $d$ lấy điểm M sao cho $MB + MC$ nhỏ nhất. Tìm quỹ tích các điểm M.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 378., p. 127]
+	Tìm quỹ tích các điểm M mà từ đó ta nhìn 1 hình vuông cho trước dưới 1 góc bằng $45^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 379., p. 127]
+	Cho đường tròn $(O)$, dây AB cố định. Điểm M di chuyển trên $(O)$. Vẽ đường tròn $(M)$ tiếp xúc với AB. I là giao điểm của 2 tiếp tuyến khác AB kẻ từ $A,B$ với $(M)$. Tìm quỹ tích của điểm I.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 380., p. 127]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau tại $A,B$. 1 đường thẳng thay đổi luôn đi qua A cắt $(O),(O')$ lần lượt ở $C,D$. Tìm quỹ tích tâm I các đường tròn nội tiếp $\Delta BCD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 381., p. 127]
+	Cho 2 đường tròn $(O),(O')$ cắt nhau tại $A,B$. Qua A vẽ cát tuyến cố định CAD, $C\in(O),D\in(O')$. 1 đường thẳng thay đổi luôn đi qua A cắt $(O),(O')$ lần lượt ở $M,N$. Tìm quỹ tích giao điểm P của 2 đường thẳng $CM,DN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 382., p. 127]
+	Cho $\Delta ABC$ \& điểm D cố định trên cạnh BC. 1 góc vuông đỉnh D có các cạnh thay đổi vị trí cắt 2 cạnh $AB,AC$ lần lượt ở $M,N$. Tìm quỹ tích hình chiếu H của D trên MN.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Dựng Hình}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD55, p. 128]
+	Cho $\Delta ABC$. Dựng $\Delta DEF$ đều có độ dài cạnh bằng $a$ cho trước, 3 đỉnh nằm trên 3 cạnh của $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD56, p. 129]
+	Cho $\Delta ABC$, 1 điểm D nằm trong $\Delta ABC$. Dựng đường thẳng đi qua D cắt 2 cạnh $AB,C$ lần lượt ở $E,F$ sao cho $BE = CF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD57, p. 129]
+	Cho đường tròn $(O)$ \& 2 điểm $A,B$ ở bên ngoài $(O)$. Dựng đường tròn $(O')$ tiếp xúc với $(O)$ \& đi qua 2 điểm $A,B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD58, p. 130]
+	Cho 2 điểm $A,B$ nằm về 1 phía của đường thẳng $xy$. Dựng đường tròn đi qua $A,B$ \& tiếp xúc với đường thẳng $xy$.
+\end{baitoan}
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD59, p. 131]
+	Dựng $\Delta ABC$ vuông tại A biết cạnh huyền $BC = a$, đường phân giác $AD = d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 383., p. 132]
+	Cho 3 tia chung gốc $Ox,Oy,Oz$. Dựng tam giác đều cạnh $a$ có 3 đỉnh thuộc 3 tia này.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 384., p. 132]
+	Cho $\widehat{xOy}$. Dựng đoạn thẳng $AB = a$ có $A\in Ox,B\in Oy$ sao cho $OA + OB = m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 385., p. 132]
+	(a) Dựng tam giác vuông biết chu vi bằng $2p$ \& bán kính của đường tròn nội tiếp bằng $r$. (b) Dựng tam giác biết 1 cạnh bằng $a$, chu vi bằng $2p$, \& bán kính đường tròn nội tiếp bằng $r$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 386., p. 132]
+	Dựng $\Delta ABC$ biết $\widehat{A} = \alpha$, đường cao $AH = h$, đường trung tuyến $AM = m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 387., p. 132]
+	Dựng $\Delta ABC$ biết $\widehat{A} = \alpha$, $AC - AB = d$, bán kính đường tròn nội tiếp bằng $r$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 388., p. 132]
+	Dựng $\Delta ABC$ biết 3 điểm $I,O,P$ lần lượt là tâm của 3 đường tròn nội tiếp, ngoại tiếp, bàng tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 389., p. 132]
+	Dựng $\Delta ABC$ biết $BC = a$, bán kính $r$ của đường tròn nội tiếp, bán kính $R_a$ của đường tròn bàng tiếp trong $\widehat{A}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 390., p. 132]
+	Dựng $\Delta ABC$ biết $\widehat{A} = \alpha,AB - BC = m,AC - BC = n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 391., p. 132]
+	Dựng $\Delta ABC$ biết $BC = a$, đường cao $AH = h$ biết đường phân giác AD bằng trung bình nhân của $BD,CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 392., p. 132]
+	Cho 4 điểm $A,B,C,D$. Dựng hình vuông EFGH có 4 cạnh (hoặc đường thẳng chứa cạnh) đi qua 4 điểm này (mỗi đường thẳng đi qua 1 điểm).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 393., p. 132]
+	Cho $\Delta ABC$ \& điểm M nằm trong $\Delta ABC$. Dựng đường tròn đi qua $A,M$, cắt $AB,AC$ lần lượt ở $D,E$ sao cho $DE\parallel BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 394., p. 133]
+	Cho đường thẳng $d$, 2 điểm $A,B$ nằm cùng phía đối với $d$. Dựng điểm $M\in d$ sao cho $AM + BM = a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 395., p. 133]
+	Dựng $\Delta ABC$ biết $\widehat{B} - \widehat{C} = \alpha$, đường cao $AH = h$, đường trung tuyến $AM = m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 396., p. 133]
+	Dựng $\Delta ABC$ biết $BC = a,\widehat{B} - \widehat{C} = \alpha$, đường cao $AH = h$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 397., p. 133]
+	Cho $\widehat{xOy}$ nhọn, 2 điểm $M,N$ nằm trong $\widehat{xOy}$. Dựng điểm $A\in Ox$ sao cho tia phân giác $\widehat{MAN}$ vuông góc với Oy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 398., p. 133]
+	Dựng tứ giác ABCD biết $AB = a,AD = b,b > a,AC = m,\widehat{B} - \widehat{D} = \alpha$ sao cho $AC$ là tia phân giác $\widehat{A}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 399., p. 133]
+	Dựng tứ giác ABCD có $AB = a,AD = b,\widehat{B} = \alpha,\widehat{D} = \beta$ biết tứ giác ABCD có thể ngoại tiếp được 1 đường tròn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 400., p. 133]
+	Cho $\Delta ABC$ nhọn. Dựng điểm M nằm trong $\Delta ABC$ sao cho nếu lấy các điểm đối xứng với M qua trung điểm mỗi cạnh của $\Delta ABC$ thì được 3 điểm thuộc đường tròn ngoại tiếp $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 401., p. 133]
+	Cho $\widehat{xOy}$ nhọn, điểm M nằm trong $\widehat{xOy}$. Dựng đường tròn $(I)$ đi qua điểm M, cắt $Ox,Oy$ thành 2 dây $AB,CD$ sao cho $\widehat{AMB} = \widehat{CMD} = \widehat{xOy}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 402., p. 133]
+	Dựng hình vuông nội tiếp 1 hình viên phân cho trước (1 cạnh của hình vuông thuộc dây của viên phân, 2 đỉnh còn lại của hình vuông thuộc cung của viên phân).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 403., p. 133]
+	Cho $\Delta ABC$ vuông tại A, $AB < AC$. Điểm D thuộc cạnh BC. Đường vuông góc với AD tại A cắt 2 đường vuông góc với BC tại $B,C$ lần lượt ở $M,N$. Dựng điểm D sao cho diện tích $\Delta MDN$ gấp đôi diện tích $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 404., p. 133]
+	Cho ABCD là tứ giác nội tiếp. Dựng điểm E thuộc cạnh CD sao cho $\widehat{DAE} = \widehat{CBE}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 405., p. 133]
+	Dựng $\Delta ABC$ biết $\widehat{A} = \alpha,BC = a$, đường phân giác $AD = d$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Toán Cực Trị}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD60, p. 134]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$. Điểm M chuyển động trên $(O)$. $D,E$ lần lượt là hình chiếu của M trên 2 đường thẳng $AB,AC$. Tìm vị trí điểm M sao cho DE có độ dài lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD61, p. 134]
+	Trong các $\Delta ABC$ có $BC = a,\widehat{BAC} = \alpha$, tam giác nào có: (a) Diện tích lớn nhất? (b) Chu vi lớn nhất?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD62, p. 135]
+	Cho đường thẳng $xy$, 2 điểm $A,B$ nằm cùng phía đối với $xy$. Tìm điểm $M\in xy$ sao cho $\widehat{AMB}$ lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 406., p. 137]
+	Cho đường thẳng d, 2 điểm $A,B$ nằm về 2 phía của d. Dựng đường tròn $(O)$ đi qua $A,B$ sao cho nó cắt d thành 1 dây có độ dài nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 407., p. 137]
+	Trong các hình thang có 1 góc nhọn $\alpha$ nội tiếp 1 đường tròn cho trước, hình nào có diện tích lớn nhất $\alpha > 45^\circ$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 408., p. 137]
+	Cho điểm I nằm trên đoạn thẳng AB, $IA < IB$. Trên cùng 1 nửa mặt phẳng bờ AB, vẽ nửa đường tròn đường kính AB \& 2 tiếp tuyến $Ax,By$. Điểm M di chuyển trên nửa đường tròn đó. Đường vuông góc với IM tại M cắt $Ax,By$ lần lượt ở $D,E$. (a) Chứng minh $AD\cdot BE$ có giá trị không đổi. (b) Tìm vị trí của điểm M để hình thang ABED có diện tích nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 409., p. 137]
+	Cho $\Delta ABC$ vuông tại A. Tìm vị trí điểm M thuộc đường tròn $(O)$ ngoại tiếp $\Delta ABC$, sao cho nếu $D,E$ lần lượt là 2 hình chiếu của M trên 2 đường thẳng $AB,AC$ thì DE có độ dài lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 410., p. 137]
+	Cho đường tròn $(O)$ \& dây AB. Điểm M di chuyển trên cung nhỏ AB. $I,K$ lần lượt là hình chiếu của M trên 2 tiếp tuyến tại $A,B$ của $(O)$. Tìm vị trí của M để $MI\cdot MK$ có {\rm GTLN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 411., pp. 137--138]
+	Cho đường tròn $(O)$ \& dây BC không đi qua O. Điểm A di chuyển trên $(O)$ sao cho $\Delta ABC$ là tam giác nhọn. H là trực tâm của $\Delta ABC$. Tìm vị trí của điểm A để tổng $AH + BH + CH$ có {\rm GTLN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 412., p. 138]
+	Cho đường tròn $(O)$ \& dây AB. Tìm điểm C thuộc cung nhỏ AB sao cho tổng $\dfrac{1}{AC} + \dfrac{1}{BC}$ có {\rm GTNN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 413., p. 138]
+	Cho $\Delta ABC$ đều nội tiếp đường tròn $(O)$. Tìm điểm M thuộc cung BC sao cho nếu $H,I,K$ lần lượt là hình chiếu của M trên $AB,BC,CA$ thì tổng $MA + MB + MC + MH + MI + MK$ có {\rm GTNN, GTLN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 414., p. 138]
+	Cho $\Delta ABC$ đều. Vẽ 2 tia $Bx,Cy$ cùng phía với A đối với BC sao cho $Bx\parallel AC,Cy\parallel AB$. 1 đường thẳng d đi qua A cắt $Bx,Cy$ lần lượt ở $D,E$. I là giao điểm của $CD,BE$. Xác định vị trí của đường thẳng d để $\Delta BCI$ có chu vi nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 415., p. 138]
+	Cho $\Delta ABC$ vuông cân, $AB = AC = 10$ {\rm cm}. (a) Chứng minh tồn tại vô số $\Delta DEF$ vuông cân ngoại tiếp $\Delta ABC$ (mỗi cạnh của $\Delta DEF$ đi qua 1 đỉnh của $\Delta ABC$). (b) Tính diện tích lớn nhất của $\Delta DEF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 416., p. 138]
+	Cho $\Delta ABC$. 2 điểm $D,E$ lần lượt di chuyển trên 2 tia $BA,CA$ sao cho $BD = CE$. (a) Vẽ hình bình hành BDEM. Tìm quỹ tích các điểm M. (b) Tìm vị trí của 2 điểm $D,E$ sao cho độ dài DE nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 417., p. 138]
+	Cho đường tròn $(O)$, M là điểm chính giữa của cung nhỏ AB, điểm C chuyển động trên cung lớn AB, D là giao điểm của $AB,CM$. (a) Tìm quỹ tích tâm I của đường tròn ngoại tiếp $\Delta ACD$. (b) Tìm vị trí điểm C để độ dài BI nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 418., p. 138]
+	Cho $\Delta ABC$. Điểm M di chuyển trên cạnh BC. Vẽ đường tròn $(O_1)$ đi qua M \& tiếp xúc với AB tại B. Vẽ đường tròn $(O_2)$ đi qua M \& tiếp xúc với AC tại C. N là giao điểm thứ 2 của 2 đường tròn. (a) Chứng minh điểm N thuộc đường tròn ngoại tiếp $\Delta ABC$. (b) Chứng minh đường thẳng MN luôn đi qua 1 điểm cố định. (c) Tìm vị trí điểm M để đoạn thẳng $O_1O_2$ có độ dài nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 419., p. 139]
+	Cho đường tròn $(O,R)$, 1 điểm I nằm bên trong $(O)$. Gọi $AB,CD$ là 2 dây bất kỳ cùng đi qua I \& vuông góc với nhau. $M,N$ lần lượt là trung điểm của $AB,CD$. (a) Chứng minh khi 2 dây $AB,CD$ thay đổi thì 3 tổng sau không đổi: $OM^2 + ON^2,AB^2 + CD^2,AC^2 + BD^2$. (b) Xác định vị trí của $AB,CD$ để hình chữ nhật OMIN có: (i) diện tích lớn nhất; (ii) chu vi lớn nhất. (c) Xác định vị trí của $AB,CD$ để tổng $AB + CD$ lớn nhất, nhỏ nhất. (d) Xác định vị trí của $AB,CD$ để tứ giác ACBD có diện tích lớn nhất, nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 420., p. 139]
+	Cho đường tròn $(O)$ đường kính AB, đường thẳng d không giao với $(O)$. Dựng điểm $M\in d$ sao cho 2 tia $MA,MB$ cắt $(O)$ ở $D,E$ \& độ dài DE nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 421., p. 139]
+	Cho nửa đường tròn $(O)$ đường kính AB, dây CD. Tìm điểm M thuộc cung CD sao cho 2 tia $MA,MB$ cắt dây CD ở $I,K$ \& IK có độ dài lớn nhất.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, p. 139]
+	Nếu 2 tam giác có 2 cạnh tương ứng bằng nhau từng đôi một nhưng các góc xen giữa không bằng nhau thì 2 cạnh thứ 3 cũng không bằng nhau \& cạnh nào đối diện với góc lớn hơn là cạnh lớn hơn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD63, p. 140]
+	Cho $\Delta ABC$ có 2 đường phân giác $BD,CE$ bằng nhau. Chứng minh $\Delta ABC$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD64, p. 141, bài toán ``con bướm'']
+	Cho đường tròn $(O)$, dây AB, 2 điểm $C,E$ thuộc cung AB. Vẽ 2 dây $CD,EF$ đi qua trung điểm I của AB. $M,N$ lần lượt là giao điểm của $CF,DE$ với AB. Chứng minh $IM = IN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD65, p. 142, bài toán chia 3 3 góc 1 tam giác của Morley]
+	Cho $\Delta ABC$. Đặt $\widehat{A} = 3\alpha,\widehat{B} = 3\beta,\widehat{C} = 3\gamma$. Lấy điểm K nằm trong $\Delta ABC$ sao cho $\widehat{ABK} = \beta,\widehat{ACK} = \gamma$. D là giao điểm của 3 đường phân giác $\Delta BCK$. Lấy điểm E thuộc đoạn thẳng BK, điểm F thuộc đoạn thẳng CK sao cho $\widehat{EDK} = \widehat{FDK} = 30^\circ$. (a) Chứng minh $\Delta DEF$ đều. (b) $M,N$ lần lượt đối xứng với D qua $BK,CK$. Chứng minh MEFN là hình thang cân, tính 4 góc của hình thang cân đó theo $\alpha$. (c) Chứng minh $A,E,F,M,N$ thuộc cùng 1 đường tròn \& 2 tia $AE,AF$ chia $\widehat{A}$ thành 3 góc bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 422., p. 143]
+	Cho $\Delta ABC$, $\widehat{B} = 2\beta,\widehat{C} = 2\alpha$, 2 đường phân giác $BD,CE$ bằng nhau. Vẽ hình bình hành BDCK. (a) Tính $\widehat{BEK},\widehat{BKE}$ theo $\alpha,\beta$. (b) Chứng minh $\alpha = \beta$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 423., p. 144]
+	Cho $\Delta ABC$, đường phân giác BD. d là đường phân giác của góc ngoài đỉnh B. $M,Q$ lần lượt là hình chiếu của $A,C$ trên d. Chứng minh $BD\cdot MQ = 2S_{ABC}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 424., p. 144]
+	Chứng minh nếu 1 tứ giác nội tiếp có 2 cạnh đối bằng nhau thì 2 cạnh đối kia song song \& tứ giác đó là hình thang cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 425., p. 144]
+	Cho $\Delta ABC$. $d_1,d_2$ lần lượt là đường phân giác của góc ngoài tại $B,C$. $M,Q$ lần lượt là hình chiếu của $A,C$ trên $d_1$. $N,P$ lần lượt là hình chiếu của $A,B$ trên $d_2$. (a) Chứng minh $MN\parallel BC$. (b) Chứng minh MNPQ là tứ giác nội tiếp. (c) $BD,CE$ là 2 đường phân giác của $\Delta ABC$. Chứng minh $BD\cdot MQ = CE\cdot NP$. (d) Chứng minh nếu $BD = CE$ thì $\Delta ABC$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 426., p. 144]
+	Cho $\Delta ABC$ có 2 đường phân giác $BD,CE$ bằng nhau \& cắt nhau tại I. (a) Vẽ điểm N sao cho $BN = AE,DN = AC$, $A,N$ cùng phía đối với BD. Chứng minh ANBD là tứ giác nội tiếp. (b) NK là đường phân giác $\Delta BDN$. Chứng minh ANKI là tứ giác nội tiếp. (c) Chứng minh ANBD là hình thang cân. (d) Chứng minh $\Delta ABC$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 427., p. 144]
+	Chứng minh nếu $\Delta ABC,\Delta EPQ$ có $BC = PQ,\widehat{A} = \widehat{E}$, 2 đường phân giác $AD,EF$ bằng nhau thì $\Delta ABC = \Delta EPQ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 428., p. 144]
+	Cho $\Delta ABC$, điểm D thuộc đường phân giác AI. 2 đường thẳng $BD,CD$ cắt $AC,AB$ lần lượt ở $M,N$. Chứng minh nếu $BM = CN$ thì $\Delta ABC$ cân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 429., pp. 144--145]
+	Cho tứ giác ABCD nội tiếp đường tròn $(O)$, điểm E di chuyển trên cung AB. $M,N$ lần lượt là giao điểm của $CE,DE$ với AB. (a) Chứng minh đường tròn ngoại tiếp $\Delta CEM$ cắt đường thẳng AB tại 1 điểm K cố định. (b) Đặt $AM = a,MN = b,BN = c$. Chứng minh $\dfrac{ac}{b}$ có giá trị không đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 431., p. 145]
+	Cho đường tròn $(O)$, dây AB, 2 điểm $C,E$ thuộc cung AB, C thuộc cung AE. Vẽ 2 dây $CD,EF$ đi qua điểm I thuộc dây AB. $M,N$ lần lượt là giao điểm của $CF,DE$ với AB. Chứng minh $\dfrac{1}{AI} + \dfrac{1}{IN} = \dfrac{1}{BI} + \dfrac{1}{IM}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 432., p. 145, bài toán của Napol\'eon Bonaparte]
+	Cho $\Delta ABC$. (a) Ở phía ngoài $\Delta ABC$ vẽ $\Delta BCD,\Delta ACE,\Delta ABF$ đều. $H,I,K$ lần lượt là trọng tâm của 3 tam giác đều ấy. Chứng minh $\Delta HIK$ đều. (b) Ở phía ngoài $\Delta ABC$ vẽ $\Delta BCH,\Delta ACI,\Delta ABK$ lần lượt có cạnh đáy là $BC,CA,AB$ \& góc ở đáy bằng $30^\circ$. Chứng minh $\Delta HIK$ đều.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 433., p. 145, bài toán của Pascal]
+	Chứng minh nếu 1 lục giác nội tiếp đường tròn có các cạnh đối không song song thì giao điểm của các cặp cạnh đối là 3 điểm thẳng hàng.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
