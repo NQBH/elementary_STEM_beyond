@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Mechanical Motion -- Bài Tập: Chuyển Động Cơ}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Chuyển Động Thẳng}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD1, p. 8]
+	Thường ngày An đi học bằng xe đạp với vận tốc trung bình $v = 2.5$ {\rm m{\tt/}s} đi từ nhà đến trường mất $30$ phút. (a) Tính khoảng cách từ nhà An đến trường. (b) Hôm nay đi thi, An dự định tới trường sớm nên đã đi xe đạp nhanh hơn thường ngày nhưng chỉ đi được 1 đoạn thì xe bị hỏng, phải gửi xe cho người thân \& tiếp tục đi taxi đến trường. Tính quãng đường An đã đi taxi biết đi từ nhà đến trường chỉ bằng $\frac{1}{2}$ thời gian dự định, vận tốc taxi gấp $4$ lần vận tốc ban đầu, bỏ qua thời gian gửi xe đạp \& đợi taxi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD2, p. 9]
+	1 người đi xe đạp từ nhà đến B có chiều dài {\rm10 km}. Nếu đi liên tục không nghỉ thì sau {\rm1 h} người đo sẽ đến B. Nhưng khi đi được $15$ phút, người đó dừng lại $5$ phút rồi mới đi tiếp. Hỏi ở quãng đường sau người đó phải đi với vận tốc bao nhiêu để đến B kịp lúc?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD1, p. 10]
+	Hà Nội cách Đồ Sơn {\rm120 km}. 1 ôtô rời Hà Nội với vận tốc {\rm60 km{\tt/}h}. 1 người đi xe máy với vận tốc {\rm40 km{\tt/}h} xuất phát cùng lúc theo hướng ngược lại từ Đồ Sơn về Hà Nội. (a) Sau bao lâu ôtô \& xe máy gặp nhau? (b) Nơi gặp nhau cách Hà Nội bao xa?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD2, p. 11]
+	2 xe xuất phát cùng lúc từ A đi đến B với cùng vận tốc {\rm30 km{\tt/}h}. Đi được $\frac{1}{3}$ quãng đường thì xe thứ 2 tăng tốc \& đi hết quãng đường còn lại với vận tốc {\rm40 km{\tt/}h} nên đến B sớm hơn xe thứ nhất $5$ phút. Tính thời gian mỗi xe đi hết quãng đường AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD, p. 12]
+	Lúc {\rm7:00} 1 người đi bộ từ A đến B với vận tốc {\rm4 km{\tt/}h}. Lúc {\rm9:00} 1 người đi xe đạp từ A đuổi theo với vận tốc{\rm12 km{\tt/}h}. (a) Tính thời điểm 2 người gặp nhau. (b) Lúc mấy giờ 2 người cách nhau {\rm2 km}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD1, p. 13]
+	Trong mặt phẳng Oxy, có 2 vật $A,B$ chuyển động thẳng đều. Lúc chuyển động, vật A ở O, vật B ở $(-100,0)$. Biết vận tốc của A là $v_A = 6$ {\rm m{\tt/}s} theo hướng Ox, vận tốc của vật B là $v_B = 2$ {\rm m{\tt/}s} theo hướng Oy. (a) Sau thời gian bao lâu kể từ lúc bắt đầu chuyển động, 2 vật $A,B$ lại cách nhau {\rm100 m}. (b) Xác định khoảng cách nhỏ nhất giữa $A,B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD1, p. 14]
+	1 xe chuyển động từ A về B. Trong $\frac{3}{4}$ quãng đường đầu, xe chuyển động với vận tốc {\rm36 km{\tt/}h}. Quãng đường còn lại xe chuyển động trong thời gian $10$ phút với vận tốc {\rm24 km{\tt/}h}. Tính vận tốc trung bình của xe trên cả quãng đường AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD2, p. 15]
+	1 xe chuyển động từ A đến B. Trong $\frac{3}{4}$ quãng đường đầu, xe chuyển động với vận tốc $v_1$. Quãng đường còn lại xe chuyển động trong thời gian $10$ phút với vận tốc $v_2 = 24$ {\rm km{\tt/}h}. Biết vận tốc trung bình của xe trên cả quãng đường AB là $v = 32$ {\rm km{\tt/}h}, tính $v_1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD3, p. 16]
+	1 người đi xe đạp đã đi $s_1 = 4$ {\rm km} với vận tốc $v_1 = 16$ {\rm km{\tt/}h}, sau đó người ấy dừng lại để sửa xe trong $t_2 = 15$ phút rồi đi tiếp $s_3 = 8$ {\rm km} với vận tốc $v_3 = 8$ {\rm km{\tt/}h}. Tính vận tốc trung bình của người ấy trên tất cả quãng đường đã đi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD1, p. 16]
+	Lúc {\rm8:00}, trên đoạn đường thẳng AB, An đi từ A đến B, trong $\frac{2}{3}$ đoạn đường đầu đi với vận tốc {\rm40 km{\tt/}h}, trong $\frac{1}{3}$ đoạn đường sau đi với vận tốc {\rm30 km{\tt/}h}. Cùng lúc đó Bình đi từ B về A với vận tốc $v$, đi được nửa đoạn đường thì dừng lại $12$ phút sau đó tiếp tục đi về A với vận tốc $2v$. Cả 2 đến nơi cùng 1 lúc, coi các chuyển động là đều. (a) Tính vận tốc trung bình của An trên đoạn đường AB. (b) An đến B lúc {\rm10:00}. Tính $v$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD2, p. 17]
+	1 ôtô chuyển động từ A đến B, trong nửa phần đầu đoạn đường AB xe đi với vận tốc {\rm120 km{\tt/}h}. Trong nửa đoạn đường còn lại ôtô đi nửa thời gian đầu với vận tốc {\rm80 km{\tt/}h} \& nửa thời gian sau {\rm40 km{\tt/}h}. Tính vận tốc trung bình trên cả quãng đường.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD3, p. 18]
+	Lúc {\rm7:00} 1 người đi bộ khởi hành từ A đến B với vận tốc {\rm4 km{\tt/}h}. Lúc {\rm9:00} 1 người đi xe đạp cũng khởi hành từ A đến B với vận tốc {\rm12 km{\tt/}h}. (a) 2 người gặp nhau lúc mấy giờ? Lúc gặp nhau cách A bao nhiêu? (b) Lúc mấy giờ 2 người cách nhau {\rm2 km}?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD1, p. 19]
+	1 cậu bé dắt chó đi dạo về nhà, khi còn cách nhà {\rm10 m}, con chó chạy về nhà với vận tốc {\rm5 m{\tt/}s}. Vừa đến nhà nó lại chạy ngay lại với vận tốc {\rm3 m{\tt/}s}. Tính vận tốc trung bình của chú chó trong quãng đường đi được kể từ lúc chạy về nhà đến lúc gặp lại cậu bé, biết cậu bé đi đều với vận tốc {\rm1 m{\tt/}s}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD2, p. 20]
+	2 bạn Lê \& Trần cùng bắt đầu chuyển động từ A đến B. Lê chuyển động với vận tốc {\rm15 km{\tt/}h} trên nửa quãng đường AB \& với vận tốc {\rm10 km{\tt/}h} trên quãng đường còn lại. Trần đi với vận tốc {\rm15 km{\tt/}h} trong nửa thời gian chuyển động \& đi với vận tốc {\rm10 km{\tt/}h} trong khoảng thời gian còn lại. (a) Ai là người đến B trước? (b) Cho biết thời gian chuyển động từ A đến B của 2 bạn chênh lệch nhau $6$ phút. Tính chiều dài quãng đường AB \& thời gian chuyển động của mỗi bạn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD3, p. 20]
+	1 người dự định đi bộ 1 quãng đường với vận tốc không đổi là {\rm5 km{\tt/}h}, nhưng khi đi được $\frac{1}{3}$ quãng đường thì được bạn đèo bằng xe đạp đi tiếp với vận tốc {\rm12 km{\tt/}h} do đó đến sớm hơn dự định là $28$ phút. Hỏi nếu người đó đi bộ hết quãng đường thì mất bao lâu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD1, p. 21]
+	1 xe đi từ A về B. Trong $\frac{1}{3}$ quãng đường đầu xe chuyển động với vận tốc $v_1 = 40$ {\rm km{\tt/}h}. Trên quãng đường còn lại xe chuyển động thành 2 giai đoạn: $\frac{2}{3}$ thời gian đầu vận tốc $v_2 = 45$ {\rm km{\tt/}h}, thời gian còn lại vận tốc $v_3 = 30$ {\rm km{\tt/}h}. Tính vận tốc trung bình của xe trên cả quãng đường.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD2, p. 22]
+	1 xe đi từ A về B. Trong $\frac{2}{5}$ tổng thời gian đầu xe chuyển động với vận tốc $v_1 = 40$ {\rm km{\tt/}h}. Trong khoảng thời gian còn lại xe chuyển động theo 2 giai đoạn: $\frac{3}{4}$ quãng đường còn lại xe chuyển động với vận tốc $v_2 = 36$ {\rm km{\tt/}h}. Cuối cùng xe chuyển động với vận tốc $v_3 = 12$ {\rm km{\tt/}h}. Tính vận tốc trung bình trên cả quãng đường AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD3, p. 22]
+	Từ điểm A đến điểm B 1 ôtô chuyển động đều với vận tốc $v_1 = 30$ {\rm km{\tt/}h}. Đến B ôtô quay ngay về A, ôtô cũng chuyển động đều nhưng với vận tốc $v_2 = 40$ {\rm km{\tt/}h}. Tính vận tốc trung bình của chuyển động của cả đi lẫn về.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD4, p. 23]
+	1 khách du lịch vượt qua 1 cái đèo đối xứng \& sau đó đi tiếp trên đoạn đường nằm ngang, vận tốc trung bình của người này trên đoạn đường đèo là {\rm2.1 km{\tt/}h}. Biết người đó đi trên đoạn đường nằm ngang mất $2$ giờ \& vận tốc khi lên đèo bằng $0.6$ lần vận tốc khi đi trên đường nằm ngang, còn vận tốc khi đi xuống đèo bằng $\frac{7}{3}$ lần vận tốc khi đi lên đèo. (a) Tìm vận tốc của người đó khi đi lên đèo \& khi xuống đèo. (b) Tìm chiều dài $L$ của đoạn đường nằm ngang.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Vận Tốc Tương Đối của Chuyển Động}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
