@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Pressure -- Bài Tập: Áp Suất}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Pressure -- Áp Suất}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD1, p. 49]
+	Đối với việc làm nhà thì vấn đề xây dựng móng nhà vô cùng quan trọng để tránh sự sụp lún. Tính chiều cao lớn nhất của 1 tường gạch nếu áp suất lớn nhất mà móng có thể chịu được là $\rm1170000\ N{\tt/}m^2$. Biết trọng lượng riêng trung bình của gạch \& vữa là $\rm18000\ N{\tt/}m^3$. Giả sử nếu tường dày {\rm20 cm}, dài {\rm8 m}, \& chiều cao như trên thì áp lực của tường đã tác dụng lên móng là bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD2, p. 50]
+	1 ôtô có trọng lượng {\rm20000 N}, mỗi bánh xe có diện tích tiếp xúc với mặt đường là $\rm10\ cm^2$. (a) Tính áp suất của xe lên mặt đường khi xe dừng lại. (b) Giả sử ôtô đó đi với 1 xe tăng có trọng lượng {\rm40000 N} trên 1 vũng lầy, xe nào dễ bị lún sâu vào vũng lầy hơn, biết diện tích tiếp xúc của các bản xích với mặt đất là $\rm1.6\ m^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD1, pp. 50--51]
+	1 người thợ lặn mặc 1 bộ áo lặn chịu được 1 áp suất tối đa là $\rm3\cdot10^5\ N{\tt/}m^2$. Biết trọng lượng riêng của nước là $\rm10^4\ N{\tt/}m^3$. (a) Thợ lặn đó lặn sâu nhất bao nhiêu {\rm m}? (b) Tính áp lực của nước tác dụng lên cửa kính quan sát của áo lặn có diện tích $\rm400\ cm^2$ khi lặn sâu {\rm20 m}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD1, p. 52]
+	Trong bình thông nhau, nhánh lớn có tiết diện lớn gấp đôi nhánh nhỏ. Khi chưa mở khóa T ở chính giữa, chiều cao của cột nước ở nhánh lớn là {\rm30 cm}. Tìm chiều cao của cột nước ở 2 nhánh sau khi đã mở khóa T \& khi nước đã đứng yên. Bỏ qua thể tích của ống nối 2 nhánh.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD2, p. 52]
+	Bình thông nhau gồm 2 nhánh hình trụ có tiết diện lần lượt là $S_1,S_2$ \& có chứa nước. Trên mặt nước có đặt 2 piston mỏng, khối lượng $m_1,m_2$. Mực nước 2 bên chênh nhanh 1 đoạn $h$. (a) Tìm khối lượng $m$ của quả cân đặt lên piston lớn để mực nước ở 2 bên ngang nhau. (b) Nếu đặt quả cân trên sang piston nhỏ thì mực nước bây giờ sẽ chênh nhau 1 đoạn $h$ bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD1, p. 53]
+	Đường kính piston nhỏ của 1 máy dùng chất lỏng là {\rm2 cm}. Hỏi diện tích tối thiểu của piston lớn là bao nhiêu để tác dụng 1 lực {\rm120 N} lên piston nhỏ có thể nâng được 1 ôtô có trọng lượng {\rm24000 N}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van_Quyen_Hanh_Nhu_10_chuyen_Ly}, VD2, p. 54]
+	1 máy ép dùng dầu có 2 xilanh $A,B$ thẳng đứng nối với nhau bằng 1 ống nhỏ. Tiết diện thẳng của xilanh A là $\rm200\ cm^2$ \& của xilanh B là $\rm4\ cm^2$. Trọng lượng riêng của dầu là $\rm8000\ N{\tt/}m^3$. Đầu tiên mực dầu ở trong 2 xilanh ở cùng 1 độ cao. (a) Đặt lên mặt dầu trong A 1 piston có trọng lượng {\rm40 N}. Tính độ chênh lệch giữa 2 mặt chất lỏng trong 2 xilanh sau khi cân bằng. (b) Cần phải đặt lên mặt chất lỏng trong B 1 piston có trọng lượng bao nhiêu để 2 mặt dưới của 2 piston nằm trên cùng 1 mặt phẳng.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Lực Đẩy Acsimet}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
