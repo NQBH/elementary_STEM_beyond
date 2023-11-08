@@ -267,9 +267,25 @@
 	Trên đường tròn $(O,R)$ đường kính $AB$ lấy 1 điểm $C$. Trên tia $AC$ lấy điểm $M$ sao cho $C$ là trung điểm $AM$. (a) Xác định vị trí của điểm $C$ để $AM$ lớn nhất. (b) Xác định vị trí của điểm $C$ để $AM = 2R\sqrt{3}$. (c) Chứng minh khi $C$ di động trên đường tròn $(O)$ thì điểm $M$ di động trên 1 đường tròn cố định.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $AM = 2AC$. $AM\ \max\Leftrightarrow AC\ \max\Leftrightarrow AC$ là đường kính của $(O,R)\Leftrightarrow C\equiv B$. (b) Điểm $C$ nằm trên đường tròn đường kính $AB\Leftrightarrow\angle ACB = 90^\circ$. Xét $\Delta ABC$ vuông tại $A$: $AC = AB\cos A = 2R\cos A\Leftrightarrow AM = 2AC = 4R\cos A$. $AM = 2R\sqrt{3}\Leftrightarrow4R\cos A = 2R\sqrt{3}\Leftrightarrow\cos A = \frac{\sqrt{3}}{2}\Leftrightarrow\angle A = 30^\circ$. (c) $\Delta ABM$ có $BC$ vừa là đường cao vừa là đường trung tuyến nên cân tại $B$, suy ra $BM = AB = 2R\Rightarrow M\in(B,2R)$ cố định.
+\end{proof}
+
+\begin{nhanxet}
+	``Phương pháp chung để chứng minh 1 điểm thuộc 1 đường tròn cố định là chứng minh điểm đó cách 1 điểm cố định 1 khoảng không đổi. Còn muốn chứng minh nhiều điểm cùng thuộc 1 đường tròn, ta chứng minh các điểm này cùng cách đều 1 điểm.'' -- {\rm\cite[p. 114]{Tuyen_Toan_9_old}}
+\end{nhanxet}
+
+\begin{nhanxet}
+	Mở rộng (b): Xác định vị trí của điểm $C$ để $AM = aR$. Tương tự, $AM = aR\Leftrightarrow4R\cos A = aR\Leftrightarrow\cos A = \frac{a}{4}$. Nếu $a\in[0,4]$ thì $\angle A = \arccos\frac{a}{4}$. Nếu $a\in(-\infty,0)\cup(4,\infty)$ thì phương trình $\cos A = \frac{a}{4}$ vô nghiệm nên không tồn tại điểm M thỏa mãn.
+\end{nhanxet}
+
 \begin{baitoan}[\cite{Tuyen_Toan_9_old}, 36., p. 114]
-	Cho $\Delta ABC$ cân tại $A$, đường cao $AH = BC = a$. Tính bán kính đường tròn ngoại tiếp $\Delta ABC$.
+	Cho $\Delta ABC$ cân tại $A$, đường cao $AH$. Tính bán kính đường tròn ngoại tiếp $\Delta ABC$ khi: (a) $AH = BC = a$. (b) $AH = h$, $BC = a$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Kéo dài $AH$ cắt đường tròn $(ABC)$ tại $D$. Vì $\Delta ABC$ cân tại $A$ nên $AD$ là đường kính $(ABC)$, suy ra $\angle ABD = 90^\circ\Rightarrow BH^2 = AH\cdot DH\Leftrightarrow\left(\frac{a}{2}\right)^2 = a(2R - a)\Leftrightarrow R = \frac{5}{8}a$. (b) Tương tự, $BH^2 = AH\cdot DH\Leftrightarrow\left(\frac{a}{2}\right)^2 = h(2R - h)\Leftrightarrow R = \frac{a^2}{8h} + \frac{h}{2}$.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9_old}, 37., p. 114]
 	Cho $\Delta ABC$. $D,E,F$ lần lượt là trung điểm $BC,CA,AB$. Chứng minh: 3 đường tròn $(AFE),(BFD)$, $(CDE)$ bằng nhau \& cùng đi qua 1 điểm. Xác định điểm chung đó.
@@ -426,10 +442,23 @@
 %------------------------------------------------------------------------------%
 
 \section{Đường Kính \& Dây của Đường Tròn. Liên Hệ Giữa Dây \& Khoảng Cách Từ Tâm Đến Dây}
+Cho $(O,R)$, 2 dây $AB,CD$. $H,K$ lần lượt là hình chiếu của $O$ lên $AB,CD$. $OH\bot AB,OK\bot CD\Rightarrow H,K$ lần lượt là trung điểm của $AB,CD$. \fbox{1} $AB = CD\Leftrightarrow OH = OK\Leftrightarrow d(O,AB) = d(O,CD)$ với $d(A,d_0)$ là \textit{khoảng cách} (distance) từ điểm $A$ tới đường thẳng $d_0$. \fbox{2} $AB > CD\Leftrightarrow OH < OK\Leftrightarrow d(O,AB) < d(O,CD)$. \fbox{3} {\sf Công thức liên hệ giữa độ dài dây \& khoảng cách từ tâm đường tròn đến dây đó.} $AB = 2AH = 2\sqrt{R^2 - OH^2} = 2\sqrt{R^2 - d(O,AB)^2}\le2\sqrt{R^2} = 2R$. ``$=$'' xảy ra $\Leftrightarrow d(O,AB) = 0\Leftrightarrow O\in AB\Leftrightarrow AB$ là đường kính $(O,R)$.. \fbox{4} $AB = 2R\Leftrightarrow OH = 0\Leftrightarrow d(O,AB) = 0\Leftrightarrow O\in AB\Leftrightarrow AB$ là đường kính đường tròn $(O,R)$.
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H1, p. 109]
 	Giải thích kết luận ``Đường kính là dây lớn nhất trong đường tròn'' dựa vào so sánh khoảng cách từ tâm đến dây.
 \end{baitoan}
+
+\begin{proof}[1st giải]
+	Dây càng lớn thì khoảng cách từ tâm đến dây càng nhỏ \& ngược lại.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Đường kính là dây lớn nhất trong đường tròn vì khoảng cách từ tâm đến đường kính bằng $0$ (i.e., khoảng cách nhỏ nhất có thể trong các khoảng cách từ tâm đường tròn đến các dây của đường tròn đó).
+\end{proof}
+
+\begin{proof}[3rd giải]
+	Cho đường tròn $(O,R)$, dây $AB$ bất kỳ, có $AB = 2\sqrt{R^2 - d(O,AB)^2}\le2\sqrt{R^2} = 2R$. ``$=$'' xảy ra $\Leftrightarrow d(O,AB) = 0\Leftrightarrow O\in AB\Leftrightarrow AB$ là đường kính $(O,R)$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, H2, p. 109]
 	Cho đường tròn $(O)$, 2 dây $AB\parallel CD$ \& $AB = CD$, $A,D$ cùng thuộc nửa mặt phẳng bờ BC. Tứ giác ABCD là hình gì?
@@ -446,6 +475,10 @@
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD1, p. 110]
 	Cho đường tròn $(O,R)$ \& 1 điểm M nằm trong đường tròn. Vẽ qua M 2 dây $AB,CD$ sao cho $AB\bot OM$. (a) So sánh độ dài 2 dây $AB,CD$. (b) Chứng minh $\angle{ODM} < \angle{OBM}$. (c) Xác định vị trí của dây đi qua M sao cho độ dài của nó là nhỏ nhất, lớn nhất.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	$AB\bot OM\Leftrightarrow M$ là trung điểm $AB$. Gọi $K$ là trung điểm $CD$ thì $OK\bot CD$. (a) $\Delta OKM$ vuông tại $K$ có cạnh huyền $OM$ nên $OM > OK$. Trong 2 dây $AB,CD$, dây $CD$ gần $O$ hơn nên lớn hơn: $AB > CD$. (b) 2 góc nhọn $\angle KDO,\angle MBO$ (nhọn vì $\Delta OKD,\Delta OBM$ vuông) có $\sin\angle KDO = \dfrac{OK}{OD} = \dfrac{OK}{R}$, $\sin\angle MBO = \dfrac{OM}{OB} = \dfrac{OM}{R}$. Có $OM > OK\Leftrightarrow\sin\angle KDO < \sin\angle MBO\Leftrightarrow\angle ODM < \angle OBM$. (c) Theo (a), trong các dây thay đổi luôn đi qua $M$, dây $AB\bot OM$ có độ dài nhỏ nhất. Dây đi qua $M,O$ là đường kính nên có độ dài lớn nhất.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, VD2, p. 111]
 	Cho 2 dây $MN,EF$ bằng nhau \& cắt nhau tại 1 điểm A nằm trong đường tròn. Chứng minh $ME = NF$.
