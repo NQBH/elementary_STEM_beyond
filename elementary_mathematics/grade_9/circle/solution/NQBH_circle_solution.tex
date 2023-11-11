@@ -291,17 +291,33 @@
 	Cho $\Delta ABC$. $D,E,F$ lần lượt là trung điểm $BC,CA,AB$. Chứng minh: 3 đường tròn $(AFE),(BFD)$, $(CDE)$ bằng nhau \& cùng đi qua 1 điểm. Xác định điểm chung đó.
 \end{baitoan}
 
+\begin{proof}[Chứng minh]
+	Gọi $O$ là tâm đường tròn ngoại tiếp $\Delta ABC$. $\Delta AEO,\Delta AFO$ là 2 tam giác vuông chung cạnh huyền $OA$ nên $E,F$ nằm trên đường tròn đường kính $OA$, suy ra $O\in(AEF)$. Chứng minh tương tự, $O\in(BDF),O\in(CDE)$. Vì $D,E,F$ lần lượt là trung điểm của 3 cạnh $\Delta ABC$ nên $\Delta AFE = \Delta FBD = \Delta EDC$ (c.c.c), suy ra 3 đường tròn $(AEF),(BDF),(CDE)$ bằng nhau \& cùng đi qua tâm $O$ đường tròn ngoại tiếp $\Delta ABC$.
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_9_old}, 38., p. 114]
-	Cho hình thoi $ABCD$ cạnh $1$, 2 đường chéo cắt nhau tại $O$. $R_1$ \& $R_2$ lần lượt là bán kính các đường tròn ngoại tiếp các $\Delta ABC,\Delta ABD$. Chứng minh: $\dfrac{1}{R_1^2} + \dfrac{1}{R_2^2} = 4$.
+	Cho hình thoi $ABCD$ cạnh $a$, 2 đường chéo cắt nhau tại $O$. $R_1$ \& $R_2$ lần lượt là bán kính các đường tròn ngoại tiếp các $\Delta ABC,\Delta ABD$. Chứng minh: $\dfrac{1}{R_1^2} + \dfrac{1}{R_2^2} = \dfrac{4}{a^2}$.
 \end{baitoan}
 
+\begin{proof}[Chứng minh]
+	Gọi $M$ là trung điểm $AB$. Vẽ đường trung trực của $AB$ cắt $AC$ tại $K$, cắt $BD$ tại $I$. $I,K$ lần lượt là tâm đường tròn ngoại tiếp $\Delta ABC,\Delta ABD$ nên $IB = R_1,AK = R_2$. $\Delta MBI\backsim\Delta OBA$ (g.g) $\Rightarrow\dfrac{BI}{AB} = \dfrac{BM}{BO}\Leftrightarrow\dfrac{R_1}{a} = \dfrac{a}{2OB}\Leftrightarrow\dfrac{1}{R_1} = \dfrac{2OB}{a^2}\Leftrightarrow\dfrac{1}{R_1^2} = \dfrac{4OB^2}{a^4}$ (1). $\Delta MAK\backsim\Delta OAB$ (g.g) $\Rightarrow\dfrac{AK}{AB} = \dfrac{AM}{OA}\Leftrightarrow\dfrac{R_2}{a} = \dfrac{a}{2OA}\Leftrightarrow\dfrac{1}{R_2} = \dfrac{2OA}{a^2}\Leftrightarrow\dfrac{1}{R_1^2} = \dfrac{4OA^2}{a^4}$ (2). Áp dụng định lý Pythagore cho $\Delta OAB$ vuông tại $O$: $OA^2 + OB^2 = AB^2$. Cộng (1) \& (2), vế theo vế, rồi áp dụng (3): $\dfrac{1}{R_1^2} + \dfrac{1}{R_2^2} = \dfrac{4(OA^2 + OB^2)}{a^4} = \dfrac{4AB^2}{a^4} = \dfrac{4a^2}{a^4} = \dfrac{4}{a^2}$.
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_9_old}, 39., p. 115]
-	Cho hình bình hành $ABCD$, cạnh $AB$ cố định, đường chéo $AC = 2$ \emph{cm}. Chứng minh điểm $D$ di động trên 1 đường tròn cố định.
+	Cho hình bình hành $ABCD$, cạnh $AB$ cố định, đường chéo $AC = a$ \emph{cm} với $a > 0$. Chứng minh điểm $D$ di động trên 1 đường tròn cố định.
 \end{baitoan}
+
+\begin{proof}[Chứng minh]
+	Vẽ điểm $O$ đối xứng với $B$ qua $A$, suy ra $O$ cố định. Tứ giác $OACD$ có $OA\parallel CD$ \& $OA = AB = CD = a$ cm nên $OACD$ là hình bình hành, suy ra $OD = AC = a$ cm $\Rightarrow D\in(O,a\ {\rm cm})$.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9_old}, 40., p. 115]
 	Cho đường tròn $(O,R)$ \& 1 dây $BC$ cố định. Trên đường tròn lấy 1 điểm $A$ ($A\not\equiv B$, $A\not\equiv C$). $G$ là trọng tâm của $\Delta ABC$. Chứng minh khi $A$ di động trên đường tròn $(O)$ thì điểm $G$ di động trên 1 đường tròn cố định.
 \end{baitoan}
+
+\begin{proof}[Chứng minh]
+	Gọi $M$ là trung điểm $BC$. Trên $OM$ lấy $K$ thỏa $MK = \frac{1}{3}MO$, $K$ cố định. Vì $G$ là trọng tâm $\Delta ABC$ nên $MG = \frac{1}{3}AM$. $\Delta MKG\backsim\Delta MOA$ (c.g.c) $\Rightarrow\dfrac{KG}{OA} = \dfrac{MK}{MO} = \dfrac{1}{3}\Rightarrow KG = \dfrac{OA}{3} = \dfrac{R}{3}\Rightarrow G\in(K,\frac{1}{3})$ cố định.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9_old}, 41., p. 115]
 	Trong mặt phẳng cho $2n + 1$ điểm, $n\in\mathbb{N}$, sao cho $3$ điểm bất kỳ nào cũng tồn tại $2$ điểm có khoảng cách nhỏ hơn $1$. Chứng minh: trong các điểm này có ít nhất $n + 1$ điểm nằm trong 1 đường tròn có bán kính bằng $1$.
@@ -319,13 +335,36 @@
 	Cho hình thang cân ABCD. Chứng minh tồn tại 1 đường tròn đi qua cả 4 đỉnh của hình thang.
 \end{baitoan}
 
+\begin{proof}[Chứng minh]
+	Gọi $M,N$ lần lượt là trung điểm của 2 cạnh đáy $AB,CD$ của hình thang cân $ABCD$. $MN$ là trục đối xứng của hình thang cân $ABCD$ nên $MN$ là đường trung trực của $AB,CD$. Gọi $O$ là giao điểm của $MN$ với đường trung trực của $BC$. $O$ thuộc đường trung trực của $AB\Leftrightarrow OA = OB$. $O$ thuộc đường trung trực của $BC\Leftrightarrow OB = OC$. $O$ thuộc đường trung trực của $CD\Leftrightarrow OC = OD$. Kết hợp lại, suy ra $OA = OB = OC = OD$, i.e., $A,B,C,D\in(O,OA)$.
+\end{proof}
+
+\begin{luuy}
+	1 hình thang cân bất kỳ luôn nội tiếp 1 đường tròn với tâm là giao điểm 4 đường trung trực của 4 cạnh hình thang cân đó. Hơn nữa, nếu 1 hình thang nội tiếp được 1 đường tròn thì hình thang đó cân.
+\end{luuy}
+
 \begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 50., p. 95]
-	Cho $\Delta ABC$ cân tại A nội tiếp đường tròn $(O)$, $AC = 40$ {\rm cm}, $BC = 48$ {\rm cm}. Tính khoảng cách từ O đến BC. 
+	(a) Cho $\Delta ABC$ cân tại A nội tiếp đường tròn $(O)$, $AC = 40$ {\rm cm}, $BC = 48$ {\rm cm}. Tính khoảng cách từ O đến BC. (b) Mở rộng cho $AC = b,BC = a$, $\forall a,b\in\mathbb{R}$, $0 < a < 2b$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Kẻ đường cao $AH$, $H\in BC$. $\Delta ABC$ cân tại $A$ nên $AH$ cũng là đường trung tuyến, suy ra $BH = CH = \frac{1}{2}BC = \frac{48}{2} = 24$. Áp dụng định lý Pythagore cho $\Delta AHC$ vuông tại $H$: $AH = \sqrt{AC^2 - CH^2} = \sqrt{40^2 - 24^2} = 32$. Vì $AH > CH$ nên tâm $O$ nằm giữa $A,H$. Đặt $x\coloneqq OH$. Kẻ $OM\bot AC$, $M\in AC$, suy ra $M$ là trung điểm $AC$, nên $MA = MC = \frac{1}{2}AC = \frac{40}{2} = 20$. $\Delta AMO\backsim\Delta AHC$ (g.g) $\Rightarrow\dfrac{AO}{AC} = \dfrac{AM}{AH}\Leftrightarrow\dfrac{32 - x}{40} = \dfrac{20}{32}\Leftrightarrow x = 7$ cm. (b) Tương tự, $BH = CH = \frac{1}{2}BC = \frac{a}{2}$. Áp dụng định lý Pythagore cho $\Delta AHC$ vuông tại $H$: $AH = \sqrt{AC^2 - CH^2} = \sqrt{b^2 - \left(\frac{a}{2}\right)^2} = \sqrt{b^2 - \frac{a^2}{4}}$. Xét 3 trường hợp: (i) $AH = CH\Leftrightarrow\sqrt{b^2 - \frac{a^2}{4}} = \frac{a}{2}\Leftrightarrow b^2 - \frac{a^2}{4} = \frac{a^2}{4}\Leftrightarrow b^2 = \frac{a^2}{2}\Leftrightarrow a = b\sqrt{2}$ thì $\Delta AHC$ vuông cân, $O\equiv H$ nên $d(O,BC) = 0$. (ii) $AH > CH\Leftrightarrow\sqrt{b^2 - \frac{a^2}{4}} > \frac{a}{2}\Leftrightarrow b^2 - \frac{a^2}{4} > \frac{a^2}{4}\Leftrightarrow b^2 > \frac{a^2}{2}\Leftrightarrow a < b\sqrt{2}$ thì $O$ nằm giữa $A,H$. Kẻ $OM\bot AC$, $M\in AC$, suy ra $M$ là trung điểm $AC$, nên $MA = MC = \frac{1}{2}AC = \frac{b}{2}$. $\Delta AMO\backsim\Delta AHC$ (g.g)
+	\begin{align*}
+		\Rightarrow\dfrac{AO}{AC} = \dfrac{AM}{AH}\Leftrightarrow\dfrac{\sqrt{b^2 - \frac{a^2}{4}} - x}{b} = \dfrac{\frac{b}{2}}{\sqrt{b^2 - \frac{a^2}{4}}}\Leftrightarrow\sqrt{b^2 - \frac{a^2}{4}} - x = \frac{b^2}{2\sqrt{b^2 - \frac{a^2}{4}}}\Leftrightarrow x = \sqrt{b^2 - \frac{a^2}{4}} - \frac{b^2}{2\sqrt{b^2 - \frac{a^2}{4}}} = \frac{2b^2 - a^2}{2\sqrt{4b^2 - a^2}}.
+	\end{align*}
+	(iii) $AH < CH\Leftrightarrow\sqrt{b^2 - \frac{a^2}{4}} < \frac{a}{2}\Leftrightarrow b^2 - \frac{a^2}{4} < \frac{a^2}{4}\Leftrightarrow b^2 < \frac{a^2}{2}\Leftrightarrow a > b\sqrt{2}$ thì $H$ nằm giữa $A,O$. Kẻ $OM\bot AC$, $M\in AC$, $OM$ cắt $CH$ tại $D$, suy ra $M$ là trung điểm $AC$, nên $MA = MC = \frac{1}{2}AC = \frac{b}{2}$. $\Delta AMO\backsim\Delta AHC$ (g.g)
+	\begin{align*}
+		***
+	\end{align*}	
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 51., p. 96]
 	Cho $\Delta ABC$ cân tại A nội tiếp đường tròn $(O)$, cạnh bên bằng $b$, đường cao $AH = h$. Tính bán kính đường tròn $(O)$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Kẻ đường kính $AD$ của đường tròn $(O)$ thì $\angle ABD = 90^\circ$. Áp dụng hệ thức lượng cho $\Delta ABD$ vuông tại $B$: $AB^2 = AH\cdot AD\Leftrightarrow2R = AD = \dfrac{AB^2}{AH} = \dfrac{b^2}{h}\Leftrightarrow R = \dfrac{b^2}{2h}$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 52., p. 96]
 	Cho $\Delta ABC$ nhọn nội tiếp đường tròn $(O,R)$. M là trung điểm BC. Giả sử O nằm trong $\Delta AMC$ hoặc O nằm giữa A \& M. I là trung điểm AC. Chứng minh: (a) Chu vi $\Delta IMC$ lớn hơn $2R$. (b) Chu vi $\Delta ABC$ lớn hơn $4R$.
