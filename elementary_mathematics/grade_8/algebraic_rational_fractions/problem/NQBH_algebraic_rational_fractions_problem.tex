@@ -1,0 +1,315 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Algebraic {\it\&} Rational Fractions\\Bài Tập: Phân Thức Đại Số {\it\&} Phân Thức Đại Số Hữu Tỷ}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Chất Cơ Bản của Phân Thức. Rút Gọn Phân Thức}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, VD20, p. 28]
+	(a) Cho $x,y\in\mathbb{R}$ thỏa $\dfrac{xy}{x^2 + y^2} = \dfrac{5}{8}$. Rút gọn phân thức $A = \dfrac{x^2 - 2xy + y^2}{x^2 + 2xy + y^2}$. (b) Cho $a,b,c,d,x,y,\alpha\in\mathbb{R}$ thỏa $\dfrac{xy}{x^2 + y^2} = \alpha$. Rút gọn phân thức $B = \dfrac{ax^2 + bxy + ay^2}{cx^2 + dxy + cy^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, 141., p. 29]
+	So sánh: (a) $\dfrac{201 - 200}{201 + 200}$ \& $\dfrac{201^2 - 200^2}{201^2 + 200^2}$. (b) $\dfrac{1999\cdot 4001 + 2000}{2000\cdot 4001 - 2001}$ \& $\dfrac{1501\cdot 1503 - 1500\cdot 1498}{6002}$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_8}, 141a., p. 29]
+	Biện luận theo các tham số $a,b\in\mathbb{R}$ để so sánh $A = \dfrac{a - b}{a + b}$ \& $B = \dfrac{a^2 - b^2}{a^2 + b^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, 142., p. 29]
+	Chứng minh: $\forall n\in\mathbb{N},n > 1$: (a) $A = \dfrac{n^3 - 1}{n^5 + n + 1}$ không tối giản. (b) $B = \dfrac{6n + 1}{8n + 1}$ tối giản. (c) $C = \dfrac{10n^2 + 9n + 4}{20n^2 + 20n + 9}$ tối giản. (d) Có thể mở rộng từ $\mathbb{N}$ lên $\mathbb{Z}$ được không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, 143., p. 29]
+	Viết mỗi đa thức sau dưới dạng 1 phân thức đại số với tử \& mẫu là những đa thức có 2 hạng tử: (a) $A = \sum_{i=0}^{19} x^i = x^{19} + x^{18} + x^{17} + \cdots + x + 1$. (b) $B = (x + 1)(x^2 + 1)(x^4 + 1)\cdots(x^{32} + 1)$.	
+\end{baitoan}
+Rút gọn phân thức:
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, 144., p. 29]
+	(a) $A = \dfrac{n!}{(n - 1)!(n + 1)}$. (b) $\dfrac{(n + 1)! - n!}{(n + 1)! + n!}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, 145., p. 29]
+	(a) $A = \dfrac{(x^2 - y)(y + 1) + x^2y^2 - 1}{(x^2 + y)(y + 1) + x^2y^2 + 1}$. (b) $B = \dfrac{x^2(y - z) + y^2(z - x) + z^2(x - y)}{x^2y - x^2z + y^2z - y^3}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, 146., p. 29]
+	(a) $\dfrac{x^4 - 4x^2 + 3}{x^4 + 6x^2 - 7}$. (b) $\dfrac{x^4 + x^3 - x - 1}{x^4 + x^3 + 2x^2 + x + 1}$. (c) $\dfrac{x^3 + 3x^2 - 4}{x^3 - 3x + 2}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, 147., p. 29]
+	(a) $\dfrac{x^3 + x^2 - 4x - 4}{x^3 + 8x^2 + 17x + 10}$. (b) $\dfrac{x^4 + 6x^3 + 9x^2 - 1}{x^4 + 6x^3 + 7x^2 - 6x + 1}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, 148., p. 29]
+	Cho $\dfrac{x}{a} = \dfrac{y}{b} = \dfrac{z}{c}$. Rút gọn phân thức $A = \dfrac{x^2 + y^2 + z^2}{(ax + by + cz)^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, 149., p. 30]
+	Cho $x,y,z\in\mathbb{R}^\star,x + y + z = 0$. Rút gọn phân thức: (a) $A = \dfrac{x^2 + y^2 + z^2}{(x - y)^2 + (y - z)^2 + (z - x)^2}$. (b) $B = \dfrac{(x^2 + y^2 - z^2)(y^2 + z^2 - x^2)(z^2 + x^2 - y^2)}{16xyz}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, 150., p. 30]
+	Cho $x^3 + y^3 + z^3 = 3xyz$. Rút gọn phân thức $A = \dfrac{xyz}{(x + y)(y + z)(z + x)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, VD5.1, p. 39]
+	Dùng định nghĩa 2 phân thức bằng nhau, chứng minh 2 phân thức sau bằng nhau: $\dfrac{a^2 - 2ab - 3b^2}{a^2 - 4ab + 3b^2}$ \& $\dfrac{a + b}{a - b}$ với $a\ne b$ \& $a\ne 3b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, VD5.2, p. 39]
+	Dùng định nghĩa 2 phân thức bằng nhau, xét sự bằng nhau của 2 phân thức $\dfrac{(3x + 2)(x + 5)}{4(3x + 2)}$ \& $\dfrac{x + 5}{4}$ trong các trường hợp biến $x$ thuộc các tập hợp sau: (a) $x\in\mathbb{N}$. (b) $x\in\mathbb{Z}$. (c) $x\in\mathbb{Q}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, VD5.3, p. 39]
+	So sánh $C = \dfrac{2013^2 - 2012^2}{2013^2 + 2012^2}$ với $D = \dfrac{2013 - 2012}{2013 + 2012}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, VD5.4, p. 40]
+	Chứng minh: $\sum_{i=0}^{63} a^i = \prod_{i=0}^{5} (1 + a^{2^i})$, i.e., $1 + a + a^2 + \cdots + a^{63} = (1 + a)(1 + a^2)(1 + a^4)\cdots(1 + a^{32})$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, VD5.5, p. 40]
+	Rút gọn phân thức: $A = \dfrac{x^3 - 7x + 6}{x^3 + 5x^2 - 2x - 24}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, VD5.6, p. 40]
+	Rút gọn phân thức: $B = \dfrac{a^{30} + a^{20} + a^{10} + 1}{a^{2042} + a^{2032} + a^{2022} + a^{2012} + a^{30} + a^{20} + a^{10} + 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.1, p.. 41]
+	Dùng định nghĩa 2 phân thức bằng nhau, tìm đa thức $A$ trong các trường hợp: (a) $\dfrac{A}{3x - 2} = \dfrac{15x^2 + 10x}{9x^2 - 4}$. (b) $\dfrac{3x^2 - 5x - 2}{A} = \dfrac{x - 2}{2x - 3}$. (c) $\dfrac{x^2 - 4}{x^2 + x - 6} = \dfrac{x^2 + 4x + 4}{A}$. (d) $\dfrac{2x + 1}{x^3 + x^2 - x + 2} = \dfrac{A}{x^3 + 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.2, p.. 41]
+	Biến đổi mỗi phân thức sau thành 1 phân thức bằng nó \& có tử thức là đa thức $B$ cho sau đây: (a) $\dfrac{2x - 5}{3x^2 + 4}$ \& $B = 2x^2 - 3x - 5$. (b) $\dfrac{(x + 1)(x^2 + x - 6)}{(x^2 - 9)(x^2 + 3x + 2)}$ \& $B = x - 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.3, p.. 41]
+	Rút gọn biểu thức: (a) $\dfrac{2^{18}\cdot 54^3 + 15\cdot 4^{10}\cdot 9^4}{2\cdot 12^9 + 6^{10}\cdot 2^{10}}$. (b) $\dfrac{4^{15}\cdot 27^6\cdot 42 - 3\cdot 72^{10}}{4^4\cdot 25\cdot 36^{10}  - 4^5\cdot 6^{19}\cdot 35}$. (c) $\dfrac{880\cdot(15^2\cdot 3^{18} + 27^7)}{4^2\cdot 15^4\cdot 3^{16} - 2^4\cdot 9^{11}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.4, p.. 41]
+	Rút gọn: (a) $M = \dfrac{4024\cdot 2014 - 2}{2011 + 2012\cdot 2013}$. (b) $N = \dfrac{2012\cdot 2013 + 2014}{2010 - 2012\cdot 2015}$. (c) $P = \dfrac{66666\cdot 87564 - 33333}{22222\cdot 87560 + 77777}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.5, p.. 41]
+	Rút gọn phân thức sau:
+	
+		(a) $Q = \dfrac{x^2 + 2x - 8}{x^2 + x - 12}$.
+		(b) $R = \dfrac{3x^2 + 5xy - 2y^2}{3x^2 - 7xy + 2y^2}$.
+		(c) $S = \dfrac{x^6 - 14x^4 + 49x^2 - 36}{x^4 + 4x^3 - x^2 - 16x - 12}$.
+		(d) $T = \dfrac{x^6 - y^6}{x^6 + 2x^4y^2 + 2x^2y^4 + y^6}$.
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.6, p.p. 41--42]
+	Rút gọn:
+	
+		(a) $A = \dfrac{a^4 - 5a^2 + 4}{a^4 - a^2 + 4a - 4}$.
+		(b) $B = \dfrac{a^3 - 3a + 2}{2a^3 - 7a^2 + 8a - 3}$.
+		(c) $C = \dfrac{a^2 - 2ab + b^2 - c^2}{a^2 + b^2 + c^2 - 2ab - 2bc + 2ca}$.
+		(d) $D = \dfrac{a^3 - 7a + 6}{a^2(a + 3)^3 - 4a(a + 3)^3 + 4(a + 3)^3}$.
+		(e) $E = \dfrac{a^3 + b^3 + c^3 - 3abc}{(a - b)^2 + (b - c)^2 + (c - a)^2}$.
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.7, p.. 42]
+	Rút gọn phân thức sau:
+	
+		(a) $A = \dfrac{xy^2 - xz^2 - y^3 + yz^2}{x^2(z - y) + y^2(x - z) + z^2(y - x)}$.
+		(b) $B = \dfrac{x^4(y^2 - z^2) + y^4(z^2 - x^2) + z^4(x^2 - y^2)}{x^2(y - z) + y^2(z - x) + z^2(x - y)}$.
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.8, p.. 42]
+	Rút gọn phân thức sau:
+	
+		(a) $A = \dfrac{(x + y + z)^2 - 3xy - 3yz - 3zx}{9xyz - 3x^3 - 3y^3 - 3z^3}$.
+		(b) $B = \dfrac{x^3 - y^3 + z^3 + 3xyz}{(x + y)^2 + (y + z)^2 + (z - x)^2}$.
+		(c) $C = \dfrac{(x - y)^3 + (y - z)^3 + (z - x)^3}{(x^2 - y^2)^3 + (y^2 - z^2)^3 + (z^2 - x^2)^3}$.
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.9, p.. 42]
+	Rút gọn phân thức sau với $n\in\mathbb{N}^\star$:
+	
+		(a) $\dfrac{(n + 2)!}{n!(n + 2)(n + 3)}$.
+		(b) $\dfrac{n!}{n! + (n - 1)!}$.
+		(c) $\dfrac{(n + 3)! - (n + 2)!}{(n + 2)! + (n + 3)!}$.
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.10, p.. 42]
+	Chứng minh các phân số sau là tối giản $\forall n\in\mathbb{N}$:
+	
+		(a) $\dfrac{3n + 2}{4n + 3}$.
+		(b) $\dfrac{12n + 1}{2(10n + 1)}$.
+		(c) $\dfrac{2n + 3}{2n^2 + 4n + 1}$.
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.11, p.. 42]
+	Chứng minh phân số $\dfrac{n^7 + 2n^2 + n + 2}{n^8 + n^2 + 2n + 2}$ không tối giản, $\forall n\in\mathbb{N}^\star$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.12, p.. 42]
+	Viết gọn biểu thức sau dưới dạng 1 phân thức: $P = (x^4 - x^2 + 1)(x^8 - x^4 + 1)(x^{16} - x^8 + 1)(x^{32} + x^{16} + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.13, p.. 42]
+	Rút gọn phân thức:
+	
+		(a) $\dfrac{|x - 2| + |x - 1| + x}{2x^2 - 7x + 3}$ với $x < 1$.
+		(b) $\dfrac{|x - 4||x - 5|}{x^3 - 9x^2 + 20x}$ với $4 < x < 5$.
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.14, p.. 43]
+	Rút gọn phân thức sau:
+	
+		(a) $T = \dfrac{(x + 2)(x + 3)(x + 4)(x + 5) + 1}{x^2 + 7x + 11}$.
+		(b) $U = \dfrac{x^3 - 53x + 88}{(x - 1)(x - 3)(x - 5)(x - 7) + 16}$.
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.15, p.. 43]
+	Cho $\dfrac{a}{x} = \dfrac{b}{y} = \dfrac{c}{z}$ \& $x,y,z\ne 0$. Chứng minh: $\dfrac{x^2 + y^2 + z^2}{(ax + by + cz)^2} = \dfrac{1}{a^2 + b^2 + c^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.16, p.. 43]
+	Cho $ax + by + cz = 0$. Rút gọn phân thức: $V = \dfrac{ax^2 + by^2 + cz^2}{bc(y - z)^2 + ca(z - x)^2 + ab(x - y)^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.17, p.. 43]
+	Cho $x + y + z = 0$. Chứng minh: $\dfrac{9(x^2 + y^2 + z^2)}{(x - y)^2 + (y - z)^2 + (z - x)^2} = 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.18, p.. 43]
+	Chứng minh: $\dfrac{x^2 + y^2 - z^2 - 2zt + 2xy - t^2}{x + y - z - t} = \dfrac{x^2 - y^2 + z^2 - 2zt + 2xz - t^2}{x - y + z - t}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_8_dai_so}, 5.19., p. 43]
+	Rút gọn: $X = \dfrac{(2^4 + 4)(6^4 + 4)(10^4 + 4)(14^4 + 4)}{(4^4 + 4)(8^4 + 4)(12^4 + 4)(16^4 + 4)}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Operations $\pm$ on Algebraic Fractions -- Phép $\pm$ Các Phân Thức Đại Số}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, VD17, p. 41, \cite{Tuyen_Toan_8}, VD21, p. 30]
+	Tính: $A = \dfrac{x^2}{(x - y)(x - z)} + \dfrac{y^2}{(y - z)(y - x)} + \dfrac{z^2}{(z - x)(z - y)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, 164a., p. 43, \cite{Tuyen_Toan_8}, VD22, p. 31]
+	Tính hợp lý: (a) $A(x,n) = \sum_{i=0}^n \dfrac{1}{(x + i)(x + i + 1)} = \dfrac{1}{x(x + 1)} + \dfrac{1}{(x + 1)(x + 2)} + \dfrac{1}{(x + 1)(x + 2)} + \cdots + \dfrac{1}{(x + n)(x + n + 1)}$, $\forall n\in\mathbb{N}$. (b) $A(x,99)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, VD18, p. 41]
+	Tính: $A = \dfrac{x^2 - yz}{(x + y)(x + z)} + \dfrac{y^2 - zx}{(y + z)(y + x)} + \dfrac{z^2 - xy}{(z + x)(z + y)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, 161., p. 42, \cite{Tuyen_Toan_8}, 151., pp. 31--32]
+	Tính: (a) $\dfrac{x^2}{(x - y)^2(x + y)} - \dfrac{2xy^2}{x^4 - 2x^2y^2 + y^4} + \dfrac{y^2}{(x^2 - y^2)(x + y)}$. (b) $\dfrac{1}{x - 1} - \dfrac{1}{x + 1} - \dfrac{2}{x^2 + 1} - \dfrac{4}{x^4 + 1} - \dfrac{8}{x^8 + 1} - \dfrac{16}{x^{16} + 1}$. (c) Mở rộng kết quả này.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, 163., pp. 42--43, \cite{Tuyen_Toan_8}, 152., p. 32]
+	Tính: (a) $A = \dfrac{2}{x - y} + \dfrac{2}{y - z} + \dfrac{2}{z - x} + \dfrac{(x - y)^2 + (y - z)^2 + (z - x)^2}{(x - y)(y - z)(z - x)}$. (b) $B = \dfrac{yz}{(x + y)(y + z)} + \dfrac{zx}{(y + z)(y + x)} + \dfrac{xy}{(z + x)(z + y)} + \dfrac{2xyz}{(x + y)(y + z)(z + x)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, 164b., p. 43, \cite{Tuyen_Toan_8}, 153., p. 32]
+	(a) Tính $A = \dfrac{a}{x^2 + ax} + \dfrac{a}{x^2 + 3ax + 2a^2} + \dfrac{a}{x^2 + 5ax + 6a^2} + \cdots + \dfrac{a}{x^2 + 19ax + 90a^2} + \dfrac{1}{x + 10a}$. (b) Mở rộng kết quả này.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, 162., p. 42]
+	Tính: (a) $\dfrac{1}{x(x - y)(x - z)} + \dfrac{1}{y(y - x)(y - z)} + \dfrac{1}{z(z - x)(z - y)}$. (b) $\dfrac{1}{(y - z)(x^2 + xz - y^2 - yz)} + \dfrac{1}{(z - x)(y^2 + xy - z^2 - zx)} + \dfrac{1}{(x - y)(z^2 + yz - x^2 - xy)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, 165., p. 43, \cite{Tuyen_Toan_8}, 154., p. 32]
+	Cho $A = 1 + \dfrac{1}{x} + \dfrac{x + 1}{xy} + \dfrac{(x + 1)(y + 1)}{xyz} + \dfrac{(x + 1)(y + 1)(z + 1)}{xyzt}$. Chứng minh có thể viết A dưới dạng 1 phân thức có tử \& mẫu đều là tích của 4 nhân tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, 167., p. 43]
+	Cho $xy = a$, $yz = b$, $zx = c$ với $a,b,c\in\mathbb{R}^\star$. Tính $x^2 + y^2 + z^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, 166., p. 43, \cite{Tuyen_Toan_8}, 155., p. 32]
+	Cho $\dfrac{x}{y + z} + \dfrac{y}{z + x} + \dfrac{z}{x + y} = 1$. Tính $S = \dfrac{x^2}{y + z} + \dfrac{y^2}{z + x} + \dfrac{z^2}{x + y}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, 168., p. 43, \cite{Tuyen_Toan_8}, 156., p. 32]
+	Cho $x,y,z\in\mathbb{R}^\star,x + y + z = 0$. Tính: (a) $A = \dfrac{x^2}{x^2 - y^2 - z^2} + \dfrac{y^2}{y^2 - z^2 - x^2} + \dfrac{z^2}{z^2 - x^2 - y^2}$. (b) $B = \dfrac{1}{x^2 + y^2 - z^2} + \dfrac{1}{y^2 + z^2 - x^2} + \dfrac{1}{z^2 + x^2 - y^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, 169., p. 43, \cite{Tuyen_Toan_8}, 157., p. 32]
+	Cho $x,y,z\in\mathbb{R}$ thỏa $\dfrac{x}{y} - \dfrac{y}{z} - \dfrac{z}{x} = \dfrac{y}{x} - \dfrac{z}{y} - \dfrac{x}{z}$. Chứng minh trong 3 số $x,y,z$ tồn tại 2 số bằng nhau hoặc đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8_old}, 170., p. 43, \cite{Tuyen_Toan_8}, 159., p. 32]
+	Cho $\dfrac{A}{x + 1} + \dfrac{B}{x - 2} = \dfrac{32x - 19}{x^2 - x - 2}$. Tính $AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, 159., p. 32]
+	1 tổ dự định sản xuất $x$ sản phẩm trong $12$ giờ. Nhưng thực tế trong $9$ giờ tổ đã sản xuất vượt mức dự định là $3$ sản phẩm. Viết biểu thức biểu diễn số sản phẩm đó tổ đó sản xuất vượt dự định trong mỗi giờ.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Operations $\cdot,:$ on Algebraic Fractions -- Phép $\cdot,:$ Các Phân Thức Đại Số}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
