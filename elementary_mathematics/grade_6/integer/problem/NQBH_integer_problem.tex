@@ -1,0 +1,1077 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tipa}
+\usepackage{enumitem}
+\setlist{leftmargin=4mm}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Integers -- Bài Tập: Số Nguyên $\mathbb{Z}$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Last updated version: \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}divisibility{\tt/}problem[pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.pdf}.} [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/divisibility/problem/NQBH_divisibility_problem.tex}.}. 
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Set $\mathbb{Z}$ of Integers -- Tập Hợp Số Nguyên $\mathbb{Z}$}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H1, p. 49]
+	{\rm Đ{\tt/}S?} (a) Số nguyên âm nhỏ hơn số tự nhiên. (b) Số nguyên âm nhỏ hơn số nguyên dương. (c) Số tự nhiên là số nguyên dương. (d) Số đối của 1 số nguyên dương là 1 số nguyên âm. (e) Trên trục số, 2 số nguyên đối nhau cách đều điểm $0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H2, p. 50]
+	Tìm: (a) Số đối của $3$. (b) Số đối của $-7$. (c) Số đối của $0$. (d) Số đối của $-(-7)$. (e) Số liền trước của số $0$. (f) Số liền sau của $-4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD1, p. 50]
+	Cho tập hợp $A = \{-2,3,0,-1,5,-(-4)\}$. (a) Viết tập hợp B gồm các phần tử là số đối của các phần tử trong tập hợp A. (b) Viết tập hợp C gồm các phần tử thuộc tập hợp A \& là số nguyên âm.
+\end{baitoan}
+
+\begin{luuy}
+	$\mathbb{N}^\star$ là tập hợp các số tự nhiên khác $0$, i.e., số nguyên dương, còn $\mathbb{Z}^\star$ là tập hợp các số nguyên khác $0$.
+\end{luuy}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD2, p. 50]
+	{\rm Đ{\tt/}S?} ``Nếu $a > b$ trên trục số, khoảng cách từ điểm $a$ đến điểm $0$ lớn hơn khoảng cách từ điểm $b$ đến điểm $0$.''
+\end{baitoan}
+
+\begin{luuy}
+	Để chứng tỏ 1 khẳng định nào đó là sai, ta chỉ cần đưa ra 1 ví dụ cụ thể phủ định kết quả đó. VD như thế được gọi là {\rm phản ví dụ (counterexample)}.
+\end{luuy}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD3, p. 51]
+	Đọc \& viết độ cao của các đối tượng: (a) Tàu ngầm ở vị trí thấp hơn mực nước biến {\rm60 m}. Tính độ cao của tàu ngầm. (b) Rãnh Mariana (thuộc vùng biển Philippines) có độ sâu tối đa là {\rm11035 m} dưới mực nước biến (nơi sâu nhất thế giới). Tính độ cao của rãnh Mariana so với mực nước biển.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD4, p. 51]
+	Liệt kê phần tử của tập hợp: (a) $A = \{a\in\mathbb{Z}|-5 < a < -1\}$. (b) $B = \{b\in\mathbb{Z}|-2\le b < 3\}$. (c) $C = \{c\in\mathbb{Z}|-1\le c\le4\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD5, p. 51]
+	So sánh $a,b,c\in\mathbb{Z}$ biết $a < -6$, $b > 2$, $-1 < c < 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.1., p. 52]
+	Tìm tập hợp: (a) $\mathbb{Z}^\star\cap\mathbb{N}$. (b) $\mathbb{Z}_-\cap\mathbb{N}$, trong đó $\mathbb{Z}_-\coloneqq\{a\in\mathbb{Z}|a\le0\}$ là tập hợp các số nguyên không dương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.2., p. 52]
+	{\rm Đ{\tt/}S?} Nếu sai, sửa lại cho đúng. ``Nếu $a\in\mathbb{Z}_-$ thì $-a\in\mathbb{N}^\star$.''
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.3., p. 52]
+	Tìm tất cả các giá trị thích hợp của chữ số $a$ sao cho: (a) $\overline{a00} < 102$. (b) $-155 < -\overline{15a}$. (c) $-\overline{a99} > -759 > -\overline{7a0}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.4., p. 52]
+	Viết số nguyên âm: (a) Nhỏ nhất có 1 chữ số. (b) Lớn nhất có 2 chữ số. (c) Nhỏ nhất có 5 chữ số khác nhau. (d) Lớn nhất có 5 chữ số khác nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.6., p. 52]
+	Người ta còn dùng số nguyên âm để chỉ thời gian trước Công nguyên (viết tắt là {\rm TCN}), e.g., nhà Toán học Pythagore sinh năm $-570$ nghĩa là ông sinh năm 570 trước Công nguyên ({\rm570 TCN}). (a) Viết số (nguyên âm) chỉ rõ năm tổ chức Thế vận hội đầu tiên, biết nó diễn ra năm {\rm776 TCN}. (b) Viết số (nguyên âm) chỉ rõ năm của sự kiện lịch sử: Bắt đầu thời kỳ Hồng Bàng {\rm2879 TCN}. Nhà nước Âu Lạc ra đời {\rm257 TCN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.7., p. 52]
+	Tìm $x\in\mathbb{Z}$ biết trên trục số: (a) Khoảng cách từ điểm $x$ đến điểm $0$ bằng $10$. (b) Khoảng cách từ điểm $x$ đến điểm $0$ lớn hơn $5$ nhưng nhỏ hơn $9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.8., p. 53]
+	Tìm 3 tập hợp $A\cap B,B\cap C,C\cap A$ với $A = \{x\in\mathbb{Z}|-5 < x < 8\}$, $B = \{x\in\mathbb{Z}|2 < x\le5\}$, $C = \{x\in\mathbb{Z}|\mbox{Khoảng cách từ điểm $x$ đến điểm 0 trên trục số lớn hơn hoặc bằng 5}\}$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.9., p. 53]
+	Chứng minh: Với $a,x\in\mathbb{Z}$, $a > 0$, \& tển trục số, khoảng cách từ điểm $x$ đến điểm $0$ bằng $a$, thì $x = a$ hoặc $x = -a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 7.10., p. 53]
+	Chứng minh: Với $a,x\in\mathbb{Z}$ \& trên trục số, điểm $x$ \& điểm $a$ cách điều điểm $0$ thì $x = a$ hoặc $x = -a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 52]
+	Cho $a,b\in\mathbb{Z}$. Chứng minh nếu $a < b$ thì $-a > -b$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 52]
+	Chứng minh nếu $a < b < 0$ thì trên trục số khoảng cách từ điểm $a$ đến điểm $0$ lớn hơn khoảng cách từ điểm $b$ đến điểm $0$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD38, p. 35]
+	Viết tập hợp 3 số nguyên liên tiếp trong đó có số $0$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_6}, VD38, p. 35]
+	Viết tập hợp 3 số nguyên liên tiếp trong đó có số $a\in\mathbb{Z}$ cho trước.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_6}, VD38, p. 35]
+	\label{prob: Mở rộng VD38, p. 35}
+	Cho trước $n\in\mathbb{N}^\star$, $n\ge2$ \& $a\in\mathbb{Z}$. Viết tập hợp $n$ số nguyên liên tiếp trong đó có số $a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD39, p. 36]
+	Cho 3 số nguyên khác nhau $a,b,0$. Biết $a < 0,a < b$. Sắp xếp 3 số đó theo thứ tự tăng dần.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_6}, VD39, p. 36]
+	Cho 3 số nguyên khác nhau $a,b,0$ \& $a < b$. Sắp xếp các số đó theo thứ tự tăng dần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 177., p. 36]
+	Số nguyên âm \& số nguyên dương thường được sử dụng để biểu thị các đại lượng có 2 hướng ngược nhau. Điền cho đủ các câu sau: (a) Nếu $+8^\circ$C biểu diễn nhiệt độ $8^\circ$C trên $0^\circ$C thì $-8^\circ$C biểu diễn nhiệt độ $\ldots$. (b) Nếu $+8848$\emph{m} biểu diễn độ cao của đỉnh núi Everest là $8848$\emph{m} trên mực nước biển thì $\ldots$ biểu diễn độ sâu của thềm lục địa Việt Nam là $65$\emph{m} dưới mực nước biển. (c) Nếu $-3$ biểu diễn số tầng ngầm dưới mặt đất của 1 chung cư thì $+27$ biểu diễn $\ldots$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 178., p. 36]
+	{\rm Đ{\tt/}S?} Nếu sai, sửa cho đúng. (a) Nếu $a\in\mathbb{N}$ thì $a\in\mathbb{Z}$. (b) Nếu $a\in\mathbb{Z}$ thì $a\in\mathbb{N}$. (c) Nếu $a\notin\mathbb{Z}$ thì $a\notin\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 179., p. 36]
+	Trên trục số, điểm A cách gốc $2$ đơn vị về bên trái, điểm B cách A là $3$ đơn vị. Hỏi: (a) Điểm A biểu diễn số nguyên nào? (b) Điểm B biểu diễn số nguyên nào?
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_6}, 179., p. 36]
+	Cho trước $a,b\in\mathbb{N}$. Trên trục số, điểm A cách gốc $a$ đơn vị về bên trái, điểm B cách A là $b$ đơn vị. Hỏi: (a) Điểm A biểu diễn số nguyên nào? (b) Điểm B biểu diễn số nguyên nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 180., p. 36]
+	Cho dãy số $15,-4,0,-76,100,99$. (a) Sắp xếp các số trong dãy theo thứ tự giảm dần. (b) Sắp xếp số đối của các số trong dãy theo thứ tự tăng dần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 181., p. 36]
+	Viết 4 số nguyên liên tiếp trong đó có số $0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 182., p. 36]
+	Viết tập hợp các số nguyên $x$ sao cho: (a) $-4 < x < 3$. (b) $-2\le x\le 2$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_6}, 182., p. 36]
+	Cho trước $a,b\in\mathbb{Z}$. Viết tập hợp các số nguyên $x$ sao cho: (a) $a < x < b$. (b) $a\le x < b$. (c) $a < x\le b$. (d) $a\le x\le b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 183., p. 36]
+	Cho các tập hợp $A = \{x\in\mathbb{Z}|x > -9\}$, $B = \{x\in\mathbb{Z}|x < -4\}$, $C = \{x\in\mathbb{Z}|x\ge-2\}$. Tìm $x$ sao cho: (a) $x\in A,x\in B$. (b) $x\in B,x\in C$. (c) $x\in C,x\in A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 184., p. 36]
+	Số nguyên âm lớn nhất có $3$ chữ số \& số nguyên âm nhỏ nhất có $2$ chữ số có phải là 2 số nguyên liền nhau không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 185., p. 36]
+	Tìm $a,b\in\mathbb{N}$: (a) $\overline{a00} > -111$; (b) $-\overline{a99} > -600$; (c) $-\overline{cb3} < -\overline{cba}$; (d) $-\overline{cab} < -\overline{c85}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD48, p. 41]
+	Cho $a\in\mathbb{Z}$. Gọi khoảng cách từ điểm $a$ đến điểm gốc trên trục số là \emph{giá trị tuyệt đối} của số $a$ \& ký hiệu là $|a|$. Điền vào chỗ trống các dấu $\ge,\le,>,<,=$ để các khẳng định sau là đúng: (a) $|a|\ldots a$, $\forall a\in\mathbb{Z}$. (b) $|a|\ldots 0$, $\forall a\in\mathbb{Z}$. (c) Nếu $a > 0$ thì $a\ldots|a|$. (d) Nếu $a = 0$ thì $a\ldots|a|$. (e) Nếu $a < 0$ thì $a\ldots|a|$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 247., p. 42]
+	Điền vào chỗ trống $\ldots$ các từ ``nhỏ hơn'' hoặc ``lớn hơn'' cho đúng: (a) Mọi số nguyên dương đều $\ldots$ số $0$. (b) Mọi số nguyên âm đều $\ldots$ số $0$. (c) Mỗi số nguyên dương đều $\ldots$ mọi số nguyên âm. (d) Trong 2 số nguyên dương, số nào có giá trị tuyệt đối lớn hơn thì số ấy $\ldots$ (e) Trong 2 số nguyên âm, số nào có giá trị tuyệt đối lớn hơn thì số ấy $\ldots$	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 248., p. 42]
+	Tìm: (a) Số nguyên dương lớn nhất có 2 chữ số. (b) Số nguyên âm lớn nhất có 2 chữ số.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 249., p. 42]
+	Tính $|b| - |a|$ biết: (a) $a = -3$, $b = 7$. (b) $a = 5$, $b = -6$. (c) $a = 5$, $b = -5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 250., p. 42]
+	Các khẳng định sau có đúng $\forall a,b\in\mathbb{Z}$ hay không? Cho ví dụ. (a) $|a| = |b|\Rightarrow a = b$. (b) $a > b\Rightarrow|a| > |b|$.	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{$\pm$ on $\mathbb{R}$. Bracket Rule -- Phép $\pm$ Các Số Nguyên. Quy Tắc Dấu Ngoặc}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, 9., p. 59]
+	Tính hợp lý: (a) $152 + (-73) - (-18) - 127$. (b) $7 + 8 + (-9) + (-10)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, 10., p. 59]
+	Tính giá trị của biểu thức $(-156) - x$ khi: (a) $x = -26$. (b) $x = 76$. (c) $x = (-28) - (-143)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, 11., p. 59]
+	Thay mỗi dấu $\star$ bằng 1 chữ số thích hợp: (a) $(-\overline{6\star}) + (-34) = -100$. (b) $(-789) + \overline{2\star\star} = -515$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, 12., p. 59]
+	Liệt kê các phần tử của tập hợp sau rồi tính tổng của chúng: (a) $A = \{x\in\mathbb{Z}|- 5 < x < 5\}$. (b) $B = \{x\in\mathbb{Z}|-7\le x < 1\}$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Trong_Toan_6_2021}, 12., p. 59]
+	Cho trước $a,b\in\mathbb{Z}$. Liệt kê các phần tử của tập hợp sau rồi tính tổng của chúng: (a) $A = \{x\in\mathbb{Z}|a < x < b\}$. (b) $B = \{x\in\mathbb{Z}|a\le x < b\}$. (c) $C = \{x\in\mathbb{Z}|a < x\le b\}$. (d) $D = \{x\in\mathbb{Z}|a\le x\le b\}$. trong các trường hợp: (1) $a\ge b$. (2) $0 < a < b$. (3) $a < 0 < b$. (4) $a < b < 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H1, p. 54]
+	{\rm Đ{\tt/}S?} (a) Tổng của 1 số nguyên dương với 1 số nguyên âm là 1 số nguyên âm. (b) Tổng của 1 số nguyên dương với 1 số nguyên âm là 1 số nguyên dương. (c) Tổng của 1 số nguyên dương với 1 số nguyên âm là số $0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H2, p. 54]
+	Archimedes là nhà bác học vĩ đại người Hy Lạp, ông sinh năm {\rm287 TCN} \& mất năm {\rm212 TCN}. Hỏi Archimedes sống thọ bao nhiêu tuổi?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H3, p. 55]
+	Cho $12$ quả bóng có ghi số \& chia thành $4$ rổ: Rổ 1: $-3,-2,19$. Rổ 2: $9,6,-2$. Rổ 3:$-5,25,-7$. Rổ 4: $-1,22,-9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD1, p. 55]
+	Chứng minh $a - b$ \& $b - a$ là 2 số đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD2, p. 55]
+	1 tòa nhà ở Thành phố Hồ Chí Minh có $25$ tầng được đánh số các tầng theo thứ tự cao dần là $0$ (tầng trệt)), $1,2,3,\ldots,24$ \& $3$ tầng hầm được đánh số là B1, B2, B3. 1 thang máy đang ở tầng $14$, nó đi lên $3$ tầng rồi đi xuống $19$ tầng. Hỏi thang máy dừng lại ở tầng mấy?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD3, p. 56]
+	Tính hợp lý: (a) $A = 49 + (-27 + 10 - 49 + 87)$. (b) $B = 1 + 2 - 3 - 4 + 5 + 6 - 7 - 8 + \ldots - 99 - 100 + 101$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD4, p. 56]
+	Tính hợp lý: (a) $A = 78 - [29 + (78 - 129)]$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD5, p. 56]
+	Chứng minh: $(a - b) - (b + c) + (c - a) - (a - b - c) = -(a + b - c)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD6, p. 56]
+	Tìm chữ số $a$ biết $-\overline{a5} + (-92) = -157$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD7, p. 57]
+	Tìm $x\in\mathbb{Z}$ biết: (a) $(-x + 42) - 38 = -68 + 12$. (b) $-129 - (35 - x) = 55$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.1., p. 57]
+	Tính hợp lý: (a) $(367 - 24) + (133 - 76)$. (b) $(338 - 635) - (165 - 162)$. (c) $-418 - \{-346 - 218 - [-146 - (-285) + 2015]\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.2., p. 57]
+	Tính hợp lý: (a) $(-3) + 8 + (-13) + 18 + \ldots + (-53) + 58$. (b) $(-40) + (-39) + \cdots + 33 + 34 + 35$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.3., p. 57]
+	Tìm giá trị của biểu thức: (a) $x + (-53)$ biết $x = -27$. (b) $-x + (-182)$ biết $x = -237$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.4., p. 57]
+	Rút gọn biểu thức: (a) $A = -(45 + x) - (-24 - x) + (-55 - x)$. (b) $B = x - 42 - [(13 + x) - (17 - x)]$. (c) $C = -(20 + x) - [17 + (-x)]$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.5., p. 57]
+	Tính $x - y$ biết điểm $x$ \& điểm $y$ đều cách điểm $0$ là $5$ đơn vị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.6., p. 57]
+	Tính tổng tất cả các số nguyên $x$ thỏa mãn: (a) $-11\le x < 15$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.7., p. 57]
+	Tìm chữ số $a,b\in\mathbb{N}$ biết: (a) $56 + (-\overline{a8}) = -32$. (b) $-\overline{ab7} - 45 = -172$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.8., p. 57]
+	Tìm $x\in\mathbb{Z}$ biết: (a) $x + (-42) = 92 + (-52)$. (b) $x - 27 = -48 - (-72)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.9., p. 57]
+	Tìm $x\in\mathbb{Z}$ biết: (a) $57 + (7 - 32) = 319 - (x + 319)$. (b) $(76 - x) - (67 - x) = 9 - (-2 + x)$. (c) $x - \{34 - [26 + (-66 - x)]\} = 27 - \{43 + [25 - (20 - x)]\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.10., p. 58]
+	Chứng minh đẳng thức: (a) $(a + b) - (c - d) - (a + d) = b - c$. (b) $(a - b) - (d - b) - (c - d) = a - c$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.11., p. 58]
+	Cho $A = -a + b - c$, $B = a - b + c$ với $a,b,c\in\mathbb{Z}$. Chứng minh $A,B$ là 2 số đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.12., p. 58]
+	Tìm $x\in\mathbb{Z}$ biết: (a) $(-2) + 4 + (-6) + 8 + \ldots + x = 2014$. (b) $1 + (-4) + 7 + (-10) + \ldots + (-x) = -3000$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.13., p. 58]
+	Cho $a + b = 1$. Tính $S = -(-a + b - c) + (-c - b - a) - (a - b)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 8.14., p. 58]
+	Viết tất cả các số nguyên lớn hơn $-51$ nhưng nhỏ hơn $51$ theo 1 thứ tự bất kỳ. Sau đó cứ mỗi số cộng với thứ tự của nó sẽ được 1 tổng. Tính tổng tất cả các số nhận được.
+\end{baitoan}
+
+\begin{conjecture}[Goldbach conjecture -- Giả thuyết Goldbach]
+	Mọi số nguyên dương chẵn lớn hơn $2$ đều có thể viết dưới dưới dạng tổng của 2 số nguyên tố.
+\end{conjecture}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 58]
+	(a) Cho $30$ số nguyên thỏa mãn: Tổng của $6$ số bất kỳ trong các số đó đều là 1 số âm. Chứng minh tổng của $30$ số nguyên đã cho cũng là 1 số âm. (b) Kết quả còn đúng không nếu thay $30$ số bởi $31$ số? (c${}^\star$) Kết quả còn đúng không nếu thay $30$ số bởi $a\in\mathbb{N}^\star$ số \& thay $6$ số bởi $b\in\mathbb{N}^\star$ số?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 187., p. 38]
+	Tính tổng các số nguyên $x$ biết: $-17\le x\le18$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 188., p. 38]
+	Cho $S_1 = 1 + (-3) + 5 + (-7) + \cdots + 17$, $S_2 = -2 + 4 + (-6) + 8 + \cdots + (-18)$. Tính $S_1 + S_2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 189., p. 38]
+	Cho $x\in\{-3,-2,-1,0,1,2,\ldots,10\}$, $y\in\{-1,0,1,2,\ldots,5\}$. Biết $x + y = 3$, tìm $x,y$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 190., p. 38]
+	1 thủ quỹ ghi số tiền thu chi trong ngày (đơn vị là nghìn đồng) như sau: $+7250,+13485,-10964,+5000$, $-1380,+24750,-9771$. Đầu ngày trong két có $500$ (nghìn đồng). Hỏi cuối ngày trong két có bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 191., p. 38]
+	Chứng minh số đối của tổng 2 số bằng tổng 2 số đối của chúng.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_6}, 191., p. 38]
+	Chứng minh số đối của tổng $n$ số bằng tổng $n$ số đối của chúng với $n\in\mathbb{N}^\star$ cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 192., p. 38]
+	Cho $18$ số nguyên sao cho tổng của $6$ số bất kỳ trong các số đó đều là 1 số âm. Giải thích vì sao tổng của $18$ số đó cũng là 1 số âm. Bài toán còn đúng không nếu thay $18$ số bởi $19$ số?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 192., p. 38]
+	Cho trước $m,n\in\mathbb{N}^\star$. Cho $m$ số nguyên sao cho tổng của $n$ số bất kỳ trong các số đó đều là 1 số âm. Tổng của $m$ số đó có là 1 số âm hay không? Biện luận theo $m,n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 193., p. 38]
+	Cho $x = \pm5,y = \pm11$. Tính $x + y$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 194., p. 38]
+	Cho $x = \pm7,y = \pm20$. Tính $x - y$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 195., p. 38]
+	Cho $x,y\in\mathbb{Z},-3\le x\le3,-5\le y\le5$. Biết $x - y = 2$, tìm $x,y$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 196., p. 38]
+	Cho $x\in\{-2,-1,0,1,\ldots,11\}$, $y\in\{-89,-88,-87,\ldots,-1,0,1\}$. Tìm giá trị lớn nhất (GTLN hoặc $\max$) \& giá trị nhỏ nhất (GTNN hoặc $\min$) của hiệu $x - y$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 197., p. 38]
+	Quan sát các số sau \& các số còn thiếu (?) để tìm giá trị của $x$:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{ccccccc}
+			$40$ &  & $32$ &  & $21$ &  &  $15$ \\
+			& $8$ &  & ? &  & $6$ &  \\
+			&  & ? &  & ? &  &  \\
+			&  &  & $x$ &  &  &  \\
+		\end{tabular}
+	\end{table}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD49, p. 42]
+	Tìm $x\in\mathbb{Z}$, biết $10 = 10 + 9 + 8 + \cdots + x$, trong đó vế phải là tổng các số nguyên liên tiếp viết theo thứ tự giảm dần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 251., p. 42]
+	Tìm tổng của số nguyên âm nhỏ nhất có 1 chữ số \& số nguyên dương lớn nhất có 1 chữ số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 252., p. 42]
+	Điền vào chỗ trống cho đúng: (a) Số đối của 1 số nguyên âm là 1 số $\ldots$ (b) 2 số nguyên đối nhau thì có giá trị tuyệt đối $\ldots$ (c) 2 số nguyên có giá trị tuyệt đối bằng nhau thì $\ldots$ (d) Số $\ldots$ thì nhỏ hơn số đối của nó. (e) Nếu $a\ldots$ thì $-a > 0$. (f) Nếu $a < 0$ thì $|a| = \ldots$ (g) Nếu $a < 0$ thì $a + |a| = \ldots$
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 253., p. 43]
+	Tìm $x\in\mathbb{Z}$ biết: (a) $x + 13 = 5$. (b) $x - 1 = -9$. (c) $25 - |x| = 10$. (d) $|x - 2| + 7 = 12$. (e) $x + 4$ là số nguyên dương nhỏ nhất. (f) $10 - x$ là số nguyên âm lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 254., p. 43]
+	(a) Cho bảng vuông $3\times 3$ ô:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			$-8$ & $7$ &  \\
+			\hline
+			$\ \ 5$ &  & $\ \ 9$ \\
+			\hline
+			& $5$ & $-6$ \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\noindent Điền số vào các ô trống sao cho tổng các số ở 3 dòng 1,2,3 lần lượt bằng $-5,11,1$. Tính tổng các số ở mỗi cột. (b) Cho bảng vuông $3\times 3$ ô. Có thể điền được hay không 9 số nguyên vào 9 ô của bảng sao cho tổng các số ở 3 dòng lần lượt bằng $5,-3,2$ \& tổng các số ở 3 cột lần lượt bằng $-1,2,2$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 255., p. 43]
+	(a) Có $10$ ô liên tiếp trong đó ô đầu tiên ghi số $6$, ô thứ $8$ ghi số $-4$. Điền số vào các ô trống để tổng 3 số ở 3 ô liền nhau bằng $0$. (b) 1 bảng vuông $4\times 4$ ô có 2 ô ở góc trên ghi số $-3$ \& $2$. Điền số vào các ô còn lại, sao cho tổng 2 số ở 2 ô liền nhau thì bằng nhau (2 ô liền nhau là 2 ô có 1 cạnh chung).	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 256., p. 43]
+	Tìm $x\in\mathbb{Z}$ biết $x + (x + 1) + (x + 2) + \cdots + 19 + 20 = 20$, trong đó vế trái là tổng các số nguyên liên tiếp viết theo thứ tự tăng dần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 257., p. 43]
+	Tìm $a\in\mathbb{Z}$ sao cho: (a) $a > -a$. (b) $a = -a$. (c) $a < -a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 258., p. 43]
+	Tìm $a,b,c\in\mathbb{Z}$ biết: $a + b = 11$, $b + c = 3$, $c + a = 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 259., p. 43]
+	Tìm $a,b,c,d\in\mathbb{Z}$ biết $a + b + c + d = 1$, $a + c + d = 2$, $a + b + d = 3$, $a + b + c = 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 260., p. 43]
+	Cho $\sum_{i=1}^{51} x_i = x_1 + x_2 + \cdots + x_{50} + x_{51} = 0$ \& $x_1 + x_2 = x_3 + x_4 = \cdots = x_{47} + x_{48} = x_{49} + x_{50} = x_{50} + x_{51} = 1$. Tính $x_{50}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD42, p. 39]
+	Cho $a$ là 1 số nguyên âm, còn $b,c\in\mathbb{Z}$. Chứng minh số $M = (-a + b) - (b + c - a) + (c - a)$ là 1 số nguyên dương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 198., p. 39]
+	Tính hợp lý: (a) $-2021 + (-22 + 87 + 2021)$. (b) $1152 - (374 + 1152) + (-65 + 374)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 199., p. 39]
+	Đặt dấu ngoặc 1 cách thích hợp để tính các tổng đại số sau: (a) $942 - 2567 + 2563 - 1942$. (b) $13 - 12 + 11 + 10 - 9 + 8 - 7 - 6 + 5 - 4 + 3 + 2 - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 200., p. 39]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $461 + (x - 45) = 387$. (b) $11 - (-53 + x) = 97$. (c) $-(x + 84) + 213 = -16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 201., p. 39]
+	Chứng minh: $-(-a + b + c) + (b + c - 1) = (b - c + 6) - (7 - a + b) + c$, $\forall a,b,c\in\mathbb{Z}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 202., p. 40]
+	Cho $a,b,c\in\mathbb{Z}$ \& $A = a + b - 5$, $B = -b - c + 1$, $C = b - c - 4$, $D = b - a$. Chứng minh $A + B = C - D$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 203., p. 40]
+	Cho $a,b,c\in\mathbb{Z},a > b,S = -(a - b - c) + (-c + b + a) - (a + b)$. Chứng minh $S$ là 1 số nguyên âm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 204., p. 40]
+	Viết $5$ số nguyên vào $5$ đỉnh của 1 ngôi sao 5 cánh sao cho tổng của 2 số tại 2 đỉnh liền nhau luôn bằng $-6$. Tìm $5$ số nguyên đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 205., p. 40]
+	Cho $1001$ số tự nhiên từ $1$ đến $1001$ sắp xếp theo thứ tự tùy ý. Lấy số thứ nhất trừ đi $1$, lấy số thứ 2 trừ đi $2$, lấy số thứ 3 trừ đi $3$, $\ldots$, lấy số thứ 1001 trừ đi $1001$. Tính tổng của $1001$ số mới.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Operator $\cdot$ on $\mathbb{Z}$ -- Phép $\cdot$ Số Nguyên}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD40, p. 37]
+	Tính tổng $S = (-351) + (-74) + 51 + (-126) + 149$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD41, p. 38]
+	Với $a,b\in\mathbb{Z}$, chứng minh $a - b$ \& $b - a$ là 2 số đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 43, p. 40]
+	Tìm $a,b\in\mathbb{Z}$ biết $ab = 24$ \& $a + b = -10$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 44, p. 41]
+	Tìm tất cả các cặp số nguyên sao cho tổng bằng tích.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 186., p. 38]
+	Tính nhanh: (a) $-37 + 54 + (-70) + (-163) + 246$. (b) $-359 + 181 + (-123) + 350 + (-172)$. (c) $-69 + 53 + 46 + (-94) + (-14) + 78$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H1, p. 59]
+	3 bạn Egg, Chicken, Bee cùng tham gia 1 trò chơi, mỗi người được tặng trước $100$ điểm. Với mỗi câu trả lời đúng, người chơi được $200$ điểm, mỗi câu trả lời sai được $-100$ điểm (bị trừ đi $100$ điểm). Sau $10$ câu hỏi, Egg trả lời đúng $5$ câu, sai $5$ câu. Chicken trả lời đúng $6$ câu, sai $4$ câu. Bee trả lời đúng $4$ câu, sai $6$ câu. Hỏi số điểm của mỗi bạn đạt được là bao nhiêu? Ai là người có số điểm cao nhất?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H2, p. 60]
+	{\rm Đ{\tt/}S?} (a) $a^2\Rightarrow a > 0$. (b) $a^2 = 0\Rightarrow a = 0$. (c) $a^2 > a\Rightarrow a < 0$. (d) $a^2 > a\Rightarrow a > 1$. (e) $a < 0\Rightarrow a^2 > a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD1, p. 60]
+	1 xí nghiệp sản xuất giày có chế độ thưởng--phạt hàng tháng như sau: Làm ra 1 sản phẩm đạt chất lượng được thưởng $50000$ đồng. Làm ra 1 sản phẩm không đạt chất lượng bị phạt $40000$ đồng. Tháng này, chị Lan làm được $45$ sản phẩm đạt chất lượng \& $5$ sản phẩm không đạt chất lượng. Hỏi chị Lan nhận được bao nhiêu tiền thưởng--phạt?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD2, p. 60]
+	Tính hợp lý: (a) $A = (162 - 62)\cdot(-27) + 73\cdot(-36 - 64)$. (b) $B = 39\cdot46 - 39\cdot76 + 30\cdot(-61)$. (c) $C = 25\cdot(75 - 49) + 75\cdot(49 - 25)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD3, p. 61]
+	Bỏ dấu ngoặc rồi rút gọn biểu thức $A = (a + 1)(b - 2) - (ab - 2)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD4, p. 61]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $(x + 3)(2 - x) = 0$. (b) $(2x - 7)^2 = 25$. (c) $(1 - 3x)^3 = -8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD5, p. 62]
+	Tìm $x\in\mathbb{Z}$ thỏa: $(x + 2)(x - 3) < 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD6, p. 62]
+	Tìm $a,b\in\mathbb{Z}$ thỏa: $ab = 18$ \& $a + b = -11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 9.1., p. 62]
+	Tính hợp lý: (a) $(-4)\cdot125\cdot(-2)\cdot8\cdot(-5)\cdot25$. (b) $(-154)\cdot67 + 154\cdot(-33) - 46$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 9.2., p. 62]
+	Tính giá trị của biểu thức: (a) $A = 7a^2b^3$ với $a = 1$, $b = -1$. (b) $B = -9a^2b^4$ với $a = -2$, $b = -1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 9.3., p. 62]
+	Tính giá trị của biểu thức: (a) $ax + ay + bx + by$ biết $a + b = -5$, $x + y = 13$. (b) $ax + ay - bx - by$ biết $a - b = 6$, $x + y = -16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 9.4., p. 62]
+	Cho $a,b,c\in\mathbb{Z}$. Chứng minh: $a(b - c) - b(c + a) = -c(a + b)$
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 9.5., p. 62]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $5(3 - x) + 2(x - 7) = -14$. (b) $(x + 17)(25 - x) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 9.6., p. 62]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $(3x^2 + 2)(25 - x^2) = 0$. (b) $(x^2 - 1)(9 + 2x^2) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 9.7., p. 63]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $(x - 5)(8 - x) > 0$. (b) $(x^2 - 15)(x^2 - 21) < 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 9.8., p. 63]
+	Tìm $x,y\in\mathbb{Z}$ thỏa: (a) $xy = -20$. (b) $(2x - 1)(4y + 2) = -30$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 9.9., p. 63]
+	Cho $106$ số nguyên trong đó tích của $7$ số bất kỳ là 1 số âm. Chứng minh tích của tất cả $106$ số đó là 1 số dương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 9.10., p. 63]
+	Tìm $x,y\in\mathbb{Z}$ thỏa: (a) $x + xy + y = 9$. (b) $xy + 3x - 2y = 17$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 9.11., p. 63]
+	Chicken lấy tuổi của mình viết sau tuổi của bố thì được 1 số gồm 4 chữ số. Chicken lấy số này trừ đi hiệu số tuổi của bố \& con thì được kết quả là $4289$. Tìm số tuổi của 2 bố con Chicken.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, p. 63, Lũy thừa của số nguyên âm]
+	Với $a\in\mathbb{Z}$, $a > 0$, $n\in\mathbb{N}$, chứng minh: (a) Lũy thừa bậc chẵn của 1 số nguyên âm là 1 số nguyên dương: $(-a)^{2n} = a^{2n}$. (b) Lũy thừa bậc lẻ của 1 số nguyên âm là 1 số nguyên âm: $(-a)^{2n + 1} = -a^{2n + 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 206., p. 41]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $x(x + 3) = 0$. (b) $(x - 2)(5 - x) = 0$. (c) $(x - 1)(x^2 + 1) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 207., p. 41]
+	Thu gọn các biểu thức sau với $x,y\in\mathbb{Z}$: (a) $7x - 19x + 6x$. (b) $-xy - xy$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 208., p. 41]
+	Cho $A = -36m^2n^3$ với $m,n\in\mathbb{Z}$. Với giá trị nào của $m,n$ thì $A > 0$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 209., p. 41]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $-12(x - 5) + 7(3 - x) = 5$. (b) $30(x + 2) - 6(x - 5) - 24x = 100$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 210., p. 41]
+	Tìm $x,y\in\mathbb{Z}$ biết: (a) $(x - 3)(2y + 1) = 7$. (b) $(x - 7)(x + 3) < 0$. (c) $(x - 7)(x + 3)\ge0$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_6}, 210., p. 41]
+	Cho trước $a,b,c,d\in\mathbb{Z}$, \& $p$ là 1 số nguyên tố. Tìm $x,y\in\mathbb{Z}$ biết: (a) $(ax + b)(cy + d) = p$ với . (b) $(x + a)(x + b) < 0$. (c) $(x + a)(x + b) > 0$. (d) $(x + a)(x + b)\le0$. (d) $(x + a)(x + b)\ge0$. (e) $(x + a)(x + b)(x + c) < 0$. (f) $(x + a)(x + b)(x + c) > 0$. (g) $(x + a)(x + b)(x + c)\le0$. (h) $(x + a)(x + b)(x + c)\ge0$. (i) $(x + a)(x + b)(x + c)(x + d) < 0$. (j) $(x + a)(x + b)(x + c)(x + d) > 0$. (k) $(x + a)(x + b)(x + c)(x + d)\le0$. (l) $(x + a)(x + b)(x + c)(x + d)\ge0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 211., p. 41]
+	Tính hợp lý: (a) $125\cdot(-61)\cdot(-2)^3\cdot(-1)^{2n}$ với $n\in\mathbb{N}^\star$. (b) $136\cdot(-47) + 36\cdot47$. (c) $(-48)\cdot72 + 36\cdot(-304)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 212., p. 41]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $(x + 1) + (x + 3) + (x + 5) + \cdots + (x + 99) = 0$. (b) $(x - 3) + (x - 2) + (x - 1) + \cdots + 9 + 10 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 213., p. 41]
+	Cho $16$ số nguyên. Tích của 3 số bất kỳ luôn là 1 số âm. Chứng minh tích của $16$ số đó là 1 số dương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 214., p. 41]
+	Cho $A^2 = b(a - c) - c(a - b)$ với $a,b,c\in\mathbb{Z}$. Tính $A$ với $a = -20$, $b - c = -5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 215., p. 41]
+	Biến đổi tổng thành tích: (a) $ab - ac + ad$. (b) $ac + ad - bc - bd$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 216., p. 42]
+	Cho $a,b,c\in\mathbb{Z}$. Biết $ab - ac + bc - c^2 = -1$. Chứng minh $a,c$ đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 216., p. 42]
+	1 tài khoản ngân hàng có số dư đầu tháng là $48$ triệu đồng. Trong tháng này người chủ tài khoản có giao dịch 5 lần trong đó 2 lần, mỗi lần $+9$ triệu đồng \& 3 lần, mỗi lần $-12$ triệu đồng. Tính số dư của tài khoản vào cuối tháng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 50, p. 43]
+	(a) Cho bảng vuông $3\times 3$ ô:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			$\ \ 5$ & $\ \ 2$ & $-4$ \\
+			\hline
+			$-2$ & $-4$ & $-3$ \\
+			\hline
+			$-6$ & $\ \ 5$ & $\ \ 7$ \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\noindent Tìm tích các số ở mỗi dòng, tích các số ở mỗi cột. (b) Viết $9$ số nguyên khác $0$ vào 1 bảng vuông $3\times 3$. Biết tích các số ở mỗi dòng đều là số âm. Chứng minh luôn luôn tồn tại 1 cột mà tích các số trong cột ấy là số âm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 51, p. 44]
+	Thay các dấu $\star$ trong biểu thức $1\star2\star3$ bằng các phép tính $+,-,\cdot,:$ \& thêm các dấu ngoặc để được kết quả là: số lớn nhất, số nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 261., p. 44]
+	Thực hiện các phép tính sau 1 cách nhanh chóng: (a) $(-14)\cdot(-125)\cdot3\cdot(-8)$. (b) $(-127)\cdot57 + (-127)\cdot43$. (c) $(-13)\cdot34 - 87\cdot34$. (d) $(-25)\cdot68 + (-34)\cdot(-250)$. (e) $A = 1 - 2 + 3 - 4 + \cdots + 99 - 100$. (f) $B = 1 + 3 - 5 - 7 + 9 + 11 - \cdots - 397 - 399$. (g) $C = 1 - 2 - 3 + 4 + 5 - 6 - 7 + \cdots + 97 - 98 - 99 + 100$. (h) $D = 2^{200} - 2^{99} - 2^{98} - \cdots - 2^2 - 2 - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 262., p. 44]
+	Thay các dấu  $\star$ trong biểu thức $1\star2\star3\star4$ bằng dấu các phép tính $+,-,\cdot,:$ \& thêm các dấu ngoặc để được kết quả là: số lớn nhất, số nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 263., p. 44]
+	Tìm $x\in\mathbb{Z}$ sao cho: (a) $(x - 1)^2 = 0$. (b) $x(x - 1) = 0$. (c) $(x + 1)(x - 2) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 264., p. 44]
+	Cho dãy số $a_1,a_2,\ldots,a_{100}$ trong đó $a_1 = 1$, $a_2 = -1$, $a_k = a_{k-2}a_{k-1}$, $k\in\mathbb{N}$, $k\ge 3$. Tính $a_{100}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 265., p. 44]
+	Gọi $a,b,c,d,e,f,g,h$ là các số khác nhau trong tập hợp số $\{-7,-5,-3,-2,2,4,6,13\}$. Tính giá trị lớn nhất của biểu thức $A = (a + b + c + d)^2 + (e + f + g + h)^2$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Bội \& Ước của 1 Số nguyên}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H1, p. 64]
+	Tìm dạng biểu diễn của: (a) Các số nguyên chẵn. (b) Các số nguyên lẻ. (c) Các số nguyên chia hết cho $3$. (d) Các số nguyên chia cho $3$ dư $1$. (e) Các số nguyên chia cho $3$ dư $2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H2, p. 64]
+	Gọi $A$ là tập hợp các ước của $12$ mà lớn hơn $-2$. Điền $\in,\notin$ thích hợp: $-3\square A,4\square A,-6\square A,-1\square A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, H3, p. 64]
+	{\rm Đ{\tt/}S?} Egg đưa ra 1 phát biểu: ``Nếu tổng các chữ số của số nguyên $a$ chia hết cho $6$ thì $a$ chia hết cho $6$.''
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD1, p. 65]
+	Tìm tất cả các ước chung của $12$ \& $-18$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD2, p. 65]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $x - 2$ là bội của $x + 5$. (b) $x + 2$ là ước của $3x - 7$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD3, p. 66]
+	Tìm $a,b\in\mathbb{Z}$ thỏa $ab - a - 3b = 8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, VD4, p. 66]
+	Cho $x,y\in\mathbb{Z}$. Chứng minh $6x + 11y$ là bội của $31$ khi \& chỉ khi $x + 7y$ là bội của $31$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.1., p. 66]
+	Tìm tập hợp các bội chung của $15$ \& $-25$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.2., p. 66]
+	Tìm tập hợp các ước chung của $-30,70,-90$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.3., p. 66]
+	Với $n\in\mathbb{Z}$, xét tính chẵn lẻ: (a) $(n - 4)(5n + 13)$. (b) $n^2 - n + 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.4., p. 66]
+	Tìm $a\in\mathbb{Z}$ thỏa: (a) $a + 3$ là ước của $7$. (b) $3a$ là ước của $-12$. (c) $12$ là bội của $3a + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.5., p. 66]
+	Chứng minh nếu $a\in\mathbb{Z}$ thì: (a) $A = a(a - 5) - a(a + 8) - 13$ là bội của $13$. (b) $B = (a + 5)(a - 3) - (a - 5)(a + 3)\divby4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.6., p. 67]
+	Tìm $x,y\in\mathbb{Z}$ thỏa: (a) $(3x - 1)(y + 4) = -13$. (b) $(5x - 1)(y + 1) = 4$. (c) $xy + x + 2y = 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.7., p. 67]
+	Cho $x,y\in\mathbb{Z}$. Chứng minh $7x + 11y$ là bội của $13$ khi \& chỉ khi $x - 4y$ là bội của $13$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.8., p. 67]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $x - 5$ là bội của $x + 1$. (b) $2x - 1$ là ước của $5x - 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.9., p. 67]
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $x^2 + 1$ là bội của $x + 1$. (b) $x - 2$ là ước của $x^2 - 3x + 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.10., p. 67]
+	Tìm $a,b\in\mathbb{Z}$ thỏa: (a) $ab + 1 = 2a + 3b$. (b) $ab - 7b + 5a = 0$ với $b\ge3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.11., p. 67]
+	Chứng minh $\forall a\in\mathbb{Z}$: (a) $(a - 4)(a + 2) + 6$ không là bội của $9$. (b) $9$ không là ước của $(a - 2)(a + 5) + 11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.12., p. 67]
+	Egg \& Chicken cùng mua 1 số tờ giấy A4 \& 1 số phong bì có tổng số như nhau để viết thư cho các chú bộ đội ngoài đảo xa. Mỗi bức thư Egg chỉ dùng $1$ tờ giấy \& $1$ phong bì, còn Chicken thì dùng $3$ tờ giấy \& $1$ phong bì. Egg dùng hết số phong bì đã mua \& còn lại $50$ tờ giấy. trong khi Chicken thì dùng hết số tờ giấy \& còn lại $50$ phong bì. Hỏi mỗi bạn đã mua bao nhiêu tờ giấy? bao nhiêu phong bì?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_1}, 10.12., p. 67]
+	Với $a,b\in\mathbb{Z}^\star$. Chứng minh: nếu $a$ là bội của $b$ \& $b$ là bội của $a$ thì $a = b$ hoặc $a = -b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD45, p. 42]
+	Tìm tất cả các ước của $-24$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD46, p. 43]
+	Cho $a,b\in\mathbb{Z}$, $a\ne0$, $b\ne0$. Biết $a\divby b$ \& $b\divby a$. Chứng minh $a = \pm b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 218., p. 43]
+	Các số sau có bao nhiêu ước? (a) $54$. (b) $-196$.
+\end{baitoan}
+
+\begin{lemma}
+	\label{lemma: number of divisor}
+	Nếu $a\in\mathbb{N}^\star$, $a\ge2$, có phân tích ra thừa số nguyên tố là $a = p_1^{a_1}p_2^{a_2}\cdots p_n^{a_n}$ với $a_i\in\mathbb{N}^\star$, $p_i$ là số nguyên tố, $\forall i = 1,\ldots,n$, thì số ước dương của $a$ là $(p_1 + 1)(p_2 + 1)\cdots(p_n + 1)$ \& do đó số ước nguyên của $a$ là $2(p_1 + 1)(p_2 + 1)\cdots(p_n + 1)$, i.e., $|\mbox{Ư}(a)\cap\mathbb{N}| = (p_1 + 1)(p_2 + 1)\cdots(p_n + 1)$ \& $|\mbox{Ư}(a)\cap\mathbb{Z}| = 2(p_1 + 1)(p_2 + 1)\cdots(p_n + 1)$.
+\end{lemma}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 219., p. 43]
+	Cho $a,b,x,y\in\mathbb{Z}$, trong đó $x,y$ không đối nhau. Chứng minh nếu $(ax - by)\divby(x + y)$  thì $(ay - bx)\divby(x + y)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 220., p. 43]
+	Cho $S = 1 - 3 + 3^2 - 3^3 + \cdots + 3^{98} - 3^{99}$. (a) Chứng minh $S$ là bội của $-20$. (b) Tính $S$ từ đó suy ra $3^{100}$ chia cho $4$ dư $1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 221., p. 43]
+	Tìm $n\in\mathbb{N}^\star$ sao cho $n + 2$ là ước của $111$ còn $n - 2$ là bội của $11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 222., p. 43]
+	Tìm $n\in\mathbb{Z}$ thỏa: (a) $(4n - 5)\divby n$. (b) $-11$ là bội của $n - 1$. (c) $2n - 1$ là ước của $3n + 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 223., p. 43]
+	Tìm $n\in\mathbb{Z}$ sao cho: $n - 1$ là bội của $n + 5$ \& $n + 5$ là bội của $n - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 224., p. 43]
+	Ở 1 thành phố xứ lạnh, nhiệt độ thấp nhất trong mỗi ngày của 1 tuần lễ là: $-8^\circ$C, $-6^\circ$C, $-5^\circ$C, $-4^\circ$C, $-1^\circ$C, $+1^\circ$C, \& $2^\circ$C. Tính nhiệt độ trung bình thấp nhất trong tuần lễ đó của thành phố này. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 225., p. 43]
+	Hà làm bài kiểm tra trắc nghiệm gồm $25$ câu. Mỗi câu làm đúng được $3$ điểm, làm sai được $(-2)$ điểm \& không làm câu nào thì câu ấy không có điểm. Biết Hà làm đúng được $20$ câu nhưng chỉ được $54$ điểm. Hỏi Hà đã làm sai mấy câu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD52, p. 44]
+	Số $36$ chia cho $a\in\mathbb{Z}$ rồi trừ đi $a$. Lấy kết quả này chia cho $a$ rồi trừ đi $a$. Lại lấy kết quả này chia cho $a$ rồi trừ đi $a$. Cuối cùng ta được số $-a$. Tìm $a$.\hfill{\sf Ans:} $3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 266., p. 45]
+	Tìm $x,y\in\mathbb{Z}$ biết: (a) $(x + 2)(y - 3) = 5$. (b) $(x + 1)(xy - 1) = 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 267., p. 45]
+	Tính tổng $A + B$ biết $A$ là tổng các số nguyên âm lẻ có 2 chữ số, $B$ là tổng các số nguyên dương chẵn có 2 chữ số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 268., p. 45]
+	Cho $A = 2 - 5 + 8 - 11 + 14 - 17 + \cdots + 98 - 101$. (a) Viết dạng tổng quát của số hạng thứ $n$ của $A$. (b) Tính giá trị của biểu thức $A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 269., p. 45]
+	Cho $A = 1 + 2 - 3 - 4 + 5 + 6 - \cdots - 99 - 100$. (a) $A$ có chia hết cho $2$, cho $3$, cho $5$ hay không? (b) $A$ có bao nhiêu ước nguyên, có bao nhiêu ước tự nhiên?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 270., p. 45]
+	Cho dãy số $1,-3,5,-7,9,-11,13,-15,17,-19$. Có thể tìm được hay không 5 số trong các số trên, sao cho đặt dấu ``$+$'' hoặc ``$-$'' nối các số đó với nhau, ta được kết quả bằng: (a) $15$. (b) $20$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 271., p. 45]
+	Thay các dấu  $\star$ trong biểu thức $1\star2\star3\star4\star5\star6\star7\star8\star9$ bởi các dấu ``$+$'' hoặc ``$-$'' để giá trị của biểu thức bằng: (a) $-13$. (b) $-4$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 272., p. 45]
+	Tìm $n\in\mathbb{Z}$ sao cho: (a) $n + 5\divby n - 2$. (b) $2n + 1\divby n - 5$. (c) $n^2 + 3n - 13\divby n + 3$. (d) $n^2 + 3\divby n - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 273., p. 45]
+	Tìm các số $a,b,c,d,m$ khác nhau thuộc tập hợp $\{-2,-1,0,1,2\}$ sao cho $a < b < \min\{c,d\}$, với $\min\{c,d\}$ là số nhỏ hơn trong 2 số $c,d$, \& đặt $m$ nằm ở trung tâm, các số $a,b,c,d$ lần lượt nằm ở bên trái, bên trên, bên phải, bên dưới của $m$, \& tổng của 3 số trên đường nằm ngang bằng tổng của 3 số trên đường thẳng đứng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 274., p. 45]
+	Cho $n$ số nguyên (có thể có số âm) với $n > 1$ mà tổng \& tích của chúng đều bằng $505$. Tìm {\rm GTNN} của $n$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Điền Chữ Số}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD53, p. 46]
+	Thay các chữ bởi các chữ số thích hợp: $\overline{abc} + \overline{acb} = \overline{bca}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD54, p. 46]
+	Tìm các chữ số $a,b,c$ biết tổng $a + b + c$ bằng tổng của 4 số chẵn liên tiếp \& các chữ số $a,b,c$ thỏa mãn cả 2 phép trừ sau: $\overline{abc} - \overline{cba} = 99$ \& $\overline{bac} - \overline{abc} = 270$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD55, p. 46]
+	Thay các dấu {\bf*} bằng các chữ số thích hợp trong phép chia:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.13]{Binh_vi_du_55_p_47}
+	\end{figure}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD56, p. 47]
+	Thay các chữ $a,b,c$ bằng các chữ số khác nhau thích hợp trong phép nhân sau: $\overline{ab}\cdot\overline{cc}\cdot\overline{abc} = \overline{abcabc}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD57, p. 47]
+	Tìm số tự nhiên có 3 chữ số, biết trong 2 cách viết: viết thêm chữ số $5$ vào đằng sau số đó hoặc viết thêm chữ số $1$ vào đằng trước số đó thì cách viết thứ nhất cho số lớn gấp $5$ lần so với cách viết thứ 2.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD58, p. 48]
+	Điền các chữ số thích hợp vào các chữ trong phép nhân sau: $2\overline{abcdmn} = \overline{cdmnab}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD59, p. 48]
+	Điền các chữ số thích hợp vào các dấu $\star$ trong phép nhân sau: $\star\star\cdot\star\star = \star\star\star$ biết cả 2 thừa số đều chẵn \& tích là số có 3 chữ số như nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD60, p. 48]
+	Tìm các chữ số $a$ \& $b$, biết $900:(a + b) = \overline{ab}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, VD61, p. 49]
+	Chứng minh không thể thay các chữ bằng các chữ số để có phép tính đúng: (a) {\rm HỌC VUI $-$ VUI HỌC} $= 1991$. (b) {\rm TOÁN $+$ LÝ $+$ SỬ $+$ VẼ} $= 1992$.
+\end{baitoan}
+Thay các dấu $\star$ \& các chữ bởi các số thích hợp:
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 275., p. 49]
+	$\overline{ab} + \overline{bc} + \overline{ca} = \overline{abc}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 276., p. 49]
+	(a) $\overline{abc} + \overline{ab} + a = 874$. (b) $\overline{abc} + \overline{ab} + a = 1037$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 277., p. 49]
+	(a) $\overline{acc}\cdot b = \overline{dba}$ biết $a$ là chữ số lẻ. (b) $\overline{ac}\cdot\overline{ac} = \overline{acc}$. (c) $\overline{ab}\cdot\overline{ab} = \overline{acc}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 278., p. 49]
+	(a) $2\overline{1bac} = \overline{abc8}$. (b) $\overline{ab} = 9b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 279., p. 49]
+	$4\overline{abcdef} = \overline{fabcde}$ \& $\overline{abcde} + f = 15390$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 280., p. 49]
+	$\overline{abc} - \overline{ca} = \overline{ca} - \overline{ac}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 281., p. 49]
+	$\overline{abcd} + \overline{abc} = 3576$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 282., p. 49]
+	$\overline{abcd0} - \overline{abcd} = \overline{3462\star}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 283., p. 49]
+	Thay các dấu {\bf*} bởi các số thích hợp:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.13]{Binh_194_p_49}
+	\end{figure}
+	biết số bị nhân có tổng các chữ số bằng $18$ \& không đổi khi đọc từ phải sang trái.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 284., p. 49]
+	(a) $\overline{ab}\cdot b = \overline{1ab}$. (b) $\overline{abc} = 9\overline{bc}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 285., p. 50]
+	$\overline{260abc}:\overline{abc} = 626$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 286., p. 50]
+	Thay các dấu {\bf*} bởi các số thích hợp:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.13]{Binh_286_p_50}
+	\end{figure}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 287., p. 50]
+	(a) $\overline{ab}\cdot\overline{cb} = \overline{ddd}$. (b) $\star\star\cdot\,\star = \star\star\star$. (c) $\overline{ab}\cdot\overline{cd} = bbb$. Biết tích là số có 3 chữ số như nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 288., p. 50]
+	$6\overline{abcdef} = \overline{defabc}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 289., p. 50]
+	$20\star\star:13 = \star\star7$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 290., p. 50]
+	Thay các dấu {\bf*} bởi các số thích hợp:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.13]{Binh_290_p_50}
+	\end{figure}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 291., p. 50]
+	$\overline{abc}:11 = a + b + c$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 292., p. 50]
+	$(\overline{ab} + \overline{cd})(\overline{ab} - \overline{cd}) = 2002$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 293., p. 50]
+	(a) $a\cdot\overline{bc} = d\cdot\overline{ef} = 156$ (các chữ khác các chữ số đã có). (b) $\overline{ab}\cdot\overline{cde} = 16038$ (các chữ khác các chữ số đã có).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 294., p. 50]
+	Tìm chữ số $a$ sao cho $n = \overline{\underbrace{4\ldots4}_{\scriptsize55\mbox{ số}}a\underbrace{6\ldots6}_{\scriptsize55\mbox{ số}}}\divby13$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 295., p. 50]
+	Tìm chữ số $a$ \& $x\in\mathbb{N}$ sao cho: $(12 + 3x)^2 = \overline{1a96}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 296., p. 50]
+	Tìm số tự nhiên có 5 chữ số, biết rằng nếu viết thêm chữ số $7$ vào đằng trước số đó thì được 1 số lớn gấp $4$ lần so với số có được bằng cách viết thêm chữ số $7$ vào sau số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 297., p. 50]
+	Tìm số tự nhiên có 2 chữ số, biết rằng nếu viết thêm 1 chữ số $2$ vào bên phải \& 1 chữ số $2$ vào bên trái của nó thì số ấy tăng gấp $36$ lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 298., p. 50]
+	Tìm số tự nhiên có 2 chữ số, biết rằng nếu viết xen vào giữa 2 chữ số của nó chính số đó thì số đó tăng gấp $99$ lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 299., p. 50]
+	Tìm số tự nhiên có 4 chữ số, sao cho khi nhân số đó với $4$ ta được số gồm 4 chữ số ấy viết theo thứ tự ngược lại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 300., p. 50]
+	Tìm số tự nhiên có 4 chữ số, sao cho nhân nó với $9$ ta được số gồm chính các chữ số của số ấy viết theo thứ tự ngược lại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 301., p. 51]
+	Tìm số tự nhiên có 5 chữ số, sao cho nhân nó với $9$ ta được số gồm chính các chữ số của số ấy viết theo thứ tự ngược lại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 302., p. 51]
+	(a) Tìm số tự nhiên có 3 chữ số, biết rằng nếu xóa chữ số hàng trăm thì số ấy giảm $9$ lần. (b) Giải bài toán trên nếu không cho biết chữ số bị xóa thuộc hàng nào.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 303., p. 51]
+	Tìm $n\in\mathbb{N}$ có 3 chữ số khác nhau, biết rằng nếu xóa bất kỳ chữ số nào của nó ta cũng được 1 số là ước của $n$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 304., p. 51]
+	Tìm số tự nhiên có 4 chữ số, biết rằng nếu xóa chữ số hàng nhìn thì số ấy giảm $9$ lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 305., p. 51]
+	(a) Tìm số tự nhiên có 4 chữ số, biết rằng chữ số hàng trăm bằng $0$ \& nếu xóa chữ số $0$ đó thì số ấy giảm $9$ lần. (b) 1 số tự nhiên tăng gấp $9$ lần nếu viết thêm 1 chữ số $0$ vào giữa các chữ số hàng chục \& hàng đơn vị của nó. Tìm số ấy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 306., p. 51]
+	Tìm $A\in\mathbb{N}$, biết rằng nếu xóa 1 hoặc nhiều chữ số tận cùng của nó thì được số $B$ mà $A = 130B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 307., p. 51]
+	Tìm $x\in\mathbb{N}$ có chữ số tận cùng bằng $2$, biết rằng $x,2x,3x$ đều là các số có 3 chữ số \& 9 chữ số của 3 số đó đều khác nhau \& khác $0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, 308., p. 51]
+	Tìm $x\in\mathbb{N}$ có 6 chữ số, biết rằng các tích $2x,3x,4x,5x,6x$ cũng là số có 6 chữ số gồm cả 6 chữ số ấy. (a) Cho biết 6 chữ số của số phải tìm là $1,2,4,5,7,8$. (b) Giải bài toán nếu không cho điều kiện (a).
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+\begin{baitoan}
+	Cho $a,b\in\mathbb{Z}$. (a) Giải phương trình $|a| = |b|$. (b) Giải bất phương trình $|a| < |b|$ \& $|a|\le|b|$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
