@@ -50,14 +50,27 @@
 %------------------------------------------------------------------------------%
 
 \section{Mở Đầu Về Phương Trình. Phương Trình Bậc Nhất 1 Ẩn. Phương Trình Thu Gọn Được Về Dạng $ax + b = 0$}
+\fbox{1} \textit{Phương trình ẩn $x$} có dạng $A(x) = B(x)$, trong đó $A(x),B(x)$ là 2 biểu thức của cùng 1 biến $x$, trong đó $D_A,D_B$ lần lượt là TXĐ của 2 biểu thức $A,B$. Giá trị $x = x_0\in D_A\cap D_B\subset\mathbb{R}$ làm cho 2 vế của phương trình nhận cùng 1 giá trị gọi là 1 \textit{nghiệm} (\textit{root}) của phương trình. 1 phương trình có thể có 0 (i.e., vô nghiệm) $1,2,3,\ldots$ nghiệm hoặc vô số nghiệm. Tập hợp tất cả các nghiệm của 1 phương trình gọi là \textit{tập nghiệm} của phương trình đó, ký hiệu là $S$, i.e., với phương trình $f(x) = 0$, $S_f\coloneqq\{x\in D_f\subset\mathbb{R}|f(x) = 0\}$. \fbox{2} \textit{2 phương trình tương đương} là 2 phương trình có cùng 1 tập nghiệm: $(f(x) = 0\Leftrightarrow g(x) = 0)\Leftrightarrow S_f = S_g$ với $S_f\coloneqq\{x\in D_f\subset\mathbb{R}|f(x) = 0\},S_g\coloneqq\{x\in D_g\subset\mathbb{R}|g(x) = 0\}$ lần lượt là 2 tập nghiệm của 2 phương trình $f(x) = 0,g(x) = 0$, trong đó $D_f,D_g$ lần lượt là TXĐ của 2 hàm $f,g$. \textit{Tính chất bắc cầu của quan hệ tương đương của các phương trình}: 2 phương trình cùng tương đương với 1 phương trình thứ 3 thì tương đương với nhau, i.e., $[(f(x) = 0\Leftrightarrow g(x) = 0)\land(g(x) = 0\Leftrightarrow h(x) = 0)]\Rightarrow(f(x) = 0\Leftrightarrow h(x) = 0)$, hay tương đương với $[(S_f = S_g)\land(S_g = S_h)]\Rightarrow S_f = S_h$.
 
 \begin{baitoan}[\cite{Tuyen_Toan_8}, VD27, p. 41]
-	Cho phương trình $\dfrac{3(2x + 1)}{4} - \dfrac{5x + 3}{6} = \dfrac{2x - 1}{3} + \dfrac{m}{12}$ với tham số $m\in\mathbb{R}$. Tìm giá trị của $m$ để phương trình này có nghiệm.
+	Cho phương trình $\dfrac{3(2x + 1)}{4} - \dfrac{5x + 3}{6} = \dfrac{2x - 1}{3} + \dfrac{m}{12}$ {\rm(1)} với tham số $m\in\mathbb{R}$. Tìm giá trị của $m$ để phương trình này: (a) có nghiệm. (b) vô nghiệm.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(1) $\Leftrightarrow9(2x + 1) - 2(5x + 3) = 4(2x - 1) + m\Leftrightarrow18x + 9 - 10x - 6 = 8x - 4 + m\Leftrightarrow18x - 10x - 8x = m - 4 - 9 + 6\Leftrightarrow0x = m - 7$ (2). (a) (1) có nghiệm $\Leftrightarrow$ (2) có nghiệm $\Leftrightarrow m - 7 = 0\Leftrightarrow m = 7$. Khi $m = 7$, (1) thậm chí có vô số nghiệm: $S = \mathbb{R}$. (b) (1) vô nghiệm $\Leftrightarrow$ (2) vô nghiệm: $S = \emptyset\Leftrightarrow m - 7\ne0\Leftrightarrow m\ne7$.
+\end{proof}
+
+\begin{nhanxet}
+	Phương trình (1) ban đầu nhìn có dạng phương trình bậc nhất 1 ẩn $x$, nhưng phương trình thu gọn không phải là 1 phương trình bậc nhất 1 ẩn, mà là bậc $0$, i.e., phương trình có dạng $0x = c$. Phương trình này có vô số nghiệm thực $\Leftrightarrow S = \mathbb{R}\Leftrightarrow c = 0$, \&  vô nghiệm $\Leftrightarrow S = \emptyset\Leftrightarrow c\ne0$.
+\end{nhanxet}
+
 \begin{baitoan}[\cite{Tuyen_Toan_8}, VD28, p. 41]
-	Giải \& biện luận phương trình theo tham số $m$: $\dfrac{m^2}{8}\left[(x + 2)^2 - (x  - 2)^2\right] - 4x = (m - 1)^2 + 3(2m + 1)$.
+	(a) Giải \& biện luận phương trình $\dfrac{m^2}{8}\left[(x + 2)^2 - (x  - 2)^2\right] - 4x = (m - 1)^2 + 3(2m + 1)$ {\rm(1)} theo tham số $m\in\mathbb{R}$. (b) Mở rộng.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(1) $\Leftrightarrow m^2x - 4x = m^2 + 4m + 4\Leftrightarrow(m^2 - 4)x = (m + 2)^2\Leftrightarrow(m - 2)(m + 2)x = (m + 2)^2$ (2). Nếu $m = -2$, (2) trở thành $0x = 0$ nên (1) có vô số nghiệm: $S = \mathbb{R}$. Nếu $m = 2$, (2) trở thành $0x = 16$ nên (1) vô nghiệm: $S = \emptyset$. Nếu $m\ne\pm2$, (1) có 1 nghiệm duy nhất $x = \dfrac{(m + 2)^2}{(m - 2)(m + 2)} = \dfrac{m + 2}{m - 2}$ nên $S = \left\{\dfrac{m + 2}{m - 2}\right\}$.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_8}, 181., p. 42]
 	Cho 3 phương trình: $(x + 5)(2x - 1) = 0$, $(x + 5)(2x - 1)(x^2 - 3) = 0$, $(x + 5)(x^2 - 3) = 0$. Xét xem trong 3 phương trình này, có 2 phương trình nào tương đương không nếu: (a) $x$ nhận giá trị trên tập $\mathbb{R}$. (b) $x$ nhận giá trị trên tập $\mathbb{Q}$. (c) $x$ nhận giá trị trên tập $\mathbb{Z}$. (d) $x$ nhận giá trị trên tập $\mathbb{N}$.
@@ -1088,10 +1101,15 @@ Giải \& biện luận phương trình:
 %------------------------------------------------------------------------------%
 
 \section{Đường Thẳng Song Song \& Đường Thẳng Cắt Nhau. Hệ Số Góc Của Đường Thẳng $y = ax + b$, $a\ne0$}
+\fbox{1} Cho 2 đường thẳng $(d_1):y = ax + b,a\ne0,(d_2):y = a'x + b',a'\ne0$. $(d_1)\parallel(d_2)\Leftrightarrow a = a',b\ne b'$. $(d_1)\equiv(d_2)\Leftrightarrow a = a',b = b'$. $(d_1)$ cắt $(d_2)\Leftrightarrow a\ne a'$ \& hoành độ của giao điểm là nghiệm của \textit{phương trình hoành độ} $ax + b = a'x + b'$. $(d_1)\bot(d_2)\Leftrightarrow aa' = -1$. \fbox{2} Ký hiệu $\alpha$ là góc tạo bởi đường thẳng $y = ax + b$ \& trục $Ox$. $\alpha$ là góc nhọn, i.e., $\alpha\in(0^\circ,90^\circ)\Leftrightarrow a = \tan\alpha > 0$. $\alpha$ là góc tù, i.e., $\alpha\in(90^\circ,180^\circ)\Leftrightarrow a = \tan\alpha < 0$. Các đường thẳng có cùng hệ số $a$ (hệ số của $x$) thì tạo với trục $Ox$ các góc bằng nhau. $a$ gọi là \textit{hệ số góc} của đường thẳng $y = ax + b$. 
 
 \begin{baitoan}[\cite{Tuyen_Toan_8}, VD39, p. 58]
 	Cho 2 đường thẳng: $(d_1):y = mx - 2(m + 2)$ với $m\ne0$, $(d_2):y = (2m - 3)x + m^2 - 1$ với $m\ne\dfrac{3}{2}$. (a) Chứng minh với mọi $m\in\mathbb{R}$, 2 đường thẳng $(d_1),(d_2)$ không thể trùng nhau. (b) Tìm các giá trị của $m\in\mathbb{R}$ để: (i) $(d_1)\parallel(d_2)$. (ii) $(d_1)$ cắt $(d_2)$. (iii) $(d_1)\bot(d_2)$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $(d_1)\equiv(d_2)\Leftrightarrow m = 2m - 3\land-2(m + 2) = m^2 - 1\Leftrightarrow m = 3\land(m + 2)^2 + 2 = 0\Leftrightarrow(-3 + 2)^2 + 2 = 3 = 0$ vô lý nên $(d_1)\not\equiv(d_2)$. (b) (i) $(d_1)\parallel(d_2)\Leftrightarrow m = 2m - 3\land -2(m + 2) = m^2 - 1\Leftrightarrow m = 3\land(m + 1)^2 + 2\ne0\Leftrightarrow m = 3$. (ii) $(d_1)$ cắt $(d_2)\Leftrightarrow m\ne2m - 3\Leftrightarrow m\ne3$. (iii) $(d_1)\bot(d_2)\Leftrightarrow m(2m - 3) = -1\Leftrightarrow2m^2 - 3m + 1 = 0\Leftrightarrow(m - 1)(2m - 1) = 0\Leftrightarrow m - 1\lor m = \frac{1}{2}$.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_8}, 231, p. 59]
 	Xác định hàm số $y = ax + b$ biết đồ thị của nó song song với đường thẳng $y = -\dfrac{2}{3}x + 1$ \& đi qua điểm $A(3,-1)$.
