@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Cylinder, Cone, Sphere -- Bài Tập: Hình Trụ, Hình Nón, Hình Cầu}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Cylinder -- Hình Trụ}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD46, p. 114]
+	1 chai nước có phía dưới là hình trụ chứa 1 lượng nước có chiều cao {\rm10 cm}. Lật ngược chai lại thì phần chai không chứa nước là 1 hình trụ có chiều cao {\rm8 cm}. Tính thể tích của chai, biết đường kính của đáy chai bằng {\rm10 cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 341., p. 114]
+	Có 3 vật hình trụ bằng chì, bằng sắt, bằng nhôm cùng có khối lượng bằng {\rm2 kg} \& cùng có đường kính đáy bằng {\rm10 cm}. Tính chiều cao của mỗi vật, biết khối lượng riêng của chì là {\rm11.3 kg{\tt/}$\rm dm^3$}, khối lượng riêng của sắt là {\rm7.8 kg{\tt/}$\rm dm^3$}, khối lượng riêng của nhôm là {\rm2.7 kg{\tt/}$\rm dm^3$}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 342., p. 114]
+	1 băng giấy dải được cuộn chặt lại $60$ vòng làm thành 1 cuộn giấy hình trụ rỗng. Biết đường kính của đường tròn trong cùng bằng {\rm2 cm}, đường kính của đường tròn ngoài cùng bằng {\rm6 cm}. Tính chiều cao của băng giấy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 343., p. 114]
+	Cần cưa 1 thân cây hình trụ có đường kính đáy bằng $d$ để được 1 khúc gỗ hình chữ nhật có thể tích lớn nhất. Tính các kích thước đáy của khúc gỗ hình hộp chữ nhật.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 344., p. 114, Kiến \& mật]
+	1 con kiến ở vị trí A trên mặt ngoài của 1 lọ thủy tinh hình trụ không có nắp, nhìn thấy 1 giọt mật ở thẳng trước mặt tại vị trí B ở mặt trong của lọ. Biết A cách miệng lọ {\rm5 cm}, B cách miệng lọ {\rm2 cm}, \& độ dài của đường tròn miệng lọ bằng {\rm48 cm}. Tính độ dài ngắn nhất để chú kiến bò được tới chỗ giọt mật.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 345., p. 114]
+	Chứng minh trong các hình trụ có cùng thể tích, hình trụ có đường cao bằng đường kính của đáy là hình có diện tích toàn phần nhỏ nhất.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Cone -- Hình Nón}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD47, p. 115]
+	Cho $\Delta OBC$ vuông tại O. Nếu quay tam giác đó quanh cạnh $OB$ cố định thì được 1 hình nón có thể tích $800\pi$, còn nếu quay tam giác đó quanh cạnh $OC$ cố định thì được 1 hình nón có thể tích $1920\pi$. Tính $OB,OC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 346., p. 116]
+	An uống rượu ở 1 cốc có dạng hình nón. Chiều cao phần rượt còn lại bằng nửa chiều cao rượu lúc đầu. An đã uống bao nhiêu phần cốc rượu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 347., p. 116]
+	1 hình nón đỉnh S có đáy là đường tròn tâm O, đường kính AB, $\angle ASB = 60^\circ$. Qua trung điểm I của SO, kẻ đường thẳng song song với AB, cắt mặt xung quanh của hình nón ở $C,D$. Tính thể tích hình nón biết $CD = 6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 348., p. 116]
+	1 hình nón có chiều cao $h$. 2 đường sinh vuông góc với nhau chia mặt xung quanh của hình nón thành 2 phần có tỷ số diện tích là $1:2$. Tính thể tích hình nón.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 349., p. 116]
+	$\Delta ABC$ có $BC = a$, chiều cao tương ứng bằng $h$. Tính thể tích hình tạo thành khi quay tam giác 1 vòng quanh cạnh BC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 350., p. 116]
+	Hình thang vuông ABCD có $\angle A = \angle B = 90^\circ$, 2 tia phân giác $\angle C,\angle D$ cắt nhau tại trung điểm của AB. Biết $AB = 8$, diện tích hình thang bằng $40$. Tính diện tích xung quanh của hình nón cụt do cạnh CD tạo thành khi quay hình thang 1 vòng quanh trục AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 351., p. 116]
+	Tính số đo của cung AB của 1 hình quạt tâm O bán kính R để khi cuộn hình quạt lại, ta được 1 hình nón có thể tích lớn nhất.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Sphere -- Hình Cầu}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD48, p. 117]
+	Có $15$ quả bi-a hình cầu đặt nằm trên mặt bàn, sao cho chúng được dồn khít trong 1 khung hình tam giác đều có chu vi bằng {\rm858 mm}. Tính bán kính của mỗi quả bi-a.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 352., p. 117]
+	1 quả bóng hình cầu bán kính {\rm13 cm} nổi trên mặt hồ, đỉnh của quả bóng cao hơn mặt hồ {\rm18 cm}. Tính độ dài của đường tròn được tạo thành bởi quả bóng \& mặt hồ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 353., p. 117]
+	1 quả bóng hình cầu đặt trên mặt đất có bóng là 1 hình elip với độ dài lớn nhất của bóng là {\rm1 m}. Biết 1 cột cao {\rm1 m} lúc đó có bóng dài {\rm2 m}, tính bán kính quả bóng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 354., pp. 117--118]
+	1 hình cầu nội tiếp 1 hình trụ, i.e., hình cầu được đặt khít vào trong hình trụ. Tính: (a) Tỷ số giữa diện tích mặt cầu \& diện tích toàn phần hình trụ. (b) Tỷ số giữa thể tích hình cầu \& thể tích hình trụ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 354., p. 117]
+	Cho hình hộp chữ nhật $ABCD.A'B'C'D'$. (a) Chứng minh tồn tại 1 hình cầu đi qua tất cả các đỉnh của hình hộp chữ nhật. (b) Tính thể tích của hình cầu đó biết 3 kích thước của hình hộp chữ nhật là: (i) $6,8,26$. (ii) $a,b,c > 0$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
