@@ -48,91 +48,16 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	Last updated version: \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.pdf}{GitHub{\tt/}NQBH{\tt/}elementary STEM \& beyond{\tt/}elementary mathematics{\tt/}grade 9{\tt/}circle{\tt/}problem: set $\mathbb{Q}$ of circles [pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.pdf}.} [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/rational/problem/NQBH_circle_problem.tex}.}. 
+	Last updated version: \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/root/problem/NQBH_root_problem.pdf}{GitHub{\tt/}NQBH{\tt/}elementary STEM \& beyond{\tt/}elementary mathematics{\tt/}grade 9{\tt/}root{\tt/}problem: set $\mathbb{Q}$ of roots [pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/root/problem/NQBH_root_problem.pdf}.} [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/root/problem/NQBH_root_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/rational/problem/NQBH_root_problem.tex}.}. 
 \end{abstract}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
 
-\section{Bất Phương Trình}
-Ta xét các dạng bất đẳng thức \& bất phương trình được sử dụng nhiều để tìm điều kiện xác định (ĐKXĐ) của căn thức bậc 2 \& tổng quát hơn là căn thức bậc chẵn (căn thức bậc lẻ luôn xác định miễn là biểu thức dưới dấu căn có nghĩa, không nhất thiết phải không âm như căn bậc chẵn bắt buộc).
-
-\subsection{Bất phương trình chứa ẩn trong dấu giá trị tuyệt đối}
-Với $f:D\subset\mathbb{R}\to\mathbb{R}$, $x\mapsto f(x)$ là 1 hàm số biến $x$, có $\forall a\in\mathbb{R}$, $a > 0$:
-\begin{equation*}
-	\boxed{|f(x)| < a\Leftrightarrow -a < f(x) < a,\ |f(x)|\le a\Leftrightarrow -a\le f(x)\le a,\ |f(x)| > a\Leftrightarrow\left[\begin{split}
-		f(x) &< -a,\\
-		f(x) &> a,
-	\end{split}\right.,\ |f(x)| > a\Leftrightarrow\left[\begin{split}
-	f(x) &\le -a,\\
-	f(x) &\ge a.
-	\end{split}\right.}
-\end{equation*}
-Để giải bất phương trình tích, ta thường sử dụng:
-
-\begin{dinhly}[Dấu của nhị thức bậc nhất $ax + b$]
-	Nhị thức $ax + b$, $a,b\in\mathbb{R}$, $a\ne0$, cùng dấu với $a$ với mọi giá trị của $x$ lớn hơn nghiệm của nhị thức (i.e., $a(ax + b) > 0$, $\forall x > -\frac{b}{a}$), trái dấu với $a$ với mọi giá trị của $x$ nhỏ hơn nghiệm của nhị thức (i.e., $a(ax + b) < 0$, $\forall x < -\frac{b}{a}$).
-\end{dinhly}
-
-\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 1, p. 5]
-	Giải bất phương trình bậc 2: (a) $x^2 - 4x - 5 < 0$. (b) $x^2 - 2x - 1 > 0$. (c) $2x^2 - 6x + 5 > 0$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 1., p. 6]
-	Giải bất phương trình bậc 2: (a) $x^2 - 4x - 21 > 0$. (b) $x^2 - 4x + 1 < 0$. (c) $3x^2 - x + 1 > 0$. (d) $2x^2 - 5x + 4 < 0$.
-\end{baitoan}
-
-\begin{baitoan}[Giải bất phương trình bậc nhất tổng quát]
-	Giải \& biện luận theo $a,b,c\in\mathbb{R}$, $a\ne0$, bất phương trình: (a) $ax + b > 0$. (b) $ax + b < 0$. (c) $ax + b\le0$. (d) $ax + b\ge0$.
-\end{baitoan}
-
-\begin{baitoan}[Giải bất phương trình bậc nhất chứa trị tuyệt đối dạng tổng quát]
-	Giải \& biện luận theo $a,b,c\in\mathbb{R}$, $a\ne0$, bất phương trình: (a) $|ax + b| > c$. (b) $|ax + b| < c$. (c) $|ax + b|\le c$. (d) $|ax + b|\ge c$.
-\end{baitoan}
-
-\begin{baitoan}[Giải bất phương trình bậc 2 tổng quát]
-	Giải \& biện luận theo $a,b,c,d\in\mathbb{R}$, $a\ne0$, bất phương trình: (a) $ax^2 + bx + c > 0$. (b) $ax^2 + bx + c < 0$. (c) $ax^2 + bx + c\le0$. (d) $ax^2 + bx + c\ge0$.
-\end{baitoan}
-
-\begin{baitoan}[Giải bất phương trình bậc 2 chứa trị tuyệt đối dạng tổng quát]
-	Giải \& biện luận theo $a,b,c,d\in\mathbb{R}$, $a\ne0$, bất phương trình: (a) $|ax^2 + bx + c| > d$. (b) $|ax^2 + bx + c| < d$. (c) $|ax^2 + bx + c|\le d$. (d) $|ax^2 + bx + c|\ge d$.
-\end{baitoan}
-
-\begin{baitoan}[Giải bất phương trình dạng tích tổng quát]
-	Giải \& biện luận theo $a,x_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, với $n\in\mathbb{N}$, $a\ne0$, bất phương trình: (a) {\rm Bất phương trình bậc nhất dạng tích tổng quát:} $a(x - x_0) > 0$, $a(x - x_0) < 0$, $a(x - x_0)\le0$, $a(x - x_0)\ge0$. (b) {\rm Bất phương trình bậc 2 dạng tích tổng quát:} Với $x_1\le x_2$, $a(x - x_1)(x - x_2) > 0$, $a(x - x_1)(x - x_2) < 0$, $a(x - x_1)(x - x_2)\le0$, $a(x - x_1)(x - x_2)\ge0$. (c) {\rm Bất phương trình bậc 3 dạng tích tổng quát:} Với $x_1\le x_2\le x_3$, $a(x - x_1)(x - x_2)(x - x_3) > 0$, $a(x - x_1)(x - x_2)(x - x_3) < 0$, $a(x - x_1)(x - x_2)(x - x_3)\le0$, $a(x - x_1)(x - x_2)(x - x_3)\ge0$. (d) {\rm Bất phương trình bậc 4 dạng tích tổng quát:} Với $x_1\le x_2\le x_3\le x_4$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4) > 0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4) < 0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4)\le0$, $a(x - x_1)(x - x_2)(x - x_3)(x - x_4)\ge0$. (e${}^\star$) {\rm Bất phương trình bậc $n\in\mathbb{N}^\star$ dạng tích tổng quát:} Với $x_1\le x_2\le\cdots\le x_{n-1}\le x_n$, $a\prod_{i=1}^n (x - x_i) > 0$, $a\prod_{i=1}^n (x - x_i) < 0$, $a\prod_{i=1}^n (x - x_i)\le0$, $a\prod_{i=1}^n (x - x_i)\ge0$, trong đó sử dụng ký hiệu tích $\prod_{i=1}^n (x - x_i) = (x - x_1)(x - x_2)\cdots(x - x_n)$.
-\end{baitoan}
-
-\begin{baitoan}[Programming: Solve general inequations of product-form]
-	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải các bất phương trình $P(x) > 0$, $P(x) < 0$, $P(x)\le0$, $P(x)\ge0$, với $P(x)\coloneqq a\prod_{i=1}^n (x - x_i) = a(x - x_1)(x - x_2)\cdots(x - x_n)$, trong đó $n\in\mathbb{N}^\star$, $a\in\mathbb{R}$, $a\ne0$, $x_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$.
-	\begin{itemize}
-		\item {\sf Input.} Dòng 1: Số bộ test. Dòng 2: $n\in\mathbb{N}$, $a\in\mathbb{R}^\star$. Dòng 3: $n$ số thực không nhất thiết phân biệt chưa được sắp xếp thứ tự: $x_1,x_2,\ldots,x_n$. 
-		\item {\sf Output.} 4 tập nghiệm của 4 bất phương trình $P(x) > 0$, $P(x) < 0$, $P(x)\le0$, $P(x)\ge0$.
-		\item {\sf Sample.}
-		\begin{table}[H]
-			\centering\tt
-			\begin{tabular}{|l|l|}
-				\hline
-				\verb|polynomial_inequation.inp| & \verb|polynomial_inequation.out| \\
-				\hline
-				2 & P(x) > 0: x < 2 \\
-				1 -1.5 & P(x) < 0: x > 2 \\
-				2 & P(x) <= 0: x >= 2 \\
-				2 100 & P(x) >= 0: x <= 2 \\
-				3 -4 & \\
-				& P(x) > 0: x < -4 or x > 3 \\
-				& P(x) < 0: -4 < x < 3 \\
-				& P(x) <= 0: -4 <= x <= 3 \\
-				& P(x) >= 0: x <= -4 or x => 3 \\
-				\hline
-			\end{tabular}
-		\end{table}
-	\end{itemize}
-\end{baitoan}
-
-%------------------------------------------------------------------------------%
-
 \section{Căn Bậc 2 \& Số Vô Tỷ}
 Ở Toán 7 (xem, e.g., \cite[\S5, pp. 27--29]{SGK_Toan_7_Canh_Dieu_tap_1}), ta đã biết dạng biểu diễn thập phân của số hữu tỷ là hữu hạn hoặc vô hạn tuần hoàn, dạng biểu diễn thập phân của số vô tỷ là vô hạn không tuần hoàn. Số hữu tỷ $a\in\mathbb{Q}$ nào cũng viết được dưới dạng $a = \dfrac{m}{n}$ với $m\in\mathbb{Z}$, $n\in\mathbb{N}^\star$.
+
+\noindent\cite[Chap. III, \S1, pp. 48--54]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. LT1. HD2. LT2. HD3. LT3. 1. 2. 3. 4. 5. 6. 7. 8. 9.
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, p. 30]
 	Chứng minh $\sqrt{3} + \sqrt{5},2\sqrt{3} - 3\sqrt{5},\sqrt{2} + \sqrt{3} + \sqrt{5}$ là 3 số vô tỷ.
@@ -205,6 +130,7 @@ Với $f:D\subset\mathbb{R}\to\mathbb{R}$, $x\mapsto f(x)$ là 1 hàm số biế
 %------------------------------------------------------------------------------%
 
 \section{Căn Thức Bậc 2 \& Hằng Đẳng Thức $\sqrt{A^2} = |A|$}
+\cite[Chap. III, \S2, pp. 55--60]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. LT1. HD2. LT2. HD3. LT3. HD4. LT4. HD5. LT5. 1. 2. 3. 4. 5. 6. 7. 8. 9.
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, Ví dụ 1, p. 9]
 	Trên 1 khúc sông, dòng chảy của nước ở bề mặt sông lớn hơn dòng chảy của nước ở đáy sông. Gọi $v$ {\rm km{\tt/}h} là vận tốc dòng chảy ở bề mặt sông, $f$ {\rm km{\tt/}h} là vận tốc dòng chảy ở đáy sông, các nhà vật lý (physicists) đã tính được $\sqrt{f} = \sqrt{v} - 1.3$. (a) Nếu vận tốc dòng chảy ở bề mặt sông là {\rm9 km{\tt/}h} thì vận tốc dòng chảy ở đáy sông là bao nhiêu? (b) Tính vận tốc dòng chảy ở bề mặt sông khi vận tốc dòng chảy ở đáy sông là {\rm20.25 km{\tt/}h}.
@@ -556,6 +482,7 @@ Công thức \eqref{can phuc tap} được gọi là \textit{công thức căn p
 %------------------------------------------------------------------------------%
 
 \section{Biến Đổi Đơn Giản Biểu Thức Chứa Căn Thức Bậc 2}
+\cite[Chap. III, \S3, pp. 61--71]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. LT1. LT2. HD2. LT3. HD3. LT4. LT5. HD4. LT6. 1. 2. 3. 4. 5. 6. 7. 8. 9.
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 1., p. 25]
 	Đưa thừa số ra ngoài dấu căn của biểu thức $\sqrt{25(-a)^2b^3}$ với $b\ge0$.
@@ -680,6 +607,7 @@ Công thức \eqref{can phuc tap} được gọi là \textit{công thức căn p
 %------------------------------------------------------------------------------%
 
 \section{Rút Gọn Biểu Thức Có Chứa Căn Thức Bậc 2}
+\cite[Chap. III, \S4, pp. 67--66]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. LT1. HD2. LT2. HD3. LT3. HD4. LT4. LT5. LT6. 1. 2. 3. 4. 5.
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 1., p. 33]
 	Tìm {\rm ĐKXĐ} của biểu thức $\dfrac{\sqrt{1 - 4x^2}}{1 + 2x}$.
@@ -892,7 +820,7 @@ Phương trình vô tỷ có nhiều cách giải, e.g., phương pháp nâng l�
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_1}, 5.8., p. 44]
-	Cho $x = \dfrac{2}{2\sqrt[3]{2} + 2 + \sqrt[3]{4}}$ \& $y = \dfrac{6}{2\sqrt[3]{2} - 2 + \sqrt[3]{4}}$. Tính giá trị của $T = xy^3 - x^3y$. 
+	Cho $x = \dfrac{2}{2\sqrt[3]{2} + 2 + \sqrt[3]{4}}$ \& $y = \dfrac{6}{2\sqrt[3]{2} - 2 + \sqrt[3]{4}}$. Tính giá trị của $T = xy^3 - x^3y$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
@@ -910,6 +838,7 @@ Phương trình vô tỷ có nhiều cách giải, e.g., phương pháp nâng l�
 %------------------------------------------------------------------------------%
 
 \section{Miscellaneous}
+\cite[BTCCIII, pp. 72--73]{SGK_Toan_9_Canh_Dieu_tap_1}: 1. 2. 3. 4. 5. 6. 7. 8. 9. 10.
 
 %------------------------------------------------------------------------------%
 
