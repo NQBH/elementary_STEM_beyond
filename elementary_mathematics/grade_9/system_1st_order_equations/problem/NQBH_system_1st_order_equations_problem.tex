@@ -180,7 +180,7 @@
 		a'x + b'y &= c',\ (d'),(a',b')\ne(0,0),
 	\end{split}\right.
 \end{equation}
-có 1 nghiệm $\Leftrightarrow(d)$ cắt $(d')\Leftrightarrow\dfrac{a}{a'}\ne\dfrac{b}{b'}$, vô nghiệm $\Leftrightarrow(d)\parallel(d')\Leftrightarrow\dfrac{a}{a'} = \dfrac{b}{b'}\ne\dfrac{c}{c'}$, vô số nghiệm $\Leftrightarrow(d)\equiv(d')\Leftrightarrow\dfrac{a}{a'} = \dfrac{b}{b'} = \dfrac{c}{c'}$. \fbox{2} \textit{Phương pháp thế}: Biểu diễn 1 ẩn theo ẩn kia. Biến hệ phương trình thành hệ mới có 1 phương trình 1 ẩn. Giải phương trình 1 ẩn rồi suy ra nghiệm của hệ. \fbox{3} \textit{Phương pháp cộng đại số}: Nhân 2 vế của 2 phương trình với 1 số thích hợp để các hệ số của 1 ẩn nào đó trong 2 phương trình bằng nhau hoặc đối nhau. Dùng quy tắc cộng được hệ mới có 1 phương trình 1 ẩn. Giải phương trình 1 ẩn rồi suy ra nghiệm của hệ.
+có 1 nghiệm $\Leftrightarrow(d)$ cắt $(d')\Leftrightarrow\dfrac{a}{a'}\ne\dfrac{b}{b'}$, vô nghiệm $\Leftrightarrow(d)\parallel(d')\Leftrightarrow\dfrac{a}{a'} = \dfrac{b}{b'}\ne\dfrac{c}{c'}$, vô số nghiệm $\Leftrightarrow(d)\equiv(d')\Leftrightarrow\dfrac{a}{a'} = \dfrac{b}{b'} = \dfrac{c}{c'}$. \fbox{2} \textit{Phương pháp thế}: Biểu diễn 1 ẩn theo ẩn kia. Biến hệ phương trình thành hệ mới có 1 phương trình 1 ẩn. Giải phương trình 1 ẩn rồi suy ra nghiệm của hệ. \fbox{3} \textit{Phương pháp cộng đại số}: Nhân 2 vế của 2 phương trình với 1 số thích hợp để các hệ số của 1 ẩn nào đó trong 2 phương trình bằng nhau hoặc đối nhau. Dùng quy tắc cộng được hệ mới có 1 phương trình 1 ẩn. Giải phương trình 1 ẩn rồi suy ra nghiệm của hệ. \fbox{4} \textit{Giải hệ phương trình bằng phương pháp định thức{\tt/}Cramer}: Đặt $D = ab' - a'b,D_x = b'c - bc',D_y = c'a - ca'$. Nếu $D\ne0$, hệ \eqref{system of linear eqns 2 unknowns} có 1 nghiệm duy nhất $(x,y) = \left(\dfrac{D_x}{D},\dfrac{D_y}{D}\right) = \left(\dfrac{b'c - bc'}{ab' - a'b},\dfrac{c'a - ca'}{ab' - a'b}\right)$. Nếu $D = 0,(D_x,D_y)\ne(0,0)$, hệ \eqref{system of linear eqns 2 unknowns} vô nghiệm. Nếu $D = D_x = D_y = 0$, hệ \eqref{system of linear eqns 2 unknowns} có vô số nghiệm. Biểu thức $pq' - p'q$ gọi là 1 \textit{định thức cấp 2}. Phương pháp định thức rất có lợi trong việc giải \& biện luận hệ phương trình bậc nhất nhiều ẩn.\\
 
 \noindent\cite[\S2, pp. 12--18]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. LT1. HD2. LT2. HD3. LT3. LT4. 1. 2. 3. 4. 5. 6. \cite[\S3, pp. 19--25]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. LT1. LT2. LT3. HD2. LT4. HD3. LT5. LT6. 1. 2. 3. 4. 5. 6. 7.
 
@@ -500,6 +500,50 @@ có 1 nghiệm $\Leftrightarrow(d)$ cắt $(d')\Leftrightarrow\dfrac{a}{a'}\ne\d
 	Tìm $m,n\in\mathbb{R}$ sao cho đa thức $f(x) = mx^3 + (m - 3)x^2 - (2m + n - 4)x - (m + 5n - 2)\divby(x - 1)(x + 2)$.
 \end{baitoan}
 
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, VD, p. 23]
+	Giải hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			x - 2y + 3z &= 6,\\
+			2x + y - z &= 1,\\
+			2x - 3y + 4z &= 8.
+		\end{split}\right.\hspace{5mm}\left\{\begin{split}
+			\frac{2}{x} + \frac{5}{y} - \frac{6}{z} &= 5,\\
+			\frac{3}{x} - \frac{2}{y} + \frac{4}{z} &= -8,\\
+			\frac{1}{x} - \frac{1}{y} + \frac{2}{z} &= -3.
+		\end{split}\right.\hspace{5mm}\left\{\begin{split}
+			x + y + z &= 5,\\
+			y + z + t &= 9,\\
+			z + t + x &= 7,\\
+			t + x + y &= 24.
+		\end{split}\right.\hspace{5mm}\left\{\begin{split}
+			4(x + y) &= 3xy,\\
+			12(y + z) &= 5yz,\\
+			3(z + x) &= 2zx.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, VD, p. 24]
+	Giải hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 - xy + y^2 &= 7,\\
+			x^3 + y^3 &= 35.
+		\end{split}\right.\hspace{5mm}\left\{\begin{split}
+			x + y + z &= 4,\\
+			x + 2y + 3z &= 5,\\
+			x^2 + y^2 + z^2 &= 14.
+		\end{split}\right.\hspace{5mm}\left\{\begin{split}
+			x^2 + y^2 &= 2.5xy,\\
+			x - y &= 0.25xy.
+		\end{split}\right.\hspace{5mm}\left\{\begin{split}
+			x^3 + y^3 &= 7,\\
+			xy(x + y) &= -2.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
 \begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD68, p. 9]
 	Cho hệ phương trình với tham số $a$:
 	\begin{equation*}
@@ -735,6 +779,83 @@ Giải hệ phương trình ẩn $x,y,z$:
 %------------------------------------------------------------------------------%
 
 \section{Giải Bài Toán Bằng Cách Lập Hệ Phương Trình}
+\fbox{1} {\sf Giải bài toán bằng cách lập hệ phương trình:} \textit{Bước 1}: Lập hệ phương trình: Chọn 2 đại lượng chưa biết làm ẩn, đặt đơn vị \& điều kiện thích hợp của ẩn. Biểu diễn các đại lượng chưa biết khác trong bài toán theo ẩn. Lập hệ 2 phương trình biểu thị sự tương quan giữa các đại lượng trong bài toán. \textit{Bước 2}: Giải hệ phương trình. \textit{Bước 3}: Chọn kết quả phù hợp \& kết luận. \fbox{2} Các dạng toán: Toán chuyển động đều{\tt/}không đều, toán năng suất lao động, toán về quan hệ giữa các số, $\ldots$
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, H1--H2, p. 26]
+	So sánh các bước giải toán bằng cách lập hệ phương trình với các bước giải bài toán bằng cách lập phương trình.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, VD1, p. 26]
+	1 ôtô xuất phát từ A dự định đến B lúc {\rm11:00}. Cùng thời gian xuất phát từ A: Nếu vận tốc tăng {\rm10 km{\tt/}h} thì xe đến B lúc {\rm10:00}. Nếu vận tốc giảm {\rm10 km{\tt/}h} thì xe đến B lúc {\rm12:30}. Tính vận tốc dự định của xe, quãng đường AB \& giờ xuất phát từ A.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, VD2, p. 27]
+	2 người dự định làm chung 1 công việc \& hoàn thành trong {\rm6 h}. Khi thực hiện người thứ nhất đã làm 1 mình trong {\rm2 h} thì người thứ 2 mới cùng làm chung do đó phải {\rm4 h 48 ph} nữa công việc mới hoàn thành. Nếu mỗi người làm 1 mình thì bao lâu xong công việc?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, VD3, p. 27]
+	Tìm 1 số có 2 chữ số biết trung bình cộng của nó với số viết theo thứ tự ngược lại bằng $77$ \& số đó hơn số viết theo thứ tự ngược lại $18$ đơn vị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, VD4, p. 28]
+	Nếu giảm chiều dài 1 thửa ruộng hình chữ nhật {\rm5 m} \& tăng chiều rộng của thửa ruộng ấy thêm {\rm5 m} thì thửa ruộng thành hình vuông. Nếu tăng chiều dài của thửa ruộng đó thêm {\rm5 m} \& tăng chiều rộng thêm {\rm 8m} thì diện tích thửa ruộng tăng thêm $\rm640\ m^2$. Tính các kích thước của thửa ruộng đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, VD5, p. 28]
+	2 bến sông A, B cách nhau {\rm50 km}. 1 canô chạy xuôi từ A đến B, nghỉ tại bến B trong {\rm1 h} rồi quay lại A hết tất cả {\rm5 h 10 ph}. 1 canô thứ 2 cũng khởi hành từ A với vận tốc riêng bằng vận tốc riêng của canô thứ nhất. Cùng lúc canô thứ 2 khởi hành từ A, 1 bè nứa trôi từ A theo dòng nước. Canô thứ 2 đi được nửa quãng đường AB rồi quay lại ngay thì gặp bè nứa tại 1 điểm cách A là $8\dfrac{1}{3}$ {\rm km}. Biết cả đi \& về 2 canô đi với vận tốc riêng không đổi. Tính vận tốc riêng của 2 canô \& vận tốc dòng nước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, VD6, p. 29]
+	$100$ con vịt, gà cùng thỏ, chó. Tất cả có $270$ chân. Số chó hơn thỏ là $7$. Số vịt hơn gà $15$. Tính số con mỗi loại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, 3.1., p. 30]
+	1 ôtô tải \& 1 ôtô khách cùng khởi hành 1 lúc từ 2 đầu quãng đường AB dài {\rm285 km}. Ôtô khách khởi hành từ A, đi được {\rm1 h} phải dừng lại nghỉ trên đường {\rm30 ph} sau đó đi tiếp {\rm1 h 30 ph} nữa thì gặp ôtô tải đi từ B đến. Biết vận tốc ôtô khách hơn vận tốc ôtô tải là {\rm15 km{\tt/}h}. Tính vận tốc mỗi ôtô.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, 3.2., p. 30]
+	Trên 1 dòng sông, canô thứ nhất xuôi dòng {\rm84 km} \& ngược dòng {\rm50 km} hết {\rm5 h 30 ph}, canô thứ 2 xuôi dòng {\rm56 km} \& ngược dòng {\rm60 km} hết {\rm5 h}. Biết vận tốc riêng của 2 canô bằng nhau. Tính vận tốc riêng của 2 canô \& vận tốc dòng nước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, 3.3., p. 30]
+	Theo kế hoạch 2 tổ sản xuất $800$ sản phẩm trong thời gian nhất định. Do cải tiến kỹ thuật, tổ 1 vượt mức $20\%$, tổ 2 vượt mức $30\%$ nên cả 2 tổ sản xuất trong thời gian quy định được là $1010$ sản phẩm. Tính số sản phẩm được giao theo kế hoạch của mỗi tổ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, 3.4., p. 30]
+	2 vòi nước cùng chảy vào 1 bể nước sau {\rm4 h} được $90\%$ bể. Nếu vòi thứ nhất chảy trong {\rm2 h} rồi bị khóa, vòi thứ 2 chảy tiếp {\rm3 h} thì được $55\%$ bể. Hỏi nếu mỗi vòi chảy 1 mình sau bao lâu thì đầy bể?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, 3.5., p. 30]
+	Tìm 1 số có 2 chữ số biết chữ số hàng đơn vị hơn chữ số hàng chục $2$ đơn vị. Nếu ta thêm chữ số $0$ vào giữa 2 chữ số thì được số có 3 chữ số hơn $2$ lần số có 2 chữ số ban đầu $472$ đơn vị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, 3.6., p. 30]
+	1 thư viện nhà trường có 2 tủ sách. Nếu chuyển $100$ quyển từ tủ thứ nhất sang tủ thứ 2 thì số sách 2 tủ bằng nhau. Nếu chuyển $300$ quyển từ tử thứ 2 sang tủ thứ nhất đồng thời tủ thứ 2 cho mượn $100$ cuốn thì số sách còn lại của tủ thứ 2 bằng nửa số sách có trong tủ thứ nhất. Lúc đầu mỗi tủ có bao nhiêu cuốn sách?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, 3.7., p. 30]
+	1 đội xe vận tải chở $256$ tấn hàng trên $29$ xe gồm 3 loại: Xe 4 bánh, mỗi xe chở $5$ tấn hàng, xe $4$ bánh mỗi xe chở $8$ tấn hàng, xe $6$ bánh mỗi xe chở $11$ tấn hàng. Tổng số bánh xe là $144$ bánh. Tính số xe mỗi loại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, 3.8., p. 30]
+	Tính diện tích hình thang có chiều cao {\rm12 m}. Biết nếu giảm đáy lớn {\rm4 m}, tăng đáy nhỏ {\rm5 m} \& tăng chiều cao {\rm3 m} thì diện tích tăng thêm $\rm60\ m^2$. Nếu chiều cao hình thang không là {\rm12 m} mà bằng hiệu của 2 đáy thì diện tích hình thang bằng $\rm87.5\ m^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, BT1, p. 31, Ai Cập 3000 B.C.]
+	Chia $100$ đấu lúa mì cho $5$ người sao cho người thứ 2 nhận được hơn người thứ nhất 1 số lúa bằng số lúa mà người thứ 3 nhận được hơn người thứ 2, người thứ 4 hơn người thứ 3 \& người thứ 5 hơn người thứ 4. Thêm vào đó 2 người đầu tiên nhận được 1 số lúa ít hơn $7$ lần số lúa của 3 người còn lại. Tính số lúa mỗi người nhận.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, BT2, p. 31]
+	Ngựa \& La đi cạnh tranh nhau \& cùng chở vật nặng trên lưng. Ngựa than thở về hành lý quá nặng của mình. La đáp: ``Cậu than thở nỗi gì? Nếu tôi lấy của cậu 1 bao thì hành lý của tôi nặng gấp đôi của cậu. Còn nếu cậu lấy ở trên lưng tôi 1 bao thì hành lý của cậu mới bằng của tôi.'' Tính số bao Ngựa \& La mang.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, p. 32]
+	Trăm trâu trăm cỏ. Trâu đứng ăn $5$. Trâu nằm ăn $3$. Lọm khọm trâu già. 3 con 1 bó. Tính số trâu đứng, trâu nằm, \& trâu già.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, p. 32]
+	Ngày xuân dạo chơi chợ phiên. Chỉ có 1 tiền ($= 60$ đồng) mua đủ trái cây. Cam $3$ đồng 1 trái đây. Quýt đường $5$ trái trả ngay 1 đồng. Đoan Hùng bưởi đó vô song. $5$ đồng 1 quả cùng không đắt nào. 1 giờ liệu đã liệu mua sao. Cả cam, quýt, bưởi vừa vào $100$.
+\end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD72., p. 15]
 	Điểm trung bình của $100$ học sinh trong 2 lớp 8A, 8B là $7.2$. Tính điểm trung bình của các học sinh mỗi lớp, biết số học sinh lớp 8A gấp rưỡi số học sinh lớp 8B \& điểm trung bình của lớp 8B gấp rưỡi điểm trung bình của lớp 8A.
