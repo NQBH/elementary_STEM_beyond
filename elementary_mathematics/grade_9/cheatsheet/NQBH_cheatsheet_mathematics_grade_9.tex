@@ -79,7 +79,7 @@
 \fbox{1} Phương trình bậc nhất 2 ẩn: \fbox{$ax + by = c$} (1), $a,b,c\in\mathbb{R},(a,b)\ne(0,0)$. \fbox{2} $(x_0,y_0)\in\mathbb{R}^2$ là nghiệm của (1) $\Leftrightarrow(x_0,y_0)\in S\Leftrightarrow ax_0 + by_0 = c$. \fbox{3} Tập nghiệm $S$ biểu diễn bởi đường thẳng $(d):ax + by = c$, i.e., $S = \{(x,y)\in\mathbb{R}^2|ax + by = c\} = (d)$. \fbox{4} Nếu $ab\ne0$ thì $(d):ax + by = c\Leftrightarrow y = -\dfrac{a}{b}x + \dfrac{c}{b}$ (hàm số bậc nhất) là đường thẳng cắt cả 2 trục tọa độ $Ox,Oy$ lần lượt tại 2 điểm $\left(\dfrac{c}{a},0\right),\left(0,\dfrac{c}{b}\right)$. \fbox{5} Nếu $a\ne0,b = 0$ thì $(d):ax + 0y = c\Leftrightarrow x = \dfrac{c}{a}$ là đường thẳng song song hoặc trùng với trục tung $Oy$. \fbox{6} Nếu $a = 0,b\ne0$ thì $(d):0x + by = c\Leftrightarrow y = \dfrac{c}{b}$ là đường thẳng song song hoặc trùng với trục hoành $Ox$.
 
 \subsection{System of 1st-order equations of 2 unknowns -- Hệ phương trình bậc nhất 2 ẩn}
-\fbox{1} Hệ phương trình bậc nhất 2 ẩn:
+\fbox{1} Hệ phương trình bậc nhất 2 ẩn: $a,b,a',b'\in\mathbb{R}$,
 \begin{equation}
 	\label{system of linear eqns 2 unknowns}
 	\left\{\begin{split}
@@ -96,13 +96,20 @@ có 1 nghiệm $\Leftrightarrow(d)$ cắt $(d')\Leftrightarrow\dfrac{a}{a'}\ne\d
 
 \section{2nd-Order Function. Quadratic Equation -- Hàm Số $y = ax^2,a\ne0$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0,a\ne0$}
 
-\subsection{Hàm số $y = ax^2,a\ne0$}
-
-\subsection{Đồ thị của hàm số $y = ax^2,a\ne0$}
+\subsection{Hàm số $y = ax^2,a\ne0$ \& đồ thị}
+\fbox{1} Hàm số bậc 2 $y = ax^2$, $a\ne0$. TXĐ: $\mathbb{R}$. Nếu $a > 0$, hàm số $y = ax^2$ nghịch biến khi $x < 0$, đồng biến khi $x > 0$. Nếu $a < 0$, hàm số $y = ax^2$ nghịch biến khi $x > 0$, đồng biến khi $x < 0$. \fbox{2} Đồ thị hàm số $y = ax^2,a\ne0$ là 1 parabol đi qua gốc tọa độ $O$, nhận trục $Oy$ là trục đối xứng, $O$ là đỉnh của parabol. Nếu $a > 0$, đồ thị nằm phía trên trục hoành, $O$ là điểm thấp nhất của đồ thị. $\min_{x\in\mathbb{R}} y = 0\Leftrightarrow x = 0$. Nếu $a < 0$, đồ thị nằm phía dưới trục hoành, $O$ là điểm cao nhất của đồ thị. $\max_{x\in\mathbb{R}} y = 0\Leftrightarrow x = 0$.
 
 \subsection{Quadratic equation -- Phương trình bậc 2 1 ẩn $ax^2 + bx + c = 0,a\ne0$}
+\fbox{1} Phương trình bậc 2 1 ẩn $ax^2 + bx + c = 0$ (1), $a,b,c\in\mathbb{R},a\ne0$. Biệt số $\Delta\coloneqq b^2 - 4ac$. Biệt số rút gọn $\Delta'\coloneqq b'^2 - ac$ với $b = 2b'$. \fbox{2} Công thức nghiệm: $\Delta > 0$, (1) có 2 nghiệm thực phân biệt $x_{1,2} = \dfrac{-b\pm\sqrt{\Delta}}{2a}\in\mathbb{R}$. $\Delta = 0$, (1) có nghiệm kép $x_1 = x_2 = -\dfrac{b}{2a}$. $\Delta < 0$, (1) vô nghiệm thực, nhưng có 2 nghiệm phức $x_{1,2} = \dfrac{-b\pm i\sqrt{-\Delta}}{2a}\in\mathbb{C}\backslash\mathbb{R}$. \fbox{3} Công thức nghiệm thu gọn: $\Delta' > 0$, (1) có 2 nghiệm thực phân biệt $x_{1,2} = \dfrac{-b'\pm\sqrt{\Delta'}}{a}\in\mathbb{R}$. $\Delta = 0$, (1) có nghiệm kép $x_1 = x_2 = -\dfrac{b'}{a}$. $\Delta < 0$, (1) vô nghiệm thực, nhưng có 2 nghiệm phức $x_{1,2} = \dfrac{-b'\pm i\sqrt{-\Delta'}}{a}\in\mathbb{C}\backslash\mathbb{R}$. \fbox{4} Phương trình bậc 2 $ax^2 + bx + c = 0$ với $a,c$ trái dấu, i.e., $ac < 0$ bao giờ cùng có 2 nghiệm thực phân biệt vì $\Delta = b^2 - 4ac\ge-4ac > 0$.
 
 \subsection{Vi\`ete theorem -- Định lý Vi\`ete}
+\fbox{1} Định lý Vi\`ete: Nếu $x_1,x_2$ là 2 nghiệm của phương trình $ax^2 + bx + c = 0,a\ne0$ (1) thì $x_1 + x_2 = -\dfrac{b}{a},x_1x_2 = \dfrac{c}{a}$. \fbox{2} Nếu $a + b + c = 0$ thì phương trình (1) có 2 nghiệm $x_1 = 1,x_2 = \dfrac{c}{a}$. Nếu $a - b + c = 0$ thì phương trình (1) có 2 nghiệm $x_1 = -1,x_2 = -\dfrac{c}{a}$. \fbox{3} Nếu 2 số có tổng bằng $S$ \& tích bằng $P$ với $S^2\ge4P$ thì 2 số đó là 2 nghiệm của phương trình bậc 2 $x^2 - Sx + P = 0$. \fbox{4} Nếu (1) có 2 nghiệm $x_1,x_2$ thì $ax^2 + bx + c = a(x - x_1)(x - x_2)$. \fbox{5} Đặt $S\coloneqq x_1 + x_2,P\coloneqq x_1x_2$. Điều kiện để (1): Có 2 nghiệm trái dấu là $P < 0$. Có 2 nghiệm cùng dấu là $\Delta\ge0,P > 0$. Có 2 nghiệm dương là $\Delta\ge0,P > 0,S > 0$. Có 2 nghiệm âm là $\Delta\ge0,P > 0,S < 0$.
+
+\subsection{Phương trình quy về phương trình bậc 2}
+\fbox{1} \textit{Phương trình trùng phương}: $ax^4 + bx^2 + c = 0,a,b,c\in\mathbb{R},a\ne0$ (1). Đặt $t\coloneqq x^2\ge0$ được phương trình bậc 2 (trung gian) $at^2 + bt + c = 0$. \fbox{2} \textit{Phương trình chứa ẩn ở mẫu}: Tìm ĐKXĐ của phương trình. Quy đồng mẫu thức 2 vế rồi khử mẫu thức. Giải phương trình vừa nhận được. Trong các giá trị tìm được của ẩn: Loại các giá trị không thỏa mãn ĐKXĐ. Các giá trị thỏa mãn ĐKXĐ là nghiệm của phương trình. \fbox{3} \textit{Phương trình tích}: $\prod_{i=1}^n f_i(x) = f_1(x)f_2(x)\cdots f_n(x) = 0\Leftrightarrow f_1(x) = 0$ or $f_2(x) = 0$ or $\ldots$ or $f_n(x) = 0$.
+
+\subsection{Giải bài toán bằng cách lập phương trình}
+\fbox{1} {\sf Giải bài toán bằng cách lập phương trình bậc 2}: \textit{Bước 1}: Lập phương trình: Chọn 1 đại lượng chưa biết làm ẩn, đặt đơn vị \& điều kiện thích hợp cho ẩn. Biểu diễn các đại lượng chưa biết khác trong bài toán theo ẩn \& các đại lượng đã biết. Lập phương trình biểu thị sự tương quan giữa các đại lượng trong bài toán. \textit{Bước 2}: Giải phương trình vừa lập được. \textit{Bước 3}: Chọn kết quả thích hợp \& kết luận. \fbox{2} Các dạng toán: Toán chuyển động đều, toán năng suất lao động, toán về quan hệ giữa các số, $\ldots$
 
 %------------------------------------------------------------------------------%
 
