@@ -7,6 +7,22 @@
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\makeatletter
+\DeclareFontFamily{U}{tipa}{}
+\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
+\newcommand{\arc@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}%
+
+\newcommand{\arc}[1]{\mathpalette\arc@arc{#1}}
+
+\newcommand{\arc@arc}[2]{%
+	\sbox0{$\m@th#1#2$}%
+	\vbox{
+		\hbox{\resizebox{\wd0}{\height}{\arc@char}}
+		\nointerlineskip
+		\box0
+	}%
+}
+\makeatother
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{}
@@ -59,12 +75,20 @@
 
 \section{System of 1st-Order Equations -- Hệ Phương Trình Bậc Nhất 2 Ẩn}
 
-\subsection{1st-Order Equations of 2 Unknowns -- Phương Trình Bậc Nhất 2 Ẩn}
+\subsection{1st-order equations of 2 unknowns -- Phương trình bậc nhất 2 ẩn $ax + by = c$}
 \fbox{1} Phương trình bậc nhất 2 ẩn: \fbox{$ax + by = c$} (1), $a,b,c\in\mathbb{R},(a,b)\ne(0,0)$. \fbox{2} $(x_0,y_0)\in\mathbb{R}^2$ là nghiệm của (1) $\Leftrightarrow(x_0,y_0)\in S\Leftrightarrow ax_0 + by_0 = c$. \fbox{3} Tập nghiệm $S$ biểu diễn bởi đường thẳng $(d):ax + by = c$, i.e., $S = \{(x,y)\in\mathbb{R}^2|ax + by = c\} = (d)$. \fbox{4} Nếu $ab\ne0$ thì $(d):ax + by = c\Leftrightarrow y = -\dfrac{a}{b}x + \dfrac{c}{b}$ (hàm số bậc nhất) là đường thẳng cắt cả 2 trục tọa độ $Ox,Oy$ lần lượt tại 2 điểm $\left(\dfrac{c}{a},0\right),\left(0,\dfrac{c}{b}\right)$. \fbox{5} Nếu $a\ne0,b = 0$ thì $(d):ax + 0y = c\Leftrightarrow x = \dfrac{c}{a}$ là đường thẳng song song hoặc trùng với trục tung $Oy$. \fbox{6} Nếu $a = 0,b\ne0$ thì $(d):0x + by = c\Leftrightarrow y = \dfrac{c}{b}$ là đường thẳng song song hoặc trùng với trục hoành $Ox$.
 
 %------------------------------------------------------------------------------%
 
 \section{2nd-Order Function. Quadratic Equation -- Hàm Số $y = ax^2,a\ne0$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0,a\ne0$}
+
+\subsection{Hàm số $y = ax^2,a\ne0$}
+
+\subsection{Đồ thị của hàm số $y = ax^2,a\ne0$}
+
+\subsection{Quadratic equation -- Phương trình bậc 2 1 ẩn $ax^2 + bx + c = 0,a\ne0$}
+
+\subsection{Vi\`ete theorem -- Định lý Vi\`ete}
 
 %------------------------------------------------------------------------------%
 
@@ -74,9 +98,42 @@
 
 \section{Circle -- Đường Tròn}
 
+\subsection{Góc ở tâm. Số đo cung}
+\fbox{1} Cho đường tròn $(O;R)$, $\widehat{AOB} = \alpha\in[0^\circ,180^\circ]$: góc ở tâm. Nếu $0^\circ < \alpha < 180^\circ$, cung nhỏ $\arc{AmB}$ có số đo cung $\mbox{\rm sđ}\arc{AmB} = \alpha$, cung lớn $\arc{AnB}$ có số đo cung $\mbox{\rm sđ}\arc{AnB} = 360^\circ - \alpha$. Nếu $\alpha = 0^\circ$, cung không có số đo $0^\circ$ \& cung cả đường tròn có số đo $360^\circ$. Nếu $\alpha = 180^\circ$, 2 cung $\arc{AmB},\arc{AnB}$ là 2 nửa đường tròn với $\mbox{\rm sđ}\arc{AmB} = \mbox{\rm sđ}\arc{AnB} = 180^\circ$. \fbox{2} Trên cùng 1 đường tròn $(O;R)$ hoặc trên 2 đường tròn bằng nhau $(O;R),(O';R),O\ne O'$, $\mbox{\rm sđ}\arc{AB} = \mbox{\rm sđ}\arc{CD}\Leftrightarrow\arc{AB} = \arc{CD}\Leftrightarrow AB = CD$, $\mbox{\rm sđ}\arc{AB} < \mbox{\rm sđ}\arc{CD}\Leftrightarrow\arc{AB} < \arc{CD}\Leftrightarrow AB < CD$. Tính chất này không còn đúng khi xét trên 2 đường tròn không bằng nhau $(O;R),(O',R')$ với $R\ne R'$. \fbox{3} $B\in\arc{AC}\Rightarrow\mbox{\rm sđ}\arc{AB} + \mbox{\rm sđ}\arc{BC} = \mbox{\rm sđ}\arc{AC}$.
+
+\subsection{Liên hệ giữa cung \& dây}
+\fbox{1} 2 cung chắn giữa 2 dây song song thì bằng nhau.
+
+\subsection{Góc nội tiếp}
+\fbox{1} Cho đường tròn $(O;R)$, $\angle BAC$: góc nội tiếp chắn cung $\arc{BC}$ thì $\widehat{BAC} = \frac{1}{2}\mbox{\rm sđ}\arc{BC} = \frac{1}{2}\widehat{BOC}$. \fbox{2} Các góc nội tiếp bằng nhau chắn các cung bằng nhau. \fbox{3} Các góc nội tiếp cùng chắn 1 cung hoặc các cung bằng nhau thì bằng nhau. \fbox{4} Góc nội tiếp $\le90^\circ$ có số đo bằng nữa số đo góc ở tâm cùng chắn 1 cung. \fbox{5} Góc nội tiếp chắn nửa đường tròn là góc vuông.
+
+\subsection{Góc tạo bởi tia tiếp tuyến \& dây cung}
+\fbox{1} Cho đường tròn $(O;R)$, $Ax$: tia tiếp tuyến, $AB$: dây cung, $\widehat{BAx} = \frac{1}{2}\mbox{\rm sđ}\arc{AB}$. \fbox{2} Trong 1 đường tròn, góc tạo bởi tia tiếp tuyến \& dây cung \& góc nội tiếp cùng chắn 1 cung thì bằng nhau.
+
+\subsection{Góc có đỉnh ở bên trong{\tt/}ngoài đường tròn}
+\fbox{1} $\widehat{BEC}$: góc có đỉnh ở bên trong đường tròn $(O;R)$ chắn 2 cung $\arc{DmA},\arc{BnC}$: $\widehat{BEC} = \frac{1}{2}(\mbox{\rm sđ}\arc{DmA} + \mbox{\rm sđ}\arc{BnC})$. \fbox{2} $\widehat{BEC}$: góc có đỉnh ở bên ngoài đường tròn $(O;R)$ chắn 2 cung nhỏ $\arc{AB},\arc{CD}$: $\widehat{BEC} = \frac{1}{2}|\mbox{\rm sđ}\arc{AB} - \mbox{\rm sđ}\arc{CD}|$.
+
+\subsection{Cung chứa góc}
+\fbox{1} $A,B$ cố định, $\widehat{AMB} = \alpha\in(0^\circ,180^\circ)\Rightarrow$ Quỹ tích điểm $M$ là 2 cung $\arc{AmB},\arc{Am'B}$ chứa góc $\alpha$ dựng trên đoạn $AB$. Nếu $\alpha = 90^\circ$, quỹ tích điểm $M$ là đường tròn đường kính $AB$. \fbox{2} {\sf Bài toán quỹ tích}: \textit{Phần thuận}: Mọi điểm có tính chất $\mathcal{T}$ đều thuộc hình $\mathcal{H}$. \textit{Phần đảo}: Mọi điểm thuộc hình $\mathcal{H}$ đều có tính chất $\mathcal{T}$. \textit{Kết luận}: Quỹ tích các điểm $M$ có tính chất $\mathcal{T}$ là hình $\mathcal{H}$.
+
+\subsection{Tứ giác nội tiếp}
+\fbox{1} $A,B,C,D\in(O)$ (theo thứ tự đó) $\Leftrightarrow ABCD$: tứ giác nội tiếp $\Leftrightarrow\widehat{BAD} + \widehat{BCD} = 180^\circ\Leftrightarrow\widehat{BAC} = \widehat{BDC}$. \fbox{2} Tứ giác nội tiếp có tổng 2 góc đối diện bằng $180^\circ$.
+
+\subsection{Đường tròn ngoại tiếp. Đường tròn nội tiếp}
+$\forall n\in\mathbb{N},n\ge3$: \fbox{1} Đa giác $A_1A_2\ldots A_n$ nội tiếp đường tròn $(O;R)\Leftrightarrow(O;R)$ ngoại tiếp đa giác $A_1A_2\ldots A_n$. \fbox{2} Đa giác $A_1A_2\ldots A_n$ ngoại tiếp đường tròn $(O;R)\Leftrightarrow(O;R)$ nội tiếp đa giác $A_1A_2\ldots A_n$. \fbox{3} Mọi đa giác đều đều có đường tròn ngoại tiếp \& đường tròn nội tiếp. Tâm 2 đường tròn ngoại tiếp \& nội tiếp là tâm đa giác đều. \fbox{4} Tam giác bất kỳ (không nhất thiết phải đều) luôn có đường tròn ngoại tiếp \& đường tròn nội tiếp nhưng đa giác với $n\ge4$ cạnh chưa chắc có đường tròn ngoại tiếp hay đường tròn nội tiếp. Đa giác với $n\ge4$ cạnh phải thỏa 1 số điều kiện nhất định thì mới có đường tròn nội tiếp hoặc đường tròn nội tiếp hoặc cả 2.
+
+\subsection{Độ dài đường tròn, cung tròn. Diện tích hình tròn, hình quạt tròn}
+\fbox{1} Chu vi{\tt/}độ dài đường tròn $(O;R)$: $C = 2\pi R = \pi d$ với $d = 2R$: đường kính. Độ dài cung tròn $n^\circ\in[0^\circ,360^\circ]$: $l = \dfrac{\pi Rn}{180}$. \fbox{2} Diện tích hình tròn $S = \pi R^2$. Diện tích hình quạt tròn $n^\circ$: $S_{\rm q} = \dfrac{\pi R^2n}{360} = \dfrac{lR}{2}$. \fbox{3} Diện tích hình vành khăn $S = \pi(R^2 - r^2)$.
+
 %------------------------------------------------------------------------------%
 
 \section{Cylinder. Cone. Sphere -- Hình Trụ. Hình Nón. Hình Cầu}
+
+\subsection{Hình trụ}
+
+\subsection{Hình nón. Hình nón cụt}
+
+\subsection{Hình cầu}
 
 %------------------------------------------------------------------------------%
 
