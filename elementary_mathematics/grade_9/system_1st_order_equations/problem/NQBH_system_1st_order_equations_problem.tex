@@ -40,7 +40,7 @@
 }
 
 \title{Problem: System of 1st-Order Equations -- Bài Tập: Hệ Phương Trình Bậc Nhất}
-\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\author{Nguyễn Quản Bá Hồng\footnote{Ben Tre City, Vietnam. e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
 \begin{document}
@@ -371,14 +371,22 @@ Cặp số nguyên $(x_0,y_0)$ gọi là 1 \textit{nghiệm riêng}. Theo địn
 \fbox{1} Hệ phương trình bậc nhất 2 ẩn: $a,b,a',b'\in\mathbb{R}$,
 \begin{equation}
 	\label{system of linear eqns 2 unknowns}
-	\left\{\begin{split}
-		ax + by &= c,\ (d),(a,b)\ne(0,0),\\
-		a'x + b'y &= c',\ (d'),(a',b')\ne(0,0),
-	\end{split}\right.
+	\boxed{\left\{\begin{split}
+		ax + by &= c, &(d),(a,b)\ne(0,0),\\
+		a'x + b'y &= c', &(d'),(a',b')\ne(0,0),
+	\end{split}\right.}
 \end{equation}
 có 1 nghiệm $\Leftrightarrow(d)$ cắt $(d')\Leftrightarrow\dfrac{a}{a'}\ne\dfrac{b}{b'}$, vô nghiệm $\Leftrightarrow(d)\parallel(d')\Leftrightarrow\dfrac{a}{a'} = \dfrac{b}{b'}\ne\dfrac{c}{c'}$, vô số nghiệm $\Leftrightarrow(d)\equiv(d')\Leftrightarrow\dfrac{a}{a'} = \dfrac{b}{b'} = \dfrac{c}{c'}$. \fbox{2} \textit{Phương pháp thế}: Biểu diễn 1 ẩn theo ẩn kia. Biến hệ phương trình thành hệ mới có 1 phương trình 1 ẩn. Giải phương trình 1 ẩn rồi suy ra nghiệm của hệ. \fbox{3} \textit{Phương pháp cộng đại số}: Nhân 2 vế của 2 phương trình với 1 số thích hợp để các hệ số của 1 ẩn nào đó trong 2 phương trình bằng nhau hoặc đối nhau. Dùng quy tắc cộng được hệ mới có 1 phương trình 1 ẩn. Giải phương trình 1 ẩn rồi suy ra nghiệm của hệ. \fbox{4} \textit{Giải hệ phương trình bằng phương pháp định thức{\tt/}Cramer}: Đặt $D = ab' - a'b,D_x = b'c - bc',D_y = c'a - ca'$. Nếu $D\ne0$, hệ \eqref{system of linear eqns 2 unknowns} có 1 nghiệm duy nhất $(x,y) = \left(\dfrac{D_x}{D},\dfrac{D_y}{D}\right) = \left(\dfrac{b'c - bc'}{ab' - a'b},\dfrac{c'a - ca'}{ab' - a'b}\right)$. Nếu $D = 0,(D_x,D_y)\ne(0,0)$, hệ \eqref{system of linear eqns 2 unknowns} vô nghiệm. Nếu $D = D_x = D_y = 0$, hệ \eqref{system of linear eqns 2 unknowns} có vô số nghiệm. Biểu thức $pq' - p'q$ gọi là 1 \textit{định thức cấp 2}. Phương pháp định thức rất có lợi trong việc giải \& biện luận hệ phương trình bậc nhất nhiều ẩn.\\
 
 \noindent\cite[\S2, pp. 12--18]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. LT1. HD2. LT2. HD3. LT3. LT4. 1. 2. 3. 4. 5. 6. \cite[\S3, pp. 19--25]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. LT1. LT2. LT3. HD2. LT4. HD3. LT5. LT6. 1. 2. 3. 4. 5. 6. 7.
+
+\begin{baitoan}[{\sf Programming}: Solve system of linear equations with 2 unknowns]
+	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải hệ phương trình bậc nhất 2 ẩn \eqref{system of linear eqns 2 unknowns}.
+	\begin{itemize}
+		\item {\sf Input}: 6 hệ số $a,b,c,a',b',c'\in\mathbb{R}$ được nhập từ bàn phím.
+		\item {\sf Output}: Số nghiệm của hệ phương trình: {\tt0}: vô nghiệm. {\tt1}: duy nhất 1 nghiệm, xuất ra nghiệm này với dạng {\tt(x0,y0)}. {\tt Infinity}: vô số nghiệm, xuất ra phương trình đường thẳng chứa tất cả các nghiệm này dạng {\tt Ax + By = C}.
+	\end{itemize}
+\end{baitoan}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, H1, p. 14]
 	Đoán số nghiệm của hệ phương trình:
