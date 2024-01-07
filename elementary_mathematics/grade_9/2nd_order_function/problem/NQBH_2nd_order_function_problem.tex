@@ -805,7 +805,9 @@ Khi giải hệ phương trình đối xứng, đặt $S\coloneqq x + y,P\colone
 %------------------------------------------------------------------------------%
 
 \section{Phương Trình Quy Về Phương Trình Bậc 2}
-\fbox{1} \textit{Phương trình trùng phương}: $ax^4 + bx^2 + c = 0,a,b,c\in\mathbb{R},a\ne0$ (1). Đặt $t\coloneqq x^2\ge0$ được phương trình bậc 2 (trung gian) $at^2 + bt + c = 0$. \fbox{2} \textit{Phương trình chứa ẩn ở mẫu}: Tìm ĐKXĐ của phương trình. Quy đồng mẫu thức 2 vế rồi khử mẫu thức. Giải phương trình vừa nhận được. Trong các giá trị tìm được của ẩn: Loại các giá trị không thỏa mãn ĐKXĐ. Các giá trị thỏa mãn ĐKXĐ là nghiệm của phương trình. \fbox{3} \textit{Phương trình tích}: $\prod_{i=1}^n f_i(x) = f_1(x)f_2(x)\cdots f_n(x) = 0\Leftrightarrow f_1(x) = 0$ or $f_2(x) = 0$ or $\ldots$ or $f_n(x) = 0$.\\
+\fbox{1} \textit{Phương trình trùng phương}: $ax^4 + bx^2 + c = 0,a,b,c\in\mathbb{R},a\ne0$ (1). Đặt $t\coloneqq x^2\ge0$ được phương trình bậc 2 (trung gian) $at^2 + bt + c = 0$. \fbox{2} \textit{Phương trình chứa ẩn ở mẫu}: Tìm ĐKXĐ của phương trình. Quy đồng mẫu thức 2 vế rồi khử mẫu thức. Giải phương trình vừa nhận được. Trong các giá trị tìm được của ẩn: Loại các giá trị không thỏa mãn ĐKXĐ. Các giá trị thỏa mãn ĐKXĐ là nghiệm của phương trình. \fbox{3} \textit{Phương trình tích}: $\prod_{i=1}^n f_i(x) = f_1(x)f_2(x)\cdots f_n(x) = 0\Leftrightarrow f_1(x) = 0$ or $f_2(x) = 0$ or $\ldots$ or $f_n(x) = 0$.
+
+\subsection{Phương trình trùng phương}
 
 \begin{baitoan}[{\sf Program}: Solve biquadratic equation]
 	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải phương trình bậc 2 1 ẩn $ax^4 + bx^2 + c = 0$.
@@ -823,6 +825,9 @@ Khi giải hệ phương trình đối xứng, đặt $S\coloneqq x + y,P\colone
 	\end{itemize}
 \end{baitoan}
 
+\begin{baitoan}[Mở rộng phương trình trùng phương]
+	Biện luận theo 3 tham số $a,b,c\in\mathbb{R},a\ne0$ để giải phương trình: (a) $ax^6 + bx^3 + c = 0$. (b) $ax^8 + bx^4 + c = 0$. (c) $ax^{2n} + bx^n + c = 0$ với $n\in\mathbb{Z}$.
+\end{baitoan}
 Giải phương trình:
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, H1, p. 59]
@@ -838,7 +843,7 @@ Giải phương trình:
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, H4, p. 59]
-	Nhẩm nhanh nghiệm của phương trình: (a) $x^4 - 2x^2 + 1 = 0$. (b) $x^4 - 10x^2 + 9 = 0$. (c) $(x^2 - 7)(x^2 + 9) = 0$.
+	Nhẩm nhanh nghiệm: (a) $x^4 - 2x^2 + 1 = 0$. (b) $x^4 - 10x^2 + 9 = 0$. (c) $(x^2 - 7)(x^2 + 9) = 0$.
 \end{baitoan}
 Giải phương trình:
 
@@ -904,21 +909,55 @@ Tartaglia đã giải được phương trình bậc 3 có dạng $x^3 + px + q 
 	x = \sqrt[3]{-\frac{q}{2} + \sqrt{\frac{q^2}{4} + \frac{p^3}{27}}} + \sqrt[3]{-\frac{q}{2} - \sqrt{\frac{q^2}{4} + \frac{p^3}{27}}}.
 \end{align*}
 
+\subsection{Phương trình bậc 4 có hệ số đối xứng}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, p. 64, phương trình bậc 4 có hệ số đối xứng]
 	Giải phương trình bằng cách chia 2 vế cho $x^2\ne0$ \& đặt ẩn phụ $y\coloneqq x + \dfrac{1}{x}$: (a) $2x^4 - 5x^3 + 4x^2 - 5x + 2 = 0$. (b) $ax^4 + bx^3 + cx^2 + bx + a = 0$, $a,b,c\in\mathbb{R},a\ne0$
 \end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, VD40, p. 89]
+	Giải phương trình $10x^4 - 27x^3 - 110x^2 - 27x + 10 = 0$.
+\end{baitoan}
+
+\subsection{Phương trình bậc 5 có hệ số đối xứng}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, p. 65, phương trình bậc 5 có hệ số đối xứng]
 	Biện luận theo 3 tham số $a,b,c\in\mathbb{R},a\ne0$ để giải phương trình bậc 5 có hệ số đối xứng $ax^5 + bx^4 + cx^3 + cx^2 + bx + a = 0$.
 \end{baitoan}
 
+\subsection{Phương trình hồi quy}
+
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, p. 65, phương trình hồi quy]
 	(a) Biện luận theo 5 tham số $a,b,c,m,n\in\mathbb{R},a\ne0$ để giải phương trình hồi quy $ax^4 + bx^3 + cx^2 + mx + n = 0$ với $\dfrac{n}{a} = \left(\dfrac{m}{b}\right)^2$ bằng cách chia 2 vế cho $x^2\ne0$ rồi đặt ẩn phụ $y\coloneqq bx + \dfrac{m}{x}$. (b) Giải phương trình: $x^4 - 3x^3 - 8x^2 + 6x + 4 = 0$.
 \end{baitoan}
 
-\begin{baitoan}[Mở rộng phương trình trùng phương]
-	Biện luận theo 3 tham số $a,b,c\in\mathbb{R},a\ne0$ để giải phương trình: (a) $ax^6 + bx^3 + c = 0$. (b) $ax^8 + bx^4 + c = 0$. (c) $ax^{2n} + bx^n + c = 0$ với $n\in\mathbb{Z}$.
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, VD41, p. 91]
+	Giải phương trình $x^4 - 4x^3 - 9x^2 + 8x + 4 = 0$.
 \end{baitoan}
+
+\subsection{Phương trình $(x + a)(x + b)(x + c)(x + d) = m$ với $a + d = b + c$}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, VD42, p. 92]
+	Giải phương trình $(x + 1)(x + 3)(x + 5)(x + 7) = -15$.
+\end{baitoan}
+
+\subsection{Phương trình $(x + a)(x + b)(x + c)(x + d) = mx^2$ với $ad = bc$}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, VD43, p. 93]
+	Giải phương trình $(x - 4)(x - 5)9x - 8)(x - 10) = 72x^2$.
+\end{baitoan}
+
+\subsection{Phương trình $(x + a)^4 + (x + b)^4 = c$}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, VD44, p. 94]
+	Giải phương trình $(x + 3)^4 + (x - 1)^4 = 626$.
+\end{baitoan}
+
+\begin{baitoan}
+	Giải \& biện luận phương trình $(x + a)^4 + (x + b)^4 = c$ với $a,b,c\in\mathbb{R}$ bằng cách đặt ẩn phụ $y = x + \dfrac{a + b}{2}$.
+\end{baitoan}
+
+\subsection{Miscellaneous}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9_old}, VD38, p. 85]
 	Cho phương trình $x^4 - (3m - 2)x^2 + 1 = 0$. (a) Giải phương trình với $m = 2$. (b) Tìm $m\in\mathbb{R}$ để phương trình có đúng 2 nghiệm.
@@ -983,6 +1022,30 @@ Giải phương trình:
 
 \begin{baitoan}[\cite{Tuyen_Toan_9_old}, 247., p. 88]
 	Tìm $m\in\mathbb{R}$ để phương trình $\sqrt{x - 6\sqrt{x - 9}} + x + \sqrt{x - 9} = m$ có nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 248., p. 94]
+	(a) $2x^4 - 13x^3 + 24x^2 - 13x + 2 = 0$. (b) $x^4 - 10x^3 + 11x^2 - 10x + 1 = 0$. (c) $3x^5 - 10x^4 + 3x^3 + 3x^2 - 10x + 3 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 249., p. 94]
+	(a) $x^4 + 5x^3 + 10x^2 + 15x + 9 = 0$. (b) $x^4 + 5x^3 - 14x^2 - 20x + 16 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 250., pp. 94--95]
+	Cho phương trình $3x^4 - mx^3 - 16x^2 + mx + 3 = 0$. (a) Chứng minh phương trình luôn có nghiệm. (b) Giải phương trình với $m = 7$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 251., p. 95]
+	(a) $(x + 2)(x + 5)(x - 6)(x - 9) = 280$. (b) $(x^2 + 7x + 12)(x^2 - 15x + 56) = 180$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 252., p. 95]
+	$(x + 10)(x + 12)(x + 15)(x + 18) = 2x^2$. (b) $(x - 90)(x - 35)(x + 18)(x + 7) = -1080x^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 253., p. 95]
+	(a) $(x - 2.5)^4 + (x - 1.5)^4 = 17$. (b) $(x + 5)^4 - (x + 1)^4 = 80$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD85, p. 34]
@@ -1166,7 +1229,7 @@ Giải phương trình:
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 304., p. 49]
-	(a) Chứng minh nếu $x = \dfrac{1}{2}\left(a - \dfrac{1}{a}\right)$ thì $4x^3 + 3x = \dfrac{1}{2}\left(a^3 - \dfrac{1}{a^3}\right)$. (b) Giải phương trình $4x^3 + 3x = \dfrac{3}{4}$. (c) Giải phương trình $4x^3 + 3x = \dfrac{4}{3}$.
+	(a) Chứng minh nếu $x = \dfrac{1}{2}\left(a - \dfrac{1}{a}\right)$ thì $4x^3 + 3x = \dfrac{1}{2}\left(a^3 - \dfrac{1}{a^3}\right)$. (b) Giải phương trình $4x^3 + 3x = \dfrac{3}{4}$. (c) Giải phương trình $4x^3 + 3x = m\in\mathbb{R}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 305., pp. 49--50, định lý Vi\`ete cho phương trình bậc 3]
