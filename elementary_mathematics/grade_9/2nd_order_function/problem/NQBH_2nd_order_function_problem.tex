@@ -190,7 +190,7 @@
 	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải phương trình bậc 2 1 ẩn $ax^2 + bx + c = 0$.
 	\begin{itemize}
 		\item {\sf Input}: 3 hệ số $a,b,c\in\mathbb{R}$ được nhập từ bàn phím.
-		\item {\sf Output}: Số nghiệm của hệ phương trình: {\tt0}: vô nghiệm thực. {\tt1}: duy nhất 1 nghiệm thực kép, xuất ra nghiệm này với định dạng {\tt x = x0}. {\tt2}: 2 nghiệm thực phân biệt, xuất ra 2 nghiệm này với định dạng {\tt x1 = <root1>, x2 = <root2>}.
+		\item {\sf Output}: Số nghiệm của phương trình \& liệt kê các nghiệm đó, {\rm GTNN, GTLN}, các khoảng đồng biến, nghịch biến.
 	\end{itemize}
 \end{baitoan}
 
@@ -806,6 +806,22 @@ Khi giải hệ phương trình đối xứng, đặt $S\coloneqq x + y,P\colone
 
 \section{Phương Trình Quy Về Phương Trình Bậc 2}
 \fbox{1} \textit{Phương trình trùng phương}: $ax^4 + bx^2 + c = 0,a,b,c\in\mathbb{R},a\ne0$ (1). Đặt $t\coloneqq x^2\ge0$ được phương trình bậc 2 (trung gian) $at^2 + bt + c = 0$. \fbox{2} \textit{Phương trình chứa ẩn ở mẫu}: Tìm ĐKXĐ của phương trình. Quy đồng mẫu thức 2 vế rồi khử mẫu thức. Giải phương trình vừa nhận được. Trong các giá trị tìm được của ẩn: Loại các giá trị không thỏa mãn ĐKXĐ. Các giá trị thỏa mãn ĐKXĐ là nghiệm của phương trình. \fbox{3} \textit{Phương trình tích}: $\prod_{i=1}^n f_i(x) = f_1(x)f_2(x)\cdots f_n(x) = 0\Leftrightarrow f_1(x) = 0$ or $f_2(x) = 0$ or $\ldots$ or $f_n(x) = 0$.\\
+
+\begin{baitoan}[{\sf Program}: Solve biquadratic equation]
+	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải phương trình bậc 2 1 ẩn $ax^4 + bx^2 + c = 0$.
+	\begin{itemize}
+		\item {\sf Input}: 3 hệ số $a,b,c\in\mathbb{R}$ được nhập từ bàn phím.
+		\item {\sf Output}: Số nghiệm của phương trình \& liệt kê các nghiệm đó, {\rm GTNN, GTLN}, các khoảng đồng biến, nghịch biến.
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[{\sf Program}: Solve multi-quadratic equation]
+	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải phương trình bậc 2 1 ẩn $ax^{2n} + bx^n + c = 0$.
+	\begin{itemize}
+		\item {\sf Input}: $n\in\mathbb{N}^\star$, 3 hệ số $a,b,c\in\mathbb{R}$ được nhập từ bàn phím.
+		\item {\sf Output}: Số nghiệm của phương trình \& liệt kê các nghiệm đó, {\rm GTNN, GTLN}, các khoảng đồng biến, nghịch biến.
+	\end{itemize}
+\end{baitoan}
 
 Giải phương trình:
 
