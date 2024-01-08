@@ -404,11 +404,11 @@ Giải \& biện luận: (i) Nếu $ab' - a'b\ne0$ thì hệ phương trình có
 	(ab' - a'b)y &= ac' - a'c.
 \end{split}\right.
 \end{equation*}
-Giải \& biện luận hệ này tương tự. \fbox{4} \textit{Giải hệ phương trình bằng phương pháp định thức{\tt/}Cramer}: Đặt $D = ab' - a'b,D_x = b'c - bc',D_y = c'a - ca'$. Nếu $D\ne0$, hệ \eqref{system of linear eqns 2 unknowns} có 1 nghiệm duy nhất $(x,y) = \left(\dfrac{D_x}{D},\dfrac{D_y}{D}\right) = \left(\dfrac{b'c - bc'}{ab' - a'b},\dfrac{c'a - ca'}{ab' - a'b}\right)$. Nếu $D = 0,(D_x,D_y)\ne(0,0)$, hệ \eqref{system of linear eqns 2 unknowns} vô nghiệm. Nếu $D = D_x = D_y = 0$, hệ \eqref{system of linear eqns 2 unknowns} có vô số nghiệm. Biểu thức $pq' - p'q$ gọi là 1 \textit{định thức cấp 2}. Phương pháp định thức rất có lợi trong việc giải \& biện luận hệ phương trình bậc nhất nhiều ẩn. \fbox{5} Khái niệm hệ 2 phương trình còn được mở rộng thành \textit{hệ phương trình tuyến tính} (linear system) $n\in\mathbb{N}^\star$ ẩn có dạng $A{\bf x} = {\bf b}$ với $A\in\mathbb{R}^{n\times n}$: ma trận, ${\bf x},{\bf b}\in\mathbb{R}^n$: vector, bao gồm $n$ phương trình bậc nhất $n$ ẩn. Hệ phương trình tuyến tính là 1 trong các đối tượng nghiên cứu chính của \textit{Đại Số Tuyến Tính} (Linear Algebra).\\
+Giải \& biện luận hệ này tương tự. \fbox{4} \textit{Giải hệ phương trình bằng phương pháp định thức{\tt/}Cramer}: Đặt $D = ab' - a'b,D_x = b'c - bc',D_y = c'a - ca'$. Nếu $D\ne0$, hệ \eqref{system of linear eqns 2 unknowns} có 1 nghiệm duy nhất $(x,y) = \left(\dfrac{D_x}{D},\dfrac{D_y}{D}\right) = \left(\dfrac{b'c - bc'}{ab' - a'b},\dfrac{c'a - ca'}{ab' - a'b}\right)$. Nếu $D = 0,(D_x,D_y)\ne(0,0)$, hệ \eqref{system of linear eqns 2 unknowns} vô nghiệm. Nếu $D = D_x = D_y = 0$, hệ \eqref{system of linear eqns 2 unknowns} có vô số nghiệm. Biểu thức $pq' - p'q$ gọi là 1 \textit{định thức cấp 2}. Phương pháp định thức rất có lợi trong việc giải \& biện luận hệ phương trình bậc nhất nhiều ẩn. \fbox{5} Khái niệm hệ 2 phương trình còn được mở rộng thành \textit{hệ phương trình tuyến tính} (linear system) $n\in\mathbb{N}^\star$ ẩn có dạng $A{\bf x} = {\bf b}$ với $A\in\mathbb{R}^{n\times n}$: ma trận, ${\bf x},{\bf b}\in\mathbb{R}^n$: vector, bao gồm $n$ phương trình bậc nhất $n$ ẩn. Hệ phương trình tuyến tính là 1 trong các đối tượng nghiên cứu cơ bản của \textit{Đại Số Tuyến Tính} (Linear Algebra).\\
 
 \noindent\cite[\S2, pp. 12--18]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. LT1. HD2. LT2. HD3. LT3. LT4. 1. 2. 3. 4. 5. 6. \cite[\S3, pp. 19--25]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. LT1. LT2. LT3. HD2. LT4. HD3. LT5. LT6. 1. 2. 3. 4. 5. 6. 7.
 
-\begin{baitoan}[{\sf Programm}: Solve system of linear equations with 2 unknowns]
+\begin{baitoan}[{\sf Program}: Solve system of linear equations with 2 unknowns]
 	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải hệ phương trình bậc nhất 2 ẩn \eqref{system of linear eqns 2 unknowns}.
 	\begin{itemize}
 		\item {\sf Input}: 6 hệ số $a,b,c,a',b',c'\in\mathbb{R}$ được nhập từ bàn phím.
@@ -416,7 +416,7 @@ Giải \& biện luận hệ này tương tự. \fbox{4} \textit{Giải hệ ph�
 	\end{itemize}
 \end{baitoan}
 
-\begin{baitoan}[{\sf Programm}: Solve system of linear equations with 3 unknowns]
+\begin{baitoan}[{\sf Program}: Solve system of linear equations with 3 unknowns]
 	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải hệ phương trình bậc nhất 3 ẩn:
 	\begin{equation*}
 		\left\{\begin{split}
