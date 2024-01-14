@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: 3D Geometry -- Bài Tập: Hình Học Không Gian}
+\author{Nguyễn Quản Bá Hồng\footnote{e-mail: \texttt{nguyenquanbahong@gmail.com}, website: \url{https://nqbh.github.io}, Ben Tre City, Vietnam..}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Line \& Plane in 3D Space -- Đường Thẳng \& Mặt Phẳng Trong Không Gian}
+
+\begin{baitoan}[\cite{BTNC_Toan_11_HH}, VD1.1, p. 5]
+	Cho hình chóp $S.ABC$, mặt phẳng $(\alpha)$ cắt $SA,SB,SC$ lần lượt tại $A',B',C'$. Giả sử $B'C'$ cắt $BC$ tại M, $C'A'$ cắt CA tại N, $A'B'$ cắt AB tại P. Chứng minh $M,N,P$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{BTNC_Toan_11_HH}, VD1.2, p. 5]
+	Cho hình chóp $S.ABCD$. 1 mặt phẳng $(\alpha)$ cắt 4 cạnh $SA,SB,SC,SD$ lần lượt tại 4 điểm $A',B',C',D'$. $O = AC\cap BC,O' = A'C'\cap B'D',M = AD\cap BC,M' = A'D'\cap B'C'$. Chứng minh: (a) $S,O,O'$ thẳng hàng. (b) $S,M,M'$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{BTNC_Toan_11_HH}, VD1.3, p. 5]
+	Cho tứ diện ABCD. $M,N$ lần lượt là trung điểm của $AB,CD$. G là trung điểm của MN, $A'$ là trọng tâm $\Delta BCD$. Chứng minh $A,A',G$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{BTNC_Toan_11_HH}, VD1.4, p. 6]
+	Cho tứ diện ABCD. 1 mặt phẳng $(\alpha)$ cắt $AB,BC,CD,DA$ lần lượt tại 4 điểm $M,N,P,Q$. Giả sử $MN\nparallel PQ$. Chứng minh 3 đường thẳng $MN,AC,PQ$ đồng quy tại 1 điểm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{BTNC_Toan_11_HH}, VD1.5, p. 6]
+	Trong không gian cho $n\in\mathbb{N},n\ge3$ đường thẳng sao cho 2 đường thẳng bất kỳ trong chúng đều cắt nhau \& không có 3 đường thẳng nào trong chúng đồng phẳng. Chứng minh $n$ đường thẳng này đồng quy tại 1 điểm.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Quan Hệ Vuông Góc Trong Không Gian, Khoảng Cách, Góc, \& Thể Tích}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
