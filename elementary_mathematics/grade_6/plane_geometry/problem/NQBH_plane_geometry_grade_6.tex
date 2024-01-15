@@ -1,0 +1,227 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Plane Geometry -- Bài Tập: Hình Học Phẳng}
+\author{Nguyễn Quản Bá Hồng\footnote{e-mail: \texttt{nguyenquanbahong@gmail.com}, website: \url{https://nqbh.github.io}, Ben Tre City, Vietnam.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+
+\section{Plane. Point. Line -- Mặt Phẳng. Điểm. Đường Thẳng}
+Mỗi hình là 1 tập hợp điểm. Hình có thể chỉ gồm 1 điểm. Điểm $A$ thuộc đường thẳng $a$: $a\in A$. Điểm $B$ không thuộc đường thẳng $a$: $B\notin a$. Có 1 \& chỉ 1 đường thẳng đi qua 2 điểm phân biệt. Khi 3 điểm cùng nằm trên 1 đường thẳng, ta nói chúng \textit{thẳng hàng}. Trong 3 điểm thẳng hàng, có 1 \& chỉ 1 điểm nằm giữa 2 điểm còn lại.
+
+\fbox{\bf 1} 3 hình hình học không định nghĩa: mặt phẳng, điểm, đường thẳng. \fbox{\bf 2} 2 tính chất cơ bản: \textit{Tiên đề về sự xác định đường thẳng}: Có 1 đường thẳng \& chỉ 1 đường thẳng đi qua 2 điểm phân biệt. \textit{Tính chất về thứ tự của 3 điểm trên đường thẳng}: Trong 3 điểm thẳng hàng, có 1 điểm \& chỉ 1 điểm nằm giữa 2 điểm còn lại. \fbox{\bf 3} 1 quan hệ hình học không định nghĩa: Điểm nằm giữa 2 điểm khác. \fbox{\bf 4} 1 quan hệ hình học được định nghĩa: 3 điểm thẳng hàng.
+
+\begin{center}
+	\begin{tikzpicture}
+		\draw (0,0)--(5,0) node[above]{$a$};
+		\draw (1,0) circle (0.05) node[above]{$A$};
+		\draw (2,0) circle (0.05) node[above]{$B$};
+		\draw (4,0) circle (0.05) node[above]{$C$};
+		\draw (3,1) circle (0.05) node[above]{$D$};
+	\end{tikzpicture}
+\end{center}
+Bài tập SGK: \cite[\textbf{1.}--\textbf{7.}, p. 79]{SGK_Toan_6_Canh_Dieu_tap_1}.
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 1., p. 88]
+	\emph{Đ\texttt{/}S}? (a) Nếu 3 điểm $A,B,C$ thẳng hàng thì điểm $B$ luôn nằm giữa 2 điểm $A,C$. (b) Có 2 đường thẳng đi qua 2 điểm $M,N$. (c) Nếu 2 điểm $I,K$ nằm trên đường thẳng $d$ \& điểm $H$ không thuộc đường thẳng $d$ thì 3 điểm $I,K,H$ không thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 3., p. 88]
+	(a) Vẽ 2 điểm $A,B$ \& đường thẳng $xy$ đi qua 2 điểm này. (b) Vẽ điểm $C$ sao cho $C\in xy$ \& $C$ nằm giữa $A$ \& $B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 4., p. 88]
+	Cho 3 điểm $A,B,C$ không thẳng hàng. (a) Vẽ đường thẳng $m$ không đi qua cả $A,B,C$; (b) Vẽ đường thẳng $n$ sao cho $B\in n$ \& $A\notin n$, $C\notin n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 5., p. 88]
+	Vẽ đường thẳng $a$. Lấy 3 điểm $A,B,C$ thuộc $a$ \& $D$ không thuộc $a$. Kẻ các đường thẳng đi qua các cặp điểm. (a) Kẻ được tất cả bao nhiêu đường thẳng? Kể tên các đường thẳng đó. (b) Điểm $D$ nằm trên những đường thẳng nào? Kể tên các đường thẳng đó.
+\end{baitoan}
+Bài tập phụ thuộc hình vẽ: \cite[\textbf{6.--9.}, p. 89]{SBT_Toan_6_Canh_Dieu_tap_2}.
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 10., p. 88]
+	Vẽ hình theo các cách diễn đạt sau: (a) $M$ là điểm nằm giữa 2 điểm $A,B$; điểm $N$ không nằm giữa 2 điểm $A,B$ \& $A,B,N$ thẳng hàng. (b) Điểm $B$ nằm giữa 2 điểm $A,N$; điểm $M$ nằm giữa 2 điểm $A,B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 11., p. 88]
+	Bác Long có $10$ cây cảnh quý, bác muốn trồng thành $5$ hàng, mỗi hàng $4$ cây. Vẽ sơ đồ để trồng $10$ cây đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 12., p. 88]
+	Xếp $9$ viên bi thành: (a) $8$ hàng, mỗi hàng có $3$ viên; (b) $10$ hàng, mỗi hàng có $3$ viên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD8, p. 87, \cite{Binh_Toan_6_tap_2}, 1., p. 65]
+	Cho 4 điểm $A,B,C,D$ sao cho 3 điểm $A,B,C$ thẳng hàng; 3 điểm $B,C,D$ cũng thẳng hàng. Hỏi 4 điểm $A,B,C,D$ có thẳng hàng không? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_6}, VD8, p. 87]
+	Trên mặt phẳng, cho $n$ điểm $A_i$, $i = 1,2,\ldots,n$, $n\in\mathbb{N}$, $n\ge3$. Giả sử $3$ điểm bất kỳ trong số chúng đều thẳng hàng. Hỏi $n$ điểm đó có thằng hàng không?
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_6}, VD8, p. 87]
+	Trên mặt phẳng, cho $n$ điểm $A_i$, $i = 1,2,\ldots,n$, $n\in\mathbb{N}$, $n\ge3$. Giả sử 3 điểm $A_i,A_{i+1},A_{i+2}$ thẳng hàng $\forall i = 1,2,\ldots,n-2$. Hỏi $n$ điểm đó có thằng hàng không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD9, p. 88]
+	Trên đường thẳng $a$ lấy 4 điểm $M,N,P,Q$ theo thứ tự đó. Hỏi: (a) Điểm $N$ nằm giữa 2 điểm nào? (b) Điểm $P$ không nằm giữa 2 điểm nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD10, p. 88]
+	Cho trước $12$ điểm trong đó không có 3 điểm nào thẳng hàng. Cứ qua 2 điểm vẽ 1 đường thẳng. Hỏi: (a) Vẽ được tất cả bao nhiêu đường thẳng? (b) Nếu thay $12$ điểm bằng $n$ điểm, $n\in\mathbb{N}$, $n\ge2$, thì vẽ được bao nhiêu đường thẳng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 38., p. 88]
+	Vẽ 5 điểm $C,D,E,F,G$ không thẳng hàng nhưng 3 điểm $C,D,E$ thẳng hàng; 3 điểm $E,F,G$ thằng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 39., p. 89]
+	Trái Đất quay quanh Mặt Trời; Mặt Trăng quay quanh Trái Đất. Mặt Trời chiếu sáng tới Trái Đất \& Mặt Trăng. Khi 3 thiên thể này thẳng hàng thì xảy ra nhật thực hoặc nguyệt thực (là hiện tượng Mặt Trời hoặc Mặt Trăng đang sáng bỗng nhiên bị che lấp \& tối đi). Hỏi: (a) Khi xảy ra nhật thực thì Mặt Trăng ở vị trí nào? (b) Khi xảy ra nguyệt thực thì Trái Đất ở vị trí nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 40., p. 89]
+	Cho tứ giác $ABCD$, $O$ là giao điểm 2 đường chéo. Qua $O$, vẽ 2 đường thẳng $a,b$ sao cho $a$ cắt cạnh $AB,CD$ lần lượt tại $M,N$, $b$ cắt cạnh $AD,BC$ lần lượt tại $E,F$. Có bao nhiêu trường hợp 1 điểm nằm giữa 2 điểm khác? Kể ra tất cả các trường hợp đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 41., p. 89]
+	Theo bài toán trước, ta có thể trồng $9$ cây thành $8$ hàng, mỗi hàng $3$ cây. Vẽ sơ đồ trồng $9$ cây thành: (a) $9$ hàng, mỗi hàng $3$ cây; (b) $10$ hàng, mỗi hàng $3$ cây.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 42., p. 89]
+	Cho trước 2 điểm $A,B$. (a) Vẽ đường thẳng $m$ đi qua $A,B$; (b) Vẽ đường thẳng $n$ đi qua $A$ nhưng không đi qua $B$; (c) Vẽ đường thẳng $p$ không có điểm chung nào với đường thẳng $m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 43., p. 89]
+	Cho trước 4 điểm $A,B,C,D$ trong đó không có 3 điểm nào thẳng hàng. Xác định điểm $M$ sao cho 3 điểm $M,A,B$ thẳng hàng; 3 điểm $M,C,D$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 44., p. 89]
+	Cho 3 điểm $C,O,D$ thẳng hàng. Biết điểm $C$ không nằm giữa 2 điểm $O,D$, điểm $O$ không nằm giữa 2 điểm $C,D$. Hỏi trong 3 điểm đã cho, điểm nào nằm giữa 2 điểm còn lại?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 45., p. 89]
+	Cho 3 điểm $A,B,C$ trong đó không có điểm nào nằm giữa 2 điểm còn lại. Hỏi 3 điểm $A,B,C$ có thẳng hàng không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 46., p. 89]
+	Cho trước 6 điểm. Cứ qua 2 điểm vẽ 1 đường thẳng. Hỏi: (a) Nếu trong 6 điểm đó không có 3 điểm nào thẳng hàng thì sẽ vẽ được bao nhiêu đường thẳng? (b) Nếu trong 6 điểm đó có đúng 3 điểm thẳng hàng thì sẽ vẽ được bao nhiêu đường thẳng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 47., p. 89]
+	Giải bóng đá vô địch quốc gia hạng chuyên nghiệp có 16 đội tham gia đấu vòng tròn 2 lượt đi \& về. Tính tổng số trận đấu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 48., p. 89]
+	Cho trước $n$ điểm, $n\in\mathbb{N}$, $n\ge2$, trong đó không có 3 điểm nào thẳng hàng. Cứ qua 2 điểm vẽ 1 đường thẳng. Biết số đường thẳng vẽ được là $36$, tính giá trị của $n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 49., p. 89]
+	Cho 11 đường thẳng đôi một cắt nhau. Hỏi: (a) Nếu trong số đó không có 3 đường thẳng nào cùng đi qua 1 điểm thì có tất cả bao nhiêu giao điểm của chúng? (b) Nếu trong 11 đường thẳng đó có đúng 5 đường thẳng cùng đi qua 1 điểm thì có tất cả bao nhiêu giao điểm của chúng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 50., p. 90]
+	Cho trước $n$ điểm, $n\in\mathbb{N}$, $n\ge2$, trong đó không có 3 điểm nào thẳng hàng. Cứ qua 2 điểm vẽ 1 đường thẳng. Tìm $n$ biết nếu có thêm 1 điểm (không thẳng hàng với bất kỳ 2 điểm nào trong số $n$ điểm đã cho) thì số đường thẳng vẽ được tăng thêm là $8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 51., p. 90]
+	Cho trước $13$ điểm trong đó không có 3 điểm nào thẳng hàng. Cứ qua 2 điểm vẽ 1 đường thẳng. Nếu ta bớt đi $4$ điểm thì số đường thẳng vẽ được giảm đi bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 52., p. 90]
+	Cho trước $n$ điểm, $n\in\mathbb{N}$, $n\ge2$, trong đó không có 3 điểm nào thẳng hàng. Nếu bớt đi 1 điểm thì số đường thẳng vẽ được qua các cặp điểm giảm đi $10$ đường thẳng, tính $n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, VD1, p. 64]
+	Cho 2 đường thẳng cắt nhau. Nếu vẽ thêm 1 đường thẳng thứ 3 cắt cả 2 đường thẳng trên thì số giao điểm của các đường thẳng thay đổi như thế nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, VD2, p. 64]
+	Giải thích vì sao 2 đường thẳng phân biệt hoặc có 1 điểm chung, hoặc không có điểm chung nào.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 2., p. 65]
+	Vẽ 5 điểm $A,B,C,D,O$ sao cho 3 điểm $A,B,C$ thẳng hàng, 3 điểm $B,C,D$ thẳng hàng, 3 điểm $C,D,O$ không thẳng hàng. (a) $A,B,D$ có thẳng hàng không? Vì sao? (b) Kẻ các đường thẳng, mỗi đường thẳng đi qua ít nhất 2 điểm trong 5 điểm nói trên. Kể tên các đường thẳng trong hình vẽ (các đường thẳng trùng nhau chỉ kể là 1 đường thẳng).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 3., p. 65]
+	Cho các điểm $A,B,C,D,E$ thuộc cùng 1 đường thẳng theo thứ tự ấy. Điểm $C$ nằm giữa 2 điểm nào? Điểm $C$ không nằm giữa 2 điểm nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 4., p. 65]
+	Cho $A,B,C$ là 3 điểm thẳng hàng. Điểm nào nằm giữa 2 điểm còn lại nếu $A$ không nằm giữa $B$ \& $C$, $B$ không nằm giữa $A$ \& $C$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 5., p. 65]
+	Cho 4 điểm $A,B,C,D$ trong đó điểm $B$ nằm giữa 2 điểm $A$ \& $C$, điểm $B$ nằm giữa $A$ \& $D$. Có thể khẳng định điểm $D$ nằm giữa $B$ \& $C$ không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 6., p. 65]
+	(a) Xếp $10$ điểm thành $5$ hàng, mỗi hàng có $4$ điểm. (b) Xếp $7$ điểm thành $6$ hàng, mỗi hàng có $3$ điểm. (c) Người ta trồng $12$ cây thành $6$ hàng, mỗi hàng có $4$ cây. Vẽ sơ đồ vị trí của $12$ cây đó.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Intersected Lines \& Paralleled Lines -- 2 Đường Thẳng Cắt Nhau. 2 Đường Thẳng Song Song}
+
+%------------------------------------------------------------------------------%
+
+\section{Segment -- Đoạn Thẳng}
+
+%------------------------------------------------------------------------------%
+
+\section{Ray -- Tia}
+
+%------------------------------------------------------------------------------%
+
+\section{Angle -- Góc}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
