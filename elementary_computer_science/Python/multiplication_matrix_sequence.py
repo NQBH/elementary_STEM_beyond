@@ -1,4 +1,4 @@
-def matrix_mult_opt_order(M):
+def matrix_mult_opt_order(M): # O(n^2)
 	n = len(M)
 	r = [len(Mi) for Mi in M]
 	c = [len(Mi[0]) for Mi in M]
