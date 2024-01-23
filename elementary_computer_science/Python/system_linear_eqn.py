@@ -26,7 +26,7 @@ def Gauss_Jordan(A, x, b):
 		return GJ_SEVERAL_SOLUTIONS
 	return GJ_SINGLE_SOLUTION
 
-def diagonalize(S, n, m):
+def diagonalize(S, n, m): # O(n^2m)
 	for k in range(min(n, m)):
 		val, i, j = max((abs(S[i][j]), i, j) for i in range(k, m) for j in range(k, n))
 		if is_zero(val):
