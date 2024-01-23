@@ -22,3 +22,6 @@ def longest_increasing_subsequence(x): # O(n log n)
 		s.append(x[q])
 		q = p[q]
 	return s[::-1] # reverse the list to obtain the solution
+
+x = list(map(int, input().split()))
+print(longest_increasing_subsequence(x))
