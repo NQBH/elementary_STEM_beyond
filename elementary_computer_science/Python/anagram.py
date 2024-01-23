@@ -1,4 +1,4 @@
-def anagrams(S): # S is a set of strings
+def anagrams(S): # O(n^2 k log k) # S is a set of strings
 	d = {} 		 # maps s to list of words with signature s
 	for word in S: # group words according to the signature
 		s = ''.join(sorted(word)) # calculate the signature
