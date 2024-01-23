@@ -1,4 +1,4 @@
-def Levenshtein_edit_dist(x, y):
+def Levenshtein_edit_dist(x, y): # O(mn)
 	n = len(x)
 	m = len(y)
 	# Create the table A # Row 0 and column 0 are initialized as required # The remaining entries will be overwritten during the computation
