@@ -10,7 +10,7 @@ def longest_increasing_subsequence(x): # O(n log n)
 			p[i] = h[-1]
 			h.append(i)
 			b.append(x[i])
-		else: # binary search: b[k - 1] < x[i] <= b[k]
+		else: # binary search: b[k - 1] < x[i] <= b[k] # non-decreasing subsequence: binary search: b[k - 1] <= x[i] < b[k] by Python's bisect_right
 			k = bisect_left(b, x[i])
 			h[k] = i
 			b[k] = x[i]
