@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Probability {\it\&} Statistics -- Bài Tập: Xác Suất {\it\&} Thống Kê}
+\author{Nguyễn Quản Bá Hồng\footnote{Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Some Simple Probabilistic Model -- 1 Số Mô Hình Xác Suất Đơn Giản}
+\fbox{1} Tung ngẫu nhiên 1 đồng xu để xem kết quả sấp (S) hay ngửa (N). Gieo xúc xắc xem mặt trên có mấy chấm. Lấy ngẫu nhiên các quả bóng cùng hình dáng, kích thước nhưng khác màu trong 1 hộp. Các hoạt động đó gọi là các \textit{mô hình xác suất}. Mỗi lần tung đồng xu, gieo con xúc xắc, lấy quả bóng, $\ldots$ gọi là 1 thí nghiệm ngẫu nhiên. \fbox{2} Khi thực hiện các thí nghiệm ngẫu nhiên trên 1 mô hình xác suất, có thể liệt kê được tập hợp tất cả các khả năng có thể xảy ra nhưng không thể dự đoán trước được chính xác kết quả của mỗi lần thí nghiệm. \textit{Phân loại khả năng}: Có thể xảy ra 3 khả năng: không thể xảy ra, có thể xảy ra, chắc chắn xảy ra.
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, VD3, p. 103]
+	Gieo 1 con xúc xắc liên tiếp 2 lần \& quan sát số chấm xuất hiện ở mặt trên của xúc xắc qua 2 lần gieo. (a) Đếm số kết quả có thể xảy ra. Liệt kê 6 trong 6 các kết quả đó. (b) Liệt kê các kết quả có thể xảy ra để tổng số chấm xuất hiện ở mặt trên của xúc xắc trong 2 lần gieo là $8$. (c) Phân loại khả năng: (i) Tổng số chấm xuất hiện là $13$. (ii) Tổng số chấm xuất hiện là số $x\in\mathbb{N},2\le x\le12$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 6., p. 103]
+	Trong 1 hộp kín có 3 quả bóng: 1 quả màu đỏ (Đ), 1 quả màu xanh (X), \& 1 quả màu vàng (V). Các quả bóng giống nhau về kích thước \& khối lượng, chỉ khác nhau về màu sắc. Liệt kê các khả năng có thể xảy ra của mỗi hoạt động: (a) Không nhìn vào hộp, lấy ra cùng 1 lúc 2 quả bóng. (b) Lấy ra 1 quả bóng, xem màu, trả bóng vào hộp rồi lại lấy ra 1 quả bóng nữa từ hộp (chú ý thứ tự của các quả bóng được lấy ra).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 7., p. 104]
+	Trong 1 hộp kín có 5 thẻ tre, mỗi thẻ tre ghi tên 1 bạn: An, Bách, Chung, Duyên, Đạt. Rút ngẫu nhiên 1 thẻ, trúng tên của ai, người đó hát 1 bài rồi tấm thẻ được trả về hộp để tiếp tục rút thẻ tìm người hát tiếp theo (có 5 lần rút thẻ). (a) Liệt kê tập hợp các khả năng có thể xảy ra của mỗi lần rút thẻ. (b) Sự kiện có bạn trong 5 bạn trên không được hát lần nào có xảy ra không? (c) Sự kiện có bạn phải hát nhiều lần có xảy ra không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 8., p. 104]
+	1 hộp kín có $30$ viên bi gồm $10$ bi màu đỏ, $10$ bi màu xanh, \& $10$ bi màu vàng. Lấy ngẫu nhiên $1$ viên bi. (a) Viết tập hợp các màu bi có thể bị lấy ra khỏi hộp. (b) Bi màu nào có khả năng được lấy nhiều hơn các bi còn lại? (c) Phân loại trường hợp: Bi lấy ra có màu vàng? Bi lấy ra có màu đen? Bi lấy ra có màu đỏ hoặc xanh hoặc vàng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 9., p. 104]
+	Gieo đồng thời 2 con xúc xắc. Phân loại sự kiện.: (a) 2 mặt có cùng số chấm. (b) Tích các số chấm trên 2 mặt bằng $7$. (c) Hiệu các số chấm trên 2 mặt nhỏ hơn $6$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Xác Suất Thực Nghiệm}
+\fbox{1} Làm 1 thí nghiệm $n$ lần liên tiếp. Khi ấy 1 sự kiện ngẫu nhiên nào đó có thể xảy ra, e.g., $k$ lần. Gọi phân số $\dfrac{k}{n}$ là xác suất thực nghiệm của sự kiện ấy. Muốn tính xác suất của 1 sự kiện nào đó ta chia số lần xuất hiện của sự kiện ấy cho tổng số lần thực hiện thí nghiệm. \fbox{2} Biểu thị khả năng xảy ra của 1 sự kiện bằng 1 phân số có giá trị từ $0$ đến $1$, có thể viết số đó dưới dạng phân số hay $\%$. Số $\%$ càng cao thì sự kiện càng dễ xảy ra. \fbox{3} Xác suất thực nghiệm được sử dụng để dự đoán khả năng xảy ra 1 sự kiện xảy ra trong tương lai là cao hay thấp để chuẩn bị phương án xử lý thích hợp.
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 10., p. 105]
+	Nhà bếp của công nhân 1 xí nghiệp mua $40$ khay trứng gà. Kiểm tra thì thấy 3 khay, mỗi khay có ít nhất 1 quả trứng bị vỡ. (a) Tính xác suất thực nghiệm của sự kiện khay được kiểm tra có ít nhất 1 quả trứng vỡ. (b) Trong 1 tháng nhà bếp này mua $160$ khay trứng. Dự đoán số trứng vỡ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 11., p. 105]
+	1 con xúc xắc được gieo 3 lần. Kết quả các lần thứ nhất, thứ 2, thứ 3 được ghi lại lần lượt là $x,y,z\in\mathbb{N}$. Biết $x + y = z$. Tính xác suất thực nghiệm của khả năng ít nhất 1 trong 3 số $x,y,z$ là $2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 12., p. 105]
+	Khi chơi cá ngựa, thay vì gieo 1 con xúc xắc ta gieo cả 2 con xúc xắc cùng 1 lúc thì điểm thấp nhất là $2$, cao nhất là $12$. Các điểm khác là $3,4,5,\ldots,11$. (a) Điểm nào có khả năng xuất hiện nhiều nhất? (b) Tính xác suất thực nghiệm xuất hiện điểm đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 13., p. 105]
+	Trong 1 hộp kín có 3 quả bóng: 1 đỏ (Đ), 1 xanh (X), 1 vàng (V). Lấy ngẫu nhiên 1 bóng, xem màu, ghi kết quả rồi trả bóng vào hộp. Lập lại các thao tác trên nhiều lần, được $15$ Đ, $15$ X, $20$ V. (a) Tính xác suất thực nghiệm của khả năng chọn được bóng của mỗi loại màu. (b) Khả năng chọn được bóng màu nào cao hơn?
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $n,k\in\mathbb{N}^\star$, $k\le n$. Tung 1 đồng xu đồng chất ngẫu nhiên $n$ lần. Tính xác suất thực nghiệm của sự kiện: (a) Toàn bộ đều là mặt sấp (ngửa). (b) Có đúng $k$ lần xuất hiện mặt sấp (ngửa). (c) Có ít nhất $k$ lần xuất hiện mặt sấp (ngửa). (d) Có đúng $k$ lần xuất hiện mặt sấp (ngửa) liên tiếp nhau. (e) Có ít nhất $k$ lần xuất hiện mặt sấp (ngửa) liên tiếp nhau.
+\end{baitoan}
+
+\begin{baitoan}
+	Gieo 2 con xúc xắc cùng lúc 
+\end{baitoan}
+
+\begin{baitoan}
+	Gieo $n$ con xúc xắc cùng lúc 
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $n,k\in\mathbb{N}^\star$, $k\le n$. Gieo 1 con xúc xắc ngẫu nhiên $n$ lần. Tính xác suất thực nghiệm của sự kiện:
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
