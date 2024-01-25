@@ -9,8 +9,8 @@ namespace Creative1 {
 
 		static int[] Find() {
 			int cnt = 0;
-			int [] odd_digit = {1, 3, 5, 7, 9};
-			int [] s = new int[25];
+			int[] odd_digit = {1, 3, 5, 7, 9};
+			int[] s = new int[25];
 			int x;
 			for (int i = 0; i < 5; ++i) {
 				x = 105 * odd_digit[i];
