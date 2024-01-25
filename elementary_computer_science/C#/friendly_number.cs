@@ -23,6 +23,18 @@ namespace Creative1 {
 			return cnt;
 		}
 
+		static int Find2() {
+			int a, b, cnt = 0;
+			s[++cnt] = 10;
+			for (a = 1; a <= 9; ++a)
+				for (b = 1; b < a; ++b)
+					if (gcd(10 * a + b, 10 * b + a) == 1) {
+						s[++cnt] = 10 * a + b;
+						s[++cnt] = 10 * b + a;
+					}
+			return cnt;
+		}
+
 		static int gcd(int a, int b) {
 			int r;
 			while (b != 0) {
