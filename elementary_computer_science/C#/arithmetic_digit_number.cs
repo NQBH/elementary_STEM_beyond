@@ -21,8 +21,7 @@ namespace Creative1 {
 		}
 
 		static void Show(int[] s) {
-			foreach (int x in s)
-				Console.Write(x + " ");
+			foreach (int x in s) Console.Write(x + " ");
 		}
 	}
 }
