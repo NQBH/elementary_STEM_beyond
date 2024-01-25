@@ -61,9 +61,7 @@ end;
 procedure display(n: integer);
 var i: integer;
 begin
-	writeln;
 	for i := 1 to n do write(s[i]:4);
-	writeln;
 end;
 
 begin
@@ -72,5 +70,5 @@ begin
 	n := find2;
 	display(n);
 	writeln;
-	writeln('Total ', n, ' numbers');
+	writeln('Total ', n, ' numbers.');
 end.
