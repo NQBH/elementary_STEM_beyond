@@ -40,7 +40,7 @@
 }
 
 \title{Problem: Probability {\it\&} Statistics -- Bài Tập: Xác Suất {\it\&} Thống Kê}
-\author{Nguyễn Quản Bá Hồng\footnote{Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\author{Nguyễn Quản Bá Hồng\footnote{e-mail: \texttt{nguyenquanbahong@gmail.com}, website: \url{https://nqbh.github.io}, Ben Tre City, Vietnam.}}
 \date{\today}
 
 \begin{document}
@@ -69,12 +69,12 @@
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 9., p. 104]
-	Gieo đồng thời 2 con xúc xắc. Phân loại sự kiện.: (a) 2 mặt có cùng số chấm. (b) Tích các số chấm trên 2 mặt bằng $7$. (c) Hiệu các số chấm trên 2 mặt nhỏ hơn $6$.
+	Gieo đồng thời 2 con xúc xắc. Phân loại sự kiện: (a) 2 mặt có cùng số chấm. (b) Tích các số chấm trên 2 mặt bằng $7$. (c) Hiệu các số chấm trên 2 mặt nhỏ hơn $6$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
 
-\section{Xác Suất Thực Nghiệm}
+\section{Theoretical Probability vs. Practical Probability -- Xác Suất Lý Thuyết vs. Xác Suất Thực Nghiệm}
 \fbox{1} Làm 1 thí nghiệm $n$ lần liên tiếp. Khi ấy 1 sự kiện ngẫu nhiên nào đó có thể xảy ra, e.g., $k$ lần. Gọi phân số $\dfrac{k}{n}$ là xác suất thực nghiệm của sự kiện ấy. Muốn tính xác suất của 1 sự kiện nào đó ta chia số lần xuất hiện của sự kiện ấy cho tổng số lần thực hiện thí nghiệm. \fbox{2} Biểu thị khả năng xảy ra của 1 sự kiện bằng 1 phân số có giá trị từ $0$ đến $1$, có thể viết số đó dưới dạng phân số hay $\%$. Số $\%$ càng cao thì sự kiện càng dễ xảy ra. \fbox{3} Xác suất thực nghiệm được sử dụng để dự đoán khả năng xảy ra 1 sự kiện xảy ra trong tương lai là cao hay thấp để chuẩn bị phương án xử lý thích hợp.
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 10., p. 105]
@@ -90,28 +90,40 @@
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 13., p. 105]
-	Trong 1 hộp kín có 3 quả bóng: 1 đỏ (Đ), 1 xanh (X), 1 vàng (V). Lấy ngẫu nhiên 1 bóng, xem màu, ghi kết quả rồi trả bóng vào hộp. Lập lại các thao tác trên nhiều lần, được $15$ Đ, $15$ X, $20$ V. (a) Tính xác suất thực nghiệm của khả năng chọn được bóng của mỗi loại màu. (b) Khả năng chọn được bóng màu nào cao hơn?
+	Trong 1 hộp kín có 3 quả bóng: 1 đỏ (Đ), 1 xanh (X), 1 vàng (V). Lấy ngẫu nhiên 1 bóng, xem màu, ghi kết quả rồi trả bóng vào hộp. Lặp lại các thao tác trên nhiều lần, được $15$ Đ, $15$ X, $20$ V. (a) Tính xác suất thực nghiệm của khả năng chọn được bóng của mỗi loại màu. (b) Khả năng chọn được bóng màu nào cao hơn?
 \end{baitoan}
 
-\begin{baitoan}
+\begin{baitoan}[Consecutive coin toss]
 	Cho $n,k\in\mathbb{N}^\star$, $k\le n$. Tung 1 đồng xu đồng chất ngẫu nhiên $n$ lần. Tính xác suất thực nghiệm của sự kiện: (a) Toàn bộ đều là mặt sấp (ngửa). (b) Có đúng $k$ lần xuất hiện mặt sấp (ngửa). (c) Có ít nhất $k$ lần xuất hiện mặt sấp (ngửa). (d) Có đúng $k$ lần xuất hiện mặt sấp (ngửa) liên tiếp nhau. (e) Có ít nhất $k$ lần xuất hiện mặt sấp (ngửa) liên tiếp nhau.
 \end{baitoan}
 
-\begin{baitoan}
-	Gieo 2 con xúc xắc cùng lúc 
+\begin{baitoan}[Simultaneous coin toss]
+	Cho $n,k\in\mathbb{N}^\star$, $k\le n$. Tung đồng thời $n$ đồng xu đồng chất ngẫu nhiên. Tính xác suất thực nghiệm của sự kiện: (a) Toàn bộ đều là mặt sấp (ngửa). (b) Có đúng $k$ lần xuất hiện mặt sấp (ngửa). (c) Có ít nhất $k$ lần xuất hiện mặt sấp (ngửa). (d) Có đúng $k$ lần xuất hiện mặt sấp (ngửa) liên tiếp nhau. (e) Có ít nhất $k$ lần xuất hiện mặt sấp (ngửa) liên tiếp nhau.
+\end{baitoan}
+
+\begin{baitoan}[Consecutive 2 dice rolls -- gieo 2 xúc xắc lần lượt]
+	Gieo lần lượt 2 con xúc xắc. Tính xác suất thực nghiệm của sự kiện: (a) 2 mặt có cùng số chấm. (b) 2 mặt có khác số chấm. (c) Số chấm 2 mặt có cùng tính chẵn lẻ. (d) Số chấm 1 mặt là ước (bội) của số chấm trên mặt còn lại. (e) Tổng số chấm 2 mặt bằng $n\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[Simultaneous 2 dice rolls -- gieo 2 xúc xắc đồng thời]
+	Gieo đồng thời 2 con xúc xắc. Tính xác suất thực nghiệm của sự kiện: (a) 2 mặt có cùng số chấm. (b) 2 mặt có khác số chấm. (c) Số chấm 2 mặt có cùng tính chẵn lẻ. (d) Số chấm 1 mặt là ước (bội) của số chấm trên mặt còn lại. (e) Tổng số chấm 2 mặt bằng $n\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[Consecutive $n$ dice rolls -- gieo $n$ xúc xắc lần lượt]
+	Gieo lần lượt $n\in\mathbb{N}^\star$ con xúc xắc. Tính xác suất thực nghiệm của sự kiện: (a) $n$ mặt có cùng số chấm. (b) $n$ mặt có khác số chấm. (c) Số chấm $n$ mặt có cùng tính chẵn lẻ. (d) Số chấm 1 mặt là ước (bội) của số chấm trên các mặt còn lại. (e) Tổng số chấm $n$ mặt bằng $a\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[Simultaneous $n$ dice rolls -- gieo $n$ xúc xắc đồng thời]
+	Gieo đồng thời $n\in\mathbb{N}^\star$ con xúc xắc. Tính xác suất thực nghiệm của sự kiện: (a) $n$ mặt có cùng số chấm. (b) $n$ mặt có khác số chấm. (c) Số chấm $n$ mặt có cùng tính chẵn lẻ. (d) Số chấm 1 mặt là ước (bội) của số chấm trên các mặt còn lại. (e) Tổng số chấm $n$ mặt bằng $a\in\mathbb{N}$.
 \end{baitoan}
 
 \begin{baitoan}
-	Gieo $n$ con xúc xắc cùng lúc 
+	Cho $n\in\mathbb{N}^\star$. Viết n thành tổng 2 số: $n = a + b$. Tính xác suất để $a,b$ cùng là độ dài cạnh của 1 hình vuông, xác suất để $a,b$ là độ dài 2 cạnh của 1 hình chữ nhật nếu: (a) $a,b\in\mathbb{N}^\star$. (b) $a,b\in\mathbb{N}$.
 \end{baitoan}
 
 \begin{baitoan}
-	Cho $n,k\in\mathbb{N}^\star$, $k\le n$. Gieo 1 con xúc xắc ngẫu nhiên $n$ lần. Tính xác suất thực nghiệm của sự kiện:
+	Cho $a\in\mathbb{N}^\star,a\ge2$ có phân tích thừa số nguyên tố $a = \prod_{i=1}^{n} p_i^{a_i} = p_1^{a_1}p_2^{a_2}\cdots p_n^{a_n}$ với $p_i$ là số nguyên tố, $a_i\in\mathbb{N}^\star$, $\forall i = 1,2,\ldots,n$. (a) Viết ngẫu nhiên a thành tích của 2 số: $a = bc$. Tính xác suất để $b,c$ là độ dài 2 cạnh của 1 hình chữ nhật, xác suất để $b,c$ cùng là độ dài cạnh của 1 hình vuông nếu: (i) $b,c\in\mathbb{N}$. (ii) $b,c\in\mathbb{Z}$. (b) Lấy ngẫu nhiên 2 số $b,c\in\mbox{\rm Ư}(a)$. Tính xác suất để phân số $\dfrac{b}{c}$: (i) tối giản. (ii) không tối giản.
 \end{baitoan}
-
-%------------------------------------------------------------------------------%
-
-\section{Miscellaneous}
 
 %------------------------------------------------------------------------------%
 
