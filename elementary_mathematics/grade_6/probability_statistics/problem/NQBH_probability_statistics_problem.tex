@@ -102,11 +102,11 @@
 \end{baitoan}
 
 \begin{baitoan}[Consecutive 2 dice rolls -- gieo 2 xúc xắc lần lượt]
-	Gieo lần lượt 2 con xúc xắc. Tính xác suất lý thuyết của sự kiện: (a) 2 mặt có cùng số chấm. (b) 2 mặt có khác số chấm. (c) Số chấm 2 mặt có cùng tính chẵn lẻ. (d) Số chấm 1 mặt là ước (bội) của số chấm trên mặt còn lại. (e) Tổng số chấm 2 mặt bằng $n\in\mathbb{N}$.
+	Gieo lần lượt 2 con xúc xắc. Tính xác suất lý thuyết của sự kiện: (a) 2 mặt có cùng số chấm, khác số chấm. (b) Số chấm 2 mặt có cùng tính chẵn lẻ, khác tính chẵn lẻ. (c) Số chấm 2 mặt đều là số nguyên tố, đều là hợp số, có ít nhất 1 số nguyên tố, có ít nhất 1 hợp số. (d) Số chấm 1 mặt là ước (bội) của số chấm trên mặt còn lại. (e) Tổng số chấm 2 mặt bằng $n\in\mathbb{N}$.
 \end{baitoan}
 
 \begin{baitoan}[Simultaneous 2 dice rolls -- gieo 2 xúc xắc đồng thời]
-	Gieo đồng thời 2 con xúc xắc. Tính xác suất lý thuyết của sự kiện: (a) 2 mặt có cùng số chấm. (b) 2 mặt có khác số chấm. (c) Số chấm 2 mặt có cùng tính chẵn lẻ. (d) Số chấm 1 mặt là ước (bội) của số chấm trên mặt còn lại. (e) Tổng số chấm 2 mặt bằng $n\in\mathbb{N}$.
+	Gieo đồng thời 2 con xúc xắc. Tính xác suất lý thuyết của sự kiện: (a) 2 mặt có cùng số chấm, khác số chấm. (b) Số chấm 2 mặt có cùng tính chẵn lẻ, khác tính chẵn lẻ. (c) Số chấm 2 mặt đều là số nguyên tố, đều là hợp số, có ít nhất 1 số nguyên tố, có ít nhất 1 hợp số. (d) Số chấm 1 mặt là ước (bội) của số chấm trên mặt còn lại. (e) Tổng số chấm 2 mặt bằng $n\in\mathbb{N}$.
 \end{baitoan}
 
 \begin{baitoan}[Consecutive $n$ dice rolls -- gieo $n$ xúc xắc lần lượt]
@@ -117,12 +117,24 @@
 	Gieo đồng thời $n\in\mathbb{N}^\star$ con xúc xắc. Tính xác suất lý thuyết của sự kiện: (a) $n$ mặt có cùng số chấm. (b) $n$ mặt có khác số chấm. (c) Số chấm $n$ mặt có cùng tính chẵn lẻ. (d) Số chấm 1 mặt là ước (bội) của số chấm trên các mặt còn lại. (e) Tổng số chấm $n$ mặt bằng $a\in\mathbb{N}$.
 \end{baitoan}
 
-\begin{baitoan}
+\begin{baitoan}[Squares \& rectangles with same perimeter -- hình vuông \& hình chữ nhật cùng chu vi]
 	Cho $n\in\mathbb{N}^\star$. Viết n thành tổng 2 số: $n = a + b$. Tính xác suất để $a,b$ cùng là độ dài cạnh của 1 hình vuông, xác suất để $a,b$ là độ dài 2 cạnh của 1 hình chữ nhật nếu: (a) $a,b\in\mathbb{N}^\star$. (b) $a,b\in\mathbb{N}$.
 \end{baitoan}
 
-\begin{baitoan}
+\begin{baitoan}[Squares \& rectangles with same area -- hình vuông \& hình chữ nhật cùng diện tích]
 	Cho $a\in\mathbb{N}^\star,a\ge2$ có phân tích thừa số nguyên tố $a = \prod_{i=1}^{n} p_i^{a_i} = p_1^{a_1}p_2^{a_2}\cdots p_n^{a_n}$ với $p_i$ là số nguyên tố, $a_i\in\mathbb{N}^\star$, $\forall i = 1,2,\ldots,n$. (a) Viết ngẫu nhiên a thành tích của 2 số: $a = bc$. Tính xác suất để $b,c$ là độ dài 2 cạnh của 1 hình chữ nhật, xác suất để $b,c$ cùng là độ dài cạnh của 1 hình vuông nếu: (i) $b,c\in\mathbb{N}$. (ii) $b,c\in\mathbb{Z}$. (b) Lấy ngẫu nhiên 2 số $b,c\in\mbox{\rm Ư}(a)$. Tính xác suất để phân số $\dfrac{b}{c}$: (i) tối giản. (ii) không tối giản.
+\end{baitoan}
+
+\begin{definition}[Prime-counting function]
+	The {\rm prime-counting function} is the function counting the number of prime numbers less than or equal to some real number x, denoted by $\pi(x)\coloneqq|\{p\in\mathbb{N}^\star|p \mbox{ is a prime},\ p\le x\}|$.
+\end{definition}
+
+\begin{dinhnghia}[Hàm đếm số số nguyên tố]
+	{\rm Hàm đếm số số nguyên tố} là hàm đếm số số nguyên tố nhỏ hơn hoặc bằng $x\in\mathbb{R}$, ký hiệu là $\pi(x)\coloneqq|\{p\in\mathbb{N}^\star|p \mbox{ là số nguyên tố},\ p\le x\}|$.
+\end{dinhnghia}
+
+\begin{baitoan}[Prime, composite -- số nguyên tố, hợp số]
+	Cho $m,n,k\in\mathbb{N}^\star$. Đặt $A_n = \{1,2,\ldots,n\}$ là tập hợp $n$ số nguyên dương đầu tiên, $\forall n\in\mathbb{N}^\star$. (a) Lấy m số từ $A_n$. Tính xác suất để m số này cùng chẵn, cùng lẻ, có ít nhất 1 số chẵn, có ít nhất 1 số lẻ, có đúng k số chẵn, có đúng k số lẻ, có ít nhất k số chẵn, có ít nhất k số lẻ. (b) Lấy m số phân biệt từ $A_n$. Tính xác suất để m số này đều là số nguyên tố, đều là hợp số, có đúng k số nguyên tố, có đúng k hợp số, có ít nhất 1 số nguyên tố, có ít nhất 1 hợp số, có ít nhất k số nguyên tố, có ít nhất k hợp số.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
