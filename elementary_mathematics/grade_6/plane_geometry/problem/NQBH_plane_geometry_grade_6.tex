@@ -52,9 +52,7 @@
 %------------------------------------------------------------------------------%
 
 \section{Plane. Point. Line -- Mặt Phẳng. Điểm. Đường Thẳng}
-Mỗi hình là 1 tập hợp điểm. Hình có thể chỉ gồm 1 điểm. Điểm $A$ thuộc đường thẳng $a$: $a\in A$. Điểm $B$ không thuộc đường thẳng $a$: $B\notin a$. Có 1 \& chỉ 1 đường thẳng đi qua 2 điểm phân biệt. Khi 3 điểm cùng nằm trên 1 đường thẳng, ta nói chúng \textit{thẳng hàng}. Trong 3 điểm thẳng hàng, có 1 \& chỉ 1 điểm nằm giữa 2 điểm còn lại.
-
-\fbox{\bf 1} 3 hình hình học không định nghĩa: mặt phẳng, điểm, đường thẳng. \fbox{\bf 2} 2 tính chất cơ bản: \textit{Tiên đề về sự xác định đường thẳng}: Có 1 đường thẳng \& chỉ 1 đường thẳng đi qua 2 điểm phân biệt. \textit{Tính chất về thứ tự của 3 điểm trên đường thẳng}: Trong 3 điểm thẳng hàng, có 1 điểm \& chỉ 1 điểm nằm giữa 2 điểm còn lại. \fbox{\bf 3} 1 quan hệ hình học không định nghĩa: Điểm nằm giữa 2 điểm khác. \fbox{\bf 4} 1 quan hệ hình học được định nghĩa: 3 điểm thẳng hàng.
+\fbox{1} 3 hình hình học không định nghĩa: mặt phẳng, điểm, đường thẳng. Điểm được đặt tên bằng chữ cái in hoa, e.g., $A,B,C,D$, $\ldots,M,N,P,Q,\ldots,X,Y,Z$. Đường thẳng được đặt tên bằng chữ cái in thường, e.g., $a,b,c,d,\ldots,m,n,p,q,\ldots,x,y,z$. \fbox{2} \textit{Về vị trí của điểm \& đường thẳng}: Với 1 đường thẳng bất kỳ, có vô số điểm thuộc đường thẳng đó \& có vô số điểm không thuộc đường thẳng đó. Điểm $A$ thuộc đường thẳng $d$ ký hiệu là $A\in d$. Điểm $B$ không thuộc đường thẳng $d$ ký hiệu là $B\notin d$. \fbox{3} \textit{Tiên đề về sự xác định đường thẳng}: Có 1 \& chỉ 1 đường thẳng đi qua 2 điểm phân biệt. Khi 1 đường thẳng đi qua 2 điểm $A,B$, có đường thẳng $AB$ hoặc đường thẳng $BA$. 1 quan hệ hình học được định nghĩa: 3 điểm thẳng hàng. Khi 3 điểm $A,B,C$ cùng thuộc 1 đường thẳng thì chúng \textit{thẳng hàng}. Nếu 3 điểm $A,B,C$ không cùng thuộc bất cứ 1 đường thẳng nào thì chúng \textit{không thẳng hàng}. \fbox{4} 2 đường thẳng phân biệt hoặc có 1 điểm chung, hoặc không có điểm chung nào. \fbox{5} Với 2 đường thẳng bất kỳ thì giữa chúng hoặc có 1 điểm chung (2 đường thẳng cắt nhau), hoặc không có điểm chung nào (2 đường thẳng song song), hoặc có vô số điểm chung (2 đường thẳng trùng nhau). \fbox{6} \textit{Tính chất về thứ tự của 3 điểm trên đường thẳng}: Trong 3 điểm thẳng hàng, có 1 điểm \& chỉ 1 điểm nằm giữa 2 điểm còn lại. \fbox{3} 1 quan hệ hình học không định nghĩa: Điểm nằm giữa 2 điểm khác. \fbox{7} Với 3 điểm $A,B,C$ thẳng hàng mà điểm $B$ không nằm giữa 2 điểm $A,C$, điểm $C$ không nằm giữa 2 điểm $A,B$, thì điểm $A$ phải nằm giữa 2 điểm $B,C$. \fbox{8} Với 3 điểm $A,B,C$ thẳng hàng mà 2 điểm $A,B$ nằm cùng phía đối với điểm $C$ \& 2 điểm $A,C$ nằm cùng phía đối với điểm $B$, thì điểm $A$ nằm giữa 2 điểm $B,C$. \fbox{9} Nếu điểm $A$ nằm giữa 2 điểm $B,C$ mà điểm $M$ nằm giữa 2 điểm $A,B$ \& điểm $N$ nằm giữa 2 điểm $A,C$ thì điểm $A$ nằm giữa 2 điểm $M,N$.
 
 \begin{center}
 	\begin{tikzpicture}
@@ -65,28 +63,7 @@ Mỗi hình là 1 tập hợp điểm. Hình có thể chỉ gồm 1 điểm. Đ
 		\draw (3,1) circle (0.05) node[above]{$D$};
 	\end{tikzpicture}
 \end{center}
-Bài tập SGK: \cite[1.--7., p. 79]{SGK_Toan_6_Canh_Dieu_tap_1}.
-
-\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 1., p. 88]
-	\emph{Đ\texttt{/}S}? (a) Nếu 3 điểm $A,B,C$ thẳng hàng thì điểm $B$ luôn nằm giữa 2 điểm $A,C$. (b) Có 2 đường thẳng đi qua 2 điểm $M,N$. (c) Nếu 2 điểm $I,K$ nằm trên đường thẳng $d$ \& điểm $H$ không thuộc đường thẳng $d$ thì 3 điểm $I,K,H$ không thẳng hàng.
-\end{baitoan}
-
-\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 3., p. 88]
-	(a) Vẽ 2 điểm $A,B$ \& đường thẳng $xy$ đi qua 2 điểm này. (b) Vẽ điểm $C$ sao cho $C\in xy$ \& $C$ nằm giữa $A$ \& $B$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 4., p. 88]
-	Cho 3 điểm $A,B,C$ không thẳng hàng. (a) Vẽ đường thẳng $m$ không đi qua cả $A,B,C$; (b) Vẽ đường thẳng $n$ sao cho $B\in n$ \& $A\notin n$, $C\notin n$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 5., p. 88]
-	Vẽ đường thẳng $a$. Lấy 3 điểm $A,B,C$ thuộc $a$ \& $D$ không thuộc $a$. Kẻ các đường thẳng đi qua các cặp điểm. (a) Kẻ được tất cả bao nhiêu đường thẳng? Kể tên các đường thẳng đó. (b) Điểm $D$ nằm trên những đường thẳng nào? Kể tên các đường thẳng đó.
-\end{baitoan}
-Bài tập phụ thuộc hình vẽ: \cite[\textbf{6.--9.}, p. 89]{SBT_Toan_6_Canh_Dieu_tap_2}.
-
-\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 10., p. 88]
-	Vẽ hình theo các cách diễn đạt sau: (a) $M$ là điểm nằm giữa 2 điểm $A,B$; điểm $N$ không nằm giữa 2 điểm $A,B$ \& $A,B,N$ thẳng hàng. (b) Điểm $B$ nằm giữa 2 điểm $A,N$; điểm $M$ nằm giữa 2 điểm $A,B$.
-\end{baitoan}
+\noindent SGK: \cite[\S1, p. 79]{SGK_Toan_6_Canh_Dieu_tap_1}: 1. 2. 3. 4. 5. 6. 7. SBT: \cite{SBT_Toan_6_Canh_Dieu_tap_2}: 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12.
 
 \begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 11., p. 88]
 	Bác Long có $10$ cây cảnh quý, bác muốn trồng thành $5$ hàng, mỗi hàng $4$ cây. Vẽ sơ đồ để trồng $10$ cây đó.
@@ -100,12 +77,12 @@ Bài tập phụ thuộc hình vẽ: \cite[\textbf{6.--9.}, p. 89]{SBT_Toan_6_Ca
 	Cho 4 điểm $A,B,C,D$ sao cho 3 điểm $A,B,C$ thẳng hàng; 3 điểm $B,C,D$ cũng thẳng hàng. Hỏi 4 điểm $A,B,C,D$ có thẳng hàng không? Vì sao?
 \end{baitoan}
 
-\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_6}, VD8, p. 87]
-	Trên mặt phẳng, cho $n$ điểm $A_i$, $i = 1,2,\ldots,n$, $n\in\mathbb{N}$, $n\ge3$. Giả sử $3$ điểm bất kỳ trong số chúng đều thẳng hàng. Hỏi $n$ điểm đó có thằng hàng không?
+\begin{baitoan}
+	Trên mặt phẳng, cho $n$ điểm $A_i$, $i = 1,2,\ldots,n$, $n\in\mathbb{N}$, $n\ge3$. Giả sử $3$ điểm bất kỳ trong số chúng đều thẳng hàng. Hỏi $n$ điểm đó có thẳng hàng không?
 \end{baitoan}
 
-\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_6}, VD8, p. 87]
-	Trên mặt phẳng, cho $n$ điểm $A_i$, $i = 1,2,\ldots,n$, $n\in\mathbb{N}$, $n\ge3$. Giả sử 3 điểm $A_i,A_{i+1},A_{i+2}$ thẳng hàng $\forall i = 1,2,\ldots,n-2$. Hỏi $n$ điểm đó có thằng hàng không?
+\begin{baitoan}
+	Trên mặt phẳng, cho $n$ điểm $A_i$, $i = 1,2,\ldots,n$, $n\in\mathbb{N}$, $n\ge3$. Giả sử 3 điểm $A_i,A_{i+1},A_{i+2}$ thẳng hàng $\forall i = 1,2,\ldots,n-2$. Hỏi $n$ điểm đó có thẳng hàng không?
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, VD9, p. 88]
@@ -117,7 +94,7 @@ Bài tập phụ thuộc hình vẽ: \cite[\textbf{6.--9.}, p. 89]{SBT_Toan_6_Ca
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 38., p. 88]
-	Vẽ 5 điểm $C,D,E,F,G$ không thẳng hàng nhưng 3 điểm $C,D,E$ thẳng hàng; 3 điểm $E,F,G$ thằng hàng.
+	Vẽ 5 điểm $C,D,E,F,G$ không thẳng hàng nhưng 3 điểm $C,D,E$ thẳng hàng; 3 điểm $E,F,G$ thẳng hàng.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 39., p. 89]
@@ -204,6 +181,22 @@ Bài tập phụ thuộc hình vẽ: \cite[\textbf{6.--9.}, p. 89]{SBT_Toan_6_Ca
 	(a) Xếp $10$ điểm thành $5$ hàng, mỗi hàng có $4$ điểm. (b) Xếp $7$ điểm thành $6$ hàng, mỗi hàng có $3$ điểm. (c) Người ta trồng $12$ cây thành $6$ hàng, mỗi hàng có $4$ cây. Vẽ sơ đồ vị trí của $12$ cây đó.
 \end{baitoan}
 
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.1, p. 6]
+	Vẽ 5 điểm $A,B,C,M,N$ trong đó 3 điểm $A,B,C$ thẳng hàng, 3 điểm $A,B,M$ không thẳng hàng \& 3 điểm $A,B,N$ thẳng hàng. (a) Giải thích vì sao vẽ được như vậy. (b) Chứng minh 4 điểm $A,B,C,N$ cùng thuộc 1 đường thẳng d. (c) {\rm Đ{\tt/}S?} $A\in d,B\notin d,M\in d,N\notin d$. (d) 2 đường thẳng $AN,BC$ có phân biệt không? 2 đường thẳng $AB,MN$ trùng nhau không? (e) Có bao nhiêu đường thẳng đi qua từng cặp 2 điểm trong số 5 điểm đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.2, p. 7]
+	(a) Cho 4 điểm phân biệt. Cứ qua 2 điểm, vẽ được 1 đường thẳng. Đếm số đường thẳng. (b) Qua 5 điểm vẽ được nhiều nhất bao nhiêu đường thẳng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.3, p. 9]
+	Cho 5 điểm $A,B,C,D,E,F$ lần lượt cùng thuộc 1 đường thẳng d. (a) C nằm giữa 2 điểm nào? (b) B nằm giữa 2 điểm nào? (c) E không nằm giữa 2 điểm nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.4, p. 9]
+	Cho 5 điểm $A,B,C,D,E,F$. Biết 3 điểm $A,B,C$ thẳng hàng, 3 điểm $B,C,E$ thẳng hàng, 3 điểm $C,E,F$ thẳng hàng. Chứng minh 5 điểm $A,B,C,D,E,F$ thẳng hàng.
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Intersected Lines \& Paralleled Lines -- 2 Đường Thẳng Cắt Nhau. 2 Đường Thẳng Song Song}
@@ -213,7 +206,7 @@ Bài tập phụ thuộc hình vẽ: \cite[\textbf{6.--9.}, p. 89]{SBT_Toan_6_Ca
 %------------------------------------------------------------------------------%
 
 \section{Line segment -- Đoạn Thẳng}
-See \href{https://en.wikipedia.org/wiki/Line_segment}{Wikipedia{\tt/}line segment}.
+\fbox{1} \textit{Đoạn thẳng} $AB$ là hình gồm 2 điểm $A,B$ \& tất cả các điểm nằm giữa $A,B$. Đoạn thẳng $AB$ còn gọi là đoạn thẳng $BA$. 2 điểm $A,B$ là 2 \textit{mút} (hoặc 2 \textit{đầu}) của đoạn thẳng $AB$. Mỗi đoạn thẳng có 1 độ dài. Độ dài đoạn thẳng là 1 số lớn hơn $0$. \fbox{2} Có thể so sánh 2 đoạn thẳng bằng cách so sánh độ dài của chúng. \fbox{3} 2 đoạn thẳng $AB,CD$ cắt nhau tại điểm $O$. Điểm $O$ gọi là \textit{giao điểm} của 2 đoạn thẳng $AB,CD$, viết $AB\cap CD = \{O\}$. Điểm $O$ nằm giữa 2 điểm $A,B$, điểm $O$ nằm giữa 2 điểm $C,D$. \fbox{4} Đoạn thẳng $AB$ \& tia $Ox$ cắt nhau tại điểm $I$, gọi là \textit{giao điểm} của tia $Ox$ \& đoạn thẳng $AB$, viết $Ox\cap AB = \{I\}$. Điểm $I$ nằm giữa 2 điểm $A,B$, 2 tia $OI,Ox$ trùng nhau. \fbox{5} Đoạn thẳng $AB$ \& đường thẳng $xy$ cắt nhau tại điểm $K$, gọi là \textit{giao điểm} của đường thẳng $xy$ \& đoạn thẳng $AB$, viết $xy\cap AB = \{K\}$. Điểm K nằm giữa 2 điểm $A,B$, 2 tia $Kx,Ky$ đối nhau. See \href{https://en.wikipedia.org/wiki/Line_segment}{Wikipedia{\tt/}line segment}.
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_2}, VD7, p. 68]
 	Chứng minh nếu 2 điểm $A,B$ cùng thuộc tia Ox \& $OA < OB$ thì điểm A nằm giữa 2 điểm $O,B$.
@@ -302,9 +295,82 @@ See, e.g., \href{https://vi.wikipedia.org/wiki/S%E1%BB%91_tam_gi%C3%A1c}{Wikiped
 	Cho điểm O nằm trong đoạn thẳng AB có $OA = a,Ob = b$. $M,N,I$ lần lượt là trung điểm $OA,OB,AB$. Tính $IM,IN$.
 \end{baitoan}
 
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.11, p. 13]
+	Vẽ 2 đoạn thẳng $AB,CD$ cắt nhau tại điểm I. Kể tên các đoạn thẳng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.12, p. 13]
+	Cho 2 đường thẳng phân biệt $AB,CD$. Biết đường thẳng AB cắt đoạn thẳng CD \& đường thẳng CD cắt đoạn thẳng AB. Chứng minh đoạn thẳng AB cắt đoạn thẳng CD.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.13, p. 14]
+	2 đường thẳng $d,d'$ cắt nhau tại O. Lấy 4 điểm $A,B,M,N$ trên đường thẳng $d'$ sao cho O nằm giữa $A,B$, B nằm giữa $O,M$, N nằm giữa $O,A$. d có cắt 3 đoạn thẳng $AB,AM,AN$ không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.14, p. 15]
+	Cho 4 điểm $A,B,C,D$. Qua 2 điểm vẽ 1 đường thẳng. (a) Nếu không có 3 điểm nào thẳng hàng, đếm số đoạn thẳng. (b) Nếu có 3 điểm thẳng hàng, giả sử là $A,B,C$, đếm số đoạn thẳng. (c) Xét trường hợp cả 4 điểm thẳng hàng, đếm số đoạn thẳng. (d) Trong trường hợp 4 điểm thuộc đường thẳng xy, tính số đoạn thẳng, tia.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.15, p. 16]
+	Qua 2 điểm vẽ được 1 \& chỉ 1 đường thẳng. (a) Cho 3 điểm không thẳng hàng, vẽ được bao nhiêu đường thẳng qua 2 trong 3 điểm đó? (b) Cho 4 điểm, 5 điểm trong đó không có 3 điểm nào thẳng hàng, vẽ được bao nhiêu đường thẳng qua 2 trong các điểm đó? (c) Cho $100$ điểm trong đó không có 3 điểm nào thẳng hàng, vẽ được bao nhiêu đường thẳng qua 2 trong các điểm đó?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.16, p. 17]
+	Cho $50$ điểm. Vẽ được bao nhiêu đường thẳng qua 2 điểm trong $50$ điểm đó nếu: (a) Không có 3 điểm nào thẳng hàng? (b) Có đúng 3 điểm thẳng hàng? (c) Có đúng $10$ điểm thẳng hàng. (d) Có đúng $n$ điểm thẳng hàng với $n\in\mathbb{N},3\le n\le50$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.17, p. 18]
+	Cho n điểm mà không có 3 điểm nào thẳng hàng. Cứ qua 2 điểm vẽ 1 đường thẳng. (a) Biết $n = 123$. Tính số đường thẳng vẽ được. (b) Biết số đường thẳng vẽ được là $378$. Tính số điểm n. (c) Số đường thẳng có thể là $2012$ không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.18, p. 19]
+	Trên mặt phẳng cho 4 đường thẳng khác nhau. (a) Có thể vẽ 4 đường thẳng đôi một cắt nhau sao cho số giao điểm của các đường thẳng là $1,2,3$ không? (b) Tính số giao điểm vẽ được nhiều nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.19, p. 19]
+	Biết bất kỳ 2 đường thẳng nào cũng cắt nhau \& không có 3 đường thẳng nào đồng quy. Tính số giao điểm của các đường thẳng nếu có n đường thẳng: (a) $n\in\{3,4,5\}$. (b) $n = 100$. (c) Xét trường hợp tổng quát $n\in\mathbb{N},n\ge3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 1.1., pp. 20--21]
+	Cho 6 điểm $A,B,C,O,M,N$ sao cho $A,B,C$ không thẳng hàng, $A,B,O$ thẳng hàng, $O,C,M$ thẳng hàng, $C,M,N$ thẳng hàng. (a) Chứng minh $O,C,M,N$ cùng thuộc 1 đường thẳng. (b) 2 đường thẳng $MN,AB$ trùng nhau không? (c) Cứ qua 2 điểm vẽ 1 đường thẳng. Đếm số được thẳng được vẽ \& liệt kê.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 1.2., p. 21]
+	Chứng minh 5 điểm $A,B,C,M,N$ thẳng hàng biết $A,B,M$ thẳng hàng, $B,C,N$ thẳng hàng, $A,M,N$ thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 1.3., p. 21]
+	Cho 4 điểm A,B,C,M trong đó B nằm giữa A,C, M nằm giữa A,B. Trong 3 điểm B,C,M, điểm nào nằm giữa 2 điểm còn lại?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 1.4., p. 21]
+	Cho 2 tia AM,AN đối nhau. (a) Lấy điểm B sao cho điểm N nằm giữa 2 điểm A,B. A có nằm giữa 2 điểm M,N không? (b) Lấy điểm $C\ne A$ nằm giữa 2 điểm M,N. C có nằm giữa B,M không? (c) Trong 3 điểm A,B,C, điểm nào nằm giữa 2 điểm còn lại?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 1.5., p. 21]
+	Cho 4 điểm A,B,C,D thẳng hàng theo thứ tự đó. (a) Đếm số đoạn thẳng \& liệt kê. (b) Nếu 4 điểm A,B,C,D thẳng hàng nhưng không theo thứ tự đó, đếm số đoạn thẳng. (c) Lấy điểm O không thuộc đường thẳng AB. Nối điểm O với A,B,C,D. Đếm số đoạn thẳng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 1.6., p. 21]
+	Cho n đường thẳng trong đó bất cứ 2 đường thẳng nào cũng cắt nhau, không có 3 đường nào đồng quy. (a) Tính số giao điểm của các đường thẳng khi $n = 124$. (b) Tìm n để số giao điểm bằng $124$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 1.7., p. 21]
+	Cho n điểm trong đó không có 3 điểm nào thẳng hàng. Cứ qua 2 điểm vẽ 1 đường thẳng. (a) Tính số đường thẳng vẽ được khi $n = 24$. (b) Tìm n để số đường thẳng bằng $240$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 1.8., p. 21]
+	Cho n điểm, nối từng cặp 2 điểm. (a) Tính số đoạn thẳng khi $n = 100$. (b) Tìm n để số đoạn thẳng bằng tổng các số từ $1$ đến $99$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 1.9., p. 21]
+	$5$ đường thẳng chia mặt phẳng thành nhiều nhất bao nhiêu miền?
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Ray -- Tia}
+\fbox{1} Hình gồm điểm $O$ \& 1 phần đường thẳng bị chia ra bởi điểm $O$ gọi là 1 \textit{tia} gốc $O$. Tia $Ox$ còn gọi là \textit{1 nửa đường thẳng gốc $O$}. Tia $Ox$ không bị giới hạn về phía $x$. \fbox{2} 2 tia chung gốc $Ox,Oy$ tạo thành đường thẳng $xy$ gọi là \textit{2 tia đối nhau}. Mỗi điểm trên đường thẳng là gốc chung của 2 tia đối nhau. \fbox{3} Cho 2 tia chung gốc $Ox,Oy$, có: hoặc đó là 2 tia đối nhau, hoặc là 2 tia trùng nhau, hoặc là 2 tia không đối nhau, không trùng nhau. \fbox{4} \textit{Về thứ tự của 3 điểm trên 1 đường thẳng}: Cho 3 điểm $A,B,C$ thẳng hàng, nếu 2 tia $AB,AC$ đối nhau thì điểm $A$ nằm giữa 2 điểm $B,C$. \fbox{5} \textit{Về sự xác định tia}: Nếu điểm $A$ nằm giữa 2 điểm $B,C$ thì 2 tia $AB,AC$ đối nhau, 2 tia $BA,BC$ trùng nhau, 2 tia $CA,CB$ trùng nhau.
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_2}, VD3, p. 66]
 	Cho 3 điểm $A,B,C$ trong đó 2 tia $BA,BC$ đối nhau. Trong 3 điểm $A,B,C$ điểm nào nằm giữa 2 điểm còn lại?
@@ -345,6 +411,30 @@ See, e.g., \href{https://vi.wikipedia.org/wiki/S%E1%BB%91_tam_gi%C3%A1c}{Wikiped
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 13., p. 67]
 	(a) Vẽ 6 đoạn thẳng sao cho mỗi đoạn thẳng cắt đúng 3 đoạn thẳng khác. (b) Vẽ 8 đoạn thẳng sao cho mỗi đoạn thẳng cắt đúng 3 đoạn thẳng khác.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.5, p. 10]
+	Cho điểm $O$ thuộc đường thẳng $xx'$. Lấy 2 điểm $A,B$ thuộc tia Ox sao cho A nằm giữa $B,O$. Đếm số tia. Đếm số cặp tia đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.6, p. 11]
+	Cho 3 điểm $A,B,C$ không thẳng hàng. Đặt tên đường thẳng BC là $xx'$, đường thẳng CA là $yy'$ \& đường thẳng AB là $zz'$. Liệt kê các cặp tia đối nhau, trùng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.7, p. 11]
+	Cho 3 điểm $A,B,C$. (a) Khi nào 2 tia $BA,BC$ đối nhau? (b) Khi nào 2 tia $CA,CB$ trùng nhau? (c) Khi nào 2 tia $AB,AC$ không là 2 tia đối nhau \& cùng không là 2 tia trùng nhau?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.8, p. 12]
+	Cho điểm B nằm giữa 2 điểm $A,C$. Điểm C nằm giữa 2 điểm $B,D$. C có nằm giữa $A,D$ không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.9, p. 12]
+	Cho điểm B nằm giữa 2 điểm $A,D$ \& điểm C nằm giữa 2 điểm $B,D$. C có nằm giữa $A,B$ không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD1.10, p. 12]
+	Cho điểm A nằm giữa 2 điểm $B,C$. Biết M nằm giữa $A,B$, N nằm giữa $A,C$. A có nằm giữa $M,N$ không?
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
