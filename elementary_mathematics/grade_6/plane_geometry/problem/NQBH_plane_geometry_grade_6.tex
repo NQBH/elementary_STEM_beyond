@@ -829,6 +829,47 @@ See, e.g., \href{https://vi.wikipedia.org/wiki/S%E1%BB%91_tam_gi%C3%A1c}{Wikiped
 
 %------------------------------------------------------------------------------%
 
+\section{Circle. Triangle -- Đường Tròn. Tam Giác}
+\fbox{1} \textit{Đường tròn} tâm $O$, bán kính $R$ là hình gồm các điểm cách $O$ 1 khoảng bằng $R$, ký hiệu $(O;R)\coloneqq S_R(O) = \partial B_R(O) = \{M\in\mathbb{R}^2|OM = R\}$. \fbox{2} \textit{Hình tròn} là hình gồm các điểm nằm trên đường tròn \& các điểm nằm bên trong đường tròn: $B_R(O)\coloneqq\{M\in\mathbb{R}^2|OM\le R\}$. \fbox{3} 2 điểm $A,B\in(O;R)$ chia đường tròn thành 2 cung tròn. Đoạn thẳng nối 2 điểm $A,B$ là \textit{dây cung}. Dây đi qua tâm là \textit{đường kính}. \fbox{4} Tam giác $ABC$ là hình gồm 3 đoạn thẳng $AB,BC,CA$ khi 3 điểm $A,B,C$ không thẳng hàng, i.e., $\Delta ABC\coloneqq AB\cup BC\cup CA$, $\forall A,B,C\in\mathbb{R}^2,C\notin AB$.
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD7.1, p. 60]
+	Cho 5 điểm bất kỳ thuộc đường tròn $(O)$. Đếm số dây cung, số cung tạo bởi 2 trong 5 điểm đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD7.2, p. 61]
+	Trên cạnh AC của $\Delta ABC$ lấy điểm M. Vẽ đoạn thẳng BM. Tính $\widehat{CBM}$, biết $\widehat{ABC} = 70^\circ,\widehat{ABM} = 30^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD7.3, p. 61]
+	Cho điểm M không thuộc đường thẳng xy. Lấy $A,B\in xy$ thì tồn tại 1 tam giác có đỉnh là điểm M \& 2 đỉnh còn lại là 2 điểm A,B. (a) Nếu có thêm 1 điểm thứ 3 cũng thuộc đường thẳng xy thì vẽ được bao nhiêu tam giác có đỉnh là M \& 2 đỉnh còn lại là 2 trong 3 điểm thuộc xy? (b) Nếu có $100$ điểm trên xy thì vẽ được bao nhiêu tam giác có đỉnh là M \& 2 đỉnh còn lại là 2 trong số $100$ điểm thuộc xy?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD7.4, pp. 61--62]
+	(a) Vẽ $\Delta ABC$ có $\widehat{A} = 60^\circ,AC = 9$. (b) Trên tia AC lấy điểm M sao cho $AM = 2$, trên tia CA lấy điểm D sao cho $CD = 5$. Chứng minh M là trung điểm đoạn thẳng AD. (c) Vẽ 2 đoạn thẳng BM,BD. Đếm số tam giác \& liệt kê. (d) $\widehat{BAC},\widehat{BMC}$ là góc của các tam giác nào? (e) Tìm các góc kề bù với $\widehat{BMC},\widehat{BDC}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD7.5, p. 62]
+	Cho $6$ điểm trên mặt phẳng sao cho không có $3$ điểm nào thẳng hàng. Cứ qua $2$ điểm vẽ 1 đoạn thẳng \& tô đoạn thẳng đó bằng màu xanh hoặc đỏ. Chứng minh tồn tại 1 tam giác có $3$ đỉnh là $3$ điểm trong số $6$ điểm đã cho \& có các cạnh cùng được tô màu xanh hoặc cùng màu đỏ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 7.1., p. 63]
+	Cho $\Delta ABC$. Trên cạnh BC lấy 3 điểm D,I,K. Kẻ 3 đoạn thẳng BD,BI,BK. Liệt kê các tam giác.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 7.2., p. 63]
+	Cho $\Delta ABC$. Lấy D,E lần lượt thuộc 2 cạnh AC,AB. 2 đoạn thẳng BD,CE giao nhau tại O. Nối AO. Đếm số tam giác.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 7.3., p. 63]
+	Cho $\Delta ABC$. Đường thẳng a cắt cạnh AB tại D nằm giữa A,B, cắt cạnh AC tại E nằm giữa A,C. a có cắt cạnh BC không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 7.4., p. 63]
+	Cho A,B,C,D,E nằm trên 1 đường tròn. Nối từng cặp điểm. Đếm số tam giác \& liệt kê.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
 \section{Tính Số Điểm, Số Đường Thẳng, Số Đoạn Thẳng, Số Tam Giác, Số Góc}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_2}, VD19, p. 78]
