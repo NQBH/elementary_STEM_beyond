@@ -550,9 +550,17 @@ See, e.g., \href{https://vi.wikipedia.org/wiki/S%E1%BB%91_tam_gi%C3%A1c}{Wikiped
 	Cho điểm A nằm giữa 2 điểm $B,C$. Biết M nằm giữa $A,B$, N nằm giữa $A,C$. A có nằm giữa $M,N$ không?
 \end{baitoan}
 
+\subsection{Nửa mặt phẳng. Tia nằm giữa 2 tia}
+\fbox{1} Hình gồm đường thẳng $a$ \& 1 phần mặt phẳng bị chia ra bởi $a$ gọi là \textit{1 nửa mặt phẳng bờ $a$}. 2 nửa mặt phẳng (I), (II) có chung bờ $a$ gọi là \textit{2 nửa mặt phẳng đối nhau}. \fbox{2} Mỗi đường thẳng $a$ chia mặt phẳng thành 2 phần: Nếu 2 điểm $A,B$ thuộc 1 phần thì đường thẳng $a$ không cắt đoạn thẳng $AB$. Nếu 2 điểm $A,B$ thuộc 2 phần khác nhau thì đường thẳng $a$ cắt đoạn thẳng $AB$. \fbox{3} {\sf Dấu hiệu nhận biết tia nằm giữa 2 tia}: Cho 3 tia $Ox,Oy,Oz$ chung gốc $O$. Nếu có điểm $A$ thuộc tia $Ox$, điểm $B$ thuộc tia $Oy$, $A\ne O,B\ne O$, mà tia $Oz$ cắt đoạn thẳng $AB$ tại điểm $I$ nằm giữa $A,B$ thì tia $Oz$ nằm giữa 2 tia $Ox,Oy$. \fbox{4} Nếu 2 tia $Ox,Oy$ đối nhau thì mọi tia $Oz$ khác $Ox,Oy$ đều nằm giữa 2 tia $Ox,Oy$. \fbox{5} {\sf Dấu hiệu đường thẳng cắt đoạn thẳng}: {\sc Định lý Pasch về tam giác}: Có 3 điểm $A,B,C$ không thẳng hàng \& không điểm nào thuộc đường thẳng $a$. Nếu đường thẳng $a$ cắt đoạn thẳng $BC$ thì đường thẳng $a$ hoặc cắt đoạn thẳng $AB$ hoặc cắt đoạn thẳng $AC$. \fbox{6} {\sf Dấu hiệu nhận biết tia nằm giữa 2 tia}: Cho 2 tia $Oy,Oz$ cùng thuộc nửa mặt phẳng bờ chứa tia $Ox$. Biết tia $Oy$ nằm giữa 2 tia $Ox,Oz$. Nếu tia $Om$ nằm giữa 2 tia $Oy,Oz$, hoặc tia $Om$ nằm giữa 2 tia $Ox,Oy$, thì tia $Om$ nằm giữa 2 tia $Ox,Oz$.
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD4.1, p. 40]
+	Cho 4 điểm O,A,B,C trong đó A,B,C thẳng hàng. Biết A không nằm giữa B,C, B không nằm giữa A,C. (a) Trong 3 tia OA,OB,OC, tia nào nằm giữa 2 tia còn lại? (b) Vẽ tia Om là tia đối của tia OC, $M\ne O$. Trong 3 tia OA,OB,OM, tia nào nằm giữa 2 tia còn lại?
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Angle -- Góc}
+\fbox{1} \textit{Góc} là 1 hình gồm 2 tia chung gốc. Gốc chung của tia gọi là \textit{đỉnh} của góc, 2 tia gọi là 2 \textit{cạnh} của góc. Có nhiều cách ký hiệu 1 góc, e.g., góc $xOy$, góc $MON$, góc $O$, $\angle xOy,\widehat{xOy},\widehat{MON}$. \fbox{2} \textit{Góc bẹt} là góc có 2 cạnh là 2 tia đối nhau. \fbox{3} Để vẽ góc thì vẽ đỉnh \& vẽ 2 cạnh của góc. Dùng thước đo góc để đo độ lớn của 1 góc.
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_2}, VD12, p. 72]
 	Cho đường thẳng a \& 3 điểm $A,B,C$ sao cho a không cắt 2 đoạn thẳng $AB,AC$. a có cắt đoạn thẳng BC không?
@@ -582,9 +590,34 @@ See, e.g., \href{https://vi.wikipedia.org/wiki/S%E1%BB%91_tam_gi%C3%A1c}{Wikiped
 	Cho góc bẹt xOy, vẽ 3 tia $Oa,Ob,Oc$ thuộc cùng 1 nửa mặt phẳng có bờ xy. Đếm số góc \& kể tên chúng.
 \end{baitoan}
 
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD4.2, p. 41]
+	Đếm số góc tạo bởi: (a) $3$ tia chung gốc OA,OB,OC theo thứ tự đó. (b) $4$ tia tia chung gốc OA,OB,OC,OD theo thứ tự đó. (c) $5$ tia tia chung gốc OA,OB,OC,OD,OE theo thứ tự đó. (d) $100$ tia chung gốc. (e) $n\in\mathbb{N}^\star$ tia chung gốc.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 4.1., p. 42]
+	Lấy 2 điểm M,N trên tia Ox \& P thuộc Oy là tia đối của tia Ox, M,N,P khác O. (a) Liệt kê các tia có trên đường thẳng xy. (b) Đếm số đoạn thẳng trên đường thẳng xy \& liệt kê. (c) O thuộc các đoạn thẳng nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 4.2., p. 42]
+	Cho A,B,C không thuộc đường thẳng a. (a) a có thể cắt chỉ 1 trong 3 đoạn thẳng AB,BC,CA được không? (b) Biết a không cắt 2 đoạn thẳng AB,AC. a có cắt đoạn thẳng BC không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 4.3., pp. 42--43]
+	Cho đường thẳng a. (a) Nếu 4 điểm A,B,C,D không nằm trên đường thẳng a, hỏi a có thể cắt bao nhiêu đoạn thẳng trong 6 đoạn thẳng AB,AC,AD,BC,BD,CD? (b) Nếu 4 điểm A,B,C,D không thuộc đường thẳng a mà đường thẳng a không cắt các đoạn thẳng AB,AC,CD thì a có cắt đoạn thẳng AD không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 4.4., p. 43]
+	Cho M nằm giữa 2 điểm A,B. Lấy O không thuộc đường thẳng AB. Vẽ 3 tia OA,OB,OM. (a) Trong 3 tia OA,OB,OM thì tia nào không nằm giữa 2 tia còn lại? (b) Lấy N sao cho A nằm giữa O,N. Trong 2 tia OM,ON thì tia nào cắt đoạn thẳng BN?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 4.5., p. 43]
+	Cho 3 điểm A,B,C nằm ngoài đường thẳng a. (a) Biết a cắt 2 đoạn thẳng AB,AC. a có cắt đoạn thẳng BC không? (b) Chứng minh nếu đường thẳng a cắt đoạn thẳng AB \& không cắt đoạn thẳng AC thì a sẽ cắt đoạn thẳng BC.
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \subsection{Số đo góc}
+\fbox{1} Mỗi góc có 1 số đo, số đo của mỗi góc $\le180^\circ$. Đơn vị của góc là độ, phút, giây. Các góc đặc biệt: góc nhọn $0^\circ < \alpha < 90^\circ$, góc vuông $\alpha = 90^\circ$, góc tù $90^\circ < \alpha < 180^\circ$, góc bẹt $\alpha = 180^\circ$. \fbox{2} So sánh 2 góc bằng cách so sánh các số đo của chúng. \fbox{3} Nếu tia $Oy$ nằm giữa 2 tia $Ox,Oz$ thì $\widehat{xOy} + \widehat{yOz} = \widehat{xOz}$. \fbox{4} {\sf Dấu hiệu về thứ tự của tia}: Nếu có đẳng thức về góc $\widehat{xOy} + \widehat{yOz} = \widehat{xOz}$ thì tia $Oy$ nằm giữa 2 tia $Ox,Oz$. \fbox{5} {\sf Dấu hiệu về thứ tự của tia}: Nếu 2 tia $Oy,Oz$ cùng thuộc nửa mặt phẳng bờ chứa tia $Ox$ \& có $\widehat{xOy} < \widehat{xOz}$ thì tia $Oy$ nằm giữa 2 tia $Ox,Oz$.
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_2}, VD14, p. 74]
 	Cho tia Oc nằm giữa 2 tia $Oa,Ob$ không đối nhau, tia Om nằm giữa tia $Oa,Oc$, tia On nằm giữa 2 tia $Ob,Oc$O. Tia Oc có nằm giữa 2 tia $Om,On$ không?
@@ -640,6 +673,49 @@ See, e.g., \href{https://vi.wikipedia.org/wiki/S%E1%BB%91_tam_gi%C3%A1c}{Wikiped
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 47., p. 76]
 	Cho điểm O nằm trong $\Delta ABC$. Chứng minh: (a) Tia BO cắt đoạn thẳng AB tại 1 điểm D nằm giữa $A,C$. (b) Điểm O nằm giữa $B,D$. (c) Trong 3 tia $OA,OB,OC$, không có tia nào nằm giữa 2 tia còn lại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD5.1, p. 44]
+	Cho 3 tia Ox,Oy,Oz. Tính $\widehat{yOz}$ nếu: (a) Tia Ox nằm giữa 2 tia Oy,Oz sao cho $\widehat{xOy} = 80^\circ,\widehat{xOz} = 30^\circ$. (b) $\widehat{xOy} = \alpha,\widehat{xOz} = \beta,0^\circ < \alpha + \beta < 180^\circ,\alpha\ne\beta$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD5.2, p. 45]
+	Cho $\widehat{xOy} = 45^\circ,\widehat{yOz} = 80^\circ,\widehat{zOx} = 35^\circ$. Trong 3 tia Ox,Oy,Oz thì tia nào nằm giữa 2 tia còn lại?
+\end{baitoan}
+
+\subsection{2 góc bù nhau, phụ nhau}
+\fbox{1} \textit{2 góc kề nhau} là 2 góc có 1 cạnh chung \& 2 cạnh còn lại nằm trên 2 nửa mặt phẳng đối nhau có bờ chứa cạnh chung. \fbox{2} \textit{2 góc phụ nhau} là 2 góc có tổng số đo bằng $90^\circ$. 2 góc bù nhau là 2 góc có tổng số đo bằng $180^\circ$. \fbox{3} \textit{2 góc kề bù} là 2 góc vừa kề nhau, vừa bù nhau. \fbox{4} Trên nửa mặt phẳng cho trước có bờ chứa tia $Ox$, bao giờ cũng vẽ được 1 \& chỉ 1 tia $Oy$ sao cho $\widehat{xOy} = \alpha$. \fbox{5} {\sf Dấu hiệu về tia đối nhau}: Nếu $\widehat{xOy},\widehat{yOz}$ kề nhau mà $\widehat{xOy} + \widehat{yOz} = 180^\circ$ thì tia $Ox,Oz$ đối nhau. \fbox{6} {\sf Dấu hiệu về thứ tự của tia}: Cho 2 tia đối nhau $Ox,Oy$ \& 2 điểm $A,B$ thuộc 2 nửa mặt phẳng đối nhau bờ $xy$. Biết $\widehat{AOx} = \alpha,\widehat{BOx} = \beta$. Nếu $\alpha + \beta > 180^\circ$ thì tia $Oy$ nằm giữa 2 tia $OA,OB$. Nếu $\alpha + \beta\le180^\circ$ thì tia $Ox$ nằm giữa 2 tia $OA,OB$.
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, VD5.3, p. 47]
+	Cho góc bẹt xOy. Trên cùng nửa mặt phẳng bờ xy, vẽ 3 tia OA,OB,OC sao cho $\widehat{AOx} = 35^\circ,\widehat{BOx} = \frac{1}{2}\widehat{AOx},\widehat{COy} = \frac{1}{2}\widehat{AOy}$. Tính $\widehat{BOC}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 5.1., p. 48]
+	Cho 3 tia chung gốc Ox,Oy,Oz sao cho tia đối của tia Oz nằm giữa 2 tia Ox,Oy. Chứng minh $\widehat{xOy} + \widehat{yOz} + \widehat{zOx} = 360^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 5.2., p. 48]
+	Cho $\widehat{xOy} = 180^\circ$. Vẽ 2 tia OM,ON cùng nằm trong 1 nửa mặt phẳng bờ xy sao cho $\widehat{MOx} = \alpha,\widehat{NOy} = \beta,0^\circ < \alpha + \beta < 180^\circ,\alpha\ne\beta$. Tính $\widehat{MON}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 5.3., p. 48]
+	Cho $\widehat{xOy} = 105^\circ,\widehat{xOz} = 125^\circ$. Tính $\widehat{yOz}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 5.4., p. 48]
+	Cho 3 tia chung gốc OA,OB,OC sao cho $\widehat{AOB} = 40^\circ,\widehat{AOC} = 35^\circ$. (a) Tính $\widehat{BOC}$. (b) Vẽ tia OD là tia đối của tia OA. Tính $\widehat{BOD},\widehat{COD}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 5.5., p. 48]
+	Cho 3 đường thẳng AM,BN,CD đồng quy tại O. (a) Liệt kê các góc kề với $\widehat{AOD}$. (b) Liệt kê các góc kề bù với $\widehat{AOD}$. (c) Tìm các góc bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 5.6., p. 48]
+	Cho 2 đường thẳng AB,CD cắt nhau tại O. Tính $\widehat{BOC},\widehat{BOD}$ nếu: (a) $\widehat{AOC} = \alpha\in(0^\circ,180^\circ)$. (b) Biết $\widehat{AOC} - \widehat{BOC} = \alpha\in(0^\circ,180^\circ)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_6_hinh_hoc}, 5.7., p. 48]
+	Cho 2 tia đối nhau OA,OB. Chứng minh 2 tia OM,ON đối nhau, biết 2 tia OM,ON nằm trong 2 nửa mặt phẳng đối nhau bờ AB mà $\widehat{AOM} = \widehat{BON} = \alpha\in(0^\circ,180^\circ)$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
