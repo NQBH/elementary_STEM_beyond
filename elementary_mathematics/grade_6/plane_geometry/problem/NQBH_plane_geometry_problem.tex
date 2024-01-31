@@ -298,7 +298,95 @@
 %------------------------------------------------------------------------------%
 
 \section{Line segment -- Đoạn Thẳng}
-\fbox{1} \textit{Đoạn thẳng} $AB$ là hình gồm 2 điểm $A,B$ \& tất cả các điểm nằm giữa $A,B$. Đoạn thẳng $AB$ còn gọi là đoạn thẳng $BA$. 2 điểm $A,B$ là 2 \textit{mút} (hoặc 2 \textit{đầu}) của đoạn thẳng $AB$. Mỗi đoạn thẳng có 1 độ dài. Độ dài đoạn thẳng là 1 số lớn hơn $0$. \fbox{2} Có thể so sánh 2 đoạn thẳng bằng cách so sánh độ dài của chúng. \fbox{3} 2 đoạn thẳng $AB,CD$ cắt nhau tại điểm $O$. Điểm $O$ gọi là \textit{giao điểm} của 2 đoạn thẳng $AB,CD$, viết $AB\cap CD = \{O\}$. Điểm $O$ nằm giữa 2 điểm $A,B$, điểm $O$ nằm giữa 2 điểm $C,D$. \fbox{4} Đoạn thẳng $AB$ \& tia $Ox$ cắt nhau tại điểm $I$, gọi là \textit{giao điểm} của tia $Ox$ \& đoạn thẳng $AB$, viết $Ox\cap AB = \{I\}$. Điểm $I$ nằm giữa 2 điểm $A,B$, 2 tia $OI,Ox$ trùng nhau. \fbox{5} Đoạn thẳng $AB$ \& đường thẳng $xy$ cắt nhau tại điểm $K$, gọi là \textit{giao điểm} của đường thẳng $xy$ \& đoạn thẳng $AB$, viết $xy\cap AB = \{K\}$. Điểm K nằm giữa 2 điểm $A,B$, 2 tia $Kx,Ky$ đối nhau. \fbox{6} {\sf Tính chất cộng các đoạn thẳng}: Nếu điểm M nằm giữa $A,B$ thì $AM + MB = AB$. Tổng quát: Nếu $A_1A_2\ldots A_n = A_1A_n$, i.e., độ dài đường gấp khúc $A_1A_2\ldots A_n$ bằng độ dài đoạn thẳng $A_1A_n$ thì $A_1,A_2,\ldots,A_n$ thẳng hàng theo thứ tự ấy. Nếu $AM + MB = AB$ thì M nằm giữa 2 điểm $A,B$. Nếu $A,B$ thuộc tia $Ox$ \& $OA < OB$ thì A nằm giữa $O,B$. See \href{https://en.wikipedia.org/wiki/Line_segment}{Wikipedia{\tt/}line segment}.
+\fbox{1} \textit{Đoạn thẳng} $AB$ là hình gồm 2 điểm $A,B$ \& tất cả các điểm nằm giữa $A,B$. Đoạn thẳng $AB$ còn gọi là đoạn thẳng $BA$. 2 điểm $A,B$ là 2 \textit{mút} (hoặc 2 \textit{đầu}) của đoạn thẳng $AB$. Mỗi đoạn thẳng có 1 độ dài. Độ dài đoạn thẳng là 1 số lớn hơn $0$. \fbox{2} Có thể so sánh 2 đoạn thẳng bằng cách so sánh độ dài của chúng. \fbox{3} 2 đoạn thẳng $AB,CD$ cắt nhau tại điểm $O$. Điểm $O$ gọi là \textit{giao điểm} của 2 đoạn thẳng $AB,CD$, viết $AB\cap CD = \{O\}$. Điểm $O$ nằm giữa 2 điểm $A,B$, điểm $O$ nằm giữa 2 điểm $C,D$. \fbox{4} Đoạn thẳng $AB$ \& tia $Ox$ cắt nhau tại điểm $I$, gọi là \textit{giao điểm} của tia $Ox$ \& đoạn thẳng $AB$, viết $Ox\cap AB = \{I\}$. Điểm $I$ nằm giữa 2 điểm $A,B$, 2 tia $OI,Ox$ trùng nhau. \fbox{5} Đoạn thẳng $AB$ \& đường thẳng $xy$ cắt nhau tại điểm $K$, gọi là \textit{giao điểm} của đường thẳng $xy$ \& đoạn thẳng $AB$, viết $xy\cap AB = \{K\}$. Điểm K nằm giữa 2 điểm $A,B$, 2 tia $Kx,Ky$ đối nhau. \fbox{6} {\sf Tính chất cộng các đoạn thẳng}: Điểm $M$ nằm giữa $A,B\Leftrightarrow AM + MB = AB$. Tổng quát: Độ dài đường gấp khúc $A_1A_2\ldots A_n$ bằng độ dài đoạn thẳng $A_1A_n$, i.e., ${\rm length}(A_1A_2\ldots A_n) = \sum_{i=1}^{n-1} A_iA_{i+1} = A_1A_2 + A_2A_3 + \cdots + A_{n-1}A_n = A_1A_n\Leftrightarrow A_1,A_2,\ldots,A_n$ thẳng hàng theo thứ tự ấy. Nếu $A,B$ thuộc tia $Ox$ \& $OA < OB$ thì $A$ nằm giữa $O,B$. \fbox{7} {\sf Vẽ đoạn thẳng trên tia}: Trên tia $Ox$ bao giờ cũng vẽ được 1 \& chỉ 1 điểm $M$ sao cho $OM = a$. Trên tia $Ox$ nếu có 2 điểm $M,N$ sao cho $OM < ON$ thì điểm $M$ nằm giữa $O,N$. See \href{https://en.wikipedia.org/wiki/Line_segment}{Wikipedia{\tt/}line segment}.
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD1, p. 67]
+	Cho đoạn thẳng $AB = 6$. Lấy điểm M nằm giữa A,B, điểm N nằm giữa B,M sao cho $AM = 3,MN = 1$. Tính độ dài BN.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD2, p. 68]
+	Cho đoạn thẳng $AB = 5$. Lấy 2 điểm C,D nằm giữa A,B sao cho $AC = BD = 2$. Tính độ dài CD.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD3, p. 68]
+	Trên đoạn thẳng AB lấy 2 điểm E,F sao cho E nằm giữa A,F, F nằm giữa B,E. Biết $AF = BE$, so sánh AE,BF.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD4, p. 68]
+	Trên tia Ox lấy 2 điểm M,N sao cho $OM = 2,ON = a > 2$. Tìm a để: (a) $MN = 2OM$. (b) $MN = bOM$ với $b\in(0,\infty)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD5, p. 69]
+	Trên tia Ox lấy 2 điểm A,B sao cho $OA = a,OB = 4$. Tính độ dài AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, VD6, p. 69]
+	Cho 3 điểm A,B,C. Biết $AB = 3,BC = 4,CA = 5$. Chứng minh: (a) Trong 3 điểm đã cho, không có điểm nào nằm giữa 2 điểm còn lại. (b) A,B,C không thẳng hàng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.1., p. 70]
+	Cho 4 điểm A,B,C,D. Vẽ các đoạn thẳng đi qua các cặp điểm. Đếm số đoạn thẳng \& liệt kê.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.2., p. 70]
+	Cho $n\in\mathbb{N},n\ge2$ điểm. Vẽ được tất cả $21$ đoạn thẳng đi qua các cặp điểm. Tính n.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.3., p. 70]
+	Cho đoạn thẳng AB. Lấy 1 số điểm nằm trên đoạn thẳng này không trùng với 2 đầu đoạn thẳng. Tính số điểm phải lấy để có $15$ đoạn thẳng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.4., p. 70]
+	Cho điểm M nằm giữa 2 điểm A,B. Chứng minh $\max\{AM,BM\} < AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.5., p. 70]
+	Cho đoạn thẳng $AB = 6$. Lấy điểm M nằm giữa A,B sao cho $AM = 2BM$. Tính độ dài AM,BM.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.6., p. 70]
+	Cho 3 điểm A,B,M nằm trên đường thẳng xy. Biết $AB = 4$, tính: (a) Tổng $MA + MB$ nếu M nằm giữa A,B. (b) Hiệu $MA - MB$ nếu M nằm trên tia đối của tia BA. (c) Hiệu $MB - MA$ nếu M nằm trên tia đối của tia AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.7., p. 70]
+	Cho 3 điểm M,N,P thẳng hàng. M không nằm giữa 2 điểm còn lại. Điểm nào nằm giữa 2 điểm còn lại nếu $MN = 5,PM = 3$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.8., p. 70]
+	Cho 3 điểm A,B,C thẳng hàng. Biết $AB = 2,BC = 5$. Tính độ dài AC.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.9., p. 70]
+	Trên tia Ox lấy 2 điểm A,M sao cho $OA = 2,AM = m > 2$. Tính độ dài OM.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.10., p. 70]
+	Trên tia Ox lấy 3 điểm C,D,E sao cho $OC = 2,OD = 3,OE = 5$. Tìm các cặp đoạn thẳng bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.11., p. 70]
+	Trên tia Ox lấy 2 điểm A,B sao cho $OA = 1,OB = 4$. Trên tia đối của tia Bx lấy điểm M sao cho $BM = 2$. (a) Tính độ dài AB. (b) So sánh OA,AM.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.12., p. 70]
+	Trên đường thẳng xy lấy 1 điểm O \& 2 điểm C,D sao cho $OC = 2,OD = 3$. Tính độ dài CD.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.13., p. 70]
+	Cho đoạn thẳng $MN = 3$. Trên tia đối của tia MN lấy điểm P, trên tia đối của tia NM lấy điểm Q sao cho $MP = NQ = 1$. Chứng minh $PN = MQ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.14., p. 70]
+	Cho đoạn thẳng $AB = 3$. Trên tia AB lấy điểm E sao cho $AE = a > 3$. Trên tia BA lấy điểm F sao cho $BF = b > 3$. Tìm điều kiện của $a,b$ để $BE < AF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, 12.15., p. 70]
+	Trên tia Ox lấy 2 điểm M,N sao cho $OM = 3,MN = 2$. Tính độ dài ON.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_boi_duong_Toan_6_tap_2}, p. 71]
+	Có thể vẽ bằng 1 đường liền nét mà không nhấc bút khỏi tờ giấy \& không vẽ đoạn thẳng nào quá 1 lần không? (a) Hình chữ nhật ABCD với đường chéo AC. (b) Hình chữ nhật ABCD với 2 đường chéo AC,BD.
+\end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_2}, VD7, p. 68]
 	Chứng minh nếu 2 điểm $A,B$ cùng thuộc tia Ox \& $OA < OB$ thì điểm A nằm giữa 2 điểm $O,B$.
