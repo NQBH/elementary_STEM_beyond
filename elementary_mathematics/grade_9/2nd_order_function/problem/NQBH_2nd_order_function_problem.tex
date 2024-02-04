@@ -50,7 +50,7 @@
 %------------------------------------------------------------------------------%
 
 \section{2nd-Order Function -- Hàm Số $y = ax^2,a\ne0$}
-\fbox{1} Hàm số bậc 2 $y = ax^2$, $a\ne0$. TXĐ: $\mathbb{R}$. Nếu $a > 0$, hàm số $y = ax^2$ nghịch biến khi $x < 0$, đồng biến khi $x > 0$. Nếu $a < 0$, hàm số $y = ax^2$ nghịch biến khi $x > 0$, đồng biến khi $x < 0$. \fbox{2} Đồ thị hàm số $y = ax^2,a\ne0$ là 1 parabol đi qua gốc tọa độ $O$, nhận trục $Oy$ là trục đối xứng, $O$ là đỉnh của parabol. Nếu $a > 0$, đồ thị nằm phía trên trục hoành, $O$ là điểm thấp nhất của đồ thị. $\min_{x\in\mathbb{R}} y = 0\Leftrightarrow x = 0$. Nếu $a < 0$, đồ thị nằm phía dưới trục hoành, $O$ là điểm cao nhất của đồ thị. $\max_{x\in\mathbb{R}} y = 0\Leftrightarrow x = 0$.\\
+\fbox{1} Hàm số bậc 2 $y = f(x) = ax^2$, $a\ne0$ có tập xác định TXĐ: $D_f = \mathbb{R}$. Nếu $a > 0$, hàm số $y = ax^2$ nghịch biến khi $x < 0$, đồng biến khi $x > 0$. Nếu $a < 0$, hàm số $y = ax^2$ nghịch biến khi $x > 0$, đồng biến khi $x < 0$. \fbox{2} Đồ thị hàm số $y = ax^2,a\ne0$ là 1 parabol đi qua gốc tọa độ $O$, nhận trục $Oy$ là trục đối xứng, $O$ là đỉnh của parabol. Nếu $a > 0$, đồ thị nằm phía trên trục hoành, $O$ là điểm thấp nhất của đồ thị. $\min_{x\in\mathbb{R}} y = 0\Leftrightarrow x = 0$. Nếu $a < 0$, đồ thị nằm phía dưới trục hoành, $O$ là điểm cao nhất của đồ thị. $\max_{x\in\mathbb{R}} y = 0\Leftrightarrow x = 0$.\\
 
 \noindent\cite[Chap. VII, \S1, pp. 46--51]{SGK_Toan_9_Canh_Dieu_tap_2}: HD1. LT1. LT2. HD2. LT3. HD3. 1. 2. 3. 4. 5.
 
@@ -83,7 +83,7 @@
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, 4.1., p. 39]
-	Cho 2 hàm số $y = \pm\frac{3}{4}x^2$. Tính các giá trị tương ứng của $y$ tại các giá trị $x = 0,\pm1,\pm2,\pm3$. Nhận xét.
+	Cho 2 hàm số $y = \pm\dfrac{3}{4}x^2$. Tính các giá trị tương ứng của $y$ tại các giá trị $x = 0,\pm1,\pm2,\pm3$. Nhận xét.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, 4.2., p. 39]
@@ -177,6 +177,77 @@
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_2}, 239., p. 20]
 	(a) Vẽ đồ thị hàm số $y = -\frac{1}{2}x^2$. (b) Gọi C là 1 điểm tùy ý nằm trên parabol $y = -\frac{1}{2}x^2$. Gọi K là trung điểm OC. Khi điểm C di chuyển trên parabol đó thì điểm K di chuyển trên đường nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD12.1, p. 65]
+	Trong mặt phẳng tọa độ $(Oxy)$ cho đường thẳng $(d)$: $y = -1$ \& điểm $F(0,1)$. Tìm tập hợp tất cả những điểm $I$ sao cho khoảng cách từ $I$ đến $(d)$ bằng $IF$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Giả sử điểm $I(x,y)$. Khi đó khoảng cách từ $I$ đến $(d)$ bằng $|y + 1|$ \& $IF = \sqrt{x^2 + (y - 1)^2}$, nên $d_{I,(d)} = IF\Leftrightarrow|y + 1| = \sqrt{x^2 + (y - 1)^2}\Leftrightarrow(y + 1)^2 = x^2 + (y - 1)^2\Leftrightarrow y = \frac{1}{4}x^2$. Suy ra tập hợp tất cả những điểm $I$ sao cho khoảng cách từ $I$ đến $(d)$ bằng $IF$ là đường parabol $(P_1)$: $y = \frac{1}{4}x^2$, i.e., $\{I\in\mathbb{R}^2|d_{I,(d)} = IF\} = \{(x,y)\in\mathbb{R}^2|y = \frac{1}{4}x^2\}$.
+\end{proof}
+
+\begin{baitoan}
+	Trong mặt phẳng tọa độ $(Oxy)$ cho đường thẳng $(d)$: $y = ax + b$ \& điểm $F(c,d)$. Tìm tập hợp tất cả những điểm $I$ sao cho khoảng cách từ $I$ đến $(d)$ bằng $IF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD12.2, p. 66]
+	Xác định điểm $M$ thuộc parabol $(P)$: $y = x^2$ sao cho độ dài đoạn $IM$ là nhỏ nhất, trong đó $I(0,1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD12.3, p. 66]
+	Trong mặt phẳng $(Oxy)$, giả sử điểm $A$ chạy trên parabol $(P)$: $y = x^2$. Tìm tập hợp trung điểm $I$ của đoạn thẳng $OA$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD12.4, p. 66]
+	Trong mặt phẳng $(Oxy)$, giả sử 2 điểm $A,B$ chạy trên parabol $(P)$: $y = x^2$ sao cho $A,B\ne O(0,0)$ \& $OA\bot OB$. Giả sử $I$ là trung điểm của đoạn thẳng $AB$. (a) Chứng minh tọa độ của điểm $I$ thỏa mãn phương trình $y = 2x^2 + 1$. (b) Chứng minh đường thẳng $(AB)$ luôn đi qua 1 điểm cố định. (c) Xác định tọa độ của các điểm $A,B$ sao cho độ dài $AB$ nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD12.5, p. 67]
+	Trên parabol $(P)$: $y = x^2$ ta lấy 2 điểm $A(-1,1)$ \& $B(3,9)$. Xác định điểm $C$ thuộc cung nhỏ $AB$ của $(P)$ sao cho diện tích $\Delta ABC$ lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD12.6, p. 68]
+	Trên parabol $(P):y = x^2$ lấy 6 điểm phân biệt $A_1,A_2,A_3,A_4,A_5,A_6$. Chứng minh nếu $A_1A_2\parallel A_4A_5,A_2A_3\parallel A_5A_6$ thì $A_3A_4\parallel A_6A_1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD12.7, p. 68]
+	Trên parabol $(P):y = x^2$ lấy 6 điểm phân biệt $A_i(a_i,a_i^2),i = 1,2,3,4,5,6$. Giả sử $A_1A_2\bot A_4A_5,A_2A_3\bot A_5A_6$. Chứng minh $A_3A_4,A_1A_6$ không thể vuông góc với nhau nếu $(a_1 + a_2)(a_2 + a_3)(a_3 + a_4)(a_4 + a_5)(a_5 + a_6)(a_6 + a_1)\ne-1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD12.8, p. 69]
+	Trên parabol $(P):y = x^2$ lấy 3 điểm phân biệt $A(a,a^2),B(b,b^2),C(c,c^2)$ thỏa mãn $a^2 - b = b^2 - c = c^2 - a$. Tính $A =  (a + b + 1)(b + c + 1)(c + a + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 12.1., p. 69]
+	Trên parabol $(P):y = x^2$. Tính khoảng cách giữa 2 điểm A,B nằm trên parabol có hoành độ lần lượt bằng: (a) $-1,2$. (b) $a,b\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 12.2., p. 69]
+	Trong mặt phẳng $(Oxy)$ cho đường thẳng $(d):y = kx + 1$ \& parabol $(P):y = x^2$. Chứng minh: (a) Đường thẳng $(d)$ luôn cắt parabol $(P)$ tại 2 điểm phân biệt A,B. (b) Có đúng 1 điểm M thuộc đường thẳng $(d'):y = -1$ để $MA\bot MB$ \& đường thẳng MA tiếp xúc với $(P)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 12.3., p. 69]
+	Trong mặt phẳng $(Oxy)$ cho đường thẳng $(d):y = kx + \dfrac{1}{2}$ \& parabol $(P):x = \dfrac{1}{2}x^2$. Giả sử đường thẳng $(d)$ cắt parabol $(P)$ tại 2 điểm phân biệt A,B. Chứng minh tọa độ trung điểm của đoạn thẳng AB thỏa mãn phương trình $y = x^2 + \dfrac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 12.4., p. 69]
+	Trong mặt phẳng $(Oxy)$ cho parabol $(P): y = x^2$ \& 2 điểm $I(0,1),J(1,0)$. Tìm 2 điểm $M,N\in(P)$ sao cho IM,JN ngắn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 12.5., p. 69]
+	Trong mặt phẳng $(Oxy)$ cho parabol $(P): y = x^2$. Có thể tìm được hay không 3 điểm $A,B,C\in(P)$ sao cho $\Delta ABC$ đều?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 12.6., p. 70]
+	Trong mặt phẳng $(Oxy)$ cho parabol $(P): y = x^2$. Có thể tìm được hay không 4 điểm $A,B,C\in(P)$ sao cho tứ giác ABCD là 1 hình vuông?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 12.7., p. 70]
+	Trên parabol $(P): y = x^2$, lấy 4 điểm phân biệt $A(a,a^2),B(b,b^2),C(c,c^2),D(d,d^2)$ thỏa mãn $a^2 - b = b^2 - c = c^2 - d = d^2 - a$. Chứng minh
+	\begin{align*}
+		(a + b + 1)(b + c + 1)(c + d + 1)(d + a + 1) = \dfrac{(a - c)^2(b - d)^2}{(a - b)(b - c)(c - d)(d - a)}.
+	\end{align*}
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
