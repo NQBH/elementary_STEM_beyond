@@ -45,13 +45,13 @@ begin
 			end;
 end;
 
-procedure quick_sort(l, h: longint);
+procedure quick_sort(l, r: longint);
 var i, j: longint;
 	x, tmp: longint;
 begin
 	i := l;
-	j := h;
-	x := a[(l + h) div 2]; // x := a[random(h - l + 1) + l];
+	j := r;
+	x := a[(l + r) div 2]; // x := a[random(r - l + 1) + l];
 	repeat
 		while a[i] < x do inc(i);
 		while a[j] > x do dec(j);
@@ -65,18 +65,18 @@ begin
 		end;
 	until i > j;
 	if l < j then quick_sort(l, j);
-	if i < h then quick_sort(i, h);
+	if i < r then quick_sort(i, r);
 end;
 
-procedure find_kth_min_quick_sort(l, h: longint);
+procedure find_kth_min_quick_sort(l, r: longint);
 var i, j: longint;
 	x, tmp: longint;
 begin
-	if (l <= k) and (h >= k) then
+	if (l <= k) and (r >= k) then
 	begin
 		i := l;
-		j := h;
-		x := a[(l + h) div 2]; // x := a[random(h - l + 1) + l];
+		j := r;
+		x := a[(l + r) div 2]; // x := a[random(r - l + 1) + l];
 		repeat
 			while a[i] < x do inc(i);
 			while a[j] > x do dec(j);
@@ -90,7 +90,7 @@ begin
 			end;
 		until i > j;
 		if l < j then quick_sort(l, j);
-		if i < h then quick_sort(i, h);
+		if i < r then quick_sort(i, r);
 	end;
 end;
 
