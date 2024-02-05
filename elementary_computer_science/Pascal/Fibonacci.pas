@@ -1,3 +1,6 @@
+program Fibonacci;
+var n: longint;
+
 function Fibonacci(n: longint): longint;
 var fi1, fi2, fi, i: longint;
 begin
@@ -12,3 +15,8 @@ begin
 	end;
 	exit(fi);
 end;
+
+begin
+	read(n);
+	writeln(Fibonacci(n));
+end.
