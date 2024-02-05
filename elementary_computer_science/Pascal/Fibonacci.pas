@@ -1,8 +1,9 @@
 program Fibonacci;
 var n: longint;
 
-function Fibonacci(n: longint): longint;
-var fi1, fi2, fi, i: longint;
+function Fibonacci(n: longint): extended;
+var i: longint;
+	fi1, fi2, fi: extended;
 begin
 	if n <= 1 then exit(n);
 	fi2 := 0;
@@ -16,7 +17,44 @@ begin
 	exit(fi);
 end;
 
+type big_num = string;
+
+function add(a, b: big_num): big_num;
+var sum, carry, i: integer;
+	c: big_num;
+begin
+	carry := 0;
+	c := '';
+	while length(a) < length(b) do a := '0' + a;
+	while length(b) < length(a) do b := '0' + b;
+	for i := length(a) downto 1 do
+	begin
+		sum := ord(a[i]) - 48 + ord(b[i]) - 48 + carry;
+		carry := sum div 10;
+		c := chr(sum mod 10 + 48) + c;
+	end;
+	if carry > 0 then c := '1' + c;
+	add := c;
+end;
+
+function Fibonacci1(n: longint): big_num;
+var i: longint;
+	fi1, fi2, fi: big_num;
+begin
+	if n <= 1 then exit(char(n + 48));
+	fi2 := '0';
+	fi1 := '1';
+	for i := 2 to n do
+	begin
+		fi := add(fi1, fi2);
+		fi2 := fi1;
+		fi1 := fi;
+	end;
+	exit(fi);
+end;
+
 begin
 	read(n);
 	writeln(Fibonacci(n));
+	writeln(Fibonacci1(n));
 end.
