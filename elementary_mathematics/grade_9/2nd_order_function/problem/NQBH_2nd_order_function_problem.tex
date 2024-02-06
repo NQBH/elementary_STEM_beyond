@@ -1976,6 +1976,357 @@ Giải phương trình:
 
 %------------------------------------------------------------------------------%
 
+\section{System of 2nd-Order Equations of 2 Unknowns -- Hệ Phương Trình Bậc 2 2 Ẩn}
+\fbox{1} Phương pháp giải: phương pháp biến thành phương trình tích, phương pháp thế, phương pháp đánh giá. \fbox{2} Các dạng hệ phương trình bậc 2 2 ẩn: hệ phương trình đối xứng, hệ phương trình phản xứng, hệ phương trình đẳng cấp bậc 2.
+
+Giải hệ phương trình:
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.1, p. 88]
+	\begin{equation*}
+		\left\{\begin{split}
+			4x + 4y + xy &= 14,\\
+			x^2 + y^2 + xy &= 7.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.2, p. 88]
+	\begin{equation*}
+		\left\{\begin{split}
+			\dfrac{x^2}{y^2} + \dfrac{16y^2}{x^2} &= 8,\\
+			x + y + xy &= 5.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.3, p. 89]
+	Tìm $a,b\in\mathbb{R}$ để hệ phương trình
+	\begin{equation*}
+		\left\{\begin{split}
+			4x^2 + y^2 + axy - 1 &= 0,\\
+			bx(2x - y) + (y - 1)(2x - y) &= bx + y - 1,
+		\end{split}\right.
+	\end{equation*}
+	có không ít hơn 5 nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.4, p. 90]
+	Tìm $a\in\mathbb{R}$ để hệ phương trình
+	\begin{equation*}
+		\left\{\begin{split}
+			4x^2 - 12xy + 9y^2 + 2x - 6y &= 0,\\
+			5x^2 - 16xy + 13x^2 - 6x + 10y + 2ax - 4ay + a^2 - 2a - 5 &= 0,
+		\end{split}\right.
+	\end{equation*}
+	có không ít hơn 1 nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.5, p. 91]
+	\begin{equation*}
+		\left\{\begin{split}
+			(1 + x)(1 + 2x)(1 + 3x) &= (1 + 3y)(1 + 3y + 2x^2),\\
+			2x + 3y &= 30.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.6, p. 91]
+	\begin{equation*}
+		\left\{\begin{split}
+			\dfrac{x^4}{y^2} + xy &= 72,\\
+			\dfrac{y^4}{x^2} + xy &= 9.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.7, p. 92]
+	\begin{equation*}
+		\left\{\begin{split}
+			\dfrac{1}{x^2 + y^2} + 2xy &= \dfrac{21}{5},\\
+			\dfrac{1}{2xy} + x^2 + y^2 &= \dfrac{21}{4}.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.8, p. 93]
+	\begin{equation*}
+		\left\{\begin{split}
+			x + y &= 2,\\
+			x^2y^2(x^2 + y^2) &= 2,\\
+			x,y&\ge0.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.9, p. 94]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + (y + 3)^2 &= 1,\\
+			x^3 + (y + 3)^3 &= 1.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.10, p. 94]
+	Chứng minh hệ phương trình
+	\begin{equation*}
+		\left\{\begin{split}
+			2x^2 + xy + y^2 &= 32,\\
+			2y^2 + yz + z^2 &= 25,\\
+			2z^2 + zx + x^2 &= 86,
+		\end{split}\right.
+	\end{equation*}
+	không có nghiệm dương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.11, p. 95]
+	\begin{equation*}
+		\left\{\begin{split}
+			2y^2 + 9y &= 21 + x^2,\\
+			3x^2 + 2y^2 - 4xy + 3y &= 7.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.12, p. 96]
+	(a) Giải \& biện luận hệ phương trình
+	\begin{equation*}
+		\left\{\begin{split}
+			x + y &= 2a,\\
+			3x^2 + 2y^2 - 4xy + 3y &= 7.
+		\end{split}\right.
+	\end{equation*}
+	(b) Tìm $a\in\mathbb{R}$ để hệ có đúng 1 nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.13, p. 97]
+	\begin{equation*}
+		\left\{\begin{split}
+			x + y - a(1 + xy) &= 0,\\
+			xy + 2x + 2y + 5 &= 0.
+		\end{split}\right.
+	\end{equation*}
+	(a) Giải hệ khi $a = 1$. (b) Tìm $a\in\mathbb{R}$ để hệ có đúng 1 nghiệm.
+\end{baitoan}
+Tìm $a\in\mathbb{R}$ để hệ có đúng 1 nghiệm:
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.14, p. 97]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + y^2 - a(x + y) &= a,\\
+			xy + a(x + y) + 4 &= 0.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.15, p. 98]
+	\begin{equation*}
+		\left\{\begin{split}
+			x + y &= 2a,\\
+			x^4 + y^4 - x^2y^2 &= a.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.16, p. 99]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + (1 + y)^2 &= a,\\
+			y^2 + (1 + x)^2 &= a.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.17, p. 99]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + 6x + a &= 2y,\\
+			y^2 + 6y + a &= 2x.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.18, p. 100]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + ay &= 4x,\\
+			y^2 + ax &= 4x.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.19, p. 101]
+	\begin{equation*}
+		\left\{\begin{split}
+			(x + y)^2 + a &= x + 4y,\\
+			(x - y)^2 + a &= 4y - x.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.20, p. 101]
+	\begin{equation*}
+		\left\{\begin{split}
+			x + y + \dfrac{1}{x - y} &= a,\\
+			x - y + \dfrac{1}{x + y} &= a.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.21, p. 102]
+	\begin{equation*}
+		\left\{\begin{split}
+			(x + y)^2 + 2x + 2y &= a,\\
+			(x - y)^2 - 2x + 2y &= a.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.22, p. 103]
+	Giải hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + 6y^2 &= 33,\\
+			x^2 - 2xy &= -3.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD15.23, p. 104]
+	Giải hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 - 3xy + y^2 &= 3,\\
+			x^2 + 2xy - 2y^2 &= 6.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.1., p. 104]
+	Giải \& biện luận hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 - 3y &= a,\\
+			y^2 - 3x &= a.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.2., p. 105]
+	\begin{equation*}
+		\left\{\begin{split}
+			(x + y)^2 &= 16,\\
+			x^2 + y^2 &= a.
+		\end{split}\right.
+	\end{equation*}
+	(a) Giải hệ khi $a = 10$. (b) Tìm $a\in\mathbb{R}$ để hệ có nghiệm. (c) Tìm $a\in\mathbb{R}$ để hệ có đúng 2 nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.3., p. 105]
+	\begin{equation*}
+		\left\{\begin{split}
+			x + |y| &= 2,\\
+			x^2 + y^2 &= a.
+		\end{split}\right.
+	\end{equation*}
+	(a) Giải hệ khi $a = 3$. (b) Tìm $a\in\mathbb{R}$ để hệ có nghiệm. (c) Tìm $a\in\mathbb{R}$ để hệ có đúng 2 nghiệm. (d) Tìm $a\in\mathbb{R}$ để hệ có đúng 1 nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.4., p. 105]
+	\begin{equation*}
+		\left\{\begin{split}
+			|x| + |y| &= a - 1,\\
+			x^2 + y^2 &= a^2 - 1.
+		\end{split}\right.
+	\end{equation*}
+	(a) Tìm $a\in\mathbb{R}$ để hệ có nghiệm. (b) Tìm $a\in\mathbb{R}$ để hệ có đúng 2 nghiệm.
+\end{baitoan}
+Giải hệ phương trình:
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.5., p. 105]
+	\begin{equation*}
+		\left\{\begin{split}
+			x + y + 3xy &= 21,\\
+			x^2 + y^2 - xy &= -15.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.6., p. 105]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + 4xy + 7y^2 &= 28,\\
+			x^2 + 3xy + 2y^2 &= 10.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.7., p. 105]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + 4xy + 3y^2 &= 8,\\
+			x^2 - 9xy - 2y^2 &= -10.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.8., p. 105]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + y^2 - 2x + 3y &= 9,\\
+			2x^2 + 2y^2 + x - 5y &= 1.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.9., p. 105]
+	\begin{equation*}
+		\left\{\begin{split}
+			15x^2 - 11xy + 2y^2 &= -7,\\
+			2a^2x + 3ay &< 0,\\
+			x &< y.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.10., p. 105]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^4 + 6x^2y^2 + y^4 &= 136,\\
+			x^3y + xy^3 &= 30.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.11., p. 106]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^3 + 3xy^2 &= 158,\\
+			3x^2y + y^3 &= -185.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.12., p. 106]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^4 + x^2y^2 + y^4 &= 91,\\
+			x^2 + xy + y^2 &= 13.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 15.13., p. 106]
+	\begin{equation*}
+		\left\{\begin{split}
+			x^3 + x^3y^3 + y^3 &= 17,\\
+			x + xy + y &= 5.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
 \section{Đa Thức Bậc 2 Với Bất Đẳng Thức \& Toán Cực Trị}
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD119, p. 68]
