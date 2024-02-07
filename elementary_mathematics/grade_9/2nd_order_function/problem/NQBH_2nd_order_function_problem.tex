@@ -2392,6 +2392,178 @@ Giải hệ phương trình:
 
 %------------------------------------------------------------------------------%
 
+\section{Rational Algebraic Fraction \& Determine Relations -- Phân Thức Hữu Tỷ \& Xác Định Quan Hệ}
+\fbox{1} Nếu đa thức $f(x)\in\mathbb{R}[x]$ thỏa $f(a) = 0$ với $a\in\mathbb{R}$ thì $f(x)\divby x - a$. \fbox{2} Dạng toán: phân tích phân thức thành tổng các phân thức; giả sử 1 hệ phương trình có nghiệm, tìm quan hệ giữa các hệ số.
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.1, p. 119]
+	Chứng minh $f(x) = (x + 1)^{2n} - x^{2n} - 2x - 1\divby x(x + 1)(2x + 1),\forall n\in\mathbb{N}^\star$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.2, p. 119]
+	Cho $a,b,c\in\mathbb{R}^\star$ phân biệt. Rút gọn $A = \dfrac{x(x - b)(x - c)}{a(a - b)(a - c)} + \dfrac{x(x - c)(x - a)}{b(c - c)(b - a)} + \dfrac{x(x - a)(x - b)}{c(c - a)(c - b)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.3, p. 120]
+	Giả sử $a,b\in\mathbb{R}\backslash\{0,-1,-2\}$ phân biệt. (a) Giải hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			\frac{x}{1 + a} + \frac{y}{1 + b} &= 1,\\
+			\frac{x}{2 + a} + \frac{y}{2 + b} &= 1.
+		\end{split}\right.
+	\end{equation*}
+	(b) Giả sử $(x,y)\in\mathbb{R}^2$ là nghiệm của hệ phương trình. Chứng minh $\dfrac{x}{a} + \dfrac{y}{b} = 1 - \dfrac{2}{ab}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.4, p. 120]
+	Giả sử $a,b,c\in\mathbb{R}\backslash\{0,-1,-2,-3\}$ phân biệt. (a) Giải hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			\frac{x}{1 + a} + \frac{y}{1 + b} + \frac{z}{1 + c} &= 1,\\
+			\frac{x}{2 + a} + \frac{y}{2 + b} + \frac{z}{2 + c} &= 1,\\
+			\frac{x}{3 + a} + \frac{y}{3 + b} + \frac{z}{3 + c} &= 1.
+		\end{split}\right.
+	\end{equation*}
+	(b) Giả sử $(x,y)\in\mathbb{R}^2$ là nghiệm của hệ phương trình. Chứng minh $\dfrac{x}{a} + \dfrac{y}{b} + \dfrac{z}{c} = 1 + \dfrac{6}{abc}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.5, p. 121]
+	Giả sử $a,b\in\mathbb{R}\backslash\{0,1,2,3\}$ phân biệt. (a) Giải hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			\frac{x}{1 - a} + \frac{y}{1 - b} &= 1,\\
+			\frac{x}{2 - a} + \frac{y}{2 - b} &= \frac{1}{2}.
+		\end{split}\right.
+	\end{equation*}
+	(b) Giả sử $(x,y)\in\mathbb{R}^2$ là nghiệm của hệ phương trình. Tính $A = \dfrac{x}{3 - a} + \dfrac{y}{3 - b} + \dfrac{ab}{3(3 - a)(3 - b)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.6, p. 122]
+	Giả sử $a,b\in\mathbb{R}\backslash\{0,1,2,3,4\}$ phân biệt. (a) Giải hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			\frac{x}{1 - a} + \frac{y}{1 - b} + \frac{z}{1 - c} &= 1,\\
+			\frac{x}{2 - a} + \frac{y}{2 - b} + \frac{z}{2 - c} &= \frac{1}{2},\\
+			\frac{x}{3 - a} + \frac{y}{3 - b} + \frac{z}{3 - c} &= \frac{1}{3}.
+		\end{split}\right.
+	\end{equation*}
+	(b) Giả sử $(x,y,z)\in\mathbb{R}^3$ là nghiệm của hệ phương trình. Tính $A = \dfrac{x}{4 - a} + \dfrac{y}{4 - b} + \dfrac{z}{4 - c} + \dfrac{abc}{4(4 - a)(4 - b)(4 - c)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.7, p. 123]
+	Tính $A = \sum_{i=1}^n \dfrac{1}{i(i + 1)(i + 2)}$. Chứng minh $A < \dfrac{1}{4}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.8, p. 123]
+	Tính $A = \sum_{i=1}^n \dfrac{k^4}{4k^2 - 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.9, p. 124]
+	Tìm quan hệ giữa $a,b,c$ biết hệ phương trình sau có nghiệm:
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + 1 &= ax,\\
+			y^2 + 1 &= by,\\
+			x^2y^2 + 1 &= cxy.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.10, p. 124]
+	Tìm quan hệ giữa $a,b,c,d$ biết hệ phương trình sau có 1 nghiệm:
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + ax + b &= 0,\\
+			x^2 + cx + d &= 0.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.11, p. 125]
+	Giả sử $ax^2 + bx + c = (a_1x + b_1)(a_2x + b_2)$ với $a\ne0$. Đặt $h\coloneqq\max\{|a|,|b|,|c|\},h_1\coloneqq\max\{|a_1|,|b_1|\},h_2\coloneqq\max\{|a_2|,|b_2|\}$. Chứng minh $\dfrac{h_1h_2}{2} < h\le2h_1h_2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, VD17.12, p. 125]
+	Điểm A trong mặt phẳng $(Oxy)$ có tọa độ là các số hữu tỷ. Tồn tại hay không 1 điểm I sao cho A là điểm duy nhất có tọa độ là các số hữu tỷ để $IA = \sqrt{10}$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 17.1., p. 126]
+	Chứng minh $f(x) = x^{1952} + x^{2011} + x^{2013}\divby x^2 + x + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 17.2., p. 126]
+	Tìm quan hệ giữa $a,b,c,p,q,r,s\in\mathbb{R}$ biết hệ phương trình sau có nghiệm:
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + px + q &= 0,\\
+			x^2 + rx + s &= 0,\\
+			ax + by &= c.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 17.3., p. 126]
+	Chứng minh nếu $a,d\in\mathbb{R}$ thỏa $ad < 0$ thì hệ phương trình sau vô nghiệm:
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + ax + 1 &= 0,\\
+			x^2 + x + d &= 0.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 17.4., p. 126]
+	Chứng minh nếu $a,b\in\mathbb{R}$ thỏa $a^2 + b^2 < \dfrac{4}{5}$ thì phương trình $x^4 + ax^3 + bx^2 + ax + 1 = 0$ vô nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 17.5., p. 126]
+	Giả sử $a,b,c,d\in\mathbb{R}$ thỏa $ab + 2(b + c + d) = c(a + b)$. Chứng minh 1 trong 3 phương trình $x^2 + ax + b = 0,x^2 + bx + c = 0,x^2 + cx + d = 0$ có nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 17.6., p. 126]
+	Giải hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			\frac{a}{x + y} + \frac{b}{y + z} - \frac{c}{z + x} &= 1,\\
+			\frac{a}{x + y} - \frac{b}{y + z} + \frac{c}{z + x} &= 1,\\
+			-\frac{a}{x + y} + \frac{b}{y + z} + \frac{c}{z + x} &= 1.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 17.7., p. 127]
+	Cho $a,b,c\in\mathbb{R}$ thỏa $abc(a^2 - b^2)(b^2 - c^2)(c^2 - a^2)\ne0$. Tìm $x,y,z$ biết $\dfrac{1}{(t^2 + a^2)(t^2 + b^2)(t^2 + c^2)} = \dfrac{x}{t^2 + a^2} + \dfrac{y}{t^2 + b^2} + \dfrac{z}{t^2 + c^2}$ \& tính $A = \dfrac{1}{(a^2 - b^2)(a^2 - c^2)(1 + a^2)} + \dfrac{1}{(b^2 - c^2)(b^2 - a^2)(1 + b^2)} + \dfrac{1}{(c^2 - a^2)(c^2 - b^2)(1 + c^2)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 17.8., p. 127]
+	Giả sử phương trình $ax^2 + bx + c = 0$ có 2 nghiệm $x_1,x_2$ \& phương trình $a'x^2 + b'x + c' = 0$ có 2 nghiệm $x_1',x_2'$. Chứng minh $(x_1 + x_2)(x_1' + x_2') = 2012(x_1x_2 + x_1'x_2')$ biết $ac' + a'c = 2012bb'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 17.9., p. 127]
+	Giả sử hệ phương trình
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + ax + b &= 0,\\
+			x^2 + cx + d &= 0,
+		\end{split}\right.
+	\end{equation*}
+	có nghiệm. Chứng minh $(d + ab)^2 = (b^2 + ad - bc)(a^2 - b + c)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 17.10., p. 127]
+	Giả sử hệ phương trình
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2(y + z) &= a,\\
+			y^2(z + x) &= b,\\
+			z^2(x + y) &= c,\\
+			xyz &= d,
+		\end{split}\right.
+	\end{equation*}
+	có nghiệm. Chứng minh $d^2(a + b + c + 2d) = abc$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
 \section{Đa Thức Bậc 2 Với Bất Đẳng Thức \& Toán Cực Trị}
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD119, p. 68]
