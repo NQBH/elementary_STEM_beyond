@@ -40,11 +40,18 @@
 }
 
 \title{Problem: 2nd-Order Function. Quadratic Equation\\Bài Tập: Hàm Số Bậc 2 $y = ax^2$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0$}
-\author{Nguyễn Quản Bá Hồng\footnote{Ben Tre City, Vietnam. e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\author{Nguyễn Quản Bá Hồng\footnote{Ben Tre City, Vietnam, e-mail: \texttt{nguyenquanbahong@gmail.com}, website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
 \begin{document}
 \maketitle
+\begin{abstract}
+	Latest version:
+	\begin{itemize}
+		\item \textit{Problem: 2nd-Order Function. Quadratic Equation -- Bài Tập: Hàm Số Bậc 2 $y = ax^2$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0$}.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/problem/NQBH_2nd_order_function_problem.pdf}.
+		\item \textit{Problem \& Solution: 2nd-Order Function. Quadratic Equation -- Bài Tập \& Lời Giải: Hàm Số Bậc 2 $y = ax^2$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0$}.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/solution/NQBH_2nd_order_function_solution.pdf}.
+	\end{itemize}
+\end{abstract}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
@@ -829,7 +836,12 @@
 %------------------------------------------------------------------------------%
 
 \section{Vi\`ete Theorem -- Định Lý Vi\`ete}
-\fbox{1} Định lý Vi\`ete: Nếu $x_1,x_2$ là 2 nghiệm của phương trình $ax^2 + bx + c = 0,a\ne0$ (1) thì $x_1 + x_2 = -\dfrac{b}{a},x_1x_2 = \dfrac{c}{a}$. \fbox{2} Nếu $a + b + c = 0$ thì phương trình (1) có 2 nghiệm $x_1 = 1,x_2 = \dfrac{c}{a}$. Nếu $a - b + c = 0$ thì phương trình (1) có 2 nghiệm $x_1 = -1,x_2 = -\dfrac{c}{a}$. \fbox{3} Nếu 2 số có tổng bằng $S$ \& tích bằng $P$ với $S^2\ge4P$ thì 2 số đó là 2 nghiệm của phương trình bậc 2 $x^2 - Sx + P = 0$. \fbox{4} Nếu (1) có 2 nghiệm $x_1,x_2$ thì $ax^2 + bx + c = a(x - x_1)(x - x_2)$. \fbox{5} Đặt $S\coloneqq x_1 + x_2,P\coloneqq x_1x_2$. Điều kiện để (1): Có 2 nghiệm trái dấu là $P < 0$. Có 2 nghiệm cùng dấu là $\Delta\ge0,P > 0$. Có 2 nghiệm dương là $\Delta\ge0,P > 0,S > 0$. Có 2 nghiệm âm là $\Delta\ge0,P > 0,S < 0$.\\
+\fbox{1} Định lý Vi\`ete cho phép tính tổng \& tích 2 nghiệm của phương trình bậc 2 mà không cần xác định các nghiệm của nó:
+
+\begin{dinhly}[Vi\`ete]
+	Nếu $x_1,x_2$ là 2 nghiệm của phương trình $ax^2 + bx + c = 0,a\ne0$ thì $S = x_1 + x_2 = -\dfrac{b}{a},P = x_1x_2 = \dfrac{c}{a}$.
+\end{dinhly}
+\noindent\fbox{2} Nếu $a + b + c = 0$ thì phương trình $ax^2 + bx + c = 0$, $a,b,c\in\mathbb{R},a\ne0$ (1) có 2 nghiệm $x_1 = 1,x_2 = \dfrac{c}{a}$. Nếu $a - b + c = 0$ thì phương trình (1) có 2 nghiệm $x_1 = -1,x_2 = -\dfrac{c}{a}$. \fbox{3} Nếu 2 số có tổng bằng $S$ \& tích bằng $P$ với $S^2\ge4P$ thì 2 số đó là 2 nghiệm của phương trình bậc 2 $x^2 - Sx + P = 0$. \fbox{4} Nếu (1) có 2 nghiệm $x_1,x_2$ thì $ax^2 + bx + c = a(x - x_1)(x - x_2)$. \fbox{5} Đặt $S\coloneqq x_1 + x_2,P\coloneqq x_1x_2$. Điều kiện để (1): Có 2 nghiệm trái dấu là $P < 0$. Có 2 nghiệm cùng dấu là $\Delta\ge0,P > 0$. Có 2 nghiệm dương là $\Delta\ge0,P > 0,S > 0$. Có 2 nghiệm âm là $\Delta\ge0,P > 0,S < 0$. \fbox{6} {\sf Tính giá trị biểu thức thành lập từ 2 nghiệm}: Gọi $x_1,x_2\in\mathbb{R}$ là 2 nghiệm của phương trình bậc 2 $ax^2 + bx + c = 0$. Tính giá trị biểu thức $F(x_1,x_2)$. \textit{Cách 1}: Tính giá trị của $x_1,x_2$ rồi thay vào biểu thức để tính. Nhược điểm: tính toán cồng kềnh nếu công thức nghiệm phức tạp. \textit{Cách 2}: Biểu diễn biểu thức $F(x_1,x_2)$ qua tổng $S = x_1 + x_2$ \& tích $P = x_1x_2$ rồi sử dụng định lý Vi\`ete. \fbox{7} Biểu thức $F(a,b)$ được gọi là \textit{đối xứng} nếu $F(b,a) = F(a,b)$. Mọi biểu thức đối xứng 2 biến luôn biểu diễn được qua tổng \& tích của 2 biến đó. 1 số biểu diễn cơ bản: $a^2 + b^2 = (a + b)^2 - 2ab = S^2 - 2P,(a - b)^2 = (a + b)^2 - 4ab = S^2 - 4P,|a - b| = \sqrt{(a - b)^2} = \sqrt{S^2 - 4P},\dfrac{1}{a} + \dfrac{1}{b} = \dfrac{a + b}{ab} = \dfrac{S}{P},a^3 + b^3 = (a + b)^3 - 3ab(a + b) = S^3 - 3PS,a^4 + b^4 = (a^2 + b^2)^2 - 2a^2b^2 = (S^2 - 2P)^2 - 2P^2$.\\
 
 \noindent\cite[Chap. VII, \S3, pp. 61--65]{SGK_Toan_9_Canh_Dieu_tap_2}: HD1. LT1. LT2. LT3. HD2. LT4. 1. 2. 3. 4. 5. 6. 7.
 
@@ -1046,6 +1058,74 @@ Khi giải hệ phương trình đối xứng, đặt $S\coloneqq x + y,P\colone
 			x^2 + y^2 &= 13.
 		\end{split}\right.
 	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD1, p. 85]
+	Giả sử $x_1,x_2$ là 2 nghiệm của phương trình $x^2 - 5x - 1 = 0$. Không giải phương trình, tính giá trị biểu thức: $A = x_1^2 + x_2^2 - x_1 - x_2,B = x_1^4 + x_2^4,C = \dfrac{1}{x_1^3} + \dfrac{1}{x_2^3},D = |x_1 - x_2|$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD2, p. 89, TS10 PTNK round 1 2017--2018]
+	Cho phương trình $(x + m)^2 - 5(m + x) + 6 = 0$. (a) Chứng minh phương trình luôn có 2 nghiệm phân biệt $x_1,x_2$, $\forall m\in\mathbb{R}$. Tính $A = (x_1 + m)^2 + (x_2 + m)^2 + 5(x_1 + x_2 + 2m)$. (b) Biết $x_1 < x_2$. Tìm $m\in\mathbb{R}$ để $x_2 < 1,x_1^2 + 2x_2 = 2(m - 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD3, p. 89, HSG9 Hưng Yên 2018]
+	Gọi a là nghiệm dương của phương trình $6x^2 + x\sqrt{3} - \sqrt{3} = 0$. Tính $A = \dfrac{a + 2}{\sqrt{a^4 + a + 2} - a^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD4, p. 90, TS10 chuyên Hưng Yên 2020--2021]
+	Tìm $m\in\mathbb{R}$ để phương trình $2x^2 - (m + 5)x + m + 2 = 0$ có 2 nghiệm phân biệt $x_1,x_2$ thỏa $x_1^2 + x_2^2 = \dfrac{17}{4}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD5, p. 91, TS10 chuyên Trần Hưng Đạo Bình Thuận 2020--2021]
+	Cho phương trình $2x^2 - 4mx - 2m^2 - 1 = 0$. (a) Chứng minh phương trình luôn có 2 nghiệm phân biệt $\forall m\in\mathbb{R}$. (b) Gọi $x_1,x_2$ là 2 nghiệm của phương trình khi $m = 3$, không giải phương trình, tính giá trị biểu thức $A = (8x_1^2 - 50x_1 - 70)(8x_2^2 - 50x_2 - 70) + 2094$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD6, p. 91]
+	Gọi $x_1,x_2$ là 2 nghiệm của phương trình $x^2 - 3x - 1 = 0$. Tính $A = x_1^2 + x_2^2,B = x_1^3(x_1 - 1) + x_2^3(x_2 - 1),C = \left|\dfrac{1}{x_1^2} - \dfrac{1}{x_2^2}\right|$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD7, p. 92, TS10 chung PTNK TPHCM 2020--2021]
+	Gọi $(P),(d)$ lần lượt là đồ thị của 2 hàm số $y = x^2,y = 2mx + 3$. Chứng minh đường thẳng $(d)$ luôn cắt $(P)$ tại 2 điểm $A(x_1,y_1),B(x_2,y_2)$ \& tính $y_1 + y_2$ theo m. Tìm $m\in\mathbb{R}$ để $y_1 - 4y_2 = x_1 - 4x_2 + 3x_1x_2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD8, p. 93, TS10 chuyên Lê Quý Đôn Đà Nẵng 2020--2021]
+	Tìm $m\in\mathbb{R}$ để phương trình $(2x^2 + x - m^2 + 2m - 15)(2x^2 + 3x - m^2 + 2m - 14) = 0$ có 4 nghiệm phân biệt $x_1,x_2,x_3,x_4$ thỏa $x_1^2 + x_2^2 + x_3^2 + x_4^2 = 3x_2x_3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD9, p. 95]
+	Gọi $x_1,x_2$ là 2 nghiệm của phương trình $x^2 - x - 1 = 0$. Không giải phương trình, chứng minh $P(x_1) = P(x_2)$ với $P(x) = 3x - \sqrt{33x + 25}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD10, p. 95, TS10 THTH ĐHSP TPHCM 2020--2021]
+	Cho phương trình $x^2 + x + 1 - m = 0$. Tìm $m\in\mathbb{R}$ để phương trình có 2 nghiệm phân biệt $x_1,x_2\in\mathbb{R}^\star$ thỏa $\dfrac{1}{x_1^2} + \dfrac{1}{x_2^2}\le\dfrac{5}{(x_1x_2)^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD11, p. 96, TS10 chuyên Lào Cai 2020--2021]
+	Cho phương trình $x^2 + 4x + m + 1 = 0$. Tìm $m\in\mathbb{R}$ để phương trình có 2 nghiệm $x_1,x_2$ sao cho biểu thức $A = x_1^2x_2^2 + x_1^2 - 9x_1x_2 - 4x_2 + 8$ đạt {\rm GTNN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD12, p. 97]
+	Cho phương trình $x^2 - 2(m + 1)x + m^2 + 2 = 0$. Tìm $m\in\mathbb{R}$ để phương trình có nghiệm $x_1,x_2$ (có thể trùng nhau) sao cho: (a) $A = x_1x_2 - 2(x_1 + x_2) - 6$ đạt {\rm GTNN}. (b) $B =  \sqrt{2(x_1^2 + x_2^2) + 16} - 3x_1x_2$ đạt {\rm GTLN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD13, p. 97]
+	Cho phương trình $x^2 - mx + m - 1 = 0$. (a) Chứng minh phương trình luôn có nghiệm $\forall m\in\mathbb{R}$. (b) Gọi $x_1,x_2$ là 2 nghiệm của phương trình. Tìm hệ thức liên hệ giữa $x_1,x_2$ không phụ thuộc vào m. (c) Tìm {\rm GTNN, GTLN} của $A = \dfrac{2x_1x_2 + 3}{x_1^2 + x_2^2 + 2(x_1x_2 + 1)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD14, p. 99]
+	Tìm $m\in\mathbb{R}$ để phương trình $2x^2 + 2mx - m - 1 = 0$ có 2 nghiệm $x_1,x_2$ sao cho $A = \dfrac{1}{(2x_1 - 1)^2} + \dfrac{1}{(2x_2 - 1)^2}$ đạt {\rm GTNN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD15, p. 99, HSG9 Bắc Ninh 2018]
+	Cho phương trình $x^2 + (m^2 + 1)x + m - 2 = 0$. Tìm $m\in\mathbb{R}$ để phương trình $2x^2 + 2mx - m - 1 = 0$ có 2 nghiệm phân biệt $x_1,x_2$ thỏa $\dfrac{2x_1 - 1}{x_2} + \dfrac{2x_2 - 1}{x_1} = x_1x_2 + \dfrac{55}{x_1x_2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD16, p. 100, TS10 chuyên Lương Thế Vinh Đồng Nai 2018--2019]
+	Tìm $m\in\mathbb{R}$ để phương trình $x^2 - (m + 1)x + 2m = 0$ có 2 nghiệm phân biệt $x_1,x_2$ sao cho $A = \dfrac{x_1 + x_2 - 1}{(x_1 + x_2)^2 - 3x_1x_2 + 3}$ đạt {\rm GTNN}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thu_Viet_Minh_ptb2}, VD17, p. 100]
+	Giả sử phương trình bậc 2 $ax^2 + bx + c = 0$ có 2 nghiệm thuộc $[0,3]$. Tìm {\rm GTNN, GTLN} của $A = \dfrac{18a^2 - 9ab + b^2}{9a^2 - 3ab + ac}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_9_tap_2}, VD81, p. 28]
