@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Equation {\it\&} Inequation -- Bài Tập: Phương Trình {\it\&} Bất Phương Trình}
+\author{Nguyễn Quản Bá Hồng\footnote{e-mail: {\sf nguyenquanbahong@gmail.com}, website: \url{https://nqbh.github.io}, Bến Tre, Việt Nam.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Equation -- Phương Trình}
+
+\begin{dinhnghia}[Phương trình, bất phương trình -- equation, inequation]
+	Cho 2 hàm số $y = f(x),y = g(x)$ có tập xác định lần lượt là $D_f,D_g\subset\mathbb{R}$. Đặt $D\coloneqq D_f\cap D_g$. Mệnh đề chứa biến ``$f(x) = g(x),f(x) > g(x),f(x)\ge g(x)$'' lần lượt được gọi là {\rm phương trình 1 ẩn, bất phương trình 1 ẩn}, x được gọi là {\rm ẩn số} (hay {\rm ẩn}) \& D được gọi là {\rm tập xác định (TXĐ)} của phương trình, bất phương trình. $x_0\in D$ gọi là 1 {\rm nghiệm} của phương trình $f(x) = g(x)$ nếu ``$f(x_0) = g(x_0)$'' là mệnh đề đúng. $x_0\in D$ lần lượt gọi là 1 {\rm nghiệm} của bất phương trình $f(x) > g(x),f(x)\ge g(x)$ nếu ``$f(x_0) > g(x_0),f(x_0)\ge g(x_0)$'' là mệnh đề đúng.
+	
+	{\rm Giải} 1 phương trình, 1 bất phương trình là đi tìm tất cả các nghiệm của nó, i.e., 3 tập hợp $S\coloneqq\{x\in D|f(x) = g(x)\},S\coloneqq\{x\in D|f(x) > g(x)\},S\coloneqq\{x\in D|f(x)\ge g(x)\}$ lần lượt được gọi là {\rm tập nghiệm} của phương trình $f(x) = g(x)$, bất phương trình $f(x) > g(x),f(x)\ge g(x)$. Khi $S = \emptyset$, ta nói (bất) phương trình {\rm vô nghiệm}. Nếu $|S| = n\in\mathbb{N}^\star$, ta nói (bất) phương trình có n nghiệm hay số nghiệm của (bất) phương trình bằng n. Nếu $|S| = \infty$, ta nói (bất) phương trình có vô số nghiệm.
+\end{dinhnghia}
+Xét phương trình cấu tạo bởi các hàm $f(x),f^n(x),\sqrt{f(x)},\sqrt[3]{f(x)},\sqrt[n]{f(x)},|f(x)|$ với $f(x) = ax + b,f(x) = ax^2 + bx + c,f(x) = (dx + e)(ax^2 + bx + c),f(x) = \prod_{i=1}^m (d_ix + e_i)\prod_{i=1}^n (a_ix^2 + b_ix + c_i)$.
+
+\begin{baitoan}
+	Giải \& biện luận phương trình $ax + b = 0$ theo 2 tham số $a,b\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}
+	Giải \& biện luận phương trình $|ax + b| = c$ theo 2 tham số $a,b,c\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}
+	Giải \& biện luận phương trình $ax^2 + bx + c = 0$ theo 2 tham số $a,b,c\in\mathbb{R}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Inequation -- Bất Phương Trình}
+Gọi $\mathcal{R}$ là 1 trong 4 quan hệ thứ tự $>,<,\ge,\le$.
+
+\begin{baitoan}
+	Giải \& biện luận bất phương trình $ax + b\mathcal{R} 0$ theo 2 tham số $a,b\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}
+	Giải \& biện luận bất phương trình $|ax + b|\mathcal{R} c$ theo 2 tham số $a,b,c\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}
+	Giải \& biện luận bất phương trình $ax^2 + bx + c\mathcal{R} 0$ theo 2 tham số $a,b,c\in\mathbb{R}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
