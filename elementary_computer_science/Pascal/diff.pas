@@ -14,7 +14,7 @@ begin
 			if a[j] - a[i] > max_diff then max_diff := a[j] - a[i];
 end;
 
-procedure find1(l, r: longint; var max_diff, max_value, min_value: longint);
+procedure find1(l, r: longint; var max_diff, max_value, min_value: longint); // O(n)
 var mid, maxD1, maxD2, maxV1, maxV2, minV1, minV2: longint;
 begin
 	if l = r then
