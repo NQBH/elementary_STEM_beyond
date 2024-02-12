@@ -51,23 +51,56 @@
 
 \section{Equation -- Phương Trình}
 
-\begin{dinhnghia}[Phương trình, bất phương trình -- equation, inequation]
+\begin{dinhnghia}[Graph -- đồ thị]
+	{\rm Đồ thị} của hàm số $f:D\to\mathbb{R}$ là tập hợp $G(f)\coloneqq\{(x,f(x))\in\mathbb{R}^2|x\in D\}$.
+\end{dinhnghia}
+
+\begin{dinhnghia}[Equation, inequation -- phương trình, bất phương trình]
 	Cho 2 hàm số $y = f(x),y = g(x)$ có tập xác định lần lượt là $D_f,D_g\subset\mathbb{R}$. Đặt $D\coloneqq D_f\cap D_g$. Mệnh đề chứa biến ``$f(x) = g(x),f(x) > g(x),f(x)\ge g(x)$'' lần lượt được gọi là {\rm phương trình 1 ẩn, bất phương trình 1 ẩn}, x được gọi là {\rm ẩn số} (hay {\rm ẩn}) \& D được gọi là {\rm tập xác định (TXĐ)} của phương trình, bất phương trình. $x_0\in D$ gọi là 1 {\rm nghiệm} của phương trình $f(x) = g(x)$ nếu ``$f(x_0) = g(x_0)$'' là mệnh đề đúng. $x_0\in D$ lần lượt gọi là 1 {\rm nghiệm} của bất phương trình $f(x) > g(x),f(x)\ge g(x)$ nếu ``$f(x_0) > g(x_0),f(x_0)\ge g(x_0)$'' là mệnh đề đúng.
 	
 	{\rm Giải} 1 phương trình, 1 bất phương trình là đi tìm tất cả các nghiệm của nó, i.e., 3 tập hợp $S\coloneqq\{x\in D|f(x) = g(x)\},S\coloneqq\{x\in D|f(x) > g(x)\},S\coloneqq\{x\in D|f(x)\ge g(x)\}$ lần lượt được gọi là {\rm tập nghiệm} của phương trình $f(x) = g(x)$, bất phương trình $f(x) > g(x),f(x)\ge g(x)$. Khi $S = \emptyset$, ta nói (bất) phương trình {\rm vô nghiệm}. Nếu $|S| = n\in\mathbb{N}^\star$, ta nói (bất) phương trình có n nghiệm hay số nghiệm của (bất) phương trình bằng n. Nếu $|S| = \infty$, ta nói (bất) phương trình có vô số nghiệm.
 \end{dinhnghia}
 Xét phương trình cấu tạo bởi các hàm $f(x),f^n(x),\sqrt{f(x)},\sqrt[3]{f(x)},\sqrt[n]{f(x)},|f(x)|$ với $f(x) = ax + b,f(x) = ax^2 + bx + c,f(x) = (dx + e)(ax^2 + bx + c),f(x) = \prod_{i=1}^m (d_ix + e_i)\prod_{i=1}^n (a_ix^2 + b_ix + c_i)$.
 
-\begin{baitoan}
-	Giải \& biện luận phương trình $ax + b = 0$ theo 2 tham số $a,b\in\mathbb{R}$.
+\subsection{Phương trình đa thức -- Polynomial equation}
+Giải \& biện luận phương trình theo các tham số thực:
+
+\begin{baitoan}[Phương trình bậc nhất 1 ẩn]
+	(a) $ax + b = 0$. (b) $ax + b = cx + d$. (c) $\sum_{i=1}^n a_ix + b_i = a_1x + b_1 + a_2x + b_2 + \cdots + a_nx + b_n = 0$. (d) $\sum_{i=1}^n a_ix + b_i = \sum_{i=1}^n c_ix + d_i$, i.e., $a_1x + b_1 + a_2x + b_2 + \cdots + a_nx + b_n = c_1x + d_1 + c_2x + d_2 + \cdots + c_nx + d_n$.
 \end{baitoan}
 
-\begin{baitoan}
-	Giải \& biện luận phương trình $|ax + b| = c$ theo 2 tham số $a,b,c\in\mathbb{R}$.
+\begin{itemize}
+	\item \textit{Problem: 1st-Order Function -- Bài Tập: Hàm Số Bậc Nhất $y = ax + b,a\ne0$}.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_8/1st_order_function/problem/NQBH_1st_order_function_problem.pdf}.
+	\item \textit{Problem \& Solution: 1st-Order Function -- Bài Tập \& Lời Giải: Hàm Số Bậc Nhất $y = ax + b,a\ne0$}.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_8/1st_order_function/solution/NQBH_1st_order_function_solution.pdf}.
+\end{itemize}
+
+\begin{baitoan}[Phương trình bậc nhất 1 ẩn với trị tuyệt đối]
+	(a) $|ax + b| = c$. (b) $|ax + b| = |cx + d|$. (c) $\sum_{i=1}^n |a_ix + b_i| = |a_1x + b_1| + |a_2x + b_2| + \cdots + |a_nx + b_n| = a$. (d) $\sum_{i=1}^n |a_ix + b_i| = \sum_{i=1}^n |c_ix + d_i|$, i.e., $|a_1x + b_1| + |a_2x + b_2| + \cdots + |a_nx + b_n| = |c_1x + d_1| + |c_2x + d_2| + \cdots + |c_nx + d_n|$.
 \end{baitoan}
 
-\begin{baitoan}
-	Giải \& biện luận phương trình $ax^2 + bx + c = 0$ theo 2 tham số $a,b,c\in\mathbb{R}$.
+\begin{baitoan}[Phương trình bậc 2 1 ẩn]
+	(a) $ax^2 + bx + c = 0$. (b) $a_1x^2 + b_1x + c_1 = a_2x^2 + b_2x + c_2$. (c) $\sum_{i=1}^n a_ix^2 + b_ix + c_i = a_1x^2 + b_1x + c_1 + a_2x^2 + b_2x + c_2 + \cdots + a_nx^2 + b_nx + c_n = 0$. (d) $\sum_{i=1}^n a_ix^2 + b_ix + c_i = \sum_{i=1}^n d_ix^2 + e_ix + f_i$.
+\end{baitoan}
+
+\begin{itemize}
+	\item \textit{Problem: 2nd-Order Function. Quadratic Equation -- Bài Tập: Hàm Số Bậc 2 $y = ax^2$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0$}.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/problem/NQBH_2nd_order_function_problem.pdf}.
+	\item \textit{Problem \& Solution: 2nd-Order Function. Quadratic Equation -- Bài Tập \& Lời Giải: Hàm Số Bậc 2 $y = ax^2$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0$}.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/solution/NQBH_2nd_order_function_solution.pdf}.
+\end{itemize}
+
+\begin{baitoan}[Phương trình bậc 2 1 ẩn với trị tuyệt đối]
+	(a) $|ax^2 + bx + c| = d$. (b) $|a_1x^2 + b_1x + c_1| = |a_2x^2 + b_2x + c_2|$. (c) $\sum_{i=1}^n |a_ix^2 + b_ix + c_i| = |a_1x^2 + b_1x + c_1| + |a_2x^2 + b_2x + c_2| + \cdots + |a_nx^2 + b_nx + c_n| = 0$. (d) $\sum_{i=1}^n |a_ix^2 + b_ix + c_i| = \sum_{i=1}^n |d_ix^2 + e_ix + f_i|$.
+\end{baitoan}
+
+\subsection{Phương trình phân thức -- algebraic rational fraction equation}
+
+\subsection{Phương trình vô tỷ}
+
+\begin{baitoan}[Phương trình vô tỷ với phương trình bậc nhất 1 ẩn]
+	(a) $\sqrt{ax + b} = 0$. (b) $\sqrt{ax + b} = \sqrt{cx + d}$. (c) $\sum_{i=1}^n \sqrt{a_ix + b_i} = \sqrt{a_1x + b_1} + \sqrt{a_2x + b_2} + \cdots + \sqrt{a_nx + b_n} = 0$. (d) $\sum_{i=1}^n \sqrt{a_ix + b_i} = \sum_{i=1}^n \sqrt{c_ix + d_i}$, i.e., $\sqrt{a_1x + b_1} + \sqrt{a_2x + b_2} + \cdots + \sqrt{a_nx + b_n} = \sqrt{c_1x + d_1} + \sqrt{c_2x + d_2} + \cdots + \sqrt{c_nx + d_n}$.
+\end{baitoan}
+
+\begin{baitoan}[Phương trình vô tỷ với phương trình bậc 2 1 ẩn]
+	(a) $\sqrt{ax^2 + bx + c} = 0$. (b) $\sqrt{a_1x^2 + b_1x + c_1} = \sqrt{a_2x^2 + b_2x + c_2}$. (c) $\sum_{i=1}^n \sqrt{a_ix^2 + b_ix + c_i} = \sqrt{a_1x^2 + b_1x + c_1} + \sqrt{a_2x^2 + b_2x + c_2} + \cdots + \sqrt{a_nx^2 + b_nx + c_n} = 0$. (d) $\sum_{i=1}^n \sqrt{a_ix^2 + b_ix + c_i} = \sum_{i=1}^n \sqrt{d_ix^2 + e_ix + f_i}$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
