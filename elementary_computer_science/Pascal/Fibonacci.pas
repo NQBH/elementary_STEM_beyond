@@ -1,5 +1,7 @@
 program Fibonacci;
-var n: longint;
+const MAX = 50;
+var i, k, n: longint;
+	F, S: array[0..MAX] of int64;
 
 function Fibonacci(n: longint): extended;
 var i: longint;
@@ -53,8 +55,32 @@ begin
 	exit(fi);
 end;
 
+function Fibonacci2(n: longint): int64; // divide & conquer
 begin
-	read(n);
+	if n <= 1 then Fibonacci2 := n
+	else Fibonacci2 := Fibonacci2(n - 1) + Fibonacci2(n - 2);
+end;
+
+function Fibonacci3(n: longint): int64; // dynamic programming
+begin
+	if S[n] = -1 then
+	begin
+		if n <= 1 then S[n] := n
+		else S[n] := Fibonacci3(n - 1) + Fibonacci3(n - 2);
+	end;
+	Fibonacci3 := S[n];
+end;
+
+begin
+	readln(n);
 	writeln(Fibonacci(n));
 	writeln(Fibonacci1(n));
+	writeln(Fibonacci2(n));
+	for k := 0 to MAX do S[k] := -1;
+	writeln(Fibonacci3(n));
+	// dynamic programming
+	F[0] := 0;
+	F[1] := 1;
+	for i := 2 to n do F[i] := F[i-1] + F[i-2];
+	writeln(F[n]);
 end.
