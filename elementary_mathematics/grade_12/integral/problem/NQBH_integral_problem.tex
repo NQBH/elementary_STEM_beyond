@@ -50,8 +50,8 @@
 %------------------------------------------------------------------------------%
 
 \section{Antiderivative -- Nguyên Hàm}
-\fbox{1} $\left(\int f(x)dx\right)' = f(x)$. \fbox{2} $\int [f(x) + g(x)]dx = \int f(x)dx + \int g(x)dx$. $\int af(x)dx = a\int f(x)dx$, $\forall a\in\mathbb{R}$. $d\left(\int f(x)dx\right) = f(x)dx$. \fbox{3} (a) $\int dx = x + C$. (b) $\int (x + a)^\alpha dx = \dfrac{(x + a)^{\alpha + 1}}{\alpha + 1} + C$, $\forall a,\alpha\in\mathbb{R},\alpha\ne-1$. (c) $\int \dfrac{1}{x + a}dx = \ln|x + a| + C$, $\forall a\in\mathbb{R}$. (d) $\int \sin\alpha dx = -\dfrac{\cos\alpha x}{\alpha} + C$, $\int \cos\alpha xdx = \dfrac{\sin\alpha x}{\alpha} + C$, $\forall\alpha\in\mathbb{R}^\star$. (e) $\int a^xdx = \dfrac{a^x}{\ln a} + C$, $\forall a\in(0,\infty),a\ne-1$. (f) $\int \dfrac{1}{\cos^2x}dx = \tan x + C$, $\int\dfrac{1}{\sin^2x}dx = -\cot x + C$. \fbox{4} {\sf Công thức đổi biến}: \fbox{$\int f(u(x))u'(x)dx = F(u(x)) + C$}, \fbox{$\int f(u)du = F(u(x)) + C$}. \fbox{5} {\sf Công thức nguyên hàm từng phần}: \fbox{$\int u(x)v'(x)dx = u(x)v(x) - \int v(x)u'(x)dx$}, \fbox{$\int udv = uv - \int vdu$}.
-
+\fbox{1} $\left(\int f(x)dx\right)' = f(x)$. \fbox{2} {\sf Tính chất của nguyên hàm}: $\int [f(x) + g(x)]dx = \int f(x)dx + \int g(x)dx$. $\int af(x)dx = a\int f(x)dx$, $\forall a\in\mathbb{R}$. $d\left(\int f(x)dx\right) = f(x)dx$.\\
+\\
 \noindent\cite[Chap. IV, \S1, pp. 3--8]{SGK_Toan_12_Canh_Dieu_tap_2}: HD1. LT1. HD2. LT2. LT3. HD3. LT4. HD4. LT5. 1. 2. 3. 4. 5. 6.
 
 \begin{baitoan}[\cite{TLCT_giai_tich_12}, VD1, p. 106]
@@ -125,12 +125,118 @@
 %------------------------------------------------------------------------------%
 
 \section{Antivative of Some Elementary Functions -- Nguyên Hàm Của 1 Số Hàm Số Sơ Cấp}
+\fbox{1} (a) $\int dx = x + C$. (b) $\int (x + a)^\alpha dx = \dfrac{(x + a)^{\alpha + 1}}{\alpha + 1} + C$, $\forall a,\alpha\in\mathbb{R},\alpha\ne-1$. (c) $\int \dfrac{1}{x + a}dx = \ln|x + a| + C$, $\forall a\in\mathbb{R}$. (d) $\int \sin\alpha dx = -\dfrac{\cos\alpha x}{\alpha} + C$, $\int \cos\alpha xdx = \dfrac{\sin\alpha x}{\alpha} + C$, $\forall\alpha\in\mathbb{R}^\star$. (e) $\int a^xdx = \dfrac{a^x}{\ln a} + C$, $\forall a\in(0,\infty),a\ne-1$. (f) $\int \dfrac{1}{\cos^2x}dx = \tan x + C$, $\int\dfrac{1}{\sin^2x}dx = -\cot x + C$. \fbox{2} {\sf Công thức đổi biến}: \fbox{$\int f(u(x))u'(x)dx = F(u(x)) + C$}, \fbox{$\int f(u)du = F(u(x)) + C$}. \fbox{5} {\sf Công thức nguyên hàm từng phần}: \fbox{$\int u(x)v'(x)dx = u(x)v(x) - \int v(x)u'(x)dx$}, \fbox{$\int udv = uv - \int vdu$}.\\
+\\
 \cite[Chap. IV, \S2, pp. 9--16]{SGK_Toan_12_Canh_Dieu_tap_2}: HD1. LT1. LT2. HD2. LT3. HD3. LT4. LT5. HD4. LT6. 1. 2. 3. 4. 5. 6. 7. 8.
 
 %------------------------------------------------------------------------------%
 
 \section{Integral -- Tích Phân}
-\cite[Chap. IV, \S3, pp. 17--27]{SGK_Toan_12_Canh_Dieu_tap_2}: HD1. LT1. HD2. LT2. HD3. LT3. HD4. LT4. LT5. LT6. LT7. LT8. LT9. 1. 2. 3. 4. 5. 6. 7. 8. 9.
+\fbox{1} $\int_a^b f(x)dx = F(x)|_a^b = \left(\int f(x)dx\right)|_a^b$. \fbox{2} (a) {\sf Tính chất của tích phân}: (a) $\int_a^a f(x)dx = 0$. (b) $\int_a^b f(x)dx = -\int_b^a f(x)$. (c) $\int_a^b f(x)dx + \int_b^c f(x)dx = \int_a^c f(x)dx$. (d) $\int_a^b (f(x) + g(x))dx = \int_a^b f(x)dx + \int_a^b g(x)dx$. (f) $\int_a^b kf(x)dx = k\int_a^b f(x)dx$, $\forall k\in\mathbb{R}$. \fbox{3} {\sf Công thức đổi biến}: \fbox{$\int_a^b f(u(x))u'(x)dx = \int_{u(a)}^{u(b)} f(u)du$}. \fbox{4} {\sf Công thức tích phân từng phần}: $\int_a^b udv = uv|_a^b - \int_a^b vdu$, \fbox{$\int_a^b u(x)v'(x)dx = u(b)v(b) - u(a)v(a) - \int_a^b u'(x)v(x)dx$}.\\
+\\
+\noindent\cite[Chap. IV, \S3, pp. 17--27]{SGK_Toan_12_Canh_Dieu_tap_2}: LT1. LT2. LT3. LT4. LT5. LT6. LT7. LT8. LT9. 1. 2. 3. 4. 5. 6. 7. 8. 9.
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD1, p. 113]
+	Tính: (a) $\int_4^5 \left(x^2 + \dfrac{1}{x}\right)^2dx$. (b) $I = \int_{\frac{\pi}{4}}^{\frac{\pi}{3}} \dfrac{dx}{\sin2x}$. (c) $I = \int_1^e x^2\ln xdx$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD2, p. 114]
+	Cho $a\in\left(0,\dfrac{\pi}{2}\right)$. Chứng minh $\int_e^{\tan a} \dfrac{xdx}{1 + x^2} + \int_e^{\cot a} \dfrac{dx}{x(1 + x^2)} = -1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD3, p. 114]
+	Tìm nguyên hàm của hàm số
+	\begin{equation*}
+		f(x) = \left\{\begin{split}
+			-&x,&&\mbox{if } x < -1,\\
+			&1,&&\mbox{if } -1\le x\le1,\\
+			&x,&&\mbox{if } x > 1.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD4, p. 115]
+	Cho hàm số $g(x) = \int_{\sqrt{x}}^{x^2} \sqrt{t}\sin tdt$ xác định với $x > 0$. Tìm $g'(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD5, p. 117]
+	Cho dãy $(u_n)$ xác định bởi công thức $u_n = \dfrac{1}{n}\sum_{i=1}^n \sqrt{\dfrac{i}{n}}$. Tính $\lim_{n\to\infty} u_n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD6, p. 118]
+	Cho dãy $(u_n)$ xác định bởi công thức $u_n = \sum_{i=1}^n \dfrac{1}{2n + 2i - 1} = \dfrac{1}{2n + 1} + \dfrac{1}{2n + 3} + \cdots + \dfrac{1}{4n - 1}$. Tính $\lim_{n\to\infty} u_n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD7, p. 119]
+	Tính $I = \int_1^2 xe^{x^2}dx$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD8, p. 120]
+	Tính: (a) $I = \int_{-1}^1 \dfrac{dx}{x^2 + 1}$. (b) $I = \int_{\pi}^{2\pi} \dfrac{x\sin x}{1 + \cos^2x}dx$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD9, p. 121]
+	Tính $I = \int_0^{\frac{\pi}{4}} \dfrac{(1 + \sin x\cos x)e^x}{1 + \cos2x}dx$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD10, p. 121]
+	Tính $u_n = \int_0^\pi \cos^nx\cos nxdx$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD11, p. 122]
+	Giả sử f là hàm liên tục. Chứng minh $\int_0^a f(x)(a - x)dx = \int_0^a\left(\int_0^x f(t)dt\right)dx$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, 8., p. 123]
+	Tính: (a) $I = \int_0^1 x^3e^{x^2}dx$. (b) $I = \int_0^{\ln2} e^{7x}dx$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, 9., p. 123]
+	Tính: (a) $I = \int_0^{\frac{\pi}{3}} \tan xdx$. (b) $I = \int_0^3 \dfrac{xdx}{1 + x^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, 10., p. 123]
+	Tính: (a) $I = \int_0^{\frac{\pi}{3}} \tan^2xdx$. (b) $I = \int_1^e (\ln x)^2dx$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, 11., p. 123]
+	Tính: (a) $I = \int_0^1 x^2e^{4x}dx$. (b) $I = \int_4^7 \dfrac{dx}{\sqrt{(x - 4)(7 - x)}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, 12., p. 123]
+	Cho hàm số
+	\begin{equation*}
+		f(x) = \left\{\begin{split}
+			-&2(x + 1),&&\mbox{khi } x\le0,\\
+			&k(1 - x^2),&&\mbox{khi } x > 0.
+		\end{split}\right.
+	\end{equation*}
+	Tìm $k\in\mathbb{R}$ để $\int_{-1}^1 f(x)dx = 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, 13., p. 123]
+	Cho hàm số $g(x) = \int_{2x}^{3x} \dfrac{t^2 - 1}{t^2 + 1}dt$. Tìm $g'(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, 14., p. 123]
+	Tìm hàm số f \& $a\in(0,\infty)$ thỏa $\int_a^x \dfrac{f(t)}{t^2}dt + 6 = 2\sqrt{x}$, $\forall x\in(0,\infty)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, 15., p. 123]
+	Cho hàm $f(x)$ liên tục \& $a\in(0,\infty)$. Giả sử $\forall x\in[0,a]$, có $f(x) > 0,f(x)f(a - x) = 1$. Tính $I = \int_0^a \dfrac{dx}{1 + f(x)}$ theo a.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, 16., p. 123]
+	Tính $I = \int_{-1}^1 \dfrac{dx}{(e^x + 1)(x^2 + 1)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, 17., p. 123]
+	Cho dãy $(u_n)$ xác định bởi công thức $u_n = \sum_{i=1}^n \dfrac{i^3}{n^4}$. Tính $\lim_{n\to\infty} u_n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, 18., p. 123]
+	Cho dãy $(u_n)$ xác định bởi công thức $u_n = \sum_{i=1}^n \dfrac{i^2}{i^3 + n^3}$. Tính $\lim_{n\to\infty} u_n$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
