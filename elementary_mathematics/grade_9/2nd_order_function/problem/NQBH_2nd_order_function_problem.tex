@@ -290,10 +290,28 @@
 \noindent\cite[Chap. VII, \S2, pp. 52--60]{SGK_Toan_9_Canh_Dieu_tap_2}: HD1. LT1. HD2. LT2. HD3. LT3. HD4. LT4. LT5. LT6. 1. 2. 3. 4. 5. 6.
 
 \begin{baitoan}[{\sf Program}: Solve quadratic equation]
-	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải {\rm PTB2} 1 ẩn $ax^2 + bx + c = 0$.
+	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải {\rm PTB2} 1 ẩn $f(x) = ax^2 + bx + c = 0$.\footnote{Scripts:
+		\begin{itemize}
+			\item Python: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Python/solve_quadratic_eqn.py}.
+			\item C: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/C/solve_quadratic_eqn.c}.
+			\item C++: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/Cpp/solve_quadratic_eqn.cpp}.
+	\end{itemize}}
 	\begin{itemize}
 		\item {\sf Input}: 3 hệ số $a,b,c\in\mathbb{R}$ được nhập từ bàn phím.
-		\item {\sf Output}: Số nghiệm của phương trình \& liệt kê các nghiệm đó, {\rm GTNN, GTLN}, các khoảng đồng biến, nghịch biến.
+		\item {\sf Output}: Hình dáng của đồ thị hàm số $f(x) = 0$ (đường thẳng hay parabol ngửa lên hay úp xuống), số nghiệm của phương trình \& liệt kê các nghiệm đó, phân tích $f(x) = a\left(x + \dfrac{b}{2a}\right)^2 - \dfrac{\Delta}{4a} = a\left(x + \dfrac{b'}{a}\right)^2 - \dfrac{\Delta'}{a}$, {\rm GTNN, GTLN}, tính đơn điệu (i.e., các khoảng đồng biến, nghịch biến), phân tích $f(x)$ thành nhân tử $f(x) = a(x - x_1)(x - x_2)$ trong trường hợp $\Delta\ge0$, giải 4 bất phương trình $f(x) > 0,f(x) < 0,f(x)\ge0,f(x)\le0$.
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[{\sf Program}: Solve parametrized quadratic equation]
+	Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải \& biện luận 3 {\rm PTB2} 1 ẩn x tham số $m\in\mathbb{R}$:
+	\begin{align*}
+		f_1(x) &= (am + b)x^2 + (cm + d)x + em + f = 0,\\
+		f_2(x) &= (am^2 + bm + c)x^2 + (dm + e)x + f = 0,\\
+		f_3(x) &= ax^2 + (bm + c)x + dm^2 + em + f = 0.
+	\end{align*}
+	\begin{itemize}
+		\item {\sf Input}: 6 hệ số $a,b,c,d,e,f\in\mathbb{R}$ được nhập từ bàn phím.
+		\item {\sf Output}: Với $i = 1,2,3$, giải \& biện luận theo tham số $m\in\mathbb{R}$ hình dáng của đồ thị hàm số $f_i(x) = 0$ (đường thẳng hay parabol ngửa lên hay úp xuống), số nghiệm của phương trình \& liệt kê các nghiệm đó, phân tích $f_i(x) = \alpha_i\left(x + \dfrac{\beta_i}{2\alpha_i}\right)^2 - \dfrac{\Delta_i}{4\alpha_i} = \alpha_i\left(x + \dfrac{\beta_i'}{\alpha_i}\right)^2 - \dfrac{\Delta'}{\alpha_i}$, {\rm GTNN, GTLN}, tính đơn điệu (i.e., các khoảng đồng biến, nghịch biến), phân tích $f(x)$ thành nhân tử $f_i(x) = \alpha_i(x - x_{i,1})(x - x_{i,2})$ trong trường hợp $\Delta\ge0$, giải 4 bất phương trình $f_i(x) > 0,f_i(x) < 0,f_i(x)\ge0,f_i(x)\le0$.
 	\end{itemize}
 \end{baitoan}
 
