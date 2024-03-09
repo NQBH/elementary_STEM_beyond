@@ -61,7 +61,7 @@
 \begin{center}
 	\begin{tikzpicture}
 		\def\r{2}
-		\def\h{4}
+		\def\h{3}
 		\def\gM{30}
 		\def\gN{-80}
 		\path
@@ -81,6 +81,10 @@
 \fbox{1} Quay hình chữ nhật $ABCD$ 1 vòng quanh cạnh $CD$ cố định (trục quay) được 1 hình trụ với 2 đáy: 2 hình tròn $(C;R),(D;R)$ với $R = AD = BC$, mặt xung quanh, đường sinh $AB$, chiều cao $AB = h$. \fbox{2} {\sf Thiết diện}: \textit{Mặt cắt song song với đáy}: Thiết diện là 1 hình tròn bằng đáy. \textit{Mặt cắt song song với trục}: Thiết diện là 1 hình chữ nhật. \fbox{3} Hình trụ có diện tích xung quanh \fbox{$S_{\rm xq} = 2\pi Rh$}, diện tích toàn phần \fbox{$S_{\rm tp} = 2\pi Rh + 2\pi R^2$}, thể tích \fbox{$V = S_{\scriptsize\mbox{\rm đ}}h = \pi R^2h$}.\\
 \\
 \cite[Chap. X, \S1, pp. 92--97]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. HD2. LT1. HD3. LT2. HD4. 1. 2. 3. 4. 5. 6.
+
+\begin{baitoan}[{\sf Program}: Cylinder]
+	Cho 2 trong 6 yếu tố: $R,h,S_{\rm xq},S_{\scriptsize\mbox{\rm đ}},S_{\rm tp},V$, tìm 4 yếu tố còn lại của hình trụ theo 2 yếu tố cho trước. Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để minh họa.
+\end{baitoan}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, H1, p. 114]
 	Nếu tăng bán kính đáy của hình trụ lên gấp đôi, gấp $a$ lần thì diện tích xung quanh, diện tích toàn phần, thể tích của hình trụ tăng mấy lần?
@@ -234,9 +238,17 @@
 		\foreach \x/\g in {A/0,B/180,O/90,H/135} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
 	\end{tikzpicture}
 \end{center}
-\fbox{1} Quy $\Delta AOB$ vuông tại $O$ 1 vòng quành cạnh góc vuông $OA$ cố định được 1 hình nón có đáy: hình tròn $(O;R)$, đỉnh $A$, mặt xung quanh, đường sinh $AB = l$, chiều cao $AO = h$. \fbox{2} Hình nón có diện tích xung quanh \fbox{$S_{xq} = \pi Rl$}, diện tích toàn phần \fbox{$S_{\rm tp} = \pi Rl + \pi R^2$}, thể tích \fbox{$V = \frac{1}{3}S_{\scriptsize\mbox{\rm đ}}h = \frac{1}{3}\pi R^2h$}. \fbox{3} Hình nón cụt với 2 đáy $(O';r),(O;R)$ có diện tích xung quanh \fbox{$S_{\rm xq} = \pi(R + r)l$}, diện tích toàn phần \fbox{$S_{\rm tp} = \pi(R + r)l + \pi(R^2 + r^2)$}, thể tích \fbox{$V = \frac{1}{3}\pi h(R^2 + Rr + r^2)$}.\\
+\fbox{1} Quy $\Delta AOB$ vuông tại $O$ 1 vòng quành cạnh góc vuông $OA$ cố định được 1 hình nón có đáy: hình tròn $(O;R)$, đỉnh $A$, mặt xung quanh, đường sinh $AB = l$, chiều cao $AO = h$. \fbox{2} Hình nón có diện tích xung quanh \fbox{$S_{\rm xq} = \pi Rl$}, diện tích toàn phần \fbox{$S_{\rm tp} = \pi Rl + \pi R^2$}, thể tích \fbox{$V = \frac{1}{3}S_{\scriptsize\mbox{\rm đ}}h = \frac{1}{3}\pi R^2h$}. \fbox{3} Hình nón cụt với 2 đáy $(O';r),(O;R)$ có diện tích xung quanh \fbox{$S_{\rm xq} = \pi(R + r)l$}, diện tích toàn phần \fbox{$S_{\rm tp} = \pi(R + r)l + \pi(R^2 + r^2)$}, thể tích \fbox{$V = \frac{1}{3}\pi h(R^2 + Rr + r^2)$}.\\
 \\
 \cite[Chap. X, \S2, pp. 98--103]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. HD2. LT1. HD3. LT2. HD4. 1. 2. 3. 4.
+
+\begin{baitoan}[{\sf Program}: Cone]
+	Cho 2 trong 7 yếu tố: $R,l,h,S_{\rm xq},S_{\scriptsize\mbox{\rm đ}},S_{\rm tp},V$, tìm 5 yếu tố còn lại của hình nón theo 2 yếu tố cho trước. Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để minh họa.
+\end{baitoan}
+
+\begin{baitoan}[{\sf Program}: Truncated cone]
+	Cho 3 trong 8 yếu tố: $R,r,l,h,S_{\rm xq},S_{\scriptsize\mbox{\rm đ}},S_{\rm tp},V$, tìm 5 yếu tố còn lại của hình nón cụt theo 2 yếu tố cho trước. Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để minh họa.
+\end{baitoan}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, H1, p. 120]
 	1 hình trụ \& 1 hình nón có chung đáy, chiều cao bằng nhau, tính tỷ số thể tích của chúng.
@@ -378,6 +390,10 @@
 \fbox{1} Quay nửa hình tròn tâm $O$ 1 vòng quanh đường kính $AB$ cố định ta được 1 hình cầu. \fbox{2} {\sf Thiết diện}: Cắt hình cầu (mặt cầu) bán kính $R$ bởi 1 mặt phẳng ta được 1 hình tròn (đường tròn) bán kính $r$: Bán kính đường tròn lớn $r = R$ nếu mặt phẳng cắt đi qua tâm. Bán kính đường tròn $r < R$ nếu mặt phẳng cắt không đi qua tâm. \fbox{3} Hình cầu có diện tích \fbox{$S = 4\pi R^2 = \pi d^2$}, thể tích \fbox{$V = \frac{4}{3}\pi R^3$}. \fbox{4} Hình cầu nội tiếp hình trụ thì bán kính hình cầu bằng bán kính đáy hình trụ, chiều cao hình trụ bằng đường kính hình cầu, $V_{\rm c} = \frac{2}{3}V_{\rm tr}$. \fbox{5} {\sf Công thức tính thể tích các vật thể có 2 đáy song song}: \fbox{$V = \dfrac{h}{6}(B_1 + 4B_2 + B_3)$} với $h$: chiều cao của vật thể, $B_1$: diện tích đáy dưới, $B_2$: diện tích thiết diện trung bình (thiết diện qua trung điểm của chiều cao), $B_3$: diện tích đáy trên.\\
 \\
 \cite[Chap. X, \S3, pp. 104--108]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. HD2. LT1. HD3. HD4. LT2. HD5. 1. 2. 3. 4.
+
+\begin{baitoan}[{\sf Program}: Sphere]
+	Cho 1 trong 4 yếu tố: $R,d,S,V$, tìm 3 yếu tố còn lại của hình cầu theo yếu tố cho trước. Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để minh họa.
+\end{baitoan}
 
 \begin{baitoan}[\cite{Binh_boi_duong_Toan_9_tap_2}, H1, p. 125]
 	Khi bán kính 1 mặt cầu tăng gấp $3,a$ lần thì diện tích mặt cầu \& thể tích hình cầu tăng lên mấy lần?
