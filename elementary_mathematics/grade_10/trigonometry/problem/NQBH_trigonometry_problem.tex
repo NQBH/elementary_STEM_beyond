@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Trigonometrical Identities in Triangles -- Bài Tập: Hệ Thức Lượng Trong Tam Giác}
+\author{Nguyễn Quản Bá Hồng\footnote{e-mail: {\sf nguyenquanbahong@gmail.com}, website: \url{https://nqbh.github.io}, Bến Tre, Việt Nam.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Giá Trị Lượng Giác Của 1 Góc \& Hệ Thức Lượng Trong Tam Giác}
+\fbox{1} $\forall\alpha\in[0^\circ;180^\circ]$, $\sin\alpha\in[-1;1]$, $\cos\alpha\in[-1;1]$. \fbox{2} $\cos\alpha > 0\Leftrightarrow\alpha\in(0^\circ;90^\circ)\Leftrightarrow\alpha$ nhọn. $\cos\alpha < 0\Leftrightarrow\alpha\in(90^\circ;180^\circ)\Leftrightarrow\alpha$ tù.
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, VD2, p. 22]
+	Cho $\Delta ABC$ vuông tại A, đường cao AH, $D\in AB$ thỏa $BH = BD = CD$. Chứng minh $\dfrac{AD}{BD} = \sqrt[3]{2} - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, VD3, p. 23]
+	Cho $\Delta ABC$. Chứng minh $\widehat{A} = 90^\circ\Leftrightarrow(\sqrt{a + b} + \sqrt{a - b})(\sqrt{a + c} + \sqrt{a - c}) = \sqrt{2}(a + b + c)$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Giải Tam Giác}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
