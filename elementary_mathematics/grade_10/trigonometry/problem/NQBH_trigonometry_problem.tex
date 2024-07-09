@@ -50,7 +50,7 @@
 %------------------------------------------------------------------------------%
 
 \section{Giá Trị Lượng Giác Của 1 Góc \& Hệ Thức Lượng Trong Tam Giác}
-\fbox{1} $\forall\alpha\in[0^\circ;180^\circ]$, $\sin\alpha\in[-1;1]$, $\cos\alpha\in[-1;1]$. \fbox{2} $\cos\alpha > 0\Leftrightarrow\alpha\in(0^\circ;90^\circ)\Leftrightarrow\alpha$ nhọn. $\cos\alpha < 0\Leftrightarrow\alpha\in(90^\circ;180^\circ)\Leftrightarrow\alpha$ tù. \fbox{3} Định lý cosin: $a^2 = b^2 + c^2 - 2bc\cos A,b^2 = c^2 + a^2 - 2ca\cos B,c^2 = a^2 + b^2 - 2ab\cos C$ hay $\cos A = \dfrac{b^2 + c^2 - a^2}{2bc},\cos B = \dfrac{c^2 + a^2 - b^2}{2ca},\cos C = \dfrac{a^2 + b^2 - c^2}{2ab}$. \fbox{4} Định lý sin: $\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$ hay $a = 2R\sin A,b = 2R\sin B,c = 2R\sin C$. \fbox{5} Công thức tính diện tích tam giác: $S = \frac{1}{2}bc\sin A = \frac{1}{2}ca\sin B = \frac{1}{2}ab\sin C = \sqrt{p(p - a)(p - b)(p - c)}$ với $p = \dfrac{a + b + c}{2}$.
+\fbox{1} $\forall\alpha\in[0^\circ;180^\circ]$, $\sin\alpha\in[-1;1]$, $\cos\alpha\in[-1;1]$. \fbox{2} $\cos\alpha > 0\Leftrightarrow\alpha\in(0^\circ;90^\circ)\Leftrightarrow\alpha$ nhọn. $\cos\alpha < 0\Leftrightarrow\alpha\in(90^\circ;180^\circ)\Leftrightarrow\alpha$ tù. \fbox{3} Định lý cosin: $a^2 = b^2 + c^2 - 2bc\cos A,b^2 = c^2 + a^2 - 2ca\cos B,c^2 = a^2 + b^2 - 2ab\cos C$ hay $\cos A = \dfrac{b^2 + c^2 - a^2}{2bc},\cos B = \dfrac{c^2 + a^2 - b^2}{2ca},\cos C = \dfrac{a^2 + b^2 - c^2}{2ab}$. \fbox{4} Định lý sin: $\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$ hay $a = 2R\sin A,b = 2R\sin B,c = 2R\sin C$. \fbox{5} Công thức tính diện tích tam giác: $S = \frac{1}{2}ah_a = \frac{1}{2}bh_b = \frac{1}{2}ch_c = \frac{1}{2}bc\sin A = \frac{1}{2}ca\sin B = \frac{1}{2}ab\sin C = \sqrt{p(p - a)(p - b)(p - c)}$ với $p = \dfrac{a + b + c}{2}$.
 
 \begin{baitoan}
 	Cho $\alpha\in[0^\circ;360^\circ)$. Tìm các khoảng giá trị của $\alpha$ để các hàm $\sin\alpha,\cos\alpha,\tan\alpha,\cot\alpha$ lần lượt bằng $0$, âm, dương.
@@ -97,8 +97,112 @@
 \section{Giải Tam Giác}
 \fbox{1} Cho $a,b,c$: áp dụng định lý cosin: $\widehat{A} = \arccos\dfrac{b^2 + c^2 - a^2}{2bc},\widehat{B} = \arccos\dfrac{c^2 + a^2 - b^2}{2ca},\widehat{C} = \arccos\dfrac{a^2 + b^2 - c^2}{2ab}$. \fbox{2} Cho $b,c,\widehat{A}$: áp dụng định lý cosin: $a = \sqrt{b^2 + c^2 - 2bc\cos A}$, $\widehat{B} = \arccos\dfrac{c^2 + a^2 - b^2}{2ca},\widehat{C} = \arccos\dfrac{a^2 + b^2 - c^2}{2ab}$. \fbox{3} Cho $a,\widehat{B},\widehat{C}$: $\widehat{A} = 180^\circ - \widehat{B} - \widehat{C}$, áp dụng định lý sin: $b = \dfrac{a\sin B}{\sin A},c = \dfrac{b\sin C}{\sin B}$.
 
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, VD1, p. 124]
+	$\Delta ABC$ có đường cao $AH = h$, $\widehat{B} = \beta$, K trên cạnh BC thỏa $BK = 2CK$, $AK = AB$. Giải $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, VD2, p. 124]
+	Cho $x,y\in[1;+\infty)$. Đặt $a = x^2 + 1,b = y^2 + 1,c = x^2 + y^2 + 1$. Chứng minh tồn tại 1 tam giác có độ dài 3 cạnh là $a,b,c$ \& tam giác đó là tam giác tù.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, VD3, p. 126]
+	Cho $\Delta ABC$ có $BC = a,\widehat{A} = \alpha,\widehat{B} = \beta$, tâm đường tròn nội tiếp. Tính bán kính $(IBC),(ICA),(IAB)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, p. 124, hệ thức về bán kính các đường tròn nội tiếp \& bàng tiếp]
+	Cho $\Delta ABC$ có bán kính đường tròn nội tiếp r, bán kính 3 đường tròn bàng tiếp góc A,B,C lần lượt là $r_a,r_b,r_c$. Chứng minh: (a) $(p - a)\tan\dfrac{A}{2} = (p - b)\tan\dfrac{B}{2} = (p - c)\tan\dfrac{C}{2} = r$. (b) $r_a\cot\dfrac{A}{2} = r_b\cot\dfrac{B}{2} = r_c\cot\dfrac{C}{2} = p$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, p. 128]
+	Chứng minh $S = \dfrac{abc}{4R} = pr = (p - a)r_a = (p - b)r_b = (p - c)r_c = \sqrt{p(p - a)(p - b)(p - c)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, VD4, p. 129]
+	$\Delta ABC$, $\widehat{A} = 60^\circ,R = 8,r = 3$. Tính S.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, VD5, p. 129]
+	Tính r theo $a,b,c$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, VD6, p. 130]
+	Chứng minh $\dfrac{1}{r} = \dfrac{1}{r_a} + \dfrac{1}{r_b} + \dfrac{1}{r_c} = \dfrac{1}{h_a} + \dfrac{1}{h_b} + \dfrac{1}{h_c}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, VD7, p. 130, công thức độ dài phân giác]
+	Gọi $l_a,l_b,l_c$ lần lượt là độ dài 3 đường phân giác trong góc A,B,C. Chứng minh $l_a = \dfrac{2bc\cos\dfrac{A}{2}}{b + c},l_b = \dfrac{2ca\cos\dfrac{B}{2}}{c + a},l_c = \dfrac{2ab\cos\dfrac{C}{2}}{a + b}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, VD8, p. 131, tứ giác điều hòa]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$ có AM là trung tuyến đỉnh A. Đường thẳng qua A \& đối xứng với AM qua phân giác trong góc A cắt $(O)$ tại N. Chứng minh $AB\cdot CN = AC\cdot BN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 37., p. 131]
+	Cho $\Delta ABC$ có 2 trung tuyến BM,CN cắt nhau tại G, $BM = \frac{3}{2},CN = 3,\widehat{BGC} = 120^\circ$. Giải $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 38., p. 132]
+	Cho $\Delta ABC$ có $AC = b,AB = c,\widehat{A} = \alpha$, M là trung điểm BC, N trên cạnh AB thỏa $\dfrac{NA}{NB} = \dfrac{3}{2}$. Tính MN.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 39., p. 132]
+	Cho $\Delta ABC$ có $BC = 10$, $(I)$ là đường tròn có tâm I thuộc cạnh BC \& tiếp xúc với 2 cạnh AB,AC. (a) Biết $IA = 3,2IB = 3IC$, tính AB,AC. (b) Biết $(I)$ có bán kính bằng $3$ \& $2IB = 3IC$, tính $R,AB,AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 40., p. 132]
+	Hình thang ABCD ngoại tiếp được có 2 đáy $BC = b,AD = d > b$, góc giữa 2 cạnh bên bằng $\alpha$. Tính bán kính đường tròn nội tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 41., p. 132]
+	Cho hình thang cân ABCD với đáy lớn AB ngoại tiếp 1 đường tròn bán kính r. (a) Đặt $\widehat{BAD} = \alpha$. Tính độ dài 2 đáy \& đường chéo theo $r,\alpha$. (b) R là bán kính đường tròn ngoại tiếp hình thang. Biết $\dfrac{R}{r} = \dfrac{2}{3}\sqrt{7}$, tính $\widehat{BAD}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 42., p. 132]
+	Chứng minh $\cos\dfrac{A}{2} = \sqrt{\dfrac{p(p - a)}{bc}},\tan\dfrac{A}{2} = \sqrt{\dfrac{(p - b)(p - c)}{p(p - a)}}$.
+\end{baitoan}
+
+\begin{dinhnghia}
+	$a,b,c\in\mathbb{R}$ được gọi là lập thành {\rm cấp số cộng} nếu $a + c = 2b$. Lúc đó giá trị $d = b - a = c - b$ được gọi là {\rm công sai} của cấp số cộng.
+\end{dinhnghia}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 43., p. 132]
+	Chứng minh 3 cạnh $a,b,c$ của $\Delta ABC$ lập thành cấp số cộng khi \& chỉ khi $\tan\dfrac{A}{2}\tan\dfrac{C}{2} = \dfrac{1}{3}$. Chứng minh khi đó công sai của cấp số cộng này là $d = \dfrac{3}{2}r\left(\tan\dfrac{C}{2} - \tan\dfrac{A}{2}\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 44., p. 132]
+	Chứng minh: (a) $\sin A,\sin B,\sin C$ lập thành cấp số cộng khi \& chỉ khi $\cot\dfrac{A}{2},\cot\dfrac{B}{2},\cot\dfrac{C}{2}$ lập thành cấp số cộng. (b) $\cos A,\cos B,\cos C$ lập thành cấp số cộng khi \& chỉ khi $\tan\dfrac{A}{2},\tan\dfrac{B}{2},\tan\dfrac{C}{2}$ lập thành cấp số cộng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 45., p. 133]
+	Cho $\Delta ABC$ \& điểm M thay đổi trên cạnh BC, $r_1,r_2$ là bán kính đường tròn nội tiếp \& $\rho_1,\rho_2$ là bán kính đường tròn bàng tiếp góc A của $\Delta ABM,\Delta ACM$. Chứng minh $\dfrac{r_1r_2}{\rho_1\rho_2}$ không đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 46., p. 132]
+	Cho $\Delta ABC$, M,N trên cạnh BC thỏa $\widehat{BAM} = \widehat{CAN}$, P,Q là tiếp điểm của đường tròn nội tiếp $\Delta BAM,\Delta CAN$ với cạnh BC. Chứng minh $\dfrac{1}{PB} + \dfrac{1}{PM} = \dfrac{1}{QC} + \dfrac{1}{QN}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 47., p. 132]
+	Cho đường tròn $(O;R)$ \& A bên ngoài $(O)$. 1 đường thẳng thay đổi qua A cắt $(O)$ tại B,C. Đặt $\widehat{AOB} = \alpha,\widehat{AOC} = \beta$. Chứng minh $\tan\dfrac{\alpha}{2}\tan\dfrac{\beta}{2}$ không đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 48., p. 132]
+	Cho $\Delta ABC$ có diện tích S. (a) Chứng minh $\cot A = \dfrac{b^2 + c^2 - a^2}{4S}$. (b) M là trung điểm BC, đặt $\widehat{AMB} = \varphi$. Chứng minh $\cot C - \cot B = 2\cot\varphi$. (c) G là trọng tâm $\Delta ABC$. Đặt $\widehat{BGC} = \alpha$. Chứng minh $\cot\alpha = \dfrac{5bc\cos A - 2(b^2 + c^2)}{3bc\sin A}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 49., p. 132]
+	Chứng minh: (a) $b^2 + c^2 = 2a^2\Leftrightarrow\cot B + \cot C = 2\cot A$. (b) $b^4 + c^4 = a^4\Leftrightarrow\tan B\tan C = 2\sin^2A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_hinh_hoc_10}, 50., p. 132]
+	Cho $\Delta ABC$ có 2 trung tuyến BM,CN. (a) Chứng minh $BM\bot CN\Leftrightarrow\cot B + \cot C = \frac{1}{2}\cot A$. (b) Chứng minh nếu $\Delta ABC$ không cân tại A thì $\dfrac{BM}{CN} = \dfrac{AB}{AC}\Leftrightarrow\cot B + \cot C = 2\cot A$.
+\end{baitoan}
+
 \begin{baitoan}
-	Chứng minh công thức Heron.
+	Cho $\Delta ABC$ vuông tại $A$. (a) Cho trước 2 trong 6 số $a,b,c,b',c',h$. Tính 4 số còn lại theo 2 số đã cho. (c) Cho trước 2 trong 8 số $a,b,c,b',c',h,p,S$. Tính 6 số còn lại theo 2 số đã cho. (b) Cho trước 2 trong 14 số $a,b,c,b',c',h$, $m_a,m_b,m_c,d_a,d_b,d_c,p,S$ với $d_a,d_b,d_c$ lần lượt là 3 đường phân giác ứng với $BC,CA,AB$. Tính 12 số còn lại theo 2 số đã cho. Viết các chương trình {\sf Pascal, Python, C{\tt/}C++} để mô phỏng.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $\Delta ABC$ Cho trước 3 trong 14 số $a,b,c,b',c',h$, $m_a,m_b,m_c,d_a,d_b,d_c,p,S$ với $d_a,d_b,d_c$ lần lượt là 3 đường phân giác ứng với $BC,CA,AB$. Tính 12 số còn lại theo 2 số đã cho. Viết các chương trình {\sf Pascal, Python, C{\tt/}C++} để mô phỏng.
 \end{baitoan}
 
 \begin{baitoan}
