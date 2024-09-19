@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,soul}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{conjecture}{Conjecture}
@@ -26,14 +26,14 @@
 \newtheorem{theorem}{Theorem}
 \usepackage[margin=2cm]{geometry}
 
-\title{Some Thoughts On Learning, Teaching, {\it\&} Research\\Vài Suy Nghĩ Về Việc Học, Việc Dạy, {\it\&} Nghề Nghiên Cứu\\{\Large\sf A Novel -- Tiểu Thuyết}}
+\title{Some Thoughts On Learning, Teaching, {\it\&} Research\\Vài Suy Nghĩ Về Việc Học, Việc Dạy, {\it\&} Nghề Nghiên Cứu\\{\Large\sf A Short Novel -- 1 Tiểu Thuyết Ngắn}}
 \author{Nguyễn Quản Bá Hồng\footnote{E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}\and Nguyễn Quản Trung Nhân\footnote{In the Void.}}
 \date{\today}
 
 \begin{document}
 \maketitle
 \begin{abstract}
-	This note consists of some pieces of my writing, which are able to be shared and I am willing to share, in order to sharpen my flow of thoughts, to balance my scientific work via various aesthetic forms, \& to track psychologically and mentally my transitions from boyhood to manhood if there is any.
+	This note consists of some pieces of my writing, which are able to be shared and I am willing to share, in order to sharpen my flows of thoughts, to balance my scientific work via various aesthetic forms, \& to track psychologically and mentally my transitions from boyhood to manhood if there is any.
 \end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
@@ -45,7 +45,7 @@
 Lúc còn làm về động cơ đốt trong (combustion engines), có 1 giai đoạn tôi, tác giả thứ nhất, phải học luật \& các vấn đề đạo đức (ethical issues) phát sinh phòng trường hợp research output của đề tài mà tôi làm bị ứng dụng sai vào mục đích quân đội (military purposes) hoặc dân dụng (civil purposes), làm gây thiệt hại nghiêm trọng. Lúc đó tôi chỉ thấy phiền mà không hiểu cho lắm. Nhưng trải qua vài chuyện thì thấy nó cần thiết thật, với nhiều cái hay lắm (thảo nào mấy cuốn sách luật ở Đức dày 1 cách quái dị). Nên tôi nghĩ điều đó cũng cần phải nêu rõ ở đây, khi mà các vấn đề về tâm lý chưa bao giờ là dễ dàng để tiếp cận, để đề phòng các tình huống xấu nhất. Có lẽ thời gian tôi phải đọc tài liệu về luật \& làm các workshop về scientific ethics (i.e., nonfiction) triền miên, ngốn cả thời gian làm nghiên cứu raw của tôi, cuối cùng sau vài năm cũng được bù đắp theo cách dị hợm nhất có thể: tôi dùng nó cho fiction novel -- tiểu thuyết hư cấu. What a joke in the endless series of \textit{Infinite Jest} \cite{Wallace2011} viết bởi cây bút thiên tài người Mỹ {\sc David Foster Wallace}.
 
 \subsection{Disclaimers}
-We, the authors, in the role of the narrators of this novel, clearly state that
+We, the authors, in the role of the narrators of this novel, clearly state that:
 \begin{itemize}
 	\item Any character names mentioned in this piece of writing is purely imaginary. If there is any coincidence, so that a person in real life in the three-dimensional physical space, denoted by $\mathbb{R}^3$, feels disturbed or deeply offended. Well, this century is the optimal era of the offensive, we guess. We can apologize, if we feel necessary, but we take no responsibility.
 	\item \textit{Warning}: This novel contains sexuality, violence, and profanities. Consider carefully before you decide to read. If you feel disturbed \& even depressed, We will take no responsibility.
@@ -67,14 +67,14 @@ Chúng tôi, các tác giả, trong vai trò người kể chuyện, tuyên bố
 	\item $\Phi$: Philosophy -- triết học. \textit{Lý do}: 3 chữ cái đầu của từ `philosophy' là `phi' -- cũng là cách phát âm của 4 ký hiệu Hy Lạp $\varphi,\phi,\Phi,\varPhi$, see, e.g., \href{https://en.wikipedia.org/wiki/Philosophy}{Wikipedia{\tt/}philosophy}.
 	\item bhr: Behavior function ${\rm bhr}(t)$ -- hàm hành vi của 1 người $P$ tại thời điểm $t$.
 	\item env: Environment function ${\rm env}(t)$ -- hàm môi trường mà 1 con người $P$ hiện đang sinh sống \& phát triển tại thời điểm $t$.
-	\item $P$: a typical person. 1 con người điển hình. P cũng là viết tắt của Point, có thể hiểu như 1 điểm trong không gian Euclidean $\mathbb{R}^3$. Kiểu hiểu này có lợi khi xét tương tác giữa 2 hay nhiều người với nhau cũng tương tự như tương tác giữa các hạt trong lý thuyết kinetics\footnote{1st author được học môn này của lớp Master 2 ở Rennes, Pháp.}, see, e.g., \cite{Tartar2008}.
-	\item $P[t,j,\psi,\phi]$: Với 1 người $P$, $t$ là tuổi, $j$ là nghề nghiệp (job) hoặc chức vụ (title), $\psi$ là các đặc điểm tính cách, tâm lý đặc trưng (psychological characteristics), $\phi$ là các quan điểm hay trường phái triết học (philosophical schools) của người $P$ đó. Ở đây sự phụ thuộc của 3 hàm $j,\psi,\phi$ vào biến thời gian $t$ \& biến không gian (spatial variable) ${\bf x}\in{\rm env}(t)\subset\mathbb{R}^3$, tức môi trường đang làm việc ở thời điểm $t$ được ngầm hiểu. 1 ký hiệu toán học ngắn gọn:
+	\item $P$: a typical person -- 1 con người điển hình. P cũng là viết tắt của Point, có thể hiểu như 1 điểm trong không gian Euclidean $\mathbb{R}^3$. Kiểu hiểu này có lợi khi xét tương tác giữa 2 hay nhiều người với nhau cũng tương tự như tương tác giữa các hạt trong lý thuyết kinetics\footnote{1st author được học môn này của lớp Master 2 ở Rennes, Pháp.}, see, e.g., \cite{Tartar2008}.
+	\item $P[t,j,\psi,\phi]$: Với 1 người $P$, $t$ là tuổi, $j$ là nghề nghiệp (job) hoặc chức vụ (title), $\psi$ là các đặc điểm tính cách, tâm lý đặc trưng (characters \& psychological characteristics), $\phi$ là các quan điểm hay trường phái triết học (philosophical schools) của người $P$ đó. Ở đây sự phụ thuộc của 3 hàm $j,\psi,\phi$ vào biến thời gian $t$ \& biến không gian (spatial variable) ${\bf x}\in{\rm env}(t)\subset\mathbb{R}^3$, tức môi trường đang làm việc ở thời điểm $t$ được ngầm hiểu. 1 ký hiệu toán học ngắn gọn cho 1 mô hình toán học đơn giản:
 	\begin{equation}
 		P[t,j,\psi,\phi] = P[t,j(t,{\rm env}(t)),\psi(t,{\rm env}(t),j(t,{\rm env}(t))),\phi(t,{\rm env}(t),j(t,{\rm env}(t)))].
 	\end{equation}
-	\textit{Cắt nghĩa}: Công việc của 1 người tại 1 thời điểm phụ thuộc vào môi trường người đó sống, \& cả môi trường sống lẫn công việc của người đó trong môi trường sống đó sẽ có ảnh hưởng đến tâm lý \& hệ giá trị triết học của người đó. Tất cả các biến nghề nghiệp, môi trường, tâm lý, hệ giá trị triết học sẽ thay đổi theo thời gian $t$ \& không gian theo biến ${\bf x}\in{\rm env}(t)$, i.e., khi người đó thay đổi nơi sinh sống \& làm việc.
+	\textit{Cắt nghĩa}: Công việc của 1 người tại 1 thời điểm $t$ (thường sử dụng là tuổi từ đây trở đi nếu không nói gì thêm) phụ thuộc vào môi trường ${\rm env}(t)$ người đó sống, \& cả môi trường sống lẫn công việc của người đó trong môi trường sống đó sẽ có ảnh hưởng đến tâm lý \& hệ giá trị triết học của người đó. Tất cả các biến nghề nghiệp, môi trường, tâm lý, hệ giá trị triết học sẽ thay đổi theo thời gian $t$ \& không gian theo biến ${\bf x}\in{\rm env}(t)$, i.e., khi người đó thay đổi nơi sinh sống học tập, \& làm việc.
 	
-	Có 1 trường hợp đặc biệt là nếu người đó có hệ giá trị triết học độc lập với môi trường \& công việc, hoặc người đó chỉ sống trong cái đầu của họ thì có thể ký hiệu gọn lại là $\phi(t)$ để chỉ rõ sự độc lập vào công việc \& môi trường. Nhưng chỉ cho phép điều này với phần triết học $\phi(t)$, vì nếu tâm lý $\psi_P(t)$ của 1 người $P$ mà hoàn toàn độc lập với môi trường ${\rm env}_P(t)$ \& công việc $j_P(t)$ thì chắc người đó đã siêu thoát, hoặc nếu còn sống thì cũng đã đạt tới cảnh giới giác ngộ cỡ level niết bàn trong Phật giáo thì có lẽ nên cân nhắc việc phong thánh. Còn nếu bất cứ yếu tố nào trong 3 yếu tố gồm công việc $j(t)$, tâm lý $\psi(t)$, \& hệ giá trị triết học $\phi(t)$, hoàn toàn độc lập với biến thời gian $t$ thì phải ngó lại lại đối tượng $P$ đang xem xét có phải là con người, hay thậm chí là vật thể sống hay không.
+	Có 1 trường hợp đặc biệt là nếu người đó có hệ giá trị triết học độc lập với môi trường \& công việc, hoặc người đó chỉ sống trong cái đầu của họ thì có thể ký hiệu gọn lại là $\phi(t)$ để chỉ rõ sự độc lập vào công việc \& môi trường. Nhưng chỉ cho phép điều này với phần triết học $\phi(t)$, vì nếu tâm lý $\psi_P(t)$ của 1 người $P$ mà hoàn toàn độc lập với môi trường ${\rm env}_P(t)$ \& công việc $j_P(t)$ thì chắc người đó đã siêu thoát, hoặc nếu còn sống thì cũng đã đạt tới cảnh giới giác ngộ cỡ level niết bàn trong Phật giáo thì có lẽ nên cân nhắc việc phong thánh hoặc sản xuất xá lị{\tt/}xá lợi là vừa. Còn nếu bất cứ yếu tố nào trong 3 yếu tố gồm công việc $j(t)$, tâm lý $\psi(t)$, \& hệ giá trị triết học $\phi(t)$, hoàn toàn độc lập với biến thời gian $t$ thì phải ngó lại lại đối tượng $P$ đang xem xét có phải là con người, hay thậm chí là vật thể sống hay không.
 \end{itemize}
 \textit{Quy ước về ngôi \& cách xưng hô.} Trong các đoạn dẫn chuyện, nếu người dẫn chuyện (the narrator) sử dụng ``Tôi'', tức ám chỉ tác giả đầu (the first author), nếu sử dụng ``chúng tôi'' tức ám chỉ cả 2 tác giả (both authors). Các xưng hô ``Tui'', ``mình'', ``ta'', ``mi'', ``tao'', ``mày'', etc., các cách xưng hô của các nhân vật trong tiểu thuyết. Các quy ước này được tham khảo 1 phần từ quyển \textit{First Person Singular: Stories} \cite{Murakami_1st_person} hay bản dịch tiếng Việt \textit{Ngôi thứ nhất số ít} \cite{Murakami_ngoi_1} của nhà văn nổi tiếng người Nhật Bản {\sc Haruki Murakami}.
 
@@ -86,10 +86,10 @@ Chúng tôi, các tác giả, trong vai trò người kể chuyện, tuyên bố
 \subsection{When things fall apart -- Khi mọi thứ sụp đổ}
 Christmas Eve, Winter 2020. Berlin, Germany. In the imaginary world $\mathbb{C}^3$ instead of the real physical world $\mathbb{R}^3$.
 
-Hắn thấy mình đang mệt nhoài, toàn thân rã rời, lê bước trở về phòng riêng trong 1 student studio ở Alexanderflatz\footnote{ \textit{Alexander Square}: a large public square \& transport hub in the central Mitte district of Berlin, reputedly the most visited area of Berlin, see \href{https://en.wikipedia.org/wiki/Alexanderplatz}{Wikipedia{\tt/}Alexanderplatz}.}, Berlin--Mitte, sau buổi tối thân mật cùng đồng nghiệp chung team nghiên cứu của hắn. Nói là đồng nghiệp nhưng thật ra không hắn làm viêc chung 1 đề tài. Nếu là 1 công việc bên mảng công nghệ hoặc kinh doanh chắc có lẽ sẽ khác. Đây là công việc nghiên cứu. Mỗi người trong team sẽ chịu trách nhiệm 1 mảng nghiên cứu riêng, dù chung 1 research theme, nhưng khó mà làm chung với nhau được. Đấy là cái thất bại đầu tiên của hắn: hắn không tương tác được với đồng nghiệp để tạo ra ý tưởng mới. Nhưng có nên trách hắn không? Hắn chỉ là 1 nghiên cứu sinh bậc tiến sĩ, đồng nghiệp của hắn toàn postdoc -- nghiên cứu sau tiến sĩ, khi mà họ đã rành mảng của họ \& sẵn sàng tương tác với các đồng nghiệp trong nhóm lẫn những đồng nghiệp khác nhóm, thậm chí các giáo sư dạng Head of Research Groups, thì đây là 1 mảng hoàn toàn mới với hắn. Hắn cần thời gian để cày kiến thức nền (background knowledge) -- nhưng đúng ra thì thời gian không cho phép. Hắn đang trong giai đoạn cuối của 1 đề tài sắp nghiệm thu mà các người tiền nhiệm của hắn đã bỏ hẳn. He felt that this project is like a fucking death star which he was still trying to hold on his weak shoulder:
+Hắn thấy mình đang mệt nhoài, toàn thân rã rời, lê bước trở về phòng riêng trong 1 student studio ở Alexanderflatz\footnote{ \textit{Alexander Square}: a large public square \& transport hub in the central Mitte district of Berlin, reputedly the most visited area of Berlin, see \href{https://en.wikipedia.org/wiki/Alexanderplatz}{Wikipedia{\tt/}Alexanderplatz}.}, Berlin--Mitte, sau buổi tối thân mật cùng đồng nghiệp chung team nghiên cứu của hắn. Nói là đồng nghiệp nhưng thật ra không hắn làm việc chung 1 đề tài. Nếu là 1 công việc bên mảng công nghệ hoặc kinh doanh chắc có lẽ sẽ khác. Đây là công việc nghiên cứu. Mỗi người trong team sẽ chịu trách nhiệm 1 mảng nghiên cứu riêng, dù chung 1 research theme, nhưng khó mà làm chung với nhau được. Đấy là cái thất bại đầu tiên của hắn: hắn không tương tác được với đồng nghiệp để tạo ra ý tưởng mới. Nhưng có nên trách hắn không? Hắn chỉ là 1 nghiên cứu sinh bậc tiến sĩ, đồng nghiệp của hắn toàn postdoc -- nghiên cứu sau tiến sĩ, khi mà họ đã rành mảng của họ \& sẵn sàng tương tác với các đồng nghiệp trong nhóm lẫn những đồng nghiệp khác nhóm, thậm chí các giáo sư dạng Head of Research Groups, thì đây là 1 mảng hoàn toàn mới với hắn. Hắn cần thời gian để cày kiến thức nền (background knowledge) -- nhưng đúng ra thì thời gian không cho phép. Hắn đang trong giai đoạn cuối của 1 đề tài sắp nghiệm thu mà các người tiền nhiệm của hắn đã bỏ hẳn. He felt that this project is like a fucking death star which he was still trying to hold on his weak shoulder:
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=.2]{true_detective_galaxy}
+	\includegraphics[scale=.7]{spiral}
 	\caption{Rust Cohle's hallucination on The Spiral before the last fight with the Yellow King. \href{https://www.imdb.com/title/tt2356777/}{True Detective} (2014--) [S1.E8].}
 \end{figure}
 Ít ra thì hắn cũng có 1 bài toán nhỏ với thầy của hắn được xuất bản trên 1 tạp chí toán phổ thông nổi tiếng của Đức, tựa tựa tạp chí Toán học \& Tuổi trẻ ở quê nhà của hắn. Hắn mừng lắm. Chẳn phải xuất bản khoa học, nhưng cũng được tính KPI (key performance indicator) để giảm bớt áp lực công việc.
@@ -184,7 +184,7 @@ Khi bạn rời khỏi 1 địa hạt nào đó, những người sùng bái, nh
 \begin{quote}\it
 	``\& then $\ldots$ something happened. I let go. Lost in oblivion. Dark \& silent \& complete. I found freedom. Losing all hope was freedom.'' -- Fight Club (1999)
 \end{quote}
-Naturally \& inevitably, in the autumn of 2021, after the death of his mathematics teacher in high school, in another dark room in The Student Hotel in Vienna, Austria, he decided to fight his primal fears, in the realms of literary -- word \& emotion analysis, and psychology -- behavior \& emotion analysis, with the help and guidance of philosophy -- value \& meaning analysis -- so that he can be lost in his flow of thoughts less frequently, or at least being lost in a positive way this time.
+Naturally \& inevitably, in the autumn of 2021, after the death of his mathematics teacher in high school, in another dark room in The Student Hotel in Vienna, Austria, he decided to fight his primal fears, in the realms of literary -- word \& emotion analysis, and psychology -- behavior \& emotion analysis, with the help and guidance of philosophy -- value \& meaning analysis -- so that he can be lost in his flow(s?) of thoughts less frequently, or at least being lost in a positive way this time.
 
 Maybe he never nails it, the kind of thoughts \& writings he always wants to pursue. Is it important though? Just another lose. He is used to it since he is a loser. But it is still a good try, a way to live aesthetically, spiritually, which means to be able to live properly -- he supposed and still believes.
 
@@ -212,23 +212,27 @@ This writing activity is one of many ways, which is likely to become the main on
 Việc viết lách, theo mình nghĩ, bằng cách này hay cách khác, một lúc nào đó \& theo 1 cách tự nhiên nào đó, cũng sẽ tìm tới những kẻ thích suy nghĩ, những kẻ hay nghĩ nhiều, \& những kẻ mệt mỏi vì cái tật đó, e.g., nhà nghiên cứu, nghiên cứu sinh, các học giả, nói chung là những người làm trong mảng học thuật hoặc phải tiếp xúc nhiều với chữ. Tật hay tài thì chưa biết nhưng ắt hẳn việc viết dùng để sắp xếp mọi thứ trong đầu cho ngăn nắp thì không thể tránh khỏi đối với những người làm việc đầu óc nhiều.
 
 \begin{quote}
-	{\sf Hồng [4--23.5. Theoretical agreeable giver]}: But you have to be useful to other people right? You have to write something nice, something educated, something makes people happy, even in a fake way. Whether you are happy when writing or not does not matter.
+	{\sf Hồng [4--23.5. Typical theoretical agreeable giver]}: But you have to be useful to other people right? You have to write something nice, something educated, something makes people happy, even in a fake way. Whether you are happy when writing or not does not matter.
 	
-	{\sf Hồng [26--?. Practical disagreeable writer]}: Fuck off. I write because I like to write, because I need to write, \& because I will be good at writing. I write for me 1st. Only if I find it useful for other people, I will share to the class of people who need it. You fucking slave go fuck yourself.
+	{\sf Hồng [26--?. Critically practical disagreeable writer]}: Fuck off. I write because I like to write, because I need to write to be able to understand myself, \& because I will be good at writing no matter how. I write for me 1st. Only if I find it useful for other people, I will share to the class of people who need it. You fucking slave! Go fuck yourself.
 	
-	{\sf Hồng [4--23.5. Theoretical agreeable giver]}: But you have to be useful to other people \& forget yourself. You have to sacrifice yourself when needed. Only in that way, you can live properly as a good person.
+	{\sf Hồng [4--23.5. Typical theoretical agreeable giver]}: But you have to be useful to other people \& forget yourself. You have to sacrifice yourself when needed. Only in that way, you can live properly as a good person.
 	
-	{\sf Hồng [26--?. Practical disagreeable writer]}: I don't give a single fuck \cite{Manson_giving_fuck,Manson_giving_fuck_vn}. Fucking Jesus Christ!
+	{\sf Hồng [26--?. Critically practical disagreeable writer]}: I don't give a single fuck \cite{Manson_giving_fuck,Manson_giving_fuck_vn}. Fucking Jesus Christ!
 	
-	{\sf Hồng [4--23.5. Theoretical agreeable giver]}: Hey man. Let me put this matter like this: I know he has been being fixed in the Cross. So he cannot do anything to react or response to your physical action. But please for the mercy of God, don't $\ldots$ Do not do it you $\ldots$ filthy animal.
+	{\sf Hồng [4--23.5. Typical theoretical agreeable giver]}: Hey man. Let me put this matter like this: I know he has been being fixed in the Cross. So he cannot do anything to react or response to your physical action. But please for the mercy of God, don't $\ldots$ Do not do it you $\ldots$ filthy animal.
 	
-	{\sf Hồng [26--?. Practical disagreeable writer]}: Oh my fucking gosh! It is true that I am an atheist but what in the bloody hell are you even thinking about my sexuality? Let me alone. Get the fuck out of my head. I need to write.
+	{\sf Hồng [26--?. Critically practical disagreeable writer]}: Oh my fucking gosh! It is true that I am an atheist but what in the bloody hell are you even thinking about my sexuality? Let me alone. Get the fuck out of my head. I need to write.
 \end{quote}
 
 %------------------------------------------------------------------------------%
 
 \section{Combustion: Order {\it\&}{\tt/}vs. Chaos -- Trật tự {\it\&}{\tt/}vs. Hỗn loạn}
-Source: {\sc Jordan B. Peterson} \textit{12 Rules for Life: An Antidote to Chaos} \cite{Peterson2018} với bản dịch \textit{12 Quy Luật Cuộc Đời: Thần Dược Cho Cuộc Sống Hiện Đại} \cite{Peterson2022a}, {\sc Jordan B. Peterson} \textit{Beyond Order: 12 More Rules for Life} \cite{Peterson2021} với bản dịch \textit{Vượt Trên Trật Tự: 12 Quy Tắc Cho Cuộc Sống} \cite{Peterson2022b}.
+\noindent\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{itemize}
+	\item {\sc Jordan B. Peterson}. \textit{12 Rules for Life: An Antidote to Chaos} \cite{Peterson2018} với bản dịch \textit{12 Quy Luật Cuộc Đời: Thần Dược Cho Cuộc Sống Hiện Đại} \cite{Peterson2022a}
+	\item {\sc Jordan B. Peterson}. \textit{Beyond Order: 12 More Rules for Life} \cite{Peterson2021} với bản dịch \textit{Vượt Trên Trật Tự: 12 Quy Tắc Cho Cuộc Sống} \cite{Peterson2022b}.
+\end{itemize}
 
 \subsection{The ultimate split? -- Sự chia tách cuối cùng?}
 {\small[{\sc Chopin} {\it Ballade No. 1 in G Minor}]}
@@ -247,7 +251,11 @@ We need arts for life.
 %------------------------------------------------------------------------------%
 
 \section{Towards the $\Psi$-Flow: Optimal Experiences}
-Các tài liệu: {\sc Mihaly Csikszentmihalyi}, \textit{Flow: The Psychology of Optimal Experience} \cite{Csikszentmihalyi2008} với bản dịch \textit{Dòng Chảy: Tâm Lý Học Hiện Đại Trải Nghiệm Tối Ưu}. Also \cite{Csikszentmihalyi2013}.
+\noindent\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{itemize}
+	\item {\sc Mihaly Csikszentmihalyi}. \textit{Flow: The Psychology of Optimal Experience} \cite{Csikszentmihalyi2008} với bản dịch \textit{Dòng Chảy: Tâm Lý Học Hiện Đại Trải Nghiệm Tối Ưu}.
+	\item {\sc Mihaly Csikszentmihalyi}. \textit{Creativity: Flow and the Psychology of Discovery and Invention} \cite{Csikszentmihalyi2013}.
+\end{itemize}
 
 \begin{definition}[$\Psi$-flow]
 	``\emph{Flow} in \href{https://en.wikipedia.org/wiki/Positive_psychology}{positive psychology}, also known colloquially as being \emph{in the zone} or \emph{locked in}, is the \href{https://en.wikipedia.org/wiki/Mental_state}{mental state} in which a person performing some activity is fully immersed in a feeling of energized focus, full involvement, \& enjoyment in the process of activity. In essence, flow is characterized by the complete absorption in what one does, \& a resulting transformation in one's sense of time. Flow is the melting together of action \& \href{https://en.wikipedia.org/wiki/Consciousness}{consciousness}; the state of finding a balance between a skill \& how challenging that task is. It requires a high level of concentration. Flow is used as a \href{https://en.wikipedia.org/wiki/Coping}{coping} skill for stress and anxiety when productively pursuing a form of leisure  that matches one's skill set.'' -- \href{https://en.wikipedia.org/wiki/Flow_(psychology)}{Wikipedia{\tt/}flow (psychology)}
@@ -330,7 +338,7 @@ Tạm phân loại học giả, theo ý cá nhân (sẽ bổ sung thêm):
 	\item Học giả làm các mảng, lĩnh vực năng động, với năng suất xuất bản ấn phẩm khoa học cao, thường được trích dẫn nhiều nhờ sự năng động của cộng đồng khoa học tương ứng.
 	\item Học giả làm các mảng khó nhằn, trừu tượng, nên tần suất xuất bản ấn phẩm khoa học khá thấp, nhưng các bài này đều ở dạng nặng đô (hardcore), thường ít được trích dẫn vì kén độc giả. Nếu bài báo đó trở thành cornerstone thì lại được trích dẫn nhiều đến rất nhiều, na ná dạng benchmark cases for industrial purposes của loại 1 (data mẫu chuẩn để các người làm nghiên cứu R\&D ở các lĩnh vực công nghiệp dùng).
 \end{itemize}
-Ưu điểm của loại 1 là đi hội nghị thường xuyên. Mà đa số mấy hội nghị này giàu do dính đến công nghiệp hoặc dịch vụ số hóa (AI{\tt/}DL{\tt/}ML) nên chắc đồ ăn nhiều \& ngon, ít nhất cũng ăn đứt mấy bữa tiệc giản đơn gồm trà, cafe máy cùng vài cái bánh quy như các hội nghị toán lý thuyết ở Pháp mà hồi mình học Master (hay chỉ có mấy chỗ nằm ở rìa của Pháp là vậy nhỉ?). Mà thực ra lúc mấy giáo sư Toán thảo luận với nhau, thay vì nhắm nháp cafe \& ăn bánh quy, vài người lại say xưa thảo luận mà ăn (nhầm?) phấn trắng.
+Ưu điểm của loại 1 là đi hội nghị thường xuyên. Mà đa số mấy hội nghị này giàu do dính đến công nghiệp hoặc dịch vụ số hóa (Artificial Intelligence{\tt/}Deep Learning{\tt/}Machine Learning) nên chắc đồ ăn nhiều \& ngon, ít nhất cũng ăn đứt mấy bữa tiệc giản đơn gồm trà, cafe máy cùng vài cái bánh quy như các hội nghị toán lý thuyết ở Pháp mà hồi mình học Master (hay chỉ có mấy chỗ nằm ở rìa của Pháp là vậy nhỉ?). Mà thực ra lúc mấy giáo sư Toán thảo luận với nhau, thay vì nhắm nháp cafe \& ăn bánh quy, vài người lại say xưa thảo luận mà ăn (nhầm?) phấn trắng.
 
 Chắc mình thuộc loại 2, hoặc ít nhất là mình tự ép bản thân thuộc loại 2 (nên gọi là \textit{giả học -- fake scholar} thì hợp hơn). Trong khi loại 1 thì tạo cảm giác năng động, tràn trề của sức trẻ, thì loại 2 hoàn toàn ngược lại, mà phần lớn là phải cày background khá nhiều \& nặng, \& 1 trong những cái mệt nhất nhưng rewarding nhất của loại 2 là làm các công trình khoa học liên ngành, kết nối các kết quả mạnh nhất của các lĩnh vực lý thuyết với nhau.
 
@@ -398,7 +406,10 @@ Tôi không hề nghĩ sẽ cố trả lời 1 cách hoàn hảo câu hỏi này
 We use simplicity to fight difficulty. We do not add more unnecessary complexities and redundancies to the war because if we do so, we will have to fight ourselves, our entanglements.
 
 \subsubsection{Minimality -- Sự tối giản}
-\cite{Chi2022}.
+\noindent\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{itemize}
+	\item {\sc Chi, Nguyễn -- The Present Writer}. \textit{Một Cuốn Sách về Chủ Nghĩa Tối Giản} \cite{Chi2022}.
+\end{itemize}
 
 \subsubsection{Vigor -- Khí lực, sức mãnh liệt}
 
@@ -540,7 +551,7 @@ Tôi dò hỏi Nhân về blackground của gia đình \& sự dạy dỗ của 
 		
 	{\sf Hồng [28]}: Tôi từ chối tưởng tượng. Mặc dù không phải kiến thức có thể đưa vào sách giáo dục phổ thông hay tài liệu giáo dục giới tính cho lắm nhưng rất bổ ích.
 \end{quote}
-Hắn nói rồi ghi chép lại vào quyển sổ tay của hắn như gã trai trong Golden Boy: All sex jokes are good for life. Jokes are vital for life.
+Hắn nói rồi ghi chép lại vào quyển sổ tay của hắn như gã trai trong Golden Boy: All healthy sex jokes are good for life. Healthy jokes, even dark ones, are vital for life.
 
 \begin{example}[\sc Blaise Pascal]\rm
 	Trong quyển \textit{Pense\'e} \cite{Pascal2003}
@@ -617,7 +628,9 @@ The authors devote this section to extend some aspects in some humble senses, wi
 
 The main sources are \cite{Adler2013}.
 
-
+\begin{Rule}[On stupidity]
+	Take responsibility of your stupidity. Do not let your stupidity, if you are aware of it or not, harm any person.
+\end{Rule}
 
 
 Maps of Meanings.
@@ -642,25 +655,56 @@ Let's cook.
 \subsection{The last moonwalk in the Inferno -- Điệu nhảy moonwalk cuối cùng ở Hỏa Ngục}
 
 \section{Miscellaneous}
+uproarious story
 
-\section{Acknowledgment}
+\section{Acknowledgment -- Lời tri ân}
 We, the authors, apologize to save this part for the last. Set the acknowledgment switch variable is $\delta_{\rm ack}$. Đặt biến công tắc cảm ơn là $\delta_{\rm ack}$.
 
 \begin{verbatim}
-If project = fail
-    take_responsibility = all
-else, then {
+if project_evaluation = fail
+    take_all_responsibility = enabled;
+else {
+	take_all_credit = disabled;
     distribute_credit;
-    thanks;
+    acknowledgment;
 }
 \end{verbatim}
-Xin chân thành những người đã từng giúp, đã từng thương hoặc thương hắn đến tận ngày hôm nay. Cuộc hành trình mưu cầu hạnh phúc \& khám phá tri thức sẽ thật khó khăn nếu không có họ củng cố niềm tin của 2 tác giả. Xin cảm ơn chị Thảo, anh Đức, anh{\tt/}thầy Lữ, anh{\tt/}thầy Khang, thầy{\tt/}anh Khanh, thầy{\tt/}anh Chánh, cô Lĩu đã truyền động lực trên hành trình học Toán của 2 tác giả. Xin cảm ơn cô Hạnh, cô Thư đã viếng đám tang của cha tác giả, để họ không bị nỗi sợ bị bỏ rơi nuốt chửng. Xin cảm ơn thầy Minh, thầy Tài, thầy Huynh, thầy Hải, thầy Liêm, thầy Quí, thầy Dũng, thầy Trung, thầy Trọng, đã là những mẫu hình người thầy tuyệt vời để 2 tác giả bắt chước theo.
+Xin cảm ơn các bài viết sâu sắc về giáo dục của thầy{\tt/}TS {\sc Trần Nam Dũng}, về giáo dục \& nghiên cứu Toán cao cấp của thầy{\tt/}GS. {\sc Nguyễn Hữu Việt Hưng}, GS. {\sc Ngô Bảo Châu}, GS. {\sc Hà Huy Khoái}. 2 tác giả không hề có bất cứ trao đổi nào với các người thầy này, nhưng bài viết của họ đã đủ để các tác giả bắt tay vào chấp bút cho 1 số ý tưởng của phần bàn về việc học \& bàn về việc dạy. Nếu có bất cứ lỗi nào xảy ra trong tiểu thuyết, đó hoàn toàn là lỗi của 2 tác giả đã hiểu sai ý từ các bài viết gốc. Hoàn toàn không liên quan đến ý tốt hay các tư tưởng của những người thầy này.
+
+Xin chân thành những người đã từng giúp, đã từng thương hoặc thương hắn đến tận ngày hôm nay. Cuộc hành trình mưu cầu hạnh phúc \& khám phá tri thức sẽ thật khó khăn nếu không có họ củng cố niềm tin của 2 tác giả. Xin cảm ơn chị {\sc Thảo}, anh {\sc Đức}, anh{\tt/}thầy {\sc Lữ}, anh{\tt/}thầy {\sc Khang}, thầy{\tt/}anh {\sc Khanh}, thầy{\tt/}anh {\sc Chánh}, cô {\sc Lĩu} đã truyền động lực trên hành trình học Toán của 2 tác giả. Xin cảm ơn cô {\sc Hạnh}, cô {\sc Thư} đã viếng đám tang của cha tác giả, để họ không bị nỗi sợ bị bỏ rơi nuốt chửng. Xin cảm ơn thầy {\sc Lê Hoàng Minh}, thầy {\sc Nguyễn Thanh Tài}, thầy {\sc Võ Văn Huynh}, thầy {\sc Đệ}, thầy {\sc Lê Thanh Hải}, thầy {\sc Liêm}, thầy {\sc Nguyễn Văn Quí}, thầy {\sc Trần Nam Dũng}, thầy {\sc Nguyễn Tấn Trung}, thầy {\sc Đặng Đức Trọng}, đã là những mẫu hình người thầy tuyệt vời để 2 tác giả bắt chước theo.
 
 Bạn đọc có thể dễ dàng nhận thấy đây là 1 chủ đề vô cùng nhạy cảm, cực kỳ nguy hiểm. Nên nếu dự án này thất bại, thì đều do sự non nớt của 2 tác giả với ngòi bút chưa đủ sắc bén nên không thể giải phẫu vấn đề này đến nơi đến chốn, không liên quan gì đến bất cứ ai \& khẳng định là không ai giúp 2 tác giả trong tiểu thuyết này. Các tác giả xin hoàn toàn chịu trách nhiệm về sự thất bại nếu có.
 
 %------------------------------------------------------------------------------%
 
 \appendix
+
+\section{Lists}
+
+\subsection{A summary list of principles}
+
+\subsection{A summary list of rules}
+
+\subsection{A summary list of $\Psi$-theorems, $\Phi$-theorems}
+
+\section{Authors Bibliography -- Đôi điều về các tác giả}
+
+\begin{itemize}
+	\item {\sc Nguyễn Quản Bá Hồng} (1996--?): Tự thân vận động để đậu lớp chuyên Toán khóa 2011--2014 dưới sự ngăn cấm thi trường chuyên của cha mẹ. Kẻ hủy diệt ngôn ngữ khiến gần như tất cả các giáo viên dạy Văn của trường chuyên đều ghét, hoặc ít nhất là không ưa. Kẻ dốt tiếng Anh nên du học mà chưa có bằng Ielts hay Toefl. Học Thạc sĩ năm cuối, bỏ Thạc sĩ năm đầu (Master 2, skipped Master 1) ở Đại học Rennes 1 (Universit\'e de Rennes 1, France) trong lớp ENS của Rennes \& ENS Paris trộn lại. Tiến sĩ Toán Tối Ưu \textit{hụt} tại Đại học Humboldt ở Berlin, Đức.
+	
+	Yêu chó. Yêu sự chân thành, ghét sự giả dối. Sẵn sàng \st{từ bỏ xu hướng tính dục \& dục vọng} dùng vài năm không bon chen để kiếm việc lương cao, sẵn sàng thí nghiệm tâm lý lên chính bản thân để đạt được mục tiêu riêng nhưng có thể có ích chung, nhốt mình ở nhà để viết 1 cuốn \st{tự truyện (autobiography)} tiểu thuyết hư cấu (fictional novel) để khóa mõm các kẻ thích bắt nạt trí tuệ.
+	
+	Hắn là kiểu sinh ra trong gia cảnh nghèo mà có tính cầu toàn khó ưa. Hắn có thể phá hủy cả 1 tác phẩm do hắn làm (hắn tôn trọng bất cứ tác phẩm nào của người khác nên không có chuyện hắn phá tác phẩm của người khác) chỉ vì đơn giản là hắn không thích chi tiết nào trong tác phẩm đó mà hắn không thể sửa được. Điểm này giống nhân vật {\sc Rust Cohl} trong True Detective:
+	\begin{quote}
+		He will shoot the sky if he does not like its shade of blue.
+	\end{quote}
+	\item {\sc Nguyễn Quản Trung Nhân} (?--?): Classified information -- thông tin tuyệt mật. You can read some from this book, but there is no information given further.
+\end{itemize}
+
+\subsubsection{Price -- Giá bán}
+Tiểu thuyết này cùng các tài liệu liên quan được bán với giá $x$ VND{\tt/}euro, với $x\in[0,\infty)$ là 1 số thực không âm, i.e., muốn trả bao nhiêu cũng được, tùy vào đánh giá độ hay theo nhận thức của bạn đọc.
+
+\textit{Lý do}: Nếu $x < 0$ thì bỏ 1 đống công sức ra phá sản thì không được thông minh cho lắm, không xứng đáng để dạy Toán \& đầu tư kinh doanh.
 
 %------------------------------------------------------------------------------%
 
