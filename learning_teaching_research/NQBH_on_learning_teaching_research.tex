@@ -68,9 +68,9 @@ Chúng tôi, các tác giả, trong vai trò người kể chuyện, tuyên bố
 	\item bhr: Behavior function ${\rm bhr}(t)$ -- hàm hành vi của 1 người $P$ tại thời điểm $t$.
 	\item env: Environment function ${\rm env}(t)$ -- hàm môi trường mà 1 con người $P$ hiện đang sinh sống \& phát triển tại thời điểm $t$.
 	\item $P$: a typical person -- 1 con người điển hình. P cũng là viết tắt của Point, có thể hiểu như 1 điểm trong không gian Euclidean $\mathbb{R}^3$. Kiểu hiểu này có lợi khi xét tương tác giữa 2 hay nhiều người với nhau cũng tương tự như tương tác giữa các hạt trong lý thuyết kinetics\footnote{1st author được học môn này của lớp Master 2 ở Rennes, Pháp.}, see, e.g., \cite{Tartar2008}.
-	\item $P[t,j,\psi,\phi]$: Với 1 người $P$, $t$ là tuổi, $j$ là nghề nghiệp (job) hoặc chức vụ (title), $\psi$ là các đặc điểm tính cách, tâm lý đặc trưng (characters \& psychological characteristics), $\phi$ là các quan điểm hay trường phái triết học (philosophical schools) của người $P$ đó. Ở đây sự phụ thuộc của 3 hàm $j,\psi,\phi$ vào biến thời gian $t$ \& biến không gian (spatial variable) ${\bf x}\in{\rm env}(t)\subset\mathbb{R}^3$, tức môi trường đang làm việc ở thời điểm $t$ được ngầm hiểu. 1 ký hiệu toán học ngắn gọn cho 1 mô hình toán học đơn giản:
+	\item $P[t;j;\psi;\phi]$: Với 1 người $P$, $t$ là tuổi, $j$ là nghề nghiệp (job) hoặc chức vụ (title), $\psi$ là các đặc điểm tính cách, tâm lý đặc trưng (characters \& psychological characteristics), $\phi$ là các quan điểm hay trường phái triết học (philosophical schools) của người $P$ đó. Ở đây sự phụ thuộc của 3 hàm $j,\psi,\phi$ vào biến thời gian $t$ \& biến không gian (spatial variable) ${\bf x}\in{\rm env}(t)\subset\mathbb{R}^3$, tức môi trường đang làm việc ở thời điểm $t$ được ngầm hiểu. 1 ký hiệu toán học ngắn gọn cho 1 mô hình toán học đơn giản:
 	\begin{equation}
-		P[t,j,\psi,\phi] = P[t,j(t,{\rm env}(t)),\psi(t,{\rm env}(t),j(t,{\rm env}(t))),\phi(t,{\rm env}(t),j(t,{\rm env}(t)))].
+		P[t;j;\psi;\phi] = P[t;j(t,{\rm env}(t));\psi(t,{\rm env}(t),j(t,{\rm env}(t)));\phi(t,{\rm env}(t),j(t,{\rm env}(t)))].
 	\end{equation}
 	\textit{Cắt nghĩa}: Công việc của 1 người tại 1 thời điểm $t$ (thường sử dụng là tuổi từ đây trở đi nếu không nói gì thêm) phụ thuộc vào môi trường ${\rm env}(t)$ người đó sống, \& cả môi trường sống lẫn công việc của người đó trong môi trường sống đó sẽ có ảnh hưởng đến tâm lý \& hệ giá trị triết học của người đó. Tất cả các biến nghề nghiệp, môi trường, tâm lý, hệ giá trị triết học sẽ thay đổi theo thời gian $t$ \& không gian theo biến ${\bf x}\in{\rm env}(t)$, i.e., khi người đó thay đổi nơi sinh sống học tập, \& làm việc.
 	
@@ -443,11 +443,11 @@ It takes a wise man to catch a wolf in sheep-clothing.
 	\item Quyển \textit{Psychopath Free: Recovering from Emotionally Abusive Relationships With Narcissists, Sociopaths, \& Other Toxic People} \cite{MacKenzie2015} của tác giả gay trẻ {\sc Jackson MacKenzie}.
 \end{itemize}
 
-Spring 2021. Berlin. Hắn thấy mình đang ngồi ăn gà với Trinh, để kết thúc 1 ngày đi chơi, sau khi ghé vài chỗ ở Friedrichstrasse, gần cái Đồng Hồ Thế Giới -- World Clock\footnote{\href{https://en.wikipedia.org/wiki/World_Clock_(Alexanderplatz)}{Wikipedia{\tt/}World Clock (Alexanderplatz).}} ở Alexanderplatz. Cả 2 ăn gà, tám chuyện, có vài cái đùi nhìn ngon ơi là ngon, cả đùi Trinh trong đó. 
+Spring 2021. Berlin, Germany. Hắn thấy mình đang ngồi ăn gà với (chị) Trinh, để kết thúc 1 ngày đi chơi chung, sau khi ghé vài chỗ ở Friedrichstrasse, gần cái Đồng Hồ Thế Giới -- World Clock\footnote{\href{https://en.wikipedia.org/wiki/World_Clock_(Alexanderplatz)}{Wikipedia{\tt/}World Clock (Alexanderplatz).}} ở Alexanderplatz. Cả 2 ăn gà, tám chuyện, có vài cái đùi nhìn ngon ơi là ngon, cả đùi Trinh trong đó. 
 \begin{quote}
-	{\sf Trinh [26{\tt/}27?. Covert aggressive narcissist?]}: Không biết Minh Toàn giờ sao rồi ta?
+	{\sf Trinh [26{\tt/}27?; Amazon junior software developer; covert aggressive narcissist, demanding taker]}: Không biết Minh Toàn giờ sao rồi ta?
 	
-	{\sf Hồng [25. Mathematics PhD student]}: À, hồi năm 2 em có đi thi chung Olympic Toán sinh viên với ảnh ngoài Huế: ảnh siêu giỏi Toán, cả Giải tích lẫn Đại số, Vật Lý nữa, với đọc rất nhiều sách. Chị Thảo mà cho mượn cuốn nào là ảnh bắt xe tới KTX em lấy liền, ngay, \& luôn. Em chưa có điều kiện tiếp xúc nhiều nhưng có nghe chị Thảo nói ảnh đọc \textit{Rừng Na Uy} \cite{Murakami_Norwegian_wood} của {\sc Haruki Murakami} nữa. Chắc chắc là ảnh hướng nội, giống giống em, mà trùm hơn nhiều mặt.
+	{\sf Hồng [25; mathematics PhD student; agreeable giver]}: À, hồi năm 2 em có đi thi chung Olympic Toán sinh viên với ảnh ngoài Huế: ảnh siêu giỏi Toán, cả Giải tích lẫn Đại số, Vật Lý nữa, với đọc rất nhiều sách. Chị Thảo mà cho mượn cuốn nào là ảnh bắt xe tới KTX em lấy liền, ngay, \& luôn. Em chưa có điều kiện tiếp xúc nhiều nhưng có nghe chị Thảo nói ảnh đọc \textit{Rừng Na Uy} \cite{Murakami_Norwegian_wood} của {\sc Haruki Murakami} nữa. Chắc chắc là ảnh hướng nội, giống giống em, mà trùm hơn nhiều mặt.
 \end{quote}
 Hắn thoáng nghĩ, mặc dù không có nhiều thông tin lắm về anh Toàn trước hắn 1 khóa, nhưng dễ dàng nhận ra anh ta là kiểu người tốt, tuýp thích mấy thứ tư duy sâu sắc, hướng nội như hắn (maybe much more introverted but no way less), ít nói nhưng khi nói thì chắc lắm, nên chả thể nào rơi vào cạm bẫy của con bitch nói chuyện hời hợt thích lợi dụng bằng cách quyến rũ ngấm ngầm ở ngưỡng thông minh bậc cao này được, dẫu 2 người nếu có làm ở chỗ thầy Dũng với nhau hay không đi chăng nữa. Mà tại sao phải làm vậy nhỉ? Có 1 lần hắn sơ suất nộp trễ học bổng rồi lúc lủi thủi về vô tình gặp anh Toàn, ảnh dặn mốt phải làm sớm hơn nên hắn biết ảnh tốt \& muốn trả ơn. Mà thôi, anh Toàn là người đủ thông minh \& sâu sắc nên chắc chả sao, hắn chả cần mắc công cảnh báo giúp chi cho mệt. Hắn xua cái ý nghĩ đó đi rồi ngắm mấy cái đùi mà chèm chẹp mút tiếp: \textit{Best Korean angry chickens in Berlin}! Tiềm thức của hắn luôn để ý tới ánh mắt của Trinh ở tầm spherical vision system của hắn. Hắn quả thực có 1 spherical vision khá rộng, nên nhiều khi người ta cứ tha hồ liếc hắn mà cứ tưởng hắn đang quay chỗ khác hoặc không hề{\tt/}không thể chú ý đến họ, đặc biệt là những người đeo kính cận -- ánh mắt của họ hằn trên 2 miếng kính trong spherical vision của hắn. Nói chung thì hắn chả hiểu tại sao cái tiềm thức vô lý của hắn cứ chương chướng kiểu khó ở vậy. Mà lúc đó, sau khi check sơ bộ vài thông tin trên Facebook như chị Trinh đã check siêu kỹ thông tin của hắn để có thể dễ dàng quá trình ``đồng bộ hóa'' -- ``synchronization'', hắn vẫn chả hiểu tại sao chả có ai bằng tuổi của hắn hoặc ít hơn, thêm kính ngữ `chị' (hay `senpai' như tụi Nhật) như hắn khi kêu con mụ này cả. Mãi nửa năm sau đó hắn mới hiểu: \textit{1 khi bạn chơi dơ, chơi bẩn có tiếng thì chả có đách đứa nào thèm nể bạn cả}.
 
@@ -477,17 +477,17 @@ Lấy cảm hứng từ bộ môn \textit{Phòng chống Nghệ thuật Hắc á
 Tôi gặp Hồng [nam, 27 tuổi] đang loay hoay viết về buổi trò chuyện của hắn với các thầy cô giáo cũ dưới quê.
 
 \begin{quote}
-	{\sf Hồng [28]}: Anh định viết thế nào?
+	{\sf Hồng [28; writer]}: Anh định viết thế nào?
 	
-	{\sf Hồng [27]}: Khó. Chả dễ. Viết lung tung cho đủ ý thì dễ, mà cho hay, cho trơn tru, đọc bắt tai thì khó quá xá.
+	{\sf Hồng [27; NS teacher]}: Khó. Chả dễ. Viết lung tung cho đủ ý thì dễ, mà cho hay, cho trơn tru, đọc bắt tai thì khó quá xá.
 	
-	{\sf Hồng [28]}: Nếu dạng trò chuyện, tâm sự thì anh có thể tham khảo phong cách đối thoại trong 2 cuốn sách \textit{Dám Bị Ghét} \cite{Ichiro_Fumitake2022a} \& \textit{Dám Hạnh Phúc} \cite{Ichiro_Fumitake2022b} của 2 tác giả Nhật Bản \textsc{Kishimi Ichiro \& Koga Fumiake}.
+	{\sf Hồng [28; writer]}: Nếu dạng trò chuyện, tâm sự thì anh có thể tham khảo phong cách đối thoại trong 2 cuốn sách \textit{Dám Bị Ghét} \cite{Ichiro_Fumitake2022a} \& \textit{Dám Hạnh Phúc} \cite{Ichiro_Fumitake2022b} của 2 tác giả Nhật Bản \textsc{Kishimi Ichiro \& Koga Fumiake}.
 	
-	{\sf Hồng [27]}: Nội dung gì nhỉ?
+	{\sf Hồng [27; NS teacher]}: Nội dung gì nhỉ?
 	
-	{\sf Hồng [28]}: Bàn về thuyết tâm lý học trường phái Adlerian. Nguyên bản là cuốn \textit{The Science of Living} \cite{Adler2013} của \textsc{Alfred Alder}.
+	{\sf Hồng [28; writer]}: Bàn về thuyết tâm lý học trường phái Adlerian. Nguyên bản là cuốn \textit{The Science of Living} \cite{Adler2013} của \textsc{Alfred Alder}.
 	
-	{\sf Hồng [27]}: Để tui đọc thử. Hy vọng không phải mấy cái học thuyết nhảm địt chỉ lý thuyết suông mà không tí thực tế.
+	{\sf Hồng [27; NS teacher]}: Để tui đọc thử. Hy vọng không phải mấy cái học thuyết nhảm địt chỉ lý thuyết suông mà không tí thực tế.
 \end{quote}
 
 Nghe lời tôi khuyên, hắn bắt đầu viết. Cụ thể như sau.
@@ -495,23 +495,23 @@ Nghe lời tôi khuyên, hắn bắt đầu viết. Cụ thể như sau.
 \subsection{Dạy Trẻ Vùng Quê}
 Tui tình cờ trò chuyện với Nhân [nam, 26 tuổi], 1 gia sư dạy các môn Tự nhiên như Toán Lý Hóa Tin, bên cạnh công việc nghiên cứu chưa đâu vào đâu của hắn, ở 1 vùng quê hẻo lánh.
 \begin{quote}
-	{\sf Hồng [27]}: Thế anh thích dạy? Thích công việc gõ đầu trẻ?
+	{\sf Hồng [27; writer]}: Thế anh thích dạy? Thích công việc gõ đầu trẻ?
 	
-	{\sf Nhân [26. Natural Science (NS for short) tutor -- gia sư Khoa học Tự nhiên]}: Cũng không hẳn. Không thích cũng không ghét. Thích vài cái \& cũng ghét 1 đống cái. Ban đầu nghe lời chị nên thử dạy, do công việc nghiên cứu bế tắc, hết đường tiến nên tạm lui về. Bế tắc sao thì sau tui sẽ kể chi tiết. Giờ tập trung vô việc dạy cái đã. Không kể liền có khi mất hồi nào không hay.
+	{\sf Nhân [26; Natural Science (NS for short) tutor -- gia sư Khoa học Tự nhiên]}: Cũng không hẳn. Không thích cũng không ghét. Thích vài cái \& cũng ghét 1 đống cái. Ban đầu nghe lời chị nên thử dạy, do công việc nghiên cứu bế tắc, hết đường tiến nên tạm lui về. Bế tắc sao thì sau tui sẽ kể chi tiết. Giờ tập trung vô việc dạy cái đã. Không kể liền có khi mất hồi nào không hay.
 	
 	Trước tui có về trường cấp 3 cũ để tham gia dạy đội tuyển học sinh giỏi của tỉnh nhà, hồi năm nhất, năm 2 Đại học. Đội tuyển chỉ có 6 đứa, chứ chưa được 8 hay 10 như của mấy tỉnh mạnh như Sài Gòn hay Hà Nội. Mà được cái 6 đứa giỏi, ngoan, chịu làm bài. Tui thích lắm, với hồi trước mấy thầy có phụ tiền cho tui lúc tui bị bệnh nên coi như là báo đáp cái ơn.
 	
 	Dưới quê thì khác hẳn. Mẹ nó cái vùng không có khỉ để ho mà cò cũng chả thèm gáy. Đa số học sinh không được giỏi cho lắm, toàn mấy dạng báo báo, mà chả dạng báo nào giống dạng báo nào. Những đứa vừa giỏi vừa ngoan, đủ trình để tui dạy hết sức, chắc hiếm như đếm số ngón tay của 1 đứa bị cùi.
 	
-	{\sf Hồng [27]}: Anh cứ bình tĩnh, việc gì phải xỉ vả thế?
+	{\sf Hồng [27; writer]}: Anh cứ bình tĩnh, việc gì phải xỉ vả thế?
 	
-	{\sf Nhân [26. NS tutor]}: Tùy vào dạy ai, dạy cái gì, \& dạy ở mức độ nào.	
+	{\sf Nhân [26; NS tutor]}: Tùy vào dạy ai, dạy cái gì, \& dạy ở mức độ nào.	
 \end{quote}
 
 \begin{quote}
-	{\sf Student[6--18]}: Sao mấy thầy cô cứ khó chịu chuyện yêu đương? Người lớn chả hiểu gì cả.
+	{\sf Students[6--18]}: Sao mấy thầy cô cứ khó chịu chuyện yêu đương? Người lớn chả hiểu gì cả.
 	
-	{\sf Hồng [27]}: Đấy là góc nhìn của bạn. Còn trẻ tui cũng thế. [...]
+	{\sf Hồng [27; NS teacher]}: Đấy là góc nhìn của bạn. Còn trẻ tui cũng thế. [...]
 	
 	Rồi cô ấy tự sát với đứa con trong bụng. Thế bạn còn muốn sống thử không?
 \end{quote}
@@ -521,33 +521,33 @@ Yondu Rabit
 \subsection{Parental role in child development -- Vai trò của cha mẹ trong sự phát triển của con cái}
 Tôi dò hỏi Nhân về blackground của gia đình \& sự dạy dỗ của cha mẹ tác động lên sự phát triển của con cái họ thế nào.
 \begin{quote}
-	{\sf Hồng [28. Psychologist]}: Tôi muốn thu thập vài dữ liệu để thống kê về tác động của cha mẹ lên sự phát triển tích cách \& tâm sinh lý của con cái. Anh có ý gì không?
+	{\sf Hồng [28; psychologist]}: Tôi muốn thu thập vài dữ liệu để thống kê về tác động của cha mẹ lên sự phát triển tích cách \& tâm sinh lý của con cái. Anh có ý gì không?
 
-	{\sf Nhân [26. NS tutor]}: Không hiếm trong dân gian những câu thành ngữ: ``Cha nào con nấy'', ``Hổ phụ sinh hổ tử'' hay English idiom ``Like father like son''. Không vào hang cọp sao bóp được cọp con. Kiểu vậy.
+	{\sf Nhân [26; NS tutor]}: Không hiếm trong dân gian những câu thành ngữ: ``Cha nào con nấy'', ``Hổ phụ sinh hổ tử'' hay English idiom ``Like father like son''. Không vào hang cọp sao bóp được cọp con. Kiểu vậy.
 	
-	{\sf Hồng [28. Psychologist]}: Anh liều mạng vào hang cọp chỉ để bóp con cọp con thôi á? Sao anh liều cả tính mạng để đổi lấy cái ít giá trị như vậy?
+	{\sf Hồng [28; psychologist]}: Anh liều mạng vào hang cọp chỉ để bóp con cọp con thôi á? Sao anh liều cả tính mạng để đổi lấy cái ít giá trị như vậy?
 	
-	{\sf Nhân [26. NS tutor]}: Nếu bắt trúng con cọp dễ thương thì cũng xứng đáng lắm á. Mà chỉ ví von thui, anh đừng đi vô cái hang đầy cọp đó sâu quá. Dơ với nguy hiểm lắm. Trong lúc dạy, tui có soi, à nhầm, quan sát nhẹ mối tương quan của cha mẹ với con cái để đưa ra vài kết luận sau.
+	{\sf Nhân [26; NS tutor]}: Nếu bắt trúng con cọp dễ thương thì cũng xứng đáng lắm á. Mà chỉ ví von thui, anh đừng đi vô cái hang đầy cọp đó sâu quá. Dơ với nguy hiểm lắm. Trong lúc dạy, tui có soi, à nhầm, quan sát nhẹ mối tương quan của cha mẹ với con cái để đưa ra vài kết luận sau.
 	
-	{\sf Hồng [28. Psychologist]}: Nhưng đấy chỉ là 1 vài trường hợp, có nghĩa là cỡ dữ liệu mẫu rất nhỏ (data sample with small size), thông tin cực kỳ hạn chế. Sao mà anh đưa đến kết luận được?
+	{\sf Hồng [28; psychologist]}: Nhưng đấy chỉ là 1 vài trường hợp, có nghĩa là cỡ dữ liệu mẫu rất nhỏ (data sample with small size), thông tin cực kỳ hạn chế. Sao mà anh đưa đến kết luận được?
 	
-	{\sf Nhân [26. NS tutor]}: Cái hay là ở chỗ đó, cái trí nhớ điên khùng của tui giúp tui liên hệ lại khá nhiều các bạn bè, các anh chị hồi thời tui còn đi học. Phải chi nó bớt tệ đi, có khi tui lại nhớ được hết, nếu chịu để ý, không chừng. Nên thành ra cỡ mẫu có khi lại khá lớn, ít nhất là đủ lớn để bóp, không, để xài. Nói chung là nên thay kết luận thành phỏng đoán cho hợp lý \& không bị bắt bẻ.
+	{\sf Nhân [26; NS tutor]}: Cái hay là ở chỗ đó, cái trí nhớ điên khùng của tui giúp tui liên hệ lại khá nhiều các bạn bè, các anh chị hồi thời tui còn đi học. Phải chi nó bớt tệ đi, có khi tui lại nhớ được hết, nếu chịu để ý, không chừng. Nên thành ra cỡ mẫu có khi lại khá lớn, ít nhất là đủ lớn để bóp, không, để xài. Nói chung là nên thay kết luận thành phỏng đoán cho hợp lý \& không bị bắt bẻ.
 	
-	{\sf Hồng [28. Psychologist]}: Anh hạn chế giúp tôi mấy trò đùa lại. Nghiêm túc lên. Cái phỏng đoán anh vừa nói là dự đoán thống kê. Thế vẫn là cái trí nhớ ảnh như trên phim ấy à.
+	{\sf Hồng [28; pychologist]}: Anh hạn chế giúp tôi mấy trò đùa lại. Nghiêm túc lên. Cái phỏng đoán anh vừa nói là dự đoán thống kê. Thế vẫn là cái trí nhớ ảnh như trên phim ấy à.
 	
-	{\sf Nhân [26. NS tutor]}: Không, trí nhớ ảnh (photographic memory) ấy chỉ là khái niệm do phim ảnh thuần túy tưởng tượng ra thôi. Thực tế chỉ có trí nhớ điện tử (eidetic memory). Anh có xem phim Hannibal chứ? Cảnh ... tìm đến tên
+	{\sf Nhân [26; NS tutor]}: Không, trí nhớ ảnh (photographic memory) ấy chỉ là khái niệm do phim ảnh thuần túy tưởng tượng ra thôi. Thực tế chỉ có trí nhớ điện tử (eidetic memory). Anh có xem phim Hannibal chứ? Cảnh ... tìm đến tên
 	
-	{\sf Hồng [28]}: Có vẻ không thích hợp cho lắm khi bàn về phim ăn thịt người trong lúc làm khảo sát về sự phát triển của trẻ em, anh nhể?
+	{\sf Hồng [28; pychologist]}: Có vẻ không thích hợp cho lắm khi bàn về phim ăn thịt người trong lúc làm khảo sát về sự phát triển của trẻ em, anh nhể?
 	
-	{\sf Nhân [26. NS tutor]}: À ừ nhỉ. Sở thích của tui hơi quái. Này nhé. Theo tui quan sát.
+	{\sf Nhân [26; NS tutor]}: À ừ nhỉ. Sở thích của tui hơi quái. Này nhé. Theo tui quan sát.
 	\begin{itemize}
 		\item Những đứa trẻ lớn lên trong gia đình nghèo, nhưng được giáo dục tốt, thường sẽ rất để ý chuyện tiền bạc, đặc biệt là tiền nợ người khác.
 		\item Những đứa trẻ lớn lên trong các gia đình kinh doanh, giàu có, tài phiệt, lại thường giả sử mọi người phải phục vụ cho mình. Kiểu ta đây là vua chúa. Chúng ép tui phải dạy miễn phí, không là report, hoặc gieo tiếng xấu, tiếng oán cho lũ bạn để không ai dám vô học tui nữa.
 		\item 
 	\end{itemize}
-	{\sf Hồng [28]}: Là sao nhỉ? Người giàu thì mặc định phải phóng khoáng về mặt tiền bạc? Còn người nghèo thì thường tiết kiệm chứ hả?
+	{\sf Hồng [28; pychologist]}: Là sao nhỉ? Người giàu thì mặc định phải phóng khoáng về mặt tiền bạc? Còn người nghèo thì thường tiết kiệm chứ hả?
 	
-	{\sf Nhân [26. NS tutor]}: Cái ngược ngạo ở chỗ đấy. 
+	{\sf Nhân [26; NS tutor]}: Cái ngược ngạo ở chỗ đấy. 
 	
 	But, there is always an important jump right there. Like the jump over discontinuous in the shock wave solution of hyperbolic equations. You can see it right? Or at least feel it. Let me demonstrate it in an easier way so that you can comprehend.
 	
@@ -555,9 +555,9 @@ Tôi dò hỏi Nhân về blackground của gia đình \& sự dạy dỗ của 
 	
 	You scientists always doubt them, consider them as mad men. But the right times will come, they are so damn right. Cinematic is the higher revelation of human nature.
 	
-	{\sf Nhân [26. NS tutor]}: Chính tui đây cũng là 1 ví dụ cho việc cha mẹ xây dựng nền tảng tính cách nào cho con cái. Cha tui là dân lao động chân tay ít học, dù có làm tới trưởng khoa 1 bệnh viện thời chiến nhưng chỉ học lớp bình dân học vụ. Tính toán vài phép tính đơn giản cũng sai. Nói chung là ổng mà làm kế toán công ty nào thì công ty đó xác định. Chả hiểu sao con của ổng kế thừa gen từ ai mà mê toán. Tui ngó kỹ hết mấy ông hàng xóm rồi nên cũng yên tâm. Được cái cha tui ổng thích vẽ, không đẹp đẽ gì nhưng vẽ vời nhiều, ổng thích nói lái, chế thơ tục, mấy câu đùa dâm dục. \& anh xem giờ tui như thế này đây. Chưa kể về xu hướng tính dục nữa. Tui còn nhỏ ngây thơ nên xem thử các đĩa phim trong túp lều của cha tui, \& giờ đây tui như thừa Testosterone vậy. Nản. Toàn bị gái dụ, đặc biệt là mấy con ái kỷ (narcissist) lợi dụng cái xu hướng tính dục đó mà quay vòng vòng như cái vibrator châu Phi rung lắc như The Rumble trong Attack on Titan vậy. Anh có thể tưởng tượng nổi không?
+	{\sf Nhân [26; NS tutor]}: Chính tui đây cũng là 1 ví dụ cho việc cha mẹ xây dựng nền tảng tính cách nào cho con cái. Cha tui là dân lao động chân tay ít học, dù có làm tới trưởng khoa 1 bệnh viện thời chiến nhưng chỉ học lớp bình dân học vụ. Tính toán vài phép tính đơn giản cũng sai. Nói chung là ổng mà làm kế toán công ty nào thì công ty đó xác định. Chả hiểu sao con của ổng kế thừa gen từ ai mà mê toán. Tui ngó kỹ hết mấy ông hàng xóm rồi nên cũng yên tâm. Được cái cha tui ổng thích vẽ, không đẹp đẽ gì nhưng vẽ vời nhiều, ổng thích nói lái, chế thơ tục, mấy câu đùa dâm dục. \& anh xem giờ tui như thế này đây. Chưa kể về xu hướng tính dục nữa. Tui còn nhỏ ngây thơ nên xem thử các đĩa phim trong túp lều của cha tui, \& giờ đây tui như thừa Testosterone vậy. Nản. Toàn bị gái dụ, đặc biệt là mấy con ái kỷ (narcissist) lợi dụng cái xu hướng tính dục đó mà quay vòng vòng như cái vibrator châu Phi rung lắc như The Rumble trong Attack on Titan vậy. Anh có thể tưởng tượng nổi không?
 		
-	{\sf Hồng [28]}: Tôi từ chối tưởng tượng. Mặc dù không phải kiến thức có thể đưa vào sách giáo dục phổ thông hay tài liệu giáo dục giới tính cho lắm nhưng rất bổ ích.
+	{\sf Hồng [28; pychologist]}: Tôi từ chối tưởng tượng. Mặc dù không phải kiến thức có thể đưa vào sách giáo dục phổ thông hay tài liệu giáo dục giới tính cho lắm nhưng rất bổ ích.
 \end{quote}
 Hắn nói rồi ghi chép lại vào quyển sổ tay của hắn như gã trai trong Golden Boy: All healthy sex jokes are good for life. Healthy jokes, even dark ones, are vital for life.
 
