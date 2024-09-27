@@ -6,7 +6,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{amsmath,amssymb,amsthm,fancyvrb,float,graphicx,mathtools,multicol,soul,subfig}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,graphicx,mathtools,multicol,soul,subfig}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{conjecture}{Conjecture}
@@ -443,7 +443,7 @@ We need arts for life. An advise for artists by Sir {\sc Ian McKellen}:
 
 
 \subsubsection{Pretend to borrow documents -- Giả vờ xin tài liệu}
-1 văn phòng nghiên cứu viện Weierstrass, Berlin, Đức. Hắn thấy mình đang cặm cụi tính, chợt đồng nghiệp người Anh gốc Ấn của hắn hỏi mượn tài liệu. Hắn chả nghĩ nhiều, cứ gửi qua bản tiếng Đức, kèm luôn cả bản dịch tiếng Anh mà hắn tự soạn, thêm cả ghi chú cá nhân vào đó. Hắn chợt nhớ tới chị Thương, senpai trước hắn 2 khóa, lúc hắn học Master 2. Hắn may mắn được học bổng của 1 viện nghiên cứu Pháp, Henri Lebesgue centre de math\'ematiques\footnote{\url{https://www.lebesgue.fr/en}.}. Chị ta cũng hay xin đề thi \& tài liệu của hắn. Hắn chả nghĩ nhiều nên cho mượn tuốt. Mỗi lần đưa là chỉ sẽ nói đề khó quá, có khi chỉ làm không nổi, cười mỉm, rồi sau lưng hỏi điểm từng đứa. Hắn lúc đó tự hỏi:
+1 văn phòng nghiên cứu viện Weierstrass, Berlin, Đức. Hắn thấy mình đang cặm cụi tính, chợt đồng nghiệp người Anh gốc Ấn Độ của hắn hỏi mượn tài liệu. Hắn chả nghĩ nhiều, cứ gửi qua bản tiếng Đức, kèm luôn cả bản dịch tiếng Anh mà hắn tự soạn, thêm cả ghi chú cá nhân vào đó. Hắn chợt nhớ tới chị Thương, senpai trước hắn 2 khóa, lúc hắn học Master 2. Hắn may mắn được học bổng của 1 viện nghiên cứu Pháp, Henri Lebesgue centre de math\'ematiques\footnote{\url{https://www.lebesgue.fr/en}.}. Chị ta cũng hay xin đề thi \& tài liệu của hắn. Hắn chả nghĩ nhiều nên cho mượn tuốt. Mỗi lần đưa là chỉ sẽ nói đề khó quá, có khi chỉ làm không nổi, cười mỉm, rồi sau lưng hỏi điểm từng đứa. Hắn lúc đó tự hỏi:
 \begin{quote}
 	{\sf Hồng [22; mathematics Master 2 student]}: Sao chỉ làm nổi nhỉ? Mình thấy chuyện hốt giải nhất Olympic sinh viên toàn quốc còn dễ chịu hơn mấy cái đề master 2 này. Toàn mánh khóe, calculus tricks đủ kiểu. Phải cày liên tục suốt vài năm mới nhớ đủ trick để làm nổi. Trong khi chỉ còn chưa biết là hàm bình phương khả tích $L^2$, thậm chí $L^p$ với $p\in[1,\infty]$, thì được không cho giá trị tại 1 vài điểm, nói đúng hơn là 1 tập có độ đo không (sets with Lebesgue measure zero). Chắc chỉ chỉ đùa cho vui. Chắc thế.
 \end{quote}
@@ -459,7 +459,7 @@ Tất cả tài liệu hắn đưa cho chị ta, chỉ đều phán: ``Chị th�
 	
 	{\sf Hồng [27--?; psychotherapist -- nhà trị liệu tâm lý]}: Anh cứ việc nói. Tôi sẽ lắng nghe.
 	
-	{\sf Hồng [23; mathematics Master 2 student]}: Đó là khi tôi nhìn xung quanh cái bữa tiệc ấy, đợi ai đó cản chị ta hay nhắc khéo để ngăn cái hành động ngu xuẩn của chị ta lại. Thì ai nấy cũng nhìn tôi như cái việc tôi đáng bị như thế là hiển nhiên nhất trên trần đời. A fucking crowd of bullies. Tôi có làm gì sai chứ? Tôi chỉ tốt với sai người, \& nhẫn nhịn với nhầm người thôi mà.
+	{\sf Hồng [23; mathematics Master 2 student]}: Đó là khi tôi nhìn xung quanh cái bữa tiệc ấy, đợi ai đó cản chị ta hay nhắc khéo để ngăn cái hành động ngu xuẩn của chị ta lại. Thì ai nấy cũng nhìn tôi như cái việc tôi đáng bị như thế là hiển nhiên nhất trên trần đời. A fucking crowd of bullies. Tôi có làm gì sai chứ? Tôi chỉ tốt với sai người, \& nhẫn nhịn với nhầm người thôi mà?
 \end{quote}
 
 \subsubsection{Verbal bullying -- Bắt nạt lời nói}
@@ -494,7 +494,7 @@ Từ 1 đứa cố gắng sống tốt, trở nên có ích để giúp đỡ m�
 	
 	{\sf Hồng [23; depressed mathematics Master 2 student]}: Hơn tôi 2--3 tuổi, nếu hơn 3 thì bằng tuổi chị ruột tôi. Nhưng tính tình chả khác gì những đứa con nít to xác với những cái mồm độc ác cả.
 	
-	{\sf Hồng [24; depressed mathematics PhD student]}: Trường hợp này cũng xảy ra với tôi. Gã người Pháp làm postdoc chung team nghiên cứu với thân hình to lớn lúc nào cũng liếc tôi cả. Mỗi lần tôi đến khu ăn chung với đồng nghiệp là hắn sẽ thét lên ``Dangerous here! Dangerous here!'' để cảnh báo tất cả đồng nghiệp chung phe với hắn hoặc những đồng nghiệp cũng cách ly hắn nhưng hắn ảo tưởng là họ chung phe bắt nạt tụi nghiên cứu sinh Tiến sĩ. Tôi nhận ra là những thành viên của đám bắt nạt cũng chả ưa gì nhau cả, toàn soi mói, chờ thời cơ hạ bệ lẫn nhau. Khi bị đồng nghiệp ngó lơ, bị bơ đi thì hắn sau đó trách tôi tại sao không hòa đồng, không trổ tài nấu ăn cho mọi người xem như cách hắn nướng cái bánh sinh nhật siêu khéo cho đồng nghiệp cùng thưởng thức.
+	{\sf Hồng [24; depressed mathematics PhD student]}: Trường hợp này cũng xảy ra với tôi. Gã người Pháp làm postdoc chung team nghiên cứu với thân hình to lớn lúc nào cũng liếc tôi cả. Mỗi lần tôi đến khu ăn chung với đồng nghiệp là hắn sẽ thét lên ``Dangerous here! Dangerous here!'' để cảnh báo tất cả đồng nghiệp chung phe với hắn hoặc những đồng nghiệp cũng cách ly hắn nhưng hắn ảo tưởng là họ chung phe bắt nạt tụi nghiên cứu sinh Tiến sĩ. Tôi nhận ra là những thành viên của đám bắt nạt cũng chả ưa gì nhau cả, toàn 1 lũ soi mói, chờ thời cơ hạ bệ lẫn nhau. Khi bị đồng nghiệp ngó lơ, bị bơ đi thì hắn sau đó trách tôi tại sao không hòa đồng, không trổ tài nấu ăn cho mọi người xem như cách hắn nướng cái bánh sinh nhật siêu khéo cho đồng nghiệp cùng thưởng thức.
 	
 	{\sf Hồng [27--?; psychiatrist]}: Gã người Pháp anh nói bao nhiêu tuổi?
 	
@@ -568,7 +568,7 @@ Hắn đeo tai nghe vào, mở gần max volume bài {\it Beautiful} của rappe
 	
 	So I decided just to pick this pen
 	
-	Up and try to make an attempt
+	Up \& try to make an attempt
 	
 	To vent, but I just can't admit
 	
@@ -578,7 +578,7 @@ Hắn đeo tai nghe vào, mở gần max volume bài {\it Beautiful} của rappe
 	
 	And I know some shit's so hard to swallow
 	
-	But I just can't sit back and wallow
+	But I just can't sit back \& wallow
 	
 	In my own sorrow, but I know one fact:
 	
@@ -609,7 +609,7 @@ Hắn đeo tai nghe vào, mở gần max volume bài {\it Beautiful} của rappe
 Thay vì phương pháp {\it chia để trị -- divide to conquer} như trong mảng {\it Bất đẳng thức -- inequality} trong địa hạt của Toán học, phần này bàn về {\it divide to control \& micro-managing -- phương pháp chia để kiểm soát \& quản lý vi mô}.
 
 \begin{question}
-	Trong cuộc chạy đua vũ trang để mưu sinh \& để khẳng định thực lực bản thân, con người ta cần phải tốn hay từ bỏ 1 cách phí phạm bao nhiêu phần nhân tính tốt thuần khiết để có thể chiến thắng trên đấu trường vật chất, đấu trường vị thế, cùng nhiều thể loại đấu trường khác, bằng các phương pháp bạo lực, vô đạo đức, các thủ đoạn bẩn thỉu, hèn hạ, etc. để rồi lại thua cuộc trên đấu trường về nhân tính \& lương tâm?
+	Trong cuộc chạy đua vũ trang để mưu sinh \& để khẳng định thực lực bản thân, con người ta cần phải tốn hay phải từ bỏ 1 cách phí phạm bao nhiêu phần nhân tính tốt thuần khiết để có thể chiến thắng trên đấu trường vật chất, đấu trường vị thế, cùng nhiều thể loại đấu trường khác, bằng các phương pháp bạo lực, vô đạo đức, các thủ đoạn bẩn thỉu, hèn hạ, etc. để rồi lại thua cuộc trên đấu trường về nhân tính (humanity) \& lương tâm (conscience)?
 \end{question}
 
 \subsection{Standards -- Các tiêu chuẩn}
@@ -769,12 +769,12 @@ We use simplicity to fight difficulty. We do not add more unnecessary complexiti
 \begin{itemize}\small\sf
 	\item {\it101} [a] relating to a university course that is intended as an introduction to a subject for people who have never studied it before; relating to the basic facts in a particular field or subject.
 \end{itemize}
-Điển hình 1 người học Toán, đặc biệt là Đại số (Algebra) có thể thành thạo các thao tác đại số (algebraic manipulations) như cộng $+$, trừ $-$, nhân $\cdot$, chia $:$, etc., nhưng liệu người đó có chuẩn bị đủ kiến thức về mặt tâm lý để đối đầu \& phòng chống với 1 dạng manipulation khác ở 1 địa hạt khác xa hoàn toàn với địa hạt của Khoa học nói chung \& của Toán học nói riêng, khi người đó trưởng thành \& bước vào môi trường làm việc không khi mà dạng manipulation ở địa hạt Tâm lý học không hề thuần logic \& có quy tắc, trật tự lớp lang như manipulation của Đại số nữa: {\it A pure form of Chaos Devil}.
+Điển hình 1 người học Toán, đặc biệt là Đại số (Algebra) có thể thành thạo các thao tác đại số (algebraic manipulations) như cộng $+$, trừ $-$, nhân $\cdot$, chia $:$, etc., nhưng liệu người đó có chuẩn bị đủ kiến thức về mặt tâm lý để đối đầu \& phòng chống với 1 dạng manipulation khác ở 1 địa hạt khác xa hoàn toàn với địa hạt của Khoa Học Tự Nhiên nói chung \& của Toán học nói riêng, khi người đó trưởng thành \& bước vào môi trường làm việc không khi mà dạng manipulation ở địa hạt Tâm lý học không hề thuần logic \& hoàn toàn không có quy tắc hay trật tự lớp lang như manipulation của Đại số nữa: {\it A pure form of Chaos Devil}.
 
 \begin{question}
 	What is ``psychological manipulation''? Why? \& how to detect \& conquer it? -- Thao túng tâm lý là gì? Tại sao? \& làm cách nào để phát hiện cũng như chống lại nó?
 \end{question}
-Kẻ thao túng tâm lý là kẻ tiểu nhân, nham hiểm, đê tiện. Tùy vào mức độ thao túng tâm lý thành thạo đến mức nào, mà hậu quả tâm lý, sức khỏe có thể nghiêm trọng đến ngưỡng tương đương, tùy vào sức chống chọi tâm lý \& nhận thức của nạn nhân. Các người sống sót (tạm gọi là {\it survivor}) sau các cuộc thao túng tâm lý nặng có thể trở thành những kẻ mạnh về tâm lý \& chia sẻ cho những người đang bị thao túng tâm lý khác để có thể trở thành những người sống sót mạnh mẽ như chính họ đã từng trải qua.
+Kẻ thao túng tâm lý là kẻ tiểu nhân, nham hiểm, đê tiện. Tùy vào mức độ thao túng tâm lý thành thạo đến mức nào, mà hậu quả tâm lý, sức khỏe có thể nghiêm trọng đến ngưỡng tương đương, tùy vào sức chống chọi tâm lý \& nhận thức của nạn nhân. Các người sống sót, tạm gọi là {\it (psychological manipulated) survivor}, sau các cuộc thao túng tâm lý nặng có thể trở thành những kẻ mạnh mẽ về tâm lý \& chia sẻ cho những người đang bị thao túng tâm lý khác để có thể trở thành những người sống sót mạnh mẽ như chính họ đã từng trải qua.
 
 %************
 
@@ -1498,11 +1498,10 @@ Tui tình cờ trò chuyện với Nhân [nam, 26 tuổi], 1 gia sư dạy các 
 	Trước khi bạn quyết định bắt nạt hoặc hãm hại 1 ai đó, tự hỏi bản thân là nếu thay đổi vị trí cho nhau thì bạn có thích bị bắt nạt hay hãm hại như thế không. Hoặc hơn thế, liệu con bạn trong tương lai có thể chịu những hành vi mà bạn đang áp lên người khác, liệu bạn có chịu nổi những gì tương tự sẽ xảy ra với con cái của bạn không?
 \end{Rule}
 
-Yondu Rabit
-\subsubsection{Nghề chăn báo}
-Tui dự định viết ghi chú này từ cuối năm 2020, cho bản thân là chính (self-growth -- phát triển cá nhân\footnote{Xem Wikipedia{\tt/}phát triển cá nhân.}), chứ tui không viết {\it vì ai đó hoặc vì muốn tốt cho người khác}, hoặc để thể hiện hoặc sẽ viết vì mục đích thể hiện cả. Tui đã từng nhiều lần làm thế rồi, nên bây giờ \& từ giờ trở đi tui sẽ không làm thế, bởi tui thấy nó thật vô nghĩa \& tui biết vậy. Đơn giản là nếu chỉ để thể hiện như 1 con ngựa non háo đá, tui sẽ nhanh chóng nhận ra mình ngu dốt, thiếu chín chắn, thùng rỗng kêu to cỡ nào rồi lại tự nhục, rồi xóa, rồi kiếm 1 cái gì khác để thể hiện, rồi lại tự nhận thức được rồi nhục, rồi lại tự xóa. Cái vòng thể hiện-nhục-thể hiện-nhục lẩn quẩn cứ lặp đi lặp lại nếu tui mãi không phát triển nhận thức, nên tui sẽ cắt nó ngay từ đầu. Trong hơn 3 năm qua, kể từ cuối năm 2020 -- lần nói chuyện cuối cùng với thầy Quí - thầy dạy Toán cấp 3 của tui, đến nay, đầu năm 2024, có nhiều điều đã thay đổi trong cách nhìn của tui về hành vi, mục đích, các lựa chọn của bản thân \& quan trọng hơn là những cách nhìn mới về cuộc sống. Có thể tui cũng chỉ đang trải qua những giai đoạn trưởng thành bên trong mà nhiều người bạn hoặc nhiều em ít tuổi hơn tui đã trải qua từ kiếp nào so với 1 đứa trưởng thành về cảm xúc vừa chậm vừa trễ như tui, nhưng cũng đáng để ghi lại.
+\subsubsection{Teaching uneducated kids -- Nghề chăn báo}
+Tui dự định viết ghi chú này từ cuối năm 2020, cho bản thân là chính (self-growth -- phát triển cá nhân\footnote{Xem \href{https://vi.wikipedia.org/wiki/Phat_trien_ca_nhan}{Wikipedia{\tt/}phát triển cá nhân}.}), chứ tui không viết {\it vì ai đó hoặc vì muốn tốt cho người khác}, hoặc để thể hiện hoặc sẽ viết vì mục đích thể hiện cả. Tui đã từng nhiều lần làm thế rồi, nên bây giờ \& từ giờ trở đi tui sẽ không làm thế, bởi tui thấy nó thật vô nghĩa \& tui biết vậy. Đơn giản là nếu chỉ để thể hiện như 1 con ngựa non háo đá, tui sẽ nhanh chóng nhận ra mình ngu dốt, thiếu chín chắn, thùng rỗng kêu to cỡ nào rồi lại tự nhục, rồi xóa, rồi kiếm 1 cái gì khác để thể hiện, rồi lại tự nhận thức được rồi nhục, rồi lại tự xóa. Cái vòng thể hiện-nhục-thể hiện-nhục lẩn quẩn cứ lặp đi lặp lại nếu tui mãi không phát triển nhận thức, nên tui sẽ cắt nó ngay từ đầu. Trong hơn 3 năm qua, kể từ cuối năm 2020 -- lần nói chuyện cuối cùng với thầy Quí - thầy dạy Toán cấp 3 của tui, đến nay, đầu năm 2024, có nhiều điều đã thay đổi trong cách nhìn của tui về hành vi, mục đích, các lựa chọn của bản thân \& quan trọng hơn là những cách nhìn mới về cuộc sống. Có thể tui cũng chỉ đang trải qua những giai đoạn trưởng thành bên trong mà nhiều người bạn hoặc nhiều em ít tuổi hơn tui đã trải qua từ kiếp nào so với 1 đứa trưởng thành về cảm xúc vừa chậm vừa trễ như tui, nhưng cũng đáng để ghi lại.
 
-Ban đầu tui định đặt tên cho ghi chú này là {\it ``Some Topics on Elementary STEM \& Beyond: A Personal, Psychological \& Philosophical Perspective: Vài Vấn Đề Trong STEM Sơ Cấp \& Xa Hơn Thế: 1 Góc Nhìn Cá Nhân, Tâm Lý Học, \& Triết Học.''} nhưng đọc tới đọc lui thấy nó hào nhoáng kiểu tởm quá xá, chưa kể tựa đọc nghe cọp mà nội dung như hạch thì lại áp lực mà phải sửa văn cho hay, cho phù hợp. Thế là tui đọc sách để kiếm 1 cái tên đơn giản để phù hợp. Có vẻ cuốn sách gần nhất với nội dung mà tui định viết là cuốn {\it Bắt Trẻ Đồng Xanh} \cite{Salinger_btdx} của {\sc Jerome David Salinger} (tựa gốc tiếng anh: {\it The Catcher In The Rye} \cite{Salinger_catcher_in_rye}). Tui hay nói đùa với mấy đứa học tui là để làm nghề chăn báo dưới quê thì phải đọc quyển này để hiểu rõ tâm lý chán chường, quậy phá, nông nổi của lũ trẻ, đặc biệt là lũ báo non. Nhưng nếu tui bắt chước theo mà đặt tên cho bài viết của tui là ``Bắt Trẻ Đồng Quê'' hoặc ``Bắt Trẻ Vùng Quê'' thì nghe như pedophile\footnote{Vài thầy giáo trường cấp 2 cũ của tui có sở thích kê sát người rồi hửi học sinh nữ. Vài ông còn làm cho nhiều học sinh nữ có bầu nên tui tuyệt đối tránh điều này. Tui chỉ mê phụ nữ có tuổi hơn kém tui 3 đơn vị, i.e., phải thỏa mãn điều ràng buộc $\rm|age(I) - age(her)|\le3\land\min\{age(I),age(her)\}\ge18$.}, hay Child Trafficking, không khéo lại vô tù nên chả ổn tí nào. Thành ra ``Dạy Trẻ Vùng Quê'' là ổn nhất, ``Dạy Trẻ Đồng Quê'' không hợp lắm vì ``Đồng Quê'' áp chỉ sự nghèo khó nhưng chất phác của dân quê, nhưng giờ thì nhiều nhà ở quê giàu quá nên áp vào lại sai be bét. Cái chính vẫn là mớ tâm lý bất ổn, rối nùi như cái mớ bòng bong, với cách hành xử của bọn trẻ Gen Z với mọi người xung quanh ở quê trong cái thời đại mà mọi công nghệ tiên tiến đều được đáp ứng đủ phần nào để lũ trẻ thoát khỏi cái tuổi thơ rừng rú của tui để ham học, nhưng lại tối ngày đi stalk acc online người khác, xem phim heo, \& đủ thứ chuyện hại não khác làm cho chúng sau này chả tập trung làm được điều gì cho đâu vào đấy. Chính là ở chỗ ấy: {\it tập trung để làm 1 cái gì đó đâu vào đấy}. Cái ấy mới quan trọng cho lũ nhỏ, không phải tiền bạc dư thừa để mua laptop hoặc nguyên dàn PC gaming siêu xịn để cả lũ con trai lớp 4, 5 túm tụm xem phim heo \& thuộc lòng nhiều tên diễn viên người lớn hơn các ông thầy cô đơn của chúng, trong khi không nhớ nổi 1 công thức toán hoặc giải 1 phương trình đơn giản. Đấy lại là nỗi đau thứ 2 của các ông thầy.
+Ban đầu tui định đặt tên cho ghi chú này là {\it ``Some Topics on Elementary STEM \& Beyond: A Personal, Psychological \& Philosophical Perspective: Vài Vấn Đề Trong STEM Sơ Cấp \& Xa Hơn Thế: 1 Góc Nhìn Cá Nhân, Tâm Lý Học, \& Triết Học.''} nhưng đọc tới đọc lui thấy nó hào nhoáng kiểu tởm quá xá, chưa kể tựa đọc nghe cọp mà nội dung như hạch thì lại áp lực mà phải sửa văn cho hay, cho phù hợp. Thế là tui đọc sách để kiếm 1 cái tên đơn giản để phù hợp. Có vẻ cuốn sách gần nhất với nội dung mà tui định viết là cuốn {\it Bắt Trẻ Đồng Xanh} \cite{Salinger_btdx} của {\sc Jerome David Salinger} (tựa gốc tiếng anh: {\it The Catcher In The Rye} \cite{Salinger_catcher_in_rye}). Tui hay nói đùa với mấy đứa học tui là để làm nghề chăn báo dưới quê thì phải đọc quyển này để hiểu rõ tâm lý chán chường, quậy phá, nông nổi của lũ trẻ, đặc biệt là lũ báo non. Nhưng nếu tui bắt chước theo mà đặt tên cho bài viết của tui là ``Bắt Trẻ Đồng Quê'' hoặc ``Bắt Trẻ Vùng Quê'' thì nghe như pedophile\footnote{Vài thầy giáo trường cấp 2 cũ của tui có sở thích kê sát người rồi hửi học sinh nữ. Vài ông còn làm cho nhiều học sinh nữ có bầu nên tui tuyệt đối tránh điều này. Tui chỉ mê phụ nữ có tuổi hơn kém tui 3 đơn vị, i.e., phải thỏa mãn điều ràng buộc $\rm|age(I) - age(her)|\le3\land\min\{age(I),age(her)\}\ge18$.}, hay Child Trafficking, không khéo lại vô tù nên chả ổn tí nào. Thành ra ``Dạy Trẻ Vùng Quê'' là ổn nhất, ``Dạy Trẻ Đồng Quê'' không hợp lắm vì ``Đồng Quê'' áp chỉ sự nghèo khó nhưng chất phác của dân quê, nhưng giờ thì nhiều nhà ở quê giàu quá nên áp vào lại sai be bét. Cái chính vẫn là mớ tâm lý bất ổn, rối nùi như cái mớ bòng bong, với cách hành xử của bọn trẻ Gen Z với mọi người xung quanh ở quê trong cái thời đại mà mọi công nghệ tiên tiến đều được đáp ứng đủ phần nào để lũ trẻ thoát khỏi cái tuổi thơ rừng rú của tui để ham học, nhưng lại tối ngày đi stalk acc online người khác, xem phim heo, \& đủ thứ chuyện hại não khác làm cho chúng sau này chả tập trung làm được điều gì cho đâu vào đấy. Chính là ở chỗ ấy: {\it tập trung để làm 1 cái gì đó đâu vào đấy}. Cái ấy mới quan trọng cho lũ nhỏ, không phải tiền bạc dư thừa để mua laptop hoặc nguyên dàn PC Gaming siêu xịn để cả lũ con trai lớp 4, 5 túm tụm xem phim heo \& thuộc lòng nhiều tên diễn viên người lớn hơn các ông thầy cô đơn của chúng, trong khi không nhớ nổi 1 công thức toán hoặc giải 1 phương trình đơn giản. Đấy lại là nỗi đau thứ 2 của các ông thầy.
 
 Nói thật tui chả biết phải bắt đầu từ đâu cho đúng cả. Mà ``cho đúng'' có nghĩa là gì hiện tui cũng không rõ \& đương nhiên là chưa thể làm rõ. Có lẽ nên bắt đầu từ các cuộc trò chuyện thường ngày mà tui có. Tui nghĩ đó là cách tự nhiên \& dễ thấm nhất để các điều tui viết tiếp sau trở nên có nghĩa. Tui ép mọi thứ phải có nghĩa vì tui từng mong muốn trở thành 1 nhà toán học, mà 1 trong các nhiệm vụ chính của 1 nhà toán học điển hình là làm có nghĩa các đối tượng nhà toán học đang quan tâm hoặc vừa sáng tạo ra.
 
@@ -1518,7 +1517,7 @@ Nói thật tui chả biết phải bắt đầu từ đâu cho đúng cả. Mà
 	
 	Nhưng quan trọng là tui biết tính tui: Tui mà dạy chuyên là tui {\it tham} lắm. Không phải tham tiền, mà là tham kiểu gần như ép học sinh học mấy kiến thức cao về Toán. Nếu lỡ tui làm cho 1 đứa đam mê quá sâu vào toán mà bỏ gần như tất cả các thứ khác, liệu có tốt cho tương lai bạn đó không, trong khi nhà bạn đó nghèo \& cần tìm 1 công việc để nuôi gia đình trước rồi mới tính tới đam mê hoặc phải đè bẹp cả đam mê để mà sống tốt bằng cách giúp đỡ cha mẹ vượt qua hoàn cảnh khó khăn của gia đình?
 	
-	Quan trọng hơn là, liệu tui có đủ kiến thức ngoài toán, ngoài khoa học, tức hiểu chuyện, hiểu đời, để {\it đủ trách nhiệm} cho việc dạy hay {\it dẫn dắt 1 ai đó lên 1 nền tảng cao hơn} không? Hiện tui thấy là không, mà cái gì tui nhắm không lãnh nổi trách nhiệm thì tui sẽ không làm\footnote{Ít ra hắn cũng có trách nhiệm trong việc vô trách nhiệm.}, lùi 1 bước để nhường cho ai đủ sức lãnh để nó đâu ra đấy, thà đưa tiền cho cha mẹ hết để báo hiếu rồi bản thân nghèo chứ không hại 1 ai cả. Ngu ngu dại dại kiểu ấy. Để xem sao.
+	Quan trọng hơn là, liệu tui có đủ kiến thức ngoài toán, ngoài khoa học, tức hiểu chuyện, hiểu đời, để {\it đủ trách nhiệm} cho việc dạy hay {\it dẫn dắt 1 ai đó lên 1 nền tảng cao hơn} không? Hiện tui thấy là không, mà cái gì tui nhắm không lãnh nổi trách nhiệm thì tui sẽ không làm\footnote{Ít ra hắn cũng có trách nhiệm trong việc vô trách nhiệm -- take responsibility in taking no responsibility.}, lùi 1 bước để nhường cho ai đủ sức lãnh để nó đâu ra đấy, thà đưa tiền cho cha mẹ hết để báo hiếu rồi bản thân nghèo chứ không hại 1 ai cả. Ngu ngu dại dại kiểu ấy. Để xem sao.
 \end{quote}
 
 \begin{quote}
@@ -1540,116 +1539,125 @@ Có lẽ không phải chỉ là làm cái gì, đương nhiên chả làm gì t
 \end{itemize}
 
 \begin{quote}
-	{\sf Einstein's formula for happiness}: {\it ``A calm and humble life will bring more happiness than the pursuit of success and the constant restlessness that comes with it.''} -- \textsc{Albert Einstein}
+	{\sf Einstein's formula for happiness}: {\it ``A calm \& humble life will bring more happiness than the pursuit of success \& the constant restlessness that comes with it.''} -- \textsc{Albert Einstein}
 \end{quote}
 
 \begin{quote}
-	- Hồng[28]: 2 bạn biết 2 trong nhiều bí quyết chính để sống khỏe, đi xa 1 cách bền vững là gì hông? À à, ``đi xa'' ở đây ý là đi học lên cao hơn, hoặc du học, hông phải hóa kiếp. Theo trải nghiệm của tui, thì đó là {\it nấu ăn} với {\it tập thể dục}. Biết là các bạn nếu đậu chuyên, thì sẽ phải ở ký túc xá, mà ký túc xá thường cấm nấu ăn. Tui ở ký túc xá suốt 3 năm cấp 3, thêm 4 năm đại học. Sau 7 năm đó tui chả nấu nướng ra hồn gì. Lúc qua Pháp học Thạc sĩ mới phát hoảng. Tưởng tượng 1 ngày đi mệt hoặc sau này ra đi làm mệt về, mà nấu dở ẹt không nuốt nổi thì đúng nghĩa 1 ngày như quần. Nên bí quyết là tự nấu ăn ngon. Sở trường nấu ăn ngon cũng giúp bạn dễ hòa hợp với các nhóm bạn, từ cấp 3 tới đại học, nhóm đồng nghiệp khi đi làm hơn, kiểu teambuilding, nhất là cộng đồng người Việt nếu đi du học. Người Việt mà, đa số thích nấu ăn. Nếu bạn nấu ngon thì người ta sẽ thích nhờ vả bạn hơn, đương nhiên cũng phải biết giữ giới hạn (keep healthy boundaries). Nếu bạn nấu thì người ta phải mua nguyên liệu, hoặc bạn mua 1 phần nguyên liệu phụ, như rau củ, gia vị, để thịt người ta mua. Chứ đừng tự mua rồi tự nấu hết, rồi rủ cả đám lại ăn. Cái đó là dại, tốt quá chỉ khiến bạn dễ thành đối tượng bị bốc lột, lợi dụng, với bắt nạt hội đồng thôi.
+	{\sf Hồng [28; mathematics teacher, philosopher wannabe]}: 2 bạn biết 2 trong nhiều bí quyết chính để sống khỏe, đi xa 1 cách bền vững là gì hông? ``Đi xa'' ở đây ý là đi học lên cao hơn, hoặc du học, hông phải hóa kiếp. Theo trải nghiệm của tui, thì đó là {\it nấu ăn} với {\it tập thể dục}. Biết là các bạn nếu đậu chuyên, thì sẽ phải ở ký túc xá, mà ký túc xá thường cấm nấu ăn. Tui ở ký túc xá suốt 3 năm cấp 3, thêm 4 năm đại học. Sau 7 năm đó tui chả nấu nướng ra hồn gì. Lúc qua Pháp học Thạc sĩ mới phát hoảng. Tưởng tượng 1 ngày đi mệt hoặc sau này ra đi làm mệt về, mà nấu dở ẹt không nuốt nổi thì đúng nghĩa 1 ngày như quần. Nên bí quyết là tự nấu ăn ngon. Sở trường nấu ăn ngon cũng giúp bạn dễ hòa hợp với các nhóm bạn, từ cấp 3 tới đại học, nhóm đồng nghiệp khi đi làm hơn, kiểu teambuilding, nhất là cộng đồng người Việt nếu đi du học. Người Việt mà, đa số thích nấu ăn. Nếu bạn nấu ngon thì người ta sẽ thích nhờ vả bạn hơn, đương nhiên cũng phải biết giữ giới hạn (keep healthy boundaries). Nếu bạn nấu thì người ta phải mua nguyên liệu, hoặc bạn mua 1 phần nguyên liệu phụ, như rau củ, gia vị, để thịt người ta mua. Chứ đừng tự mua rồi tự nấu hết, rồi rủ cả đám lại ăn. Cái đó là dại, tốt quá chỉ khiến bạn dễ thành đối tượng bị bốc lột, lợi dụng, với bắt nạt hội đồng thôi.
 	
-	Còn tập thể dục, tới tuổi gần 30 các bạn sẽ thấy. Có thể bạn thuộc thể loại quái thai không cần tập thể dục vẫn khỏe với làm việc như cái máy, tăng lương, thăng cấp vù vù thì tui không chấp. Nhưng với người bình thường không phải dạng cày trâu bò, hoặc quái thai như tui nói thì bạn phải kiếm 1 môn thể dục phù hợp để tạo ra chất dẫn truyền thần kinh để đầu óc bạn tỉnh táo. Có thể là chạy bộ, bạn nên đọc quyển {\it Tôi Nói Gì Khi Nói Về Chạy Bộ} của Haruki Murakami \cite{Murakami_run}, đọc cái quyển đó cũng na ná như chạy bộ luôn á. Riêng tui thì thích nhảy dây, nhưng nhảy dây không phải kiểu nữ tính như con gái, đừng đùa. Có 1 sự thật mà ai nhảy dây nhiều mới biết: Tất cả các tay đấm boxing đều phải nhảy dây. Có thể bạn sẽ phản biện, cãi với tui là ``Boxing toàn đấm chả có đá thì cần mẹ gì nhảy dây thầy?'' Sai hoàn toàn: Có thể 1 người không cần nhảy dây để trở thành boxer, nhưng muốn trở thành boxer huyền thoại, thì người đó phải nhảy dây ở 1 mức độ hoàn toàn khác biệt so với thể loại nhảy dây thể dục bạn biết. Bạn có thể search YouTube các clip của Mike Tyson, Floyd Mayweather, Muhammad Ali,$\ldots$  để biết tui đang nói cái gì. Điều quan trọng của nhảy dây không chỉ làm cho cơ thể nhanh nhẹn, như tướng agility thay vì tướng strength trong DotA2, mà là {\it sự cân bằng -- balance} trong động tác, chuyển động hợp lý của cơ thể. Cái đó cần cho việc học boxing lẫn việc học cách sống.
+	Còn tập thể dục, tới tuổi gần 30 các bạn sẽ thấy. Có thể bạn thuộc thể loại quái thai không cần tập thể dục vẫn khỏe với làm việc như cái máy, tăng lương, thăng cấp vù vù thì tui không chấp. Nhưng với người bình thường không phải dạng cày trâu bò, hoặc quái thai như tui nói thì bạn phải kiếm 1 môn thể dục phù hợp để tạo ra chất dẫn truyền thần kinh để đầu óc bạn tỉnh táo. Có thể là chạy bộ, bạn nên đọc quyển {\it Tôi Nói Gì Khi Nói Về Chạy Bộ} của Haruki Murakami \cite{Murakami_run}, đọc cái quyển đó cũng na ná như chạy bộ luôn á. Riêng tui thì thích nhảy dây, nhưng nhảy dây không phải kiểu nữ tính như con gái, đừng đùa. Có 1 sự thật mà ai nhảy dây nhiều mới biết: Tất cả các tay đấm boxing đều phải nhảy dây. Có thể bạn sẽ phản biện, cãi với tui là ``Boxing toàn đấm chả có đá thì cần mẹ gì nhảy dây thầy?'' Sai hoàn toàn: Có thể 1 người không cần nhảy dây để trở thành boxer, nhưng muốn trở thành boxer huyền thoại, thì người đó phải nhảy dây ở 1 mức độ hoàn toàn khác biệt so với thể loại nhảy dây thể dục bạn biết. Bạn có thể search YouTube các clip của {\sc Mike Tyson, Floyd Mayweather, Muhammad Ali}, $\ldots$ để biết tui đang nói về cái gì. Điều quan trọng của nhảy dây không chỉ làm cho cơ thể nhanh nhẹn, như tướng agility thay vì tướng strength trong DotA2, mà là {\it sự cân bằng -- balance} trong động tác, chuyển động hợp lý của cơ thể. Cái đó cần cho việc học boxing lẫn việc học cách sống.
 	
 	Tui chỉ mấy bạn 2 cái này không phải vì tui giỏi 2 thứ đó, mà tại vì tui quá dở 2 thứ đó \& đã phải trả giá, nên tui rút kinh nghiệm từ bản thân tui mà dạy ngược lại cho các bạn hiểu từ sớm. Nói hơi nhục chứ tới giờ tui nấu ăn chả phải ngon, chỉ ở mức tui ăn thấy được, chứ mẹ tui thì No.
 	
 	Tóm lại, phải nhớ: Tập nấu ăn ngon từ sớm nếu có cơ hội \& thử các môn thể thao coi môn nào phù hợp với mình mà biến nó thành 1 sở thích riêng \& giữ sở thích đó xuyên suốt cuộc đời, hoặc lâu nhất có thể.
 \end{quote}
 Có 1 trích dẫn hay \& đúng về ý này của 1 giáo sư Toán ở Đại Học Khoa Học Tự Nhiên Hà Nội:
-\begin{quote}
-	{\it``Chạy Marathon $42.195$ km là môn thể thao mà hồi còn nhỏ tôi rất ghét, vì nó nặng nhọc và buồn chán; nhưng càng trưởng thành thì tôi càng thích. Tôi dần dần hiểu ra rằng Marathon chính là môn thể thao gần với cuộc đời nhất: Nặng nhọc và buồn chán chính là những thuộc tính của cuộc đời, nói riêng là thuộc tính của việc nghiên cứu khoa học. Khi đã vượt được chừng 30km thì mỗi người chạy marathon chỉ còn đua với chính mình, sự ganh đua với người khác dường như không còn đáng kể.''} -- GS. {\sc Nguyễn Hữu Việt Hưng}
+\begin{quote}\it
+	``Chạy Marathon $42.195$ km là môn thể thao mà hồi còn nhỏ tôi rất ghét, vì nó nặng nhọc và buồn chán; nhưng càng trưởng thành thì tôi càng thích. Tôi dần dần hiểu ra rằng Marathon chính là môn thể thao gần với cuộc đời nhất: Nặng nhọc và buồn chán chính là những thuộc tính của cuộc đời, nói riêng là thuộc tính của việc nghiên cứu khoa học. Khi đã vượt được chừng 30km thì mỗi người chạy marathon chỉ còn đua với chính mình, sự ganh đua với người khác dường như không còn đáng kể.'' -- Prof. {\sc Nguyễn Hữu Việt Hưng}
 \end{quote}
 
 %------------------------------------------------------------------------------%
 
-\subsubsection{Some Topics in Elementary Mathematics}
-
-Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng xa. Tui từng thích Toán Olympic. Nhưng với học sinh đại trà thì đấy là thứ xa xỉ, nên cứ dạy Toán phổ thông trước, chỉ đứa nào cảm nhận được ``Toán Olympic là 1 dạng nghệ thuật hay đỉnh cao của Toán Sơ Cấp'' theo nghĩa nào đấy thì mới bồi dưỡng thêm, không được ép. Giờ mới hiểu dạy Toán Olympic giàu là vì cần nhiều thời gian để người dạy trau dồi kỹ năng, \& những đứa học sinh thích nghệ thuật kiểu này thì thường có tiền chi cho nghệ thuật, y như kiểu người lớn vậy. [rewrite]
+\subsubsection{Some topics in Elementary Mathematics -- Vài chủ đề trong Toán Sơ Cấp}
+Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng xa. Tui từng thích Toán Olympic. Nhưng với học sinh đại trà thì đấy là thứ xa xỉ, nên cứ dạy Toán phổ thông trước, chỉ đứa nào cảm nhận được ``Toán Olympic là 1 dạng nghệ thuật hay đỉnh cao của Toán Sơ Cấp'' theo nghĩa nào đấy thì mới bồi dưỡng thêm, không được ép. Giờ mới hiểu dạy Toán Olympic giàu là vì cần nhiều thời gian để người dạy trau dồi kỹ năng, \& những đứa học sinh thích nghệ thuật kiểu này thì thường có tiền chi cho nghệ thuật, y như kiểu người lớn vậy.
 
 Ưu tiên hiện tại vẫn là thúc tụi nhỏ học vững kiến thức trước, lập trình được để cụ thể bài toán \& tự động hóa việc giải bài toán, rồi mới nghĩ tới Toán Olympic sau.
 
-\paragraph{Elementary Mathematics Grade 6}
+\paragraph{Elementary Mathematics grade 6 -- Toán sơ cấp lớp 6}
 
-\begin{itemize}
-	\item Cheatsheet: Elementary Mathematics Grade 6.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/cheatsheet/NQBH_elementary_mathematics_grade_6_cheatsheet.pdf}.
-	\item Problem: Natural -- Bài Tập: Số Tự Nhiên $\mathbb{N}$.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/problem/NQBH_natural_problem.pdf}. \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/problem/NQBH_natural_problem.tex}{TeX}.
-	\item Problem: Integer -- Bài Tập: Số Nguyên $\mathbb{Z}$.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/integer/problem/NQBH_integer_problem.pdf}.
-	\item Problem: Fraction \& Decimal -- Bài Tập: Phân Số \& Số Thập Phân.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/fraction_decimal/problem/NQBH_fraction_decimal_problem.pdf}.
-	\item Problem: Probability \& Statistics -- Bài Tập: Xác Suất \& Thống Kê.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/probability_statistics/problem/NQBH_probability_statistics_problem.pdf}.  \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/probability_statistics/problem/NQBH_probability_statistics_problem.tex}{TeX}.
-	\item Problem: Visual Geometry -- Bài Tập: Hình Học Trực Quan.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/visual_geometry/problem/NQBH_visual_geometry_problem.pdf}.
-	\item Problem: 2D/Plane Geometry -- Bài Tập: Hình Học Phẳng.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/plane_geometry/problem/NQBH_plane_geometry_problem.pdf}.
+\begin{itemize}[leftmargin=*]
+	\item Cheatsheet: Elementary Mathematics Grade 6. {\sc url}: {\footnotesize\url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/cheatsheet/NQBH_elementary_mathematics_grade_6_cheatsheet.pdf}}.
+	\item Problem: Natural -- Bài Tập: Số Tự Nhiên $\mathbb{N}$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/problem/NQBH_natural_problem.pdf}. \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/natural/problem/NQBH_natural_problem.tex}{TeX}.
+	\item Problem: Integer -- Bài Tập: Số Nguyên $\mathbb{Z}$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/integer/problem/NQBH_integer_problem.pdf}.
+	\item Problem: Fraction \& Decimal -- Bài Tập: Phân Số \& Số Thập Phân. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/fraction_decimal/problem/NQBH_fraction_decimal_problem.pdf}.
+	\item Problem: Probability \& Statistics -- Bài Tập: Xác Suất \& Thống Kê. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/probability_statistics/problem/NQBH_probability_statistics_problem.pdf}.  \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/probability_statistics/problem/NQBH_probability_statistics_problem.tex}{TeX}.
+	\item Problem: Visual Geometry -- Bài Tập: Hình Học Trực Quan. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/visual_geometry/problem/NQBH_visual_geometry_problem.pdf}.
+	\item Problem: 2D/Plane Geometry -- Bài Tập: Hình Học Phẳng. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/plane_geometry/problem/NQBH_plane_geometry_problem.pdf}.
 \end{itemize}
 
-\paragraph{Elementary Mathematics Grade 7}
+\paragraph{Elementary Mathematics Grade 7 -- Toán sơ cấp lớp 7}
 
-\begin{itemize}
+\begin{itemize}[leftmargin=*]
 	\item Cheatsheet: Elementary Mathematics Grade 7.
-	\item Problem: Rational -- Bài Tập: Số Hữu Tỷ $\mathbb{Q}$.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/rational/problem/NQBH_rational_problem.pdf}.
-	\item Problem: Real -- Bài Tập: Số Thực $\mathbb{R}$.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/real/problem/NQBH_real_problem.pdf}.
-	\item Problem: Angle \& Line -- Bài Tập: Góc \& Đường Thẳng.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/angle_line/problem/NQBH_angle_line_problem.pdf}.
-	\item Problem: Congruent Triangles -- Bài Tập: Tam Giác Bằng Nhau $\Delta = \Delta'$.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/congruent_triangle/problem/NQBH_congruent_triangle_problem.pdf}.
+	\item Problem: Rational -- Bài Tập: Số Hữu Tỷ $\mathbb{Q}$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/rational/problem/NQBH_rational_problem.pdf}.
+	\item Problem: Real -- Bài Tập: Số Thực $\mathbb{R}$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/real/problem/NQBH_real_problem.pdf}.
+	\item Problem: Angle \& Line -- Bài Tập: Góc \& Đường Thẳng. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/angle_line/problem/NQBH_angle_line_problem.pdf}.
+	\item Problem: Congruent Triangles -- Bài Tập: Tam Giác Bằng Nhau $\Delta = \Delta'$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/congruent_triangle/problem/NQBH_congruent_triangle_problem.pdf}.
 \end{itemize}
 
-\paragraph{Elementary Mathematics Grade 8}
+\paragraph{Elementary Mathematics Grade 8 -- Toán sơ cấp lớp 8}
 
-\begin{itemize}
+\begin{itemize}[leftmargin=*]
 	\item Cheatsheet: Elementary Mathematics Grade 8
-	\item Problem: 1st-Order Function -- Bài Tập: Hàm Số Bậc Nhất $y = ax + b,a\ne0$.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_8/1st_order_function/problem/NQBH_1st_order_function_problem.pdf}.	
-	\item Problem: Algebraic \& Rational Fractions -- Bài Tập: Phân Thức Đại Số \& Phân Thức Đại Số Hữu Tỷ.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_8/algebraic_rational_fractions/problem/NQBH_algebraic_rational_fractions_problem.pdf}.	
-	\item Problem: Multivariate Polynomial -- Bài Tập: Đa Thức Nhiều Biến $\mathbb{R}[{\bf x}]$.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_8/multivariate_polynomial/problem/NQBH_multivariate_polynomial_problem.pdf}.
+	\item Problem: 1st-Order Function -- Bài Tập: Hàm Số Bậc Nhất $y = ax + b,a\ne0$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_8/1st_order_function/problem/NQBH_1st_order_function_problem.pdf}.	
+	\item Problem: Algebraic \& Rational Fractions -- Bài Tập: Phân Thức Đại Số \& Phân Thức Đại Số Hữu Tỷ. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_8/algebraic_rational_fractions/problem/NQBH_algebraic_rational_fractions_problem.pdf}.	
+	\item Problem: Multivariate Polynomial -- Bài Tập: Đa Thức Nhiều Biến $\mathbb{R}[{\bf x}]$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_8/multivariate_polynomial/problem/NQBH_multivariate_polynomial_problem.pdf}.
 \end{itemize}
 
-\paragraph{Elementary Mathematics Grade 9}
+\paragraph{Elementary Mathematics Grade 9 -- Toán sơ cấp lớp 9}
 
-\begin{itemize}
-	\item Cheatsheet: Elementary Mathematics Grade 9.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cheatsheet/NQBH_cheatsheet_mathematics_grade_9.pdf)}.	
-	\item Problem: Root -- Bài Tập: Căn Thức $\sqrt{f(x)},\sqrt[3]{f(x)},\sqrt[n]{f(x)}$.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/root/problem/NQBH_root_problem.pdf}.	
-	\item Problem: 2nd-Order Function. Quadratic Equation. Bài Tập: Hàm Số Bậc 2 $y = ax^2,a\ne0$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0$.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/problem/NQBH_2nd_order_function_problem.pdf}.	
-	\item Problem: System of 1st-Order Equations -- Bài Tập: Hệ Phương Trình Bậc Nhất $A{\bf x} = B$.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/problem/NQBH_system_1st_order_equations_problem.pdf}.
-	\item Problem: Trigonometry in Triangles -- Bài Tập: Hệ Thức Lượng Trong Tam Giác.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/problem/NQBH_trigonometry_problem.pdf}.	
-	\item Problem: Circle -- Bài Tập: Đường Tròn.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.pdf}.	
-	\item Problem: Cylinder, Cone, Sphere -- Bài Tập: Hình Trụ, Hình Nón, Hình Cầu.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cylinder_cone_sphere/problem/NQBH_cylinder_cone_sphere_problem.pdf}.
-	\item Problem: Equation \& Inequation -- Bài Tập: Phương Trình \& Bất Phương Trình.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/equation_inequation/problem/NQBH_equation_inequation_problem.pdf}.
+\begin{itemize}[leftmargin=*]
+	\item Cheatsheet: Elementary Mathematics Grade 9. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cheatsheet/NQBH_cheatsheet_mathematics_grade_9.pdf)}.	
+	\item Problem: Root -- Bài Tập: Căn Thức $\sqrt{f(x)},\sqrt[3]{f(x)},\sqrt[n]{f(x)}$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/root/problem/NQBH_root_problem.pdf}.	
+	\item Problem: 2nd-Order Function. Quadratic Equation. Bài Tập: Hàm Số Bậc 2 $y = ax^2,a\ne0$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/problem/NQBH_2nd_order_function_problem.pdf}.	
+	\item Problem: System of 1st-Order Equations -- Bài Tập: Hệ Phương Trình Bậc Nhất $A{\bf x} = B$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/problem/NQBH_system_1st_order_equations_problem.pdf}.
+	\item Problem: Trigonometry in Triangles -- Bài Tập: Hệ Thức Lượng Trong Tam Giác. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/problem/NQBH_trigonometry_problem.pdf}.	
+	\item Problem: Circle -- Bài Tập: Đường Tròn. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.pdf}.	
+	\item Problem: Cylinder, Cone, Sphere -- Bài Tập: Hình Trụ, Hình Nón, Hình Cầu. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cylinder_cone_sphere/problem/NQBH_cylinder_cone_sphere_problem.pdf}.
+	\item Problem: Equation \& Inequation -- Bài Tập: Phương Trình \& Bất Phương Trình. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/equation_inequation/problem/NQBH_equation_inequation_problem.pdf}.
 \end{itemize}
 
-\paragraph{Elementary Mathematics Grade 10}
+\paragraph{Elementary Mathematics Grade 10 -- Toán sơ cấp lớp 10}
 
-\paragraph{Elementary Mathematics Grade 11}
-
-\begin{itemize}
-	\item Problem: Trigonometric Equation -- Bài Tập: Phương Trình Lượng Giác.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_11/trigonometric_equation/problem/NQBH_trigonometric_equation_problem.pdf}.	
-	\item Problem: Limit -- Bài Tập: Giới Hạn $\lim$.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_11/limit/problem/NQBH_limit_problem.pdf}.
-	\item Problem: Exponentiation \& Logarithm -- Bài Tập: Hàm Số Mũ \& Hàm Số Logarith.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_11/exponentiation_logarithm/problem/NQBH_exponentiation_logarithm_problem.pdf}.
+\begin{itemize}[leftmargin=*]
+	\item \textit{Problem: Proposition \& Set: Bài Tập: Mệnh Đề \& Tập Hợp}. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/proposition_set/problem/NQBH_proposition_set_problem.pdf}. TeX: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/proposition_set/problem/NQBH_proposition_set_problem.tex}.
+	\item \textit{Problem: Trigonometrical Identities in Triangles -- Bài Tập: Hệ Thức Lượng Trong Tam Giác}. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/trigonometry/problem/NQBH_trigonometry_problem.pdf}. TeX: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/trigonometry/problem/NQBH_trigonometry_problem.tex}
+	\item Problem: Vector -- Bài Tập: Vectơ. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/vector/problem/NQBH_vector_problem.pdf}. TeX: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/vector/problem/NQBH_vector_problem.tex}.
 \end{itemize}
 
-\paragraph{Elementary Mathematics Grade 12}
+\paragraph{Elementary Mathematics Grade 11 -- Toán sơ cấp lớp 11}
 
-\begin{itemize}
+\begin{itemize}[leftmargin=*]
+	\item \textit{Problem: Trigonometric Equation -- Bài Tập: Phương Trình Lượng Giác}. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_11/trigonometric_equation/problem/NQBH_trigonometric_equation_problem.pdf}.	
+	\item Problem: Limit -- Bài Tập: Giới Hạn $\lim$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_11/limit/problem/NQBH_limit_problem.pdf}.
+	\item Problem: Exponentiation \& Logarithm -- Bài Tập: Hàm Số Mũ \& Hàm Số Logarith. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_11/exponentiation_logarithm/problem/NQBH_exponentiation_logarithm_problem.pdf}.
+\end{itemize}
+
+\paragraph{Elementary Mathematics Grade 12 -- Toán sơ cấp lớp 12}
+
+\begin{itemize}[leftmargin=*]
 	\item Cheatsheet: Elementary Mathematics Grade 12.
-	\item Problem: Application of Derivative to Survey \& Draw Graph of Functions -- Bài Tập: Ứng Dụng Đạo Hàm Để Khảo Sát \& Vẽ Đồ Thị Hàm Số.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_12/derivative_application/problem/NQBH_derivative_application_problem.pdf}.
-	\item Problem: Antiderivative \& Integral -- Bài Tập: Nguyên Hàm \& Tích Phân.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_12/integral/problem/NQBH_integral_problem.pdf}.
+	\item Problem: Application of Derivative to Survey \& Draw Graph of Functions -- Bài Tập: Ứng Dụng Đạo Hàm Để Khảo Sát \& Vẽ Đồ Thị Hàm Số. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_12/derivative_application/problem/NQBH_derivative_application_problem.pdf}.
+	\item Problem: Antiderivative \& Integral -- Bài Tập: Nguyên Hàm \& Tích Phân. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_12/integral/problem/NQBH_integral_problem.pdf}.
 \end{itemize}
 
-\subsubsection{Bridges from Elementary Mathematics to Advanced Mathematics}
+\subsubsection{Bridges from Elementary Mathematics to Advanced Mathematics -- Các cầu nối từ Toán Sơ Cấp lên Toán Cao Cấp}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{itemize}
+	\item \cite{Andreescu_Dospinescu2010}. {\sf Titu Andreescu, Gabriel Dospinescu}. {\it Problems From The Book}. Tạm dịch: \textit{Các Vấn Đề Từ Quyển Sách}.
+	\item \cite{Andreescu_Mortici_Tetiva2017}. {\sf Titu Andreescu, Cristinel Mortici, Marian Tetiva}. {\it Mathematical Bridges}. Tạm dịch: {\it Các Cầu Nối Của Toán Học}.
+\end{itemize}
 
 %------------------------------------------------------------------------------%
 
-\subsubsection{Some Topics in Elementary Physics}
-
+\subsubsection{Some topics in Elementary Physics -- Vài chủ đề trong Vật Lý Sơ Cấp}
 Trong các tờ bài tập Toán tui sưu tầm từ các sách, tui có thêm vài bài cá nhân vào đó. Các bài này không quá khó, nhưng kiểu mở rộng, tổng quát bài toán hoặc 1 bài toán mở mà tui chưa thử giải trước khi quăng cho học sinh.
 
 \begin{quote}
-	N[12]: Con thấy nó trừu tượng quá nên bắt đầu ngáo ngáo thầy.
+	{\sf Nhân [12; 6th grader]}: Con thấy nó trừu tượng quá nên bắt đầu ngáo ngáo thầy.
 	\vspace{2mm}
 	
-	H[28]: Tui có nhớ là bạn sẽ chọn đi sâu vào môn Toán hoặc Vật Lý, 1 trong 2 cái đó. Tui quan sát cách suy luận của bạn. Tui nghĩ bạn thích những thứ cụ thể, vẽ sơ đồ được, tính toán được, quậy quậy, mò mò, vọc vọc được, ít trừu tượng như mấy bài toán này. Nên tui nghĩ nên định hướng bạn theo Bách Khoa, đương nhiên vẫn tùy cha mẹ bạn quyết định, lời khuyên của tui chỉ là gợi ý. Nếu bạn thương cha mẹ, muốn sớm nuôi cha mẹ thì đừng nên theo Toán lý thuyết như tui, đặc biệt là đừng theo Vật lý lý thuyết. Để coi thời gian tới bạn phát triển sao.
+	{\sf Hồng [28; physics teacher]}: Tui có nhớ là bạn sẽ chọn đi sâu vào môn Toán hoặc Vật Lý, 1 trong 2 cái đó. Tui quan sát cách suy luận của bạn. Tui nghĩ bạn thích những thứ cụ thể, vẽ sơ đồ được, tính toán được, quậy quậy, mò mò, vọc vọc được, ít trừu tượng như mấy bài toán này. Nên tui nghĩ nên định hướng bạn theo Bách Khoa, đương nhiên vẫn tùy cha mẹ bạn quyết định, lời khuyên của tui chỉ là gợi ý. Nếu bạn thương cha mẹ, muốn sớm nuôi cha mẹ thì đừng nên theo Toán lý thuyết như tui, đặc biệt là đừng theo Vật lý lý thuyết. Để coi thời gian tới bạn phát triển sao.
 \end{quote}
 
-\begin{itemize}
-	\item Problem: Mechanical Motion -- Bài Tập: Chuyển Động Cơ.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_7/mechanical_motion/problem/NQBH_mechanical_motion_problem.pdf}.
-	\item Problem: Pressure -- Bài Tập: Áp Suất.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_8/pressure/problem/NQBH_pressure_problem.pdf}.
+\begin{itemize}[leftmargin=*]
+	\item Problem: Mechanical Motion -- Bài Tập: Chuyển Động Cơ. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_7/mechanical_motion/problem/NQBH_mechanical_motion_problem.pdf}.
+	\item Problem: Pressure -- Bài Tập: Áp Suất. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_8/pressure/problem/NQBH_pressure_problem.pdf}.
 \end{itemize}
 
 %------------------------------------------------------------------------------%
 
-\subsubsection{Some Topics in Elementary Computer Science}
+\subsubsection{Some Topics in Elementary Computer Science -- Vài chủ đề trong Khoa Học Máy Tính}
 
 \begin{itemize}
 	\item Bài toán này có thể code được không?
@@ -1657,16 +1665,15 @@ Trong các tờ bài tập Toán tui sưu tầm từ các sách, tui có thêm v
 	\item Phần nào của bài toán mà code cỡ nào cũng không được, tức chỉ giải được theo kiểu toán chứ giải kiểu Tin thì khó. Còn dạng bài nào thì chỉ giải kiểu Tin thì dễ, giải kiểu Toán lại khó?
 \end{itemize}
 
-\begin{itemize}
-	\item Problems: Elementary Computer Science -- Bài Tập: Tin Học Sơ Cấp.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/problem/NQBH_elementary_computer_science_problem.pdf}.
-	\item Problems \& Solutions: Elementary Computer Science -- Bài Tập \& Lời Giải: Tin Học Sơ Cấp.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/solution/NQBH_elementary_computer_science_solution.pdf}.
+\begin{itemize}[leftmargin=*]
+	\item Problems: Elementary Computer Science -- Bài Tập: Tin Học Sơ Cấp. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/problem/NQBH_elementary_computer_science_problem.pdf}.
+	\item Problems \& Solutions: Elementary Computer Science -- Bài Tập \& Lời Giải: Tin Học Sơ Cấp. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_computer_science/solution/NQBH_elementary_computer_science_solution.pdf}.
 \end{itemize}
 
 %------------------------------------------------------------------------------%
 
-\subsubsection{Some Topics in Elementary Chemistry}
-
-Tui có thử xài 2 gói {\tt mchem, chemfig} để vẽ công thức hóa hữu cơ, nhưng có vẻ mất nhiều thời gian.
+\subsubsection{Some Topics in Elementary Chemistry -- Vài chủ đề trong Hóa Học Sơ Cấp}
+Tôi có thử xài 2 gói {\tt mchem, chemfig} để vẽ công thức hóa hữu cơ, nhưng có vẻ mất nhiều thời gian.
 
 \begin{itemize}
 	\item Có cấu trúc hóa học nào mà có thể phát triển 1 bài toán hơi hớm tổ hợp đếm bên mấy hợp chất hữu cơ không?
@@ -1675,10 +1682,8 @@ Tui có thử xài 2 gói {\tt mchem, chemfig} để vẽ công thức hóa hữ
 %------------------------------------------------------------------------------%
 
 \subsubsection{Miscellaneous}
-How to Solve It vs. How to Sell It? - Bài học kinh doanh.
-
 \hrule
-\begin{multicols}{2}
+\begin{multicols}{2}\small
 	{\it ``What are you doing actually?''} ``I am writing a book.'' {\it ``About what?''} ``I don't know yet.'' {\it ``Huh? You want to write a book but you don't know specifically what to write yet? How can that be?''} ``Everything starts with a sheer will to write, I suppose.'' {\it ``What a joke!''} ``Yeah, let my innocent Infinite Jest \footnote{{\it Infinite Jest} is the name of a book written by \textsc{David Foster Wallace}, a genius, suicide in ??.} begin.''
 	\columnbreak
 	
@@ -1689,9 +1694,10 @@ How to Solve It vs. How to Sell It? - Bài học kinh doanh.
 \begin{verbatim}
 	nqbh@nqbh-mind:~$ reboot
 \end{verbatim}
+
+\paragraph{How to Solve It vs. How to Sell It? - Bài học kinh doanh.}
 	
 %------------------------------------------------------------------------------%
-
 
 \subsection{Parental role in child development -- Vai trò của cha mẹ trong sự phát triển của con cái}
 Tôi dò hỏi Nhân về blackground của gia đình \& sự dạy dỗ của cha mẹ tác động lên sự phát triển của con cái họ thế nào.
@@ -1710,7 +1716,7 @@ Tôi dò hỏi Nhân về blackground của gia đình \& sự dạy dỗ của 
 	
 	{\sf Hồng [28; pychologist]}: Anh hạn chế giúp tôi mấy trò đùa lại. Nghiêm túc lên. Cái phỏng đoán anh vừa nói là dự đoán thống kê. Thế vẫn là cái trí nhớ ảnh như trên phim ấy à.
 	
-	{\sf Nhân [26; NS tutor]}: Không, trí nhớ ảnh (photographic memory) ấy chỉ là khái niệm do phim ảnh thuần túy tưởng tượng ra thôi. Thực tế chỉ có trí nhớ điện tử (eidetic memory). Anh có xem phim Hannibal chứ? Cảnh ... tìm đến tên
+	{\sf Nhân [26; NS tutor]}: Không, trí nhớ ảnh (photographic memory) ấy chỉ là khái niệm do phim ảnh thuần túy tưởng tượng ra thôi. Thực tế chỉ có trí nhớ điện tử (eidetic memory). Anh có xem phim Hannibal chứ? Cảnh *** tìm đến tên
 	
 	{\sf Hồng [28; pychologist]}: Có vẻ không thích hợp cho lắm khi bàn về phim ăn thịt người trong lúc làm khảo sát về sự phát triển của trẻ em, anh nhể?
 	
@@ -1921,7 +1927,7 @@ We, the authors, love making \st{love} lists. Chúng tôi, 2 tác giả, thích 
 \subsection{A summary list of $\Psi$-theorems, $\Phi$-theorems -- Danh sách tổng hợp các ``định lý'' về tâm lý \& triết học}
 
 \begin{psy-theorem}[Eidetic memory vs. $\Phi$-manipulation]
-	A combination of eidetic memory and a sharp critical thinking is a natural enemy of psychological manipulation. Consequently, eidetiker with a sharp critical thinking is a natural enemy of psychological manipulators.
+	A combination of eidetic memory \& a sharp critical thinking is a natural enemy of psychological manipulation. Consequently, eidetiker with a sharp critical thinking is a natural enemy of psychological manipulators.
 	
 	-- 1 tổ hợp của trí nhớ điện tử \& 1 tư duy phản biện sắc bén là 1 trong những thiên địch của thao túng tâm lý. Hệ quả là kẻ có trí nhớ điện tử với 1 tư duy phản biện sắc bén là 1 trong những thiên địch của các kẻ thao túng tâm lý.
 \end{psy-theorem}
