@@ -6,7 +6,8 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,graphicx,mathtools,multicol,soul,subfig}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,graphicx,mathtools,multicol,soul,subfig,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{conjecture}{Conjecture}
@@ -1703,8 +1704,53 @@ Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng
 	\item Problem: System of 1st-Order Equations -- Bài Tập: Hệ Phương Trình Bậc Nhất $A{\bf x} = B$. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/problem/NQBH_system_1st_order_equations_problem.pdf}.
 	\item Problem: Trigonometry in Triangles -- Bài Tập: Hệ Thức Lượng Trong Tam Giác. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/problem/NQBH_trigonometry_problem.pdf}.	
 	\item Problem: Circle -- Bài Tập: Đường Tròn. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/circle/problem/NQBH_circle_problem.pdf}.	
-	\item Problem: Cylinder, Cone, Sphere -- Bài Tập: Hình Trụ, Hình Nón, Hình Cầu. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cylinder_cone_sphere/problem/NQBH_cylinder_cone_sphere_problem.pdf}.
-	\item Problem: Equation \& Inequation -- Bài Tập: Phương Trình \& Bất Phương Trình. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/equation_inequation/problem/NQBH_equation_inequation_problem.pdf}.
+	\item {\it Problem: Cylinder, Cone, Sphere -- Bài Tập: Hình Trụ, Hình Nón, Hình Cầu}.
+	\begin{center}
+		\begin{tikzpicture}
+			\def\r{2}
+			\def\h{3}
+			\def\gM{30}
+			\def\gN{-80}
+			\path
+			(0:0) coordinate (O)
+			(0:\r) coordinate (A)
+			(180:\r) coordinate (B)
+			(A) arc (0:\gM:{\r} and {\r/3}) coordinate (M)
+			(A) arc (0:\gN:{\r} and {\r/3}) coordinate (N)
+			($(M)!.5!(N)$) coordinate (I)
+			\foreach \x in {O,A,B,M,N,I}{(\x)++(90:\h) coordinate (\x_1)};
+			\draw[dashed]
+			(I)--(O)--(O_1) (M)--(O)--(N) (M_1)--(M)--(N) (I)--(I_1) (A) arc (0:180:{\r} and {\r/3});
+			\draw (A) arc (0:-180:{\r} and {\r/3}) (O_1) ellipse ({\r} and {\r/3}) (A)--(A_1) (B)--(B_1) (N)--(N_1) (O_1)--(I_1) (O_1)--(M_1)--(N_1)--cycle;
+			\foreach \x/\g in {A/0,A_1/0,O/180,O_1/180,I/-45,M/135,N/-90,M_1/45,N_1/80,I_1/135} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+		\end{tikzpicture}
+		\begin{tikzpicture}
+			\def\r{2}
+			\def\gM{15}
+			\path
+			(0:0) coordinate (H)
+			(0:\r) coordinate (A)
+			(180:\r) coordinate (B)
+			(A) arc (0:\gM:{\r} and {\r/3}) coordinate (M)--([turn]0:1mm) coordinate (Mt)
+			(B) arc (180:180-\gM:{\r} and {\r/3}) coordinate (M')--([turn]0:1mm) coordinate (M't)
+			(intersection of M--Mt and M'--M't) coordinate (O);
+			\draw[dashed] (O)--(H)--(A) (M) arc (\gM:180-\gM:{\r} and {\r/3});
+			\draw (M') arc (180-\gM:360+\gM:{\r} and {\r/3}) (M)--(O)--(M');
+			\foreach \x/\g in {A/0,B/180,O/90,H/135} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+		\end{tikzpicture}
+		\begin{tikzpicture}
+			\def\r{2}
+			\path (0:0) coordinate (O);
+			\draw[dashed] (0:\r) arc (0:180:{\r} and {\r/3}) (90:\r) arc (90:-90:{\r/3} and {\r});
+			\draw (O) circle (\r) (180:\r) arc (180:360:{\r} and {\r/3}) (90:\r) arc (90:270:{\r/3} and {\r});
+			\foreach \x/\g in {O/135} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+		\end{tikzpicture}
+	\end{center}
+	Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Mathematics{\tt/}grade 9{\tt/}cylinder, cone, sphere{\tt/}problem}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cylinder_cone_sphere/problem/NQBH_cylinder_cone_sphere_problem.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cylinder_cone_sphere/problem/NQBH_cylinder_cone_sphere_problem.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cylinder_cone_sphere/problem/NQBH_cylinder_cone_sphere_problem.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cylinder_cone_sphere/problem/NQBH_cylinder_cone_sphere_problem.tex}.}].	
+	\item {\it Problem \& Solution: Cylinder, Cone, Sphere -- Bài Tập \& Lời Giải: Hình Trụ, Hình Nón, Hình Cầu}.
+	
+	Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Mathematics{\tt/}grade 9{\tt/}cylinder, cone, sphere{\tt/}solution}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cylinder_cone_sphere/solution/NQBH_cylinder_cone_sphere_solution.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cylinder_cone_sphere/solution/NQBH_cylinder_cone_sphere_solution.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cylinder_cone_sphere/solution/NQBH_cylinder_cone_sphere_solution.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cylinder_cone_sphere/solution/NQBH_cylinder_cone_sphere_solution.tex}.}].	
+	\item Problem: Equation \& Inequation -- Bài Tập: Phương Trình \& Bất Phương Trình. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/equation_inequation/solution/NQBH_equation_inequation_solution.pdf}.
 \end{itemize}
 
 \paragraph{Elementary Mathematics Grade 10 -- Toán sơ cấp lớp 10}
@@ -2126,7 +2172,7 @@ else {
 \end{Verbatim}
 Xin cảm ơn các bài viết sâu sắc về giáo dục của thầy{\tt/}Dr. {\sc Trần Nam Dũng}, về giáo dục \& nghiên cứu Toán cao cấp của thầy{\tt/}Prof. {\sc Nguyễn Hữu Việt Hưng}, Prof. {\sc Ngô Bảo Châu}, Prof. {\sc Hà Huy Khoái}, Prof. {\sc Phan Thành Nam}. 2 tác giả không hề có bất cứ trao đổi nào với các người thầy này, nhưng bài viết của họ đã đủ để các tác giả bắt tay vào chấp bút cho 1 số ý tưởng của phần bàn về việc học \& bàn về việc dạy. Nếu có bất cứ lỗi nào xảy ra trong tiểu thuyết, đó hoàn toàn là lỗi của 2 tác giả đã hiểu sai ý từ các bài viết gốc. Hoàn toàn không liên quan đến ý tốt hay các tư tưởng của những người thầy này.
 
-Xin chân thành những người đã từng giúp, đã từng thương hoặc thương hắn đến tận ngày hôm nay. Cuộc hành trình mưu cầu hạnh phúc \& khám phá tri thức sẽ thật khó khăn nếu không có họ củng cố niềm tin của 2 tác giả. Xin cảm ơn chị{\tt/}Dr. {\sc Lê Thị Minh Thảo}, anh {\sc Hoàng Công Đức}, anh{\tt/}thầy{\tt/}Dr.  {\sc Lê Phúc Lữ}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Mạnh Khang}, chị{\tt/}Dr.  {\sc Lan Hương}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Nguyên Anh}, Prof. {\sc Jesús Ildefonso Díaz}, thầy{\tt/}anh{\tt/}Dr.  {\sc Trà Quốc Khanh}, thầy{\tt/}anh {\sc Lê Văn Chánh}, cô {\sc Lê Thị Thanh Lĩu} đã truyền động lực trên hành trình học Toán của 2 tác giả. Xin cảm ơn cô {\sc Đặng Thị Hạnh}, cô {\sc Đặng Thị Bích Thư} đã viếng đám tang của cha 2 tác giả, để họ không bị nỗi sợ bị bỏ rơi nuốt chửng. Xin cảm ơn thầy {\sc Lê Hoàng Minh}, thầy {\sc Nguyễn Thanh Tài}, thầy {\sc Võ Văn Huynh}, thầy {\sc Đệ}, thầy {\sc Lê Thanh Hải}, thầy {\sc Trần Thanh Liêm}, thầy {\sc Nguyễn Văn Quí}\footnote{Rest in peace, my respected mathematics teacher.}, thầy{\tt/}Dr.  {\sc Trần Nam Dũng}, thầy{\tt/}Dr. {\sc Nguyễn Tấn Trung}, thầy{\tt/}Prof.  {\sc Đặng Đức Trọng}, đã là những mẫu hình người thầy tuyệt vời để 2 tác giả bắt chước theo. Phải trưởng thành mà không có sự giúp đỡ \& hình mẫu (role model) của người cha trong điều kiện thiếu thốn cả về kiến thức, vật chất, lẫn tinh thần, thật không dễ dàng gì.
+Xin chân thành những người đã từng giúp, đã từng thương hoặc thương hắn đến tận ngày hôm nay. Cuộc hành trình mưu cầu hạnh phúc \& khám phá tri thức sẽ thật khó khăn nếu không có họ củng cố niềm tin của 2 tác giả. Xin cảm ơn chị{\tt/}Dr. {\sc Lê Thị Minh Thảo}, anh {\sc Hoàng Công Đức}, anh{\tt/}thầy{\tt/}Dr. {\sc Lê Phúc Lữ}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Mạnh Khang}, chị{\tt/}Dr.  {\sc Lan Hương}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Nguyên Anh}, Prof. {\sc Jesús Ildefonso Díaz}, thầy{\tt/}anh{\tt/}Dr.  {\sc Trà Quốc Khanh}, thầy{\tt/}anh {\sc Lê Văn Chánh}, cô {\sc Lê Thị Thanh Lĩu}, cô {\sc Dương Thị Xuân An} đã truyền động lực trên hành trình học Toán của 2 tác giả. Xin cảm ơn cô {\sc Đặng Thị Hạnh}, cô {\sc Đặng Thị Bích Thư} đã viếng đám tang của cha 2 tác giả, để họ không bị nỗi sợ bị bỏ rơi nuốt chửng. Xin cảm ơn thầy {\sc Lê Hoàng Minh}, thầy {\sc Nguyễn Thanh Tài}, thầy {\sc Võ Văn Huynh}, thầy {\sc Đệ}, thầy {\sc Lê Thanh Hải}, thầy {\sc Trần Thanh Liêm}, thầy {\sc Nguyễn Văn Quí}\footnote{Rest in peace, my respected mathematics teacher.}, thầy{\tt/}Dr.  {\sc Trần Nam Dũng}, thầy{\tt/}Dr. {\sc Nguyễn Tấn Trung}, thầy{\tt/}Prof.  {\sc Đặng Đức Trọng}, đã là những mẫu hình người thầy tuyệt vời để 2 tác giả bắt chước theo. Phải trưởng thành mà không có sự giúp đỡ \& hình mẫu (role model) của người cha trong điều kiện thiếu thốn cả về kiến thức, vật chất, lẫn tinh thần, thật không dễ dàng gì.
 
 Bạn đọc có thể dễ dàng nhận thấy đây là 1 chủ đề vô cùng nhạy cảm, cực kỳ nguy hiểm. Nên nếu dự án này thất bại, thì đều do sự non nớt của 2 tác giả với ngòi bút chưa đủ sắc bén nên không thể giải phẫu vấn đề này đến nơi đến chốn, không liên quan gì đến bất cứ ai \& khẳng định là không ai giúp 2 tác giả trong tiểu thuyết này. Các tác giả xin hoàn toàn chịu trách nhiệm về sự thất bại nếu có.
 
