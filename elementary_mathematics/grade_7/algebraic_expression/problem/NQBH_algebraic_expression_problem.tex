@@ -1,0 +1,1085 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Algebraic Expression -- Bài Tập: Biểu Thức Đại Số}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
+	Latest version:
+	\begin{itemize}
+		\item {\it Problem: Algebraic Expression -- Bài Tập: Biểu Thức Đại Số}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+		\item {\it Problem \& Solution: Algebraic Expression -- Bài Tập \& Lời Giải: Biểu Thức Đại Số}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+	\end{itemize}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about algebraic expression. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 7, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/algebraic_expression/NQBH_algebraic_expression.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}algebraic expression}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/algebraic_expression/NQBH_algebraic_expression.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về biểu thức đại số. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 7. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/algebraic_expression/NQBH_algebraic_expression.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}algebraic expression}.
+	
+	\textsf{\textbf{Nội dung.} Biểu thức số, biểu thức đại số; đa thức 1 biến, nghiệm của đa thức 1 biến; phép cộng, phép trừ đa thức 1 biến; phép nhân đa thức 1 biến; phép chia đa thức 1 biến.}
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Biểu Thức Số. Biểu Thức Đại Số -- Algebraic Expression}
+``In mathematics, an \textit{algebraic expression} is an \href{https://en.wikipedia.org/wiki/Expression_(mathematics)}{expression} built up from constant \href{https://en.wikipedia.org/wiki/Algebraic_number}{algebraic numbers}, \href{https://en.wikipedia.org/wiki/Variable_(mathematics)}{variables}, \& the \href{https://en.wikipedia.org/wiki/Algebraic_operation}{algebraic operations} (addition, subtraction, multiplication, division, \& exponentiation by an exponent that is a rational number).'' -- \href{https://en.wikipedia.org/wiki/Algebraic_expression}{Wikipedia\texttt{/}algebraic expression}
+
+``\fbox{\bf 1} \textit{Biểu thức số.} Các số được nối với nhau bởi dấu các phép tính cộng, trừ, nhân, chia, nâng lên lũy thừa tạo thành 1 \textit{biểu thức số}. Đặc biệt, mỗi số đều được coi là 1 biểu thức số. Trong biểu thức số có thể có các dấu ngoặc để chỉ thứ tự thực hiện các phép tính. Khi thực hiện các phép tính trong 1 biểu thức số, ta nhận được 1 số. Số đó được gọi là \textit{giá trị} của biểu thức số đã cho. \fbox{\bf 2} \textit{Biểu thức đại số.} Các số, biến số được nối với nhau bởi dấu các phép tính cộng, trừ, nhân, chia, nâng lên lũy thừa làm thành 1 \textit{biểu thức đại số}. Đặc biệt, biểu thức số cũng là biểu thức đại số. Trong biểu thức đại số có thể có các dấu ngoặc để chỉ thứ tự thực hiện các phép tính. Để tính giá trị của 1 biểu thức đại số tại những giá trị cho trước của các biến, ta thay những giá trị cho trước đó vào biểu thức rồi thực hiện các phép tính.'' -- \cite[Chap. VI, \S1, p. 35]{SBT_Toan_7_Canh_Dieu_tap_2}
+
+``\fbox{\bf 1} Các số được nối với nhau bởi dấu của các phép tính tạo thành 1 biểu thức số. Đặc biệt mỗi số đều được coi là 1 biểu thức số. Khi thực hiện các phép tính trong 1 biểu thức số ta được 1 số. Số này gọi là \textit{giá trị} của biểu thức đã cho. \fbox{\bf 2} Biểu thức chỉ chứa chữ hoặc chứa cả số \& chữ gọi chung là \textit{biểu thức đại số}. Đặc biệt biểu thức số cũng được coi là biểu thức đại số. Trong 1 biểu thức đại số, các chữ (nếu có) dùng để thay thế hay đại diện cho những số nào đó được gọi là các \textit{biến số} (gọi tắt là các \textit{biến}). Khi thực hiện các phép tính trên các chữ ta có thể áp dụng những tính chất, quy tắc các phép tính như trên các số. \fbox{\bf 3} Để cho gọn: Ta không viết dấu nhân giữa các biến cũng như giữa số \& biến. Trong các biểu thức đại số như $\pm1x$, ta không viết thừa số 1. \fbox{\bf 4} Muốn tính giá trị của 1 biểu thức đại số tại những giá trị cho trước của biến ta thay giá trị đã cho của mỗi biến vào biểu thức rồi thực hiện các phép tính. \fbox{\bf 5} Quy ước đọc \& viết 1 biểu thức đại số có nhiều phép tính: Phép tính nào làm sau cùng thì đọc trước tiên. Phép tính nào làm trước tiên thì đọc sau.'' -- \cite[Chap. III, \S1, p. 37]{Tuyen_Toan_7}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|l|l|}
+		\hline
+		\textbf{Biểu thức} & \textbf{Thứ tự thực hiện các phép tính} & \textbf{Cách đọc}\\
+		\hline
+		$(x + y)^2$ & Tính tổng $\to$ Tính bình phương & Bình phương của tổng 2 số $x,y$\\
+		\hline
+		$(x - y)^2$ & Tính hiệu $\to$ Tính bình phương & Bình phương của hiệu 2 số $x,y$\\
+		\hline
+		$(x + y)^3$ & Tính tổng $\to$ Tính lập phương & Lập phương của tổng 2 số $x,y$ \\
+		\hline		
+		$(x - y)^3$ & Tính hiệu $\to$ Tính lập phương & Lập phương của hiệu 2 số $x,y$ \\
+		\hline
+		$x^2 + y^2$ & Tính bình phương của $x,y$ $\to$ Tính tổng & Tổng các bình phương của 2 số $x,y$\\
+		\hline
+		$x^2 - y^2$ & Tính bình phương của $x,y$ $\to$ Tính hiệu & Hiệu các bình phương của 2 số $x,y$\\
+		\hline
+		$x^3 + y^3$ & Tính lập phương của $x,y$ $\to$ Tính tổng & Tổng các lập phương của 2 số $x,y$\\
+		\hline
+		$x^3 - y^3$ & Tính lập phương của $x,y$ $\to$ Tính hiệu & Hiệu các lập phương của 2 số $x,y$\\
+		\hline
+		$(x + y)(x - y)$ & Tính tổng \& hiệu $\to$ Tính tích & Tích của tổng 2 số $x,y$ với hiệu của chúng\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 6., p. 46]
+	Lãi suất ngân hành quy định cho kỳ hạn 1 năm là $r$\%\emph{\texttt{/}}năm. Viết biểu thức đại số biểu thị số tiền lãi \& tổng tiền gốc lẫn tiền lãi khi hết kỳ hạn 1 năm nếu gửi ngân hàng $A$ đồng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 7., p. 46]
+	Các nhà khoa học đã đưa ra cách ước tính chiều cao của trẻ em khi trưởng thành dựa trên chiều cao $b$ của bố \& chiều cao $m$ của mẹ ($b,m$ tính theo đơn vị cm) như sau: Chiều cao của con trai $= \frac{1}{2}\cdot1.08(b + m)$, Chiều cao của con gái $= \frac{1}{2}(0.923b + m)$. (a) Với chiều cao nào của bố, mẹ thì con trai cao hơn, bằng, thấp hơn con gái?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, pp. 35--36]
+	Viết biểu thức số biểu thị: (a) Quãng đường bay được của 1 con chim ưng, biết vận tốc bay của nó là $96$\emph{km\texttt{/}h} \& thời gian bay là $\frac{3}{4}$ giờ. (b) Quãng đường bay được của 1 con chim ưng, biết vận tốc bay của nó là $v$\emph{km\texttt{/}h} \& thời gian bay là $t_0$ giờ. (c) Quãng đường bay được của 1 con ong mật, biết vận tốc bay của nó là $8$\emph{km\texttt{/}h} \& thời gian bay là $15$ phút. (d) Quãng đường bay được của 1 con ong mật, biết vận tốc bay của nó là $v$\emph{km\texttt{/}h} \& thời gian bay là $t$ phút. (e) Cho hình thang vuông $ABCD$ vuông tại $A,D$ có $AB = 30$ \emph{cm}, $AD = 25$ \emph{cm}, $CD = 50$ \emph{cm}. Tính diện tích của hình thang $ABCD$ \& diện tích của $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 2, p. 36]
+	Mạng điện thoại di động mà bác Khôi sử dụng có cước phí nhắn tin nội mạng là $200$ đồng\emph{\texttt{/}}tin nhắn, ngoại mạng là $250$ đồng\emph{\texttt{/}}tin nhắn. (a) Viết biểu thức biểu thị số tiền bác Khôi phải trả khi nhắn $t$ tin nhắn nội mạng \& $l$ tin nhắn ngoại mạng. (b) Tính số tiền bác Khôi phải trả khi nhắn $33$ tin nhắn nội mạng \& $27$ tin nhắn ngoại mạng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 3, p. 36]
+	Viết biểu thức đại số biểu thị: (a) Tích của tổng 2 số $x,y$ \& tổng các bình phương của 2 số đó. (b) Hiệu các bình phương $x,y$. (c) Tổng của tích 2 số $x,y$ với $5$ lần bình phương của tổng 2 số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 1., p. 37]
+	Trống đồng Ngọc Lũ là 1 trong những chiếc trống đồng cổ hiện được lưu trữ ở Bảo tàng Lịch sử Quốc gia. Mặt chiếc trống đồng Ngọc Lũ đó có dạng hình tròn với đường kính $79.3$ \emph{cm}. Tính diện tích của mặt chiếc trống đồng Ngọc Lũ đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 2., p. 37]
+	Viết biểu thức số biểu thị diện tích phần bể được lát gạch (xung quanh bể \& đáy bể) của 1 bể bơi có dạng hình hộp chữ nhật với chiều dài $15$\emph{m}, chiều rộng $10$\emph{m}, \& chiều cao $1.2$\emph{m} (biết diện tích phần mạch vữa không đáng kể).
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 3., p. 37]
+	Mỗi ngày lượng nước 1 người cần uống (tính theo đơn vị lít) bằng khối lượng cơ thể (tính theo đơn vị kilogram) nhân với $0.03$, sau đó cộng với lượng nước tăng cường cho thời gian vận động (cứ mỗi $30$ phút vận động cộng thêm $0.335$\emph{l} nước). (a) Dung $7$ tuổi nặng $23$\emph{kg}, mỗi ngày em đạp xe $15$ phút \& tham gia các hoạt động vận động khác trong $105$ phút. Viết biểu thức số biểu thị lượng nước Dung cần uống mỗi ngày. (b) Áp dụng cách tính trên, tính lượng nước mà mỗi thành viên trong gia đình em cần uống mỗi ngày.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 4., p. 37]
+	1 ngày hè người ta đo được nhiệt độ vào buổi sáng là $t^\circ{\rm C}$, buổi trưa nhiệt độ tăng thêm $3^\circ{\rm C}$ so với buổi sáng \& buổi đêm nhiệt độ giảm đi $y^\circ{\rm C}$ so với buổi trưa. (a) Viết biểu thức đại số biểu thị nhiệt độ lúc buổi đêm của ngày mùa hè đó. (b) Tính nhiệt độ lúc buổi đêm của ngày mùa hè đó, biết $t = 30$ \& $y = 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 5., p. 38]
+	Viết biểu thức đại số biểu thị: (a) Tổng các bình phương của $x,y$. (b) Tổng của $x,y$ bình phương. (c) Tổng các lập phương của $x,y$. (d) Lập phương của tổng $x,y$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 6., p. 38]
+	(a) Biểu thức đại số biểu thị diện tích của hình thang có đáy lớn $2a$\emph{m}, đáy bé $b$\emph{m}, đường cao $2h$\emph{m}? (b) Biểu thức đại số biểu thị tích của tổng $x,y$ với hiệu của $x,y$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 7., p. 38]
+	Hà có $x$\emph{kg} mơ. Để làm ô mai mơ gừng chua ngọt, Hà cần chuẩn bị thêm lượng đường trắng bằng $\frac{1}{2}$ lượng mơ, lượng gừng tươi bằng $\frac{1}{2}$ lượng mơ, lượng muối bằng $\frac{1}{10}$ lượng mơ. (a) Viết biểu thức biểu thị khối lượng các nguyên liệu Hà cần chuẩn bị thêm theo $x$. (b) Nếu Hà có $15$\emph{kg} mơ để làm ô mai thì khối lượng các nguyên liệu cần chuẩn bị thêm là bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 8., p. 38]
+	1 mảnh vườn có dạng hình chữ nhật với chiều dài $x$\emph{m}, chiều rộng bằng $\frac{3}{5}$ chiều dài. Ở giữa vườn người ta xây 1 cái bể hình tròn đường kính $d$\emph{m}. (a) Viết biểu thức biểu thị diện tích phần đất còn lại của mảnh vườn đó. (b) Tính diện tích phần đất còn lại của mảnh vườn đó biết $x = 35$, $d = 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 9., p. 38]
+	1 khu vườn có dạng hình chữ nhật có chiều dài $a$\emph{m}, chiều rộng ngắn hơn chiều dài $8$\emph{m}. Trên khu vườn ấy, bác An đào 1 cái ao hình vuông có cạnh là $b$\emph{m} ($b < a - 8$). (a) Viết biểu thức biểu thị diện tích còn lại của khu vườn đó. (b) Tính diện tích còn lại của khu vườn đó khi $a = 50$, $b = 10$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 10., p. 39]
+	Trên mảnh đất có dạng hình chữ nhật với chiều dài là $x$\emph{m}, chiều rộng là $y$\emph{m}, người ta dự định làm 1 vườn hoa hình chữ nhật \& bớt ra 1 phần đường đi rộng $2$\emph{m} (1 hình chữ nhật nằm trong 1 hình chữ nhật lớn hơn sao cho cạnh của hình chữ nhật nhỏ cách cạnh tương ứng của hình chữ nhật lớn 1 khoảng $2$\emph{m}). (a) Viết biểu thức biểu thị chu vi \& diện tích của vườn hoa trên mảnh đất đó. (b) Tính chu vi \& diện tích của vườn hoa trên mảnh đất đó, biết $x = 15$, $y = 10$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 11., p. 39]
+	Viết biểu thức đại số biểu thị: (a) Khối lượng của 1 vật có thể tích $V{\rm m}^3$ \& khối lượng riêng $D$\emph{kg\texttt{/}$\rm m^3$}). (b) Diện tích của tam giác vuông có 2 cạnh góc vuông là $a$\emph{cm} \& $b$\emph{cm}. (c) Sản lượng lúa thu hoạch được trên 1 ruộng lúa có diện tích là $x$\emph{ha} \& năng suất lúa là $y$\emph{tạ\texttt{/}ha}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 12., p. 39]
+	1 ngôi nhà có 3 phòng: sàn phòng khách có dạng hình vuông cạnh $a$\emph{m}, sàn phòng ngủ \& sàn phòng bếp có dạng hình chữ nhật với cùng chiều dài $a$\emph{m} \& cùng chiều rộng $b$\emph{m} ($a > b$). Viết biểu thức biểu thị tổng diện tích 3 mặt sàn trên của ngôi nhà đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 13., p. 39]
+	Tính giá trị của mỗi biểu thức sau: (a) $A = 3.2x^2y^3$ tại $x = 1$, $y = -1$. (b) $B = 3m - 2n$ tại $m = -1$, $n = 2$. (c) $C = 7m + 2n - 5$ tại $m = -2$, $n = -\frac{1}{2}$. (d) $D = 3x^2 - 5y + 1$ tại $x = \sqrt{3}$, $y = -1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 14., p. 39]
+	Tìm $x\in\mathbb{Z}$ để biểu thức: (a) $A = \frac{1}{50 - x}$, với $x\ne50$, đạt giá trị lớn nhất. (b) $B = \frac{4}{x - 8}$, với $x\ne8$, đạt giá trị nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 15., pp. 39--40]
+	Để đánh giá thể trạng của 1 người, người ta thường dùng chỉ số BMI. Chỉ số BMI được tính bằng công thức: ${\rm BMI} = \frac{m}{h^2}$ (chỉ số này thường được làm tròn đến hàng phần mười) với $m$ là cân nặng (tính theo \emph{kg}) \& $h$ là chiều cao (tính theo \emph{m}). Nếu $18.5\le{\rm BMI}\le22.9$ thì được coi là thể trạng bình thường đối với người trên $20$ tuổi. 2 chị Hằng $25$ tuổi, $50$\emph{kg}, $152$\emph{cm} \& Bình $25$ tuổi, $72$\emph{kg}, $160$\emph{cm}, người nào đạt thể trạng bình thường?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 16., p. 40]
+	Nguyên đã mua $5$ quyển vở, giá mỗi quyển là $7000$ đồng \& mua $x$ chiếc bút chì, giá mỗi chiếc là $4000$ đồng. (a) Viết biểu thức biểu thị số tiền Nguyên phải trả. (b) Đức chỉ mua bút chì \& mua nhiều hơn Nguyên $5$ chiếc bút chì cùng loại với giá $4000$ \emph{đồng\texttt{/}chiếc}. Viết biểu thức biểu thị số tiền Đức phải trả.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 42, p. 37]
+	Cho $y = 5x$, tính giá trị của biểu thức $A = \frac{4x + y}{6x - y}$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_7}, Ví dụ 42, p. 37]
+	\label{mo rong Tuyen_Toan_7 vi du 42}
+	Cho $y = kx$, tính giá trị của biểu thức:
+	\begin{align*}
+		A &= \frac{ax + by}{cx + dy},\ B = \frac{ax^2 + bxy + cy^2}{dx^2 + exy + fy^2},\ C = \frac{a_1x^3 + a_2x^2y + a_3xy^2 + a_4y^3}{b_1x^3 + b_2x^2y + b_3xy^2 + b_4y^3},\\
+		D &= \frac{\sum_{i=0}^n a_ix^{n-i}y^i}{\sum_{i=0}^n b_ix^{n-i}y^i} = \frac{a_1x^n + a_2x^{n-1}y + \cdots + a_{n-1}xy^{n-1} + a_ny^n}{b_1x^n + b_2x^{n-1}y + \cdots + b_{n-1}xy^{n-1} + b_ny^n},
+	\end{align*}
+	với $a,b,c,d,e,f,a_i,b_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 43, p. 37]
+	Tính giá trị của biểu thức: $B = x^2 + 4xy - 3y^3$ với $|x| = 5$, $|y| = 1$.
+\end{baitoan}
+
+\begin{nhanxet}
+	``Biểu thức $B$ có chứa 2 biến $x,y$. Biến $x$ nhận 2 giá trị, biến $y$ nhận 2 giá trị do đó ta phải xét đủ 4 trường hợp các cặp giá trị của $x,y$ dẫn đến biểu thức $B$ có 4 giá trị khác nhau.'' -- \cite[p. 38]{Tuyen_Toan_7}
+\end{nhanxet}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 150., p. 38]
+	Cho $A$ là tổng lập phương các số tự nhiên từ $1$ đến $n$ \& $B$ là bình phương của tổng các số tự nhiên từ $1$ đến $n$. Người ta đã chứng minh được $A = B$. Kiểm nghiệm lại bằng cách cho $n = 1,2,3,4,5,6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 151., p. 38]
+	Tính giá trị của các biểu thức sau với $x = \sqrt{2}$: (a) $(x + 1)(x^2 - 2)$. (b) $(x - 1)(x^2 + 1) + 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 152., p. 38]
+	Tính giá trị của biểu thức $M = \frac{2x^2 + 3x - 2}{x + 2}$ tại: (a) $x = -1$. (b) $|x| = 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 153., p. 38]
+	Tính giá trị của biểu thức $N = \frac{6x^2 + x - 3}{2x - 1}$ với $|x| = \frac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 154., p. 38]
+	Tính giá trị của biểu thức $P = 9x^2 - 7x|y| - \frac{1}{4}y^3$ tại $x = \frac{1}{3}$, $y = -6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 155., p. 38]
+	Tìm các giá trị của biến để: (a) Biểu thức $(x + 1)(y^2 - 6)$ có giá trị bằng $0$. (b) Biểu thức $x^2 - 12x + 7$ có giá trị lớn hơn $7$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 156., p. 38]
+	Tính giá trị của biểu thức $Q = \frac{5x^2 + 3y^2}{10x^2 - 3y^2}$ với $\frac{x}{3} = \frac{y}{5}$.
+\end{baitoan}
+Bài toán này là 1 trường hợp nhỏ của Bài toán \ref{mo rong Tuyen_Toan_7 vi du 42}: $B = \frac{ax^2 + bxy + cy^2}{dx^2 + exy + fy^2}$ khi $k = \frac{5}{3}, a = 5, b = 0, c = 3, d = 10, e = 0, f = -3$.
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 157., p. 38]
+	Cho $x,y,z\in\mathbb{R}$, $x,y,z\ne0$, $x - y - z = 0$. Tính giá trị của biểu thức $M = \left(1 - \frac{z}{x}\right)\left(1 - \frac{x}{y}\right)\left(1 + \frac{y}{z}\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 158., p. 38]
+	(a) Tìm GTNN của biểu thứcG: $A = (x + 2)^2 + \left(y - \frac{1}{5}\right)^2 - 10$. (b) Tìm GTLN của biểu thức: $B = \frac{4}{(2x - 3)^2 + 5}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 159., p. 38]
+	Cho biểu thức $C = \frac{5 - x}{x - 2}$. Tìm giá trị nguyên của $x$ để: (a) $C$ có giá trị nguyên. (b) $C$ có giá trị nhỏ nhất.
+\end{baitoan}
+``Để tính giá trị của 1 biểu thức đại số ứng với 1 giá trị nào đó của biến, ta thường thay giá trị đó của biến vào biểu thức rồi làm các phép tính theo thứ tự thực hiện đã được quy ước. Tuy nhiên trong 1 số bài, cần quan sát biểu thức để tính toán 1 cách hợp lý.'' -- \cite[p. 4]{Binh_Toan_7_tap_2}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_2}, Ví dụ 1, p. 4]
+	Tính giá trị của biểu thức: $A = (1^2 + 2^2 + 3^2 + \cdots + 19^2 + 20^2)(a + b)(a + 2b)(a + 3b)$ với $a = \frac{3}{5}$, $b = -0.2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_2}, Ví dụ 2, p. 4]
+	Cho đa thức $P(x) = ax^2 + bx + c$ với $a,b,c\in\mathbb{R}$. Biết $P(0),P(1),P(2)$ có giá trị nguyên. Chứng minh: (a) $2a,2b$ có giá trị nguyên. (b) $P(3),P(4),P(5)$ cũng có giá trị nguyên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_2}, Ví dụ 3, p. 4]
+	2 đa thức $ax + b$ \& $a'x + b'$ có giá trị bằng nhau với mọi giá trị $x\in\mathbb{R}$. Chứng minh 
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Đa Thức 1 Biến. Nghiệm của Đa Thức 1 Biến}
+``\fbox{\bf 1} \textit{Đơn thức 1 biến.} \textit{Đơn thức 1 biến} là biểu thức đại số chỉ gồm 1 số hoặc tích của 1 số với lũy thừa có số mũ nguyên dương của biến đó. Mỗi đơn thức (biến $x$) nếu không phải là 1 số thì có dạng $ax^k$, trong đó $a\in\mathbb{R}$, $a\ne0$, $k\in\mathbb{N}^\star$. Lúc đó, số $a$ được gọi là \textit{hệ số} của đơn thức $ax^k$. Đặc biệt, 1 số thực khác $0$ được coi là đơn thức với số mũ của biến bằng $0$. Để cộng\texttt{/}trừ 2 đơn thức có cùng số mũ của biến, ta cộng\texttt{/}trừ 2 hệ số với nhau \& giữ nguyên phần biến: $ax^k + bx^k = (a + b)x^k$, $ax^k - bx^k = (a - b)x^k$, $\forall k\in\mathbb{N}^\star$.\footnote{Có thể viết gộp 2 công thức lại thành: $ax^k\pm bx^k = (a\pm b)x^k$, $\forall k\in\mathbb{N}^\star$.} \fbox{\bf 2} \textit{Đa thức 1 biến.} \textit{Đa thức 1 biến} là tổng những đơn thức của cùng 1 biến. Mỗi số được xem là 1 đa thức (1 biến). Số $0$ được gọi là \textit{đa thức không}. Mỗi đơn thức cũng là 1 đa thức. Thông thường ta ký hiệu đa thức 1 biến $x$ là $P(x),Q(x),R(x)$ hoặc $A(x),B(x),\ldots$. Thu gọn đa thức 1 biến là làm cho đa thức đó không còn 2 đơn thức nào có cùng số mũ của biến. Sắp xếp đa thức (1 biến) theo số mũ giảm dần\texttt{/}tăng dần của biến là sắp xếp các đơn thức trong dạng thu gọn của đa thức đó theo mũ giảm dần\texttt{/}tăng dần của biến. \textit{Bậc} của đa thức 1 biến (khác đa thức không, đã thu gọn) là số mũ cao nhất của biến trong đa thức đó. Đặc biệt, 1 số khác 0 là đa thức bậc 0, đa thức không (số 0) là đa thức không có bậc. Trong dạng thu gọn của đa thức, hệ số của lũy thừa với số mũ cao nhất của biến còn gọi là \textit{hệ số cao nhất} của đa thức; số hạng không chứa biến còn gọi là \textit{hệ số tự do} của đa thức. \fbox{\bf 3} \textit{Nghiệm của đa thức 1 biến.} Giá trị của đa thức $P(x)$ tại $x = a$ được ký hiệu là $P(a)$. Nếu tại $x = a$, đa thức $P(x)$ có giá trị bằng $0$ thì ta nói $a$ (hoặc $x = a$) là 1 \textit{nghiệm} của đa thức đó. Ta có $x = a$ là nghiệm của đa thức $P(x)$ nếu $P(a) = 0$. 1 đa thức (khác đa thức không) có thể có 1 nghiệm, 2 nghiệm, $\ldots$, hoặc không có nghiệm. Số nghiệm của 1 đa thức không vượt quá bậc của đa thức đó.'' -- \cite[Chap. VI, \S2, pp. 40--41]{SBT_Toan_7_Canh_Dieu_tap_2}
+
+
+``\fbox{\bf 1} \textit{Đơn thức 1 biến} là biểu thức đại số chỉ gồm 1 số hoặc 1 tích của 1 số thực với lũy thừa có số mũ nguyên dương của biến đó. Số thực gọi là \textit{hệ số}, số mũ của lũy thừa gọi là \textit{bậc} của đơn thức. E.g., đơn thức $-3x^4$ có hệ số là $-3$, bậc $4$. Số $5$ là đơn thức có hệ số là $5$, bậc $0$ (vì $5 = 5x^0$). Số $0$ cũng coi là 1 đơn thức nhưng nó không có bậc. \fbox{\bf 2} Với các đơn thức 1 biến ta có thể: Cộng\texttt{/}trừ 2 đơn thức cùng bậc bằng cách cộng\texttt{/}trừ các hệ số với nhau \& giữ nguyên lũy thừa của biến. Nhân 2 đơn thức tùy ý bằng cách nhân 2 hệ số với nhau \& nhân 2 lũy thừa của biến với nhau. \fbox{\bf 3} Đa thức 1 biến là tổng của những đơn thức của cùng 1 biến. Mỗi đơn thức trong tổng gọi là 1 \textit{hạng tử} của đa thức. Đặc biệt, số 0 cũng được coi là 1 đa thức, gọi là \textit{đa thức không}. Ta thường ký hiệu đa thức (1 biến) bằng 1 chữ cái in hoa. E.g., $A(x)$ là đa thức 1 biến $x$ còn $A(y)$ là đa thức 1 biến $y$. \fbox{\bf 4} Thu gọn đa thức (1 biến) là làm cho đa thức đó không còn 2 đơn thức nào có cùng bậc của biến. Sắp xếp đa thức (1 biến) theo số mũ giảm dần (hoặc tăng dần) của biến là sắp xếp các hạng tử trong dạng đã thu gọn của đa thức đó theo số mũ giảm dần (hoặc tăng dần). \fbox{\bf 5} Bậc của 1 đa thức 1 biến đã thu gọn (khác đa thức không) là số mũ cao nhất của biến trong đa thức đó. \textit{Chú ý}: Trong dạng thu gọn của đa thức, hệ số của lũy thừa với số mũ cao nhất của biến gọi là \textit{hệ số cao nhất} của đa thức. Hạng tử không chứa biến gọi là \textit{hạng tử tự do} của đa thức. \fbox{\bf 6} Nghiệm của đa thức 1 biến: Nếu tại $x = a$ mà đa thức $P(x)$ có giá trị bằng $0$ (i.e., $P(a) = 0$) thì $x = a$ là 1 nghiệm của đa thức. \fbox{\bf 7} 1 đa thức (khác đa thức không) có thể có 1 nghiệm, 2 nghiệm, $\ldots$ hoặc không có nghiệm nào (0 nghiệm). 1 đa thức bậc $n$ có không quá $n$ nghiệm. \fbox{\bf 8} Mỗi đa thức bậc nhất biến $x$ đều có thể viết dưới dạng $ax + b$ trong đó hệ số $a,b$ là các số cho trước (hằng số), $a\ne0$. Ta gọi đa thức $ax + b$ như thế là \textit{nhị thức bậc nhất}. Mỗi đa thức bậc 2 biến $x$ đều có thể viết dưới dạng $ax^2 + bx + c$ trong đó các hệ số $a,b,c\in\mathbb{R}$, $a\ne 0$\footnote{Vì nếu $a = 0$, $ax^2 + bx + c$ trở thành đa thức bậc nhất $bx + c$ chứ không còn là 1 đa thức bậc 2 nữa.}, là các số cho trước (hằng số thực). Ta gọi đa thức $ax^2 + bx + c$ như thế là \textit{tam thức bậc 2}.'' -- \cite[Chap. III, \S2, p. 39]{Tuyen_Toan_7}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 3., p. 52--53]
+	Cho 2 đa thức $P(y) = -12y^4 + 5y^4 + 13y^3 - 6y^3 + y -1 + 9$, $Q(y) = -20y^3 + 31y^3 + 6y - 8y + y - 7 + 11$. (a) Thu gọn mỗi đa thức trên rồi sắp xếp mỗi đa thức theo số mũ giảm dần của biến. (b) Tìm bậc, hệ số cao nhất \& hệ số tự do của mỗi đa thức đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 3., pp. 52--53]
+	Cho đa thức $P(x) = ax^2 + bx + c$, $a\ne0$. Chứng tỏ: (a) $P(0) = c$. (b) $P(1) = a + b + c$. (c) $P(-1) = a - b + c$. (d) Tính $P(2),P(-2),P(3),P(-3),P\left(\frac{1}{2}\right),P\left(-\frac{1}{2}\right)$. (e) Tính $P(x) + P(-x)$ với $x\in\mathbb{R}$. (f) Tính $P(x) + P\left(\frac{1}{x}\right)$ với $x\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 6., p. 53]
+	Theo tiêu chuẩn của Tổ chức Y tế Thế Giới (WHO), đối với bé gái, công thức tính cân nặng chuẩn là $C = 9 + 2(N - 1)$ \emph{kg}, công thức tính chiều cao chuẩn là $H = 75 + 5(N - 1)$ \emph{cm}, trong đó $N$ là số tuổi của bé gái. (a) Tính cân nặng chuẩn, chiều cao chuẩn của 1 bé gái $3$ tuổi. (b) 1 bé gái $3$ tuổi nặng $13.5$\emph{kg} \& cao $86$\emph{cm}. Bé gái đó có đạt tiêu chuẩn về cân nặng \& chiều cao của Tổ chức Y tế Thế giới hay không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 7., p. 52--53]
+	Nhà bác học Galileo Galilei (1564--1642) là người đầu tiên phát hiện ra quãng đường chuyển động của vật rơi tự do tỷ lệ thuận với bình phương của thời gian chuyển động. Quan hệ giữa quãng đường chuyển động $y$ \emph{m} \& thời gian chuyển động $x$ \emph{s} được biểu diễn gần đúng bởi công thức $y = 5x^2$. Trong 1 thí nghiệm vật lý, người ta thả 1 vật nặng từ độ cao $180$\emph{m} xuống đất (coi sức cản của không khí không đáng kể). (a) Sau $3$\emph{s} thì vật nặng còn cách mặt đất bao nhiêu \emph{m}? (b) Khi vật nặng còn cách mặt đất $100$\emph{m} thì nó đã rơi được thời gian bao lâu? (c) Sau bao lâu thì vật chạm đất?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 8., p. 53]
+	Pound là 1 đơn vị đo khối lượng truyền thống của Anh, Mỹ \& 1 số quốc gia khác. Công thức tính khối lượng $y$ \emph{kg} theo $x$ pound là $y = 0.45359237x$. (a) Tính giá trị của $y$ \emph{kg} khi $x = 100$ pound. (b) 1 hãng hàng không quốc tế quy định mỗi hành khác được mang 2 va li không tính cước; mỗi va li cân nặng không vượt quá $23$ \emph{kg}. Hỏi với va li cân nặng $50.99$ pound sau khi quy đổi sang kilogram \& được phép làm tròn đến hàng đơn vị thì có vượt quá quy định trên hay không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, p. 41]
+	Biểu thức nào sau đây là đa thức 1 biến? Tìm biến \& bậc của đa thức đó. (a) $x^2 + 2$. (b) $2t^5 - 25t^4 + 2t + 1$. (c) $\sqrt{2}x^4 - \sqrt{3}x^3 + \sqrt{5} + 1$. (d) $4x + 2y$. (e) $\frac{1}{x - 2}$. (f) $\frac{-3x^2y^3}{5}$. (g) $5x^3 - 4x^2 + 2$. (h) $-6t^7 + 4t + 8t^9 - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 2, p. 42]
+	Cho 2 đa thức: $P(x) = x - 2x^2 + 3x^5 + x^4 + x$, $Q(x) = 3 - 2x - 2x^2 + x^4 - 3x^6 - x^4 + 4x^2$. (a) Thu gọn \& sắp xếp mỗi đa thức trên theo số mũ giảm dần của biến. (b) Xác định bậc, hệ số cao nhất \& hệ số tự do của mỗi đa thức đó. (c) Chứng minh $x = 0$ là nghiệm của $P(x)$ nhưng không là nghiệm của $Q(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 17., p. 42]
+	Lực $F(N)$ của gió khi thổi vuông góc vào cánh buồm tỷ lệ thuận với bình phương vận tốc $v$\emph{m\texttt{/}s} của gió, ta có công thức $F = 30v^2$. (a) Tính lực $F$ khi $v = 15$, $v = 20$. (b) Biết cánh buồm chỉ có thể chịu được áp lực tối đa là $12000$\emph{N}, hỏi con thuyền có thể đi được trong gió bão với vận tốc gió $90$\emph{km\texttt{/}h} không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 18., pp. 42--43]
+	Dung tích phổi của mỗi người phụ thuộc vào 1 số yếu tố, trong đó có 2 yếu tố quan trọng là chiều cao \& độ tuổi. Các nhà khoa học đã đưa ra công thức ước tính dung tích chuẩn phổi của mỗi người theo giới tính như sau: Nam: $P = 0.057h - 0.022a - 4.23$; Nữ: $Q = 0.041h - 0.018a - 2.69$. Trong đó: $h$ là chiều cao tính bằng \emph{cm}; $a$ là tuổi tính bằng năm; $P,Q$ là dung tích chuẩn của phổi tính bằng \emph{l}. (a) Theo công thức trên, nếu Chi (nữ) $13$ tuổi, cao $150$\emph{cm} \& Hùng (nam) $13$ tuổi, cao $160$\emph{cm} thì dung tích chuẩn phổi của mỗi bạn là bao nhiêu? (b) Tính dung tích chuẩn phổi của mình theo công thức trên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 19., p. 43]
+	Cho đa thức $R(x) = x^2 + 5x^4 - 3x^3 + x^2 + 4x^4 + 3x^3 - x + 5$. (a) Thu gọn \& sắp xếp đa thức $R(x)$ theo số mũ giảm dần của biến. (b) Tìm bậc của đa thức $R(x)$. (c) Tìm hệ số cao nhất \& hệ số tự do của đa thức $R(x)$. (d) Tính $R(-1),R(0),R(1),R(-a)$ với $a\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 20., p. 43]
+	Cho đa thức $P(x) = 4x^4 + 2x^3 - x^4 - x^2$. (a) Tìm bậc, hệ số cao nhất, hệ số tự do của đa thức $P(x)$. (b) Mỗi phần tử của tập hợp $\left\{-1,\frac{1}{2}\right\}$ có là nghiệm của đa thức $P(x)$ không? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 21., p. 43]
+	Tìm bậc của mỗi đa thức sau: (a) $2 - 3x^2 + 5x^4 - x - x^2 - 5x^4 + 3x^3$. (b) $2x^3 - 6x^7$. (c) $1 - x$. (d) $-3$. (e) $0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 22., p. 43]
+	Kiểm tra xem: (a) $x = \pm\frac{1}{2}$ có là nghiệm của đa thức $P(x) = 2x - 1$ không. (b) $x = 2$, $x = -\frac{1}{2}$ có là nghiệm của đa thức $P(x) = -3x + 6$ không. (c) $t = 0$, $t = 2$ có là nghiệm của đa thức $R(t) = t^2 + 2t$ không. (d) $t = 0$, $t = \pm1$ có là nghiệm của đa thức $H(t) = t^3 - t$ không.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 23., p. 43]
+	Chứng tỏ các đa thức sau không có nghiệm: (a) $x^2 + 4$. (b) $10x^2 + \frac{3}{4}$. (c) $(x - 1)^2 + 7$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 44, p. 40]
+	Cho các đơn thức $A = -\frac{4}{9}ax^3$, $B = \frac{3}{8}ax^5$ trong đó $a\in\mathbb{R}$ là số đã biết (hằng số). Có giá trị nào của biến $x$ làm cho $A$ \& $B$ cùng có giá trị âm không?
+\end{baitoan}
+
+\begin{nhanxet}
+	``Trong đơn thức cũng như trong đa thức nói chung, ngoài chữ chỉ biến số có thể còn có những chữ khác đại diện cho những số đã biết mà ta gọi là \emph{hằng số}.'' -- \cite[p. 40]{Tuyen_Toan_7}
+\end{nhanxet}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 45, p. 40]
+	Cho các đa thức $f(x) = ax^3 + 4x(x^2 - 1) + 8$, $g(x) = x^3 - 4x(bx + 1) + c - 3$ trong đó $a,b,c\in\mathbb{R}$ là những hằng số. (a) Thu gọn \& sắp xếp mỗi đa  thức trên theo số mũ giảm dần của biến. (b) Xác định các hệ số $a,b,c$ để $f(x) = g(x)$.
+\end{baitoan}
+
+\begin{nhanxet}
+	``2 đa thức cùng biến bằng nhau $\Leftrightarrow$ các hệ số của lũy thừa cùng bậc bằng nhau.'' -- \cite[p. 40]{Tuyen_Toan_7}
+\end{nhanxet}
+I.e., với $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$, $Q(x) = \sum_{i=0}^m b_ix^i = b_mx^m + b_{m-1}x^{m-1} + \cdots + b_1x + b_0$, $m,n\in\mathbb{N}$, $a_i,b_j\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, $\forall j = 1,\ldots,m$, thì
+\begin{equation*}
+	P(x) = Q(x),\ \forall x\in\mathbb{R}\Leftrightarrow\left\{\begin{split}
+		m &= n,\\
+		a_i &= b_i,\ \forall i = 1,2,\ldots,n.
+	\end{split}\right.
+\end{equation*}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 46, p. 40]
+	Cho đa thức $f(x) = x^2 + 4x - 5$. (a) Số $-5$ có phải là nghiệm của $f(x)$ không? (b) Viết tập hợp $S$ tất cả ác nghiệm của $f(x)$.
+\end{baitoan}
+
+\begin{nhanxet}
+	``Đa thức có tổng các hệ số bằng $0$ thì có 1 nghiệm là $1$. Nếu tổng các hệ số bậc chẵn bằng tổng các hệ số bậc lẻ thì đa thức có 1 nghiệm là $-1$'' -- \cite[p. 40]{Tuyen_Toan_7}
+\end{nhanxet}
+I.e., với $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$, $n\in\mathbb{N}$, $a_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, thì
+\begin{align*}
+	\sum_{i=0}^n a_i = 0&\Leftrightarrow P(1) = 0,\\
+	\sum_{i=0,\,i\divby 2}^n a_i = \sum_{i=0,\,i\not\,\divby 2}^n a_i&\Leftrightarrow P(-1) = 0.
+\end{align*}
+Thật vậy, vì $P(1) = \sum_{i=0}^n a_i1^i = a_n1^n + a_{n-1}1^{n-1} + \cdots + a_11 + a_0 = a_n + a_{n-1} + \cdots + a_1 + a_0 = \sum_{i=0}^n a_i$ \& $P(-1) = \sum_{i=0}^n a_i(-1)^i = a_n(-1)^n + a_{n-1}(-1)^{n-1} + \cdots + a_1(-1) + a_0 = \sum_{i=0,\,i\divby 2}^n a_i - \sum_{i=0,\,i\not\,\divby 2}^n a_i$.
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 160., p. 40]
+	Cho biểu thức $M = (4a + 1)x^3$ với $a\in\mathbb{R}$ là hằng số. Hỏi biểu thức $M$ có phải là đơn thức không? Nếu $M$ là đơn thức thì cho biết bậc của $M$ \& hệ số của nó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 161., p. 40]
+	Viết đơn thức $64x^6$ dưới dạng lũy thừa của 1 đơn thức.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 162., p. 40]
+	Cho 3 đơn thức $M = -5x$, $N = 11x$, $P = \frac{7}{5}x^2$. Chứng minh 3 đơn thức này không thể có cùng giá trị dương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 163., p. 41]
+	Cho đơn thức $A = 5m(x^2)^2$, $B = -\frac{2}{m}x^4$ trong đó $m$ là hằng số dương. (a) 2 đơn thức $A$ \& $B$ có cùng bậc không? (b) Tính hiệu $A - B$. (c) Tính giá trị nhỏ nhất của hiệu $A - B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 164., p. 41]
+	Viết các số tự nhiên sau dưới dạng 1 đa thức thu gọn: (a) $\overline{xxx}$. (b) $\overline{x1x2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 165., p. 41]
+	Cho đa thức $A(x) = x^8 - 101x^7 + 101x^6 - 101x^5 + \cdots + 101x^2 - 101x + 25$. Tính $A(100)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 166., p. 41]
+	Cho $f(x) = (8x^2 + 5x - 10)^{49}(3x^3 - 10x^2 + 6x + 1)^{50}$. Sau khi thu gọn thì tổng các hệ số của $f(x)$ là bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 167., p. 41]
+	Cho tam thức bậc 2 $f(x) = ax^2 + bx + c$ trong đó $7a + b = 0$. Hỏi $f(10)f(-3)$ có thể là số âm không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 168., p. 41]
+	Cho nhị thức bậc nhất $f(x) = ax + b$. Xác định các hệ số $a,b$. Biết $f(1) = 2$, $f(3) = 8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 169., p. 41]
+	Cho tam thức bậc 2 $f(x) = ax^2 + bx + c$. Xác định các hệ số $a,b,c$ biết $f(1) = 4$, $f(-1) = 8$, \& $a - c = -4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 170., p. 41]
+	Cho $f(x) = 2x^2 + ax + 4$ ($a\in\mathbb{R}$ là hằng số), $g(x) = x^2 - 5x - b$ ($b\in\mathbb{R}$ là hằng số). Tìm các hệ số $a,b$ sao cho $f(1) = g(2)$ \& $f(-1) = g(5)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 171., p. 41]
+	Tìm nghiệm của đa thức sau: (a) $(x - 3)(4 - 5x)$. (b) $x^2 - 2$. (c) $x^2 - \sqrt{3}$. (d) $x^2 + 2x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 172., p. 41]
+	Thu gọn rồi tìm nghiệm của đa thức sau: (a) $f(x) = x(1 - 2x) + (2x^2 - x + 4)$. (b) $g(x) = x(x - 5) - x(x + 2) + 7x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 173., p. 41]
+	Xác định hệ số $m$ để các đa thức sau nhận $1$ là nghiệm: (a) $mx^2 + 2x + 8$. (b) $7x^2 + mx - 1$. (c) $x^5 - 3x^2 + m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 174., p. 41]
+	Cho đa thức $f(x) = x^2 + mx + 2$. (a) Xác định $m$ để $f(x)$ nhận $-2$ là 1 nghiệm. (b) Tìm tập hợp các nghiệm của $f(x)$ ứng với giá trị vừa tìm được của $m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 175., p. 41]
+	Cho các nhị thức bậc nhất $f(x) = ax + b$ \& $g(x) = bx + a$. Chứng minh nếu $x_0$ là nghiệm của $f(x)$ thì $\frac{1}{x_0}$ là nghiệm của $g(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 176., p. 41]
+	Cho biết $(x - 1)f(x) = (x + 4)f(x + 8)$, $\forall x\in\mathbb{R}$. Chứng minh $f(x)$ có ít nhất 2 nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_7}, 176., p. 41]
+	Cho biết $(x + a)f(x + b) = (x + c)f(x + d)$, $\forall x\in\mathbb{R}$d, với $a,b,c,d\in\mathbb{R}$, khác nhau đôi một. Chứng minh $f(x)$ có ít nhất 2 nghiệm.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Phép $\pm$ Đa Thức 1 Biến}
+``\fbox{\bf 1} \textit{Cộng 2 đa thức 1 biến.} Để cộng 2 đa thức 1 biến (theo cột dọc), ta có thể làm như sau: (a) Thu gọn mỗi đa thức \& sắp xếp 2 đa thức đó cùng theo số mũ giảm dần\texttt{/}tăng dần của biến; (b) Đặt 2 đơn thức có cùng số mũ của biến ở cùng cột; (c) Cộng 2 đơn thức trong từng cột, ta có tổng cần tìm. Để cộng 2 đa thức 1 biến (theo hàng ngang), ta có thể làm như sau: (a) Thu gọn mỗi đa thức \& sắp xếp đa thức đó cùng theo số mũ giảm dần\texttt{/}tăng dần của biến; (b) Viết tổng 2 đa thức theo hàng ngang; (c) Nhóm các đơn thức có cùng số mũ của biến với nhau; (d) Thực hiện phép tính trong từng nhóm, ta được tổng cần tìm. \fbox{\bf 2} \textit{Trừ 2 đa thức 1 biến.} Để trừ đa thức $P(x)$ cho đa thức $Q(x)$ (theo cột dọc), ta có thể làm như sau: (a) Thu gọn mỗi đa thức \& sắp xếp 2 đa thức đó cùng theo số mũ giảm dần\texttt{/}tăng dần của biến; (b) Đặt đơn thức có cùng số mũ của biến ở cùng cột sao cho đơn thức của $P(x)$ ở trên \& đơn thức của $Q(x)$ ở dưới; (c) Trừ 2 đơn thức trong từng cột, ta có hiệu cần tìm. Để trừ đa thức $P(x)$ cho đa thức $Q(x)$ (theo hàng ngang), ta có thể làm như sau: (a) Thu gọn mỗi đa thức \& sắp xếp 2 đa thức đó cùng theo số mũ giảm dần\texttt{/}tăng dần của biến; (b) Viết hiệu $P(x) - Q(x)$ theo hàng ngang, trong đó đa thức $Q(x)$ được đặt trong dấu ngoặc; (c) Sau khi bỏ dấu ngoặc \& đổi dấu mỗi đơn thức trong dạng thu gọn của đa thức $Q(x)$, nhóm các đơn thức có cùng số mũ của biến với nhau; (d) Thực hiện phép tính trong từng nhóm, ta được hiệu cần tìm.'' -- \cite[\S3, pp. 44--45]{SBT_Toan_7_Canh_Dieu_tap_2}
+
+``\fbox{\bf 1} Để cộng 2 đa thức 1 biến theo hàng ngang ta thực hiện theo các bước sau: (a) Viết mỗi đa thức vào trong ngoặc \& nối với nhau bởi dấu cộng. (b) Bỏ dấu ngoặc rồi nhóm các hạng tử cùng bậc theo thứ tự giảm dần\texttt{/}tăng dần. (c) Thực hiện phép tính trong từng nhóm ta được tổng cần tìm. Ta cũng có thể cộng 2 đa thức 1 biến theo cột dọc bằng cách: (a) Thu gọn \& sắp xếp mỗi đa thức theo thứ tự giảm dần\texttt{/}tăng dần. (b) Đặt các đa thức theo cột dọc, các hạng tử cùng bậc thẳng cột với nhau. (c) Cộng từng cột ta được tổng cần tìm. \fbox{\bf 2} Để trừ 2 đa thức 1 biến theo hàng ngang ta thực hiện như sau: (a) Viết mỗi đa thức vào trong ngoặc \& nối với nhau bởi dấu trừ. (b) Bỏ dấu ngoặc rồi nhóm các hạng tử cùng bậc theo thứ tự bậc giảm dần\texttt{/}tăng dần. (c) Thực hiện phép tính trong từng nhóm ta được hiệu cần tìm. Ta cũng có thể trừ 2 đa thức theo cột dọc, tương tự như cộng 2 đa thức theo cột dọc. \fbox{\bf 3} Phép cộng đa thức cũng có tính chất như phép cộng các số thực.'' -- \cite[Chap. III, \S3, p. 42]{Tuyen_Toan_7}
+
+\begin{baitoan}
+	Tính: (a) $ax^k + bx^k$, $\forall a,b\in\mathbb{R}$, $\forall k\in\mathbb{N}$. (b) $ax^k + bx^k + cx^k$, $\forall a,b,c\in\mathbb{R}$, $\forall k\in\mathbb{N}$. (c) $\sum_{i=1}^n a_ix^k = a_1x^k + a_2x^k + \cdots + a_nx^k$, $\forall a_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, $\forall k\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, p. 55]
+	Tính tổng của 2 đa thức: $P(x) = 5x^3 + 2x^2 + 3x + 1$ \& $Q(x) = 2x^3 - 4x^2 + 2x + 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 1., p. 59]
+	Cho 2 đa thức: $R(x) = -8x^4 + 6x^3 + 2x^2 - 5x + 1$ \& $S(x) = x^4 - 8x^3 + 2x + 3$. Tính: (a) $R(x) + S(x)$. (b) $R(x) - S(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 2., p. 59]
+	Xác định bậc của 2 đa thức là tổng, hiệu của: $A(x) = -8x^5 + 6x^4 + 2x^2 - 5x + 1$ \& $B(x) = 8x^5 + 8x^3 + 2x - 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 3., p. 59]
+	Bác Ngọc gửi ngân hàng thứ nhất $90$ triệu đồng với kỳ hạn 1 năm, lãi suất $x$\%\emph{\texttt{/}}năm. Bác Ngọc gửi ngân hàng thứ 2 $80$ triệu đồng với kỳ hạn 1 năm, lãi suất $(x + 1.5)$\%\emph{\texttt{/}}năm. Hết kỳ hạn 1 năm, bác Ngọc có được cả gốc \& lãi là bao nhiêu: (a) Ở ngân hàng thứ 2? (b) Ở cả 2 ngân hàng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 4., p. 59]
+	Người ta rót nước từ 1 can đựng $10$ lít nước sang 1 bể rỗng có dạng hình lập phương với độ dài cạnh $20$\emph{cm}. Khi mực nước trong bể cao $h$ \emph{cm} thì thể tích nước trong can còn lại là bao nhiêu? Biết $1{\rm l} = 1{\rm dm}^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 5., p. 59]
+	\emph{Đ\texttt{/}S?} (a) Tổng của 2 đa thức bậc 4 luôn luôn là đa thức bậc 4. (b) Hiệu của 2 đa thức bậc 4 luôn luôn là đa thức bậc 4. (c) Tổng \& hiệu của 2 đa thức bậc $n\in\mathbb{N}$ luôn là đa thức bậc $n$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) S, e.g., chọn $P(x) = x^4$, $Q(x) = -x^4$ thì $P(x) + Q(x) = 0$ là đa thức bậc 0. (b) S, e.g., chọn $P(x) = x^4$, $Q(x) = x^4$ thì $P(x) - Q(x) = 0$ là đa thức bậc 0. (c)
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, p. 45]
+	Cho 2 đa thức: $M(x) =  x^3 - 2x^2 + 7x - 1$, $N(x) = x^3 - 2x^2 - x - 1$. (a) Tính $M(x) + N(x)$, $M(x) - N(x)$ theo cột dọc. (b) $x = 0$, $x = -1$ có là nghiệm của đa thức $M(x) + N(x)$ hoặc $M(x) - N(x)$ hay không? (c) Tính giá trị của 2 biểu thức $M(x) + N(x)$, $M(x) - N(x)$ tại $x = -\frac{3}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 2, p. 46]
+	Tính: (a) $(x^5 - 3x^4 + x^2 - 5) - (2x^4 + 7x^3 - x^2 + 6)$. (b) $(x^5 - 3x^4 + x^2 - 5) + (2x^4 + 7x^3 - x^2 + 6)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 25., p. 46]
+	Cho đa thức $F(x) = x^7 - \frac{1}{2}x^3 + x + 1$. (a) Tìm đa thức $Q(x)$ sao cho $F(x) + Q(x) = x^5 - x^3 + 2$. (b) Tìm đa thức $R(x)$ sao cho $F(x) - R(x) = 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 26., p. 45]
+	Tìm các đa thức $P(x),Q(x)$ biết $P(x) + Q(x) = x^2 + 1$ \& $P(x) - Q(x) = 2x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 27., p. 46]
+	Cho 2 đa thức $F(x) = x^4 + x^3 - 3x^2 + 2x - 9$, $G(x) = -x^4 + 2x^2 - x + 8$. (a) Tìm đa thức $H(x)$ sao cho $H(x) = F(x) + G(x)$. (b) Tìm bậc của đa thức $H(x)$. (c) Kiểm tra xem $x = 0$, $x = \pm1$ có là nghiệm của đa thức $H(x)$ không. (d) Tìm đa thức $K(x)$ sao cho $H(x) - K(x) = \frac{1}{2}x^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 28., p. 47]
+	(a) Cho các đa thức: $A(x) = x^2 - 0.45x + 1.2$, $B(x) = 0.8x^2 - 1.2x$, $C(x) = 1.6x^2 - 2x$. Tính $A(x) + B(x) - C(x)$. (b) Cho các đa thức: $M(y) = y^2 - 1.75y - 3.2$, $N(y) = 0.3y^2 + 4$, $P(y) = 2y - 7.2$. Tính $M(y) - N(y) - P(y)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 29., p. 47]
+	Mỗi chiếc bút bi được bán với giá $x$ đồng. Mỗi kẹp tóc có giá đắt hơn mỗi chiếc bút bi là $7000$ đồng, mỗi quyển truyện tranh có giá đắt gấp $5$ lần mỗi chiếc bút bi. Khanh mua $4$ chiếc kẹp tóc \& $5$ chiếc bút bi. Dung mua $1$ quyển truyện tranh, $3$ chiếc kẹp tóc, \& $10$ chiếc bút bi. (a) Tính số tiền mỗi bạn phải trả theo $x$. (b) Tính tổng số tiền mà cửa hàng nhận được từ 2 bạn Khanh \& Dung theo $x$. (c) Nếu Minh chỉ có $70000$ đồng \& muốn mua hàng sao cho có đủ cả 3 món đồ (bút bi, kẹp tóc, truyện tranh) thì Minh có thể mua được nhiều nhất bao nhiêu chiếc kẹp tóc, biết giá mỗi chiếc bút bi là $5000$ đồng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 30., p. 47]
+	Cho 2 đa thức: $F(x) = 2x^4 - x^3 + x - 3$, $G(x) = -x^3 + 5x^2 + 4x + 2$. (a) Tìm đa thức $H(x)$ sao cho $F(x) + H(x) = 0$. (b) Tìm đa thức $K(x)$ sao cho $K(x) - G(x) = F(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 47, p. 42]
+	Cho các đa thức biến $x$: $A = 7x + 5a$, $B = 2x - 9a$, $C = x + 10a$, trong đó $a$ là hằng số, $a,x\in\mathbb{Z}$. Không cần thực hiện phép nhân, cho biết tích $ABC$ có giá trị là 1 số chẵn hay lẻ?
+\end{baitoan}
+
+\begin{nhanxet}
+	``Trong phép nhân các số nguyên, tích là 1 số lẻ thì tất cả các thừa số đều là số lẻ. Tích là số chẵn thì có ít nhất 1 thừa số là số chẵn.''
+\end{nhanxet}
+I.e., $\prod_{i=1}^n a_i = a_1a_2\cdots a_n\divby2\Leftrightarrow\exists i\in\{1,2,\ldots,n\}$ s.t. $a_i\divby2$ (ký hiệu $\exists$ là \textit{tồn tại}). $\prod_{i=1}^n a_i = a_1a_2\cdots a_n\not\,\divby2\Leftrightarrow a_i\not\,\divby2$, $\forall i = 1,2,\ldots,n$.
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 177., p. 42]
+	Cho đa thức $A = 7x^4 - 2x^3 + x - 9$, $B = -5x^4 + 2x^3 - 4x^2 - 6x - 1$. Tính tổng $A + B$ \& hiệu $A - B$ bằng 2 cách.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 178., p. 42]
+	Tính tổng $S = \overline{a1} + \overline{a17} + \overline{1a} - \overline{1a7}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 179., p. 42]
+	Chứng minh tổng của 4 số lẻ liên tiếp thì chia hết cho $8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 180., p. 42]
+	Cho đa thức $A = 16x^4 - 8x^3 + 7x^2 - 9$, $B = -15x^4 + 3x^3 - 5x^2 - 6$, $C = 5x^3 + 3x^2 + 18$. Chứng minh ít nhất 1 trong 3 đa thức này có giá trị dương với mọi $x\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 181., p. 42]
+	Cho đa thức $A = 2x^2 + |7x - 1| - (5 - x + 2x^2)$. (a) Thu gọn $A$. (b) Tìm $x\in\mathbb{R}$ để $A$ có giá trị bằng $2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 182., p. 43]
+	Cho $f(x) + g(x) = 6x^4 - 3x^2 - 5$, $f(x) - g(x) = 4x^4 - 6x^3 + 7x^2 + 8x - 9$. Tìm các đa thức $f(x),g(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 183., p. 43]
+	Cho $f(x) = x^{2n} - x^{2n-1} + \cdots + x^2 - x + 1$, $g(x) = -x^{2n+1} + x^{2n} - x^{2n-1} + \cdots + x^2 - x + 1$, với $n\in\mathbb{N}$. Tính giá trị của hiệu $f(x) - g(x)$ tại $x = \frac{1}{10}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 184., p. 43]
+	Bên trong khu đất hình vuông cạnh $3x$ \emph{m} có khu vực chăn nuôi hình chữ nhật kích thước $x$ \emph{m} \& $5$\emph{m}. (a) Tính diện tích $S$ còn lại để làm vườn cây. (b) Tìm nghiệm của đa thức $S$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Phép Nhân Đa Thức 1 Biến}
+``\fbox{\bf 1} \textit{Nhân đơn thức với đơn thức.} Muốn nhân đơn thức $A$ với đơn thức $B$, ta làm như sau: (a) Nhân hệ số của đơn thức $A$ với hệ số của đơn thức $B$; (b) Nhân lũy thừa của biến trong $A$ với lũy thừa của biến đó trong $B$; (c) Nhân các kết quả vừa tìm được với nhau. $ax^m\cdot bx^n = a\cdot b\cdot x^m\cdot x^n = abx^{m+n}$, $\forall a,b\in\mathbb{R}$, $\forall m,n\in\mathbb{N}$. \fbox{\bf 2} \textit{Nhân đơn thức với đơn thức.} Muốn nhân 1 đơn thức với 1 đa thức, ta nhân đơn thức đó với từng đơn thức của đa thức rồi cộng các tích với nhau: $A(B + C) = AB + AC$, $A(B - C) = AB - AC$.\footnote{Có thể viết gộp 2 công thức này lại thành: $A(B\pm C) = AB\pm AC$.} \fbox{\bf 3} \textit{Nhân đa thức với đa thức.} Muốn nhân 1 đa thức với 1 đa thức, ta nhân mỗi đơn thức của đa thức này với từng đơn thức của đa thức kia rồi cộng các tích với nhau: $(A + B)(C + D) = AC + AD + BC + BD$.'' -- \cite[Chap. VI, \S4, pp. 47--48]{SBT_Toan_7_Canh_Dieu_tap_2}
+
+``\fbox{\bf 1} Muốn nhân 1 đơn thức với 1 đa thức, ta nhân đơn thức với từng hạng tử của đa thức rồi cộng các tích với nhau. $A(B + C) = AB + AC$. \fbox{\bf 2} Muốn nhân 1 đa thức với 1 đa thức, ta nhân mỗi hạng tử của đa thức này với từng hạng tử của đa thức kia rồi cộng các tích với nhau. \fbox{\bf 3} Phép nhân đa thức cũng có các tính chất giao hoán, kết hợp, phân phối của phép nhân đối với phép cộng.'' -- \cite[Chap. III, \S4, p. 43]{Tuyen_Toan_7}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, 1, p. 60]
+	Tính: (a) $2x^3\cdot5x^4$. (b) $-4x^m\cdot6x^n$, $\forall m,n\in\mathbb{N}$. (c) $3x^5\cdot5x^8$. (d) $-2x^{m+2}\cdot4x^{n-2}$, $\forall m,n\in\mathbb{N}$, $n > 2$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $2x^3\cdot5x^4 = 2\cdot5x^3x^4 = 10x^{3+4} = 10x^7$. (b) $-4x^m\cdot6x^n = -4\cdot6x^mx^n = -24x^{m+n}$. (c) $3x^5\cdot5x^8 = 3\cdot5x^5x^8 = 15x^{5+8} = 15x^{13}$. (d) $-2x^{m+2}\cdot4x^{n-2} = -2\cdot4x^{m+2}x^{n-2} = -8x^{m+2+n-2} = -8x^{m+n}$, $\forall m,n\in\mathbb{N}$, $n > 2$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, p. 60]
+	Tính $(x - 1)(x^2 + x + 1)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$(x - 1)(x^2 + x + 1) = x^3 + x^2 + x - x^2 - x - 1 = x^3 + x^2 - x^2 + x - x - 1 = x^3 - 1$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 3, p. 61]
+	Cho đơn thức $P(x) = 2x$ \& đa thức $Q(x) = 3x^2 + 4x + 1$. Tính: (a) $P(x)Q(x)$. (b) $P^2(x)Q(x)$. (c) $P^3(x)Q(x)$. (d) $P^n(x)Q(x)$, $\forall n\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $P(x)Q(x) = 2x(3x^2 + 4x + 1) = 6x^3 + 8x^2 + 2x$. (b) $P^2(x)Q(x) = (2x)^2(3x^2 + 4x + 1) = 4x^2(3x^2 + 4x + 1) = 12x^4 + 16x^3 + 4x^2$. (c) $P^3(x)Q(x) = (2x)^3(3x^2 + 4x + 1) = 8x^3(3x^2 + 4x + 1) = 24x^5 + 32x^4 + 8x^3$. (d)  $P^n(x)Q(x) = (2x)^n(3x^2 + 4x + 1) = 2^nx^n(3x^2 + 4x + 1) = 3\cdot2^nx^{n+2} + 2^{n+2}x^{n+1} + 2^nx^n$, $\forall n\in\mathbb{N}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Ví dụ 2, 2, p. 60]
+	Tính: (a) $x(4x - 3)$. (b) $-3x^2(6x^2 - 8x + 7)$. (c) $\frac{1}{2}x(6x - 4)$. (d) $-x^2\left(\frac{1}{3}x^2 - x - \frac{1}{4}\right)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $x(4x - 3) = 4x^2 - 3x$. (b) $-3x^2(6x^2 - 8x + 7) = -18x^4 + 24x^3 - 21x^2$. (c) $\frac{1}{2}x(6x - 4) = 3x^2 - 2x$. (d) $-x^2\left(\frac{1}{3}x^2 - x - \frac{1}{4}\right) = -\frac{1}{3}x^4 + x^3 + \frac{1}{4}x^2$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 5, p. 60]
+	(a) Cho 2 đa thức $P(x) = 2x + 3$, $Q(x) = x + 1$. Tính $P(x)Q(x)$. (b) Cho $P(x) = ax + b$, $Q(x) = cx + d$. Tính $P(x)Q(x)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $P(x)Q(x) = (2x + 3)(x + 1) = 2x^2 + 2x + 3x + 3 = 2x^2 + 5x + 3$. (b) $P(x)Q(x) = (ax + b)(cx + d) = acx^2 + adx + bcx + bd = acx^2 + (adx + bc)x + bd$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Ví dụ 3, p. 60]
+	Tính: (a) Tích của 2 đa thức: $P(x) = x^2 + x + 1$, $Q(x) = x^2 - x + 1$. (b) $(x^2 - 6)(x^2 + 6)$. (c) $(x - 1)(x^2 + x + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 1., p. 63]
+	Tính: (a) $\frac{1}{2}x^2\cdot\frac{6}{5}x^3$. (b) $y^2\left(\frac{5}{7}y^3 - 2y^2 + 0.25\right)$. (c) $(2x^2 + x + 4)(x^2 - x - 1)$. (d) $(3x - 4)(2x + 1) - (x - 2)(6x + 3)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 2., p. 63]
+	Tìm bậc, hệ số cao nhất, \& hệ số tự do của mỗi đa thức sau: (a) $P(x) = (-2x^2 - 3x + x - 1)(3x^2 - x - 2)$. (b) $Q(x) = (x^5 - 5)(-2x^6 - x^3 + 3)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 3., p. 63]
+	Xét đa thức $P(x) = x^2(x^2 + x + 1) - 3x(x - a) + \frac{1}{4}$ với $a\in\mathbb{R}$. (a) Thu gọn đa thức $P(x)$ rồi sắp xếp đa thức đó theo số mũ giảm dần của biến. (b) Tìm $a$ sao cho tổng các hệ số của đa thức $P(x)$ bằng $\frac{5}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 4., p. 63]
+	Từ tấm bìa hình chữ nhật có kích thước $20$\emph{cm} \& $30$\emph{cm}, Quân cắt đi ở mỗi góc của tấm bìa 1 hình vuông sao cho 4 hình vuông bị cắt đi có cùng độ dài cạnh, sau đó gấp lại để tạo thành hình hộp chữ nhật không nắp. Viết đa thức biểu diễn thể tích của hình hộp chữ nhật được tạo thành theo độ dài cạnh của hình vuông bị cắt đi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 5., p. 63]
+	\emph{(Ảo thuật với đa thức)} Hạnh bảo Ngọc: ``Nếu bạn lấy tuổi của 1 người bất kỳ cộng thêm $5$. Được bao nhiêu đem nhân với 2. Lấy kết quả đó cộng với $10$. Nhân kết quả vừa tìm được với $5$. Đọc kết quả cuối cùng sau khi trừ đi $100$. Mình sẽ đoán được tuổi của người đó.'' Giải thích vì sao Hạnh lại đoán được tuổi người đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, p. 48]
+	Tính: (a) $5x^5\cdot\frac{1}{5}x^7$. (b) $-3x^3\cdot7x^7$. (c) $-x^m\cdot7x^n$, $\forall m,n\in\mathbb{N}$. (d) $\left(-\frac{1}{2}x^5\right)\cdot\left(-\frac{2}{7}x^8\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 2, p. 48]
+	1 mảnh vườn có dạng hình thang với độ dài 2 đáy bằng $x$\emph{m} \& $\frac{2}{7}x$\emph{m}, chiều cao bằng $\frac{8}{63}x$\emph{m}. (a) Tính diện tích của mảnh vườn đó theo $x$. (b) Tính diện tích của mảnh vườn đó khi $x = 63$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 3, p. 49]
+	Khu vườn trồng hoa của nhà bác Lan ban đầu có dạng 1 hình vuông cạnh $x$\emph{m} sau đó được mở rộng bên phải thêm $3$\emph{m}, phía dưới thêm $10$\emph{m} nên trở thành 1 hình chữ nhật. (a) Tính diện tích của khu vườn sau khi được mở rộng theo $x$. (b) Tính diện tích của khu vườn sau khi được mở rộng khi $x = 20$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 31., p. 49]
+	Tính: (a) $\frac{1}{4}x\cdot\left(\frac{1}{2}x^2\right)\cdot\left(-\frac{4}{5}x^3\right)$. (b) $0.5x^{m+1}\cdot0.8x^{m-1}$, $m\in\mathbb{N}$, $m\ge1$. (c) $\left(x^2 - 3x + \frac{1}{4}\right)(-3x^3)$. (d) $(x - 2)(x^2 + x - 1) - x(x^2 - 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 32., p. 49]
+	\emph{Đ\texttt{/}S?} (a) $(x + 0.5)(x^2 + 2x - 0.5) = x^3 + 2.5x^2 - 0.5x - 0.25$. (b) $(x + 0.5)(x - 0.5) = x^2  - 0.25$. (c) $\frac{1}{2}x^3(2x - 1)\left(\frac{1}{4}x + 1\right) = \frac{1}{5}x^5 - \frac{7}{4}x^4 - \frac{1}{2}x^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 33., pp. 49--50]
+	Chứng minh giá trị của các biểu thức sau không phụ thuộc vào biến: (a) $x(2x + 1) - x^2(x + 2) + (x^3 - x + 3)$. (b) $0.2(5x - 3) - \frac{1}{2}\left(\frac{2}{3}x + 6\right) + \frac{2}{3}(3 - x)$. (c) $(2x - 9)(2x + 9) - 4x^2$. (d) $(x^2 + 3x + 9)(x - 3) - (x^3 + 23)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 34., p. 50]
+	Chứng minh: (a) $(x + 1)(x^2 - x + 1) = x^3 - 1$. (b) $(x^3 + x^2 + x + 1)(x - 1) = x^4 - 1$. (c) $(x + a)(x + b) = x^2 + (a + b)x + ab$, $\forall a,b\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 35., p. 50]
+	Tính giá trị của mỗi biểu thức sau: (a) $3(2x - 1) + 5(3 - x)$ tại $x = -\frac{3}{2}$. (b) $2x(6x - 1) - 3x(4x - 1)$ tại $x = -2022$. (c) $(x - 2)(x^2 + x + 1) - x(x^2 - 1)$ tại $x = 0.25$. (d) $2x^2 + 3(x - 1)(x + 1)$ tại $x = \frac{1}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 36., p. 50]
+	Xét đa thức $P(x) = (2x^2 + a)(2x^3 - 3) - 5a(x + 3) + 1$ với $a\in\mathbb{R}$. (a) Thu gọn \& sắp xếp đa thức $P(x)$ theo số mũ giảm dần của biến. (b) Tìm $a\in\mathbb{R}$ sao cho tổng các hệ số của đa thức $P(x)$ bằng $-37$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 37., p. 50]
+	Bể cá cảnh nhà Khôi có dạng hình lập phương với độ dài cạnh $x$\emph{dm}. Ban đầu mực nước ở bể cao $x - 1$\emph{dm}, Khôi đặt 1 khối đá dạng núi cảnh chìm vào nước trong bể thì mực nước ở bể cao thêm $0.5$\emph{dm}. (a) Tính thể tích nước có ở bể lúc đầu theo $x$. (b) Tính thể tích khối đá mà Khôi thả chìm vào nước trong bể theo $x$. (c) Tính thể tích nước \& khối đá mà Khôi thả chìm vào nước trong bể theo $x$.
+\end{baitoan}
+Bài tập phụ thuộc hình vẽ: \cite[38., p. 50]{SBT_Toan_7_Canh_Dieu_tap_2}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 39., p. 51]
+	Từ 1 tấm bìa có dạng hình chữ nhật với độ dài các cạnh là $37$\emph{cm} \& $27$\emph{cm}, người ta cắt đi ở 4 góc của tấm bìa 4 hình vuông cạnh là $x$\emph{cm} \& xếp phần còn lại thành 1 hình hộp chữ nhật không nắp. (a) Tính diện tích xung quanh $S_{\rm xq}(x)$, diện tích toàn phần $S_{\rm tp}(x)$ của hình hộp chữ nhật trên theo $x$. (b) Tính giá trị của $S(x)$ tại $x = 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 40., p. 51]
+	1 ngôi nhà có 4 ô cửa sổ, mỗi ô cửa sổ gồm 1 hình chữ nhật có độ dài các cạnh là $x$\emph{m}, $x + 2$\emph{m} \& 1 nửa hình tròn có 1 đường kính trùng với 1 cạnh nhỏ hơn của hình chữ nhật \& hướng ra ngoài hình chữ nhật. Người ta muốn ốp kính cường lực cho các ô cửa sổ đó. Hỏi cần bao nhiêu mét vuông kính? Biết diện tích của phần khung gỗ là $0.42{\rm m}^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 48, p. 43]
+	Rút gọn biểu thức $A =  (x + 5)(2x - 3) - 2x(x + 3) - (x - 15)$ rồi cho biết bậc của đa thức kết quả.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 49, p. 43]
+	Cho biểu thức $C = x(x + x^3) + (x - 1)(x^2 + x^3) + 1$. Rút gọn biểu thức $C$ rồi chứng minh với 2 giá trị đối nhau của $x$ thì biểu thức $C$ có cùng 1 giá trị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 185., p. 44]
+	Cho biểu thức $B = 5x^2(3x - 2) - (4x + 7)(6x^2 - x) - (7x - 9x^3)$. Rút gọn rồi  tính giá trị của biểu thức $B$ với $x = -\frac{3}{4}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 186., p. 44]
+	Chứng minh giá trị của biểu thức sau không phụ thuộc vào giá trị của biến: $A = (2x - 3)(x + 7) - 2x(x + 5) - x$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 187., p. 44]
+	Cho $ab = 1$. Chứng minh đẳng thức: $a(b + 1) + b(a + 1) = (a + 1)(b + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 188., p. 44]
+	Tìm $x$ biết: $3(x - 2)(x + 3) - x(3x + 1) = 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 189., p. 44]
+	Tính giá trị của biểu thức sau bằng cách hợp lý: (a) $A = x^5 - 100x^4 + 100x^3 - 100x^2 + 100x + 9$ tại $x = 99$. (b) $B = x^6 - 20x^5 - 20x^4 - 20x^3 - 20x^2 - 20x + 3$ tại $x = 21$. (c) $C = x^7 - 26x^6 + 27x^5 - 47x^4 - 77x^3 + 50x^2 + x - 24$ tại $x = 25$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 190., p. 44]
+	Cho 4 số lẻ liên tiếp. Chứng minh hiệu của tích 2 số cuối với tích của 2 số đầu chia hết cho $16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 191., p. 44]
+	Cho 4 số nguyên liên tiếp. Hỏi tích của số đầu với số cuối nhỏ hơn tích của 2 số giữa bao nhiêu đơn vị?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 192., p. 44]
+	Cho $b + c = 100$, chứng minh đẳng thức $(10a + b)(10a + c) = 100a(a + 1) + bc$. Áp dụng để tính nhẩm $62\cdot68$, $43\cdot47$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 193., p. 44]
+	Xác định các hệ số $a,b,c\in\mathbb{R}$ biết: (a) $(2x - 5)(3x + b) = ax^2 + bx + c$, $\forall x\in\mathbb{R}$. (b) $(ax + b)(x^2 - x - 1) = ax^3 + cx^2 - 1$, $\forall x\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 194., p. 44]
+	Cho $m\in\mathbb{N}^\star$, $m < 30$. Có bao nhiêu giá trị của $m$ để đa thức $x^2 + mx + 72$ là tích của 2 đa thức bậc nhất với hệ số nguyên.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Phép Chia Đa Thức 1 Biến}
+``\fbox{\bf 1} \textit{Chia đơn thức cho đơn thức.} Muốn chia đơn thức $A$ cho đơn thức $B\ne0$ khi số mũ của biến trong $A$ lớn hơn hoặc bằng số mũ của biến đó trong $B$, ta làm như sau: (a) Chia hệ số của đơn thức $A$ cho hệ số của đơn thức $B$. (b) Chia lũy thừa của biến trong $A$ cho lũy thừa của biến đó trong $B$. (c) Nhân các kết quả vừa tìm được với nhau. \fbox{\bf 2} \textit{Chia đa thức cho đơn thức.} Muốn chia đa thức $P$ cho đơn thức $Q\ne0$ khi số mũ của biến ở mỗi đơn thức của $P$ lớn hơn hoặc bằng số mũ của biến đó trong $Q$, ta chia mỗi đơn thức của đa thức $P$ cho đơn thức $Q$ rồi cộng các thương với nhau. \fbox{\bf 3} \textit{Chia đa thức 1 biến đã sắp xếp.} Để chia 1 đa thức cho 1 đa thức khác đa thức không (cả 2 đa thức đều đã thu gọn \& sắp xếp các đơn thức theo số mũ giảm dần của biến) khi bậc của đa thức bị chia lớn hơn hoặc bằng bậc của đa thức chia, ta làm như sau: \textit{Bước 1}: (a) Chia đơn thức bậc cao nhất của đa thức bị chia cho đơn thức bậc cao nhất của đa thức chia. (b) Nhân kết quả trên với đa thức chia \& đặt tích dưới đa thức bị chia sao cho 2 đơn thức có cùng số mũ của biến ở cùng cột. (c) Lấy đa thức bị chia trừ đi tích đặt dưới để được đa thức mới. \textit{Bước 2}: Tiếp tục quá trình trên cho đến khi nhận được đa thức không hoặc đa thức có bậc nhỏ hơn bậc của đa thức chia. \fbox{\bf 4} Người ta chứng minh được: Đối với 2 đa thức tùy ý $A,B$ của cùng 1 biến ($B\ne0$), tồn tại duy nhất 1 cặp đa thức $Q,R$ sao cho $A = BQ + R$, trong đó $R = 0$ hoặc bậc của $R$ nhỏ hơn bậc của $B$. Như vậy, đa thức $A$ chia hết cho đa thức $B\Leftrightarrow R = 0$.'' -- \cite[Chap. VI, \S5, pp. 51--52]{SBT_Toan_7_Canh_Dieu_tap_2}
+
+``\fbox{\bf 1} Chia đơn thức $A$ cho đơn thức $B$, $B\ne0$, khi số mũ của biến trong $A$ lớn hơn hoặc bằng số mũ của biến đó trong $B$ ta làm như sau: (a) Chia hệ số của $A$ cho hệ số của $B$. (b) Chia lũy thừa của biến trong $A$ cho lũy thừa của biến đó trong $B$. (c) Nhân các kết quả với nhau: $ax^m:bx^n = \frac{ax^m}{bx^n} = \frac{a}{b}x^{m-n}$, $m\ge n$. \fbox{\bf 2} Muốn chia đa thức $P$ cho đơn thức $Q$, $Q\ne0$, khi số mũ của mỗi biến ở đơn thức $P$ lớn hơn hoặc bằng số mũ của biến đó trong $Q$ ta chia mỗi đơn thức của $P$ cho đơn thức $Q$ rồi cộng các thương với nhau. \fbox{\bf 3} Để chia 1 đa thức cho 1 đa thức khác đa thức không (cả 2 đa thức đều đã thu gọn \& sắp xếp các đa thức theo số mũ giảm dần của biến), bậc của đa thức bị chia lớn hơn hoặc bằng bậc của đa thức chia ta làm như sau: \textit{Bước 1}: (a) Chia đơn thức bậc cao nhất của đa thức bị chia cho đơn thức bậc cao nhất của đa thức chia. (b) Nhân kết quả trên với đa thức chia \& đặt tích dưới đa thức bị chia sao cho 2 đơn thức có cùng số mũ của biến ở từng cột. (c) Lấy đa thức bị chia trừ đi tích đặt ở dưới để được đa thức mới (gọi là \textit{đa thức dư thứ nhất}. \textit{Bước 2}: Tiếp tục quá trình trên cho đến khi nhận được đa thức không hoặc đa thức có bậc nhỏ hơn bậc của đa thức chia. \fbox{\bf 4} Nhận xét: $\bullet$ Khi chia đa thức $A$ cho đa thức $B$ của cùng 1 biến, $B\ne0$, có 2 khả năng xảy ra: (a) Phép chia có đa thức dư là đa thức không. Ta nói đa thức $A$ \textit{chia hết cho} đa thức $B$. (b) Phép chia có đa thức dư là đa thức $R\ne0$ có bậc nhỏ hơn bậc của $B$ ($\deg R < \deg B$). Ta nói phép chia này là phép chia có dư. $\bullet$ Đối với 2 đa thức tùy ý $A,B$ của cùng 1 biến, $B\ne0$, tồn tại duy nhất 1 cặp đa thức $Q,R$ áo cho $A = BQ + R$ trong đó $R = 0$ hoặc bậc của $R$ nhỏ hơn bậc của $B$ ($\deg R < \deg B$). Như vậy đa thức $A$ chia hết cho đa thức $B\Leftrightarrow R = 0$.
+
+\begin{dinhly}[B\'ezout]
+	Số dư trong phép chia đa thức $f(x)$ cho nhị thức bậc nhất $x - a$ đúng bằng $f(a)$.
+\end{dinhly}
+
+\begin{hequa}
+	Nếu $a$ là nghiệm của đa thức $f(x)$ thì $f(x)$ chia hết cho $x - a$.
+\end{hequa}
+Đặc biệt: Nếu tổng các hệ số của đa thức $f(x)$ bằng 0 thì 1 là nghiệm \& $f(x)$ chia hết cho $x - 1$. Nếu $f(x)$ có tổng các hệ số bậc chẵn bằng tổng các hệ số bậc lẻ thì $-1$ là nghiệm \& $f(x)$ chia hết cho $x - (-1)$, i.e., $f(x)$ chia hết cho $x + 1$.'' -- \cite[Chap. III, \S5, pp. 44--45]{Tuyen_Toan_7}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, 1, p. 64]
+	Tính: (a) $x^5:x^3$. (b) $(4x^3):x^2$. (c) $(ax^m):(bx^n)$, $\forall a,b\in\mathbb{R}$, $b\ne0$, $\forall m,n\in\mathbb{N}$, $m\ge n$. (d) $(12x^4):(6x^2)$. (e) $(-24x^m):(6x^n)$, $\forall m,n\in\mathbb{N}$, $m\ge n$. (f) $(3x^6):(0.5x^4)$. (g) $(-12x^{m+2}):(4x^{n+2})$, $\forall m,n\in\mathbb{N}$, $m\ge n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Ví dụ 2, 2, p. 65]
+	Tính: (a) Cho đa thức $P(x) = 4x^2 + 3x$ \& đơn thức $Q(x) = 2x$. Tính $P(x):Q(x)$. (b) $(9x^6 + 6x^4 - x^2):(3x^2)$. (c) $\left(\frac{1}{2}x^4 - \frac{1}{4}x^3 + x\right):\left(-\frac{1}{8}x\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 4, p. 65]
+	Tính: (a) $(2x^2 + 5x + 2):(2x + 1)$. (b) $(3x^3 - 5x^2 + 2):(x^2 + 1)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Kết quả: (a) $(2x^2 + 5x + 2):(2x + 1) = x + 2$. (b) $(3x^3 - 5x^2 + 2):(x^2 + 1) = 3x - 5$ (dư $-3x + 7$), hay $(3x^3 - 5x^2 + 2) = (x^2 + 1)(3x - 5) - 3x + 7$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Ví dụ 3, 3, p. 66]
+	Tính: (a) $(6x^2 - 13x + 6):(-3x + 2)$. (b) $(8x^2 - 10x + 5):(-2x + 1)$. (c) $(x^3 + 1):(x^2 - x + 1)$. (d) $(8x^3 - 6x^2 + 5):(x^2 - x + 1)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Kết quả: (a) $(6x^2 - 13x + 6):(-3x + 2) = -2x + 3$. (b) $(8x^2 - 10x + 5):(-2x + 1) = -4x + 3$ (dư 2) hay $8x^2 - 10x + 5 = (-2x + 1)(-4x + 3) + 2$. (c) $(x^3 + 1):(x^2 - x + 1) = x + 1$. (d) $(8x^3 - 6x^2 + 5):(x^2 - x + 1) = 8x + 2$ (dư $-6x + 3$) hay $8x^3 - 6x^2 + 5 = (x^2 - x + 1)(8x + 2) - 6x + 3$.
+\end{proof}
+Khi chia đa thức $A$ cho đa thức $B$ của cùng 1 biến ($B\ne0$), có 2 khả năng xảy ra: Phép chia có dư bằng $0$. Trong trường hợp này ta nói đa thức $A$ \textit{chia hết cho} đa thức $B$. Phép chia có dư là đa thức $R\ne0$ với bậc của $R$ nhỏ hơn bậc của $B$. Phép chia trong trường hợp này được gọi là \textit{phép chia có dư}. Đối với 2 đa thức tùy ý $A,B$ của cùng 1 biến ($B\ne0$), tồn tại duy nhất 1 cặp đa thức $Q,R$ sao cho $A = BQ + R$, trong đó $R$ bằng $0$ hoặc bậc của $R$ nhỏ hơn bậc của $B$. Như vậy, đa thức $A$ chia hết cho đa thức $B$ khi \& chỉ khi $R = 0$.
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 1., p. 67]
+	Tính: (a) $(4x^3):(-2x^2)$. (b) $(-7x^2):(6x)$. (c) $(-14x^4):(-8x^3)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $(4x^3):(-2x^2) = -2x$. (b) $(-7x^2):(6x) = -\frac{7}{6}x$. (c) $(-14x^4):(-8x^3) = \frac{-14}{-8}x = \frac{7}{4}x$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 2., p. 67]
+	Tính: (a) $(8x^3 + 2x^2 - 6x):(4x)$. (b) $(5x^3 - 4x):(-2x)$. (c) $(-15x^6 - 24x^3):(-3x^2)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $(8x^3 + 2x^2 - 6x):(4x)$. (b) $(5x^3 - 4x):(-2x)$. (c) $(-15x^6 - 24x^3):(-3x^2) = 5x^4 + 8x$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 3., p. 67]
+	Tính: (a) $(x^2 - 2x + 1):(x - 1)$. (b) $(x^3 + 2x^2 + x):(x^2 + x)$. (c) $(-16x^4 + 1):(-4x^2 + 1)$. (d) $(-32x^5 + 1):(-2x + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 4., p. 67]
+	Tính: (a) $(6x^2 - 2x + 1):(3x - 1)$. (b) $(27x^3 + x^2 - x + 1):(-2x + 1)$. (c) $(8x^3 + 2x^2 + x):(2x^3 + x + 1)$. (d) $(3x^4 + 8x^3 - 2x^2 + x + 1):(3x + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 5., p. 67]
+	1 công ty sau khi tăng giá $30$ nghìn đồng mỗi sản phẩm so với giá ban đầu là $2x$ (nghìn đồng) thì có doanh thu là $6x^2 + 170x + 1200$ nghìn đồng. Tính số sản phẩm mà công ty đó đã bán được theo $x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 6., p. 67]
+	1 hình hộp chữ nhật có thể tích là $x^3 + 6x^2 + 11x + 6{\rm cm}^3$. Biết đáy là hình chữ nhật có các kích thước là $x + 1$\emph{cm} \& $x + 2$\emph{cm}. Tính chiều cao của hình hộp chữ nhật đó theo $x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, p. 52]
+	Tính: (a) $(75x^5):(3x^3)$. (b) $\left(-\frac{5}{2}x^4\right):\left(\frac{1}{2}x\right)$. (c) $(-9x^3):\left(-\frac{2}{5}x^2\right)$. (d) $(8x^{n+2}):(3x^4)$, $\forall n\in\mathbb{N}$, $n\ge2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 2, p. 52]
+	Tính: $(8x^9 - 4x^6 + 10x^3):(2x^3)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 3, p. 53]
+	Tính: (a) $(x^3 + 27):(x^2 - 3x + 9)$. (b) $(2x^2 - 6x + 5):(x + 3)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 41., p. 53]
+	Tính: (a) $\left(\frac{3}{4}x^3\right):\left(-\frac{1}{2}x^2\right)$. (b) $(5x^n):(4x^2)$, $\forall n\in\mathbb{N}$, $n\ge2$. (c) $(x^3 - 3x^2 + 6x):\left(-\frac{1}{3}x\right)$. (d) $\left(x + \frac{1}{3}x^2 + \frac{7}{2}x^3\right):(5x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 42., p. 53]
+	(a) Cho đa thức $P(x) = \left(6x^5 - \frac{1}{2}x^4 + \frac{1}{3}x^3\right):(2x^3)$. Rút gọn rồi tính giá trị của $P(x)$ tại $x = -2$. (b) Cho đa thức $Q(x) = 3\left(\frac{2x}{3} - 1\right) + (15x^2 - 10x):(-5x) - (3x - 1)$. Rút gọn rồi tính giá trị của $Q(x)$ tại $x = \frac{1}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 43., p. 54]
+	\emph{Đ\texttt{/}S?} Khi giải bài tập ``Xét xem đa thức $A(x) = -12x^4 + 5x^3 + 15x^2$ có chia hết cho đơn thức $B(x) = 3x^2$ hay không?'', Hồng nói ``Đa thức $A(x)$ không chia hết cho đơn thức $B(x)$ vì $5\not\,\divby3$'', còn Hà nói ``Đa thức $A(x)$ chia hết cho đơn thức $B(x)$ vì số mũ của biến ở mỗi đơn thức của $A(x)$ đều lớn hơn hoặc bằng số mũ của biến đó trong $B(x)$''.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 44., p. 54]
+	Tính: (a) $(3x^3 - 7x^2 + 4x - 4):(x - 2)$. (b) $(x^5 + x + 1):(x^3 - x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 45., p. 54]
+	Cho đa thức $P(x) = 3x^3 - 2x^2 + 5$. Chia đa thức $P(x)$ cho đa thức $Q(x)\ne0$ được thương là đa thức $S(x) = 3x - 2$ \& dư là đa thức $R(x) = 3x + 3$. Tìm $Q(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 46., p. 54]
+	(a) Tìm số dư của phép chia đa thức $4x^4 - 2x^2 + 7$ cho $x + 3$. (b) Tìm đa thức bị chia, biết đa thức chia là $x^2 - 2x + 3$, thương là $x^2 - 2$, dư là $9x - 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 47., p. 54]
+	(a) Tìm $a\in\mathbb{R}$ sao cho $10x^2 - 7x + a$ chia hết cho $2x - 3$. (b) Tìm $a\in\mathbb{R}$ sao cho $x^3 - 10x + a$ chia hết cho $x - 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 48., p. 54]
+	Tìm $n\in\mathbb{Z}$ để $2n^2 - n$ chia hết cho $n + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 49., p. 54]
+	1 mảnh đất có dạng hình thang vuông với đáy bé $AM = 10$\emph{m}, chiều cao là $2x + 5$\emph{m}. Người ta mở rộng mảnh đất đó để được mảnh đất hình chữ nhật $ABCD$ ($M$ nằm giữa $A,B$). Biết $S_{\Delta MBC} = 6x^2 + 13x - 5{\rm m}^2$, tính diện tích của mảnh đất lúc ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 50, p. 45]
+	Tìm $n\in\mathbb{N}$ để cả 2 phép chia sau đồng thời là phép chia không còn dư: (a) $6x^5:3x^n$. (b) $15x^{n+2}:5x^4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 51, p. 45]
+	Cho các đa thức $A = 2x^4 + 3x^3 - 3x^2 + mx - 5$, $B = x^2 + 1$. Tìm giá trị của $m$ để $A$ chia hết cho $B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 52, p. 46]
+	Cho các đa thức $A = 6x^3 - 15x^2 - 4x + 13$, $B = 2x - 5$. Tìm các giá trị nguyên của $x$ để giá trị của $A$ chia hết cho giá trị của $B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 195., p. 46]
+	Tìm $n\in\mathbb{N}$ để cả 2 phép chia sau đồng thời là phép chia không còn dư: $15x^{n+2}:3x^3$ \& $-\frac{1}{5}x^{n+3}:\frac{3}{10}x^{2n}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 196., p. 46]
+	Tính: (a) $(x^3 + 2x + 3):(x + 1)$. (b) $(x^4 - 3x^3 + 3x - 1):(x^2 - 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 197., p. 46]
+	Xác định các hệ số $a,b\in\mathbb{R}$ sao cho đa thức $x^4 + ax^3 + b$ chia hết cho đa thức $x^2 - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 198., p. 46]
+	Tìm các giá trị nguyên của $x$ để thương có giá trị nguyên: (a) $(3x^3 + 13x^2 - 7x + 5):(3x - 2)$. (b) $(2x^5 + 4x^4 + 7x^3 - 49x - 44):(2x^2 - 7)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 199., p. 46]
+	Chứng minh không tồn tại $n\in\mathbb{N}$ để cho giá trị của biểu thức $n^6 - n^4 - 2n^2 + 9$ chia hết cho giá trị của biểu thức $n^4 + n^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 200., p. 47]
+	Không thực hiện phép chia đa thức, tìm số dư trong phép chia đa thức $f(x)$ cho đa thức $g(x)$ trong các trường hợp sau: (a) $f(x) = x^{21} + x^{20} + x^{19} + 101$, $g(x) = x + 1$. (b) $f(x) = 3x^3 + 4x^2 - 2x + 7$, $g(x) = x + 2$. (c) $f(x) = x^4 - 5x^3 + 2x - 10$, $g(x) = x - 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 201., p. 47]
+	Chứng minh $f(x) = (x^2 - 3x + 1)^{31} - (x^2 - 4x - 5)^{30} + 2$ chia hết cho $x - 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 202., p. 47]
+	Tìm đa thức dư trong phép chia $(x^{54} + x^{45} + x^{36} + \cdots + x^9 + 1):(x^2 - 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 203., p. 47]
+	Xác định đa thức $f(x)$ thỏa mãn cả 3 điều kiện sau: (a) Khi chia cho $x - 1$ dư $4$. (b) Khi chia cho $x + 2$ dư $1$. (c) Khi chia cho $(x - 1)(x + 2)$ thì được thương là $5x^2$ \& còn dư.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 204., p. 47]
+	Cho đa thức $A = ax^2 + bx + c$. Xác định hệ số $b$ biết khi chia $A$ cho $x - 1$ hoặc chia $A$ cho $x + 1$ đều có cùng 1 đa thức dư.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 205., p. 47]
+	Chứng minh nếu $x^4 - 4x^3 + 5ax^2 - 4bx + c$ chia hết cho $x^3 + 3x^2 - 9x - 3$ thì $a + b + c = 0$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+\textsf{\textbf{Nội dung.} Biểu thức số, biểu thức đại số, đa thức 1 biến; nghiệm của đa thức 1 biến, cộng \& trừ đa thức 1 biến:} Vận dụng quy tắc dấu ngoặc để nhóm các đơn thức có cùng bậc vào 1 nhóm rồi thực hiện phép tính trong từng nhóm. \textsf{Nhân \& chia đa thức 1 biến:} $(A + B)\cdot C = AC + BC$, $(A + B):C = A:C + B:C$, $(A + B)(C + D) = AC + AD + BC + BD$, $(A + B):(C + D)$ (Chia theo quy tắc chia các đa thức đã sắp xếp).
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 1., p. 69]
+	Biểu thức nào sau đây là đa thức 1 biến? Tìm biến \& bậc của đa thức đó. (a) $-7x + 5$. (b) $2021x^2 - 2022x + 2023$. (c) $2y^3 - \frac{3}{y + 2} + 4$. (d) $-2t^m + 8t^2 + t - 1$, với $m\in\mathbb{N}$, $m > 2$. (e) $-2t^m + 8t^2 + t - 1$, với $m\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $-7x + 5$ là đa thức 1 biến $x$ có bậc bằng $1$. (b) $2021x^2 - 2022x + 2023$ là đa thức 1 biến $x$ có bậc là $2$. (c) $2y^3 - \frac{3}{y + 2} + 4$ không là đa thức vì $- \frac{3}{y + 2}$ là phân thức. (d) $-2t^m + 8t^2 + t - 1$, với $m\in\mathbb{N}$ là đa thức 1 biến $t$ có bậc bằng $m$ vì $m > 2$. (e) $-2t^m + 8t^2 + t - 1$, với $m\in\mathbb{N}$ là đa thức 1 biến $t$ có bậc bằng $\max\{2,m\}$, i.e., số lớn hơn trong 2 số $2$ \& $m$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 2., p. 69]
+	Tính giá trị của biểu thức: (a) $A = -5a - b - 20$ tại $a = -4$, $b = 18$. (b) $B = -8xyz + 2xy + 16y$ tại $x = -1$, $y = 3$, $z = -2$. (c) $C = -x^{2021}y^2 + 9x^{2021}$ tại $x = -1$, $y = -3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 3., p. 69]
+	Viết đa thức trong mỗi trường hợp sau: (a) Đa thức bậc nhất có hệ số của biến bằng $-2$ \& hệ số tự do bằng $6$. (b) Đa thức bậc $2$ có hệ số tự do bằng $4$. (c) Đa thức bậc $4$ có hệ số của lũy thừa bậc $3$ của biến bằng $0$. (d) Đa thức bậc $6$  trong đó tất cả hệ số của lũy thừa bậc lẻ của biến đều bằng $0$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 4., p. 69]
+	Kiểm tra xem trong các số $-1,0,1,2$, số nào là nghiệm của mỗi đa thức sau: (a) $3x - 6$. (b) $x^4 - 1$. (c) $3x^2 - 4x$. (d) $x^2 + 9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 5., p. 69]
+	Cho đa thức $P(x) = -9x^6 + 4x + 3x^5 + 5x + 9x^6 - 1$. (a) Thu gọn đa thức $P(x)$. (b) Tìm bậc của đa thức $P(x)$. (c) Tính giá trị của đa thức $P(x)$ tại $x = -1$, $x = 0$, $x = 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 6., p. 69]
+	Tính: (a) $-2x^2 + 6x^2$. (b) $4x^3 - 8x^3$. (c) $3x^4(-6x^2)$. (d) $(-24x^6):(-4x^3)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 7., p. 69]
+	Tính: (a) $(x^2 + 2x + 3) + (3x^2 - 5x + 1)$. (b) $(4x^3 - 2x^2 - 6) - (x^3 - 7x^2 + x - 5)$. (c) $-3x^2(6x^2 - 8x + 1)$. (d) $(4x^2 + 2x + 1)(2x - 1)$. (e) $(x^6 - 2x^4 + x^2):(-2x^2)$. (f) $(x^5 - x^4 - 2x^3):(x^2 + x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 8., p. 70]
+	Cho 2 đa thức: $A(x) = 4x^4 + 6x^2 - 7x^3 - 5x - 6$, $B(x) = -5x^2 + 7x^3 + 5x + 4 - 4x^4$. (a) Tìm đa thức $M(x)$ sao cho $M(x) = A(x) + B(x)$. (b) Tìm đa thức $C(x)$ sao cho $A(x) = B(x) + C(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 9., p. 70]
+	Cho $P(x) = x^3 + x^2 + x +1$ \& $Q(x) = x^4 - 1$. Tìm đa thức $A(x)$ sao cho $P(x)A(x) = Q(x)$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 10., p. 70]
+	Nhân dịp lễ Giáng sinh, 1 cửa hàng bán quần áo trẻ em thông báo khi mua mỗi bộ quần áo sẽ được giảm giá $30$\% so với giá niêm yết. Giả sử giá niêm yết 1 bộ quần áo là $x$ đồng. Viết biểu thức tính số tiền phải trả khi mua loại quần áo đó với số lượng: (a) $1$ bộ. (b) $3$ bộ. (c) $y$ bộ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 11., p. 70]
+	1 doanh nghiệp kinh doanh cà phê nhận thấy: Sau khi rang xong, khối lượng cà phê giảm $12$\%  so với trước khi rang. Gọi $x$ là khối lượng (kg) cà phê trước khi rang, $y$ là khối lượng (kg) cà phê sau khi rang. (a) Tìm công thức chỉ mối liên hệ giữa $x,y$. (b) Để có được $2$ tấn cà phê sau khi rang thì doanh nghiệp cần sử dụng bao nhiêu tấn cà phê trước khi rang?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 12., p. 70]
+	1 công ty sau khi tăng giá $50$ nghìn đồng mỗi sản phẩm so với giá ban đầu là $x$ nghìn đồng với $x < 60$ thì có doanh thu là $-50x^2 + 50x + 15000$ nghìn đồng. Tính số sản phẩm mà công ty đã bán được theo $x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 13., p. 70]
+	1 công ty du lịch tổ chức đi tham quan cho 1 nhóm khách $50$ người với mức giá $400$ nghìn đồng\emph{\texttt{/}}người. Công ty đặt ra chính sách khuyến mãi như sau: Sẽ giảm gía cho mỗi người $10$ nghìn đồng khi cứ có thêm $1$ khách tham gia ngoài $50$ khách trên. (a) Giả sử số khách tham gia thêm là $x$, $x < 40$. Tính số tiền mà công ty thu được theo $x$. (b) Nếu số khách tăng thêm là $10$ người thì số tiền công ty thu được là tăng hay giảm so với số tiền thu được chỉ với $50$ khách ban đầu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 50., p. 55]
+	Tính giá trị của biểu thức $(x^2 - 8)(x + 3) - (x - 2)(x + 5)$ tại $x = 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 51., p. 55]
+	Biểu thức nào sau đây là đa thức 1 biến? Tìm biến, hệ số cao nhất, hệ số tự do, \& bậc của đa thức đó. (a) $-2022x$. (b) $-6x^2 - 4x + 2$. (c) $3u^n - 8u^2 - 20$, với $n\in\mathbb{N}$, $n > 2$. (d) $\frac{1}{x} + x^3 - 2x^2 + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 52., p. 55]
+	Tính giá trị của biểu thức: (a) $A = 56 - 5a + 6b$ tại $a = 22$, $b = 23$. (b) $B = 6xyz - 3xy - 19z$ tại $x = 11$, $y = 32$, $z = 0$. (c) $C = x^{2021}y - 2022x^2 + 2023y^3 + 7$ tại $x = -1$ \& $y = 1$. (d) $D = x^4 - 17x^3 + 17x^2 - 17x + 21$ tại $x = 16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 53., p. 55]
+	1 bể đang chứa $500$\emph{l} nước. Người ta mở 1 vòi nước cho chảy vào bể đó, mỗi phút vòi nước đó chảy vào bể được $50$\emph{l} nước. Viết biểu thức biểu thị lượng nước có trong bể sau khi đã mở vòi nước đó được $x$ phút, biết sau $x$ phút bể nước đó chưa đầy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 54., p. 55]
+	Viết đa thức biến $x$ trong mỗi trường hợp sau: (a) Đa thức bậc nhất có hệ số của biến bằng $-7$ \& hệ số tự do bằng $0$. (b) Đa thức bậc 3 có hệ số của lũy thừa bậc 2 \& bậc nhất của biến đều bằng $5$. (c) Đa thức bậc 4 có tổng hệ số của lũy thừa bậc 3 \& bậc 2 của biến bằng $6$ \& hệ số tự do bằng $-1$. (d) Đa thức bậc $8$ trong đó tất cả các hệ số của lũy thừa bậc lẻ của biến đều bằng $0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 55., p. 55]
+	Tìm giá trị của $m\in\mathbb{R}$ để đa thức sau là đa thức bậc $3$ theo biến $x$: $P(x) = (m^2 - 25)x^4 + (20 + 4m)x^3 + 17x^2 - 23$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 56., p. 55]
+	Cho đa thức $A(x) = -11x^5 + 4x^3 - 12x^2 + 11x^5 + 13x^2 - 7x + 2$. (a) Thu gọn \& sắp xếp đa thức $A(x)$ theo số mũ giảm dần của biến. (b) Tìm bậc của đa thức $A(x)$. (c) Tính giá trị của đa thức $A(x)$ tại $x = -1$, $x = 0$, $x = 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 57., p. 56]
+	Tính: (a) $(-4x^3 - 13x^2 + 2x^5) + (13x^2 + 2x^3 - 12x - 1)$. (b) $(12x^6 - 11x^2 + 3x^3 + 9) - (13x^6 + 2x^3 - 11x^2 - 11x)$. (c) $(8x^3 - x^2 + 1)(x^2 - 1)$. (d) $(8x^3 + 6x^2 + 3x + 1):(2x + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 58., p. 56]
+	Tìm đa thức $C(x)$ sao cho $A(x) - C(x) = B(x)$ biết: (a) $A(x) = x^3 + x^2 + x - 2$, $B(x) = 9 - 2x + 11x^3 + x^4$. (b) $A(x) = -12x^5 + 2x^3 - 2$, $B(x) = 9 - 2x - 11x^2 + 2x^3 - 11x^5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 59., p. 56]
+	Tìm đa thức $Q(x)$ sao cho $P(x)Q(x) = R(x)$ biết: (a) $P(x) = x - 2$, $R(x) = -x^3 + 8$. (b) $P(x) = x^2 - 3x + 2$, $R(x) = 10 - 13x + 2x^2 + x^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 60., p. 56]
+	Tìm hệ số $a\in\mathbb{R}$ sao cho đa thức $G(x) = x^4 + x^2 + a$ chia hết cho đa thức $M(x) = x^2 - x + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 61., p. 56]
+	\emph{Đ\texttt{/}S?} (a) $x = 2$ \& $x = -3$ là nghiệm của đa thức $P(x) = x^2 - 5x + 6$. (b) Đa thức bậc $4$ luôn có nhiều hơn $4$ nghiệm. (c) Mỗi phần tử của tập hợp $\{0,\pm1\}$ là nghiệm của đa thức $P(x) = x^3 - x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 62., p. 56]
+	Cho đa thức $P(x) = ax^4 + bx^3 + cx^2 + dx + e$, $a\ne0$, với $a + b + c + d + e = 0$. Chứng minh $x = 1$ là nghiệm của đa thức $P(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 63., p. 56]
+	Cho đa thức $Q(x) = ax^2 + bx + c$, $a\ne0$. Chứng minh nếu $Q(x)$ nhận $\pm1$ là nghiệm thì $a,c$ là 2 số đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 64., p. 56]
+	1 cửa hàng bán hoa sau khi tăng giá $50$ nghìn đồng mỗi chậu hoa so với giá bán ban đầu là $3x$ nghìn đồng thì số tiền thu được là $3x^2 + 53x + 50$ nghìn đồng. Tìm số chậu hoa mà cửa hàng đã bán theo $x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 65., pp. 56--57]
+	Tháng $5$ năm $2019$, nhiều đại biểu trên cả nước đã ``hội quân'' trên 1 tàu kiểm ngư rời cảng biển quốc tế Cam Ranh để bắt đầu hải  trình nối tình yêu đất liền với biển đảo Trường Sa. Do thời tiết xấu, tàu kiểm ngư đã giảm $15$\% tốc độ so với tốc độ đã định. Giả sử tốc độ đã định của tàu kiểm ngư là $x$ \emph{hải lý\texttt{/}h}. Viết biểu thức biểu thị số hải lý mà tàu kiểm ngư đã đi với số thời gian: (a) $1$\emph{h}. (b) $4$\emph{h}. (c) $y$\emph{h}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 66., p. 57]
+	Lượng khí thải gây hiệu ứng nhà kính do các hoạt động của con người là nguyên nhân gây ra nhiệt độ Trái Đất tăng 1 cách đáng kể. Các nhà khoa học đưa ra biểu thức dự báo nhiệt độ trung bình trên bề mặt Trái Đất như sau: $T = 0.02x + 15$. Trong đó, $T$ là nhiệt độ trung bình của bề mặt Trái Đất tính theo độ \emph{C}, $x$ là số năm kể từ năm $1960$. Tính nhiệt độ trung bình của bề mặt Trái Đất vào các năm $1965$ \& năm $2023$ theo biểu thức dự báo trên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 67., p. 57]
+	Giá bán lẻ $1$ hộp sữa là $7000$ đồng, giá cho $1$ lốc sữa $4$ hộp là $26000$ đồng. Nếu mua từ $4$ lốc sữa trở lên thì cứ $2$ lốc sữa được tặng $1$ hộp. Vậy nếu bác Hoa mua $2a$, $a\in\mathbb{N}$, $2\le a < 10$, lốc sữa thì sẽ tiết kiệm bao nhiêu tiền so với mua lẻ từng hộp?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 68., p. 57]
+	Nhân dịp cuối năm, 1 cửa hàng cần thanh lý 1 lô hàng (gồm $100$ sản phẩm cùng loại) với giá bán là $x$ \emph{đồng\texttt{/}chiếc}. Lần đầu cửa hàng giảm $10$\% so với giá bán thì bán được $15$ sản phẩm, lần sau cửa hàng giảm thêm $5$\% nữa (so với giá đã giảm lần đầu) thì bán được hết $85$ sản phẩm còn lại. Viết biểu thức biểu thị số tiền cửa hàng thu được sau khi đã bán hết $100$ sản phẩm trên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 69., p. 57]
+	Cho hình thang $ABCD$ với đáy nhỏ $BC = x$\emph{dm}. $H,K$ lần lượt là hình chiếu vuông góc của $B,C$ lên cạnh $AD$. Biết $BH = x$\emph{dm}, $AH = 7$\emph{dm}, $DK = 4$\emph{dm}. Tính diện tích hình thang $ABCD$ theo $x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 53, p. 47]
+	Cho đa thức $A = 15x^4 - 20x^3 + 5x^2$ \& các đơn thức $B = 2x^3$, $C = 5x^2$. (a) $A$ chia hết cho đơn thức nào? Tính thương trong trường hợp đó. (b) Tính giá trị của thương tại $x = \frac{1}{3}$. (c) Tính các nghiệm của thương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 54, p. 48]
+	Khi chia đa thức $A$ cho đa thức $x^2 + 2$ ta được thương là $x^2 - 5$ \& dư $9$. Tìm đa thức $A$ \& cho biết bậc của đa thức này cùng các hệ số của đa thức.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 206., p. 48]
+	Cho biểu thức $A(x) = \frac{x + 2}{x - 1}$. (a) Tìm giá trị của biến để cho biểu thức $A(x)$ có nghĩa. (b) Tính $A(7)$. (c) Tìm $x$ để $A(x) = \frac{1}{4}$. (d) Tìm $x\in\mathbb{Z}$ để $A(x)$ có giá trị nguyên. (e) Tìm $x\in\mathbb{R}$ để $A(x)$ có giá trị lớn hơn $1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 207., p. 48]
+	Tìm $n\in\mathbb{N}$ lớn nhất sao cho $n + 10$ là ước của $n^3 + 2025$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 208., p. 48]
+	Chứng minh các biểu thức sau luôn có giá trị là 1 số chẵn $\forall x\in\mathbb{Z}$. (a) $A = (x - 3) + |x + 3|$. (b) $B = (x - 5) - |x - 5|$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 209., p. 48]
+	Đa thức $f(x)$ với hệ số nguyên có tính chất là: Nếu $f(x)$ có nghiệm nguyên thì nghiệm đó phải là ước của hệ số tự do. Vận dụng tính chất này để tìm tập hợp các nghiệm của đa thức $f(x) = x^3 - 6x^2 + 11x - 6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 210., p. 48]
+	Cho $g(x) = 4x^2 + 3x + 1$, $h(x) = 3x^2 - 2x - 3$. (a) Tính $f(x) = g(x) - h(x)$. (b) Chứng minh $-4$ là 1 nghiệm của $f(x)$. (c) Tìm tập hợp nghiệm của $f(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 211., p. 48]
+	(a) Tính tổng của 5 số nguyên liên tiếp trong đó số ở giữa là $a\in\mathbb{Z}$. Có thể khẳng định tổng này chia hết cho (những) số nào? (b) Tính tổng của $5$ số chẵn liên tiếp trong đó số đầu là $2a$, $a\in\mathbb{Z}$. Có thể khẳng định tổng này chia hết cho (những) số nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 212., p. 48]
+	Tìm $m\in\mathbb{Z}$ sao cho đa thức $(x + m)(x - 3) + 7$ phân tích được thành $(x + a)(x + b)$ với $a,b\in\mathbb{Z}$, $a\le b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 213., p. 48]
+	Thùng xe tải có dạng hình hộp chữ nhật, chiều rộng $x + 5$ \emph{dm}, chiều dài $2x + 1$ \emph{dm}. Biết thể tích của thùng xe là $2x^3 + 15x^2 + 27x + 10\ {\rm dm}^3$. Tính chiều cao của thùng xe.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
