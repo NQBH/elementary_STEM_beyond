@@ -39,7 +39,7 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 
-\title{Problem: 2D Method of Cartesian Coordinates -- Bài Tập: Phương Pháp Tọa Độ Cartesian Trong Mặt Phẳng}
+\title{Problem: 2D Method of Cartesian Coordinates\\Bài Tập: Phương Pháp Tọa Độ Cartesian Trong Mặt Phẳng}
 \author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
 \date{\today}
 
@@ -54,22 +54,53 @@
 	\begin{itemize}
 		\item {\it Problem: 2D Method of Cartesian Coordinates -- Bài Tập: Phương Pháp Tọa Độ Cartesian Trong Mặt Phẳng}.
 		
-		PDF: {\sc url}: \url{.pdf}.
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/2D_method_coordinate/problem/NQBH_2D_method_coordinate_problem.pdf}.
 		
-		\TeX: {\sc url}: \url{.tex}.
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/2D_method_coordinate/problem/NQBH_2D_method_coordinate_problem.tex}.
 		\item {\it Problem \& Solution: 2D Method of Cartesian Coordinates -- Bài Tập \& Lời Giải: Phương Pháp Tọa Độ Cartesian Trong Mặt Phẳng}.
 		
-		PDF: {\sc url}: \url{.pdf}.
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/2D_method_coordinate/solution/NQBH_2D_method_coordinate_solution.pdf}.
 		
-		\TeX: {\sc url}: \url{.tex}.
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/2D_method_coordinate/solution/NQBH_2D_method_coordinate_solution.tex}.
 	\end{itemize}
 \end{abstract}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
 
-\section{Coordinate Vector -- Tọa Độ của Vector}
-\href{https://en.wikipedia.org/wiki/Coordinate_vector}{Wikipedia{\tt/}coordinate vector}.
+\section{2D Coordinate Vector -- Tọa Độ của Vector Trong Mặt Phẳng}
+\fbox{1} {\sf Tọa độ của 1 điểm}: Ký hiệu $M(x_M,y_M)$ với $x_M,y_M\in\mathbb{R}$ lần lượt là hoành độ, tung độ của điểm $M\in\mathbb{R}^2$, cặp số $(x_M,y_M)$ được gọi là {\it tọa độ} của điểm $M$ trong mặt phẳng tọa độ $Oxy$. \fbox{2} {\sf Tọa độ của 1 vector}: $\overrightarrow{OM} = (a,b)\Leftrightarrow M(a,b)$. $\vec{i}(1,0),\vec{j}(0,1)$ lần lượt là {\it vector đơn vị} trên trục $Ox,Oy$. Với mỗi vector $\vec{u}$ trong mặt phẳng tọa độ $Oxy$, tọa độ của vector $\vec{u}$ là tọa độ của điểm $A(x_A,y_A)$ thỏa $\overrightarrow{OA} = \vec{u}$, khi đó $x_A,y_A$ lần lượt là hoành độ, tung độ của vector $\vec{u}$. \fbox{3} $\vec{u} = (a,b)\Leftrightarrow\vec{u} = a\vec{i} + b\vec{j}$. \fbox{4} $\vec{a} = \vec{b}\Leftrightarrow x_{\vec{a}} = x_{\vec{b}}\land y_{\vec{a}} = y_{\vec{b}}$. \fbox{4} $A(x_A,y_A),B(x_B,y_B)\Rightarrow\overrightarrow{AB} = (x_B - x_A,y_B - y_A)$. \fbox{5} Các điểm đối xứng với điểm $A(x_A,y_A)$ trong mặt phẳng tọa độ $Oxy$ qua gốc $O$, trục $Ox$, trục $Oy$ lần lượt là $(-x_A,-y_A),(x_A,-y_A),(-x_A,y_A)$.
+
+\begin{baitoan}[Cf. segment vs. vector]
+	(a) So sánh 2 khái niệm `2 đoạn thẳng bằng nhau' \& `2 vectors bằng nhau'. (b) So sánh 2 khái niệm `2 đoạn thẳng song song' \& `2 vectors song song'. (c) So sánh 2 khái niệm `2 tia đối nhau' \& `2 vectors đối nhau'.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{SGK_Toan_10_Canh_Dieu_tap_2}, 5., p. 65]
+	Trong mặt phẳng tọa độ $Oxy$, cho trước tọa độ của 3 trong 5 điểm gồm 4 đỉnh của hình bình hành ABCD \& tâm đối xứng I của nó. (a) Tìm tọa độ các điểm còn lại. (b) Tính chu vi, độ dài 2 đường cao, \& diện tích của hình bình hành ABCD theo tọa độ của 3 điểm cho trước đó.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{SGK_Toan_10_Canh_Dieu_tap_2}, 6., p. 65]
+	Trong mặt phẳng tọa độ $Oxy$, cho tứ giác ABCD có $A(x_A,y_A),B(x_B,y_B),C(x_C,y_C),D(x_D,y_D)$. Tìm điều kiện cần \& đủ để tứ giác ABCD là: (a) hình bình hành. (b) hình thang. (c) hình thang cân. (d) hình thoi. (e) hình chữ nhật. (f) hình vuông. (g) tứ giác nội tiếp. (h) tứ giác ngoại tiếp.
+\end{baitoan}
+{\sf Hint.} Tứ giác $ABCD$ là hình bình hành $\Leftrightarrow x_A + x_C = x_B + x_D\land y_A + y_C = y_B + y_D$.
+
+\begin{baitoan}[Mở rộng \cite{SGK_Toan_10_Canh_Dieu_tap_2}, 7., p. 65: Tọa độ 3 đỉnh tam giác]
+	Trong mặt phẳng tọa độ $Oxy$. (a) Cho biết tọa độ trung điểm 3 cạnh $\Delta ABC$. Tìm tọa độ 3 đỉnh $A,B,C$.
+\end{baitoan}
+{\sf Hint.} Hoặc giải 2 hệ phương trình ``khuyết'' 3 ẩn $(x_A,x_B,x_C)$ \& $(y_A,y_B,y_C)$. Hoặc dùng nhận xét nếu $M,N,P$ lần lượt là trung điểm của $BC,CA,AB$ thì $ANMP,BMNP,CMPN$ là 3 hình bình hành.
+
+\begin{baitoan}[Tọa độ 4 đỉnh tứ giác]
+	Trong mặt phẳng tọa độ $Oxy$. (a) Liệu nếu chỉ biết tọa độ 4 trung điểm của 4 cạnh tứ giác ABCD thì có thể tìm được tọa độ của 4 đỉnh $A,B,C,D$ không? (b) Nếu cho thêm tọa độ của trung điểm của 1 trong 2 đường chéo của tứ giác ABCD thì có thể tìm được tọa độ của 4 đỉnh $A,B,C,D$ không? (c) Nếu cho thêm tọa độ của 2 trung điểm của 2 đường chéo của tứ giác ABCD thì có thể tìm được tọa độ của 4 đỉnh $A,B,C,D$ không? Nếu được thì 6 tọa độ này phải thỏa điều kiện gì để bài toán có nghiệm? (d) Mở rộng bài toán cho đa giác $n$ cạnh $A_1A_2\ldots A_n$.
+\end{baitoan}
+
+\begin{baitoan}[Điều kiện cần \& đủ để 2 vectors bằng nhau]
+	Trong mặt phẳng tọa độ $Oxy$, cho 2 vector $\vec{u}_1(a_1m + b_1n,c_1m + d_1n),\vec{u}_2(a_2m + b_2n,c_2m + d_2n)$. Tìm điều kiện cần \& đủ của $m,n$ theo $a_i,b_i,c_i,d_i\in\mathbb{R}$, $i = 1,2$ cho trước để: (a) $\vec{u}_1 = \vec{u}_2$. (b) $\vec{u}_1 + \vec{u}_2 = \vec{0}$. (c) $\vec{u}_1\parallel\vec{u}_2$, i.e., $\vec{u}_1,\vec{u}_2$ cùng phương. (d) $\vec{u}_1\uparrow\uparrow\vec{u}_2$, i.e., $\vec{u}_1,\vec{u}_2$ cùng phương, cùng hướng. (e) $\vec{u}_1\uparrow\downarrow\vec{u}_2$, i.e., $\vec{u}_1,\vec{u}_2$ cùng phương, ngược hướng. (f) $\vec{u}_1 = k\vec{u}_2$ với $k\in\mathbb{R}^\star$ cho trước. (g) $\vec{u}_1\bot\vec{u}_2$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{SBT_Toan_10_Canh_Dieu_tap_2}, 11., p. 62]
+		Trong mặt phẳng tọa độ $Oxy$, cho tọa độ 3 điểm không thẳng hàng $A(x_A,y_A),B(x_B,y_B)$, $C(x_C,y_C)$. Tìm tọa độ điểm D sao cho tứ giác ABCD là hình thang có $AB\parallel CD$ \& $CD = aAB$ với $a > 0$ cho trước.
+\end{baitoan}
+See also \href{https://en.wikipedia.org/wiki/Coordinate_vector}{Wikipedia{\tt/}coordinate vector}.
 
 %------------------------------------------------------------------------------%
 
