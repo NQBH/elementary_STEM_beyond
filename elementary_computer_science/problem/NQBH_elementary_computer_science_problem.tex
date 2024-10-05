@@ -69,12 +69,24 @@
 
 %------------------------------------------------------------------------------%
 
+\subsection*{General structure -- Cấu trúc tổng quát}
+
+\begin{baitoan}[General structure of a programming problem]
+	(a) Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để:
+	\begin{itemize}
+		\item Tính
+		\item Tìm
+		\item Xác định
+	\end{itemize}
+	(b) Mở rộng \& tổng quát bài toán.
+\end{baitoan}
+
 \section{Basic -- Cơ Bản}
 
-\subsection{Algebra -- Đại số}
+\subsection{Elementary algebra -- Đại số sơ cấp}
 
 \begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD1, p. 14]
-	(a) Cho $A = x^2 + y^2,B = x + y + A,C = xy + A - B^2$ với $x,y\in\mathbb{R}$. Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tính $A,B,C$. (b) Mở rộng bài toán cho $A_i(x,y)\in\mathbb{R}[x,y]$ với $i = 1,2,\ldots,n$, $n\in\mathbb{N}^\star$, là các đa thức 2 biến $x,y$. (c) Mở rộng bài toán cho $A_i({\bf x})\in\mathbb{R}[{\bf x}]$ với $i = 1,2,\ldots,n$, là các đa thức  hệ số thực với $n\in\mathbb{N}^\star$ biến số ${\bf x} = (x_1,x_2,\ldots,x_n)$.
+	(a) Cho $A = x^2 + y^2,B = x + y + A,C = xy + A - B^2$ với $x,y\in\mathbb{R}$. Tính $A,B,C$. (b) Mở rộng bài toán cho $A_i(x,y)\in\mathbb{R}[x,y]$ với $i = 1,2,\ldots,n$, $n\in\mathbb{N}^\star$, là các đa thức 2 biến $x,y$. (c) Mở rộng bài toán cho $A_i({\bf x})\in\mathbb{R}[{\bf x}]$ với $i = 1,2,\ldots,n$, là các đa thức  hệ số thực với $n\in\mathbb{N}^\star$ biến số ${\bf x} = (x_1,x_2,\ldots,x_n)$.
 \end{baitoan}
 See also:
 \begin{itemize}
@@ -87,11 +99,11 @@ See also:
 \end{itemize}
 
 \begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD2, p. 15]
-	(a) Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tìm {\rm GTLN} $\max\{a,b,c\}$ \& {\rm GTNN} $\min\{a,b,c\}$ với $a,b,c\in\mathbb{R}$. (b) Mở rộng bài toán cho $n\in\mathbb{N}^\star$ số $a_1,a_2,\ldots,a_n$.
+	(a) Tìm {\rm GTLN} $\max\{a,b,c\}$ \& {\rm GTNN} $\min\{a,b,c\}$ với $a,b,c\in\mathbb{R}$. (b) Mở rộng bài toán cho $n\in\mathbb{N}^\star$ số $a_1,a_2,\ldots,a_n$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD3, p. 16]
-	(a) Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tính giá trị của hàm số $f:\mathbb{R}^2\to\mathbb{R}$ xác định bởi công thức:
+	(a) Tính giá trị của hàm số $f:\mathbb{R}^2\to\mathbb{R}$ xác định bởi công thức:
 	\begin{equation*}
 		f(x,y) = \left\{\begin{split}
 			&x^3 + y^3&&\mbox{if }0\le x - y\le10,\\
@@ -103,7 +115,7 @@ See also:
 \end{baitoan}
 
 \begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD4, p. 17]
-	(a) Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tìm nghiệm của phương trình bậc $\le2$ có dạng $ax^2 + bx + c = 0$ với $a,b,c\in\mathbb{R}$. (b) Mở rộng bài toán cho phương trình bậc 3, bậc 4. (c) Mở rộng bài toán cho các phương trình đa thức có thể giải được nhờ quy về phương trình bậc 2, 3.
+	(a) Tìm nghiệm của phương trình bậc $\le2$ có dạng $ax^2 + bx + c = 0$ với $a,b,c\in\mathbb{R}$. (b) Mở rộng bài toán cho phương trình bậc 3, bậc 4. (c) Mở rộng bài toán cho các phương trình đa thức có thể giải được nhờ quy về phương trình bậc 2, 3.
 \end{baitoan}
 See also:
 \begin{itemize}
@@ -116,23 +128,23 @@ See also:
 \end{itemize}
 
 \begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD5, p. 18]
-	Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tính tổng $S = \sum_{i = 1}^{100} x_i$ với $x_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,100$. (b) Mở rộng bài toán cho các tổng tương tự.
+	Tính tổng $S = \sum_{i=1}^{100} x_i$ với $x_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,100$. (b) Mở rộng bài toán cho các tổng tương tự.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD6, p. 19]
-	Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tính giá trị của đa thức $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0\in\mathbb{R}[x]$ với hệ số thực $a_i\in\mathbb{R}$, $\forall i = 0,1,\ldots,n$ với $n\in\mathbb{N}^\star$ bằng cách sử dụng thuật toán Horner.
+	Tính giá trị của đa thức $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0\in\mathbb{R}[x]$ với hệ số thực $a_i\in\mathbb{R}$, $\forall i = 0,1,\ldots,n$ với $n\in\mathbb{N}^\star$ bằng cách sử dụng thuật toán Horner.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD7, p. 21]
-	Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tính giá trị hàm số mũ $e^x$ với $x = a$ với sai số $\varepsilon > 0$ cho trước bằng cách sử dụng khai triển Taylor của hàm $e^x$.
+	Tính giá trị hàm số mũ $e^x$ với $x = a$ với sai số $\varepsilon > 0$ cho trước bằng cách sử dụng khai triển Taylor của hàm $e^x$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD8, p. 22]
-	Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tìm nghiệm của phương trình $f(x) = x^5 - 6x^4 - 15x^3 - 20x^2 + 14x - 4 = 0$ với giá trị đầu (initial value) $x_0 = 0.8$.
+	Tìm nghiệm của phương trình $f(x) = x^5 - 6x^4 - 15x^3 - 20x^2 + 14x - 4 = 0$ với giá trị đầu (initial value) $x_0 = 0.8$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD9, p. 23]
-	Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải hệ phương trình tuyến tính cấp $n$ có dạng
+	Giải hệ phương trình tuyến tính cấp $n$ có dạng
 	\begin{equation}
 		\left\{\begin{split}
 			a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1,\\
@@ -152,6 +164,386 @@ See also:
 	Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Mathematics{\tt/}grade 9{\tt/}system of 1st-order equations{\tt/}solution}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/solution/NQBH_system_1st_order_equations_solution.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/solution/NQBH_system_1st_order_equations_solution.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/solution/NQBH_system_1st_order_equations_solution.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/solution/NQBH_system_1st_order_equations_solution.tex}.}].
 	\item Problem: Trigonometry in Triangles -- Bài Tập: Hệ Thức Lượng Trong Tam Giác. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/problem/NQBH_trigonometry_problem.pdf}.
 \end{itemize}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 10., p. 27]
+	Tính tổ hợp chập $k$ trong $n$ phần tử $C_n^k$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 11., p. 27]
+	Tính tích của $n$ số thực $x_1,x_2,\ldots,x_n\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 12., p. 27]
+	Tính giá trị của biểu thức $A = \sum_{i=1}^{100} x_i + \prod_{i=1}^{100} x_i$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 13., p. 27]
+	Xác định các số dương trong chuỗi số $x_1,x_2,\ldots,x_n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 14., p. 27]
+	Tính trung bình số học của các phần tử trong chuỗi số $x_1,x_2,\ldots,x_n$ trong đoạn $[a,b]$ với $a,b\in\mathbb{R}$, $a < b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 15., p. 27]
+	Tính $100$ số Fibonacci đầu tiên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 16., p. 27]
+	Tìm số lớn nhất trong dãy số $x_1,x_2,\ldots,x_n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 17., p. 27]
+	Tính các phần tử của tam giác Pascal tới $C_{100}^{100}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 18., p. 27]
+	Gọi $x_1,x_2,\ldots,x_n$ là lượng cholesterol trung bình của người đến khám bệnh. Người khỏe có lượng cholesterol nhỏ hơn tiêu chuẩn $x < A$. Xác định số người không mắc bệnh \& lượng colesterol trung bình của người bệnh.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 19., p. 27]
+	Viết các hoán vị với 5 số $1,2,3,4,5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 20., p. 27]
+	Xếp các số theo thứ tự tăng dần hoặc giảm dần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 21., p. 27]
+	Lập danh bạ điện thoại 5 số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 22., p. 27]
+	Cho $a,b,c > 0$ bất kỳ. Nếu 3 số đó có thể là chiều dài 3 cạnh của 1 tam giác, tính chu vi \& diện tích tam giác đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 23., p. 28]
+	Tính $n!$ với $n\in\mathbb{Z}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 24., p. 28]
+	Tìm ước chung lớn nhất {\rm ƯCLN} của 2 số.
+\end{baitoan}
+
+\begin{baitoan}
+	Tìm bội chung nhỏ nhất {\rm BCNN} của 2 hay nhiều số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 25., p. 28]
+	Tính tổng \& tích của 1 chuỗi số biết giá trị đầu \& số các số hạng của chuỗi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 26., p. 28]
+	Tính tổng của chuỗi $\sum_{i=1}^n \frac{1}{i} = 1 + \frac{1}{2} + \cdots + \frac{1}{n}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 27., p. 28]
+	Xác định các số nguyên tố trong đoạn $[1,n]$ với $n\in\mathbb{N}$ cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 28., p. 28]
+	Tính $y = \log_a x$ với cơ số $a > 0$ bất kỳ.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Vector, matrix, system of algebraic equations -- Vector, ma trận, hệ phương trình đại số}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 29., p. 28]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 30., p. 28]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 31., p. 28]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 32., p. 28]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 33., p. 28]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 34., p. 28]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 35., p. 28]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 36., p. 28]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 37., p. 28]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 38., p. 28]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Function -- Hàm số}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 39., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 40., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 41., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 42., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 43., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 44., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 45., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 46., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 47., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 48., p. 29]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Polynomials, interpolation polynomials -- Đa thức, đa thức nội suy}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 49., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 50., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 51., p. 29]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 52., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 53., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 54., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 55., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 56., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 57., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 58., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 59., p. 30]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Differentiation \& derivative -- Phép tính vi phân \& đạo hàm}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 60., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 61., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 62., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 63., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 64., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 65., p. 30]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Integration \& integral -- Phép tính tích phân \& tích phân}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 66., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 67., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 68., p. 30]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 69., p. 30]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Nonlinear system -- Phương trình phi tuyến}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 70., p. 31]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 71., p. 31]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 72., p. 31]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Optimization -- Tối ưu hóa}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 73., p. 31]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 74., p. 31]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 75., p. 31]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Differential equations -- Phương trình vi phân}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 76., p. 31]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 77., p. 31]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 78., p. 31]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 79., p. 31]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Probability \& Statistics -- Xác suất \& Thống kê}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 80., p. 31]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 81., p. 31]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 82., p. 31]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 83., pp. 31--32]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Document managing \& processing -- Quản lý \& xử lý văn bản}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 84., p. 32]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 85., p. 32]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 86., p. 32]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 87., p. 32]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 88., p. 32]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 89., p. 32]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 90., p. 32]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 91., p. 32]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Technology -- Bài toán kỹ thuật}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, 92., p. 32]
+	
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
