@@ -105,7 +105,10 @@ See also \href{https://en.wikipedia.org/wiki/Coordinate_vector}{Wikipedia{\tt/}c
 %------------------------------------------------------------------------------%
 
 \section{Vector Calculus in Cartesian Coordinates -- Biểu Thức Tọa Độ của Các Phép Toán Vector}
-\fbox{1} {\sf Biểu thức tọa độ của phép $\pm$ vectors, phép nhân vô hướng của vector}: Nếu $\vec{u} = (x_1,y_1),\vec{v} = (x_2,y_2)$ thì $\vec{u} + \vec{v} = (x_1 + x_2,y_1 + y_2)$, $\vec{u} - \vec{v} = (x_1 - x_2,y_1 - y_2)$ hay viết gộp chung thành $\vec{u}\pm\vec{v} = (x_1\pm x_2,y_1\pm y_2)$, $k\vec{u} = (kx_1,ky_1)$, $\forall k\in\mathbb{R}$; $\vec{u}\parallel\vec{v}\ne\vec{0}$, i.e., $\vec{u}\parallel\vec{v}$ cùng phương $\Leftrightarrow\exists k\in\mathbb{R}$ sao cho $x_1 = kx_2\land y_1 = ky_2$. \fbox{2} {\it Tọa độ trung điểm} của đoạn thẳng $AB$ với $A(x_A,y_A),B(x_B,y_B)$ là $M(x_M,y_M)$ với $x_M\coloneqq\frac{1}{2}(x_A + x_B),y_M\coloneqq\frac{1}{2}(y_A + y_B)$. \fbox{3} {\it Tọa độ trọng tâm} của tam giác $\Delta ABC$ với $A(x_A,y_A),B(x_B,y_B),C(x_C,y_C)$ là $G(x_G,y_G)$ với $x_G\coloneqq\frac{1}{3}(x_A + x_B + x_C),y_G\coloneqq\frac{1}{3}(y_A + y_B + y_C)$. \fbox{4} {\sf Biểu thức tọa độ của tích vô hướng}: Với $\vec{u} = (x_1,y_1),\vec{v} = (x_2,y_2)$, $\vec{u}\cdot\vec{v} = x_1x_2 + y_1y_2$. $\vec{i}^2 = |\vec{i}|^2 = \vec{j}^2 = |\vec{j}|^2 = 1$, $\vec{i}\cdot\vec{j} = 0$. Nếu $\vec{a} = (x,y)$ thì $|\vec{a}| = \sqrt{\vec{a}\cdot\vec{a}} = \sqrt{\vec{a}^2} = \sqrt{x^2 + y^2}$.
+\fbox{1} {\sf Biểu thức tọa độ của phép $\pm$ vectors, phép nhân vô hướng của vector}: Nếu $\vec{u} = (x_1,y_1),\vec{v} = (x_2,y_2)$ thì $\vec{u} + \vec{v} = (x_1 + x_2,y_1 + y_2)$, $\vec{u} - \vec{v} = (x_1 - x_2,y_1 - y_2)$ hay viết gộp chung thành $\vec{u}\pm\vec{v} = (x_1\pm x_2,y_1\pm y_2)$, $k\vec{u} = (kx_1,ky_1)$, $\forall k\in\mathbb{R}$; $\vec{u}\parallel\vec{v}\ne\vec{0}$, i.e., $\vec{u}\parallel\vec{v}$ cùng phương $\Leftrightarrow\exists k\in\mathbb{R}$ sao cho $x_1 = kx_2\land y_1 = ky_2$. \fbox{2} {\it Tọa độ trung điểm} của đoạn thẳng $AB$ với $A(x_A,y_A),B(x_B,y_B)$ là $M(x_M,y_M)$ với $x_M\coloneqq\frac{1}{2}(x_A + x_B),y_M\coloneqq\frac{1}{2}(y_A + y_B)$. \fbox{3} {\it Tọa độ trọng tâm} của tam giác $\Delta ABC$ với $A(x_A,y_A),B(x_B,y_B),C(x_C,y_C)$ là $G(x_G,y_G)$ với $x_G\coloneqq\frac{1}{3}(x_A + x_B + x_C),y_G\coloneqq\frac{1}{3}(y_A + y_B + y_C)$. \fbox{4} {\sf Biểu thức tọa độ của tích vô hướng}: Với $\vec{u} = (x_1,y_1),\vec{v} = (x_2,y_2)$, $\vec{u}\cdot\vec{v} = x_1x_2 + y_1y_2$. $\vec{i}^2 = |\vec{i}|^2 = \vec{j}^2 = |\vec{j}|^2 = 1$, $\vec{i}\cdot\vec{j} = 0$. Nếu $\vec{a} = (x,y)$ thì $|\vec{a}| = \sqrt{\vec{a}\cdot\vec{a}} = \sqrt{\vec{a}^2} = \sqrt{x^2 + y^2}$. Nếu $A(x_1,y_1),B(x_2,y_2)$ thì $AB = |\overrightarrow{AB}| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$. \fbox{5} Với $\vec{u} = (x_1,y_1),\vec{v} = (x_2,y_2)\ne\vec{0}$, $\vec{u}\bot\vec{v}\Leftrightarrow\vec{u}\cdot\vec{v} = x_1x_2 + y_1y_2 = 0$ \&
+\begin{equation}
+	\cos(\vec{u},\vec{v}) = \frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|} = \frac{x_1x_2 + y_1y_2}{\sqrt{x_1^2 + y_1^2}\sqrt{x_2^2 + y_2^2}},\ (\vec{u},\vec{v}) = \arccos\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|} = \arccos\frac{x_1x_2 + y_1y_2}{\sqrt{x_1^2 + y_1^2}\sqrt{x_2^2 + y_2^2}}.
+\end{equation}
 
 \begin{baitoan}[Coordinate of linear combination of vectors -- Tọa độ của tổ hợp tuyến tính các vectors]
 	Cho $n\in\mathbb{N}^\star$ số thực $a_i$ \& $n$ vectors $\vec{u}_i(x_i,y_i)$, $i = 1,2,\ldots,n$. Tìm tọa độ của vector $\sum_{i=1}^n a_i\vec{u}_i$.
@@ -122,6 +125,34 @@ See also \href{https://en.wikipedia.org/wiki/Coordinate_vector}{Wikipedia{\tt/}c
 \begin{baitoan}
 	(a) Cho 3 điểm $A(x_A,y_A),B(x_B,y_B),G(x_G,y_G)$ không thẳng hàng. Tìm tọa độ điểm $C(x_C,y_C)$ để G là trọng tâm $\Delta ABC$. (b) $M,N,P$ lần lượt là trung điểm $BC,CA,AB$. Tìm biểu thức tọa độ của tính chất hình học $AG = 2GM,BG = 2GN,CG = 2GP$.
 \end{baitoan}
+
+\begin{baitoan}[Giải tam giác trên mặt phẳng tọa độ]
+	Trong mặt phẳng tọa độ $Oxy$, cho $\Delta ABC$ có $A(x_A,y_A),B(x_B,y_B),C(x_C,y_C)$. (a) Viết định lý sin \& định lý cos phiên bản tọa độ. (b) Giải $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[Tổng hợp lực]
+	(a) Tính lực tổng hợp $\vec{F}$ của 2 lực $\overrightarrow{F_1},\overrightarrow{F_2}$, i.e., $\overrightarrow{F}\coloneqq\overrightarrow{F_1} + \overrightarrow{F_2}$ biết số đo $( \overrightarrow{F_1},\overrightarrow{F_2})$. (b) Tính lực tổng hợp $\vec{F}$ của$n\in\mathbb{N}^\star$ lực $\overrightarrow{F_i}$ với $i = 1,2,\ldots,n$, i.e., $\overrightarrow{F}\coloneqq\sum_{i=1}^n \overrightarrow{F_i} = \overrightarrow{F_1} + \cdots + \overrightarrow{F_n}$ biết số đo các góc $( \overrightarrow{F_i},\overrightarrow{F_j})$ với $1\le i < j\le n$.
+\end{baitoan}
+
+\begin{baitoan}[Tọa độ tâm tỷ cự]
+	(a) Tìm tọa độ của tâm tỷ cự của hệ $n\in\mathbb{N}^\star$ điểm $A_i(x_i,y_i)$ với trọng số $\alpha_i\in\mathbb{R}$, $i = 1,2,\ldots,n$, i.e., $\sum_{i=1}^n \alpha_i\overrightarrow{AA_i} = \vec{0}$. (b) Viết biểu thức vector $n\overrightarrow{MA} = \sum_{i=1}^n \alpha_i\overrightarrow{MA_i}$ phiên bản tọa độ.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $\Delta ABC,\Delta MNP$ với tọa độ 6 đỉnh. Tìm điều kiện cần \& đủ của 6 tọa độ này để $\Delta ABC,\Delta MNP$ có cùng: (a) trọng tâm. (b) trực tâm. (c) tâm đường tròn nội tiếp. (d) tâm đường tròn ngoại tiếp. (e) Mở rộng cho các tâm tỷ cự khác.
+\end{baitoan}
+
+%\begin{baitoan}
+%	
+%\end{baitoan}
+%
+%\begin{baitoan}
+%	
+%\end{baitoan}
+%
+%\begin{baitoan}
+%	
+%\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
