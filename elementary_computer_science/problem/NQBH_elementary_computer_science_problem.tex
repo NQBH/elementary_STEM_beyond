@@ -1,18 +1,16 @@
 \documentclass{article}
-\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,color,fancyvrb,float,graphicx,mathtools,multicol}
-\usepackage{enumitem}
-\setlist{leftmargin=4mm}
-\setlength{\columnseprule}{.5pt}
-\def\columnseprulecolor{\color{black}}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,graphicx,mathtools,multicol,soul,subfig,tikz}
+\setlist[itemize]{leftmargin=*}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
-\newtheorem{baitoan}{Bài toán}
+\newtheorem{baitoan}{}
 \newtheorem{cauhoi}{Câu hỏi}
 \newtheorem{conjecture}{Conjecture}
 \newtheorem{corollary}{Corollary}
@@ -70,6 +68,94 @@
 \tableofcontents
 
 %------------------------------------------------------------------------------%
+
+\section{Basic -- Cơ Bản}
+
+\subsection{Algebra -- Đại số}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD1, p. 14]
+	(a) Cho $A = x^2 + y^2,B = x + y + A,C = xy + A - B^2$ với $x,y\in\mathbb{R}$. Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tính $A,B,C$. (b) Mở rộng bài toán cho $A_i(x,y)\in\mathbb{R}[x,y]$ với $i = 1,2,\ldots,n$, $n\in\mathbb{N}^\star$, là các đa thức 2 biến $x,y$. (c) Mở rộng bài toán cho $A_i({\bf x})\in\mathbb{R}[{\bf x}]$ với $i = 1,2,\ldots,n$, là các đa thức  hệ số thực với $n\in\mathbb{N}^\star$ biến số ${\bf x} = (x_1,x_2,\ldots,x_n)$.
+\end{baitoan}
+See also:
+\begin{itemize}
+	\item {\it Problem: Algebraic Expression -- Bài Tập: Biểu Thức Đại Số}.
+	
+	Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Mathematics{\tt/}grade 7{\tt/}algebraic expression{\tt/}problem}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/algebraic_expression/problem/NQBH_algebraic_expression_problem.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/algebraic_expression/problem/NQBH_algebraic_expression_problem.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/algebraic_expression/problem/NQBH_algebraic_expression_problem.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/algebraic_expression/problem/NQBH_algebraic_expression_problem.tex}.}].
+	\item {\it Problem \& Solution: Algebraic Expression -- Bài Tập \& Lời Giải: Biểu Thức Đại Số}.
+	
+	Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Mathematics{\tt/}grade 7{\tt/}algebraic expression{\tt/}solution}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/algebraic_expression/problem/NQBH_algebraic_expression_solution.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/algebraic_expression/problem/NQBH_algebraic_expression_solution.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/algebraic_expression/problem/NQBH_algebraic_expression_solution.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_7/algebraic_expression/problem/NQBH_algebraic_expression_solution.tex}.}].
+\end{itemize}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD2, p. 15]
+	(a) Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tìm {\rm GTLN} $\max\{a,b,c\}$ \& {\rm GTNN} $\min\{a,b,c\}$ với $a,b,c\in\mathbb{R}$. (b) Mở rộng bài toán cho $n\in\mathbb{N}^\star$ số $a_1,a_2,\ldots,a_n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD3, p. 16]
+	(a) Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tính giá trị của hàm số $f:\mathbb{R}^2\to\mathbb{R}$ xác định bởi công thức:
+	\begin{equation*}
+		f(x,y) = \left\{\begin{split}
+			&x^3 + y^3&&\mbox{if }0\le x - y\le10,\\
+			&x^2 + y^2&&\mbox{if } x - y < 0,\ y\ge0,\\
+			&(x - y)^2&&\mbox{else}.
+		\end{split}\right.
+	\end{equation*}
+	(b) Mở rộng bài toán cho các hàm số tương tự.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD4, p. 17]
+	(a) Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tìm nghiệm của phương trình bậc $\le2$ có dạng $ax^2 + bx + c = 0$ với $a,b,c\in\mathbb{R}$. (b) Mở rộng bài toán cho phương trình bậc 3, bậc 4. (c) Mở rộng bài toán cho các phương trình đa thức có thể giải được nhờ quy về phương trình bậc 2, 3.
+\end{baitoan}
+See also:
+\begin{itemize}
+	\item {\it Problem: 2nd-Order Function. Quadratic Equation -- Bài Tập: Hàm Số Bậc 2 $y = ax^2$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0$}.
+	
+	Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Mathematics{\tt/}grade 9{\tt/}2nd-order function, quadratic equation{\tt/}problem}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/problem/NQBH_2nd_order_function_problem.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/problem/NQBH_2nd_order_function_problem.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/problem/NQBH_2nd_order_function_problem.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/problem/NQBH_2nd_order_function_problem.tex}.}].
+	\item {\it Problem \& Solution: 2nd-Order Function. Quadratic Equation -- Bài Tập \& Lời Giải: Hàm Số Bậc 2 $y = ax^2$. Phương Trình Bậc 2 1 Ẩn $ax^2 + bx + c = 0$}.
+	
+	Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Mathematics{\tt/}grade 9{\tt/}2nd-order function, quadratic equation{\tt/}solution}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/solution/NQBH_2nd_order_function_solution.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/solution/NQBH_2nd_order_function_solution.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/solution/NQBH_2nd_order_function_solution.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/2nd_order_function/solution/NQBH_2nd_order_function_solution.tex}.}].
+\end{itemize}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD5, p. 18]
+	Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tính tổng $S = \sum_{i = 1}^{100} x_i$ với $x_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,100$. (b) Mở rộng bài toán cho các tổng tương tự.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD6, p. 19]
+	Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tính giá trị của đa thức $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0\in\mathbb{R}[x]$ với hệ số thực $a_i\in\mathbb{R}$, $\forall i = 0,1,\ldots,n$ với $n\in\mathbb{N}^\star$ bằng cách sử dụng thuật toán Horner.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD7, p. 21]
+	Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tính giá trị hàm số mũ $e^x$ với $x = a$ với sai số $\varepsilon > 0$ cho trước bằng cách sử dụng khai triển Taylor của hàm $e^x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD8, p. 22]
+	Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để tìm nghiệm của phương trình $f(x) = x^5 - 6x^4 - 15x^3 - 20x^2 + 14x - 4 = 0$ với giá trị đầu (initial value) $x_0 = 0.8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Doanh_Tuan_Pascal}, VD9, p. 23]
+	Viết thuật toán, vẽ lưu đồ, \& viết chương trình {\sf Pascal, Python, C{\tt/}C++} để giải hệ phương trình tuyến tính cấp $n$ có dạng
+	\begin{equation}
+		\left\{\begin{split}
+			a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1,\\
+			a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2,\\
+			&\vdots\\
+			a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n &= b_n.
+		\end{split}\right.
+	\end{equation}
+\end{baitoan}
+See also:
+\begin{itemize}
+	\item {\it Problem: System of 1st-Order Equations -- Bài Tập: Hệ Phương Trình Bậc Nhất $A{\bf x} = {\bf b}$}.
+	
+	Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Mathematics{\tt/}grade 9{\tt/}system of 1st-order equations{\tt/}problem}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/problem/NQBH_system_1st_order_equations_problem.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/problem/NQBH_system_1st_order_equations_problem.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/problem/NQBH_system_1st_order_equations_problem.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/problem/NQBH_system_1st_order_equations_problem.tex}.}].
+	\item {\it Problem \& Solution: System of 1st-Order Equations -- Bài Tập \& Lời Giải: Hệ Phương Trình Bậc Nhất $A{\bf x} = {\bf b}$}.
+	
+	Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Mathematics{\tt/}grade 9{\tt/}system of 1st-order equations{\tt/}solution}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/solution/NQBH_system_1st_order_equations_solution.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/solution/NQBH_system_1st_order_equations_solution.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/solution/NQBH_system_1st_order_equations_solution.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/system_1st_order_equations/solution/NQBH_system_1st_order_equations_solution.tex}.}].
+	\item Problem: Trigonometry in Triangles -- Bài Tập: Hệ Thức Lượng Trong Tam Giác. {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/problem/NQBH_trigonometry_problem.pdf}.
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\section{Number Theory -- Số Học}
 
 \begin{baitoan}[\cite{Huy_sang_tao_thuat_toan_lap_trinh_tap_1}, p. 6, số thân thiện -- friendly number]
 	(a) Tìm tất cả các số tự nhiên có 2 chữ số mà khi đảo trật tự của 2 chữ số đó sẽ thu được 1 số nguyên tố cùng nhau với số đã cho. (b) Mở rộng bài toán cho số tự nhiên có $n$ chữ số với $n\in\mathbb{N},n\ge2$.
