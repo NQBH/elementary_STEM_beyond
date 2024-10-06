@@ -1,0 +1,3 @@
+Function used to compute gcd of 2 integers m & n.
+Function used to compute the sum of all proper divisors of an integer n.
+	This function is used in several cases, e.g., to check if an integer is a perfect number or not.
