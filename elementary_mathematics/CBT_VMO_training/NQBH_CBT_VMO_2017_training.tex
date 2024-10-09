@@ -1,0 +1,545 @@
+\documentclass[a4paper,oneside]{article}
+\usepackage[vietnamese,english]{babel}
+\usepackage{longtable,float,hyperref,color,amsmath,amsxtra,amssymb,latexsym,amscd,amsthm,amsfonts,graphicx}
+\numberwithin{equation}{section}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\footnotesize \textsc \leftmark}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\usepackage{imakeidx}
+\makeindex[columns=2, title=Alphabetical Index, 
+           options= -s index.ist]
+\title{\huge Short VMO 2017 Training Course at Ben Tre High School for Gifted Students}
+\author{\textsc{Nguyen Quan Ba Hong}\\
+{\small Students at Faculty of Math and Computer Science,}\\ 
+{\small Ho Chi Minh University of Science, Vietnam} \\
+{\small \texttt{email. nguyenquanbahong@gmail.com}}\\
+{\small \texttt{blog. \url{http://hongnguyenquanba.wordpress.com}} 
+\footnote{Copyright \copyright\ 2016 by Nguyen Quan Ba Hong, Student at Ho Chi Minh University of Science, Vietnam. This document may be copied freely for the purposes of education and non-commercial research. Visit my site \texttt{\url{http://hongnguyenquanba.wordpress.com}} to get more.}}}
+\begin{document}
+\maketitle
+\begin{abstract}
+This paper is used for my short VMO 2017 training course in Ben Tre High School for Gifted Students. 
+
+Dedicated to my high school teachers.
+\end{abstract}
+\newpage
+\tableofcontents
+\newpage
+
+\section{Inequalities}
+\subsection{Some Useful Inequalities}
+\textbf{Thereom 1.1 (AM-GM).} \textit{Let $a_1,\ldots,a_n$ be positive real numbers. Then}
+\begin{align}
+\dfrac{1}{n}\sum\limits_{i = 1}^n {{a_i}}  \ge {\left( {\prod\limits_{i = 1}^n {{a_i}} } \right)^{\dfrac{1}{n}}}
+\end{align}
+\textbf{Theorem 1.2 (Cauchy-Schwarz).} \textit{Let $a_1,\ldots,a_n,b_1,\ldots,b_n$ be real numbers. Then}
+\begin{align}
+\left( {\sum\limits_{i = 1}^n {a_i^2} } \right)\left( {\sum\limits_{i = 1}^n {b_i^2} } \right) \ge {\left( {\sum\limits_{i = 1}^n {{a_i}{b_i}} } \right)^2}
+\end{align}
+\textbf{Theorem 1.3 (Jensen).} \textit{Let $f:\left[a,b\right] \to \mathbb{R}$ be a convex function. Then for any $x_1,\ldots,x_n \in \left[a,b\right]$ and any nonnegative reals ${\omega _1}, \ldots ,{\omega _n}$ with $\sum\limits_{i = 1}^n {{\omega _i}}  = 1$,}
+\begin{align}
+\sum\limits_{i = 1}^n {{\omega _i}f\left( {{x_i}} \right)}  \ge f\left( {\sum\limits_{i = 1}^n {{\omega _i}{x_i}} } \right)
+\end{align}
+\textit{If $f$ is concave, then the inequality is flipped.}\\
+\\
+\textbf{Theorem 1.4 (Weighted AM-GM).} \textit{Let ${\omega _1}, \ldots ,{\omega _n} > 0$ with $\sum\limits_{i = 1}^n {{\omega _i}}  = 1$. For all $x_1,\ldots,x_n >0$,}
+\begin{align}
+\sum\limits_{i = 1}^n {{\omega _i}{x_i}}  \ge \prod\limits_{i = 1}^n {x_i^{{\omega _i}}} 
+\end{align}
+\textbf{Theorem 1.5 (Schur).} \textit{Let $x,y,z$ be nonnegative real numbers. For any $r>0$,}
+\begin{align}
+\sum\limits_{\mbox{cyclic}} {{x^r}\left( {x - y} \right)\left( {x - z} \right)}  \ge 0
+\end{align}
+\textbf{Theorem 1.6 (Power Mean).} \textit{Let $x_1,\ldots,x_n >0$. The power mean of order $r$ is defined by}
+\begin{align}
+{M_{\left( {{x_1}, \ldots ,{x_n}} \right)}}\left( 0 \right) &= {\left( {\prod\limits_{i = 1}^n {{x_i}} } \right)^{\dfrac{1}{n}}}\\
+{M_{\left( {{x_1}, \ldots ,{x_n}} \right)}}\left( r \right) &= {\left( {\dfrac{1}{n}}{\sum\limits_{i = 1}^n {x_i^r} } \right)^{\dfrac{1}{r}}},r \ne 0
+\end{align}
+\textit{Then, ${M_{\left( {{x_1}, \ldots ,{x_n}} \right)}}:\mathbb{R} \to \mathbb{R}$ is continuous and monotone increasing.}\\
+\\
+\textbf{Theorem 1.7 (Rearrangement).} \textit{Let $x_1 \ge \ldots \ge x_n$ and $y_1 \ge \ldots \ge y_n$ be real numbers. For any permutation $\sigma$ of $\left\{ {1,2, \ldots ,n} \right\}$,}
+\begin{align}
+\sum\limits_{i = 1}^n {{x_i}{y_i}}  \ge \sum\limits_{i = 1}^n {{x_i}{y_{\sigma \left( i \right)}}}  \ge \sum\limits_{i = 1}^n {{x_i}{y_{n + 1 - i}}} 
+\end{align}
+\textbf{Theorem 1.8 (Chebyshev).} \textit{Let $x_1 \ge \ldots \ge x_n$ and $y_1 \ge \ldots \ge y_n$ be real numbers. Then}
+\begin{align}
+\dfrac{1}{n}\sum\limits_{i = 1}^n {{x_i}{y_i}}  \ge \left( {\dfrac{1}{n}\sum\limits_{i = 1}^n {{x_i}} } \right)\left( {\dfrac{1}{n}\sum\limits_{i = 1}^n {{y_i}} } \right)
+\end{align}
+\textbf{Theorem 1.9 (H\"{o}lder).} \textit{Let $x_{ij},i=1,\ldots,m,j=1,\ldots,n$ be positive real numbers. Suppose that ${\omega _1}, \ldots ,{\omega _n}$ are positive real numbers satisfying $\sum\limits_{i = 1}^n {{\omega _i}}  = 1$. Then,}
+\begin{align}
+\prod\limits_{j = 1}^n {{{\left( {\sum\limits_{i = 1}^m {{x_{ij}}} } \right)}^{{\omega _j}}}}  \ge \sum\limits_{i = 1}^m {\left( {\prod\limits_{j = 1}^n {x_{ij}^{{\omega _j}}} } \right)} 
+\end{align}
+\textbf{Theorem 1.10 (Minkowski).} \textit{If $x_1,\ldots,x_n,y_1,\ldots,y_n >0$ and $p>1$, then}
+\begin{align}
+{\left( {\sum\limits_{i = 1}^n {x_i^p} } \right)^{\dfrac{1}{p}}} + {\left( {\sum\limits_{i = 1}^n {y_i^p} } \right)^{\dfrac{1}{p}}} \ge {\left( {\sum\limits_{i = 1}^n {{{\left( {{x_i} + {y_i}} \right)}^p}} } \right)^{\dfrac{1}{p}}}
+\end{align}
+
+
+
+\subsection{Substitutions}
+\textbf{Theorem 1.11.} \textit{Three positive real numbers $a,b,c$ satisfy the following equality}
+\begin{align}
+a + b + c + 2 = abc
+\end{align}
+\textit{if and only if there exists three positive real numbers $x,y,z$ such that}
+\begin{align}
+a &= \dfrac{{y + z}}{x}\\
+b &= \dfrac{{z + x}}{y}\\
+c &= \dfrac{{x + y}}{z}
+\end{align}
+\textsc{Hint, \cite{1}.} Use the following equalities
+\begin{align}
+\dfrac{x}{{x + y + z}} + \dfrac{y}{{x + y + z}} + \dfrac{y}{{x + y + z}} &= 1\\
+ \Leftrightarrow \dfrac{1}{{1 + \dfrac{{y + z}}{x}}} + \dfrac{1}{{1 + \dfrac{{z + x}}{y}}} + \dfrac{1}{{1 + \dfrac{{x + y}}{z}}} &= 1
+\end{align}
+and 
+\begin{align}
+\dfrac{1}{{1 + a}} + \dfrac{1}{{1 + b}} + \dfrac{1}{{1 + c}} = 1  \Leftrightarrow a + b + c + 2 = abc 
+\end{align}
+\hfill $\square$\\
+\\
+\textbf{Theorem 1.12.} \textit{Three positive real numbers $a,b,c$  satisfy the following equality}
+\begin{align}
+ab + bc + ca + abc = 4
+\end{align}
+\textit{if and only if there exists three positive real numbers $x,y,z$ such that}
+\begin{align}
+a &= \dfrac{{2x}}{{y + z}}\\
+b &= \dfrac{{2y}}{{z + x}}\\
+c &= \dfrac{{2z}}{{x + y}}
+\end{align}
+\textsc{Hint, \cite{1}.} Use the transformation
+\begin{align}
+\left( {a,b,c} \right) \mapsto \left( {\dfrac{2}{a},\dfrac{2}{b},\dfrac{2}{c}} \right)
+\end{align}
+in Theorem 1.11. \hfill $\square$\\
+\\
+\textbf{Problem 1.13 (Gabriel Dospinescu).} \textit{Let $a,b,c>0$ satisfying $abc=a+b+c+2$. Prove that}
+\begin{align}
+abc\left( {a - 1} \right)\left( {b - 1} \right)\left( {c - 1} \right) \le 8
+\end{align}
+\textbf{Problem 1.14 (VMO 1996, Indian MO 1998).} \textit{Let $a,b,c \ge 0$ satisfying}
+\begin{align}
+ab+bc+ca+abc=4
+\end{align}
+\textit{Prove that}
+\begin{align}
+a+b+c \ge ab+bc+ca
+\end{align}
+\textbf{Problem 1.15 (Vietnamese IMO Traning Camp 2010).} \textit{Let $a,b,c$ be positive real number satisfying $a+b+c+1=4abc$. Prove that}
+\begin{align}
+ab+bc+ca \ge a+b+c
+\end{align}
+\textbf{Problem 1.16 (Crux  mathematicorum).} \textit{Let $a,b,c>1$ satisfying}
+\begin{align}
+\dfrac{1}{{{a^2} - 1}} + \dfrac{1}{{{b^2} - 1}} + \dfrac{1}{{{c^2} - 1}} = 1
+\end{align}
+\textit{Prove that}
+\begin{align}
+\dfrac{1}{{a + 1}} + \dfrac{1}{{b + 1}} + \dfrac{1}{{c + 1}} \le 1
+\end{align}
+\textbf{Problem 1.17 (CWMO 2005).} \textit{Let $a,b,c,d$ be positive real numbers satisfying}
+\begin{align}
+\dfrac{1}{{4 + a}} + \dfrac{1}{{4 + b}} + \dfrac{1}{{4 + c}} + \dfrac{1}{{4 + d}} + \dfrac{1}{{4 + e}} = 1
+\end{align}
+\textit{Prove that}
+\begin{align}
+\dfrac{a}{{4 + {a^2}}} + \dfrac{b}{{4 + {b^2}}} + \dfrac{c}{{4 + {c^2}}} + \dfrac{d}{{4 + {d^2}}} + \dfrac{e}{{4 + {e^2}}} \le 1
+\end{align}
+
+See \cite{1} for more problems.
+\subsection{Some Special Techniques}
+\subsubsection{Isolated Fudging.} Suppose that we want to prove a homogeneous symmetric inequality which has the following form
+\begin{align}
+\label{1.24}
+f\left( {a,b,c} \right) + f\left( {b,c,a} \right) + f\left( {c,a,b} \right) \ge 1
+\end{align}
+
+The main idea of this technique is that the effort is focused on manipulating individual terms, as opposed to the inequality as a whole. For instance, we will try to find an estimate as follow
+\begin{align}
+\label{1.25}
+f\left( {a,b,c} \right) \ge \dfrac{{{a^r}}}{{{a^r} + {b^r} + {c^r}}}
+\end{align}
+for a suitable real number $r$. 
+
+If \eqref{1.25} succeeds, i.e., we can show such $r$ and prove \eqref{1.25} for this values of $r$. Then, by similar estimates which is based on the symmetry of the inequality \eqref{1.24}, we have
+\begin{align}
+f\left( {b,c,a} \right) &\ge \dfrac{{{b^r}}}{{{a^r} + {b^r} + {c^r}}}\\
+f\left( {c,a,b} \right) &\ge \dfrac{{{c^r}}}{{{a^r} + {b^r} + {c^r}}}
+\end{align}
+Hence, 
+\begin{align}
+\sum {f\left( {a,b,c} \right)}  &\ge \sum {\dfrac{{{a^r}}}{{{a^r} + {b^r} + {c^r}}}} \\
+& = 1
+\end{align}
+\textbf{Finding a suitable $r$.} How to find a value of $r$ for which \eqref{1.25} holds? Suppse that some $r$ works. Let us consider the function
+\begin{align}
+F\left( {a,b,c} \right) = f\left( {a,b,c} \right) - \dfrac{{{a^r}}}{{{a^r} + {b^r} + {c^r}}}
+\end{align}
+
+To make \eqref{1.25} holds, we need $F\left(a,b,c\right) \ge 0$ for all $a,b,c>0$. By considering the point of equality, we see that $a=b=c$ must be a local minimum of $f$. We can also standalize $a=b=c=1$ due to the homogeneous property of \eqref{1.24}. Then, we have
+\begin{align}
+\dfrac{{\partial F}}{{\partial a}}\left( {a,b,c} \right)& = \dfrac{{\partial f}}{{\partial a}}\left( {a,b,c} \right) - \dfrac{\partial }{{\partial a}}\left( {\dfrac{{{a^r}}}{{{a^r} + {b^r} + {c^r}}}} \right)\\
+& = \dfrac{{\partial f}}{{\partial a}}\left( {a,b,c} \right) - \dfrac{{r{a^{r - 1}}\left( {{a^r} + {b^r} + {c^r}} \right) - {a^r} \cdot r{a^{r - 1}}}}{{{{\left( {{a^r} + {b^r} + {c^r}} \right)}^2}}}\\
+& = \dfrac{{\partial f}}{{\partial a}}\left( {a,b,c} \right) - \dfrac{{r{a^{r - 1}}\left( {{b^r} + {c^r}} \right)}}{{{{\left( {{a^r} + {b^r} + {c^r}} \right)}^2}}}
+\end{align}
+Hence
+\begin{align}
+\dfrac{{\partial F}}{{\partial a}}\left( {1,1,1} \right) = \dfrac{{\partial f}}{{\partial a}}\left( {1,1,1} \right) - \dfrac{{2r}}{9}
+\end{align}
+
+Finally, we need to solve the equation $\dfrac{{\partial F}}{{\partial a}}\left( {1,1,1} \right) = 0$, or equivalently,
+\begin{align}
+r = \dfrac{9}{2}\dfrac{{\partial f}}{{\partial a}}\left( {1,1,1} \right)
+\end{align}
+to obtain $r$. Then prove \eqref{1.25} with obtained value of $r$. \hfill $\square$\\
+
+To illustrate this technique, we consider the following famous inequality.\\
+\\
+\textbf{Problem 1.18 (IMO 2001, Hojoo Lee).} \textit{Prove that}
+\begin{align}
+\dfrac{a}{{\sqrt {{a^2} + 8bc} }} + \dfrac{b}{{\sqrt {{b^2} + 8ca} }} + \dfrac{c}{{\sqrt {{c^2} + 8ab} }} \ge 1
+\end{align}
+\textit{for all positive real numbers $a,b$ and $c$.}\\
+\\
+\textsc{Hint.} \textit{(Official Solution)} Use \textit{isolated fudging technique} to find a suitable $r$ for \eqref{1.25}. We solve out $r=\dfrac{4}{3}$. Then, prove
+\begin{align}
+\dfrac{a}{{\sqrt {{a^2} + 8bc} }} \ge \dfrac{{{a^{\dfrac{4}{3}}}}}{{{a^{\dfrac{4}{3}}} + {b^{\dfrac{4}{3}}} + {c^{\dfrac{4}{3}}}}}
+\end{align}
+\hfill $\square$
+\subsubsection{Homogenize Techniques}
+See \cite{1} for homogenize techniques and \cite{2} for more problems.
+\section{Functional Equations}
+\subsection{Functional Equations and Base $b$ Decomposition}
+\textbf{Problem 2.1.} \textit{Let $f: \mathbb{N}^* \to \mathbb{R}$ satisfying $f\left(1\right) =1$ and}
+\begin{align}
+f\left( n \right) = \left\{ {\begin{array}{*{20}{c}}
+{1 + f\left( {\dfrac{{n - 1}}{2}} \right),n\mbox{ is odd}}\\
+{1 + f\left( {\dfrac{n}{2}} \right),n\mbox{ is even}}
+\end{array}} \right.
+\end{align}
+\textit{Find all value of $n$ such that $f\left(n\right) =2004$.}\\
+\\
+\textbf{Problem 2.2.} \textit{Let $f:\mathbb{N}^* \to \mathbb{N}^*$ satisfying}
+\begin{align}
+f\left( 1 \right) &= 1\\
+f\left( {2n} \right) &= f\left( n \right)\\
+f\left( {2n + 1} \right) &= f\left( {2n} \right) + 1
+\end{align}
+\textit{Find $\mathop {\max }\limits_{n \in \left\{ {1,2, \ldots ,1994} \right\}} f\left( n \right)$.}\\
+\\
+\textbf{Problem 2.3 (IMO 1988).} \textit{Let $f$ defined on the set of positive integers such that}
+\begin{align}
+f\left( 1 \right) &= 1\\
+f\left( 3 \right) &= 3\\
+f\left( {2n} \right) &= f\left( n \right)\\
+f\left( {4n + 1} \right) &= 2f\left( {2n + 1} \right) - f\left( n \right)\\
+f\left( {4n + 3} \right) &= 3f\left( {2n + 1} \right) - 2f\left( {2n} \right)
+\end{align}
+\textit{Determine all positive integers $n \le 1988$ such that $f\left(n\right)=n$.}\\
+\\
+\textbf{Problem 2.4.} \textit{Let $f$ defined on the set of positive integers satisfying}
+\begin{align}
+f\left( 1 \right) &= 1\\
+f\left( {2n + 1} \right) &= f\left( {2n} \right) + 1\\
+f\left( {2n} \right) &= 3f\left( n \right)
+\end{align}
+\textit{Determine all values of $m$ such that there exists a positive integer $n$ such that $f\left(n\right)=m$.}\\
+\\
+\textbf{Problem 2.5.} \textit{Let $f:\mathbb{N}^* \to \mathbb{N}^*$ be a strictly increasing function satisfying}
+\begin{align}
+f\left( {f\left( n \right)} \right) = 3n,\forall n \in {\mathbb{N}^*}
+\end{align}
+\textbf{Problem 2.6.} \textit{Let $f:\mathbb{N} \to \mathbb{N}$ satisfying}
+\begin{align}
+f\left( {3n} \right) &= 2f\left( n \right)\\
+f\left( {3n + 1} \right) &= f\left( {3n} \right) + 1\\
+f\left( {3n + 1} \right) &= f\left( {3n} \right) + 2
+\end{align}
+\textit{Find $n \in \left\{ {0,1, \ldots ,2003} \right\}$ such that $f\left( {2n} \right) = 2f\left( n \right)$.}
+\subsection{Functional Equation Problems}
+\textbf{Problem 2.7 (MOP 1998).} \textit{Let $S$ be the set of nonnegative integers. Let $h:S \to S$ be a bijective function. Prove that there do not exist function $f,g$ from $S$ to itself, $f$ injective and $g$ surjective, such that} 
+\begin{align}
+\label{2.17}
+f\left(n\right)g\left(n\right) =h\left(n\right), \forall n \in S
+\end{align}
+\textsc{Hint, \cite{7}.} Suppose on the contrary that $f$ and $g$ exist, and define $F = f \circ {h^{ - 1}},G = g \circ {h^{ - 1}}$. Hence, $F$ is injective and $G$ is surjective, and \eqref{2.17} becomes
+\begin{align}
+F\left( n \right)G\left( n \right) = n
+\end{align}
+Prove by strong induction that 
+\begin{align}
+F\left(n\right) =n
+\end{align}
+Hence, $G$ is not surjective. This contradiction ends our proof. \hfill $\square$
+
+
+
+
+
+\section{Combinatorics}
+\subsection{Bijections}
+\textbf{Definition 3.1.} Given two sets $A$ and $B$, a \textit{bijection} (also called \textit{bijective correspondence}) is a map $f:A\to B$ that is both injective and surjective, meaning that no two elements of $A$ get mapped onto the same element in $B$, and every element of $B$ is the image of some element of $A$. 
+
+In particular, when the sets are finite, the existence of a bijection implies that 
+\begin{align}
+\left| A \right| = \left| B \right|
+\end{align}
+\textbf{Problem 3.2.} \textit{Determine the number of walks from $\left(0,0\right)$ to $\left(m,n\right)$ allowing only unit steps up or to the right.}\\
+\\
+\textsc{Hint, \cite{4}.}  Construct a bijection between the following two sets
+\begin{enumerate}
+\item The set of walks from $\left(0,0\right)$ to $\left(m,n\right)$ using only unit up or right steps.
+\item The set of sequences consisting of $m$ copies of $R$ and $n$ copies of $U$.
+\end{enumerate}
+Result: $\left( {\begin{array}{*{20}{c}}
+{m + n}\\
+m
+\end{array}} \right) = \left( {\begin{array}{*{20}{c}}
+{m + n}\\
+n
+\end{array}} \right)$ walks. \hfill $\square$\\
+\\
+\textbf{Definition 3.3.} A \textit{partition}  of a positive integer $n$ is a way of writing $n$ as a sum of positive integers, where the order of the summands is irrelevant.\\
+\\
+\textbf{Problem 3.4.} \textit{Let $n$ and $k$ be positive integers. Show that the number of partitions of $n$ with exactly $k$ parts equals the number of partitions of $n$ whose largest part is exactly $k$.}\\
+\\
+\textsc{Hint, \cite{4}.} where $a_1\ge a_2\ge \ldots \ge a_r>0$, we consider a Ferrar diagram with $a_i$ dots on the $i$-th row, all left aligned. The number of parts of the partition corresponds to the number of rows in the Ferrar diagram, and the size of the largest part corresponds to the number of columns of the Ferrar diagram. 
+
+For each partition, let us consider its \textit{conjugate}, whose Ferrar diagram is formed by reflecting the original diagram across the main diagonal. The conjugation operation switches the number of rows and columns in a Ferrar diagram. In particular, we get a bijection between the number of Ferrar diagrams with $k$ rows and the number of Ferrar diagrams with $k$ columns, thereby giving us a bijection between the set of partitions of $n$ with exactly $k$ parts and the set of partitions of $n$ whose largest part is $k$. \hfill $\square$\\
+\\
+\textbf{Problem 3.5 (Euler).} \textit{Prove that the number of partitions of $n$ into distinct parts is equal to the number of partitions of $n$ into odd parts.}\\
+\\
+\textsc{Hint, \cite{4}.} Starting from partition of $n$ into distinct parts, let us write each part of $n$ as $a\cdot 2^b$, where $a$ is odd, and then split the part into $2^b$ parts all equal to $a$. This gives a partition of $n$ into odd parts. 
+
+Conversely, we start with a partition of $n$ into distinct parts. Suppose that there are $k$ parts equal to $a$, where $a$ is odd, let $k = \sum\limits_{i = 1}^r {{2^{{k_i}}}}$ for distinct positive integers $k_i,\hspace{0.2cm}i=1,2,\ldots,r$ (the binary representation of $k$). Then create the parts $a \cdot {2^{{k_i}}}$ for each $i$. Note that the results parts are all distinct, since every integer can be uniquely written as $a\cdot 2^b$ where $a$ is odd. 
+
+Hence, we have constructed a bijection between the set of partitions of $n$ into distinct parts with the set of partitions of $n$ into odd parts. Therefore, the number of partitions of $n$ into distinct parts is equal to the number of partitions of $n$ into odd parts. \hfill $\square$\\
+\\
+\textbf{Problem 3.6.} \textit{A triangular grid is obtained by tiling an equilateral triangle of side length $n$ by $n^2$ equilateral triangles of side length 1. Determine the number of parallelograms bounded by line segments of the grid.}\\
+\\
+\textsc{Hint, \cite{4}.} The number of parallelograms bounded by line segments of the grid is $3\left( {\begin{array}{*{20}{c}}
+{n + 2}\\
+4
+\end{array}} \right)$. \hfill $\square$
+\subsection{Counting in Two Ways and Incidence Matrices}
+See \cite{5} for full discussion on this topic.\\
+\\
+\textbf{Theorem 3.7.} \textit{If $A = {\left( {{a_{ij}}} \right)_{r \times c}}$ is a $r \times c$ matrix with row sums $R_i,\hspace{0.2cm} i=1,2,\ldots,r$ and column sums $C_j,\hspace{0.2cm}j=1,2,\ldots,c$, then}
+\begin{align}
+\sum\limits_{i = 1}^r {{R_i}}  = \sum\limits_{j = 1}^c {{C_j}} 
+\end{align}
+\textbf{Theorem 3.8.} \textit{Let $A = {\left( {{a_{ij}}} \right)_{r \times c}}$ is a $r \times c \hspace{0.2cm} \left(0,1\right)$-matrix with column sums $C_j$. Suppose that for every two rows, there exist exactly $t$ columns that contains $1$'s from both rows, then}
+\begin{align}
+t\left( {\begin{array}{*{20}{c}}
+r\\
+2
+\end{array}} \right) = \sum\limits_{j = 1}^c {\left( {\begin{array}{*{20}{c}}
+{{C_j}}\\
+2
+\end{array}} \right)}
+\end{align}
+\textsc{Proof.} Let $\mathcal{T}$ denote the set of all  unordered pairs of $1$'s that lie in the same column. Count the elements of $\mathcal{T}$ in two different ways. \hfill $\square$\\
+\\
+\textbf{Problem 3.9 (IMC 2002).} \textit{Two hundred  students participated in a mathematical contest. They had 6 problems to solve. It is known that each problem was correctly solved by at least 120 participants. Prove that there must be two participants such that every problem was solved by at least one of these two students.}\\
+\\
+\textsc{Hint, \cite{5}.} Suppose for the contrary that for every two students, there is some problem that neither of them solved. We consider the incidence matrix of this configuration, whose 6 rows, each representing a problem, and 200 columns, each representing a student. We mark an entry of the matrix 1 if the student corresponding to the column did not solve the problem corresponding to the row, and make the entry 0 otherwise. 
+
+Let $\mathcal{T}$ denote the set of pairs of 1's that belong in the same row. Let us consider the cardinality of $\mathcal{T}$ from two different perspectives.
+
+\textit{Counting by columns.} The established assumption that for every two students, there was a problem that neither of them solved, yields that for every two columns, there is at least one pair of 1's among these two columns that belong in the same row. So we can find an element if $\mathcal{T}$ in every pair of columns. Hence,
+\begin{align}
+\label{3.4}
+\left| \mathcal{T} \right| \ge \left( {\begin{array}{*{20}{c}}
+{200}\\
+2
+\end{array}} \right) = 19900
+\end{align}
+
+\textit{Counting by rows.} Since each problem was solved by at least 120 students. This means that there are at most 80 ones in each row. So each row contains at most $\left( {\begin{array}{*{20}{c}}
+{80}\\
+2
+\end{array}} \right)$ pairs of 1's. Hence, 
+\begin{align}
+\label{3.5}
+\left| \mathcal{T} \right| \le 6\left( {\begin{array}{*{20}{c}}
+{80}\\
+2
+\end{array}} \right) = 18960
+\end{align}
+Combining \eqref{3.4} and \eqref{3.5} yields $19900 \le \left| \mathcal{T} \right| \le 18960$, which is absurd. \hfill $\square$\\
+\\
+\textbf{Convexity of the function $f\left( x \right) = \left( {\begin{array}{*{20}{c}}
+x\\
+2
+\end{array}} \right) = \dfrac{{x\left( {x - 1} \right)}}{2}$.} Since $f$ is convex, using Jensen's Theorem 1.3 yields
+\begin{align}
+\label{3.6}
+\sum\limits_{i = 1}^n {\left( {\begin{array}{*{20}{c}}
+{{a_i}}\\
+2
+\end{array}} \right)}  \ge \dfrac{{\sum\limits_{i = 1}^n {{a_i}} \left( {\sum\limits_{i = 1}^n {{a_i}}  - n} \right)}}{{2n}}
+\end{align}
+Putting $s = \sum\limits_{i = 1}^n {{a_i}} $, \eqref{3.6} becomes
+\begin{align}
+\sum\limits_{i = 1}^n {\left( {\begin{array}{*{20}{c}}
+{{a_i}}\\
+2
+\end{array}} \right)}  \ge \dfrac{{s\left( {s - n} \right)}}{{2n}}
+\end{align}
+where $a_i,\hspace{0.2cm}i=1,2,\ldots,n$ are positive integers. However, this bound is not always the best possible, since the equality is attained at $a_i=\dfrac{s}{n}$ for all $i$, which may not achieved as $a_i$ needs to be an integer.
+
+Using the fact that the $a_i$'s must be integers, using Karamata's majorization inequality, or more simply through discrete smoothing, yields the following tight bound
+\begin{align}
+\sum\limits_{i = 1}^n {\left( {\begin{array}{*{20}{c}}
+{{a_i}}\\
+2
+\end{array}} \right)}  \ge r\left( {\begin{array}{*{20}{c}}
+{k + 1}\\
+2
+\end{array}} \right) + \left( {n - r} \right)\left( {\begin{array}{*{20}{c}}
+k\\
+2
+\end{array}} \right)
+\end{align}
+where $a_i,\hspace{0.2cm}i=1,2,\ldots,n$ are positive integers, and $s = \sum\limits_{i = 1}^n {{a_i}}  = nk + r$, where $k$ and $r$ are integers such that $0\le r <n$. \hfill $\square$\\
+\\
+\textbf{Problem 3.10 (IMO 1998).} \textit{In a competition, there are $a$ contestants and $b$ judges, where $b \ge 3$ is an odd integer. Each judge rates each contestant as either ``pass'' or ``fail''. Suppose $k$ is a number such that, for any two judges, their ratings coincide for at most $k$ contestants. Prove that}
+\begin{align}
+\label{3.9}
+\dfrac{k}{a} \ge \dfrac{{b - 1}}{{2b}}
+\end{align} 
+\textsc{Hint, \cite{1}.} Form an incidence matrix whose $b$ rows, each representing a judge, and $a$ columns, each representing a contestant. Make the entries 1 or 0, representing ``pass'' and ``fail'', respectively.
+
+Let $\mathcal{T}$ denote the set of pairs of entries in the same column that are either both 0 or 1. Count $\mathcal{T}$ in two different ways.
+
+\textit{Counting by rows.} Since the ratings of any two judge coincide for at most $k$ contestants, for every two rows, at most $k$ pairs belong in $\mathcal{T}$. Hence,
+\begin{align}
+\label{3.10}
+\left| \mathcal{T} \right| \le k\left( {\begin{array}{*{20}{c}}
+b\\
+2
+\end{array}} \right) = \dfrac{{kb\left( {b - 1} \right)}}{2}
+\end{align}
+
+\textit{Counting by columns.} For a particular column, suppose there are $p$ ones and $q$ zeros, then there are $\left( {\begin{array}{*{20}{c}}
+p\\
+2
+\end{array}} \right) + \left( {\begin{array}{*{20}{c}}
+q\\
+2
+\end{array}} \right)$ pairs in $\mathcal{T}$. Note that $p+q=b$ is odd, using smoothing, we get
+\begin{align}
+\left( {\begin{array}{*{20}{c}}
+p\\
+2
+\end{array}} \right) + \left( {\begin{array}{*{20}{c}}
+q\\
+2
+\end{array}} \right) &\ge \left( {\begin{array}{*{20}{c}}
+{\dfrac{{b + 1}}{2}}\\
+2
+\end{array}} \right) + \left( {\begin{array}{*{20}{c}}
+{\dfrac{{b - 1}}{2}}\\
+2
+\end{array}} \right)\\
+& = \dfrac{{{{\left( {b - 1} \right)}^2}}}{4}
+\end{align}
+Hence,
+\begin{align}
+\label{3.13}
+\left| \mathcal{T} \right| \ge \dfrac{{a{{\left( {b - 1} \right)}^2}}}{4}
+\end{align}
+Combining \eqref{3.10} with \eqref{3.10} yields \eqref{3.9}. \hfill $\square$
+\subsection{Combinatorics of Sets}
+\textbf{Problem 3.11.} \textit{Let $\mathcal{F}$ be a collection of subsets ${\left\{ {{A_i}} \right\}_{i \in I}}$ of $\left\{ {1,2, \ldots ,n} \right\}$ such that ${A_i} \cap {A_j} \ne \emptyset $. Prove that $\mathcal{F}$ has size at most $2^{n-1}$.}\\
+\\
+\textsc{Hint, \cite{6}.} For each set $A \in\mathcal{P}\left( {\left\{ {1,2, \ldots ,n} \right\}} \right)$, consider $A$ and $\bar{A}$. \hfill $\square$
+\subsection{Tiling}
+\textbf{Problem 3.12.} \textit{Show that every $2^n\times 2^n$ board with one square removed can be covered by Triominoes ($L$ shape).}\\
+\\
+\textsc{Hint, \cite{7}.} First, prove that we can tile any $2^n \times 2^n$ board such that we only miss one of the corners. Then we prove the problem for a general $2^n\times 2^n$ board by induction. \hfill $\square$\\
+\\
+\textbf{Problem 3.13.} \textit{Let $k$ be a prime. Which $m\times n$ boards can be tiled with $1\times  k$ tiles (rotations allowed)?}\\
+\\
+\textsc{Hint.} Assign colors labeled $1,2,\ldots,k$ or assign $k$th roots of unity.
+\begin{align}
+\label{3.14}
+\sum\limits_{j = 0}^{k - 1} {{\varepsilon ^j}}  = 0
+\end{align}
+Each tile covers all $k$  colors exactly one, so all the colors must  appear the same number of times. In the root of unity method, each tile covers a sum of zero due to \eqref{3.14}, and the sum of the whole board must be zero. This happens  if and only if $k$ divides $m$ or $n$. \hfill $\square$
+
+\subsection{Combinatorics Problems}
+\textbf{Problem 3.13.} \textit{Prove that the number of binary sequences of length $n$ with an even number of 1's is equal to the number of binary sequences of length $n$ with an odd number of 1's.}\\
+\\
+\textsc{Hint 1, \cite{7}.} Let $E_n, O_n$ be the number of binary sequences of length $n$ with an even number of 1's and the number of binary sequences of length $n$ with an odd number of 1's, respectively. 
+
+Induction with respect to $n$.
+\begin{align}
+\label{3.14}
+{E_n} = {O_n} = {2^{n - 1}}
+\end{align}
+By counting, prove that
+\begin{align}
+\label{3.15}
+{E_{n + 1}} = {E_n} + {O_n}
+\end{align}
+Combining \eqref{3.14}, \eqref{3.15} and induction principle yields that \eqref{3.14} holds for all positive integers $n$. \hfill $\square$\\
+\\
+\textsc{Hint 2.} Prove 
+\begin{align}
+{E_n} + {O_n} = {2^n} \label{3.16}\\
+{E_n} = \sum\limits_{0 \le k \le n,k \mbox{ is even}} {\left( {\begin{array}{*{20}{c}}
+n\\
+k
+\end{array}} \right)} \label{3.17}\\
+{O_n} = \sum\limits_{0 \le k \le n,k\mbox{ is odd}} {\left( {\begin{array}{*{20}{c}}
+n\\
+k
+\end{array}} \right)} \label{3.18}
+\end{align}
+Subtracting \eqref{3.17} by \eqref{3.18} yields
+\begin{align} 
+\label{3.19}
+{E_n} - {O_n} &= \sum\limits_{k = 0}^n {{{\left( { - 1} \right)}^k}\left( {\begin{array}{*{20}{c}}
+n\\
+k
+\end{array}} \right)} \\
+ &= {\left( {1 - 1} \right)^n}\\
+& = 0 \label{3.21}
+\end{align}
+Combining \eqref{3.16} with \eqref{3.19}-\eqref{3.21} yields the results. \hfill $\square$
+
+\section{Number Theory}
+\subsection{Number Theory Problems}
+\textbf{Problem 4.1 (Titu Andreescu 1998).} \textit{Let $a$ be a real number such that $\sin a +\cos a$ is a rational number. Prove that for all $n \in \mathbb{N}$, $\sin ^n a + \cos ^n a$ is rational.}\\
+\\
+\textsc{Hint, \cite{7}.} Using the case $n=1,2$ yields $\sin a\cos a \in \mathbb{Q}$. With the following useful identity
+\begin{align}
+&\left( {{{\sin }^n}a + {{\cos }^n}a} \right)\left( {\sin a + \cos a} \right) \\
+&= {\sin ^{n + 1}}a + {\cos ^{n + 1}}a + \sin a\cos a\left( {{{\sin }^{n - 1}}a + {{\cos }^{n - 1}}a} \right)
+\end{align}
+use induction to obtain the desired result. \hfill $\square$\\
+\\
+\\
+\\
+\begin{center}
+\textsc{The End}
+\end{center}
+\newpage
+\begin{thebibliography}{999}
+\bibitem {1} Nguyen Quan Ba Hong, \textit{A useful substitution andits applications in proving inequalities}, August 20, 2013.
+\bibitem {3} Nguyen Quan Ba Hong, \textit{Some solvable polynomials equations due to equation of degree 2 and degree 3}, 2014.
+\bibitem {2} Yufei Zhao, \textit{Inequalities}, Winter Camp 2008.
+\bibitem {4} Yufei Zhao, \textit{Bijections}.
+\bibitem {5} Yufei Zhao, \textit{Counting in Two Ways, Incidence Matrices}, MOP 2007 Black Group June 26, 2007.
+\bibitem {6} Po-Shen Loh, \textit{Combinatorics of Sets}, June 2011.
+\bibitem {7} Po-Shen Loh, \textit{I. Introduction}, June 16, 2003.
+\end{thebibliography}
+\end{document}
+
