@@ -5,15 +5,17 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
-\newtheorem{baitoan}{Bài toán}
+\newtheorem{baitoan}{}
 \newtheorem{cauhoi}{Câu hỏi}
 \newtheorem{conjecture}{Conjecture}
 \newtheorem{corollary}{Corollary}
 \newtheorem{dangtoan}{Dạng toán}
 \newtheorem{definition}{Definition}
+\newtheorem{dinhluat}{Định luật}
 \newtheorem{dinhly}{Định lý}
 \newtheorem{dinhnghia}{Định nghĩa}
 \newtheorem{example}{Example}
@@ -37,13 +39,33 @@
 \DeclareRobustCommand{\divby}{%
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
+\def\labelitemii{$\circ$}
 
-\title{Problem: Trigonometric Equation -- Bài Tập: Phương Trình Lượng Giác}
-\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\title{Problem: Trigonometric Equations -- Bài Tập: Phương Trình Lượng Giác}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
 \date{\today}
 
 \begin{document}
 \maketitle
+\begin{abstract}
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
+	Latest version:
+	\begin{itemize}
+		\item {\it Problem: Trigonometric Equations -- Bài Tập: Phương Trình Lượng Giác}.
+		
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_11/trigonometric_equation/problem/NQBH_trigonometric_equation_problem.pdf}.
+		
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_11/trigonometric_equation/problem/NQBH_trigonometric_equation_problem.tex}.
+		\item {\it Problem \& Solution: Trigonometric Equations -- Bài Tập \& Lời Giải: Phương Trình Lượng Giác}.
+		
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_11/trigonometric_equation/solution/NQBH_trigonometric_equation_solution.pdf}.
+		
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_11/trigonometric_equation/solution/NQBH_trigonometric_equation_solution.tex}.
+	\end{itemize}
+\end{abstract}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
