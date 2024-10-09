@@ -1,0 +1,2918 @@
+\documentclass[a4paper,oneside]{book}
+\usepackage[utf8]{vietnam}
+\usepackage{tabu,float,hyperref,color,amsmath,amsxtra,amssymb,latexsym,amscd,amsthm,amsfonts,graphicx}
+\numberwithin{equation}{chapter}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\footnotesize \textsc \leftmark}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\usepackage{imakeidx}
+\makeindex[columns=2, title=Alphabetical Index, 
+           options= -s index.ist]
+\title{Một số lớp phương trình bậc cao giải được nhờ phương trình bậc 2 và phương trình bậc 3}
+\author{\textsc{Nguyen Quan Ba Hong}\\
+{\small Students at Faculty of Math and Computer Science,}\\ 
+{\small Ho Chi Minh University of Science, Vietnam} \\
+{\small \texttt{email. nguyenquanbahong@gmail.com}}\\
+{\small \texttt{blog. \url{http://hongnguyenquanba.wordpress.com}} 
+\footnote{Copyright \copyright\ 2016 by Nguyen Quan Ba Hong, Student at Ho Chi Minh University of Science, Vietnam. This document may be copied freely for the purposes of education and non-commercial research. Visit my site \texttt{\url{http://hongnguyenquanba.wordpress.com}} to get more.}}}
+\begin{document}
+\frontmatter
+\maketitle
+\mainmatter
+\tableofcontents
+\chapter{Phương trình bậc nhất}
+\section{Phương trình bậc nhất}
+\textbf{Definition 1.1.} Phương trình bậc nhất\index{phương trình bậc nhất} dạng tổng quát trên $\mathbb{R}$ là phương trình có dạng
+\begin{align}
+ax + b = 0
+\end{align}
+với $a,b$ là các số thực (có thể mở rộng cho các số trên trường $\mathbb{K}$ cho trước).
+\section{Giải và biện luận phương trình bậc nhất}
+\textsc{Solution 1.2.} Xét 2 trường hợp sau theo $a$.
+\begin{enumerate}
+\item \textbf{Trường hợp $a = 0$.} Xét 2 trường hợp sau theo $b$.
+\begin{itemize}
+\item \textbf{Trường hợp $b = 0$}. Phương trình bậc nhất có vô số nghiệm. Hơn nữa, mọi phần tử trên trường số đang xét đều là nghiệm của phương trình.
+\item \textbf{Trường hợp $b \ne 0$.} Phương trình bậc nhất vô nghiệm.
+\end{itemize}
+\item \textbf{Trường hợp $a \ne 0$.} Phương trình bậc nhất có nghiệm duy nhất là 
+\begin{align}
+x =  - \dfrac{b}{a}
+\end{align}
+\end{enumerate}
+Giải và biện luận phương trình bậc nhất hoàn tất. \hfill $\square$
+\chapter{Phương trình bậc 2}
+\section{Phương trình bậc 2}
+\textbf{Definition 2.1.} Phương trình bậc 2\index{phương trình bậc 2} dạng tổng quát trên $\mathbb{R}$ là phương trình có dạng
+\begin{align}
+a{x^2} + bx + c = 0
+\end{align}
+với $a, b, c$ là các số thực và $a \ne 0$ (có thể mở rộng cho các trường số khác).
+\section{Giải và biện luận phương trình bậc 2}
+\textsc{Solution 2.2.} Tính biệt thức\index{biệt thức} $\Delta  = {b^2} - 4ac$. Xét 3 trường hợp sau theo $\Delta$.
+\begin{enumerate}
+\item \textbf{Trường hợp $\Delta < 0$.} Phương trình bậc 2 không có nghiệm thực. \footnote{Tìm công thức nghiệm của phương trình trong trường hợp này trên trường số phức $\mathbb{C}$.} 
+\item \textbf{Trường hợp $\Delta = 0$.} Phương trình bậc 2 có nghiệm thực kép\index{nghiệm kép}
+\begin{align}
+x =  - \dfrac{b}{{2a}}
+\end{align}
+\item \textbf{Trường hợp $\Delta > 0$.} Phương trình bậc 2 có 2 nghiệm thực phân biệt 
+\begin{align}
+{x_{1,2}} = \dfrac{{ - b \pm \sqrt \Delta  }}{{2a}} = \dfrac{{ - b \pm \sqrt {{b^2} - 4ac} }}{{2a}}
+\end{align}
+\end{enumerate}
+Giải và biện luận phương trình bậc 2 hoàn tất. \hfill $\square$
+\chapter{Phương trình bậc 3}
+Phần này chủ yếu đề cập tới phương trình bậc 3 với hệ số trên trường $\mathbb{R}$. Lưu ý rằng các tính chất trong phần này có thể mở rộng qua trường số $\mathbb{C}$.
+\section{Phương trình bậc 3}
+\textbf{Definition 3.0.} Phương trình bậc 3 \index{phương trình bậc 3} dạng tổng quát trên $\mathbb{R}$ là phương trình có dạng
+\begin{align}
+{a_0}{x^3} + {b_0}{x^2} + {c_0}x + {d_0} = 0
+\end{align}
+với $a_0,b_0,c_0,d_0 \in \mathbb{R}$ và ${a_0} \ne 0$.\\
+
+Chúng ta có thể chia 2 vế của phương trình cho ${a_0}$ để thu được dạng chính tắc
+\begin{align}
+\label{3.2}
+{x^3} + A{x^2} + Bx + C = 0
+\end{align}
+
+Tiếp theo, chúng ta sẽ nghiên cứu một số dạng đặc biệt của \eqref{3.2}.
+\section{Khi biết 1 nghiệm}
+\textbf{Problem 3.1.} \textit{Giải phương trình bậc 3 khi biết 1 nghiệm của nó.}\\
+\\
+\textsc{Solution 3.2.} Giả sử bằng cách nào đó (nhẩm nghiệm hoặc sử dụng sử dụng máy tính), ta biết được một nghiệm ${x_0}$ của phương trình \eqref{3.2}. Khi đó, sử dụng sơ đồ Horner quen thuộc để viết lại \eqref{3.2} thành
+\begin{align}
+(x - {x_0}){\rm{[}}{x^2} + ({x_0} + A)x + (x_0^2 + A{x_0} + B){\rm{]}} = 0
+\end{align}
+
+Ngoài nghiệm $x = {x_0}$, \eqref{3.2} còn có 2 nghiệm phức nữa là nghiệm của phương trình bậc 2
+\begin{align}
+\label{3.4}
+{x^2} + ({x_0} + A)x + (x_0^2 + A{x_0} + B) = 0
+\end{align}
+
+Xét phương trình \eqref{3.4} có 
+\begin{align}
+\Delta  = {A^2} - 4B - 3x_0^2 - 2{x_0}
+\end{align}
+
+Xét 3 trường hợp sau dựa trên $\mbox{sgn} \left(\Delta \right)$.
+\begin{enumerate}
+\item \textbf{Trường hợp $\Delta <0$.} 
+\begin{align}
+{A^2} - 4B < 3x_0^2 + 2{x_0}
+\end{align}
+thì \eqref{3.4} vô nghiệm trên $\mathbb{R}$, suy ra \eqref{3.2} có nghiệm thực ${x_0}$ duy nhất.
+\item \textbf{Trường hợp $\Delta =0$.} 
+\begin{align}
+{A^2} - 4B = 3x_0^2 + 2{x_0}
+\end{align}
+thì \eqref{3.4} có nghiệm kép ${x_1} =  - \dfrac{{A + {x_0}}}{2}$, suy ra \eqref{3.2} có nghiệm đơn ${x_0}$ và nghiệm kép 
+\begin{align}
+{x_1} =  - \dfrac{{A + {x_0}}}{2}
+\end{align}
+\item \textbf{Trường hợp $\Delta >0$.} 
+\begin{align}
+{A^2} - 4B > 3x_0^2 + 2{x_0}
+\end{align}
+thì \eqref{3.4} có 2 nghiệm 
+\begin{align}
+{x_{1,2}} = \dfrac{1}{2}\left( - A - {x_0} \pm \sqrt {{A^2} - 4B - 3x_0^2 - 2{x_0}}\right)
+\end{align}
+suy ra \eqref{3.2} có đủ 3 nghiệm thực là 
+\begin{align}
+\label{3.5}
+{x_{0,}}{x_{1,2}} = \dfrac{1}{2}\left( - A - {x_0} \pm \sqrt {{A^2} - 4B - 3x_0^2 - 2{x_0}} \right)
+\end{align}
+\end{enumerate}
+\textbf{Remark 3.3.} Nghiệm $x_0$ ở trên không phải lúc nào cũng dự đoán được, nhất là trong trường hợp tổng quát. Cho nên, ta cần xét các dạng phương trình mạnh hơn.\\
+
+Trước khi đến với công thức Cardano\index{công thức Cardano} để giải phương trình bậc 3 tổng quát, ta sẽ xét một số bài toán khá thú vị sau liên quan đến phương trình bậc 3.
+\section{Phương trình bậc 3 có nghiệm bội}
+\textbf{Problem 3.4.} \textit{Tìm điều kiện để phương trình bậc 3 có nghiệm bội thực.}\\
+
+Ta xét 3 trường hợp sau về điều kiện để \eqref{3.2} có nghiệm bội.\\
+\\
+\textsc{Trường hợp 1.} \eqref{3.2} có nghiệm thực bội 3 là $a$\begin{align}
+f(x) = {\left( {x + a} \right)^3} = {x^3} + 3a{x^2} + 3{a^2}x + {a^3}
+\end{align}
+
+Đồng nhất hệ số của \eqref{3.5} với \eqref{3.2} $A = 3a,B = 3{a^2},C = {a^3}$
+Dễ dàng suy ra 
+\begin{align}
+\left| {\dfrac{A}{3}} \right| = \sqrt {\dfrac{B}{3}}  = \left| {\sqrt[3]{C}} \right|
+\end{align}
+\textbf{Remark 3.5.} 
+\begin{enumerate}
+\item Ta có điều kiện cần và đủ để phương trình \eqref{3.2} có nghiệm thực bội 3\index{nghiệm bội 3} là
+\begin{align}
+\label{3.8}
+\left\{ {\begin{array}{*{20}{c}}
+{\left| {\dfrac{A}{3}} \right| = \sqrt {\dfrac{B}{3}}  = \left| {\sqrt[3]{C}} \right|}\\
+{AC \ge 0}
+\end{array}} \right.
+\end{align}
+\item Một cách tiếp cận khác cho trường hợp này là sử dụng $f\left( a \right) = f'\left( a \right) = f''\left( a \right) = 0$, cũng cho kết quả tương tự.
+\end{enumerate}
+\textsc{Trường hợp 2.} \eqref{3.2} có nghiệm kép là $a$, nghiệm còn lại là $b$. Ta có 
+\begin{align}
+\label{3.9}
+\begin{array}{c}
+\left\{ {\begin{array}{*{20}{c}}
+{f\left( a \right) = f'\left( a \right) = 0}\\
+{f''\left( a \right) \ne 0}
+\end{array}} \right.\\
+ \Leftrightarrow \left\{ {\begin{array}{*{20}{c}}
+{{a^3} + A{a^2} + Ba + C = 3{a^2} + 2Aa + B = 0}\\
+{a \ne -\dfrac{A}{3}}
+\end{array}} \right.
+\end{array}
+\end{align}
+Ta sẽ tìm mối quan hệ của $A,B,C$ thông qua \eqref{3.8}.
+
+Xét phương trình bậc 2
+\begin{align}
+3{x^2} + 2Ax + B = 0
+ \end{align}
+Dựa vào dấu của biệt thức của phương trình bậc 2 này, ta xét tiếp 3 trường hợp sau.
+\begin{enumerate}
+\item Nếu ${A^2} < 3B$ thì \eqref{3.9} vô nghiệm trên $\mathbb{R}$.
+\item Nếu ${A^2} = 3B$ thì $a =  - \dfrac{A}{3}$, mâu thuẫn với \eqref{3.8}.
+\item Nếu ${A^2} > 3B$ thì \eqref{3.9} có 2 nghiệm thực phân biệt là
+\begin{align}
+{x_{1,2}} = \dfrac{1}{3}\left( { - A \pm \sqrt {{A^2} - 3B} } \right)
+\end{align}
+Rõ ràng 2 nghiệm này khác $ - \dfrac{A}{3}$.
+\end{enumerate}
+
+Thay 2 nghiệm này vào phương trình bậc ba ${x^3} + A{x^2} + Bx + C = 0$.
+
+Khi đó \eqref{3.9} tương đương với
+\begin{align}
+\label{3.12}
+ \Leftrightarrow \left\{ {\begin{array}{*{20}{c}}
+{{A^2} > 3B}\\
+{\left[ {\begin{array}{*{20}{c}}
+\dfrac{1}{{27}}{{\left( { - A - \sqrt {{A^2} - 3B} } \right)}^3} + \dfrac{A}{9}{{\left( {A + \sqrt {{A^2} - 3B} } \right)}^2} \\
++ \dfrac{B}{3}\left( { - A - \sqrt {{A^2} - 3B} } \right) + C = 0\\
+\dfrac{1}{{27}}{{\left( { - A + \sqrt {{A^2} - 3B} } \right)}^3} + \dfrac{A}{9}{{\left( { - A + \sqrt {{A^2} - 3B} } \right)}^2} \\+ \dfrac{B}{3}\left( { - A + \sqrt {{A^2} - 3B} } \right) + C = 0
+\end{array}} \right.}
+\end{array}} \right.\\
+ \Leftrightarrow \left\{ {\begin{array}{*{20}{c}}
+{{A^2} > 3B}\\
+{\left[ {\begin{array}{*{20}{c}}
+{\dfrac{2}{{27}}{A^3} - \dfrac{{AB}}{3} + C + \sqrt {{A^2} - 3B} \left( {\dfrac{2}{{27}}{A^2} - \dfrac{2}{9}B} \right) = 0}\\
+{\dfrac{2}{{27}}{A^3} - \dfrac{{AB}}{3} + C - \sqrt {{A^2} - 3B} \left( {\dfrac{2}{{27}}{A^2} - \dfrac{2}{9}B} \right) = 0}
+\end{array}} \right.}
+\end{array}} \right.
+\end{align}
+
+Điều kiện \eqref{3.12} có thể viết gọn lại thành 
+\begin{align}
+\left( {{A^2} > 3B} \right) \wedge \left( {\left( {C = {C_1}} \right) \vee \left( {C = {C_2}} \right)} \right)
+\end{align}
+với 
+\begin{align}
+{C_{1,2}} = \dfrac{{AB}}{3} - \dfrac{{2{A^3}}}{{27}} \pm \sqrt {{A^2} - 3B} \left( {\dfrac{2}{{27}}{A^2} - \dfrac{2}{9}B} \right)
+\end{align}
+
+Dễ thấy ${C_1},{C_2}$ là 2 nghiệm của phương trình bậc 2 
+\begin{align}
+27{C^2} + \left( {4{A^3} - 18AB} \right)C + 4{B^3} - {A^2}{B^2} = 0
+\end{align}
+
+Do đó, điều kiện \eqref{3.8}
+\begin{align}
+\label{3.15}
+ \Leftrightarrow \left\{ {\begin{array}{*{20}{c}}
+{{A^2} > 3B}\\
+{27{C^2} + \left( {4{A^3} - 18AB} \right)C + 4{B^3} - {A^2}{B^2} = 0}
+\end{array}} \right.
+\end{align}
+\textbf{Remark 3.6.}
+\begin{enumerate}
+\item \eqref{3.15} chính là điều kiện để \eqref{3.2} có nghiệm kép thực.
+\item Tuy \eqref{3.15} có dạng tương đối cồng kềnh, chỉ dễ sử dụng khi biết các giá trị cụ thể của $A,B,C$. Ta nên quan tâm hơn đến một dạng yếu hơn của \eqref{3.15}, nhưng lại mang tính ``thực hành'' cao hơn.\\
+\\
+\textbf{Corrolary.} \textit{Nếu ${A^2} \le 3B$ thì \eqref{3.2} không thể có nghiệm kép.}\\
+
+Điều này khiến ta không cần quan tâm đến hệ số tự do, và có thể thoải mái sáng tạo các bài toán chứng minh phương trình bậc 3 không có nghiệm bội khá thú vị.
+\end{enumerate}
+\vspace{0.5cm}
+\textbf{Problem 3.7.} \textit{Với bất đẳng thức có dạng}
+\begin{align}
+{A^2} \le 3B
+\end{align}
+\textit{Chứng minh phương trình bậc ba \eqref{3.2} không thể có nghiệm kép}.\\
+\\
+\textbf{Problem 3.8.} \textit{Tìm điều kiện để phương trình bậc 3 có các nghiệm bội phức.}\index{nghiệm bội phức}
+\section{Phương trình bậc 3 có các nghiệm thực phân biệt}
+Sử dụng các kết quả vừa thiết lập được ở phần trước, ta tiếp tục xét bài toán sau như một hệ quả.\\
+\\
+\textbf{Problem 3.9.} \textit{Tìm điều kiện để \eqref{3.2} có 3 nghiệm thực phân biệt.}\\
+
+Trong phần trước, ta đã tìm được điều kiện để phương trình \eqref{3.2} có nghiệm bội 2 và 3. Nên việc tìm điều kiện để \eqref{3.2} có 3 nghiệm phân biệt khá đơn giản. Có nhiều cách để xử lý điều này. Chẳng hạn 2 cách giải sau.
+\\
+\textsc{Solution 1.} Điều kiện để \eqref{3.2} có các nghiệm phân biệt tương đương với
+\begin{itemize}
+\item \eqref{3.2} chỉ có 1 nghiệm thực duy nhất. Điều này đã được giải quyết trong phần trước.
+\item \eqref{3.2} có đủ 3 nghiệm thực phân biệt. Phủ định điều kiện \eqref{3.8} và \eqref{3.15}.
+\end{itemize}
+\hfill $\square$.\\
+
+
+Sau đây là một cách nữa, mà từ cách này, chúng ta sẽ thu được một số điều thú vị.\\
+\\
+\textsc{Solution 2.} 
+Chúng ta sẽ tập trung giải quyết trường hợp thứ 2 ở lời giải thứ nhất. Tìm điều kiện để \eqref{3.2} có 3 nghiệm thực phân biệt
+
+Về điều kiện để \eqref{3.2} có đủ 3 nghiệm thực, tham khảo phần giải phương trình bậc 3 tổng quát. Giả sử \eqref{3.2} đã có đủ 3 nghiệm thực rồi. Giả sử 3 nghiệm đó là $m,n,p$. Ta sẽ tìm điều kiện để $m,n,p$ phân biệt đôi một với nhau.
+
+Xét biểu thức sau
+\begin{align}
+s = \left( {m - n} \right)\left( {n - p} \right)\left( {p - m} \right)
+ \end{align}
+ 
+Muốn $m,n,p$ phân biệt đôi một thì chỉ cần $s \ne 0$. Việc còn lại là biểu diễn $s$ theo các hệ số $A,B,C$ của \eqref{3.2}. Điều này dễ dàng thực hiện nhờ áp dụng {hệ thức Vi\`{e}te cho \eqref{3.2}
+
+Dễ dàng thu được
+\begin{align}
+{s^2} &= {\left( {m - n} \right)^2}{\left( {n - p} \right)^2}{\left( {p - m} \right)^2}\\
+ &= {A^2}{B^2} + 18ABC - 27{C^2} - 4{B^3} - 4{A^3}C
+\end{align}
+
+Khi đó, điều kiện $s \ne 0$ tương đương với
+\begin{align}
+\label{3.25}
+27{C^2} + \left( {4{A^3} - 18AB} \right)C + 4{B^3} - {A^2}{B^2} \ne 0
+\end{align}
+\textbf{Remark 3.10.}
+\begin{enumerate}
+\item \eqref{3.25} là phủ định của điều kiện \eqref{3.8} và \eqref{3.15}.
+\item Đại lượng $s$ trên đây đóng vai trò rất quan trọng trong chứng minh các bất đẳng thức hoán vị. Việc xét $\left| s \right|,{s^2}$ giúp đối xứng hóa biểu thức cần xét, rất có lợi trong nhiều phương pháp chứng minh bất đẳng thức, đặc biệt là phương pháp $pqr$\index{phương pháp $pqr$}. Chúng ta sẽ gặp lại đại lượng này ở các phần sau.
+\end{enumerate}
+
+Hơn nữa, ta có\\
+\\
+\textbf{Theorem 3.11.} \textit{Mọi biểu thức hoán vị của 3 biến $a,b,c$ đều có thể biểu diễn được thông qua 4 biểu thức}
+\begin{align}
+abc,\sum a ,\sum {ab} ,\sum\limits_{cyc} {{a^2}b}
+\end{align}
+\section{$\cos 3x = m$}
+\textbf{Problem 3.12.} \textit{Tìm các lớp phương trình bậc 3 giải được nhờ phương trình lượng giác}
+\begin{align}
+\cos 3x = m
+\end{align}
+
+Phương trình lượng giác này có gì đặc biệt? 
+
+Xét phương trình bậc 3 có dạng
+\begin{align}
+\label{3.27}
+4{x^3} - 3x = m
+\end{align}
+trong đó $m \in \mathbb{R}$
+
+Chúng ta sẽ giải phương trình \eqref{3.27} trong 2 trường hợp sau.
+\begin{enumerate}
+\item \textbf{Trường hợp $\left| m \right| \le 1$.} Đặt $m = \cos \alpha $, \eqref{3.27} có 3 nghiệm
+\begin{align}
+{x_1} = \cos \dfrac{\alpha }{3}\\
+{x_{2,3}} = \cos \dfrac{{\alpha  \pm 2\pi }}{3}
+\end{align}
+\item \textbf{Trường hợp $\left| m \right| > 1$.} Với $\left| x \right| \le 1$ thì LHS \eqref{3.27} $\le 1 < m$ (Left Hand Side) nên phương trình \eqref{3.27} vô nghiệm. Nên $\left| x \right| > 1$.\\
+Đặt 
+\begin{align}
+x = \dfrac{1}{2}\left( {a + \dfrac{1}{a}} \right)
+\end{align}
+được 
+\begin{align}
+m = \dfrac{1}{2}\left( {{a^3} + \dfrac{1}{{{a^3}}}} \right)
+\end{align}
+
+Suy ra
+\begin{align}
+a = \sqrt[3]{{m \pm \sqrt {{m^2} - 1} }},x = \dfrac{1}{2}\left( {\sqrt[3]{{m + \sqrt {{m^2} - 1} }} + \dfrac{1}{{\sqrt[3]{{m + \sqrt {{m^2} - 1} }}}}} \right)
+\end{align}\\
+Tiếp theo, ta sẽ chứng minh \eqref{3.27} có nghiệm duy nhất trong trường hợp này.\\
+Giả sử \eqref{3.27}có nghiệm ${x_0}$ thì ${x_0} \notin \left[ { - 1,1} \right]$. Do đó $\left| {{x_0}} \right| > 1$. Khi đó \eqref{3.27}
+\begin{align}
+\begin{array}{l}
+ \Leftrightarrow 4{x^3} - 3x = 4x_0^3 - 3{x_0}\\
+ \Leftrightarrow \left( {x - {x_0}} \right)\left[ {{{\left( {2x + {x_0}} \right)}^2} + 3\left( {x_0^2 - 1} \right)} \right] = 0\\
+ \Leftrightarrow x = {x_0}
+\end{array}
+\end{align}
+Vậy \eqref{3.27} có nghiệm duy nhất 
+\begin{align}
+x = \dfrac{1}{2}\left( {\sqrt[3]{{m + \sqrt {{m^2} - 1} }} + \sqrt[3]{{m - \sqrt {{m^2} - 1} }}} \right)
+\end{align}
+\end{enumerate}
+\textbf{Remark 3.13.} Trong lời giải trên, các đại lượng 
+\begin{align}
+a + \dfrac{1}{a},{a^n} + \dfrac{1}{{{a^n}}},4{x^3} - 3x,\ldots
+\end{align}
+có liên quan đến các khái niệm và Theorem sau.\\
+\\
+\textbf{Definition 3.14 (Đa thức Chebyshev loại 1)\index{đa thức Chebyshev loại 1}.} Các đa thức Chebyshev loại 1 là các đa thức được xác định như sau
+\begin{align}
+ \left\{ {\begin{array}{*{20}{c}}
+{{T_0}\left( x \right) = 1,{T_1}\left( x \right) = x}\\
+{{T_{n + 1}}\left( x \right) = 2x{T_n}\left( x \right) - {T_{n - 1}}\left( x \right)}
+\end{array}} \right.,\forall n > 1
+\end{align}
+\textbf{Definition 3.15 (Đa thức Chebyshev loại 2)\index{đa thức Chebyshev loại 2}.} Các đa thức Chebyshev loại 2 là các đa thức được xác định như sau
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{{U_0}\left( x \right) = 0,{U_1}\left( x \right) = 1}\\
+{{U_{n + 1}}\left( x \right) = 2x{U_n}\left( x \right) - {U_{n - 1}}\left( x \right)}
+\end{array}} \right.,\forall n > 1
+\end{align}
+
+Về các tính chất thú vị của đa thức Chebyshev\index{đa thức Chebyshev}, các bạn có thể tham khảo trong \cite{7}.\\
+\\
+\textbf{Theorem 3.16.}. \textit{Với ${T_n}\left( x \right)$ là đa thức Chebyshev bậc n}\index{đa thức Chebyshev bậc $n$}
+\begin{align}
+{T_n}\left( {\dfrac{1}{2}\left( {a + \dfrac{1}{a}} \right)} \right) = \dfrac{1}{2}\left( {{a^n} + \dfrac{1}{{{a^n}}}} \right)
+\end{align}
+\textbf{Problem 3.17.} \textit{Mở rộng cho phương trình}
+\begin{align}
+\label{3.39}
+\cos 3f\left( x \right) = m
+\end{align}
+với $f\left( x\right)$ là hàm số thực.}\\
+\\
+\textsc{Solution.} Xét 2 trường hợp
+\begin{enumerate}
+\item \textbf{Trường hợp $\left| m \right| \le 1$.} Dễ dàng giải được các nghiệm 
+\begin{align}
+f\left( x \right) = \cos \dfrac{{\arccos m + k2\pi }}{3},k \in \left\{ {0, \pm 1} \right\}
+\end{align}
+Nếu 
+\begin{align}
+g\left( x \right) = f\left( x \right) - \cos \dfrac{{\arccos m + k2\pi }}{3} \in \mbox{Sol}^*\left( {2,3} \right)
+\end{align}
+thì \eqref{3.39} giải được.
+\item \textbf{Trường hợp $\left| m \right| > 1$.} Hoàn toàn tương tự.
+\end{enumerate}
+\hfill $\square$
+\section{$\sin 3x = m$}
+\textbf{Problem 3.18.} \textit{Tìm các lớp phương trình bậc 3 giải được nhờ phương trình lượng giác}
+\begin{align}
+4{x^3} + 3x = m
+\end{align}
+
+Trước hết, ta giải phương trình
+\begin{align}
+\label{3.43}
+4{x^3} + 3x = m
+\end{align}
+
+Nếu ${x_0}$ là nghiệm của \eqref{3.43} thì đó cũng là nghiệm duy nhất do LHS \eqref{3.43} là hàm đồng biến và liên tục.
+
+Đặt 
+\begin{align}
+x = \dfrac{1}{2}\left( {a - \dfrac{1}{a}} \right)
+\end{align}
+với $a \ne 0$ được 
+\begin{align}
+m = \dfrac{1}{2}\left( {{a^3} - \dfrac{1}{{{a^3}}}} \right)
+\end{align}
+suy ra 
+\begin{align}
+a = \sqrt[3]{{m \pm \sqrt {{m^2}}  + 1}}
+\end{align}
+
+Vậy phương trình \eqref{3.43} có nghiệm duy nhất 
+\begin{align}
+x = \dfrac{1}{2}\left( {\sqrt[3]{{m + \sqrt {{m^2}}  + 1}} + \sqrt[3]{{m - \sqrt {{m^2}}  + 1}}} \right)
+\end{align}
+\textbf{Remark 3.19.} Tương tự phần trước, các đại lượng 
+\begin{align}
+a - \dfrac{1}{a},{a^n} - \dfrac{1}{{{a^n}}},4{x^3} + 3x,\ldots
+\end{align}
+có liên quan đến Theorem sau đây.\\
+\\
+\textbf{Theorem 3.20.} \textit{Giả sử $\sin \left( {2k + 1} \right) = {P_{2k + 1}}\left( {\sin t} \right)$, trong đó ${P_{2k + 1}}\left( x \right)$ là đa thức đại số bậc $2k+1$. Ký hiệu ${Q_{2k + 1}}\left( x \right)$ là đa thức đại số bậc $2k+1$ sinh bởi ${P_{2k + 1}}\left( x \right)$ bằng cách giữ nguyên những hệ số ứng với lũy thừa $1\left( {\bmod 4} \right)$ và đổi dấu những hệ số ứng với lũy thừa $3\left( {\bmod 4} \right)$. Khi đó}
+\begin{align}
+{Q_{2k + 1}}\left( {\dfrac{1}{2}\left( {a - \dfrac{1}{a}} \right)} \right) = \dfrac{1}{2}\left( {{a^{2k + 1}} - \dfrac{1}{{{a^{2k + 1}}}}} \right)
+\end{align}
+\textbf{Problem 3.21.} \textit{Mở rộng cho phương trình 
+\begin{align}
+\sin \left[ 3f\left( x \right)\right] = m
+\end{align}
+với $f\left(x\right)$ là hàm số cho trước.}
+\section{Phương trình bậc 3 tổng quát}
+\textbf{Problem 3.22.} \textit{Giải phương trình bậc 3 dạng tổng quát.}\\
+\\
+\textsc{Solution.} Đặt 
+\begin{align}
+x = y - \dfrac{A}{3}
+\end{align}
+Khi đó \eqref{3.2} trở thành
+\begin{align}
+\label{3.52}
+{y^3} - \left( {\dfrac{{{A^2}}}{3} - B} \right)y - \left( {C + \dfrac{{AB}}{3} - \dfrac{{{A^3}}}{{27}}} \right) = 0
+\end{align}
+
+Đặt 
+\begin{align}
+p = \dfrac{{{A^2}}}{3} - B,q = C + \dfrac{{AB}}{3} - \dfrac{{{A^3}}}{{27}}
+\end{align}
+Xét 3 trường hợp sau dựa trên $p$.
+\begin{enumerate}
+\item \textbf{Trường hợp ${A^2} = 3B$.} Khi đó \eqref{3.52} có nghiệm duy nhất 
+\begin{align}
+y = \sqrt[3]{q}
+\end{align}
+
+Suy ra \eqref{3.2} có nghiệm duy nhất 
+\begin{align}
+x = \sqrt[3]{{ - \dfrac{{{A^3}}}{{27}} + \dfrac{{AB}}{3} + C}} - \dfrac{A}{3}
+\end{align}
+\item \textbf{Trường hợp ${A^2} > 3B$.} Đặt 
+\begin{align}
+y = 2\sqrt {\dfrac{p}{3}} t
+\end{align}
+Khi đó \eqref{3.52} trở thành
+\begin{align}
+\label{3.57}
+4{t^3} - 3t = m
+\end{align}
+trong đó
+\begin{align}
+m &= \dfrac{{3\sqrt {3q} }}{{2p\sqrt p }} \\
+&= \dfrac{{3\sqrt 3 }}{2}\dfrac{{\sqrt { - {A^3} + 9AB + 27C} }}{{{{\left( {{A^2} - 3B} \right)}^{\frac{3}{2}}}}}
+\end{align}
+Xét 2 trường hợp con dựa theo $m$.
+\begin{itemize}
+\item \textbf{Trường hợp $\left| m \right| \le 1$.} Đặt 
+\begin{align}
+m = \cos \alpha
+\end{align}
+theo phần trước thì \eqref{3.57} có 3 nghiệm
+\begin{align}
+{t_1} = \cos \dfrac{\alpha }{3},{t_{2,3}} = \cos \dfrac{{\alpha  \pm 2\pi }}{3}
+\end{align}
+Suy ra các nghiệm của \eqref{3.2} là 
+\begin{align}
+x = \dfrac{2}{3}\sqrt {{A^2} - 3B} .\cos \dfrac{{\alpha  + k\pi }}{3} - \dfrac{A}{3}
+\end{align}
+trong đó
+\begin{align}
+\left\{ \begin{array}{l}
+k \in \left\{ {0, \pm 2} \right\}\\
+\alpha  = \arccos \left( {\frac{{3\sqrt 3 }}{2}\frac{{\sqrt { - {A^3} + 9AB + 27C} }}{{{{\left( {{A^2} - 3B} \right)}^{\frac{3}{2}}}}}} \right)
+\end{array} \right.
+\end{align}
+\item \textbf{Trường hợp $\left| m \right| > 1$.} Đặt 
+\begin{align}
+m = \dfrac{1}{2}\left( {{d^3} + \dfrac{1}{{{d^3}}}} \right)
+\end{align}
+thì \eqref{3.57} có nghiệm duy nhất
+\begin{align}
+t = \dfrac{1}{2}\left( {d + \dfrac{1}{d}} \right) = \dfrac{1}{2}\left( {\sqrt {m + \sqrt {{m^2} + 1} }  + \sqrt {m - \sqrt {{m^2} + 1} } } \right)
+\end{align}
+Suy ra \eqref{3.2} có nghiệm duy nhất là
+\begin{align}
+x = \dfrac{1}{3}\sqrt {{A^2} - 3B} \left( {\sqrt {m + \sqrt {{m^2} + 1} }  + \sqrt {m - \sqrt {{m^2} + 1} } } \right) - \dfrac{A}{3}
+\end{align}
+trong đó 
+\begin{align}
+m = \dfrac{{3\sqrt 3 }}{2}\dfrac{{\sqrt { - {A^3} + 9AB + 27C} }}{{{{\left( {{A^2} - 3B} \right)}^{\dfrac{3}{2}}}}}
+\end{align}
+\end{itemize}
+\item \textbf{Trường hợp ${A^2} < 3B$.} Đặt 
+\begin{align}
+y = 2\sqrt {\dfrac{{ - p}}{3}} .t
+\end{align}
+thì \eqref{3.52} trở thành 
+\begin{align}
+\label{3.69}
+4{t^3} + 3t = m
+\end{align}
+Theo phần trước, phương trình \eqref{3.69} này có nghiệm duy nhất
+\begin{align}
+t = \dfrac{1}{2}\left( {\sqrt[3]{{m + \sqrt {{m^2} - 1} }} + \sqrt[3]{{m - \sqrt {{m^2} - 1} }}} \right)
+\end{align}
+Suy ra \eqref{3.2} có nghiệm duy nhất 
+\begin{align}
+x = \dfrac{1}{3}\sqrt {{A^2} - 3B} \left( {\sqrt[3]{{m + \sqrt {{m^2} - 1} }} + \sqrt[3]{{m - \sqrt {{m^2} - 1} }}} \right) - \dfrac{A}{3}
+\end{align}
+\end{enumerate}
+Giải và biện luận phương trình bậc 3 dạng tổng quát hoàn tất. \hfill $\square$\\
+\\
+\textbf{Problem 3.23.} \textit{Giải phương trình bậc 3 trên $\mathbb{C}$.}
+\section{Công thức Cardano}
+Sau đây là một lời giải khác cho phương trình bậc 3 dạng tổng quát.\\
+\\
+\textsc{Alternative solution.} Thay 
+\begin{align}
+x:= x - \dfrac{A}{3}
+\end{align}
+thu được phương trình bậc 3 có hạng tử $x^2$ bị triệt tiêu.
+\begin{align}
+{x^3} + px + q = 0
+\end{align}
+trong đó 
+\begin{align}
+\left\{ \begin{array}{l}
+p = B - \frac{{{A^3}}}{3}\\
+q = \frac{2}{{27}}{A^3} - \frac{{AB}}{3} + C
+\end{array} \right.
+\end{align}
+
+Tìm $u,v$ sao cho 
+\begin{align}
+\left\{ \begin{array}{l}
+q = {u^3} + {v^3}\\
+p =  - 3uv
+\end{array} \right.
+\end{align}
+
+Khi đó
+\begin{align}
+{x^3} + {u^3} + {v^3} - 3uvx = 0
+\end{align}
+tương đương với
+\begin{align}
+\label{3.77}
+\left( {x + u + v} \right)\left( {{x^2} + {u^2} + {v^2} - xu - xv - uv} \right) = 0
+\end{align}
+
+Suy ra $x =  - u - v$ hoặc $x$ là nghiệm của phương trình bậc 2
+\begin{align}
+\label{3.78}
+{x^2} - \left( {u + v} \right)x + {u^2} + {v^2} - uv = 0
+\end{align}
+
+Ta thấy ${u^3},{v^3}$ là nghiệm của phương trình bậc 2
+\begin{align}
+\label{3.79}
+{X^2} - qX - \dfrac{{{p^3}}}{{27}} = 0
+\end{align}
+Xét 3 trường hợp sau dựa vào biệt thức $\Delta '$ của phương \eqref{3.79}.
+\begin{itemize}
+\item \textbf{Trường hợp 1.} 
+\begin{align}
+\Delta ' = \dfrac{{{q^2}}}{4} + \dfrac{{{p^2}}}{{27}} \ge 0
+\end{align}
+giải được 
+\begin{align}
+\label{3.81}
+x =  - u - v = \sqrt[3]{{ - \dfrac{q}{2} - \sqrt {\dfrac{{{q^2}}}{4} + \dfrac{{{p^2}}}{{27}}} }} + \sqrt[3]{{ - \dfrac{q}{2} + \sqrt {\dfrac{{{q^2}}}{4} + \dfrac{{{p^2}}}{{27}}} }}
+\end{align}
+Đây chính là công thức Cardano nổi tiếng.\index{công thức Cardano}
+
+Phương trình \eqref{3.78} có biệt thức 
+\begin{align}
+\Delta  =  - 3{\left( {u - v} \right)^2}
+\end{align}
+nên \eqref{3.78} chỉ có nghiệm thực khi $u = v$. Suy ra
+\begin{itemize}
+\item[*] \textbf{Trường hợp $u=v$}. \eqref{3.77} có các nghiệm thực $ - 2u,u,u$ với $u$ là nghiệm kép của \eqref{3.78}.
+\item[*] \textbf{Trường hợp $u \ne v$.} \eqref{3.77} chỉ có nghiệm \eqref{3.81}.
+\end{itemize}
+\item \textbf{Trường hợp 2.} Nếu 
+\begin{align}
+\Delta ' = \dfrac{{{q^2}}}{4} + \dfrac{{{p^2}}}{{27}} < 0
+\end{align}
+
+Đặt 
+\begin{align}
+x = \sqrt {\dfrac{{ - 4p}}{3}} 
+\end{align}
+được 
+\begin{align}
+\cos 3t = \dfrac{{3q}}{{p\sqrt {\dfrac{{ - 4p}}{3}} }}
+\end{align}
+Có \begin{align}
+\Delta ' < 0 \Rightarrow \left| {\dfrac{{3q}}{{p\sqrt {\dfrac{{ - 4p}}{3}} }}} \right| < 1
+\end{align}
+nên phương trình có 3 nghiệm thực.
+\end{itemize}
+Giải và biện luận phương trình bậc 3 hoàn tất. \hfill $\square$
+\section{Thêm nghiệm để giải phương trình}
+\textbf{Problem 3.24.} \textit{Giải phương trình bậc 3 nhờ các phương trình bậc cao hơn?.}\\
+
+Phần này đề cập đến một ý tưởng khá mới. Ý tưởng này hoàn toàn đối lập với phần ``Giải phương trình khi biết một nghiệm của nó''. Chúng ta sẽ thảo luận kỹ hơn về mối liên hệ của chúng ở phần tổng quát. Sau đây là ý tưởng.\\
+
+Đối với phương trình bậc 3 dạng chuẩn tắc, ta nhân vào 2 vế phương trình nhân tử $\left( {x + m} \right)$ thu được
+\begin{align}
+\left( {x + m} \right)\left( {{x^3} + A{x^2} + Bx + C} \right) = 0
+\end{align}
+
+Phương trình trên là một phương trình bậc 4. Nếu phương trình này giải được thì phương trình của chúng ta đang xét cũng sẽ giải được. Xét các hệ số của phương trình thu được, lần lượt là
+\begin{align}
+1, A + m, B + Am, C + Bm, Cm
+\end{align}
+
+Đến đây, chắc các bạn đã biết phải làm gì tiếp theo rồi. Chúng ta sẽ cố gắng ``điều chỉnh tham số $m$'' một cách ``phù hợp'' để các hệ số trên trở thành các hệ số của một phương trình bậc 4 giải được. Mà các điều kiện, biểu thức ràng buộc về hệ số đã được thể hiện rõ ở phần tiếp theo.
+
+Như vậy, chúng ta cần giải một phương trình ẩn $m$. Phương trình đó không rõ bậc là bao nhiêu, có nghiệm thực hay phức (còn tùy thuộc vào \textit{loại điều kiện} mà bạn lựa chọn ở phần tiếp theo nữa). Nhưng chúng ta chỉ cần số $m$, nên có thể \texttt{Shift solve} và ``mong chờ'' một kết quả tốt đẹp.\\
+\\
+\textbf{Remark 3.25.}
+\begin{enumerate}
+\item Nhìn chung, phương pháp này khá mạo hiểm. Ý tưởng thêm nghiệm của chúng ta đang làm gia tăng bậc của phương trình cần giải. Thế lợi ích của nó là gì? Đó là tùy vào trường hợp đang xét, chưa chắc phương trình (có hệ số cụ thể) bậc thấp hơn sẽ dễ dàng giải được hơn.
+\item Một trường hợp khá hiệu quả mà bạn sẽ thấy trong nhận xét ở phần tổng quát. Lợi ích của việc thêm nghiệm để giải một phương trình không nằm ở bậc cao - bậc thấp, mà là ở bậc chẵn - bậc lẻ, bậc nguyên tố - bậc hợp số.
+
+Chẳng hạn như bạn đang cố gắng giải một phương trình bậc 3 có các nghiệm là 
+\begin{align}
+\sqrt 2  \pm \sqrt 3 ,\sqrt 2  + \sqrt 5 
+\end{align}
+Với các nghiệm như vậy thì đương nhiên là hệ số của phương trình sẽ không đẹp. Và việc dự đoán các nghiệm cũng trở nên khó khăn. Nhưng nếu bạn thêm vào nghiệm $\sqrt 2  - \sqrt 5 $ thì phương trình bậc 4 thu được sẽ dễ giải hơn rất nhiều. Nghiệm mới bạn vừa thêm vào chính là ``phần quan trọng còn thiếu'' trong bộ nghiệm của phương trình có hệ số ``tốt'' (ở đây ý là số hữu tỷ). Thiếu nó, bạn sẽ bị nhiều thứ khác cản trở tầm nhìn và khó có thể tìm ra lời giải được. Có nó, bạn sẽ thấy mọi thứ thật dễ dàng. Nhưng việc để có được nó đương nhiên sẽ lại phụ thuộc vào nhiều yếu tố.
+\item Có thể thêm nhiều nghiệm hơn để liên kết phần này với các phần tiếp theo.
+\end{enumerate}
+\section{Problems are coming \ldots}
+\textbf{Problem 3.26.} \textit{Khảo sát hàm đa thức bậc 3.}\\
+\\
+\textbf{Problem 3.27.} \textit{Biện luận số nghiệm của phương trình bậc 3 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 3.28.} \textit{Tìm điều kiện để phương trình bậc 3 có nghiệm bội.}\\
+\\
+\textbf{Problem 3.29.} \textit{Tìm điều kiện để phương trình bậc 3 có các nghiệm phân biệt.}\\
+\\
+\textbf{Problem 3.30.} \textit{Khảo sát nghiệm âm, nghiệm dương của phương trình bậc 3 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 3.31.} \textit{Tìm điều kiện để phương trình bậc 3 có 3 nghiệm tạo thành cấp số cộng.}\\
+\\
+\textbf{Problem 3.32.} \textit{Tìm điều kiện để phương trình bậc 3 có 3 nghiệm tạo thành cấp số nhân.}\\
+\\
+\textbf{Problem 3.33.} \textit{Tìm điều kiện để phương trình bậc 3 có các nghiệm thực là}
+\begin{enumerate}
+\item \textit{Các số nguyên dương.}
+\item \textit{Các số nguyên.}
+\item \textit{Các số hữu tỷ.}
+\item \textit{Các số vô tỷ.}
+\end{enumerate}
+\textbf{Problem 3.34.} \textit{Tìm hiểu các lớp phương trình giải được nhờ các phương trình} 
+\begin{align}
+\tan 3x = m,\tanh 3x = m,\cot 3x = m,\coth 3x = m
+\end{align}
+\textbf{Problem 3.35.} \textit{Mở rộng tất cả tính chất trong phần này cho trường $\mathbb{C}$}.\\
+\\
+\textbf{Problem 3.36.} \textit{Mở rộng tất cả tính chất trong phần này cho các trường khác.}\\
+\\
+\textbf{Problem 3.37.} \textit{Tìm hiểu các lớp phương trình (nói chung) giải được nhờ các lớp phương trình trong phần này.}
+\chapter{Phương trình bậc 4}
+Phần này chủ yếu đề cập tới phương trình bậc 4 với hệ số trên trường $\mathbb{R}$. Lưu ý rằng các tính chất trong phần này có thể mở rộng qua trường số $\mathbb{C}$
+\section{Phương trình bậc 4}
+\textbf{Definition 4.0.} 
+\begin{enumerate}
+\item Phương trình bậc 4\index{phương trình bậc 4} dạng tổng quát trên $\mathbb{R}$ là phương trình có dạng
+\begin{align}
+{a_0}{x^4} + {b_0}{x^3} + {c_0}{x^2} + {d_0}x + {e_0} = 0
+\end{align}
+với $a_0,b_0,c_0,d_0,e_0$ là các số thực và $a_0 \ne 0$.
+\item Phương trình bậc 4 dạng chính tắc\index{phương trình bậc 4 dạng chính tắc} là phương trình có dạng
+\begin{align}
+\label{4.2}
+{x^4} + A{x^3} + B{x^2} + Cx + D = 0
+\end{align}
+\end{enumerate}
+
+Trước khi đến với công thức Ferrari,\index{công thức Ferrari} chúng ta cùng tìm hiểu một số trường hợp đặc biệt của phương trình này.
+\section{Khi biết 1 nghiệm}
+\textbf{Problem 4.1.} \textit{Giải phương trình bậc 4 khi biết một nghiệm của nó.}\\
+
+Tương tự phần trước, giả sử đã biết 1 nghiệm ${x_0}$ sử dụng sơ đồ Horner để phân tích đa thức ở vế trái thành nhân tử
+\begin{align}
+\left( {x - {x_0}} \right)\left[ {{x^3} + \left( {{x_0} + A} \right){x^2} + \left( {x_0^2 + A{x_0} + B} \right)x + \left( {x_0^3 + Ax_0^2 + B{x_0} + C} \right)} \right] = 0
+\end{align}
+
+Ngoài nghiệm ${x_0}$, \eqref{4.2} còn có các nghiệm là nghiệm của phương trình bậc 3
+\begin{align}
+\label{4.4}
+{x^3} + \left( {{x_0} + A} \right){x^2} + \left( {x_0^2 + A{x_0} + B} \right)x + \left( {x_0^3 + Ax_0^2 + B{x_0} + C} \right) = 0
+\end{align}
+
+Để giải \eqref{4.4}, ta quay lại chương 3.\\
+\\
+\textbf{Remark 4.2. } Trường hợp khi viết 1 nghiệm của phương trình đã cho sẽ tương tự cho các phần sau. Qua trường hợp này cho phương trình bậc 3 và phương trình bậc 4, chắc hẳn ai cũng đã đoán được quy luật. Trường hợp tổng quát được ghi rõ ở phần tổng quát.\\
+
+Sau đây, chúng ta sẽ tìm hiểu một số dạng phương trình bậc 4 quen thuộc.
+\section{Phương trình trùng phương}
+\textbf{Problem 4.3.}\textit{Giải và biện luận phương trình trùng phương có dạng}\index{phương trình trùng phương}
+\begin{align}
+{x^4} + A{x^2} + B = 0
+\end{align}
+\textsc{Solution.} Đặt $t = {x^2} \ge 0$ rồi giải phương trình bậc 2 thu được.
+\section{Quy về phương trình bậc 2}
+\textbf{Problem 4.4.}\textit{Tìm các lớp phương trình bậc 4 giải được bằng cách giải 2 lần phương trình bậc 2}\\
+
+Có lẽ đây là phần thường dùng nhất trong thực hành. Ý nghĩa của đẳng thức
+\begin{align}
+4 =2 \times 2
+\end{align}
+là việc ta có thể xét phương trình trùng phương có dạng sau 
+\begin{align}
+\label{4.6}
+f\left( x \right) = {\left( {{x^2} + ax + b} \right)^2} + c\left( {{x^2} + ax + b} \right) + d = 0
+\end{align}
+trong đó $a,b,c,d \in \mathbb{R}$.
+
+Để giải \eqref{4.6}, đặt 
+\begin{align}
+t = {x^2} + ax + b \ge b - \dfrac{{{a^2}}}{4}
+\end{align}
+được 
+\begin{align}
+{t^2} + ct + d = 0
+\end{align}
+
+Giải phương trình bậc 2 này, giả sử được các nghiệm phức ${t_1},{t_2}$, sau đó giải các phương trình
+\begin{align}
+\begin{array}{l}
+{x^2} + ax + b = {t_1}\\
+{x^2} + ax + b = {t_2}
+\end{array}
+\end{align}
+
+Tiếp theo, ta sẽ tìm điều kiện của $A,B,C,D$ để phương trình chính tắc có thể biểu diễn được dưới dạng \eqref{4.6}.
+
+Khai triển \eqref{4.6} được 
+\begin{align}
+{x^4} + 2a{x^3} + \left( {{a^2} + 2b + c} \right){x^2} + \left( {2ab + ac} \right)x + \left( {{b^2} + bc + d} \right) = 0
+\end{align}
+
+Đồng nhất hệ số với \eqref{4.2} được 
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{A = 2a}\\
+{B = {a^2} + 2b + c}\\
+{C = 2ab + ac}\\
+{D = {b^2} + bc + d}
+\end{array}} \right.
+\end{align}
+
+Biểu diễn $a,b,c,d$ theo $A,B,C,D$ được
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{a = \dfrac{A}{2}}\\
+{2b + c = B - \dfrac{{{A^2}}}{4}}\\
+{\left[ {\begin{array}{*{20}{c}}
+{a = C = 0}\\
+{a \ne 0,2b + c = \dfrac{{2C}}{A}}
+\end{array}} \right.}\\
+{{b^2} + bc + d = D}
+\end{array}} \right.
+\end{align}
+Xét 2 trường hợp sau theo $a$.
+\begin{enumerate}
+\item Nếu $a=0$ thì $A = C = 0$, \eqref{4.2} trở thành phương trình trùng phương, quay lại phần trước.
+\item Xét $a \ne 0$ thì $A \ne 0,C \ne 0$. Từ hệ (60) suy ra đẳng thức
+\begin{align}
+2b + c &= B - \dfrac{{{A^2}}}{4} \\
+&= \dfrac{{2C}}{A}
+\end{align}
+
+Quan tâm đến $A,B,C,D$ được
+\begin{align}
+\label{4.15}
+{A^3} + 8C = 4AB
+\end{align}
+\end{enumerate}
+\textbf{Remark 4.5. } \eqref{4.15} chính là điều kiện để \eqref{4.2} có thể biểu diễn dưới dạng \eqref{4.6}.\\
+\\
+\textbf{Problem 4.6.} \textit{Chứng minh \eqref{4.15} chính là điều kiện cần và đủ để \eqref{4.2} có thể biểu diễn được dưới dạng \eqref{4.6}.}\\
+\\
+\textsc{Proof.} Điều kiện cần thu được từ phần trên.
+
+Điều kiện đủ. Giả sử \eqref{4.2} có các hệ số thỏa mãn điều kiện \eqref{4.15}, ta sẽ chứng minh \eqref{4.2} có thể biểu diễn được dưới dạng \eqref{4.6}.
+Xét 2 trường hợp sau theo $A$.
+\begin{enumerate}
+\item \textbf{Trường hợp $A = 0$.} Khi đó $C = 0$, hiển nhiên \eqref{4.2} có dạng \eqref{4.6}.
+\item \textbf{Trường hợp $A \ne 0$.} Ta viết \eqref{4.2} dưới dạng
+\begin{align}
+\label{4.16}
+{\left( {{x^2} + \dfrac{A}{2}x + b} \right)^2} + c\left( {{x^2} + \dfrac{A}{2}x + b} \right) + d = 0
+\end{align}
+Ta cần chỉ ra tồn tại các số $b,c,d$ như vậy.
+
+Khai triển \eqref{4.16} và đồng nhất hệ số với \eqref{4.2}, được
+\begin{align}
+\label{4.17}
+\left\{ {\begin{array}{*{20}{c}}
+{2b + c = B - \dfrac{{{A^2}}}{4} = \dfrac{{2C}}{A}}\\
+{{b^2} + bc + d = D}
+\end{array}} \right.
+\end{align}
+
+Thay 
+\begin{align}
+c = \dfrac{{2C}}{A} - 2b
+\end{align}
+vào phương trình thứ hai của hệ, thu được phương trình bậc 2 theo $b$
+\begin{align}
+\label{4.18}
+{b^2} - \dfrac{{2C}}{A}b + D - d = 0
+\end{align}
+có 
+\begin{align}
+\Delta {'_b} = \dfrac{{{C^2}}}{{{A^2}}} - D + d
+\end{align}
+
+Tới đây, có thể lựa chọn $d$ để 
+\begin{align}
+\Delta {'_b} \ge 0
+\end{align}
+nên \eqref{4.18} có nghiệm. Chứng tỏ, tồn tại bộ số $\left( {b,c,d} \right)$.
+\end{enumerate}
+Hoàn tất chứng minh. \hfill $\square$\\
+\\
+\textbf{Remark 4.7.} Ngoài ra, ta còn có thể ``format'' bộ $\left( {b,c,d} \right)$. Tức là điều chỉnh $d$ sao cho \eqref{4.18} có nghiệm nguyên, hoặc nghiệm đẹp nào đó để thuận tiện việc tính toán.
+
+Nếu chọn 
+\begin{align}
+d = D - \dfrac{{{C^2}}}{{{A^2}}}
+\end{align}
+thì
+\begin{align}
+\Delta {'_b} = 0
+\end{align}
+thì phương trình có nghiệm 
+\begin{align}
+b = \dfrac{C}{A}
+\end{align}
+suy ra $c = 0$.
+
+Như vậy, 
+\begin{align}
+\left( {b,c,d} \right) = \left( {\dfrac{C}{A},0,D - \dfrac{{{C^2}}}{{{A^2}}}} \right)
+\end{align}
+là một bộ thỏa mãn \eqref{4.17}.
+
+Điều kiện \eqref{4.15} chỉ phụ thuộc vào $A,B,C$ mà không phụ thuộc vào $D$. Tại sao?
+
+Lớp hàm chúng ta thu được trong phần này có các hệ số thuộc 
+\begin{align}
+\left\{ {\left( {A,B,\dfrac{{4AB - {A^3}}}{8},D} \right).A,B,D \in \mathbb{R}} \right\},
+\end{align}
+Sau đây là một số hệ quả - những kết quả rất quen thuộc.\\
+\\
+\textbf{Corollary 4.8.} \textit{Phương trình bậc 4 có dạng 
+\begin{align}
+\left( {x + a} \right)\left( {x + b} \right)\left( {x + c} \right)\left( {x + d} \right) = m
+\end{align}
+với $a + b = c + d$ giải được.}\\
+
+Tại sao đây chỉ là một hệ quả của \eqref{4.6}?. Chúng ta thử dùng điều kiện \eqref{4.15} để kiểm chứng.
+
+Khai triển phương trình thành 
+\begin{align}
+{x^4} + \left( {\sum a } \right){x^3} + \left( {\sum {ab} } \right){x^2} + \left( {\sum {abc} } \right)x + abcd - m = 0
+\end{align}
+Đồng nhất hệ số với \eqref{4.2} được 
+\begin{align}
+A = \sum a ,B = \sum {ab} ,C = \sum {abc} ,D = abcd - m
+\end{align}
+Sử dụng giả thiết, đặt 
+\begin{align}
+a + b = c + d = z
+\end{align}
+thì 
+\begin{align}
+b = z - a\\
+d = z - c
+\end{align}
+Khi đó
+\begin{align}
+A &= 2z\\
+B &= {z^2} + \left( {a + c} \right)z - \left( {{a^2} + {c^2}} \right)\\
+C &= \left( {a + c} \right){z^2} - \left( {{a^2} + {c^2}} \right)z
+\end{align}
+
+Kiểm tra
+\begin{align}
+& {A^3} + 8C - 4AB \\
+& = 8{z^3} + 8\left( {a + c} \right){z^2} - 8\left( {{a^2} + {c^2}} \right)z - 8z\left[ {{z^2} + \left( {a + c} \right)z - \left( {{a^2} + {c^2}} \right)} \right] \\
+& = 0
+\end{align}
+Vậy, đây chính là hệ quả của \eqref{4.6}. \hfill $\square$\\
+
+Để giải phương trình này, ta biểu diễn về dạng \eqref{4.6}
+\begin{align}
+0 &= \left( {{x^2} + zx + ab} \right)\left( {{x^2} + zx + cd} \right) - m \\
+&=  {\left( {{x^2} + zx + ab} \right)^2} - \left( {ab - cd} \right)\left( {{x^2} + zx + ab} \right) - m
+\end{align}
+Tiếp theo là một hệ quả quen thuộc khác.\\
+\\
+\textbf{Corollary 4.9. } \textit{Phương trình bậc 4 dạng 
+\begin{align}
+{\left( {x + a} \right)^4} + {\left( {x + b} \right)^4} = m
+\end{align}
+giải được.}\\
+
+Tương tự hệ quả trước, đầu tiên ta sẽ chứng minh 
+\begin{align}
+{\left( {x + a} \right)^4} + {\left( {x + b} \right)^4} = m 
+\end{align}
+là một hệ quả của \eqref{4.6}.
+
+Thật vậy. khai triển 
+\begin{align}
+{x^4} + 2\left( {a + b} \right){x^3} + 3\left( {{a^2} + {b^2}} \right){x^2} + 2\left( {{a^3} + {b^3}} \right)x + \dfrac{{{a^4} + {b^4} - m}}{2} = 0
+\end{align}
+Đồng nhất hệ số với \eqref{4.2}, được
+\begin{align}
+\left\{ \begin{array}{l}
+A = 2\left( {a + b} \right)\\
+B = 3\left( {{a^2} + {b^2}} \right)\\
+C = 2\left( {{a^3} + {b^3}} \right)\\
+D = \dfrac{{{a^4} + {b^4} - m}}{2}
+\end{array} \right.
+\end{align}
+Kiểm tra
+\begin{align}
+{A^3} + 8C - 4AB = 8{\left( {a + b} \right)^3} + 16\left( {{a^3} + {b^3}} \right) - 24\left( {a + b} \right)\left( {{a^2} + {b^2}} \right) = 0
+\end{align}
+Như vậy, đây cũng là một hệ quả của \eqref{4.6}.\hfill $\square$\\
+
+Để giải phương trình này, có thể giải theo cách tổng quát cho \eqref{4.6}, hoặc có thể đặt 
+\begin{align}
+t = x + \dfrac{{a + b}}{2}
+\end{align}
+rồi quy về phương trình trùng phương theo $t$ để giải.
+\section{Một kết quả tương tự}
+Với ý tưởng của các hệ quả ở phần trước, ta xét một biến thể của nó có dạng
+\begin{align}
+\label{4.41}
+\left( {x + a} \right)\left( {x + b} \right)\left( {x + c} \right)\left( {x + d} \right) = m{x^3} + n
+\end{align}
+với 
+\begin{align}
+ab = cd = \dfrac{n}{m}
+\end{align}
+
+Tổng quát hơn 
+\begin{align}
+\label{4.43}
+\left( {x + a} \right)\left( {x + b} \right)\left( {x + c} \right)\left( {x + d} \right) = m{x^4} + n{x^3} + p{x^2} + qx + r
+\end{align}
+với 
+\begin{align}
+ab = cd = \dfrac{q}{n}\\
+\dfrac{r}{m} = {\left( {\dfrac{q}{n}} \right)^2}
+\end{align}
+\textbf{Problem 4.10.} \textit{Giải và biện luận các phương trình trên.}\\
+\\
+\textsc{Solution.} Đặt 
+\begin{align}
+z = ab = cd = \dfrac{n}{m}
+\end{align}
+\eqref{4.41} trở thành
+\begin{align}
+\left[ {{x^2} + \left( {a + b} \right)x + z} \right]\left[ {{x^2} + \left( {c + d} \right)x + z} \right] = m{x^3} + mzx
+\end{align}
+Xét 2 trường hợp sau theo $z$.
+\begin{enumerate}
+\item \textbf{Trường hợp $z=0$.} Trường hợp này dễ.
+\item \textbf{Trường hợp $z \ne 0$.} $x=0$ không là nghiệm của \eqref{4.41}, chia 2 vế của \eqref{4.41} cho ${x^2}$. Đặt 
+\begin{align}
+t = x + \dfrac{z}{x}
+\end{align}
+được 
+\begin{align}
+\left( {t + a + b} \right)\left( {t + c + d} \right) = mt
+\end{align}
+\end{enumerate}
+Giải và biện luận phương trình bậc 2 này là xong.\\
+
+Tiếp theo, ta giải dạng tổng quát \eqref{4.43}, hoàn toàn tương tự
+\begin{align}
+\left( {t + a + b} \right)\left( {t + c + d} \right) = p + nt + m\left( {{t^2} - 2z} \right)
+\end{align}
+\hfill $\square$
+\section{Phương trình có hệ số phản hồi}
+Xét phương trình bậc 4 tổng quát 
+\begin{align}
+\label{4.49}
+a{x^4} + b{x^3} + c{x^2} + dx + e = 0
+\end{align}
+thỏa mãn 
+\begin{align}
+\dfrac{e}{a} = {\left( {\dfrac{d}{b}} \right)^2}
+\end{align}
+
+Nếu xét dạng chính tắc thì xét
+\begin{align}
+{x^4} + A{x^3} + B{x^2} + Cx + D = 0,D = {\left( {\dfrac{C}{A}} \right)^2}
+\end{align}
+\textbf{Problem 4.11.} \textit{Giải phương trình trên.}\\
+\\
+\textsc{Solution.} Xét 2 trường hợp sau theo $e$.
+\begin{enumerate}
+\item \textbf{Trường hợp $e=0$.} Dễ.
+\item \textbf{Trường hợp $e \ne 0$.} Chia 2 vế của \eqref{4.49} cho ${x^2}$. Đặt 
+\begin{align}
+\alpha  = \dfrac{d}{b},y = x + \dfrac{\alpha }{x}
+\end{align}
+được
+\begin{align}
+a{y^2} + by + c - 2a\alpha  = 0
+\end{align}
+Giải phương trình bậc 2 này nữa là xong.
+\end{enumerate}
+Ngoài ra
+\begin{enumerate}
+\item $\alpha  = 1$ phương trình đối xứng.\index{phương trình đối xứng}
+\item $\alpha  = -1$ phương trình nửa đối xứng.\index{phương trình nửa đối xứng}
+\end{enumerate}
+\section{Dạng tổng các bình phương}
+\textbf{Problem 4.12.} \textit{Tìm các lớp đa thức bậc 4 biểu diễn được dưới dạng tổng các bình phương.\index{tổng các bình phương}}\\
+
+Chúng ta xét các hàm đa thức monic\index{đa thức monic} $P\left( x \right) \in \mathbb{R}\left[ x \right],\deg P = 4$ thỏa
+\begin{align}
+P\left( x \right) \ge 0,\forall x \in \mathbb{R}
+\end{align}
+
+Nếu đồ thị của hàm $P(x)$ không cắt trục hoành thì phương trình bậc 4 tương ứng vô nghiệm.
+
+Khi đó, ta nghĩ đa thức này có thể là tổng của các bình phương nào đó - Ý tưởng này rất dễ thấy ở phương trình bậc 2.
+
+Các Theorem nổi tiếng sau đây sẽ củng cố niềm tin cho các ý tưởng đó.\\
+\\
+\textbf{Theorem 4.13 (Hilbert 1).\index{Hilbert theorem 1}} \textit{Nếu đa thức $F\left( {{a_1},{a_2},\ldots,{a_n}} \right)$ thuần nhất và không âm trong miền $\mathbb{D}$, tức là 
+\begin{align}
+F\left( {{a_1},{a_2},\ldots,{a_n}} \right) \ge 0,\forall {a_1},{a_2},\ldots,{a_n} \in \mathbb{D}
+\end{align}
+thì có thể biểu diễn
+\begin{align}
+F\left( {{a_1},{a_2},\ldots,{a_n}} \right) = p_1^2 + p_2^2 + \ldots + p_m^2
+\end{align}
+với ${p_k} \in \mathbb{Q} \left[ x \right]$.}\\
+\\
+\textbf{Theorem 4.14 (Hilbert 2)\index{Hilbert theorem 2}.} \textit{Nếu đa thức $F\left( {{a_1},{a_2},\ldots,{a_n}} \right)$ không thuần nhất và không âm trong miền 
+\begin{align}
+{a_1} \ge 0,{a_2} \ge 0,\ldots,{a_1} \ge 0,\sum\limits_{i = 1}^n {{a_i}}  \le 1
+\end{align}
+thì
+\begin{align}
+F\left( {{a_1},{a_2},\ldots,{a_n}} \right) = \sum {{c_k}a_1^{{\alpha _1}}a_2^{{\alpha _2}}\cdots a_n^{{\alpha _n}}} {\left( {1 - {a_1} - {a_2} - \cdots - {a_n}} \right)^{{\alpha _{n + 1}}}}
+\end{align}
+trong đó ${\alpha _i},i = \overline {1,n + 1} $ là các số nguyên không âm và ${c_k} > 0$.}\\
+
+Theorem trên chỉ giúp ta củng cố niềm tin rằng tồn tại cách biểu diễn như vậy, đó là giá trị về lý thuyết. Còn về thực hành, việc xây dựng dạng biểu diễn đó đòi hỏi một số kỹ thuật phân tích nhất định.
+
+Sau đây, ta sẽ xét một số dạng phương trình bậc 4 có thể biểu diễn được dưới dạng tổng các bình phương, nhằm thuận tiện trong việc giải phương trình hay đặc biệt hơn là chứng minh phương trình vô nghiệm thực.
+
+Sau đây là một số lớp phương trình như vậy.
+\begin{align}
+f\left( x \right) &= \sum\limits_{i = 1}^n {{{\left( {{a_i}{x^2} + {b_i}x + {c_i}} \right)}^2} = 0} \\
+f\left( x \right) &= \sum\limits_{i = 1}^n {{{\left( {{a_i}{x^2} + {b_i}x + {c_i}} \right)}^2} + \sum\limits_{j = 1}^m {{{\left( {{d_j}x + {e_j}} \right)}^2}}  = 0} \\
+f\left( x \right) &= \sum\limits_{i = 1}^n {{{\left( {{a_i}{x^2} + {b_i}x + {c_i}} \right)}^2} + \sum\limits_{j = 1}^m {{{\left( {{d_j}x + {e_j}} \right)}^2}}  + \sum\limits_{k = 1}^l {f_k^2}  = 0} 
+\end{align}
+\textbf{Remark 4.15.} 
+\begin{enumerate}
+\item Để chứng minh một đa thức monic luôn không âm, ngoài cách biểu diễn đa thức đó dưới dạng tổng các bình phương, ta cũng có thể sử dụng các bất đẳng thức quen thuộc như AM-GM\index{bất đẳng thức AM-GM}, Cauchy - Schwarz\index{bất đẳng thức Cauchy-Schwarz},\ldots hoặc phân hoạch $\mathbb{R}$ thành các miền, và đánh giá thích hợp trên từng miền đó.
+\item Phương pháp sử dụng đạo hàm để khảo sát hàm số\index{khảo sát hàm số} cũng là một công cụ rất mạnh để giải phương trình. Chúng ta sẽ xét ý tưởng này ở các phần sau.
+\end{enumerate}
+\section{Quy về hệ phương trình đối xứng}
+\textbf{Problem 4.16.} \textit{Tìm các lớp phương trình bậc 4 giải được nhờ hệ phương trình đối xứng\index{hệ phương trình đối xứng}.}\\
+
+Các ý tưởng trong phần này sẽ giúp chúng ta liên kết 2 mảng rất gần nhau, đó là phương trình và hệ phương trình. Khi giải hệ phương trình, chắc hẳn nhiều lần các bạn đã cố gắng rút tất cả về 1 ẩn và lao vào giải một phương trình bậc cao. 
+
+Ý tưởng này khá trực tiếp, tư tưởng đơn giản. Nhưng mấu chốt lại nằm ở phương trình cuối cùng. Liệu nó có dễ giải không? Nếu có thêm một cái máy tính Casio chắc bạn phần nào tự tin hơn, vì chức năng \texttt{shift solve}\index{shift solve} sẽ giúp ta tìm ra các nghiệm đặc biệt để hạ bậc. Còn các nghiệm ngoại lai kia, đòi hỏi ta cần đến một số kỹ thuật khác để loại bỏ. Nói chung, cách giải đó chỉ dựa vào may mắn và không có điều gì đặc biệt về tư tưởng để chúng ta học hỏi.
+
+Thôi việc lội ngược dòng vất vả và không liên quan, chúng ta hãy xét chiều ngược lại - ý tưởng chính của phần này ``Giải phương trình bằng hệ phương trình''. Trong phần này chỉ xét hệ phương đối xứng. Cách giải phương trình này đã quá quen thuộc. Ta sẽ bắt đầu ý tưởng này từ $4=2\times 2$.\\
+
+Xét hệ phương trình đối xứng 2 ẩn $x,y$ có dạng
+\begin{align}
+\label{4.62}
+\left\{ {\begin{array}{*{20}{c}}
+{ax = {y^2} + by + c}\\
+{ay = {x^2} + bx + c}
+\end{array}} \right.
+\end{align}
+với $a,b,c \in \mathbb{R},a \ne 0$.
+
+Hệ này dễ dàng giải được. Tiếp theo là\\
+\\
+\textbf{Problem 4.17.} \textit{Những phương trình bậc 4 nào giải được nhờ hệ phương trình \eqref{4.62}?}\\
+
+Rút 
+\begin{align}
+y = \dfrac{1}{a}\left( {{x^2} + bx + c} \right)
+\end{align}
+từ phương trình thứ 2 và vào phương trình thứ nhất của hệ \eqref{4.62},được
+\begin{align}
+\label{4.64}
+{x^4} + 2b{x^3} + \left( {{b^2} + ab + 2c} \right){x^2} + \left( {2bc + a{b^2} - {a^3}} \right)x + \left( {abc + {a^2}c - {c^2}} \right) = 0
+\end{align}
+
+Đồng nhất hệ số với \eqref{4.2} 
+\begin{align}
+\left\{ \begin{array}{l}
+A = 2b\\
+B = {b^2} + ab + 2c\\
+C = 2bc + a{b^2} - {a^3}\\
+D = abc + {a^2}c - {c^2}
+\end{array} \right.
+\end{align}
+
+Tiếp theo, chúng ta sẽ tìm mối quan hệ của các hệ số $A,B,C,D$.
+
+\textbf{Tính $a$.} Ta có
+\begin{align}
+Bb - C = {a^3} + {b^3}
+\end{align}
+lại có $b = \dfrac{A}{2}$, nên 
+\begin{align}
+a = {a_0}:=\sqrt[3]{{\dfrac{{AB}}{2} - C - \dfrac{{{A^3}}}{8}}} 
+\end{align}
+
+Tiếp theo, có
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{c = \dfrac{1}{2}\left( {B - \dfrac{{{A^2}}}{4} - \dfrac{A}{2}\sqrt[3]{{\dfrac{{AB}}{2} - C - \dfrac{{{A^3}}}{8}}}} \right)}\\
+{{c^2} - \dfrac{{A{a_0}}}{2}c + D - a_0^2c = 0}
+\end{array}} \right.
+\end{align}
+
+Xét phương trình bậc 2
+\begin{align}
+\label{4.69}
+{c^2} - \left( {\dfrac{{A{a_0}}}{2} + a_0^2} \right)c + D = 0
+\end{align}
+có 
+\begin{align}
+{\Delta _c} = {\left( {\dfrac{{A{a_0}}}{2} + a_0^2} \right)^2} - 4D
+\end{align}
+
+Chúng ta cần ${\Delta _c} \ge 0$. Điều này tương đương với
+\begin{align}
+{\left( {\dfrac{{A{a_0}}}{2} + a_0^2} \right)^2} \ge 4D
+\end{align}
+
+Khi đó, \eqref{4.69} có nghiệm là
+\begin{align}
+{c_{1,2}} = \dfrac{1}{2}\left( {\dfrac{{A{a_0}}}{2} + a_0^2 \pm \sqrt {{{\left( {\dfrac{{A{a_0}}}{2} + a_0^2} \right)}^2} - 4D} } \right)
+\end{align}
+
+Như vậy, có
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{{{\left( {\dfrac{{A{a_0}}}{2} + a_0^2} \right)}^2} \ge 4D}\\
+{\left[ {\begin{array}{*{20}{c}}
+{\dfrac{1}{2}\left( {B - \dfrac{{{A^2}}}{4} - \dfrac{{A{a_0}}}{2}} \right) = {c_1}}\\
+{\dfrac{1}{2}\left( {B - \dfrac{{{A^2}}}{4} - \dfrac{{A{a_0}}}{2}} \right) = {c_2}}
+\end{array}} \right.}
+\end{array}} \right.
+\end{align}
+hay 
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{{{\left( {\dfrac{{A{a_0}}}{2} + a_0^2} \right)}^2} \ge 4D}\\
+{\left[ {\begin{array}{*{20}{c}}
+{B - \dfrac{{{A^2}}}{4} - \dfrac{{A{a_0}}}{2} = \dfrac{{A{a_0}}}{2} + a_0^2 + \sqrt {{{\left( {\dfrac{{A{a_0}}}{2} + a_0^2} \right)}^2} - 4D} }\\
+{B - \dfrac{{{A^2}}}{4} - \dfrac{{A{a_0}}}{2} = \dfrac{{A{a_0}}}{2} + a_0^2 - \sqrt {{{\left( {\dfrac{{A{a_0}}}{2} + a_0^2} \right)}^2} - 4D} }
+\end{array}} \right.}
+\end{array}} \right.
+\end{align}
+tương đương
+\begin{align}
+\label{4.75}
+\left\{ {\begin{array}{*{20}{c}}
+{{{\left( {\dfrac{{A{a_0}}}{2} + a_0^2} \right)}^2} \ge 4D}\\
+{{{\left( {B - \dfrac{{{A^2}}}{4} - \dfrac{{A{a_0}}}{2} - a_0^2} \right)}^2} = {{\left( {a_0^2 + \dfrac{{A{a_0}}}{2}} \right)}^2} - 4D}
+\end{array}} \right.
+\end{align}
+trong đó 
+\begin{align}
+{a_0} = \sqrt[3]{{\dfrac{{AB}}{2} - C - \dfrac{{{A^3}}}{8}}}
+\end{align}
+
+Điều kiện \eqref{4.75} chính là điều kiện cần để \eqref{4.2} có thể biểu diễn được dưới dạng \eqref{4.64}.\\
+\\
+\textbf{Remark 4.18.} Chúng ta hãy xem các trường hợp đơn giản.
+\begin{enumerate}
+\item \textbf{Trường hợp $b=0$.} \eqref{4.75} trở thành 
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{A = 0}\\
+{{B^2} + 4D = 2B\sqrt[3]{{{C^2}}}}
+\end{array}} \right.
+\end{align}
+\item \textbf{Trường hợp $c=0$.} \eqref{4.64} có nghiệm $x=0$, \eqref{4.75} trở thành
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{D = 0}\\
+{{{\left( {4B - {A^2}} \right)}^3} + 8C = {A^2}\left( {4B - {A^2}} \right)}
+\end{array}} \right.
+\end{align}
+\end{enumerate}
+\section{Quy về hệ phương trình giải được}
+\textbf{Problem 4.19.} \textit{Tìm các lớp phương trình bậc 4 giải được bằng hệ phương trình.}\\
+
+Trong phần này, chúng ta sẽ tiếp tục ý tưởng và mở rộng cho phần trước. Cụ thể là, nếu phần trước chỉ xét hệ phương trình đối xứng với 2 biến $x,y$ thì trong phần này ta sẽ xét các hệ phương trình không đối xứng, nhưng "giải được". Còn định nghĩa "giải được" như thế nào, chúng ta sẽ tìm hiểu ngay sau đây.\\
+
+Bắt đầu bằng việc xét hàm 2 biến $x,y$ bậc 2 có dạng
+\begin{align}
+\label{4.79}
+P\left( {x,y} \right) = a'{x^2} + b'{y^2} + c'x + d'y + e' = 0
+\end{align}
+trong đó $a' \ne 0,b' \ne 0,a',b',c',d',e' \in \mathbb{R}$.
+
+Chia 2 vế của \eqref{4.79} cho $a'$ thu được
+\begin{align}
+\label{4.80}
+f\left( {x,y} \right) = {x^2} + a{y^2} + bx + cy + d = 0
+\end{align}
+
+Điều mà chúng ta mong muốn ở đây là \eqref{4.80} có thể biểu diễn được dưới dạng
+\begin{align}
+\label{4.81}
+\left( {x + my + n} \right)\left( {x + py + q} \right) = 0
+\end{align}
+
+Nếu \eqref{4.80} có thể biểu diễn như vậy, thì ta có thể giải \eqref{4.80} dễ dàng. Đó là định nghĩa giải được trong phần này.
+
+Tiếp theo, khai triển \eqref{4.81}
+\begin{align}
+\label{4.82}
+{x^2} + \left( {m + p} \right)xy + mp{y^2} + \left( {n + q} \right)x + \left( {mq + np} \right)y + nq = 0
+\end{align}
+
+Để \eqref{4.82} giống \eqref{4.80} cần $m+p$ triệt tiêu, tức $m=-p$. Khi đó \eqref{4.82} trở thành
+\begin{align}
+\label{4.83}
+{x^2} - {m^2}{y^2} + \left( {n + q} \right)x + m\left( {q - n} \right)y + nq = 0
+\end{align}
+
+Đồng nhất hệ số \eqref{4.83} với \eqref{4.80} được
+\begin{align}
+a =  - {m^2},b = n + q,c = m\left( {q - n} \right),d = nq
+\end{align}
+
+Giải tiếp hệ này, ta sẽ thu được điều kiện để \eqref{4.80} có thể biểu diễn được dưới dạng \eqref{4.81}.
+
+Cụ thể là
+\begin{align}
+m =  \pm \sqrt { - a} ,q - n =  \pm \dfrac{c}{{\sqrt { - a} }}
+\end{align}
+Xét 2 trường hợp
+\begin{enumerate}
+\item \textbf{Trường hợp $m = \sqrt { - a} $.} Ta thu được hệ
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{n + q = b}\\
+{q - n = \dfrac{c}{{\sqrt { - a} }}}
+\end{array}} \right.
+\end{align}
+Giải hệ được 
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{n = \dfrac{1}{2}\left( {b - \dfrac{c}{{\sqrt { - a} }}} \right)}\\
+{q = \dfrac{1}{2}\left( {b + \dfrac{c}{{\sqrt { - a} }}} \right)}
+\end{array}} \right.
+\end{align}
+Suy ra 
+\begin{align}
+d = nq = \dfrac{1}{4}\left( {{b^2} + \dfrac{{{c^2}}}{a}} \right)
+\end{align}
+\item \textbf{Trường hợp $m = -\sqrt { - a} $.} Ta thu được hệ
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{n + q = b}\\
+{q - n =  - \dfrac{c}{{\sqrt { - a} }}}
+\end{array}} \right.
+\end{align}
+Giải hệ được 
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{n = \dfrac{1}{2}\left( {b + \dfrac{c}{{\sqrt { - a} }}} \right)}\\
+{q = \dfrac{1}{2}\left( {b - \dfrac{c}{{\sqrt { - a} }}} \right)}
+\end{array}} \right.
+\end{align}
+Suy ra 
+\begin{align}
+d = nq = \dfrac{1}{4}\left( {{b^2} + \dfrac{{{c^2}}}{a}} \right)
+\end{align}
+\end{enumerate}
+
+Điều kiện để \eqref{4.80} có thể biểu diễn được dưới dạng \eqref{4.81} là
+\begin{align}
+4d = {b^2} + \dfrac{{{c^2}}}{a}
+\end{align}
+
+Câu hỏi ở đây là $f(x,y)$ dùng để làm gì?
+
+Câu trả lời nằm ở hệ phương trình có dạng sau
+\begin{align}
+\label{4.93}
+\left\{ {\begin{array}{*{20}{c}}
+{ax = {y^2} + cy + e}\\
+{by = {x^2} + dx + f}
+\end{array}} \right.
+\end{align}
+với $a,b,c,d,e,f \in \mathbb{R}$.
+
+Ta muốn hệ này giải được theo một nghĩa nào đó. Định nghĩa mà Tác giả muốn sử dụng ở đây là \eqref{4.93} giải được nhờ \eqref{4.80}.
+
+Cụ thể, với $A$ là một số thực khác 0. Lấy phương trình thứ 2 trong hệ trừ cho phương trình thứ nhất nhân cho $A$, được
+\begin{align}
+\label{4.94}
+\left( {{x^2} - {A^2}{y^2}} \right) + \left( {d + a{A^2}} \right)x - \left( {{A^2}c + b} \right)y + \left( {f - {A^2}e} \right) = 0
+\end{align}
+
+Như đã thiết lập ở trên, muốn \eqref{4.94} giải được cần
+\begin{align}
+4\left( {f - {A^2}e} \right) = {\left( {d + a{A^2}} \right)^2} + \dfrac{{{{\left( {{A^2}c + b} \right)}^2}}}{{ - {A^2}}}
+\end{align}
+hay
+\begin{align}
+4{A^2}\left( {f - {A^2}e} \right) = {A^2}{\left( {d + a{A^2}} \right)^2} - {\left( {{A^2}c + b} \right)^2}
+\end{align}
+
+Đặt ${A^2} = T > 0$, \eqref{4.94} trở thành
+\begin{align}
+\label{4.97}
+{a^2}{T^3} + \left( {2ad - {c^2} + 4e} \right){T^2} + \left( {{d^2} - 4f - 2bc} \right)T - {b^2} = 0
+\end{align}
+Xét 2 trường hợp sau theo $a$.
+\begin{enumerate}
+\item \textbf{Trường hợp $a=0$.} Giải tiếp phương trình bậc $ \le 2$.
+\item \textbf{Trường hợp $a \ne 0$.} Xét 2 trường hợp con sau theo $b$.
+\begin{itemize}
+\item \textbf{Trường hợp $b=0$.} \eqref{4.97} là một phương trình bậc 3 có 1 nghiệm bằng 0, quay lại phần 3.1.
+\item \textbf{Trường hợp $b \ne 0$.} \eqref{4.97} là một phương trình bậc 3 theo $T$.
+\end{itemize}
+Điều kiện để có số $A$ như vậy để hệ giải được là \eqref{4.97} có ít nhất một nghiệm dương. Về điều này, quay lại phần 3.
+\end{enumerate}
+\vspace{0.5cm}
+\textbf{Remark 4.20.} Tuy nhiên, nếu xét bài toán này trên trường $\mathbb{C}$ thì mọi chuyện sẽ dễ dàng và ít điều kiện ràng buộc hơn.
+\section{$\cos 4x = m$}
+\textbf{Problem 4.21.} \textit{Biểu diễn $\cos 4x$ thành đa thức của $\cos x$.}\\
+\\
+\textbf{Problem 4.22.} \textit{Giải phương trình bậc 4 vừa thu được.}\\
+\\
+\textbf{Problem 4.23.} \textit{Tìm các lớp phương trình giải được nhờ phương trình}
+\begin{align}
+\cos 4x &= m\\
+\cosh 4x &= m
+\end{align}
+\section{$\sin 4x = m$}
+\textbf{Problem 4.24.} \textit{Biểu diễn $\sin 4x$ thành đa thức của $\sin x$}\\
+\\
+\textbf{Problem 4.25.} \textit{Giải phương trình bậc 4 vừa thu được}\\
+\\
+\textbf{Problem 4.26.} \textit{Tìm các lớp phương trình giải được nhờ phương trình}
+\begin{align}
+\sin 4x = m\\
+\sinh 4x = m
+\end{align}
+\section{${x^4} = a{x^2} + bx + c$ với ${b^2} = 4\left( {a + 2} \right)\left( {c + 1} \right)$}
+\textbf{Problem 4.27.} \textit{Giải phương trình}
+\begin{align}
+\label{4.102}
+{x^4} = a{x^2} + bx + c
+\end{align} \\
+với
+\begin{align}
+{b^2} = 4\left( {a + 2} \right)\left( {c + 1} \right)
+\end{align}
+\textsc{Solution.} \eqref{4.102} tương đương
+\begin{align}
+\label{4.104}
+{\left( {{x^2} + 1} \right)^2} = \left( {a + 2} \right){x^2} + bx + c + 1
+\end{align}
+
+Xét 2 trường hợp theo $b$.
+\begin{enumerate}
+\item \textbf{Trường hợp $b=0$.} Dễ.
+\item \textbf{Trường hợp $b \ne 0$.} Nếu $a <  - 2$ thì $LHS > 0 \ge RHS$ nên \eqref{4.104} vô nghiệm.\\
+Xét $a>-2$ thì
+\begin{align}
+{\left( {{x^2} + 1} \right)^2} = {\left( {\sqrt {a + 2} x \pm \sqrt {c + 1} } \right)^2}
+\end{align}
+Giải tiếp các phương trình bậc 2
+\begin{align}
+{x^2} + 1 =  \pm \left( {\sqrt {a + 2} x \pm \sqrt {c + 1} } \right)
+\end{align}
+\end{enumerate}
+\hfill $\square$\\
+\\
+\textbf{Remark 4.28.} Phần này và phần kế tiếp là phần chuẩn bị cho phương trình bậc 4 tổng quát.
+\section{Phương trình ${x^4} = a{x^2} + bx + c$}
+\textbf{Problem 4.29.} \textit{Giải phương trình}
+\begin{align}
+\label{4.107}
+{x^4} = a{x^2} + bx + c
+\end{align}
+\textsc{Solution.} Xét 2 trường hợp sau theo $b$.
+\begin{enumerate}
+\item \textbf{Trường hợp $b=0$.} \eqref{4.107} trở thành phương trình trùng phương.
+\item \textbf{Trường hợp $b \ne 0$.} Gọi $\alpha  \in \mathbb{R}$ thỏa
+\begin{align}
+\label{4.108}
+{b^2} = 4\left( {a + 2\alpha } \right)\left( {c + {\alpha ^2}} \right)
+\end{align}
+
+Ta có \eqref{4.108} là một phương trình bậc 3 theo biến $\alpha$ nên luôn có nghiệm thực.
+
+Tiếp theo, ta đặt
+\begin{align}
+f\left( x \right): = \left( {a + 2\alpha } \right){x^2} + bx + \left( {c + {\alpha ^2}} \right)
+\end{align}
+có nghiệm kép và
+\begin{align}
+f\left( x \right) = \left\{ {\begin{array}{*{20}{c}}
+{\left( {a + 2\alpha } \right){{\left[ {x + \dfrac{b}{{2\left( {a + 2\alpha } \right)}}} \right]}^2},\mbox{ if}:a + 2\alpha  \ne 0}\\
+{c + {\alpha ^2},\mbox{ if}  :a + 2\alpha  = 0}
+\end{array}} \right.
+\end{align}
+
+Ta có \eqref{4.107} $ \Leftrightarrow {\left( {{x^2} + \alpha } \right)^2} = f\left( x \right)$.
+\begin{enumerate}
+\item Nếu $a + 2\alpha  < 0$ \eqref{4.107} vô nghiệm.
+\item Nếu $a + 2\alpha  > 0$ giải tiếp các phương trình
+\begin{align}
+{x^2} + \alpha  =  \pm \sqrt {a + 2\alpha } \left[ {x - \dfrac{b}{{2\left( {a + 2\alpha } \right)}}} \right]
+\end{align}
+\end{enumerate}
+\end{enumerate}
+\hfill $\square$
+\section{Giải phương trình bậc 4 tổng quát}
+\textbf{Problem 4.30.} \textit{Giải phương trình bậc 4 tổng quát.}\\
+
+Từ dạng tổng quát, ta có dạng chính tắc, nhưng dạng này vẫn còn bất tiện để giải. Đặt 
+\begin{align}
+x = y - \dfrac{A}{4}
+\end{align}
+được
+\begin{align}
+{x^4} = a{x^2} + bx + c
+\end{align}
+trong đó
+\begin{align}
+a &= \dfrac{3}{8}{A^2} - B\\
+b &= \dfrac{1}{8}{A^3} + \dfrac{1}{2}AB - C\\
+c &= \dfrac{1}{{16}}\left( {3{A^4} - 16B{A^2} + 64AB - 256D} \right)
+\end{align}
+Quay lại phần trước. \hfill $\square$
+\section{Một cách khác giải phương trình bậc 4 tổng quát}
+Chúng ta sẽ giải phương trình bậc 4 dạng chính tắc.\index{công thức Ferrari}\\
+\\
+\textsc{Solution.} Đổi biến tương tự được
+\begin{align}
+{x^4} + a{x^2} + bx + c = 0
+\end{align}
+
+Ý chính của lời giải này là tìm $p,q,r$ sao cho
+\begin{align}
+{x^4} + a{x^2} + bx + c = \left( {{x^2} + px + q} \right)\left( {{x^2} - px + r} \right)
+\end{align}
+
+Đồng nhất hệ số, được \begin{align}
+a = q + r - {p^2},b = p\left( {r - q} \right),c = qr
+\end{align}
+
+Biểu diễn theo $p$
+\begin{align}
+r &= \dfrac{{{p^2} + a + \dfrac{b}{p}}}{2}\\
+q &= \dfrac{{{p^2} + a - \dfrac{b}{p}}}{2}
+\end{align}
+
+Thay vào
+\begin{align}
+{\left( {{p^2} + a} \right)^2} - \dfrac{{{b^2}}}{{{p^2}}} = 4c
+\end{align}
+hay
+\begin{align}
+{p^6} + 2a{p^4} + \left( {{a^2} - 4c} \right){p^2} - {b^2} = 0
+\end{align}
+Đặt $t = {p^2}$ rồi giải phương trình bậc 3 là xong. \hfill $\square$
+\section{Thêm nghiệm để giải phương trình}
+\textbf{Problem 4.31.} \textit{Thêm một nghiệm để giải phương trình.}\\
+\\
+\textbf{Problem 4.32.} \textit{Thêm nhiều nghiệm để giải phương trình.}
+
+\section{Problems are coming\ldots}
+\textbf{Problem 4.33.} \textit{Với phương trình bậc 4 hệ số thực tổng quát. Chứng minh tồn tại số thực $k$ để phép thế $x=y+k$ sẽ giúp đưa phương trình dạng tổng quát về dạng phương trình với hệ số phản hồi}\\
+\\
+\textbf{Problem 4.34.} \textit{Khảo sát hàm đa thức bậc 4.}\\
+\\
+\textbf{Problem.} \textit{Biện luận số nghiệm của phương trình bậc 4 thông qua các hệ số của nó.}\\
+\\\
+\textbf{Problem 4.35.} \textit{Tìm điều kiện để phương trình bậc 4 có nghiệm bội.}\\
+\\
+\textbf{Problem 4.36.} \textit{Tìm điều kiện để phương trình bậc 4 có các nghiệm phân biệt.}\\
+\\
+\textbf{Problem 4.37.} \textit{Khảo sát nghiệm âm, nghiệm dương của phương trình bậc 4 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 4.38.} \textit{Tìm điều kiện để phương trình bậc 4 có một số nghiệm tạo thành cấp số cộng.}\\
+\\
+\textbf{Problem 4.39.} \textit{Tìm điều kiện để phương trình bậc 4 có một số nghiệm tạo thành cấp số nhân.}\\
+\\
+\textbf{Problem 4.40.} \textit{Tìm điều kiện để phương trình bậc 4 có các nghiệm thực là}
+\begin{enumerate}
+\item \textit{Các số nguyên dương.}
+\item \textit{Các số nguyên.}
+\item \textit{Các số hữu tỷ.}
+\item \textit{Các số vô tỷ.}
+\end{enumerate}
+\textbf{Problem 4.41.} \textit{Tìm hiểu các lớp phương trình giải được nhờ các phương trình}
+\begin{align}
+\tan 4x &= m\\
+\tanh 4x &= m\\
+\cot 4x &= m\\
+\coth 4x &= m
+\end{align}
+\textbf{Problem 4.42.} \textit{Mở rộng tất cả tính chất trong phần này cho trường $\mathbb{C}$}.\\
+\\
+\textbf{Problem 4.43.} \textit{Mở rộng tất cả tính chất trong phần này cho các trường khác.}\\
+\\
+\textbf{Problem 4.44.} \textit{Tìm hiểu các lớp phương trình (nói chung) giải được nhờ các lớp phương trình trong phần này.}
+\chapter{Phương trình bậc 5}
+Phần này chủ yếu đề cập tới phương trình bậc 5 với hệ số trên trường $\mathbb{R}$. Lưu ý rằng các tính chất trong phần này có thể mở rộng qua trường số $\mathbb{C}$
+\section{Phương trình bậc 5}
+\textbf{Definition 5.0.} 
+\begin{enumerate}
+\item Phương trình bậc 5 dạng tổng quát trên $\mathbb{R}$ là phương trình có dạng
+\begin{align}
+{a_0}{x^5} + {b_0}{x^4} + {c_0}{x^3} + {d_0}x^2 + {e_0}x+f_0= 0
+\end{align}
+với $a_0,b_0,c_0,d_0,e_0,f_0$ là các số thực và $a_0 \ne 0$.
+\item Phương trình bậc 5 dạng chính tắc là phương trình có dạng
+\begin{align}
+{x^5} + A{x^4} + B{x^3} + C{x^2} + Dx + E = 0
+\end{align}
+\end{enumerate}
+
+\section{Khi biết 1 nghiệm}
+Sử dụng lược đồ Horner để phân tích nhân tử và quay lại chương 4.
+\section{Sử dụng phương trình bậc 2 có Delta bình phương}
+\textbf{Problem 5.1.} \textit{Tìm các lớp phương trình bậc 5 giải được nhờ sử dụng phương trình bậc 2 có Delta bình phương.\index{Delta bình phương}}\\
+
+Sau đây là ý tưởng ``Delta bình phương''\\
+\\
+\textsc{Delta bình phương.} Xét phương trình bậc 5 có dạng
+\begin{align}
+\label{5.3}
+\left( {x + c} \right){\left( {{x^2} + ax + b} \right)^2} + \left( {{x^2} + ax + b} \right)\left( {dx + e} \right) + fx + g = 0
+\end{align}
+với $a,b,c,d,e,f,g \in \mathbb{R}$.
+
+Đặt $t = {x^2} + ax + b$ \eqref{5.3} trở thành
+\begin{align}
+\label{5.4}
+\left( {x + c} \right){t^2} + \left( {dx + e} \right)t + fx + g = 0
+\end{align}
+
+Xét 2 trường hợp.
+\begin{enumerate}
+\item Trường hợp $x =  - c$ là một nghiệm của \eqref{5.4} thì
+\begin{align}
+\label{5.5}
+\left( {{c^2} - ac + b} \right)\left( {e - cd} \right) + g - fc = 0
+\end{align}
+Khi đó, ta giải tiếp nhân tử bậc 4 còn lại. Trong trường hợp này \eqref{5.5} là điều kiện để \eqref{5.3} giải được.
+\item Nếu $x =  - c$ không là nghiệm của \eqref{5.4} thì 
+\begin{align}
+\label{a}
+\left( {{c^2} - ac + b} \right)\left( {e - cd} \right) + g - fc \ne 0
+\end{align}
+và \eqref{5.4} là một phương trình bậc 2 theo biến $t$. Việc còn lại là tìm điều kiện của $a,b,c,d,e,f,g$ để phương trình bậc 2 này có thể giải được.
+\end{enumerate}
+
+Ta có \eqref{5.4} có biệt thức 
+\begin{align}
+\label{5.7}
+{\Delta _t} = \left( {{d^2} - 4f} \right){x^2} + \left( {2de - 4g - 4cf} \right)x + {e^2} - 4cg
+\end{align}
+
+Điều mà chúng ta mong muốn ở đây là biệt thức \eqref{5.7} có dạng bình phương, tức 
+\begin{align}
+{\Delta _t} = {\left( {mx + n} \right)^2}
+\end{align}
+
+Điều này tương đương với
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{{d^2} > 4f}\\
+{\Delta {'_x} = {{\left( {de - 2g - 2cf} \right)}^2} - \left( {{d^2} - 4f} \right)\left( {{e^2} - 4cg} \right) = 0}
+\end{array}} \right.
+\end{align}
+tương đương
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{{d^2} > 4f}\\
+{{g^2} + {c^2}{f^2} + {d^2}cg + {e^2}f = 2cfg + dge + cdef}
+\end{array}} \right.
+\end{align}
+
+Như vậy ta đã thu được điều kiện để \eqref{5.7} có dạng bình phương, nên \eqref{5.4} có các nghiệm "đẹp" - không chứa căn thức chứa $x$.
+
+Tiếp theo, với những điều kiện thích hợp đó
+\begin{align}
+{\Delta _t} = {\left( {\sqrt {{d^2} - 4f} x + \dfrac{{de - 2g - 4cf}}{{\sqrt {{d^2} - 4f} }}} \right)^2}
+\end{align}
+
+Suy ra \eqref{5.4} có 2 nghiệm là 
+\begin{align}
+{t_{1,2}} = \dfrac{1}{{2\left( {x + c} \right)}}\left[ { - \left( {dx + e} \right) \pm \left( {\sqrt {{d^2} - 4f} x + \dfrac{{de - 2g - 4cf}}{{\sqrt {{d^2} - 4f} }}} \right)} \right]
+\end{align}
+
+Giải tiếp các phương trình sau, có bậc 3 sau khi quy đồng, là xong
+\begin{align}
+{x^2} + ax + b = {t_{1,2}}
+\end{align}
+\hfill $\square$\\
+\\
+\textbf{Problem 5.2.} \textit{Những lớp phương trình bậc 5 nào có thể biểu diễn được dưới dạng trên? Tìm tiêu chuẩn đối với các hệ số của phương trình để điều đó có thể thực hiện được.}\\
+\\
+Tiếp theo là một số dạng biểu diễn tổng quát hơn
+\begin{align}
+\left( {x + c} \right){\left( {{x^2} + ax + b} \right)^2} &+ \left( {{x^2} + ax + b} \right)\left( {d{x^2} + ex + f} \right) \\
+&+ \left( {g{x^3} + h{x^2} + ix + j} \right) = 0
+\end{align}
+\textbf{Problem 5.3.} \textit{Tìm điều kiện để Delta của phương trình trên có dạng bình phương.}\\
+\\
+\textbf{Problem 5.4.} \textit{Giải phương trình bậc 5 nói trên. Tìm điều kiện của các hệ số để phương trình bậc 5 dạng chuẩn tắc có thể biểu diễn dưới dạng trên.}\\
+\\
+\textbf{Problem 5.5.} \textit{Tìm hiểu các lớp phương trình giải được nhờ các phương trình trên.}
+\section{$\cos 5x = m$}
+\textbf{Problem 5.6.} \textit{Biểu diễn $\cos 5x$ thành đa thức của $\cos x$.}\\
+\\
+\textbf{Problem 5.7.} \textit{Giải phương trình bậc 5 vừa thu được.}\\
+\\
+\textbf{Problem 5.8.} \textit{Tìm các lớp phương trình giải được nhờ phương trình}
+\begin{align}
+\cos 5x &= m \\
+\cosh 5x &= m
+\end{align}
+\section{$\sin 5x = m$}
+\textbf{Problem 5.9.} \textit{Biểu diễn $\sin 5x$ thành đa thức của $\sin x$.}\\
+\\
+\textbf{Problem 5.10.} \textit{Giải phương trình bậc 5 vừa thu được.}\\
+\\
+\textbf{Problem 5.11.} \textit{Tìm các lớp phương trình giải được nhờ phương trình}
+\begin{align}
+\sin 5x &= m \\
+\sinh 5x &= m
+\end{align}
+\section{Thêm nghiệm để giải phương trình}
+\textbf{Problem 5.12.} \textit{Thêm một nghiệm để giải phương trình.}\\
+\\
+\textbf{Problem 5.13.} \textit{Thêm nhiều nghiệm để giải phương trình.}
+\section{Problems are coming\ldots}
+\textbf{Problem 5.14.} \textit{Khảo sát hàm đa thức bậc 5.}\\
+\\
+\textbf{Problem 5.15.} \textit{Biện luận số nghiệm của phương trình bậc 5 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 5.16.} \textit{Tìm điều kiện để phương trình bậc 5 có nghiệm bội.}\\
+\\
+\textbf{Problem 5.17.} \textit{Tìm điều kiện để phương trình bậc 5 có các nghiệm phân biệt.}\\
+\\
+\textbf{Problem 5.18.} \textit{Khảo sát nghiệm âm, nghiệm dương của phương trình bậc 5 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 5.19.} \textit{Tìm điều kiện để phương trình bậc 5 có một số nghiệm tạo thành cấp số cộng.}\\
+\\
+\textbf{Problem 5.20.} \textit{Tìm điều kiện để phương trình bậc 5 có một số nghiệm tạo thành cấp số nhân.}\\
+\\
+\textbf{Problem 5.21.} \textit{Tìm điều kiện để phương trình bậc 5 có các nghiệm thực là các số}
+\begin{enumerate}
+\item \textit{Các số nguyên dương.}
+\item \textit{Các số nguyên.}
+\item \textit{Các số hữu tỷ.}
+\item \textit{Các số vô tỷ.}
+\end{enumerate}
+\textbf{Problem 5.22.} \textit{Tìm hiểu các lớp phương trình giải được nhờ các phương trình $\tan 5x = m,\tanh 5x = m,\cot 5x = m,\coth 5x = m$.}\\
+\\
+\textbf{Problem 5.23.} \textit{Mở rộng tất cả tính chất trong phần này cho trường $\mathbb{C}$}.\\
+\\
+\textbf{Problem 5.24.} \textit{Mở rộng tất cả tính chất trong phần này cho các trường khác.}\\
+\\
+\textbf{Problem 5.25.} \textit{Tìm hiểu các lớp phương trình (nói chung) giải được nhờ các lớp phương trình trong phần này.}
+\chapter{Phương trình bậc 6}
+
+Phần này chủ yếu đề cập tới phương trình bậc 6 với hệ số trên trường $\mathbb{R}$. Lưu ý rằng các tính chất trong phần này có thể mở rộng qua trường số $\mathbb{C}$
+\section{Phương trình bậc 6}
+\textbf{Definition 6.0.} 
+\begin{enumerate}
+\item Phương trình bậc 6\index{phương trình bậc 6} dạng tổng quát trên $\mathbb{R}$ là phương trình có dạng
+\begin{align}
+{a_0}{x^6} + {b_0}{x^5} + {c_0}{x^4} + {d_0}x^3 + {e_0}x^2+f_0 x+ g_0 = 0
+\end{align}
+với $a_0,b_0,c_0,d_0,e_0,f_0,g_0$ là các số thực và $a_0 \ne 0$.
+\item Phương trình bậc 6 dạng chính tắc\index{phương trình bậc 6 dạng chính tắc} là phương trình có dạng
+\begin{align}
+{x^6} + A{x^5} + B{x^4} + C{x^3} + D{x^2} + Ex + F = 0
+\end{align}
+
+\end{enumerate}
+
+\section{Khi biết 1 nghiệm}
+Sử dụng lược đồ Horner để phân tích và quay lại phần 5.
+\section{$6=2\times 3=3\times 2$}
+Ý nghĩa của phân tích $6=2\times 3$ là ta sẽ xét phương trình bậc 6 có dạng 
+\begin{align}
+{x^6} + a{x^3} + b = 0
+\end{align}
+\textbf{Problem 6.1.} \textit{Giải phương trình trên. Sau đó tìm hiểu các lớp phương trình bậc 6 giải được nhờ phương trình trên.}\\
+
+Tương tự, ý nghĩa của phân tích $6=3\times 2$ xét phương trình bậc 6 có dạng
+\begin{align}
+{x^6} + a{x^4} + b{x^2} + c = 0
+\end{align}
+\textbf{Problem 6.2.} \textit{Giải phương trình trên. Tìm hiểu các lớp phương trình bậc 6 giải được nhờ phương trình trên.}\\
+\\
+\textbf{Problem 6.3.} \textit{Tìm hiểu các phương trình (nói chung) giải được nhờ các phương trình trên.}
+\section{Phương trình bậc 6 hệ số phản hồi}
+Xét dạng chính tắc với các hệ số thỏa mãn\index{phương trình hệ số phản hồi}
+\begin{align}
+{F^2} = {\left( {\dfrac{E}{A}} \right)^3} = {\left( {\dfrac{D}{B}} \right)^6}
+\end{align}
+\textbf{Problem 6.4.} \textit{Giải phương trình với điều kiện vừa cho. Tìm hiểu các lớp phương trình giải được nhờ phương trình đó}
+\section{$\prod\limits_{i = 1}^3 {\left( {{x^2} + ax + {bi}} \right)}  = g\left( {{x^2} + ax} \right)$}
+Ý nghĩa của đẳng thức $6=2+2+2$ là ta sẽ xét phương trình bậc 6 có dạng
+\begin{align}
+\left( {{x^2} + ax + {b_1}} \right)\left( {{x^2} + ax + {b_2}} \right)\left( {{x^2} + ax + {b_3}} \right) = g\left( {{x^2} + ax} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 3$.\\
+\\
+\textbf{Problem 6.5.} \textit{Giải phương trình trên. Tìm hiểu các lớp phương trình giải được nhờ phương trình đó.}
+\section{$\prod\limits_{i = 1}^3 {\left( {x + \frac{z}{x} + {a_i}} \right)}  = g\left( {x + \frac{z}{x}} \right)$}
+Xét phương trình có dạng (tại sao lại có phân thức)
+\begin{align}
+\left( {x + \dfrac{z}{x} + {a_1}} \right)\left( {x + \dfrac{z}{x} + {a_2}} \right)\left( {x + \dfrac{z}{x} + {a_3}} \right) = g\left( {x + \dfrac{z}{x}} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 3$.\\
+\\
+\textbf{Problem 6.6.} \textit{Giải phương trình trên. Tìm hiểu các lớp phương trình giải được nhờ phương trình này.}
+\section{$\prod\limits_{i = 1}^2 {\left( {{x^3} + a{x^2} + bx + {c_i}} \right)}  = g\left( {{x^3} + a{x^2} + bx} \right)$}
+Ý nghĩa của đẳng thức $6=3+3$ là việc ta xét phương trình bậc 6 có dạng
+\begin{align}
+\left( {{x^3} + a{x^2} + bx + {c_1}} \right)\left( {{x^3} + a{x^2} + bx + {c_2}} \right) = g\left( {{x^3} + a{x^2} + bx} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 2$.\\
+\\
+\textbf{Problem 6.7.} \textit{Giải phương trình trên. Tìm hiểu các lớp phương trình giải được nhờ phương trình này.}
+\section{$\prod\limits_{i = 1}^2 {\left( {{x^2} + ax + \frac{b}{x} + {c_i}} \right)}  = g\left( {{x^2} + ax + \frac{b}{x}} \right)$}
+Xét phương trình có dạng 
+\begin{align}
+\left( {{x^2} + ax + \dfrac{b}{x} + {c_1}} \right)\left( {{x^2} + ax + \dfrac{b}{x} + {c_2}} \right) = g\left( {{x^2} + ax + \dfrac{b}{x}} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 2$.\\
+\\
+\textbf{Problem 6.8.} \textit{Giải phương trình trên. Tìm hiểu các lớp phương trình giải được nhờ phương trình này.}
+\section{$\prod\limits_{i = 1}^2 {\left( {x + \frac{a}{x} + \frac{b}{{{x^2}}} + {c_i}} \right)}  = g\left( {x + \frac{a}{x} + \frac{b}{{{x^2}}}} \right)$}
+Xét phương trình có dạng
+\begin{align}
+\left( {x + \dfrac{a}{x} + \dfrac{b}{{{x^2}}} + {c_1}} \right)\left( {x + \dfrac{a}{x} + \dfrac{b}{{{x^2}}} + {c_2}} \right) = g\left( {x + \dfrac{a}{x} + \dfrac{b}{{{x^2}}}} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 1$.\\
+\\
+\textbf{Problem 6.9.} \textit{Giải phương trình trên. Tìm hiểu các lớp phương trình giải được nhờ phương trình này.}
+\section{Sử dụng phương trình bậc 2 có Delta bình phương}
+\textbf{Problem 6.10.} \textit{Sử dụng ý tưởng phương trình bậc 2 có Delta bình phương để tìm hiểu các lớp phương trình bậc 6 nào giải được.}\index{Delta bình phương}
+\section{$\cos 6x = m$}
+\textbf{Problem 6.11.} \textit{Biểu diễn $\cos 6x$ thành đa thức của $\cos x$.}\\
+\\
+\textbf{Problem 6.12.} \textit{Giải phương trình bậc 6 vừa thu được.}\\
+\\
+\textbf{Problem 6.13.} \textit{Tìm các lớp phương trình giải được nhờ phương trình}
+\begin{align}
+\cos 6x &= m\\
+\cosh 6x &= m
+\end{align}
+\section{$\sin 6x = m$}
+\textbf{Problem 6.14.} \textit{Biểu diễn $\sin 6x$ thành đa thức của $\sin x$.}\\
+\\
+\textbf{Problem 6.15.} \textit{Giải phương trình bậc 6 vừa thu được.}\\
+\\
+\textbf{Problem 6.16.} \textit{Tìm các lớp phương trình giải được nhờ phương trình}
+\begin{align}
+\sin 6x = m\\
+\sinh 6x = m
+\end{align}
+\section{Dạng tổng các bình phương}
+\textbf{Problem 6.17.} \textit{Tìm các lớp phương trình bậc 6 có thể biểu diễn được dưới dạng tổng các bình phương.}
+\section{Thêm nghiệm để giải phương trình}
+\textbf{Problem 6.18.} \textit{Thêm một nghiệm để giải phương trình.}\\
+\\
+\textbf{Problem 6.19.} \textit{Thêm nhiều nghiệm để giải phương trình.}
+\section{Problems are coming\ldots}
+\textbf{Problem 6.20.} \textit{Khảo sát hàm đa thức bậc 6.}\\
+\\
+\textbf{Problem 6.21.} \textit{Biện luận số nghiệm của phương trình bậc 6 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 6.22.} \textit{Tìm điều kiện để phương trình bậc 6 có nghiệm bội.}\\
+\\
+\textbf{Problem 6.23.} \textit{Tìm điều kiện để phương trình bậc 6 có các nghiệm phân biệt.}\\
+\\
+\textbf{Problem 6.24.} \textit{Khảo sát nghiệm âm, nghiệm dương của phương trình bậc 6 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 6.25.} \textit{Tìm điều kiện để phương trình bậc 6 có một số nghiệm tạo thành cấp số cộng.}\\
+\\
+\textbf{Problem 6.26.} \textit{Tìm điều kiện để phương trình bậc 6 có một số nghiệm tạo thành cấp số nhân.}\\
+\\
+\textbf{Problem 6.27.} \textit{Tìm điều kiện để phương trình bậc 6 có các nghiệm thực là các số}
+\begin{enumerate}
+\item \textit{Các số nguyên dương.}
+\item \textit{Các số nguyên.}
+\item \textit{Các số hữu tỷ.}
+\item \textit{Các số vô tỷ.}
+\end{enumerate}
+\textbf{Problem 6.28.} \textit{Tìm hiểu các lớp phương trình giải được nhờ các phương trình}
+\begin{align}
+\tan 6x &= m\\
+\tanh 6x &= m\\
+\cot 6x &= m\\
+\coth 6x &= m
+\end{align}
+\textbf{Problem 6.29.} \textit{Mở rộng tất cả tính chất trong phần này cho trường $\mathbb{C}$}.\\
+\\
+\textbf{Problem 6.30.} \textit{Mở rộng tất cả tính chất trong phần này cho các trường khác.}\\
+\\
+\textbf{Problem 6.31.} \textit{Tìm hiểu các lớp phương trình (nói chung) giải được nhờ các lớp phương trình trong phần này.}
+\chapter{Phương trình bậc 7}
+Phần này chủ yếu đề cập tới phương trình bậc 7 với hệ số trên trường $\mathbb{R}$. Lưu ý rằng các tính chất trong phần này có thể mở rộng qua trường số $\mathbb{C}$
+\section{Phương trình bậc 7}
+\textbf{Definition 7.0.} 
+\begin{enumerate}
+\item Phương trình bậc 7\index{phương trình bậc 7} dạng tổng quát trên $\mathbb{R}$ là phương trình có dạng
+\begin{align}
+{a_0}{x^7} + {b_0}{x^6} + {c_0}{x^5} + {d_0}x^4 + {e_0}x^3+f_0x^2 +g_0x+h_0 = 0
+\end{align}
+với $a_0,b_0,c_0,d_0,e_0,f_0,g_0,h_0$ là các số thực và $a_0 \ne 0$.
+\item Phương trình bậc 7\index{phương trình bậc 7 dạng chính tắc} dạng chính tắc là phương trình có dạng
+\begin{align}
+{x^7} + A{x^6} + B{x^5} + C{x^4} + D{x^3} + E{x^2} + Fx + G = 0
+\end{align}
+
+\end{enumerate}
+
+\section{Khi biết 1 nghiệm}
+Sử dụng lược đồ Horner để phân tích và quay lại phần 6.
+\section{Sử dụng phương trình bậc 2 có Delta bình phương}
+\textbf{Problem 7.1.} \textit{Sử dụng ý tưởng phương trình bậc 2 có Delta bình phương để tìm hiểu các lớp phương trình bậc 7 nào giải được.}\index{Delta bình phương}
+\section{$\cos 7x = m$}
+\textbf{Problem 7.2.} \textit{Biểu diễn $\cos 7x$ thành đa thức của $\cos x$}\\
+\\
+\textbf{Problem 7.3.} \textit{Giải phương trình bậc 7 vừa thu được}\\
+\\
+\textbf{Problem 7.4.} \textit{Tìm các lớp phương trình giải được nhờ phương trình} 
+\begin{align}
+\cos 7x = m\\
+\cosh 7x = m
+\end{align}
+\section{$\sin 7x = m$}
+\textbf{Problem 7.5.} \textit{Biểu diễn $\sin 7x$ thành đa thức của $\sin x$.}\\
+\\
+\textbf{Problem 7.6.} \textit{Giải phương trình bậc 7 vừa thu được.}\\
+\\
+\textbf{Problem 7.7.} \textit{Tìm các lớp phương trình giải được nhờ phương trình}
+\begin{align}
+\sin 7x = m\\
+\sinh 7x = m
+\end{align}
+\section{Thêm nghiệm để giải phương trình}
+\textbf{Problem 7.8.} \textit{Thêm một nghiệm để giải phương trình.}\\
+\\
+\textbf{Problem 7.9.} \textit{Thêm nhiều nghiệm để giải phương trình.}
+\section{Problems are coming\ldots}
+\textbf{Problem 7.10.} \textit{Khảo sát hàm đa thức bậc 7.}\\
+\\
+\textbf{Problem 7.11.} \textit{Biện luận số nghiệm của phương trình bậc 7 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 7.12.} \textit{Tìm điều kiện để phương trình bậc 7 có nghiệm bội.}\\
+\\
+\textbf{Problem 7.13.} \textit{Tìm điều kiện để phương trình bậc 7 có các nghiệm phân biệt.}\\
+\\
+\textbf{Problem 7.14.} \textit{Khảo sát nghiệm âm, nghiệm dương của phương trình bậc 7 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 7.15.} \textit{Tìm điều kiện để phương trình bậc 7 có một số nghiệm tạo thành cấp số cộng.}\\
+\\
+\textbf{Problem 7.16.} \textit{Tìm điều kiện để phương trình bậc 7 có một số nghiệm tạo thành cấp số nhân.}\\
+\\
+\textbf{Problem 7.17.} \textit{Tìm điều kiện để phương trình bậc 7 có các nghiệm thực là các số}
+\begin{enumerate}
+\item \textit{Các số nguyên dương.}
+\item \textit{Các số nguyên.}
+\item \textit{Các số hữu tỷ.}
+\item \textit{Các số vô tỷ.}
+\end{enumerate}
+\textbf{Problem 7.18.} \textit{Tìm hiểu các lớp phương trình giải được nhờ các phương trình}
+\begin{align}
+\tan 7x &= m\\
+tanh  7x &= m\\
+\cot 7x &= m\\
+\coth 7x &= m
+\end{align}
+\textbf{Problem 7.19.} \textit{Mở rộng tất cả tính chất trong phần này cho trường $\mathbb{C}$}.\\
+\\
+\textbf{Problem 7.20.} \textit{Mở rộng tất cả tính chất trong phần này cho các trường khác.}\\
+\\
+\textbf{Problem 7.21.} \textit{Tìm hiểu các lớp phương trình (nói chung) giải được nhờ các lớp phương trình trong phần này.}
+\chapter{Phương trình bậc 8}
+Phần này chủ yếu đề cập tới phương trình bậc 8 với hệ số trên trường $\mathbb{R}$. Lưu ý rằng các tính chất trong phần này có thể mở rộng qua trường số $\mathbb{C}$
+\section{Phương trình bậc 8}
+\textbf{Definition 8.0.} 
+\begin{enumerate}
+\item Phương trình bậc 8\index{phương trình bậc 8} dạng tổng quát trên $\mathbb{R}$ là phương trình có dạng
+\begin{align}
+{a_0}{x^8} + {b_0}{x^7} + {c_0}{x^6} + {d_0}x^5 + {e_0}x^4+f_0x^3+g_0x^2+h_0x+i_0 = 0
+\end{align}
+với $a_0,b_0,c_0,d_0,e_0,f_0,g_0,h_0,i_0$ là các số thực và $a_0 \ne 0$.
+\item  Phương trình bậc 8 dạng chính tắc\index{phương trình bậc 8 dạng chính tắc} là phương trình có dạng
+\begin{align}
+{x^8} + A{x^7} + B{x^6} + C{x^5} + D{x^4} + E{x^3} + F{x^2} + Gx + H = 0
+\end{align}
+
+\end{enumerate}
+
+\section{Khi biết 1 nghiệm}
+Sử dụng lược đồ Horner\index{lược đồ Horner} để phân tích và quay lại phần 7.
+\section{$8 = {2^3} = 2\times 4 = 4\times 2$}
+Từ phân tích ra thừa số nguyên tố của số 8, chúng ta sẽ xét các phương trình sau.
+\begin{enumerate}
+\item Ý nghĩa của đẳng thức $8= 2\times 4$ là việc ta xét phương trình bậc 8 sau.
+\begin{align}
+{x^8} + A{x^4} + B = 0
+\end{align}
+\item Ý nghĩa của đẳng thức $8=4 \times 2$ là việc ta sẽ xét phương trình bậc 8 sau.
+\begin{align}
+{x^8} + A{x^6} + B{x^4} + C{x^2} + D = 0
+\end{align}
+\item Ý nghĩa của đẳng thức $8 = 2 \times 2 \times 2$ là việc ta sẽ xét phương trình bậc 8 sau.
+\begin{align}
+{\left( {{x^4} + a{x^2} + b} \right)^2} + A\left( {{x^4} + a{x^2} + b} \right) + B = 0
+\end{align}
+\end{enumerate}
+\textbf{Problem 8.1.} \textit{Giải các phương trình trên.}\\
+\\
+\textbf{Problem 8.2.} \textit{Tìm hiểu các lớp phương trình bậc 8 giải được nhờ các phương trình trên.}\\
+\\
+\textbf{Problem 8.3.} \textit{Tìm hiểu các lớp phương trình giải được nhờ các phương trình trên.}
+\section{$\prod\limits_{i = 1}^8 {\left( {x + {a_i}} \right) = m} ,{a_1} + {a_2} = {a_3} + {a_4} ={a_5} + {a_6} = {a_7} + {a_8}$}
+Xét phương trình bậc 8 có dạng 
+\begin{align}
+\prod\limits_{i = 1}^8 {\left( {x + {a_i}} \right) = m} 
+\end{align}
+với
+\begin{align}
+{a_1} + {a_2} = {a_3} + {a_4} = {a_5} + {a_6} = {a_7} + {a_8}
+\end{align}
+\textbf{Problem 8.4.} \textit{Giải phương trình bậc 8 trên.}\\
+\\
+\textbf{Problem 8.5.} \textit{Tìm hiểu các lớp phương trình giải được nhờ phương trình trên.}\\
+
+Tổng quát hơn, xét phương trình
+\begin{align}
+\prod\limits_{i = 1}^8 {\left( {x + {a_i}} \right)}  = g\left( {{x^2} + \alpha x} \right)
+\end{align}
+với 
+\begin{align}
+{a_1} + {a_2} = {a_3} + {a_4} = {a_5} + {a_6} = {a_7} + {a_8} = \alpha
+\end{align}
+\textbf{Problem 8.6.} \textit{Giải phương trình trên.}\\
+\\
+\textbf{Problem 8.7.} \textit{Tìm hiểu các lớp phương trình giải được nhờ phương trình trên.}
+\section{$\prod\limits_{i = 1}^4 {\left( {{x^2} + ax + {b_i}} \right)}  = g\left( {{x^2} + ax} \right)$}
+Xét phương trình
+\begin{align}
+\left( {{x^2} + ax + {b_1}} \right)\left( {{x^2} + ax + {b_2}} \right)\left( {{x^2} + ax + {b_3}} \right)\left( {{x^2} + ax + {b_4}} \right) = g\left( {{x^2} + ax} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 4$\\
+\\
+\textbf{Problem 8.8.} \textit{Giải phương trình trên.}\\
+\\
+\textbf{Problem 8.9.} \textit{Tìm hiểu các lớp phương trình giải được nhờ phương trình trên.}
+\section{$\prod\limits_{i = 1}^2 {\left( {{x^4} + a{x^3} + b{x^2} + cx + {d_i}} \right)}  \\= g\left( {{x^4} + a{x^3} + b{x^2} + cx} \right)$}
+Xét phương trình
+\begin{align}
+\left( {{x^4} + a{x^3} + b{x^2} + cx + {d_1}} \right)\left( {{x^4} + a{x^3} + b{x^2} + cx + {d_2}} \right) = g\left( {{x^4} + a{x^3} + b{x^2} + cx} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 2$\\
+\\
+\textbf{Problem 8.10.} \textit{Giải phương trình trên.}\\
+\\
+\textbf{Problem 8.11.} \textit{Tìm hiểu các lớp phương trình giải được nhờ phương trình trên.}
+\section{$\prod\limits_{i = 1}^4 {\left( {x + \frac{a}{x} + {b_i}} \right)}  = g\left( {x + \frac{a}{x}} \right)$}
+Xét phương trình 
+\begin{align}
+\left( {x + \dfrac{a}{x} + {b_1}} \right)\left( {x + \dfrac{a}{x} + {b_2}} \right)\left( {x + \dfrac{a}{x} + {b_3}} \right)\left( {x + \dfrac{a}{x} + {b_4}} \right) = g\left( {x + \dfrac{a}{x}} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 4$.\\
+\\
+\textbf{Problem 8.12.} \textit{Giải phương trình trên.}\\
+\\
+\textbf{Problem 8.13.} \textit{Tìm hiểu các lớp phương trình giải được nhờ phương trình trên.}
+\section{$\prod\limits_{i = 1}^2 {\left( {{x^3} + a{x^2} + bx + \frac{c}{x} + {d_i}} \right)}  = g\left( {{x^3} + a{x^2} + bx + \frac{c}{x}} \right)$}
+Xét phương trình 
+\begin{align}
+\left( {{x^3} + a{x^2} + bx + \dfrac{c}{x} + {d_1}} \right)\left( {{x^3} + a{x^2} + bx + \dfrac{c}{x} + {d_2}} \right) = g\left( {{x^3} + a{x^2} + bx + \dfrac{c}{x}} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 2$.\\
+\\
+\textbf{Problem 8.14.} \textit{Giải phương trình trên.}\\
+\\
+\textbf{Problem 8.15.} \textit{Tìm hiểu các lớp phương trình giải được nhờ phương trình trên.}
+\section{$\prod\limits_{i = 1}^2 {\left( {{x^2} + ax + \frac{b}{x} + \frac{c}{{{x^2}}} + {d_i}} \right)}  = g\left( {{x^2} + ax + \frac{b}{x} + \frac{c}{{{x^2}}}} \right)$}
+Xét phương trình 
+\begin{align}
+\left( {{x^2} + ax + \dfrac{b}{x} + \dfrac{c}{{{x^2}}} + {d_1}} \right)\left( {{x^2} + ax + \dfrac{b}{x} + \dfrac{c}{{{x^2}}} + {d_2}} \right) = g\left( {{x^2} + ax + \dfrac{b}{x} + \dfrac{c}{{{x^2}}}} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 2$.\\
+\\
+\textbf{Problem 8.16.} \textit{Giải phương trình trên.}\\
+\\
+\textbf{Problem 8.17.} \textit{Tìm hiểu các lớp phương trình giải được nhờ phương trình trên.}
+\section{$\prod\limits_{i = 1}^2 {\left( {x + \frac{a}{x} + \frac{b}{{{x^2}}} + \frac{c}{{{x^3}}} + {d_i}} \right)}  = g\left( {x + \frac{a}{x} + \frac{b}{{{x^2}}} + \frac{c}{{{x^3}}}} \right)$}
+Xét phương trình
+\begin{align}
+\left( {x + \dfrac{a}{x} + \dfrac{b}{{{x^2}}} + \dfrac{c}{{{x^3}}} + {d_1}} \right)\left( {x + \dfrac{a}{x} + \dfrac{b}{{{x^2}}} + \dfrac{c}{{{x^3}}} + {d_2}} \right) = g\left( {x + \dfrac{a}{x} + \dfrac{b}{{{x^2}}} + \dfrac{c}{{{x^3}}}} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 2$.\\
+\\
+\textbf{Problem 8.18.} \textit{Giải phương trình trên.}\\
+\\
+\textbf{Problem 8.19.} \textit{Tìm hiểu các lớp phương trình giải được nhờ phương trình trên.}
+\section{Phương trình hệ số phản hồi}
+Xét phương trình \index{phương trình hệ số phản hồi}
+\begin{align}
+{x^8} + A{x^7} + B{x^6} + C{x^5} + D{x^4} + E{x^3} + F{x^2} + Gx + H = 0
+\end{align}
+thỏa mãn 
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{H = {{\left( {\dfrac{F}{B}} \right)}^2} = {{\left( {\dfrac{E}{C}} \right)}^4}}\\
+{\dfrac{G}{A} = {{\left( {\dfrac{E}{C}} \right)}^3}}
+\end{array}} \right.
+\end{align}
+\textbf{Problem 8.20.} \textit{Giải phương trình trên.}\\
+\\
+\textbf{Problem 8.21.} \textit{Tìm hiểu các lớp phương trình giải được nhờ phương trình trên.}
+\section{Sử dụng phương trình bậc 2 có Delta bình phương}
+\textbf{Problem 8.22.} \textit{Sử dụng ý tưởng phương trình bậc 2 có Delta bình phương để tìm hiểu các lớp phương trình bậc 8 nào giải được.}\index{Delta bình phương}
+\section{$\cos 8x = m$}
+\textbf{Problem 8.23.} \textit{Biểu diễn $\cos 8x$ thành đa thức của $\cos x$.}\\
+\\
+\textbf{Problem 8.24.} \textit{Giải phương trình bậc 8 vừa thu được.}\\
+\\
+\textbf{Problem 8.25.} \textit{Tìm các lớp phương trình giải được nhờ phương trình}
+\begin{align}
+\cos 8x = m\\
+\cosh 8x = m
+\end{align}
+\section{$\sin 8x = m$}
+\textbf{Problem 8.26.} \textit{Biểu diễn $\sin 8x$ thành đa thức của $\sin x$.}\\
+\\
+\textbf{Problem 8.27.} \textit{Giải phương trình bậc 8 vừa thu được.}\\
+\\
+\textbf{Problem 8.28.} \textit{Tìm các lớp phương trình giải được nhờ phương trình}
+\begin{align}
+\sin 8x = m\\
+\sinh 8x = m
+\end{align}
+\section{Dạng tổng các bình phương}
+\textbf{Problem 8.29.} \textit{Tìm các lớp phương trình bậc 8 có thể biểu diễn được dưới dạng tổng các bình phương.}
+\section{Quy về hệ phương trình hoán vị}
+Xét hệ phương trình
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{ax = {y^2} + by + c}\\
+{ay = {z^2} + bz + c}\\
+{az = {x^2} + bx + c}
+\end{array}} \right.
+\end{align}
+
+Từ hệ phương trình hoán vị 3 biến\index{hệ phương trình hoán vị} nói trên, nếu rút 2 biến bất kỳ về biến còn lại thì ta sẽ thu được một phương trình bậc 8. Điều đó xảy ra do $8 = {2^3}$.
+
+Phương trình tương ứng sẽ giải được khi hệ phương trình này giải được. Vậy công việc chính của ta trong phần này là giải quyết các vấn đề sau.\\
+\\
+\textbf{Problem 8.30.} \textit{Tìm điều kiện của các hệ số để hệ phương trình trên giải được.}\\
+\\
+\textbf{Problem 8.31.} \textit{Tìm hiểu các lớp phương trình giải được nhờ hệ phương trình hoán vị trên.}\\
+\\
+\textbf{Remark 8.32.} Chúng ta sẽ xem xét một vài ý tưởng giúp hệ hoán vị trên giải được như sau.\\
+
+Nếu trong 3 biến $x,y,z$ có 2 biến bằng nhau thì phương trình bậc 2 tương ứng với 2 biến đó giải được, nên hệ trên cũng giải được. Giả sử trong tất cả các nghiệm của hệ hoán vị trên, không có nghiệm nào mà có 2 phần tử bằng nhau. Khi đó, trừ tương ứng vế theo vế các phương trình và nhân lại, được
+\begin{align}
+\left( {x - y} \right)\left( {y - z} \right)\left( {z - x} \right)\left[ {{a^3} - \left( {b + y + z} \right)\left( {b + z + x} \right)\left( {b + x + y} \right)} \right] = 0
+\end{align}
+do 
+\begin{align}
+\left( {x - y} \right)\left( {y - z} \right)\left( {z - x} \right) \ne 0
+\end{align}
+nên
+\begin{align}
+{a^3} = \left( {b + y + z} \right)\left( {b + z + x} \right)\left( {b + x + y} \right)
+\end{align}
+Tuy nhiên đến đây, ta lại thu được một phương trình khá rắc rối. Rắc rối ở chỗ nếu quy 3 biến về  biến thì phương trình này là một phương trình bậc 8. Khó lòng để giải được. Cho nên, có một ý tưởng ở đây là làm cho phương trình trên vô nghiệm!\\
+
+Vô nghiệm bằng cách nào? 8 là một số chẵn, nên ta sẽ nghĩ tới các thứ liên quan đến ``không âm'' hay ``vô nghiệm'' như tổng các bình phương, sử dụng các bất đẳng thức,\ldots 
+Ở đây, chúng ta sẽ sử dụng bất đẳng thức.
+
+Xét các trường hợp sau.
+\begin{enumerate}
+\item \textbf{Trường hợp $a>0$.} dựa vào các phương trình của hệ ban đầu, ta có đánh giá cơ bản
+\begin{align}
+x = \dfrac{1}{a}\left( {{y^2} + by + c} \right) = \dfrac{1}{a}{\left( {y + \dfrac{b}{2}} \right)^2} + \dfrac{{4c - {b^2}}}{{4a}} \ge \dfrac{{4c - {b^2}}}{{4a}}
+\end{align}
+tương tự, thu được 
+\begin{align}
+x,y,z \ge \dfrac{{4c - {b^2}}}{{4a}}
+\end{align}
+Tiếp theo, sử dụng phương trình trên. Chúng ta cần các nhân tử ở vế phải là các số dương
+\begin{align}
+b + 2\dfrac{{4c - {b^2}}}{{4a}} > 0
+\end{align}
+hay 
+\begin{align}
+2ab + 4c > {b^2}
+\end{align}
+
+Với điều kiện này, ta có cả 2 vế của phương trình trên đều là các số dương. Tiếp theo, ta cần vế phải lớn hơn hẳn vế trái để phương trình vô nghiệm
+\begin{align}
+RHS \ge {\left( {\dfrac{{2ab + 4c - {b^2}}}{{2a}}} \right)^3} > {a^3} = LHS
+\end{align}
+tương đương 
+\begin{align}
+2ab + 4c > 2{a^2} + {b^2}
+\end{align}
+Do đó, với các điều kiện vừa thiết lập thì hệ phương trình hoán vị trên giải được.
+\item \textbf{Trường hợp $a<0$.} Hoàn toàn tương tự.
+\end{enumerate}
+
+Hãy tìm các ý tưởng khác để hệ trên giải được.
+\section{Quy về hề giải được}
+Xét hệ phương trình 3 biến
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{ax = {y^2} + by + c}\\
+{dy = {z^2} + ez + f}\\
+{fz = {x^2} + gx + h}
+\end{array}} \right.
+\end{align}
+\textbf{Problem 8.33.} \textit{Tìm điều kiện để hệ phương trình trên giải được.}\\
+\\
+\textbf{Problem 8.34.} \textit{Tìm hiểu các lớp phương trình giải được nhờ phương trình trên.}\\
+
+Tiếp theo, ta xét một hệ phương trình nữa
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{ax = {y^4} + b{y^3} + c{y^2} + dy + e}\\
+{fy = {x^2} + gx + h}
+\end{array}} \right.
+\end{align}
+và hệ
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{ay = {x^4} + b{x^3} + c{x^2} + dx + e}\\
+{fx = {y^2} + gy + h}
+\end{array}} \right.
+\end{align}
+\textbf{Problem 8.35.} \textit{Tìm điều kiện để các hệ trên giải được. Và tìm hiểu các lớp phương trình giải được nhờ quy về hệ phương trình trong các trường hợp đó.}
+\section{Thêm nghiệm để giải phương trình}
+\textbf{Problem 8.36.} \textit{Thêm một nghiệm để giải phương trình.}\\
+\\
+\textbf{Problem 8.37.} \textit{Thêm nhiều nghiệm để giải phương trình.}
+\section{Problems are coming\ldots}
+\textbf{Problem 8.38.} \textit{Khảo sát hàm đa thức bậc 8.}\\
+\\
+\textbf{Problem 8.39.} \textit{Biện luận số nghiệm của phương trình bậc 8 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 8.40.} \textit{Tìm điều kiện để phương trình bậc 8 có nghiệm bội.}\\
+\\
+\textbf{Problem 8.41.} \textit{Tìm điều kiện để phương trình bậc 8 có các nghiệm phân biệt.}\\
+\\
+\textbf{Problem 8.42.} \textit{Khảo sát nghiệm âm, nghiệm dương của phương trình bậc 8 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 8.43.} \textit{Tìm điều kiện để phương trình bậc 8 có một số nghiệm tạo thành cấp số cộng.}\\
+\\
+\textbf{Problem 8.44.} \textit{Tìm điều kiện để phương trình bậc 8 có một số nghiệm tạo thành cấp số nhân.}\\
+\\
+\textbf{Problem 8.45.} \textit{Tìm điều kiện để phương trình bậc 8 có các nghiệm thực là}
+\begin{enumerate}
+\item \textit{Các số nguyên dương.}
+\item \textit{Các số nguyên.}
+\item \textit{Các số hữu tỷ.}
+\item \textit{Các số vô tỷ.}
+\end{enumerate}
+\textbf{Problem 8.46.} \textit{Tìm hiểu các lớp phương trình giải được nhờ các phương trình}
+\begin{align}
+\tan 8x = m\\
+\tanh 8x = m\\
+\cot 8x = m\\
+\coth 8x = m
+\end{align}
+\textbf{Problem 8.47.} \textit{Mở rộng tất cả tính chất trong phần này cho trường $\mathbb{C}$}.\\
+\\
+\textbf{Problem 8.48.} \textit{Mở rộng tất cả tính chất trong phần này cho các trường khác.}\\
+\\
+\textbf{Problem 8.49.} \textit{Tìm hiểu các lớp phương trình (nói chung) giải được nhờ các lớp phương trình trong phần này.}
+\chapter{Phương trình bậc 9}
+Phần này chủ yếu đề cập tới phương trình bậc 9 với hệ số trên trường $\mathbb{R}$. Lưu ý rằng các tính chất trong phần này có thể mở rộng qua trường số $\mathbb{C}$
+\section{Phương trình bậc 9}
+\textbf{Definition 9.0.}
+\begin{enumerate}
+\item Phương trình bậc 9 \index{phương trình bậc 9} dạng tổng quát trên $\mathbb{R}$ là phương trình có dạng
+\begin{align}
+\sum\limits_{i = 0}^9 {{a_i}{x^i}}  = 0
+\end{align}
+với $a_i,i=0,1,\ldots,9$ là các số thực và $a_9 \ne 0$.
+\item Phương trình bậc 9 dạng chính tắc\index{phương trình bậc 9 dạng chính tắc} là phương trình có dạng
+\begin{align}
+{x^9} + A{x^8} + B{x^7} + C{x^6} + D{x^5} + E{x^4} + F{x^3} + G{x^2} + Hx + I = 0
+\end{align}
+\end{enumerate}
+\section{Khi biết 1 nghiệm}
+Sử dụng lược đồ Horner để phân tích và quay lại phần 8.
+\section{$9=3\times 3$}
+\textbf{Problem 9.1.} \textit{Giải phương trình sau và tìm hiểu các lớp phương trình nào giải được dựa vào phương trình đó}.
+\begin{align}
+{x^9} + A{x^6} + B{x^3} + C = 0
+\end{align}
+\textbf{Problem 9.2.} \textit{Giải phương trình sau và tìm hiểu các lớp phương trình nào giải được dựa vào phương trình đó.}
+\begin{align}
+{\left( {x{}^3 + a{x^2} + bx + c} \right)^3} + A{\left( {x{}^3 + a{x^2} + bx + c} \right)^2} + B\left( {x{}^3 + a{x^2} + bx + c} \right) + C = 0
+\end{align}
+\section{Quy về hệ phương trình đối xứng}
+\textbf{Problem 9.3.} \textit{Giải hệ phương trình sau}\index{hệ phương trình đối xứng}
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{ax = y{}^3 + b{y^2} + cy + d}\\
+{ay = x{}^3 + b{x^2} + cx + d}
+\end{array}} \right.
+\end{align}
+\textbf{Problem 9.4.} \textit{Tìm hiểu các lớp phương trình bậc 9 giải được nhờ hệ phương trình đối xứng trên.}\\
+\\
+\textbf{Problem 9.5.} \textit{Tìm hiểu các lớp phương trình giải được nhờ hệ phương trình đối xứng trên.}
+\section{Quy về hệ phương trình giải được}
+\textbf{Problem 9.6.} \textit{Tìm điều kiện của các hệ số để hệ phương trình sau đây ``giải được".}
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{ax = y{}^3 + b{y^2} + cy + d}\\
+{ey = x{}^3 + f{x^2} + gx + h}
+\end{array}} \right.
+\end{align}
+\textbf{Problem 9.6.} \textit{Tìm hiểu các lớp phương trình bậc 9 giải được nhờ hệ phương trình trên với điều kiện tìm được.}
+\section{$\prod\limits_{i = 1}^3 {\left( {{x^3} + a{x^2} + bx + {c_i}} \right)}  = g\left( {{x^3} + a{x^2} + bx} \right)$}
+Xét phương trình sau
+\begin{align}
+&\left( {x{}^3 + a{x^2} + bx + {c_1}} \right)\left( {x{}^3 + a{x^2} + bx + {c_2}} \right)\left( {x{}^3 + a{x^2} + bx + {c_3}} \right) \\
+&= g\left( {x{}^3 + a{x^2} + bx} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 3$.\\
+\\
+\textbf{Problem 9.7.} \textit{Giải phương trình trên.}\\
+\\
+\textbf{Problem 9.8.} \textit{Tìm hiểu các lớp phương trình giải được dựa vào phương trình trên.}
+\section{$\prod\limits_{i = 1}^3 {\left( {{x^2} + ax + \frac{b}{x} + {c_i}} \right)}  = g\left( {{x^2} + ax + \frac{b}{x}} \right)$}
+Xét phương trình sau
+\begin{align}
+&\left( {{x^2} + ax + \dfrac{b}{x} + {c_1}} \right)\left( {{x^2} + ax + \dfrac{b}{x} + {c_2}} \right)\left( {{x^2} + ax + \dfrac{b}{x} + {c_3}} \right) \\
+&= g\left( {{x^2} + ax + \dfrac{b}{x}} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 3$.\\
+\\
+\textbf{Problem 9.9.} \textit{Giải phương trình trên.}\\
+\\
+\textbf{Problem 9.10.} \textit{Tìm hiểu các lớp phương trình giải được dựa vào phương trình trên.}
+\section{$\prod\limits_{i = 1}^3 {\left( {x + \frac{a}{x} + \frac{b}{{{x^2}}} + {c_i}} \right)}  = g\left( {x + \frac{a}{x} + \frac{b}{{{x^2}}}} \right)$}
+Xét phương trình sau
+\begin{align}
+&\left( {x + \dfrac{a}{x} + \dfrac{b}{{{x^2}}} + {c_1}} \right)\left( {x + \dfrac{a}{x} + \dfrac{b}{{{x^2}}} + {c_2}} \right)\left( {x + \dfrac{a}{x} + \dfrac{b}{{{x^2}}} + {c_3}} \right) \\
+&= g\left( {x + \dfrac{a}{x} + \dfrac{b}{{{x^2}}}} \right)
+\end{align}
+trong đó $g \in \mathbb{R} \left[ x \right],\deg g \le 3$.\\
+\\
+\textbf{Problem 9.11.} \textit{Giải phương trình trên.}\\
+\\
+\textbf{Problem 9.12.} \textit{Tìm hiểu các lớp phương trình giải được dựa vào phương trình trên.}
+\section{Sử dụng phương trình bậc 2 có Delta bình phương}
+\textbf{Problem 9.13.} \textit{Sử dụng ý tưởng phương trình bậc 2 có Delta bình phương để tìm hiểu các lớp phương trình bậc 9 nào giải được.}\index{Delta bình phương}
+\section{$\cos 9x = m$}
+\textbf{Problem 9.14.} \textit{Biểu diễn $\cos 9x$ thành đa thức của $\cos x$ và giải phương trình bậc 9 vừa thu được.}\\
+\\
+\textbf{Problem 9.15.} \textit{Tìm các lớp phương trình giải được nhờ phương trình $\cos 9x = m$ và $\cosh 9x = m$.}
+\section{$\sin 9x = m$}
+\textbf{Problem 9.16.} \textit{Biểu diễn $\sin 9x$ thành đa thức của $\sin x$}\\
+\\
+\textbf{Problem 9.17.} \textit{Giải phương trình bậc 9 vừa thu được}\\
+\\
+\textbf{Problem 9.18.} \textit{Tìm các lớp phương trình giải được nhờ phương trình}
+\begin{align}
+\sin 9x = m\\
+\sinh 9x = m
+\end{align}
+\section{Thêm nghiệm để giải phương trình}
+\textbf{Problem 9.19.} \textit{Thêm một nghiệm để giải phương trình.}\\
+\\
+\textbf{Problem 9.20.} \textit{Thêm nhiều nghiệm để giải phương trình.}
+\section{Problems are coming\ldots}
+\textbf{Problem 9.21.} \textit{Khảo sát hàm đa thức bậc 9.}\\
+\\
+\textbf{Problem 9.22.} \textit{Biện luận số nghiệm của phương trình bậc 9 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 9.23.} \textit{Tìm điều kiện để phương trình bậc 9 có nghiệm bội.}\\
+\\
+\textbf{Problem 9.24.} \textit{Tìm điều kiện để phương trình bậc 9 có các nghiệm phân biệt.}\\
+\\
+\textbf{Problem 9.25.} \textit{Khảo sát nghiệm âm, nghiệm dương của phương trình bậc 9 thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 9.26.} \textit{Tìm điều kiện để phương trình bậc 9 có một số nghiệm tạo thành cấp số cộng.}\\
+\\
+\textbf{Problem 9.27.} \textit{Tìm điều kiện để phương trình bậc 9 có một số nghiệm tạo thành cấp số nhân.}\\
+\\
+\textbf{Problem 9.28.} \textit{Tìm điều kiện để phương trình bậc 9 có các nghiệm thực là}
+\begin{enumerate}
+\item \textit{Các số nguyên dương.}
+\item \textit{Các số nguyên.}
+\item \textit{Các số hữu tỷ.}
+\item \textit{Các số vô tỷ.}
+\end{enumerate}
+\textbf{Problem 9.29.} \textit{Tìm hiểu các lớp phương trình giải được nhờ các phương trình}
+\begin{align}
+\tan 9x &= m\\
+\tanh  9x &= m\\
+\cot 9x &= m\\
+\coth 9x &= m
+\end{align}
+\textbf{Problem 9.30.} \textit{Mở rộng tất cả tính chất trong phần này cho trường $\mathbb{C}$}.\\
+\\
+\textbf{Problem 9.31.} \textit{Mở rộng tất cả tính chất trong phần này cho các trường khác.}\\
+\\
+\textbf{Problem 9.32.} \textit{Tìm hiểu các lớp phương trình (nói chung) giải được nhờ các lớp phương trình trong phần này.}
+\chapter{Pre - Generalization}
+\section{Some interesting questions}
+Chúng ta nên dành một chút thời gian để giải lao, và chuẩn bị cho phần tổng quát sau cùng.
+
+Đây cũng là thời gian để chúng ta nhìn lướt lại bài viết một lần nữa và trả lời các câu hỏi sau.
+\begin{enumerate}
+\item Tại sao bài viết chỉ đề cập từ phương trình bậc 3 đến phương trình bậc 9?
+\item Tại sao cấu trúc của phần phương trình bậc 5 và bậc 7 tương đối ít hơn các phần khác.
+\item Định nghĩa các từ "giải được", "giải được nhờ"?
+\end{enumerate}
+\section{Personal answers}
+Tất cả các câu trả lời cho các câu hỏi trên đều nằm ở vấn đề cá nhân cả! Tác giả sẽ nêu ra lý do của mình ngay sau đây.
+\begin{enumerate}
+\item Với câu đầu tiên, có lẽ câu trả lời phần lớn nằm ở bậc của phương trình đa thức. Đối với các phương trình bậc nhất và phương trình bậc 2, cách giải đã quá quen thuộc và không có gì để nhắc lại. Cho nên bắt đầu từ số 3. Tại sao kết thúc ở số 9? 
+\begin{align}
+9=3 \times 3
+\end{align}
+
+Từ 3 đến 9 là quá đủ để minh họa cho tiêu đề sử dụng phương trình bậc 2 và phương trình bậc 3 để giải các lớp phương trình bậc cao. Hơn nữa, tập số 
+\begin{align}
+\left\{ {3,4,5,6,7,8,9} \right\}
+\end{align}
+bao gồm các loại số số chẵn, số lẻ, số nguyên tố, hợp số, số lũy thừa, và số 5 mang tính lịch sử! Còn tại sao cần các loại số này, mời các bạn xem phần tiếp theo.
+\item Tiếp theo, tại sao cấu trúc của phần phương trình bậc 5 và bậc 7 lại ít như vậy? - Lại là vấn đề cá nhân - Tác giả không có nhiều ý tưởng lắm cho các phần này, vì các phương trình có bậc là số nguyên tố khá phiền phức! Bạn hãy xem lướt lại các phần trước, và các phần 4, 6, 8, 9 có những mục nào mà các phần 5, 7 không có? Tại sao lại như vậy?
+\item Trong toàn bộ bài viết, Tác giả sử dụng các từ "giải được", "giải được nhờ" gần như xuyên suốt. Vậy định nghĩa chúng như thế nào? Câu trả lời là phụ thuộc vào mỗi người. Nếu bạn có nhiều ý tưởng, công cụ hơn thì bạn sẽ khai thác được nhiều hơn. Khi bắt đầu viết, Tác giả không nghĩ là sẽ hoàn thành bài viết này nhanh đến vậy. Nếu phải chăm chút từng phần, ghi rõ ra từng công thức, thì bài viết này là một mớ dày cộm chẳng ra hồn gì. Việc trình bày bài viết này theo các danh sách vấn đề là một ý hay. Tác giả nghĩ cách trình bày mới này có khá nhiều tác dụng. Ngoài giúp cô đọng, nó sẽ giúp người đọc phát triển vấn đề theo hướng họ muốn, họ có thể, chứ không ``thu nhỏ'' như các cách trình bày khác.
+\end{enumerate}
+\chapter{Generalization}
+Trước hết, chúng ta cần một số ký hiệu sau đây để thuận tiện cho các phần tiếp theo.
+\section{Notation}
+\textbf{Definition 11.1.} Gọi $So{l_\mathbb{R}}\left( {2,3} \right)$ là tập hợp tất cả các phương trình đa thức bậc cao giải được nhờ phương trình bậc 2 và phương trình bậc 3 trong toàn bộ bài viết này. Tức là
+\begin{align}
+So{l_\mathbb{R}}\left( {2,3} \right) = \left\{ {P\left( x \right) \in \mathbb{R} \left[ x \right]|P\left( x \right) \mbox{is solvabled due to equation degree 2 and 3}} \right\}
+\end{align}
+\textbf{Definition 11.2.} Với trường số phức $\mathbb{C}$, ta định nghĩa 
+\begin{align}
+So{l_\mathbb{C}}\left( {2,3} \right) = \left\{ {P\left( x \right) \in \mathbb{C} \left[ x \right]|P\left( x \right) \mbox{is solvabled due to equation degree 2 and 3}} \right\}
+\end{align}
+\textbf{Definition 11.3.} Tổng quát hơn, với $\mathbb{K}$ là một trường bất kỳ, ta định nghĩa
+\begin{align}
+So{l_\mathbb{K}}\left( {2,3} \right) = \left\{ {P\left( x \right) \in \mathbb{K} \left[ x \right]|P\left( x \right) \mbox{is solvabled due to equation degree 2 and 3}} \right\}
+\end{align}
+
+Nếu không quan tâm đến trường đang xét,(trong bài viết này đa số xét trường $\mathbb{R}$ và trường $\mathbb{C}$) ta có thể ký hiệu đơn giản là $Sol\left( {2,3} \right)$.\\
+\\
+\textbf{Definition 11.4.} Với trường hợp cụ thể, ta dùng ký hiệu
+\begin{align}
+\begin{array}{c}
+So{l_\mathbb{K}}{\left( {2,3} \right)_i} = {\rm{\{ }}P\left( x \right) \in \mathbb{K} \left[ x \right]|\deg P = i \mbox{ and }\\
+P\left( x \right) \mbox{is solvabled due to equation degree 2 and equation degree 3}{\rm{\} }}
+\end{array}
+\end{align}
+\textbf{Remark 11.5.} 
+\begin{enumerate}
+\item Với các ký hiệu trên, dễ thấy
+\begin{align}
+Sol\left( {2,3} \right) = \bigcup\limits_2^\infty  {Sol{{\left( {2,3} \right)}_i}} 
+\end{align}
+\item Đối tượng mà chúng ta nghiên cứu chủ yếu trong bài viết này là $So{l_\mathbb{R}}\left( {2,3} \right)$.
+\item Đối tượng mà chúng ta muốn mở rộng trong các phần\textit{Problems are coming} là $So{l_\mathbb{C}}\left( {2,3} \right)$.
+\item Với $i \le 4$ ta có
+\begin{align}
+So{l_\mathbb{R}}{\left( {2,3} \right)_i} \equiv {\mathbb{R}_i}\left[ x \right]
+\end{align}
+\item Với $i>5$ ta có
+\begin{align}
+So{l_\mathbb{R}}{\left( {2,3} \right)_i} \supset {\mathbb{R}_i}\left[ x \right]
+\end{align}
+điều đó là do Theorem nổi tiếng sau.
+\end{enumerate}
+\textbf{Đinh lý 11.2 (Abel-Ruffini)\index{Abel-Ruffini theorem}.} \textit{Phương trình bậc kể từ 5 trở đi không có cách giải tổng quát bằng căn thức.}\\
+
+Ngoài ra, ta dùng ký hiệu $So{l^*}\left( {2,3} \right)$ để chỉ tập hợp các phương trình (nói chung, phương trình vô tỷ, phương trình lượng giác,\ldots) giải được nhờ phương trình bậc 2 và phương trình bậc 3.
+\section{Bridge-connections}
+Trong phần này, chúng ta sẽ nhắc lại đồng thời 2 mục 
+\begin{enumerate}
+\item Giải phương trình khi biết một nghiệm của nó.
+\item Thêm nghiệm để giải phương trình
+\end{enumerate}
+
+Tại sao Tác giả muốn nhắc tới 2 điều đối lập đó trong cùng một lúc?
+
+Bạn hãy tưởng tượng như thế này.\\
+
+\textit{Có một tòa tháp ``cao vô hạn''. Tầng thứ $i$ đại diễn cho phương trình bậc $i$. Khi đó, chúng ta đã khám phá tất cả các ngóc ngách của các tầng $1, 2, 3, 4$ (các phương trình bậc nhất, bậc 2, bậc 3, bậc 4) đến phát chán. Nhưng từ tầng 5 trở lên, chúng ta chỉ thấy được một phần, nhờ vào Lý thuyết vành và Galois của Đại số cao cấp. Nếu bạn theo chuyên ngành toán bạn sẽ được học lý thuyết thú vị ở năm thứ 2 hoặc thứ 3 Đại học. Ngoài ``một phần'' vừa nêu, các phần khác thì chúng ta khó mà khám phá được.}
+
+\textit{Nhưng điều quan trọng ở đây mà Tác giả muốn dùng mô hình tòa tháp này để nói về 2 phương pháp vừa nêu. Nếu việc giải phương trình khi biết một nghiệm của nó tương tự như bạn đang đứng ở tầng thứ $n$ và nhảy xuống tầng $n-1$ thì việc thêm một nghiệm để giải phương trình tương tự như việc bạn đang ở tầng thứ $n$ và muốn leo lên tầng $n+1$ vậy}.\\
+
+Các công việc đó hoàn toàn đối lập với nhau, nhưng có chung một mục đích trong bài viết này.
+
+Mở rộng hơn, Tác giả có thể nhảy xuống cùng một lúc mấy tầng, và leo lên cùng một lúc mấy tầng. 
+
+Bằng phương pháp quy nạp, ta có thể trừu tượng hóa ``ý tưởng tòa tháp'' trên như sau.
+
+``Bước nhảy quy nạp'' sẽ trình bày cụ thể sau đây, dựa vào các ký hiệu ở phần trước\\
+\\
+\textbf{Lược đồ Horner.}\index{lược đồ Horner} Ý tưởng của nó dựa trên nhận xét sau đây
+\begin{align}
+P\left( x \right) \in Sol{\left( {2,3} \right)_{n - 1}} \Rightarrow \left[ {\left( {x - {x_0}} \right)P\left( x \right)} \right] \in Sol{\left( {2,3} \right)_n}
+\end{align}
+\textbf{Thêm nghiệm để giải phương trình.}\index{thêm nghiệm để giải phương trình} Ý tưởng của nó dựa trên nhận xét sau đây
+\begin{align}
+\exists m,\left[ {\left( {x - m} \right)P\left( x \right)} \right] \in Sol{\left( {2,3} \right)_{n + 1}} \Rightarrow P\left( x \right) \in Sol{\left( {2,3} \right)_n}
+\end{align}
+\section{Sử dụng phương trình bậc 2 có Delta dạng bình phương}
+Chúng ta đã sử dụng ý tưởng này rất nhiều lần trong các phần trước. Còn đối với trường hợp tổng quát thì sao?\\
+\\
+\textbf{Problem 11.3.} \textit{Tìm các lớp phương trình bậc cao giải được nhờ phương trình bậc 2 có Delta dạng bình phương.}\index{Delta bình phương}\\
+
+Đối với phương trình bậc $n$, chúng ta xét dạng biểu diễn sau
+\begin{align}
+A\left( x \right){P^2}\left( x \right) + B\left( x \right)P\left( x \right) + C\left( x \right) = 0
+\end{align}
+trong đó $P,A,B,C \in \mathbb{R} \left[ x \right]$.
+
+Chúng ta sẽ cần điều kiện sau đây về bậc của các đa thức trong biểu diễn trên.Tại sao?
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{\deg A + 2\deg P = n}\\
+{\deg B + \deg P \le n - 1}\\
+{\deg C \le \deg B + \deg P - 1}
+\end{array}} \right.
+\end{align}
+
+Theo như tiêu đề, điều mà chúng ta cần là 
+\begin{align}
+\Delta  = {B^2}\left( x \right) - 4A\left( x \right)C\left( x \right)
+\end{align}
+có dạng bình phương. Tức là
+\begin{align}
+\Delta  = {B^2}\left( x \right) - 4A\left( x \right)C\left( x \right) = \varepsilon {D^2}\left( x \right)
+\end{align}
+trong đó $\varepsilon  \in \left\{ { \pm 1} \right\}$.
+
+Xét 2 trường hợp sau theo $\varepsilon$.
+\begin{enumerate}
+\item \textbf{Trường hợp $\varepsilon  = 1$.} Chúng ta xét bài toán trên $\mathbb{R}$.
+\item \textbf{Trường hợp $\varepsilon  = -1$.} Chúng ta có thể xét bài toán trên $\mathbb{C}$.
+\end{enumerate}
+
+Tiếp tục, giả sử đã có Delta có dạng bình phương như vậy, việc giải phương trình trên quy về việc giải các phương trình
+\begin{align}
+P\left( x \right) = \dfrac{{ - B\left( x \right) \pm D\left( x \right)}}{{2A\left( x \right)}}
+\end{align}
+
+Điều quan trọng ở đây là khi nào thì phương trình trên giải được
+Gọi $d$ là bậc của phương trình 
+\begin{align}
+2A\left( x \right)P\left( x \right) =  - B\left( x \right) \pm D\left( x \right)
+\end{align}
+
+Nếu $d \le 4$ thì phương trình trên có thể giải được trong trường hợp tổng quát. Nếu $d>4$ thì muốn giải được phương trình trên bằng các công cụ trong bài viết này, chúng ta cần 
+\begin{align}
+\left[ {2A\left( x \right)P\left( x \right) + B\left( x \right) \pm D\left( x \right)} \right] \in Sol\left( {2,3} \right)
+\end{align}
+\section{$\cos nx = m$ và $\sin nx = m$ }
+Các phương trình lượng giác này sẽ giúp chúng ta tìm được khá nhiều lớp phương trình bậc cao giải được. Trước hết chúng ta nhắc lại một số công cụ cần thiết.\\
+\\
+\textbf{Definition 11.4 (Đa thức Chebyshev loại 1).}\index{đa thức Chebyshev loại 1} các đa thức được xác định như sau
+\begin{align}
+ \left\{ {\begin{array}{*{20}{c}}
+{{T_0}\left( x \right) = 1,{T_1}\left( x \right) = x}\\
+{{T_{n + 1}}\left( x \right) = 2x{T_n}\left( x \right) - {T_{n - 1}}\left( x \right)}
+\end{array}} \right.,\forall n > 1
+\end{align}
+\textbf{Definition 11.5 (Đa thức Chebyshev loại 2).}\index{đa thức Chebyshev loại 2} các đa thức được xác định như sau
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{{U_0}\left( x \right) = 0,{U_1}\left( x \right) = 1}\\
+{{U_{n + 1}}\left( x \right) = 2x{U_n}\left( x \right) - {U_{n - 1}}\left( x \right)}
+\end{array}} \right.,\forall n > 1
+\end{align}
+
+Ngoài 2 đa thức trên, chúng ta còn sử dụng các đa thức sau 
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{T_0^*\left( x \right) = 2,T_1^*\left( x \right) = x}\\
+{T_{n + 1}^*\left( x \right) = xT_n^*\left( x \right) - T_{n - 1}^*\left( x \right)}
+\end{array}} \right.,\forall n > 1
+\end{align}
+và 
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{U_0^*\left( x \right) = 1,U_1^*\left( x \right) = x}\\
+{U_{n + 1}^*\left( x \right) = xU_n^*\left( x \right) - U_{n - 1}^*\left( x \right)}
+\end{array}} \right.,\forall n > 1
+\end{align}
+
+Các đa thức này được xác định bởi các đẳng thức
+\begin{align}
+T_n^*\left( {x + \dfrac{1}{x}} \right) &= {x^n} + \dfrac{1}{{{x^n}}}\\
+U_n^*\left( {x + \dfrac{1}{x}} \right) &= \left( {{x^{n + 1}} - \dfrac{1}{{{x^{n + 1}}}}} \right)\left( {x - \dfrac{1}{x}} \right)
+\end{align}
+
+Ta cũng có mối quan hệ của các đa thức trên với đa thức Chebyshev.\index{đa thức Chebyshev}
+\begin{align}
+{T_n}\left( x \right) &= \dfrac{1}{2}T_n^*\left( {2x} \right)\\
+{U_n}\left( x \right) &= U_n^*\left( {2x} \right)
+\end{align}
+\textbf{Problem 11.6.} \textit{Chứng minh các công thức trên.}\\
+\\
+\textbf{Problem 11.7.} \textit{Sử dụng các công thức trên để tìm hiểu các lớp phương trình giải được.}\\
+
+Về tính tối ưu của đa thức Chebyshev chúng ta có Theorem sau\\
+\\
+\textbf{Theorem 11.8 (Chebyshev's theorem).}\index{Chebyshev's theorem} \textit{For fixed $n \ge 1$, the polynomial ${2^{ - n + 1}}{T_n}\left( x \right)$ is the unique monic nth - degree polynomial satisfying
+\begin{align}
+\mathop {\max }\limits_{ - 1 \le x \le 1} \left| {{2^{ - n + 1}}T\left( x \right)} \right| \le \mathop {\max }\limits_{ - 1 \le x \le 1} \left| {P\left( x \right)} \right|
+\end{align}
+for any other monic nth - degree polynomial $P\left( x \right)$}
+\section{Một số công thức lượng giác có liên quan}
+Sau đây là một số công thức lượng giác\index{công thức lượng giác} mà Tác giả sưu tầm được trong \cite{5}. Sau khi thấy nó, các bạn sẽ hiểu tại sao Tác giả lại liệt kê nó ở đây.\\
+\begin{align}
+\cos 4x &= 8{\cos ^4}x - 8{\cos ^2}x + 1\\
+\cos 5x &= 16{\cos ^5}x - 20{\cos ^3}x + 5\cos x\\
+\cos 6x &= 32{\cos ^6}x - 48{\cos ^4}x + 18{\cos ^2}x - 1\\
+\cos 7x &= 64{\cos ^7}x - 112{\cos ^5}x + 56{\cos ^3}x - 7\cos x\\
+{\cos ^4}x &= \dfrac{1}{8}\cos 4x + \dfrac{1}{2}\cos 2x + \dfrac{3}{8}\\
+{\cos ^5}x &= \dfrac{1}{{16}}\cos 5x + \dfrac{5}{{16}}\cos 2x + \dfrac{5}{8}\cos x\\
+{\cos ^6}x &= \dfrac{1}{{32}}\cos 6x + \dfrac{3}{{16}}\cos 4x + \dfrac{{15}}{{32}}\cos 2x + \dfrac{5}{{16}}\\
+{\sin ^4}x &= \dfrac{1}{8}\cos 4x - \dfrac{1}{2}\cos 2x + \dfrac{3}{8}\\
+{\sin ^5}x &= \dfrac{1}{{16}}\sin 5x - \dfrac{5}{{16}}\sin 3x + \dfrac{5}{8}\sin x\\
+{\sin ^6}x &=  - \dfrac{1}{{32}}\cos 6x + \dfrac{3}{{16}}\cos 4x - \dfrac{{15}}{{32}}\cos 2x + \dfrac{5}{{16}}
+\end{align}
+Tổng quát hơn, ta có các công thức sau
+\begin{align}
+{\cos ^{2n}}x &= \dfrac{1}{{{2^{2n - 1}}}}\sum\limits_{k = 0}^{n - 1} {\left( {\begin{array}{*{20}{c}}
+{2n}\\
+k
+\end{array}} \right)\cos 2\left( {n - k} \right)x}  + \dfrac{1}{{{2^{2n}}}}\left( {\begin{array}{*{20}{c}}
+{2n}\\
+n
+\end{array}} \right)\\
+{\cos ^{2n + 1}}x &= \dfrac{1}{{{2^{2n}}}}\sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}
+{2n + 1}\\
+k
+\end{array}} \right)\cos \left( {2n - 2k + 1} \right)x} \\
+{\sin ^{2n}}x &= \dfrac{{{{\left( { - 1} \right)}^n}}}{{{2^{2n - 1}}}}\sum\limits_{k = 0}^{n - 1} {{{\left( { - 1} \right)}^k}\left( {\begin{array}{*{20}{c}}
+{2n}\\
+k
+\end{array}} \right)\cos 2\left( {n - k} \right)x + \dfrac{1}{{{2^{2n}}}}} \left( {\begin{array}{*{20}{c}}
+{2n}\\
+n
+\end{array}} \right)\\
+{\sin ^{2n + 1}}x &= \dfrac{{{{\left( { - 1} \right)}^n}}}{{{2^{2n - 1}}}}\sum\limits_{k = 0}^n {{{\left( { - 1} \right)}^k}\left( {\begin{array}{*{20}{c}}
+{2n + 1}\\
+k
+\end{array}} \right)\sin \left( {2n - 2k + 1} \right)x + \dfrac{1}{{{2^{2n}}}}} \left( {\begin{array}{*{20}{c}}
+{2n}\\
+n
+\end{array}} \right)
+\end{align}
+\textbf{Remark 11.9.} Từ các công thức trên, bạn thấy được những phương trình nào? Hãy phát triển các ý tưởng đó.\\
+\\
+\textbf{Problem 11.10.} \textit{Từ các công thức lượng giác trên, hãy xây dựng các lớp phương trình đại số giải được.}\\
+\\
+\textbf{Problem 11.11.} \textit{Hãy nghiên cứu vấn đề tương tự cho các hàm $\tan x,\cot x$}\\
+\section{Các phương trình lượng giác có liên quan}
+Giải phương trình lượng giác\index{phương trình lượng giác}
+\begin{align}
+f\left( {nx} \right) = g\left( {mx} \right)
+\end{align}
+với 
+\begin{align}
+m,n{ \in \mathbb{N} ^*},f,g \in \left\{ {\sin ,cos,tan,cot} \right\}
+\end{align}
+\textbf{Problem 11.12.} \textit{Tìm các lớp phương trình bậc cao giải được nhờ các phương trình lượng giác trên.}\\
+\\
+\textbf{Problem 11.13.} \textit{Mở rộng các dạng phương trình lượng giác dạng tổng quát trên và tìm hiểu các lớp phương trình bậc cao giải được nhờ các phương trình lượng giác đó.}
+\section{Phân loại bậc cao dựa vào số bậc của nó}
+Công việc phân loại lúc nào cũng mang tính tương đối cả. Việc phân loại trong phần này cũng vậy. Để phân loại các sự kiện, chúng ta cần trả lời các câu hỏi
+\begin{enumerate}
+\item  Tiêu chuần phân loại là gì?
+\item  Phân loại như vậy sẽ được thuận lợi và khó khăn gì?
+\item  Các trường hợp nào đặc biệt?
+\end{enumerate}
+
+
+Sau đây, Tác giả sẽ phân loại các phương trình bậc cao dựa vào số bậc (tiêu chí của Tác giả) như sau.
+\begin{enumerate}
+\item Bậc phương trình là một số nguyên tố.
+\item Bậc phương trình là một hợp số.
+\item Bậc phương trình là một số chẵn.
+\item Bậc phương trình là một số lẻ.
+\item Bậc phương trình là lũy thừa của một số nguyên dương.
+\end{enumerate}
+
+Như vậy, Tác giả đã phân loại tất cả các số nguyên dương vào các loại tương ứng. Công việc thật đơn giản và dường như chẳng có ý nghĩa gì cả. Nhưng có đấy, Tác giả sẽ chỉ ra ngay sau đây tại sao cách phân loại trên hoạt động?\\
+\\
+\textsc{Phương trình bậc cao có bậc là một hợp số.}\index{phương trình bậc cao có bậc là một hợp số} 
+
+Đối với các phương trình này, ý tưởng đầu tiên mà ta nghĩ đến đó là hàm số hợp - sử dụng hàm số hợp để khai thác các lớp phương trình giải được. Cụ thể, với $f,g$ là các hàm đa thức với hệ số trên trường nào đó. Thì phương trình 
+\begin{align}
+g \circ f\left( x \right) = 0
+\end{align}
+sẽ giải được nhờ giải lần lượt các phương trình 
+\begin{align}
+g\left( x \right) = 0,f\left( x \right) = 0
+\end{align}
+
+Đó là bước hình thành ý tưởng, giờ hãy chú ý đến bậc của phương trình
+\begin{align}
+g \circ f\left( x \right) = 0
+\end{align}
+
+Phương trình này có bậc $\deg f\times \deg g$, là một hợp số.
+
+Tổng quát hơn, với phương trình bậc $n$, xét số nguyên dương $n$. Giả sử $n$ có phân tích ra thừa số nguyên tố có dạng
+\begin{align}
+n = \prod\limits_{i = 1}^k {p_i^{{a_i}}} 
+\end{align}
+trong đó ${p_i}$ là các số nguyên tố.
+
+Khi đó, ta có một lớp phương trình bậc $n$ giải được được xây dựng như sau.
+
+Gọi ${f_1},{f_2},\ldots,{f_m}$ là các hàm đa thức tùy ý mà tập hợp bậc của các hàm này trùng với tập 
+\begin{align}
+\underbrace {{p_1},\ldots,{p_1}}_{{a_1}'s},\underbrace {{p_2},\ldots,{p_2}}_{{a_2}'s},\ldots,\underbrace {{p_k},\ldots,{p_k}}_{{a_k}'s}
+\end{align}
+
+Khi đó xét phương trình 
+\begin{align}
+{f_{\sigma \left( 1 \right)}} \circ {f_{\sigma \left( 2 \right)}} \circ \ldots \circ {f_{\sigma \left( m \right)}} = 0
+\end{align}
+với $\sigma $ là hoán vị.
+
+Phương này giải được nhờ giải lần lượt các phương trình ${f_i}\left( x \right) = 0$.\\
+\\
+\textbf{Remark 11.14.} 
+\begin{enumerate}
+\item Với $n = {2^a}{3^b}$ ta có một lớp phương trình bậc $n$ giải được nhờ phương trình bậc 2 và phương trình bậc 3 theo đúng nghĩa tên bài viết.
+\item Các hàm ${f_i}$ ở trên, nếu có bậc không vượt quá 4 thì phương trình hàm hợp giải được mà không cần thêm điều kiện gì cả. Còn nếu 
+\begin{align}
+\exists {f_i}:\deg {f_i} \ge 5
+\end{align}
+chúng ta sẽ cần điều kiện 
+\begin{align}
+{f_i} \in Sol\left( {2,3} \right)
+\end{align}
+\end{enumerate}
+\vspace{0.5cm}
+\textsc{Phương trình bậc cao có bậc là một số nguyên tố.} \index{phương trình bậc cao có bậc là một số nguyên tố}
+
+Đối với các phương trình này, chúng ta đã mất hẳn một đặc ân lớn lao mà phương trình bậc hợp số mới có được. Cho nên, trong bài viết này, các phần phương trình có bậc nguyên tố sẽ có rất ít ý tưởng. Vai trò duy nhất của nó ở đây chỉ là làm ``gạch'' để xây dựng các lớp phương trình khác. Hy vọng các bạn sẽ tìm được các ý tưởng khác đặc biệt hơn dành cho loại phương trình này.\\
+\\
+\textsc{Phương trình bậc cao có bậc là một số chẵn.}\index{phương trình bậc cao có bậc là một số chẵn}
+
+Đầu tiên, số chẵn ngoài số 2 thì đương nhiên là hợp số, nên nó sẽ được thừa hưởng một số tính chất từ phần phương trình bậc hợp số. 
+
+Đặc biệt, với loại phương trình này, bạn sẽ không thể bỏ qua các lớp phương trình trùng phương, bội phương,.. nói chung là có số 2 để khai thác. Tuy nhiên, đối với các phương trình bậc chẵn, thì các ý tưởng sử dụng các phương trình 
+\begin{align}
+\cos 2kx &= m\\
+\cosh 2kx &= m\\
+\sin 2kx &= m\\
+\sinh 2kx &= m
+\end{align}
+lại trở thành phần con của ý tưởng phương trình trùng phương, bội phương.
+
+Cho nên, về việc sử dụng các phương trình lượng giác để khai thác thì phương trình bậc lẻ sẽ chiếm ưu thế.\\
+\\
+\textbf{Remark 11.15.} Còn ý tưởng sử dụng hệ phương trình để khai thác trong trường hợp này thì sao?\\
+\\
+\textsc{Phương trình bậc cao có bậc là một số lẻ.}\index{phương trình bậc cao có bậc là một số lẻ}
+
+Đối với số lẻ, thì bản thân nó đã chứa gần như toàn bộ các số nguyên tố rồi (chỉ trừ số 2) nên nó sẽ thiệt thòi hơn phương trình bậc chẵn ở nhiều ý tưởng. Tuy nhiên, như nhận xét ở phần trước, việc sử dụng phương trình lượng giác để khai thác lại chiếm nhiều ưu điểm đối với các loại phương trình có bậc lẻ này.\\
+\\
+\textsc{Phương trình bậc cao có bậc là một số lũy thừa.} \index{phương trình bậc cao có bậc là một số lũy thừa}
+
+Bậc là số lũy thừa $n = {m^k}$ thì hiển nhiên là một hợp số, nó sẽ thừa hưởng một số tính chất ở phần đầu tiên. Ngoài ra, có một số ý tưởng khá đặc biệt sẽ được trình ngay sau đây.
+\section{Sử dụng hệ phương trình hoán vị} 
+Xét hệ phương trình hoán vị\index{hệ phương trình hoán vị}
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{a{x_1} = {P_m}\left( {{x_2}} \right)}\\
+{a{x_2} = {P_m}\left( {{x_3}} \right)}\\
+{\ldots}\\
+{a{x_k} = {P_m}\left( {{x_1}} \right)}
+\end{array}} \right.
+\end{align}
+trong đó ${P_m}\left( x \right)$ là đa thức bậc $m$.\\
+
+Để giải được hệ trên, cần một số điều kiện nhất định.\\
+\\
+\textbf{Problem 11.16.} \textit{Hãy tìm hiểu ý tưởng sử dụng hệ phương trình hoán vị để khai thác lớp phương trình có bậc là số lũy thừa.}\\
+\\
+\textbf{Remark 11.17.} Với $n$ là số chính phương\index{số chính phương}, ta có ý tưởng sử dụng hệ phương trình đối xứng 2 biến để khai thác. Điều này đã được thực hiện cho phương trình bậc 4 và phương trình bậc 9.\\
+
+Nếu không sử dụng hệ phương trình hoán vị, tổng quát hơn, ta có thể sử dụng hệ phương trình $k$ ẩn số.
+\section{Sử dụng hệ phương trình $k$ ẩn}
+Xét hệ phương trình $k$ ẩn 
+\begin{align}
+\left\{ {\begin{array}{*{20}{c}}
+{a{x_1} = {P_1}\left( {{x_2}} \right)}\\
+{a{x_2} = {P_2}\left( {{x_3}} \right)}\\
+{\ldots}\\
+{a{x_k} = {P_k}\left( {{x_1}} \right)}
+\end{array}} \right.
+\end{align}
+trong đó ${P_i}$ là các đa thức bậc $m$.\\
+\\
+\textbf{Problem 11.18.} \textit{Tìm những trường hợp của các hệ số mà hệ trên giải được.}\\
+\\
+\textbf{Problem 11.19.} \textit{Tìm các lớp phương trình bậc cao giải được nhờ hệ trên trong các trường hợp vừa tìm được.}\\
+\\
+\textbf{Remark 11.20.} Vấn đề trên là một vấn đề khá thú vị, và chỉ các phương trình có bậc là số lũy thừa mới sở hữu tính chất tốt này. Phải không?
+\section{Sử dụng số phức}
+Sau đây là một ý tưởng khác, thay vì tìm nghiệm dưới dạng $x$, ta sẽ tìm nghiệm của phương trình dưới dạng $a + bi$.\index{số phức} Thay vào  phương trình, ta sẽ thu được một hệ phương trình 2 ẩn $a,b$. Hãy thử giải phương trình này trong trường hợp tổng quát. Nếu không giải được trong trường hợp tổng quát, hãy tìm điều kiện để hệ phương trình này giải được và tìm các lớp phương trình giải được tương ứng.\\
+\\
+\textbf{Remark 11.21.} 
+\begin{enumerate}
+\item Với $b=0$ nếu hệ có nghiệm, ta thu được nghiệm thực của phương trình.
+\item Nếu hệ phương trình có nghiệm $\left( {a,b} \right),b \ne 0$ thì ta thu được nghiệm phức của phương trình. Nhìn chung, cách làm này sẽ hiệu quả với phương trình bậc chẵn (vô nghiệm thực) hơn là đối với phương trình bậc lẻ. Vì phương trình bậc lẻ luôn có ít nhất một nghiệm thực nên ứng với trường hợp $b=0$ hệ của chúng ta trở thành phương trình ban đầu.
+\end{enumerate}
+\textbf{Problem 11.22.} \textit{Hãy phát triển ý tưởng sử dụng số phức để giải phương trình. Và tìm hiểu các lớp phương trình giải được nhờ phương pháp này.}
+\section{Problems are coming\ldots}
+\textbf{Problem 11.23.} \textit{Khảo sát hàm đa thức bậc n.}\\
+\\
+\textbf{Problem 11.24.} \textit{Biện luận số nghiệm của phương trình bậc n thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 11.25.} \textit{Tìm điều kiện để phương trình bậc n có nghiệm bội.}\\
+\\
+\textbf{Problem 11.26.} \textit{Tìm điều kiện để phương trình bậc n có các nghiệm phân biệt.}\\
+\\
+\textbf{Problem 11.27.} \textit{Khảo sát nghiệm âm, nghiệm dương của phương trình bậc n thông qua các hệ số của nó.}\\
+\\
+\textbf{Problem 11.28.} \textit{Tìm điều kiện để phương trình bậc n có một số nghiệm tạo thành cấp số cộng.}\\
+\\
+\textbf{Problem 11.29.} \textit{Tìm điều kiện để phương trình bậc n có một số nghiệm tạo thành cấp số nhân.}\\
+\\
+\textbf{Problem 11.30.} \textit{Tìm điều kiện để phương trình bậc n có các nghiệm thực là}
+\begin{enumerate}
+\item \textit{Các số nguyên dương.}
+\item \textit{Các số nguyên.}
+\item \textit{Các số hữu tỷ.}
+\item \textit{Các số vô tỷ.}
+\end{enumerate}
+\textbf{Problem 11.31.} \textit{Tìm hiểu các lớp phương trình giải được nhờ các phương trình}
+\begin{align}
+\tan nx &= m\\
+\tanh  nx &= m\\
+\cot nx &= m\\
+\coth nx &= m
+\end{align}
+\textbf{Problem 11.32.} \textit{Mở rộng tất cả tính chất trong phần này cho trường $\mathbb{C}$}.\\
+\\
+\textbf{Problem 11.33.} \textit{Mở rộng tất cả tính chất trong phần này cho các trường khác.}\\
+\\
+\textbf{Problem 11.34.} \textit{Tìm hiểu các lớp phương trình (nói chung) giải được nhờ các lớp phương trình trong phần này.}\\
+\\
+\textbf{Problem 11.35.} \textit{Giải phương trình dạng }
+\begin{align}
+a{P^2}\left( x \right) + b{Q^2}\left( x \right) + cP\left( x \right)Q\left( x \right) = 0
+\end{align}
+\textbf{Problem 11.36.} \textit{Giải phương trình dạng}
+\begin{align}
+a{P^3}\left( x \right) + b{P^2}\left( x \right)Q\left( x \right) + cP\left( x \right){Q^2}\left( x \right) + d{Q^3}\left( x \right) = 0
+\end{align}
+\textbf{Problem 11.37.} \textit{Một cách tổng quát Với $P{\left( x \right)_{solvable}} \in \mathbb{R} \left[ x \right]$ là một đa thức bất kỳ thuộc tập hợp tất cả các lớp phương trình bậc cao giải được trong bài viết này. Gọi các hệ số của đa thức đó lần lượt là ${a_n},{a_{n - 1}},\ldots,{a_0}$. Hãy giải phương trình}
+\begin{align}
+\sum\limits_{i = 0}^n {{a_i}{f^i}\left( x \right){g^{n - i}}\left( x \right) = 0} 
+\end{align}
+\textbf{Problem 11.38.} \textit{Sử dụng các đa thức nội suy\index{đa thức nội suy} của đa thức như Abel\index{đa thức nội suy Abel}, Taylor,\index{đa thức nội suy Taylor} Lagrange\index{đa thức nội suy Lagrange}, Taylor-Gontcharov\index{đa thức nội suy Taylor-Gontcharov}, Hermite\index{đa thức nội suy Hermite}, Newton\index{đa thức nội suy Newton} để nghiên cứu các lớp phương trình bậc cao giải được dựa vào các công thức đó.}
+\chapter{Một số kiến thức được sử dụng}
+Bài viết có sử dụng một số kiến thức sau.\\
+\\
+\textbf{Theorem 12.1 (Lược đồ Horner)\index{lược đồ Horner}.} \textit{Giả sử 
+\begin{align}
+f\left( x \right) = \sum\limits_0^n {{a_i}{x^i} \in A\left[ x \right]}
+\end{align}
+với $A$ là một trường, có nghiệm ${x_0}$ thì 
+\begin{align}
+f\left( x \right) = \left( {x - {x_0}} \right)\left( {\sum\limits_0^{n - 1} {{b_i}{x^i}} } \right)
+\end{align}
+trong đó}
+\begin{align}
+{b_{n - 1}} = {a_n},{b_k} = {x_0}{b_{k + 1}} + {a_{k + 1}},k = \overline {0,n - 1}
+\end{align}
+và dư số
+\begin{align}
+r = {x_0}{b_0} + {a_0}
+\end{align}
+\textbf{Theorem 12.2 (Về phân tích đa thức).}\index{phân tích đa thức} \textit{Mọi đa thức $f\left( x \right) \in \mathbb{R} \left[ x \right]$ có bậc $n$ và có hệ số chính ${a_n} \ne 0$ đều có thể phân tích (duy nhất) thành nhân tử
+\begin{align}
+f\left( x \right) = {a_n}\prod\limits_{i = 1}^m {\left( {x - {d_i}} \right)} \prod\limits_{k = 1}^s {\left( {{x^2} + {b_k}x + {c_k}} \right)} 
+\end{align}
+với}
+\begin{align}
+{d_i},{b_k},{c_k} \in \mathbb{R} ,2s + m = n,b_k^2 - 4{c_k} < 0,m,n{ \in \mathbb{N}^*}
+\end{align}
+\textbf{Theorem 12.3 (Biên của nghiệm).}\index{biên của nghiệm}
+\begin{enumerate}
+\item \textit{Mọi nghiệm ${x_0}$ của 
+\begin{align}
+P\left( x \right) = \sum\limits_0^n {{a_i}{x^i}} 
+\end{align}
+đều thỏa bất đẳng thức}
+\begin{align}
+\left| {{x_0}} \right| \le 1 + \dfrac{{\mathop {\max }\limits_{1 \le k \le n} \left| {{a_k}} \right|}}{{\left| {{a_n}} \right|}}
+\end{align}
+\item \textit{ Nếu ${a_m}$ là hệ số âm đầu tiên của $P\left( x \right)$ thì $1 + \sqrt[m]{{\dfrac{B}{{{a_n}}}}}$ là cận trên của các nghiệm dương của đa thức đã cho, trong đó $B$ là giá trị lớn nhất của modulo các hệ số âm.}
+\end{enumerate}
+\textbf{Theorem 12.4 (Quy tắc dấu Descartes).}\index{quy tắc dấu Descartes} \textit{Giả sử $N$ là số không điểm dương của đa thức 
+\begin{align}
+f\left( x \right) = \sum\limits_0^n {{a_i}{x^i}} 
+\end{align}
+và $W$ là số lần đổi dấu trong dãy các hệ số của nó. Khi đó ${\rm{W}} \ge N$ và ${\rm{W}} - N$ là một số chẵn.}\\
+\\
+\textbf{Problem 12.5.} \textit{Với các kiến thức trên, bạn có thể tìm được các lớp phương trình nào giải được?.}\\
+\\
+\textbf{Problem 12.6 (Final).} \textit{Mở rộng tập $Sol\left( {2,3} \right),So{l^*}\left( {2,3} \right)$.}\\
+\\
+\\
+\\
+\begin{center}
+\textsc{The End}
+\end{center}
+\newpage
+\printindex
+\newpage
+\begin{thebibliography}{9}
+\bibitem {1} Mathscope.org, \textit{Chuyên đề phương trình hệ phương trình}, 2012.
+\bibitem {2} Vũ Hữu Bình, \textit{Nâng cao và phát triển toán 9}, NXB Giáo Dục, 2006.
+\bibitem {3} Nguyễn Tài Chung, \textit{Chuyên khảo phương trình hàm}, NXB ĐHQG Hà Nội.
+\bibitem {4} Nguyễn Tài Chung, \textit{Chuyên khảo đa thức}, NXB ĐHQG Hà Nội.
+\bibitem {5} Trần Phương, \textit{Phương trình lượng giác}, NXB ĐHQG Hà Nội, 2010.
+\bibitem {6} Nguyễn Văn Mậu (chủ biên), Trần Nam Dũng, Đặng Huy Ruận, Nguyễn Đăng Phất, \textit{Phương trình bất phương trình và một số vấn đề liên quan, (tài liệu bồi dưỡng hè 2010)}, TP HCM, 8.2010.
+\bibitem {7} Nguyễn Văn Mậu, \textit{Đa thức đại số và phân thức hữu tỷ}, NXB Giáo dục, 2003.
+\bibitem {8} Đoàn Quỳnh (chủ biên), Doãn Minh Cường, Trần Nam Dũng, Đặng Hùng Thắng, \textit{Tài liệu chuyên toán đại số 10}, NXB Giáo dục Việt Nam.
+\bibitem {9} Hà Văn Chương, \textit{Tuyển chọn và giải hệ phương trình phương trình không mẫu mực}, NXB ĐHQG Hà Nội, 2011.
+\bibitem {10} Nguyễn Văn Mậu (chủ biên), Nguyễn Văn Ngọc, \textit{Chuyên đề đa thức đối xứng và áp dụng}, NXB Giáo dục Việt Nam, 2009.
+\bibitem {11} Victor V. Prasolov, \textit{Polynomial}, Springer.
+\bibitem {12} Răzvan Gelca, Titu Andreescu, \textit{Putnam and beyond}, Springer. 
+\end{thebibliography}
+
+\end{document}
