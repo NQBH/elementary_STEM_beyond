@@ -6,17 +6,16 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
-\usepackage{enumitem}
-\setlist{leftmargin=4mm}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
-\newtheorem{baitoan}{}%{Bài toán}
+\newtheorem{baitoan}{}
 \newtheorem{cauhoi}{Câu hỏi}
 \newtheorem{conjecture}{Conjecture}
 \newtheorem{corollary}{Corollary}
 \newtheorem{dangtoan}{Dạng toán}
 \newtheorem{definition}{Definition}
+\newtheorem{dinhluat}{Định luật}
 \newtheorem{dinhly}{Định lý}
 \newtheorem{dinhnghia}{Định nghĩa}
 \newtheorem{example}{Example}
@@ -40,30 +39,41 @@
 \DeclareRobustCommand{\divby}{%
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
+\def\labelitemii{$\circ$}
 
-\title{Problem: Root -- Bài Tập: Căn Thức}
-\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\title{Problem: Root $\sqrt{f(x)},\sqrt[3]{f(x)},\sqrt[n]{f(x)}$\\Bài Tập: Căn Thức $\sqrt{f(x)},\sqrt[3]{f(x)},\sqrt[n]{f(x)}$}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
 \date{\today}
 
 \begin{document}
 \maketitle
 \begin{abstract}
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
 	Latest version:
 	\begin{itemize}
-		\item \textit{Problem: Root -- Bài Tập: Căn Thức}.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/root/problem/NQBH_root_problem.pdf}.
-		\item \textit{Problem \& Solution: Root -- Bài Tập \& Lời Giải: Căn Thức}.\\{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/root/solution/NQBH_root_solution.pdf}.
+		\item {\it Problem: Root $\sqrt{f(x)},\sqrt[3]{f(x)},\sqrt[n]{f(x)}$ -- Bài Tập: Căn Thức $\sqrt{f(x)},\sqrt[3]{f(x)},\sqrt[n]{f(x)}$}.
+		
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/root/problem/NQBH_root_problem.pdf}.
+		
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/root/problem/NQBH_root_problem.tex}.
+		\item {\it Problem \& Solution: Root $\sqrt{f(x)},\sqrt[3]{f(x)},\sqrt[n]{f(x)}$ -- Bài Tập \& Lời Giải: Căn Thức $\sqrt{f(x)},\sqrt[3]{f(x)},\sqrt[n]{f(x)}$}.
+		
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/root/solution/NQBH_root_solution.pdf}.
+		
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/root/solution/NQBH_root_solution.tex}.
 	\end{itemize}
 \end{abstract}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
 
-\section{Căn Bậc 2 \& Số Vô Tỷ}
+\section{Square Root \& Irrationals -- Căn Bậc 2 \& Số Vô Tỷ}
 Ở Toán 7 (xem, e.g., \cite[\S5, pp. 27--29]{SGK_Toan_7_Canh_Dieu_tap_1}), ta đã biết dạng biểu diễn thập phân của số hữu tỷ là hữu hạn hoặc vô hạn tuần hoàn, dạng biểu diễn thập phân của số vô tỷ là vô hạn không tuần hoàn. Số hữu tỷ $a\in\mathbb{Q}$ nào cũng viết được dưới dạng $a = \dfrac{m}{n}$ với $m\in\mathbb{Z}$, $n\in\mathbb{N}^\star$.
 
 \noindent\cite[Chap. III, \S1, pp. 48--54]{SGK_Toan_9_Canh_Dieu_tap_1}: HD1. LT1. HD2. LT2. HD3. LT3. 1. 2. 3. 4. 5. 6. 7. 8. 9.
-
-\section{Square Root \& Irrationals -- Căn Bậc 2 \& Số Vô Tỷ}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?1--?3, pp. 4--5]
 	(a) Tìm các căn bậc 2 của $9,\frac{4}{9},0.25,2$. (b) Tìm căn bậc 2 số học của $49,64,81,1.21$. (c) Tìm căn bậc 2 của $49,64,81,1.21$.
