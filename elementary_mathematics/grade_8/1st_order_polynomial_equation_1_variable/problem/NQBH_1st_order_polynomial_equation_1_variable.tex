@@ -1,0 +1,748 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{menhde}{Mệnh đề}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+\def\labelitemii{$\circ$}
+
+\title{Problem: 1st-Order Polynomial Equation with 1 Variable $ax + b = 0$\\Bài Tập: Phương Trình Bậc Nhất 1 Ẩn $ax + b = 0$}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
+	Latest version:
+	\begin{itemize}
+		\item {\it Problem: 1st-Order Polynomial Equation with 1 Variable $ax + b = 0$ -- Bài Tập: Phương Trình Bậc Nhất 1 Ẩn $ax + b = 0$}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+		\item {\it Problem \& Solution: 1st-Order Polynomial Equation with 1 Variable $ax + b = 0$ -- Bài Tập \& Lời Giải: Phương Trình Bậc Nhất 1 Ẩn $ax + b = 0$}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+	\end{itemize}
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{1st-Order Polynomial Equations -- Phương Trình Bậc Nhất 1 Ẩn \& Cách Giải}
+
+\begin{dinhnghia}[Phương trình 1 ẩn]
+	1 phương trình với ẩn $x$ có dạng $A(x) = B(x)$, trong đó \emph{vế trái} $A(x)$ \& \emph{vế phải} $B(x)$ là 2 biểu thức của cùng 1 biến $x$. Nếu 2 vế của phương trình (ẩn $x$) nhận cùng 1 giá trị khi $x = a$ thì số $a$ được gọi là 1 \emph{nghiệm} của phương trình đó.
+\end{dinhnghia}
+Khi bài toán yêu cầu giải 1 phương trình, ta phải tìm tất cả các nghiệm của phương trình đó.
+
+\begin{dinhnghia}[Phương trình bậc nhất 1 ẩn]
+	Phương trình dạng $ax + b = 0$, với $a,b\in\mathbb{R}$, $a\ne0$, là 2 số đã cho, được gọi là \emph{phương trình bậc nhất 1 ẩn}.
+\end{dinhnghia}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_2}, Ví dụ 1, 1, p. 40]
+	Phương trình nào sau đây là phương trình bậc nhất 1 ẩn? (a) $2x - 5 = 0$. (b) $3x + 10 = 0$. (c) $7x = 0$. (d) $x^2 - 9 = 0$. (e) Nêu 2 ví dụ về phương trình bậc nhất ẩn $x$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Phương trình ở (a), (b), (c) là phương trình bậc nhất 1 ẩn. Phương trình ở (d) không là phương trình bậc nhất 1 ẩn, mà là phương trình bậc 2 với 1 ẩn.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_2}, Ví dụ 2, 2, p. 40]
+	Kiểm tra xem $x = 2$ \& $x = -3$ có là nghiệm của mỗi phương trình bậc nhất sau hay không. (a) $-3x + 6 = 0$. (b) $7x - 14 = 0$. (c) $x + 2 = 0$. (d) $5x + 15$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Thay $x = 2$ \& $x = -3$, có: $-3\cdot2 + 6 = 0$, $-3\cdot(-3) + 6 = -3\ne0$. Vậy $x = 2$ \& $x = -3$ lần lượt là nghiệm \& không là nghiệm của phương trình $-3x + 6 = 0$. (b) Thay $x = 2$ \& $x = -3$, có: $7\cdot2 - 14 = 0$, $7\cdot(-3) - 14 = -35\ne0$. Vậy $x = 2$ \& $x = -3$ lần lượt là nghiệm \& không là nghiệm của phương trình $7x - 14 = 0$. (c) Thay $x = 2$ \& $x = -3$, có: $2 + 2 = 4\ne0$, $-3 + 2 = -1\ne0$. Vậy cả $x = 2$ \& $x = -3$ không là nghiệm của phương trình $x + 2 = 0$. (d) Thay $x = 2$ \& $x = -3$, có: $5\cdot2 + 15 = 25\ne0$, $5\cdot(-3) + 15 = 0$. Vậy $x = 2$ \& $x = -3$ lần lượt không là nghiệm \& là nghiệm của phương trình $-3x + 6 = 0$.
+\end{proof}
+
+\subsection{Cách giải phương trình bậc nhất 1 ẩn}
+Tương tự như 1 đẳng thức số, đối với phương trình, ta cũng có:
+
+\begin{menhde}[Quy tắc chuyển vế]
+	Trong 1 phương trình, ta có thể chuyển 1 số hạng từ vế này sang vế kia \& đổi dấu số hạng đó.
+\end{menhde}
+
+\begin{menhde}[Quy tắc nhân]
+	Trong 1 phương trình, ta có thể nhân\emph{\texttt{/}} cả 2 vế với cùng 1 số khác $0$.
+\end{menhde}
+
+\begin{luuy}
+	Nhân cả 2 vế với $a$ cũng có nghĩa là chia cả 2 vế cho $\frac{1}{a}$, $\forall a\in\mathbb{R}$, $a\ne0$. Do đó quy tắc nhân còn có thể phát biểu cho phép chia.
+\end{luuy}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_2}, 6, p. 41]
+	Áp dụng quy tắc chuyển vế \& quy tắc nhân, giải phương trình: $5x - 30 = 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$5x - 30 = 0\Leftrightarrow5x = 30\Leftrightarrow x = \frac{30}{5} = 6$. Vậy phương trình có nghiệm $x = 6$, hay $S = \{6\}$.
+\end{proof}
+1 cách tổng quát, ta có:
+
+\begin{menhde}
+	 Phương trình $ax + b = 0$ (với $a\ne0$) được giải như sau: $ax + b = 0\Leftrightarrow ax = -b\Leftrightarrow x = -\frac{b}{a}$. Phương trình bậc nhất $ax + b = 0$, $a\ne0$, luôn có nghiệm duy nhất $x = -\frac{b}{a}$.
+\end{menhde}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_2}, Ví dụ 3, 3, p. 42]
+	Giải phương trình: (a) $-0.5x + 11 = 0$. (b) $\frac{2}{7}x - 4 = 0$. (c) $-6x - 15 = 0$. (d) $-\frac{9}{2}x + 21 = 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $-0.5x + 11 = 0\Leftrightarrow-0.5x = -11\Leftrightarrow x = \frac{-11}{-0.5} = 22$. Vậy phương trình có nghiệm $x = 22$. (b) $\frac{2}{7}x - 4 = 0\Leftrightarrow\frac{2}{7}x = 4\Leftrightarrow x = 4:\frac{2}{7} = 14$. Vậy phương trình có nghiệm $x = 14$. (c) $-6x - 15 = 0$. (d) $-\frac{9}{2}x + 21 = 0$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_Canh_Dieu_tap_2}, 7, Ví dụ 4, p. 42]
+	Giải phương trình: (a) $3x + 4 = x + 12$. (b) $2x - (2 + 5x) = 4(x + 3)$. (c) $2(x - 0.7) - 1.6 = 1.5 - (x + 1.2)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$3x + 4 = x + 12$. (b) $2x - (2 + 5x) = 4(x + 3)$. (c) $2(x - 0.7) - 1.6 = 1.5 - (x + 1.2)$.
+\end{proof}
+
+\begin{luuy}
+	Bằng cách tương tự, ta có thể giải được phương trình dạng: $ax + b = cx + d$, $a\ne c$.
+\end{luuy}
+
+\noindent``\fbox{\bf 1} Phương trình ẩn $x$ có dạng $A(x) = B(x)$ trong đó $A(x)$ \& $B(x)$ là 2 biểu thức của cùng 1 biến $x$. Giá trị $x = x_0$ làm cho 2 vế của phương trình nhận cùng 1 giá trị gọi là 1 \textit{nghiệm} của phương trình. 1 phương trình có thể có 1, 2, 3, $\ldots$ nghiệm, nhưng cũng có thể không có nghiệm nào hoặc có vô số nghiệm. Tập hợp tất cả các nghiệm của 1 phương trình gọi là \textit{tập nghiệm} của phương trình đó, thường ký hiệu là $S$. \fbox{\bf 2} 2 phương trình tương đương là 2 phương trình có cùng 1 tập nghiệm. 2 phương trình cùng tương đương với 1 phương trình thứ 3 thì tương đương với nhau. \fbox{\bf 3} Quy tắc chuyển vế \& quy tắc nhân: (a) Nếu ta chuyển 1 hạng tử từ vế này sang vế kia \& đổi dấu của nó thì được 1 phương trình tương đương với phương trình đó. (b) Nếu ta nhân (hay chia) cả 2 vế của 1 phương trình với cùng \textit{1 số khác $0$} thì được 1 phương trình tương đương với phương trình đã cho. \fbox{\bf 4} Phương trình bậc nhất 1 ẩn là phương trình dạng $ax + b = 0$. Các bước giải (đối với phương trình mà 2 vế là 2 biểu thức hữu tỷ, không chứa ẩn ở mẫu): \textit{Bước 1.} Khử mẫu thức. \textit{Bước 2.} Bỏ dấu ngoặc \& chuyển các hạng tử chứa ẩn sang 1 vế, các hằng số sang vế kia. \textit{Bước 3.} Thu gọn về dạng $ax + b = 0$ hay $ax = -b$. \fbox{\bf 5} Quy tắc chuyển vế chỉ là 1 hệ quả của tính chất sau: Nếu ta cộng cùng 1 \textit{đa thức của ẩn} vào 2 vế của 1 phương trình thì được 1 phương trình mới tương đương với phương trình đã cho. \fbox{\bf 6} Trường hợp phương trình thu gọn có hệ số của ẩn bằng $0$: \textit{Dạng 1}: $0x = 0$. Phương trình có vô số nghiệm, $x\in\mathbb{R}$ hay $S = \mathbb{R}$. \textit{Dạng 2}: $0x = c$, $c\ne 0$. Phương trình vô nghiệm, $S = \emptyset$.'' -- \cite[Chap. III, \S1, pp. 53--54]{Tuyen_Toan_8}
+
+\begin{baitoan}
+	Biện luận theo các tham số $a,b\in\mathbb{R}$ để giải phương trình bậc nhất 1 ẩn $ax + b = 0$ $(\star)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Xét các trường hợp sau:
+	\begin{itemize}
+		\item \textit{Trường hợp 1}: $a = 0$. Phương trình $ax + b = 0$ trở thành $0x + b = 0$ hay $b = 0$. Xét tiếp 2 trường hợp con:
+		\begin{itemize}
+			\item \textit{Trường hợp 1.1}: $b = 0$. Phương trình $ax + b = 0$ trở thành $0 = 0$ đúng với mọi $x\in\mathbb{R}$, nên phương trình ($\star$) có vô số nghiệm thực với tập nghiệm $S = \mathbb{R}$.
+			\item \textit{Trường hợp 1.2}: $b\ne0$. Phương trình $ax + b = 0$ trở thành $b = 0$, mâu thuẫn với $b\ne0$ nên phương trình ($\star$) vô nghiệm thực, i.e., $S = \emptyset$.
+		\end{itemize}
+		\item \textit{Trường hợp 2}: $a\ne0$. $ax + b = 0\Leftrightarrow ax = -b\Leftrightarrow x = -\frac{b}{a}$. Phương trình ($\star$) có 1 nghiệm duy nhất $x = -\frac{b}{a}$, i.e., $S = \left\{-\frac{b}{a}\right\}$.
+	\end{itemize}
+	Giải \& biện luận phương trình hoàn tất.
+\end{proof}
+
+\begin{baitoan}
+	Viết chương trình Pascal, Python, C\emph{\texttt{/}}C++ để giải phương trình bậc nhất 1 ẩn $ax + b$ với $a,b\in\mathbb{R}$ được nhập từ bàn phím.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 2., p. 5]
+	Thử lại \& cho biết các khẳng định sau có đúng không? (a) $x^3 + 3x = 2x^2 - 3x + 1\Leftrightarrow x = -1$; (b) $(z - 2)(z^2 + 1) = 2z + 5\Leftrightarrow z = 3$.
+\end{baitoan}
+Nhắc lại: 2 phương trình tương đương với nhau khi \& chỉ khi chúng có cùng tập nghiệm.
+
+\begin{proof}[Giải]
+	(a) Thay $x = -1$ vào phương trình thứ nhất: $(-1)^3 + 3(-1) = 2(-1)^2 - 3(-1) + 1\Leftrightarrow-4 = 6$, vô lý, suy ra 2 phương trình không tương đương. (b) Thay $z = 3$ vào phương trình thứ nhất: $(3 - 2)(3^2 + 1) = 2\cdot3 + 5\Leftrightarrow10 = 11$, vô lý, suy ra 2 phương trình không tương đương.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 4., pp. 5--6]
+	Trong 1 cửa hàng bán thực phẩm, Tâm thấy cô bán hàng dùng 1 chiếc cân đĩa. 1 bên đĩa cô đặt 1 quả cân $500$\emph{g}, bên đĩa kia, cô đặt 2 gói hàng như nhau \& 3 quả cân nhỏ, mỗi quả $50$\emph{g} thì cân thăng bằng. Nếu khối lượng mỗi gói hàng là $x$ \emph{g} thì điều đó có thể được mô tả bởi phương trình nào?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$500 = 2x + 3\cdot50\Leftrightarrow x = 175$ g.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 5., p. 6]
+	Chứng minh phương trình $2mx - 5 = -x + 6m - 2$ luôn luôn nhận $x = 3$ làm nghiệm, dù $m$ lấy bất cứ giá trị nào? Phương trình còn nghiệm nào khác $x = 3$ hay không?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Thay $x = 3$ vào phương trình, được: $2m3 - 5 = -3 + 6m - 2\Leftrightarrow6m - 5 = 6m - 5\Leftrightarrow0 = 0$ đúng $\forall m\in\mathbb{R}$. (b) Vì phương trình đã cho đúng $\forall m\in\mathbb{R}$ nên nói riêng, nó cũng đúng với $m = 0$. Khi $m = 0$, phương trình $2mx - 5 = -x + 6m - 2$ trở thành $-5 = -x - 2\Leftrightarrow x = 3$, nên $x = 3$ là nghiệm duy nhất của phương trình đã cho.
+\end{proof}
+
+\begin{luuy}
+	Phương trình bậc nhất 1 ẩn $ax + b = 0$, $\forall a,b\in\mathbb{R}$, $a\ne0$, có duy nhất 1 nghiệm $x = -\frac{b}{a}$.
+\end{luuy}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 6., p. 6]
+	Cho 2 phương trình $x^2 - 5x + 6 = 0$ (1); $x + (x - 2)(2x + 1) = 2$. (a) Chứng minh 2 phương trình có nghiệm chung là $x = 2$. (b) Chứng minh $x = 3$ là nghiệm của (1) nhưng không là nghiệm của (2). (c) 2 phương trình đã cho có tương đương với nhau không, vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 7., p. 6]
+	Tại sao có thể kết luận tập nghiệm của phương trình $\sqrt{x} + 1 = 2\sqrt{-x}$ là $\emptyset$?
+\end{baitoan}
+Nhắc lại, $\sqrt{x}$ xác định $\Leftrightarrow x\ge 0$.
+\begin{proof}[Giải]
+	ĐKXĐ: $x\ge 0\land-x\ge 0\Leftrightarrow x\ge 0\land x\le0\Leftrightarrow x = 0$. Thay $x = 0$ vào phương trình, được: $\sqrt{0} + 1 = 2\sqrt{-0}\Leftrightarrow 1 = 0$, vô lý, nên phương trình vô nghiệm.
+\end{proof}
+
+\begin{nhanxet}
+	1 phương trình đại số có chứa các biểu thức $\sqrt{x}$ \& $\sqrt{-x}$ chỉ có thể nhận $x = 0$ là nghiệm. Nếu $x = 0$ không là nghiệm của phương trình đó, thì phương trình đó vô nghiệm.
+\end{nhanxet}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 8., p. 6]
+	Chứng minh phương trình $x + |x| = 0$ nghiệm đúng với mọi $x\le0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 9., p. 6]
+	Cho phương trình $(m^2 + 5m + 4)x^2 = m + 4$, trong đó $m\in\mathbb{R}$. Chứng minh: (a) Khi $m = -4$, phương trình nghiệm đúng với mọi giá trị của ẩn. (b) Khi $m = -1$, phương trình vô nghiệm. (c) Khi $m = -2$ hoặc $m = -3$, phương trình cũng vô nghiệm. (d) Khi $m = 0$, phương trình nhận $x = \pm1$ là nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 12, p. 6]
+	Tìm giá trị của $m$ sao cho phương trình $2x + m = x - 1$ nhận $x = -2$ làm nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{SBT_Toan_8_tap_2}, 12, p. 6]
+	Tìm giá trị của $m$ sao cho phương trình $ax + m = bx + c$ nhận $x = x_0$ làm nghiệm với $a,b,c,x_0\in\mathbb{R}$ cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 23, p. 54]
+	Cho phương trình: $\frac{3(2x + 1)}{4} - \frac{5x + 3}{6} = \frac{2x - 1}{3} + \frac{m}{12}$, $m\in\mathbb{R}$. Tìm giá trị của $m$ để phương trình có nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 23, p. 55]
+	Giải \& biện luận phương trình sau với $m$ là hằng số:
+	\begin{align*}
+		\frac{m^2[(x + 2)^2 - (x - 2)^2]}{8} - 4x = (m - 1)^2 + 3(2m + 1).
+	\end{align*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Phương Trình Đưa Được Về Dạng $ax + b = 0$}
+Chỉ xét các phương trình $f(x) = g(x)$ mà \textit{2 vế của chúng là 2 biểu thức hữu tỷ của ẩn, không chứa ẩn ở mẫu} \& có thể đưa được về dạng $ax + b = 0$ hay $ax = -b$.
+
+\begin{baitoan}
+	Biện luận theo cách tham số $a,b,c,d\in\mathbb{R}$ cho trước để giải phương trình bậc nhất 1 ẩn $ax + b = cx + d$.
+\end{baitoan}
+
+\begin{baitoan}
+	Biện luận theo cách tham số $a,b,c,d,e,f,g,h,i,j\in\mathbb{R}$ cho trước để giải phương trình bậc nhất 1 ẩn:
+	\begin{align*}
+		\frac{ax + b}{c} + dx + e = \frac{fx + g}{h} + ix + j.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, Ví dụ 3, p. 11]
+	Giải phương trình $\frac{(3x - 1)(x + 2)}{3} - \frac{2x^2 + 1}{2} = \frac{11}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{SGK_Toan_8_tap_2}, Ví dụ 3, p. 11]
+	Giải phương trình $\frac{(ax + b)(cx + d)}{e} + \frac{fx^2 + gx + h}{i} = jx + k$ với $a,b,c,d,e,f,g,h,i,j,k\in\mathbb{R}$ thỏa $\frac{ac}{e} + \frac{f}{i} = 0$.
+\end{baitoan}
+
+\begin{nhanxet}
+	Điều kiện $\frac{ac}{e} + \frac{f}{i} = 0$ nhằm mục đích triệt tiêu hệ số của $x^2$ để quy phương trình đã cho về phương trình bậc nhất 1 ẩn.
+\end{nhanxet}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 21., p. 8]
+	Tìm điều kiện của $x$ để giá trị của mỗi phân thức sau được xác định: (a) $A = \frac{3x + 2}{2(x - 1) - 3(2x + 1)}$; (b) $B = \frac{0.5(x + 3) - 2}{1.2(x + 0.7) - 4(0.6x + 0.9)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 22., p. 8]
+	Giải phương trình: (a) $\frac{5(x - 1) + 2}{6} - \frac{7x - 1}{4} = \frac{2(2x + 1)}{7} - 5$; (b) $\frac{3(x - 3)}{4} + \frac{4x - 10.5}{10} = \frac{3(x + 1)}{5} + 6$; (c) $\frac{2(3x + 1) + 1}{4} - 5 = \frac{2(3x - 1)}{5} - \frac{3x + 2}{10}$; (d) $\frac{x + 1}{3} + \frac{3(2x + 1)}{4} = \frac{2x + 3(x + 1)}{6} + \frac{7 + 12x}{12}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 23., p. 8]
+	Tìm giá trị của $k$ sao cho: (a) Phương trình $(2x + 1)(9x + 2k) - 5(x + 2) = 40$ có nghiệm $x = 2$, $x = x_0\in\mathbb{R}$ cho trước. (b) Phương trình $2(2x + 1) + 18 = 3(x + 2)(2x + k)$ có nghiệm $x = 1$, $x = x_0\in\mathbb{R}$ cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 24., p. 8]
+	Tìm các giá trị của $x$ sao cho 2 biểu thức $A$ \& $B$ cho sau đây có giá trị bằng nhau: (a) $A = (x - 3)(x + 4) - 2(3x - 2)$, $B = (x - 4)^2$; (b) $A = (x + 2)(x - 2) + 3x^2$, $B = (2x + 1)^2 + 2x$; (c) $A = (x - 1)(x^2 + x + 1) - 2x$, $B = x(x - 1)(x + 1)$; (d) $A = (x + 1)^3 - (x - 2)^3$, $B = (3x - 1)(3x + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 25., p. 9]
+	Giải phương trình: (a) $\frac{2x}{3} + \frac{2x - 1}{6} = 4 - \frac{x}{3}$; (b) $\frac{x - 1}{2} + \frac{x - 1}{4} = 1 - \frac{2(x - 1)}{3}$; (c) $\frac{2 - x}{2001} - 1 = \frac{1 - x}{2002} - \frac{x}{2003}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 3.1., p. 9]
+	Cho 2 phương trình: $\frac{7x}{8} - 5(x - 9) = \frac{1}{6}(20x + 1.5)$ (1), $2(a - 1)x - a(x - 1) = 2a + 3$ (2). (a) Chứng minh phương trình (1) có nghiệm duy nhất, tìm nghiệm đó; (b) Giải phương trình (2) khi $a = 2$; (c) Tìm giá trị của $a$ để phương trình (2) có 1 nghiệm bằng $\frac{1}{3}$ nghiệm của phương trình (1).
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 3.2., p. 9]
+	Bằng cách đặt ẩn phụ, giải phương trình: (a) $\frac{6(16x + 3)}{7} - 8 = \frac{3(16x + 3)}{7} + 7$. Hint: Đặt $u = \frac{16x + 3}{7}$. (b) $(\sqrt{2} + 2)(x\sqrt{2} - 1) = 2x\sqrt{2} - \sqrt{2}$. Hint: Đặt $u = x\sqrt{2} - 1$. (c) $0.05\left(\frac{2x - 2}{2009} + \frac{2x}{2010} + \frac{2x + 2}{2011}\right) = 3.3 - \left(\frac{x - 1}{2009} + \frac{x}{2010} + \frac{x + 1}{2011}\right)$. Hint: Đặt $u = \frac{x - 1}{2009} + \frac{x}{2010} + \frac{x + 1}{2011}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Phương Trình Tích}
+
+\begin{baitoan}
+	Biện luận theo các tham số $a,b,c,d,e,f\in\mathbb{R}$ cho trước để giải phương trình: (a) $(ax + b)(cx + d) = 0$. (b) $(ax + b)(cx + d)(ex + f) = 0$.
+\end{baitoan}
+Tổng quát hơn:
+\begin{baitoan}[Phương trình tích các phương trình bậc nhất 1 ẩn]
+	Biện luận theo các tham số $a_i,b_i$, $i = 1,\ldots,n$ cho trước để giải phương trình: $\prod_{i=1}^n (a_ix + b_i) = (a_1x + b_1)(a_2x + b_2)\cdots(a_nx + b_n) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[Phương trình tích các phương trình bậc nhất 1 ẩn $x$ \& $y$]
+	Biện luận theo các tham số $a_i,b_i$, $i = 1,\ldots,n$, $c_j,d_j$, $j = 1,\ldots,m$, cho trước để giải phương trình: $\prod_{i=1}^n (a_ix + b_i)\prod_{j=1}^m (c_ix + d_i) = (a_1x + b_1)(a_2x + b_2)\cdots(a_nx + b_n)(c_1y + d_1)(c_2y + d_2)\cdots(c_my + d_m) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?1, p. 15]
+	Giải phương trình $(x^2 - 1) + (x + 1)(x - 2) = 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$(x^2 - 1) + (x + 1)(x - 2) = 0\Leftrightarrow(x - 1)(x + 1) + (x + 1)(x - 2) = 0\Leftrightarrow(x + 1)(x - 1 + x - 2) = 0\Leftrightarrow(x + 1)(2x - 3) = 0\Leftrightarrow x = -1\lor x = \frac{3}{2}$. Vậy $S = \left\{-1,\frac{3}{2}\right\}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, Ví dụ 2, p. 16]
+	Giải phương trình $(x + 1)(x + 4) = (2 - x)(2 + x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?3, p. 16]
+	Giải phương trình $(x - 1)(x^2 + 3x - 2) - (x^3 - 1) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, Ví dụ 3, p. 16]
+	Giải phương trình $2x^3 = x^2 + 2x - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?4, p. 17]
+	Giải phương trình $(x^3 + x^2) + (x^2 + x) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 21., p. 17]
+	Giải phương trình: (a) $(3x - 2)(4x + 5) = 0$; (b) $(2.3x - 6.9)(0.1x + 2) = 0$; (c) $(4x + 2)(x^2 + 1) = 0$; (d) $(2x + 7)(x - 5)(5x + 1) = 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $(3x - 2)(4x + 5) = 0\Leftrightarrow3x - 2 = 0\lor4x + 5 = 0\Leftrightarrow x = \frac{2}{3}\lor x = -\frac{5}{4}$. Vậy $S = \left\{\frac{2}{3},-\frac{5}{4}\right\}$. (b) $(2.3x - 6.9)(0.1x + 2) = 0\Leftrightarrow 2.3x - 6.9 = 0\lor0.1x + 2 = 0\Leftrightarrow x = \frac{6.9}{2.3} = 3\lor x = -\frac{2}{0.1} = -20$. (c) $(4x + 2)(x^2 + 1) = 0\Leftrightarrow4x + 2 = 0\lor x^2 + 1\Leftrightarrow x = -\frac{1}{2}$ ($x^2 + 1 = 0$ vô nghiệm vì $x^2\ge0$, $\forall x\in\mathbb{R}$, nên $x^2 + 1\ge1 > 0$, $\forall x\in\mathbb{R}$). Vậy $S = \left\{-\frac{1}{2}\right\}$. (d) $(2x + 7)(x - 5)(5x + 1) = 0\Leftrightarrow2x + 7 = 0\lor x - 5 = 0\lor5x + 1 = 0\Leftrightarrow x = -\frac{7}{2}\lor x = 5\lor x = -\frac{1}{5}$. Vậy $S = \left\{-\frac{7}{2},5,-\frac{1}{5}\right\}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 22., p. 17]
+	Bằng cách phân tích vế trái thành nhân tử, giải các phương trình sau: (a) $2x(x - 3) + 5(x - 3) = 0$; (b) $(x^2 - 4) + (x - 2)(3 - 2x) = 0$; (c) $x^3 - 3x^2 + 3x - 1 = 0$; (d) $x(2x - 7) - 4x + 14 = 0$; (e) $(2x - 5)^2 - (x + 2)^2 = 0$; (f) $x^2 - x - (3x - 3) = 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $2x(x - 3) + 5(x - 3) = 0\Leftrightarrow(x - 3)(2x + 5) = 0\Leftrightarrow x - 3 = 0\lor2x + 5 = 0\Leftrightarrow x = 3\lor x = -\frac{5}{2}$. Vậy $S = \left\{3,-\frac{5}{2}\right\}$. (b) $(x^2 - 4) + (x - 2)(3 - 2x) = 0\Leftrightarrow(x - 2)(x + 2) + (x - 2)(3 - 2x) = 0\Leftrightarrow(x - 2)(x + 2 + 3 - 2x) = 0\Leftrightarrow(x - 2)(5 - x) = 0\Leftrightarrow x = 2\lor x = 5$. Vậy $S = \{2,5\}$. (c) $x^3 - 3x^2 + 3x - 1 = 0\Leftrightarrow(x - 1)^3 = 0\Leftrightarrow x = 1$. Vậy $S = \{1\}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 23., p. 17]
+	Giải phương trình: (a) $x(2x - 9) = 3x(x - 5)$; (b) $0.5x(x - 3) = (x - 3)(1.5x - 1)$; (c) $3x - 15 = 2x(x - 5)$; (d) $\frac{3}{7}x - 1 = \frac{1}{7}x(3x - 7)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 24., p. 17]
+	Giải phương trình: (a) $(x^2 - 2x + 1) - 4 = 0$; (b) $x^2 - x = -2x + 2$; (c) $4x^2 + 4x + 1 = x^2$; (d) $x^2 - 5x + 6 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 25., p. 17]
+	Giải phương trình: (a) $2x^3 + 6x^2 = x^2 + 3x$; (b) $(3x - 1)(x^2 + 2) = (3x - 1)(7x - 10)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 26., pp. 9--10]
+	Giải phương trình: (a) $(4x - 10)(24 + 5x) = 0$; (b) $(3.5 - 7x)(0.1x + 2.3) = 0$; (c) $(3x - 2)\left(\frac{2(x + 3)}{7} - \frac{4x - 3}{5}\right) = 0$; (b) $(3.3 - 11x)\left(\frac{7x + 2}{5} + \frac{2(1 - 3x)}{3}\right) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 27., p. 10]
+	Giải phương trình: (a) $(\sqrt{3} - x\sqrt{5})(2x\sqrt{2} + 1) = 0$; (b) $(2x - \sqrt{7})(x\sqrt{10} + 3) = 0$; (c) $(2 - 3x\sqrt{5})(2.5x + \sqrt{2}) = 0$; (d) $(\sqrt{13} + 5x)(3.4 - 4x\sqrt{17}) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 28., p. 10]
+	Giải phương trình: (a) $(x - 1)(5x + 3) = (3x - 8)(x - 1)$; (b) $3x(25x + 15) - 35(5x + 3) = 0$; (c) $(2 - 3x)(x + 11) = (3x - 2)(2 - 5x)$; (d) $(2x^2 + 1)(4x - 3) = (2x^2 + 1)(x - 12)$; (e) $(2x - 1)^2 + (2 - x)(2x - 1) = 0$; (f) $(x + 2)(3 - 4x) = x^2 + 4x + 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 29., p. 10]
+	Giải phương trình: (a) $(x - 1)(x^2 + 5x - 2) - (x^3 - 1) = 0$; (b) $x^2 + (x + 2)(11x - 7) = 4$; (c) $x^3 + 1 = x(x + 1)$; (d) $x^3 + x^2 + x + 1 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 30., p. 10]
+	Giải các phương trình bậc 2 sau bằng cách đưa về dạng phương trình tích: (a) $x^2 - 3x + 2 = 0$; (b) $-x^2 + 5x - 6 = 0$; (c) $4x^2 - 12x + 5 = 0$; (d) $2x^2 + 5x + 3 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 31., p. 10]
+	Giải các phương trình sau bằng cách đưa về dạng phương trình tích: (a) $(x - \sqrt{2}) + 3(x^2 - 2) = 0$; (b) $x^2 - 5 = (2x - \sqrt{5})(x + \sqrt{5})$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 32., p. 10]
+	Cho phương trình $(3x + 2k - 5)(x - 3k + 1) = 0$, trong đó $k\in\mathbb{R}$. (a) Tìm các giá trị của $k$ sao cho 1 trong các nghiệm của phương trình là $x = 1$. (b) Với mỗi giá trị của $k$ tìm được ở câu (a), giải phương trình đã cho.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 33., p. 11]
+	Biết $x = -2$ là 1 trong các nghiệm của phương trình $x^3 + ax^2 - 4x - 4 = 0$. (a) Xác định giá trị của $a$. (b) Với $a$ vừa tìm được ở (a) tìm các nghiệm còn lại của phương trình bằng cách đưa phương trình đã cho về dạng phương trình tích.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 34., p. 11]
+	Cho biểu thức 2 biến $f(x,y) = (2x - 3y + 7)(3x + 2y - 1)$. (a) Tìm các giá trị của $y$ sao cho phương trình (ẩn $x$) $f(x,y) = 0$, nhận $x = -3$ làm nghiệm. (b) Tìm các giá trị của $x$ sao cho phương trình (ẩn $y$) $f(x,y) = 0$ nhận $y = 2$ làm nghiệm.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Phương Trình Chứa Ẩn Ở Mẫu}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?1, Ví dụ 1, pp. 19--20]
+	Giải phương trình: (a) $x + \frac{1}{x - 1} = 1 + \frac{1}{x - 1}$; (b) $\frac{2x + 1}{x - 2} = 1$; (c) $\frac{2}{x - 1} = 1 + \frac{1}{x + 2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?2, p. 20]
+	Giải phương trình: (a) $\frac{x}{x - 1} = \frac{x + 4}{x + 1}$; (b) $\frac{3}{x - 2} = \frac{2x - 1}{x - 2} - x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, Ví dụ 2, p. 20]
+	Giải phương trình: $\frac{x + 2}{x} = \frac{2x + 3}{2(x - 2)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, Ví dụ 3, p. 21]
+	Giải phương trình: $\frac{x}{2(x - 3)} + \frac{x}{2x + 2} = \frac{2x}{(x + 1)(x - 3)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 27., p. 21]
+	Giải phương trình: (a) $\frac{2x - 5}{x + 5} = 3$; (b) $\frac{x^2 - 6}{x} = x + \frac{3}{2}$; (c) $\frac{(x^2 + 2x) - (3x + 6)}{x - 3} = 0$; (d) $\frac{5}{3x + 2} = 2x - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 28., p. 21]
+	Giải phương trình: (a) $\frac{2x - 1}{x - 1} + 1 = \frac{1}{x - 1}$; (b) $\frac{5x}{2x + 2} + 1 = -\frac{6}{x + 1}$; (c) $x + \frac{1}{x} = x^2 + \frac{1}{x^2}$; (d) $\frac{x + 3}{x + 1} + \frac{x - 2}{x} = 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 30., p. 22]
+	Giải phương trình: (a) $\frac{1}{x - 2} + 3 = \frac{x - 3}{2 - x}$; (b) $2x - \frac{2x^2}{x + 3} = \frac{4x}{x + 3} + \frac{2}{7}$; (c) $\frac{x + 1}{x - 1} - \frac{x - 1}{x + 1} = \frac{4}{x^2 - 1}$; (d) $\frac{3x - 2}{x + 7} = \frac{6x + 1}{2x - 3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 31., p. 22]
+	Giải phương trình: (a) $\frac{1}{x - 1} - \frac{3x^2}{x^3 - 1} = \frac{2x}{x^2 + x + 1}$; (b) $\frac{3}{(x - 1)(x - 2)} + \frac{2}{(x - 3)(x - 1)} = \frac{1}{(x - 2)(x - 3)}$; (c) $1 + \frac{1}{x + 2} = \frac{12}{8 + x^3}$; (d) $\frac{13}{(x - 3)(2x + 7)} + \frac{1}{2x + 7} = \frac{6}{(x - 3)(x + 3)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 32., p. 22]
+	Giải phương trình: (a) $\frac{1}{x} + 2 = \left(\frac{1}{x} + 2\right)(x^2 + 1)$; (b) $\left(x + 1 + \frac{1}{x}\right)^2 = \left(x - 1 - \frac{1}{x}\right)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 33., p. 22]
+	Tìm các giá trị của $a\in\mathbb{R}$ sao cho mỗi biểu thức sau có giá trị bằng $2$: (a) $\frac{3a - 1}{3a + 1} + \frac{a - 3}{a + 3}$; (b) $\frac{10}{3} - \frac{3a - 1}{4a + 12} - \frac{7a + 2}{6a + 18}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 35., p. 11]
+	\emph{Đ\texttt{/}S?} (a) 2 phương trình tương đương với nhau thì phải có cùng ĐKXĐ. (b) 2 phương trình có cùng ĐKXĐ có thể không tương đương với nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 37., pp. 11--12]
+	\emph{Đ\texttt{/}S?} (a) Phương trình $\frac{4x - 8 + (4 - 2x)}{x^2 + 1} = 0$ chỉ có 1 nghiệm là $x = 2$. (b) Phương trình $\frac{(x + 2)(2x - 1) - x - 2}{x^2 - x + 1} = 0$ có tập nghiệm là $S = \{-2;1\}$. (c) Phương trình $\frac{x^2 + 2x + 1}{x + 1} = 0$ có nghiệm là $x = -1$. (d) Phương trình $\frac{x^2(x - 3)}{x} = 0$ có tập nghiệm là $S = \{0;3\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 38., p. 12]
+	Giải phương trình: (a) $\frac{1 - x}{x + 1} + 3 = \frac{2x + 3}{x + 1}$; (b) $\frac{(x + 2)^2}{2x - 3} - 1 = \frac{x^2 + 10}{2x - 3}$; (c) $\frac{5x - 2}{2 - 2x} + \frac{2x - 1}{2} = 1 - \frac{x^2 + x - 3}{1 - x}$; (d) $\frac{5 - 2x}{3} + \frac{(x - 1)(x + 1)}{3x - 1} = \frac{(x + 2)(1 - 3x)}{9x - 3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 39., p. 12]
+	(a) Tìm $x$ sao cho giá trị của biểu thức $\frac{2x^2 - 3x - 2}{x^2 - 4}$ bằng $2$. (b) Tìm $x$ sao cho giá trị của 2 biểu thức $\frac{6x - 1}{3x + 2}$ \& $\frac{2x + 5}{x - 3}$ bằng nhau. (c) Tìm $y$ sao cho giá trị của 2 biểu thức $\frac{y + 5}{y - 1} - \frac{y + 1}{y - 3}$ \& $\frac{-8}{(y - 1)(y - 3)}$ bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 40., p. 12]
+	Giải phương trình: (a) $\frac{1 - 6x}{x - 2} + \frac{9x + 4}{x + 2} = \frac{x(3x - 2) + 1}{x^2 - 4}$; (b) $1 + \frac{x}{3 - x} = \frac{5x}{(x + 2)(3 - x)} + \frac{2}{x + 2}$; (c) $\frac{2}{x - 1} + \frac{2x + 3}{x^2 + x + 1} = \frac{(2x - 1)(2x + 1)}{x^3 - 1}$; (d) $\frac{x^3 - (x - 1)^3}{(4x + 3)(x - 5)} = \frac{7x - 1}{4x + 3} - \frac{x}{x - 5}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 41., p. 13]
+	Giải phương trình: (a) $\frac{2x + 1}{x - 1} = \frac{5(x - 1)}{x + 1}$; (b) $\frac{x - 3}{x - 2} + \frac{x - 2}{x - 4} = - 1$; (c) $\frac{1}{x - 1} + \frac{2x^2 - 5}{x^3 - 1} = \frac{4}{x^2 + x + 1}$; (d) $\frac{13}{(x - 3)(2x + 7)} + \frac{1}{2x + 7} = \frac{6}{x^2 - 9}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 42., p. 13]
+	Cho phương trình ẩn $x$: $\frac{x + a}{a - x} + \frac{x - a}{a + x} = \frac{a(3a + 1)}{a^2 - x^2}$. (a) Giải phương trình với $a = -3$; (b) Giải phương trình với $a = 1$; (c) Giải phương trình với $a = 0$; (d) Tìm các giá trị của $a$ sao cho phương trình nhận $x = \frac{1}{2}$ làm nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 5.1., p. 13]
+	Giải các phương trình:
+	\begin{align*}
+		\frac{2}{x + \dfrac{1}{1 + \frac{x + 1}{x - 2}}} = \frac{6}{3x - 1},\ \frac{\frac{x + 1}{x - 1} - \frac{x - 1}{x + 1}}{1 + \frac{x + 1}{x - 1}} = \frac{x - 1}{2(x + 1)},\ \frac{5}{x} + \frac{4}{x + 1} = \frac{3}{x + 2} + \frac{2}{x + 3}.
+	\end{align*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Giải Bài Toán Bằng Cách Lập Phương Trình}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 34., p. 25]
+	Mẫu số của 1 phân số lớn hơn tử số của nó là $3$ đơn vị. Nếu tăng cả tử \& mẫu của nó thêm $2$ đơn vị thì được phân số mới bằng $\frac{1}{2}$. Tìm phân số ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 35., p. 25]
+	Học kỳ 1, số học sinh giỏi của lớp 8A bằng $\frac{1}{8}$ số học sinh cả lớp. Sang học kỳ 2, có thêm $3$ bạn phấn đấu trở thành học sinh giỏi nữa, do đó số học sinh giỏi bằng $20$\% số học sinh cả lớp. Hỏi lớp 8A có bao nhiêu học sinh?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 36., p. 26]
+	Thời thơ ấu của Diophantine chiếm $\frac{1}{6}$. $\frac{1}{12}$ cuộc đời tiếp theo là thời thanh niên sôi nổi. Thêm $\frac{1}{7}$ cuộc đời nữa ông sống độc thân. Sau khi lập gia đình được $5$ năm thì sinh 1 con trai. Nhưng số mệnh chỉ cho con sống bằng nửa đời cha. Ông đã từ trần $4$ năm sau khi con mất. Diophantine sống bao nhiêu tuổi, tính cho ra?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, p. 27]
+	1 xe máy khởi hành từ Hà Nội đi Nam Định với vận tốc $35$\emph{km\texttt{/}h}. Sau đó $24$ phút, trên cùng tuyến đường đó, 1 ôtô xuất phát từ Nam Định đi Hà Nội với vận tốc $45$\emph{km\texttt{/}h}. Biết quãng đường Nam Định -- Hà Nội dài $90$\emph{km}. Sau bao lâu, kể từ khi xe máy khởi hành, 2 xe gặp nhau?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, p. 28]
+	1 phân xưởng may lập kế hoạch may 1 lô hàng, theo đó mỗi ngày phân xưởng phải may xong $90$ áo. Nhưng nhờ cải tiến kỹ thuật, phân xưởng đã may được $120$ áo mỗi ngày. Do đó, phân xưởng không những đã hoàn thành kế hoạch trước thời hạn $9$ ngày mà còn may thêm được $60$ áo. Hỏi theo kế hoạch, phân xưởng phải may bao nhiêu áo?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 37., p. 30]
+	Lúc 6:00, 1 xe máy khởi hành từ A để đến B. Sau đó $1$ giờ, 1 ôtô cũng xuất phát từ A đến B với vận tốc trung bình lớn hơn vận tốc trung bình của xe máy $20$\emph{km\texttt{/}h}. Cả 2 xe đến B đồng thời vào lúc 9:30 cùng ngày. Tính độ dài quãng đường AB \& vận tốc trung bình của xe máy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 38., p. 30]
+	Điểm kiểm tra Toán của 1 tổ học tập được cho trong bảng sau:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			Điểm số $x$ & 4 & 5 & 7 & 8 & 9 &  \\
+			\hline
+			Tần số $n$ & 1 & $\star$ & 2 & 3 & $\star$ & $N = 10$ \\
+			\hline
+		\end{tabular}
+	\end{table}
+	Biết điểm trung bình của cả tổ là $6.6$. Điền các giá trị thích hợp vào 2 dấu $\star$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 39., p. 30]
+	Lan mua 2 loại hàng \& phải trả tổng cộng $120$ nghìn đồng, trong đó đã tính cả $10$ nghìn đồng là thuế giá trị gia tăng (VAT)\footnote{``Thuế VAT là thuế mà người mua hàng phải trả, người bán hàng thu \& nộp cho Nhà nước. Giả sử thuế VAT đối với mặt hàng A được quy định là $10$\%. Khi đó nếu giá bán của A là $a$ đồng thì kể cả thuế VAT, người mua mặt hàng này phải trả tổng cộng $a + 10\%a$ đồng.}. Biết thuế VAT đối với loại hàng thứ nhất là $10$\%; thuế VAT đối với loại hàng thứ 2 là $8$\%. Hỏi nếu không kể thuế VAT thì Lan phải trả mỗi loại hàng bao nhiêu tiền?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 40., p. 31]
+	Năm nay, tuổi mẹ gấp $3$ lần tuổi Phương. Phương tính $13$ năm nữa thì tuổi mẹ chỉ còn gấp $2$ lần tuổi Phương thôi. Hỏi năm nay Phương bao nhiêu tuổi?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 41., p. 31]
+	1 số tự nhiên có 2 chữ số. Chữ số hàng đơn vị gấp 2 lần chữ số hàng chục. Nếu thêm chữ số $1$ xen vào giữa 2 chữ số ấy thì dược 1 số mới lớn hơn số ban đầu là $370$. Tìm số ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 42., p. 31]
+	Tìm số tự nhiên có 2 chữ số biết nếu viết thêm 1 chữ số $2$ vào bên trái \& 1 chữ số $2$ vào bên phải số đó thì ta được 1 số lớn gấp $153$ lần số ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 43., p. 31]
+	Tìm phân số có đồng thời các tính chất sau: (a) Tử số của phân số là số tự nhiên có 1 chữ số; (b) Hiệu giữa tử số \& mẫu số bằng $4$; (c) Nếu giữ nguyên tử số \& viết thêm vào bên phải của mẫu số 1 chữ số đúng bằng tử số thì được $\frac{1}{5}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 44., p. 31]
+	Điểm kiểm tra Toán của 1 lớp được cho trong bảng sau:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Điểm $x$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 &  \\
+			\hline
+			Tần số $n$ & 0 & 0 & 2 & $\star$ & 10 & 12 & 7 & 6 & 4 & 1 & $N = \star$ \\
+			\hline
+		\end{tabular}
+	\end{table}
+	Tìm 2 dấu $\star$ biết điểm trung bình của lớp là $6.06$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 45., p. 31]
+	1 xí nghiệp ký hợp đồng dệt 1 số tấm thảm len trong $20$ ngày. Do cải tiến kỹ thuật, năng suất dệt của xí nghiệp đã tăng $20$\%. Bởi vậy, chỉ trong $18$ ngày, không những xí nghiệp đã hoàn thành số thảm cần dệt mà còn dệt thêm được $24$ tấm nữa. Tính số tấm thảm len mà xí nghiệp phải dệt theo hợp đồng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 46., pp. 31--32]
+	1 người lái ôtô dự định đi từ A đến B với vận tốc $48$\emph{km\texttt{/}h}. Nhưng sau khi đi được 1 giờ với vận tốc ấy, ôtô bị tàu hỏa chắn đường trong $10$ phút. Do đó, để kịp đến B đúng thời gian đã định, người đó phải tăng vận tốc thêm $6$\emph{km\texttt{/}h}. Tính quãng đường $AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 47., p. 32]
+	Bà An gửi vào quỹ tiết kiệm $x$ nghìn đồng với lãi suất mỗi tháng là $a$\% ($a > 0$ là 1 số cho trước) \& lãi tháng này được tính gộp vào vốn cho tháng sau. (a) Viết biểu thức biểu thị: Số tiền lãi sau tháng thứ nhất. Số tiền (cả gốc lẫn lãi) có được sau tháng thứ nhất. Tổng số tiền lãi có được sau tháng thứ 2. (b) Nếu lãi suất là $1.2$\% (i.e., $a = 1.2$) \& sau $2$ tháng số tiền lãi là $48.288$ nghìn đồng, thì lúc đầu bà An đã gửi bao nhiêu tiền tiết kiệm?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 48., p. 32]
+	Năm ngoái, tổng số dân của 2 tỉnh A \& B là $4$ triệu. Năm nay, dân số của tỉnh A tăng thêm $1.1$\%, còn dân số của tỉnh B tăng thêm $1.2$\%. Tuy vật, số dân của tỉnh A năm nay vẫn nhièu hơn tỉnh B là $807200$ người. Tính số dân năm ngoái của mỗi tỉnh.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 43., p. 14]
+	Tổng của 2 số bằng $80$, hiệu của chúng bằng $14$. Tìm 2 số đó.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 44., p. 14]
+	Tổng của 2 số bằng $90$, số này gấp đôi số kia. Tìm 2 số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 45., p. 14]
+	Hiệu của 2 số bằng $18$, tỷ số giữa chúng bằng $\frac{5}{8}$. Tìm 2 số đó biết: (a) 2 số đó là 2 số dương. (b) 2 số đó tùy ý.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 46., p. 14]
+	Hiệu của 2 số bằng $18$, tỷ số giữa chúng bằng $\frac{5}{8}$. Tìm 2 số đó biết: (a) 2 số đó là 2 số dương. (b) 2 số đó tùy ý.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 47., p. 14]
+	2 số nguyên dương có tỷ số giữa số thứ nhất \& số thứ 2 bằng $\frac{3}{5}$. Nếu lấy số thứ nhất chia cho $9$, số thứ 2 chia cho $6$ thì thương của phép chia số thứ nhất cho $9$ bé hơn thương của phép chia số thứ 2 cho $6$ là $3$ đơn vị. Tìm 2 số đó biết các phép chia nói trên đều là phép chia hết.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 48., p. 14]
+	Thùng thứu nhất chứa $60$ gói kẹo, thùng thứ 2 chứa $80$ gói kẹo. Người ta lấy ra từ thùng thứ 2 số gói kẹo nhiều gấp 3 lần số gói kẹo lấy ra từ thùng thứ nhất. Hỏi có bao nhiêu gói kẹo được lấy ra từ thùng thứ nhất biết số gói kẹo còn lại trong thùng thứ nhất nhiều gấp 2 lần số gói kẹo còn lại trong thùng thứ 2?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 49., p. 14]
+	1 ôtô đi từ Hà Nội đến Thanh Hóa với vận tốc $40$\emph{km\texttt{/}h}. Sau $2$ giờ nghỉ lại ở Thanh Hóa, ôtô lại từ Thanh Hóa về Hà Nội với vận tốc $30$\emph{km\texttt{/}h}. Tổng thời gian cả đi lẫn về là $10$ giờ $45$ phút (kể cả thời gian nghỉ lại ở Thanh Hóa). Tính quãng đường Hà Nội -- Thanh Hóa.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 50., p. 14]
+	\emph{(Bài toán cổ Hy Lạp)} - Thưa Pythagore lỗi lạc, trường của người có bao nhiêu môn đệ? Nhà hiền triết trả lời: - Hiện nay, $\frac{1}{2}$ đang học Toán, $\frac{1}{4}$ đang học Nhạc, $\frac{1}{7}$ đang ngồi yên suy nghĩ. Ngoài ra còn có $3$ phụ nữ. Hỏi trường Đại học của Pythagore có bao nhiêu người?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 51., p. 15]
+	Trong 1 buổi lao động, lớp 8A gồm $40$ học sinh chia thành 2 tốp: tốp thứ nhất trồng cây \& tốp thứ 2 làm vệ sinh. Tốp trồng cây đông hơn tốp làm vệ sinh là $8$ người. Hỏi tốp trồng cây có bao nhiêu học sinh?	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 52., p. 15]
+	Ông của Bình hơn Bình $58$ tuổi. Nếu cộng tuổi của ba Bình \& 2 lần tuổi của Bình thì bằng tuổi của ông \& tổng số tuổi của cả 3 người bằng $130$. Tính tuổi của Bình.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 53., p. 15]
+	1 số tự nhiên lẻ có 2 chữ số \& chia hết cho $5$. Hiệu của số đó \& chữ số hàng chục của nó bằng $68$. Tìm số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 54., p. 15]
+	1 phân số có tử số bé hơn mẫu số là $11$. Nếu tăng tử số lên $3$ đơn vị \& giảm mẫu số đi $4$ đơn vị thì được 1 phân số bằng $\frac{3}{4}$. Tìm phân số ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 55., p. 15]
+	1 số thập phân có phần nguyên là số có 1 chữ số. Nếu viết thêm chữ số $2$ vào bên trái số đó, sau đó chuyển dấu phẩy sang trái 1 chữ số thì được số mới bằng $\frac{9}{10}$ số ban đầu. Tìm số thập phân ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 56., p. 15]
+	1 ôtô đi từ Hà Nội lúc $8$ giờ sáng, dự kiến đến Hải Phòng vào lúc 10:30 phút. Nhưng mỗi giờ ôtô đã đi chậm hơn so với dự kiến là $10$\emph{km} nên mãi đến 11:20 xe mới tới Hải Phòng. Tính quãng đường Hà Nội -- Hải Phòng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 57., p. 15]
+	1 tàu chở hàng từ ga Vinh về ga Hà Nội. Sau đó $1.5$ giờ, 1 tàu chở khách xuất phát từ ga Hà Nội đi Vinh với vận tốc lớn hơn vận tốc tàu chở hàng là $7$\emph{km\texttt{/}h}. Khi tàu khách đi được $4$ giờ thì nó còn cách tàu hàng là $25$\emph{km}. Tính vận tốc mỗi tàu biết 2 ga cách nhau $319$\emph{km}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 58., p. 15]
+	1 người đi xe đạp từ A đến B. Lúc đầu, trên đoạn đường đá, người đó đi với vận tốc $10$\emph{km\texttt{/}h}. Trên đoạn đường còn lại là đường nhựa, dài gấp rưỡi đoạn đường đá, người đó đi với vận tốc $15$\emph{km\texttt{/}h}. Sau $4$ giờ người đó đến B. Tính độ dài quãng đường $AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 59., p. 15]
+	Bánh trước của 1 máy kéo có chu vi là $2.5$\emph{m}, bánh sau có chu vi là $4$\emph{m}. Khi máy kéo đi từ A đến B, bánh trước quay nhiều hơn bánh sau $15$ vòng. Tính khoảng cách AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 60., p. 15]
+	1 miếng hợp kim đồng \& thiếc có khối lượng $12$\emph{kg}, chứa $45$\% đồng. Hỏi phải thêm vào đó bao nhiêu thiếc nguyên chất để được 1 hợp kim mới có chứa $40$\% đồng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 61., pp. 15--16]
+	1 cửa hàng bán 1 máy vi tính với giá $6.5$ triệu đồng chưa kể thuế giá trị gia tăng (VAT). Anh Trọng mua chiếc máy vi tính đó cùng với 1 modem\footnote{``Modem là 1 thiết bị dùng để chuyển đổi các tín hiệu số do máy tính phát ra thành các tín hiệu thích hợp, truyền qua đường điện thoại, \& ngược lại. Với 1 máy tính cá nhân \& 1 modem, người ta có thể trao đổi thông tin giữa các tổ chức hay cá nhân qua mạng Internet. Khi mua 1 máy tính không có modem trong (i.e., modem được thiết kế \& cài đặt sẵn trong máy) mà muốn sử dụng Internet, người ta phải mua thêm 1 modem ngoài.'' -- \cite[p. 15]{SBT_Toan_8_tap_2}} ngoài \& phải trả tổng cộng $7.546$ triệu đồng, trong đó đã tính cả $10$\% thuế VAT. Hỏi giá tiền 1 chiếc modem (không kể VAT) là bao nhiêu?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 50., p. 33]
+	Giải phương trình: (a) $3 - 4x(25 - 2x) = 8x^2 + x - 300$; (b) $\frac{2(1 - 3x)}{5} - \frac{2 + 3x}{10} = 7 - \frac{3(2x + 1)}{4}$; (c) $\frac{5x + 2}{6} - \frac{8x - 1}{3} = \frac{4x + 2}{5} - 5$; (d) $\frac{3x + 2}{2} - \frac{3x + 1}{6} = 2x + \frac{5}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 51., p. 33]
+	Giải phương trình bằng cách đưa về phương trình tích: (a) $(2x + 1)(3x - 2) = (5x - 8)(2x + 1)$; (b) $4x^2 - 1 = (2x + 1)(3x - 5)$; (c) $(x + 1)^2 = 4(x^2 - 2x + 1)$; (d) $2x^3 + 5x^2 - 3x = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 52., p. 33]
+	Giải phương trình: (a) $\frac{1}{2x - 3} - \frac{3}{x(2x - 3)} = \frac{5}{x}$; (b) $\frac{x + 2}{x - 2} - \frac{1}{x} = \frac{2}{x(x - 2)}$; (c) $\frac{x + 1}{x - 2} + \frac{x - 1}{x + 2} = \frac{2(x^2 + 2)}{x^2 - 4}$; (d) $(2x + 3)\left(\frac{3x + 8}{2 - 7x} + 1\right) = (x - 5)\left(\frac{3x + 8}{2 - 7x} + 1\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 53., p. 34]
+	Giải phương trình: $\frac{x + 1}{9} + \frac{x + 2}{8} = \frac{x + 3}{7} + \frac{x + 4}{6}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 54., p. 34]
+	1 canô xuôi dòng từ bến A đến bến B mất $4$\emph{h} \& ngược dòng từ bến B về bến A mất $5$\emph{h}. Tính khoảng cách giữa 2 bến A \& B biết vận tốc của dòng nước là $2$\emph{km\texttt{/}h}. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 55., p. 34]
+	Biết $200$\emph{g} 1 dung dịch chứa $50$\emph{g} muối. Hỏi phải pha thêm bao nhiêu gam nước vào dung dịch đó để được 1 dung dịch chứa $20$\% muối?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 56., p. 34]
+	Để khuyến khích tiết kiệm điện, giá điện sinh hoạt được tính theo kiểu lũy tiến, i.e., nếu người sử dụng càng dùng nhiều điện thì giá mỗi số điện ($1$kWh) càng tăng lên theo các mức như sau: Mức thứ nhất: Tính cho $100$ số điện đầu tiên. Mức thứ 2: Tính cho số điện thứ $101$ đến $150$, mỗi số đắt hơn $150$ đồng so với mức thứ nhất. Mức thứ 3: Tính cho số điện thứ $151$ đến $200$, mỗi số đắt hơn $200$ đồng so với mức thứ 2. $\ldots$. Ngoài ra, người sử dụng còn phải trả thêm $10$\% thuế giá trị gia tăng (thuế VAT). Tháng vừa qua, nhà Cường dùng hết $165$ số điện \& phải trả $95700$ đồng. Hỏi mỗi số điện ở mức thứ nhất giá bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 62., p. 16]
+	Cho 2 biểu thức $A = \frac{5}{2m + 1}$ \& $B = \frac{4}{2m - 1}$. Tìm các giá trị của $m$ để 2 biểu thức ấy có giá trị thỏa mãn hệ thức: (a) $2A + 3B = 0$; (b) $AB = A + B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 63., p. 16]
+	Giải phương trình: (a) $(x\sqrt{13} + \sqrt{5})(\sqrt{7} - x\sqrt{3}) = 0$; (b) $(x\sqrt{2.7} - 1.54)(\sqrt{1.02} + x\sqrt{3.1}) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 64., p. 16]
+	Giải phương trình: (a) $\frac{9x - 0.7}{4} - \frac{5x - 1.5}{7} = \frac{7x - 1.1}{3} - \frac{5(0.4 - 2x)}{6}$; (b) $\frac{3x - 1}{x - 1} - \frac{2x + 5}{x + 3} = 1 - \frac{4}{(x - 1)(x + 3)}$; (c) $\frac{3}{4(x - 5)} + \frac{15}{50 - 2x^2} = \frac{-7}{6(x + 5)}$; (d) $\frac{8x^2}{3(1 - 4x^2)} = \frac{2x}{6x - 3} - \frac{1 + 8x}{4 + 8x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 65., pp. 16--17]
+	Cho phương trình (ẩn $x$): $4x^2 - 25 + k^2 + 4kx = 0$. (a) Giải phương trình với $k = 0$. (b) Giải phương trình với $k = -3$. (c) Tìm các giá trị của $k$ sao cho phương trình nhận $x = -2$ làm nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 66., p. 17]
+	Giải phương trình: (a) $(x + 2)(x^2 - 3x + 5) = (x + 2)x^2$; (b) $\frac{-7x^2 + 4}{x^3 + 1} = \frac{5}{x^2 - x + 1} - \frac{1}{x + 1}$; (c) $2x^2 - x = 3 - 6x$; (d) $\frac{x - 2}{x + 2} - \frac{3}{x - 2} = \frac{2(x - 11)}{x^2 - 4}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 67., p. 17]
+	Số nhà của Khanh là 1 số tự nhiên có 2 chữ số. Nếu thêm chữ số $5$ vào bên trái số đó thì được 1 số ký hiệu là $A$. Nếu thêm chữ số $5$ vào bên phải số đó thì được 1 số ký hiệu là $B$. Tìm số nhà của Khanh biết $A - B = 153$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 68., p. 17]
+	1 đội thợ mỏ lập kế hoạch khai thác than, theo đó mỗi ngày phải khai thác được $50$ tấn than. Khi thực hiện, mỗi ngày đội khai thác được $57$ tấn than. Do đó, đội đã hoàn thành kế hoạch trước $1$ ngày \& còn vượt mức $13$ tấn than. Hỏi theo kế hoạch, đội phải khai thác bao nhiêu tấn than?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 69., p. 17]
+	2 xe ôtô cùng khởi hành từ Lạng Sơn về Hà Nội, quãng đường dài $163$\emph{km}. Trong $43$\emph{km} đầu, 2 xe có cùng vận tốc. Nhưng sau đó chiếc xe thứ nhất tăng vận tốc lên gấp $1.2$ lần vận tốc ban đầu, trong khi chiếc xe thứ 2 vẫn duy trì vận tốc cũ. Do đó xe thứ nhất đã đến Hà Nội sớm hơn xe thứ 2 $40$ phút. Tính vận tốc ban đầu của 2 xe.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 70., p. 17]
+	1 đoàn tàu hỏa từ Hà Nội đi TP Hồ Chí Minh. $1$ giờ $48$ phút sau, 1 đoàn tàu hỏa khác khởi hành từ Nam Định cũng đi TP Hồ Chí Minh với vận tốc nhỏ hơn vận tốc của đoàn thứ nhất là $5$\emph{km\texttt{/}h}. 2 đoàn tàu gặp nhau (tại 1 ga nào đó) sau $4$ giờ $48$ phút kể từ khi đoàn thứ nhất khởi hành. Tính vận tốc mỗi đoàn tàu biết ga Nam Định nằm trên đường từ Hà Nội đi TP Hồ Chí Minh \& cách ga Hà Nội $87$\emph{km}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 71., p. 17]
+	Lúc 7:00, 1 chiếc canô xuôi dòng từ bến A đến bến B, cách nhau  $36$\emph{km}, rồi ngày lập tức quay trở về \& đến bến A lúc 11:30. Tính vận tốc của canô khi xuôi dòng biết vận tốc nước chảy là $6$\emph{km\texttt{/}h}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, III.1., p. 18]
+	Giải phương trình: (a) $\frac{13}{(2x + 7)(x - 3)} + \frac{1}{2x + 7} = \frac{6}{x^2 - 9}$; (b) $\left(1 - \frac{2x - 1}{x + 1}\right)^3 + 6\left(1 - \frac{2x - 1}{x + 1}\right)^2 = \frac{12(2x - 1)}{x + 1} - 20$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, III.2., p. 18]
+	(a) Cho 3 số $a,b,c$ đôi một phân biệt. Giải phương trình: $\frac{x}{(a - b)(a - c)} + \frac{x}{(b - a)(b - c)} + \frac{x}{(c - a)(c - b)} = 2$. (b) Cho số $a$ \& 3 số $b,c,d$ khác $a$ \& thỏa mãn điều kiện $c + d = 2b$. Giải phương trình:
+	\begin{align*}
+		\frac{x}{(a - b)(a - c)} - \frac{2x}{(a - b)(a - d)} + \frac{3x}{(a - c)(a - d)} = \frac{4a}{(a - c)(a - d)}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, III.3., p. 18]
+	Cần phải thêm vào tử \& mẫu của phân số $\frac{13}{18}$ với cùng 1 số tự nhiên nào để được phân số $\frac{4}{5}$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, III.4., p. 18]
+	Cách đây $10$ năm, tuổi của người thứ nhất gấp $3$ lần tuổi của người thứ 2. Sau đây $2$ năm, tuổi của người thứ 2 bằng nửa tuổi của người thứ nhất. Hỏi hiện nay, tuổi của mỗi người là bao nhiêu?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
