@@ -1,0 +1,974 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,soul,subcaption}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Similar Triangles {\it\&} Similar Shapes\\Bài Tập: Tam Giác Đồng Dạng {\it\&} Hình Đồng Dạng}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
+	Latest version:
+	\begin{itemize}
+		\item {\it Problem: Similar Triangles {\it\&} Similar Shapes -- Bài Tập: Tam Giác Đồng Dạng {\it\&} Hình Đồng Dạng}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+		\item {\it Problem \& Solution: Similar Triangles {\it\&} Similar Shapes -- Bài Tập \& Lời Giải: Tam Giác Đồng Dạng {\it\&} Hình Đồng Dạng}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+	\end{itemize}
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Định Lý Thales Trong Tam Giác}
+
+\begin{dinhnghia}[Tỷ số của 2 đoạn thẳng]
+	\emph{Tỷ số của 2 đoạn thẳng} là tỷ số độ dài của chúng theo cùng 1 đơn vị đo.
+\end{dinhnghia}
+Tỷ số của 2 đoạn thẳng $AB,CD$ được ký hiệu là $\frac{AB}{CD}$. Tỷ số của 2 đoạn thẳng không phụ thuộc vào cách chọn đơn vị đo, e.g., $\frac{\rm2km}{\rm3km} = \frac{2\footnotesize\mbox{\st{km}}}{3\footnotesize\mbox{\st{km}}} = \frac{2}{3}$, $\frac{\rm3cm}{\rm4cm} = \frac{3\footnotesize\mbox{\st{cm}}}{4\footnotesize\mbox{\st{cm}}} = \frac{3}{4}$, $\frac{\rm4nm}{\rm5nm} = \frac{4\footnotesize\mbox{\st{nm}}}{4\footnotesize\mbox{\st{nm}}} = \frac{3}{4}$ (1 cách dễ hiểu: 2 đơn vị trên tử \& mẫu sẽ triệt tiêu lẫn nhau).
+
+\begin{dinhnghia}[2 đoạn thẳng tỷ lệ]
+	2 đoạn thẳng $AB,CD$ gọi là \emph{tỷ lệ} với 2 đoạn thẳng $A'B',C'D'$ nếu có tỷ lệ thức: $\frac{AB}{CD} = \frac{A'B'}{C'D'}$ hay $\frac{AB}{A'B'} = \frac{CD}{C'D'}$.
+\end{dinhnghia}
+
+\begin{dinhly}[Thales]
+	\label{thm: Thales}
+	Nếu 1 đường thẳng song song với 1 cạnh của  tam giác \& cắt 2 cạnh còn lại thì nó định ra trên 2 cạnh đó những đoạn thẳng tương ứng tỷ lệ.
+\end{dinhly}
+GT: $\Delta ABC$, $B'C'\parallel BC$, $B'\in AB$, $C'\in AC$. KL: $\frac{AB'}{AB} = \frac{AC'}{AC} = \frac{B'C'}{BC}$, $\frac{AB'}{B'B} = \frac{AC'}{C'C} = \frac{B'C'}{BC - B'C'}$, $\frac{B'B}{AB} = \frac{C'C}{AC} = \frac{BC - B'C'}{B'C'}$.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?4, p. 58]
+	(a) Cho $\Delta DEF$. Đường thẳng $MN\parallel EF$ cắt 2 cạnh $DE,DF$ lần lượt tại $M,N$. Biết $DM = 6.5$, $DN = 4$, $NF = 2$. Tính $EF$. (b) Cho $\Delta ABC$. Đường thẳng $al\parallel BC$ cắt 2 cạnh $AB,AC$ lần lượt tại $D,E$. Biết $AD = \sqrt{3}$, $BD = 5$, $CE = 10$. Tính $AE$. (c) Cho $\Delta ABC$ vuông tại $A$. Trên $BC,AC$ lần lượt lấy $D,E$ sao cho $DE\parallel AB$. Biết $CD = 5$, $BD = 3.5$, $CE = 4$. Tính $AC,AB$.
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.3\textwidth}
+			\centering
+			\includegraphics[width=.6\linewidth]{SGK_Toan_8_4}
+		\end{subfigure}%
+		\begin{subfigure}{.3\textwidth}
+			\centering
+			\includegraphics[width=.7\linewidth]{SGK_Toan_8_5a}
+		\end{subfigure}%
+		\begin{subfigure}{.3\textwidth}
+			\centering
+			\includegraphics[width=.4\linewidth]{SGK_Toan_8_5b}
+		\end{subfigure}
+	\end{figure}
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Vì $MN\parallel EF$, theo định lý Thales: $\frac{DM}{ME} = \frac{DN}{NF}\Leftrightarrow\frac{6.5}{ME} = \frac{4}{2}\Rightarrow ME = \frac{2\cdot6.5}{4} = 3.25$. (b) Vì $DE\parallel BC$, theo định lý Thales: $\frac{AD}{DB} = \frac{AE}{EC}\Leftrightarrow\frac{\sqrt{3}}{5} = \frac{AE}{10}\Rightarrow AE = \frac{10\sqrt{3}}{5} = 2\sqrt{3}$. (c) Vì $DE\parallel AB$, theo định lý Thales: $\frac{CD}{CB} = \frac{CE}{CA} = \frac{DE}{AB}\Leftrightarrow\frac{5}{5 + 3.5} = \frac{4}{AC} = \frac{\sqrt{5^2 - 4^2}}{AB}$, suy ra $AC = \frac{8.5\cdot4}{5} = 6.8$ \& $AB = \frac{8.5\cdot3}{5} = 5.1$.
+\end{proof}
+
+\begin{nhanxet}
+	Ở (c), có thể tính được độ dài cạnh $AB$ bằng cách sử dụng định lý Pythagore cho $\Delta ABC$ vuông tại $A$, thay vì định lý Thales, sau khi đã biết được $AC = 6.8$ như sau: $AB = \sqrt{BC^2 - AC^2} = \sqrt{8.5^2 - 6.8^2} = 5.1$.
+\end{nhanxet}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 1., p. 58]
+	Viết tỷ số của các cặp đoạn thẳng có độ dài sau: (a) $AB = 5$\emph{cm} \& $CD = 15$\emph{cm}; (b) $EF = 48$\emph{cm} \& $GH = 16$\emph{dm}; (c) $PQ = 1.2$\emph{m} \& $MN = 24$\emph{cm}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\frac{AB}{CD} = \frac{5}{15} = \frac{1}{3}$. (b) $\frac{EF}{GH} = \frac{48}{160} = \frac{3}{10}$. (c) $\frac{PQ}{MN} = \frac{120}{24} = 5$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 2., p. 59]
+	Cho biết $\frac{AB}{CD} = \frac{3}{4}$, $CD = 12$\emph{cm}. Tính $AB$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$AB = \frac{3}{4}CD = \frac{3}{4}\cdot12 = 9$cm.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 3., p. 59]
+	(a) Cho biết độ dài của $AB$ gấp $5$ lần độ dài của $CD$ \& độ dài của $A'B'$ gấp $12$ lần độ dài của $CD$. Tính tỷ số của 2 đoạn thẳng $AB,A'B'$. (b) Cho biết độ dài của $AB$ gấp $a$ lần độ dài của $CD$ \& độ dài của $A'B'$ gấp $b$ lần độ dài của $CD$ với $a,b\in\mathbb{R}$, $a,b > 0$. Tính tỷ số của 2 đoạn thẳng $AB,A'B'$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $AB = 5CD$, $A'B' = 12CD\Rightarrow\frac{AB}{A'B'} = \frac{5CD}{12CD} = \frac{5}{12}$. (b) Tương tự, $AB = aCD$, $A'B' = bCD\Rightarrow\frac{AB}{A'B'} = \frac{aCD}{bCD} = \frac{a}{b}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 4., p. 59]
+	Cho $\Delta ABC$, $B'\in AB$, $C'\in AC$. Cho biết $\frac{AB'}{AB} = \frac{AC'}{AC}$. Chứng minh: (a) $\frac{AB'}{B'B} = \frac{AC'}{C'C}$. (b) $\frac{BB'}{AB} = \frac{CC'}{AC}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\frac{AB'}{AB} = \frac{AC'}{AC}\Leftrightarrow\frac{AB}{AB'} = \frac{AC}{AC'}\Leftrightarrow\frac{AB}{AB'} - 1 = \frac{AC}{AC'} - 1\Leftrightarrow\frac{AB - AB'}{AB'} = \frac{AC - AC'}{AC'}\Leftrightarrow\frac{BB'}{AB'} = \frac{CC'}{AC'}\Leftrightarrow\frac{AB'}{BB'} = \frac{AC'}{CC'}$. (b) $\frac{AB'}{AB} = \frac{AC'}{AC}\Leftrightarrow1 - \frac{AB'}{AB} = 1 - \frac{AC'}{AC}\Leftrightarrow\frac{AB - AB'}{AB} = \frac{AC - AC'}{AC}\Leftrightarrow\frac{BB'}{AB} = \frac{CC'}{AC}$.
+\end{proof}
+
+\begin{nhanxet}
+	Ở (a), ta có thể áp dụng trực tiếp tính chất sau của tỷ lệ thức: $\frac{a}{b} = \frac{c}{d}\ne1\Leftrightarrow\frac{a}{b - a} = \frac{c}{d - c}$, $\forall a,b,c,d\in\mathbb{R}$, $bd\ne0$, $a\ne b$, $c\ne d$, cho $a = AB'$, $b = AB$, $c = AC'$, $d = AC$. Tương tự, ở (b), ta có thể áp dụng tính chất sau của tỷ lệ thức: $\frac{a}{b} = \frac{c}{d}\Leftrightarrow\frac{b - a}{b} = \frac{d - c}{d}$, $\forall a,b,c,d\in\mathbb{R}$, $bd\ne0$ cho $a = AB'$, $b = AB$, $c = AC'$, $d = AC$. Chứng minh các tính chất này hoàn toàn tương tự như trong lời giải trên:
+	\begin{itemize}
+		\item $\frac{a}{b} = \frac{c}{d}\ne1\Leftrightarrow\frac{b}{a} = \frac{d}{c}\ne1\Leftrightarrow\frac{b}{a} - 1 = \frac{d}{c} - 1\ne0\Leftrightarrow\frac{b - a}{a} = \frac{d - c}{c}\ne0\Leftrightarrow\frac{a}{b - a} = \frac{c}{d - c}$, $\forall a,b,c,d\in\mathbb{R}$, $bd\ne0$, $a\ne b$, $c\ne d$. Chú ý ở bước biến đổi tương đương cuối cùng: vì các phân số khác $0$ nên mới có thể nghịch đảo chúng trong phép biến đổi đại số tương đương này.
+		\item $\frac{a}{b} = \frac{c}{d}\Leftrightarrow1 - \frac{a}{b} = 1 - \frac{c}{d}\Leftrightarrow\frac{b - a}{b} = \frac{d - c}{d}$, $\forall a,b,c,d\in\mathbb{R}$, $bd\ne0$. Chú ý đẳng thức này vẫn đúng nếu $a = b$, $c = d$, i.e., $\frac{a}{b} = \frac{c}{d} = 1$, trong khi tính chất thứ nhất chỉ đúng cho $a\ne b$, $c\ne d$, i.e., $\frac{a}{b}\ne1$, $\frac{c}{d}\ne1$. Điểm khác biệt này là bởi vì không có bất kỳ phép nghịch đảo phân số nào được thực hiện trong các phép biến đổi đại số tương đương cho tính chất thứ 2.
+	\end{itemize} 
+\end{nhanxet}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 5., p. 59]
+	Tìm $x$.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.2]{SGK_Toan_8_7}
+	\end{figure}
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Vì $MN\parallel BC$, theo định lý Thales: $\frac{AM}{MB} = \frac{AN}{NC}\Leftrightarrow\frac{4}{x} = \frac{5}{8.5 - 5}\Leftrightarrow x = \frac{4\cdot3.5}{5} = 2.8$. (b) Vì $PQ\parallel EF$, theo định lý Thales: $\frac{DP}{PE} = \frac{DQ}{QF}\Leftrightarrow\frac{x}{10.5} = \frac{9}{24 - 9}\Leftrightarrow x = \frac{10.5\cdot9}{15} = 6.3$.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 1., p. 82]
+	Viết tỷ số của các cặp đoạn thẳng sau: (a) $AB = 125$\emph{cm}, $CD = 625$\emph{cm}; (b) $EF = 45$\emph{cm}, $E'F' = 13.5$\emph{dm}; (c) $MN = 555$\emph{cm}, $M'N' = 999$\emph{cm}; (d) $PQ = 10101$\emph{cm}, $P'Q' = 303.03$\emph{m}.	
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\frac{AB}{CD} = \frac{125}{625} = \frac{1}{5}$. (b) $\frac{EF}{E'F'} = \frac{45}{135} = \frac{1}{3}$. (c) $\frac{MN}{M'N'} = \frac{555}{999} = \frac{5}{9}$. (d) $\frac{PQ}{P'Q'} = \frac{10101}{30303} = \frac{1}{3}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 2., p. 82]
+	Đoạn thẳng $AB$ gấp $5$ lần đoạn thẳng $CD$; đoạn thẳng $A'B'$ gấp $7$ lần đoạn thẳng $CD$. (a) Tính tỷ số của 2 đoạn thẳng $AB,A'B'$. (b) Cho biết đoạn thẳng $MN = 505$\emph{cm} \& đoạn thẳng $M'N' = 707$\emph{cm}, hỏi 2 đoạn thẳng $AB,A'B'$ có tỷ lệ với 2 đoạn thẳng $MN,M'N'$ không?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$AB = 5CD$, $A'B' = 7CD$. (a) $\frac{AB}{A'B'} = \frac{5CD}{7CD} = \frac{5}{7}$. (b) $\frac{MN}{M'N'} = \frac{505}{707} = \frac{5}{7}$, nên $\frac{AB}{A'B'} = \frac{MN}{M'N'}$, suy ra $AB,A'B'$ tỷ lệ với $MN,M'N'$.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 3., p. 82]
+	(a) Cho $\Delta ABC$, $M,N$ lần lượt nằm trên $AB,AC$ sao cho $MN\parallel BC$. Biết $AM = 17$, $BM = 10$, $CN = 9$. Tính $AN$. (b) Cho $\Delta PQR$, $E,F$ lần lượt nằm trên $PQ,PR$ sao cho $EF\parallel QR$. Biết $PE = 16$, $PF = 20$, $RF = 15$. Tính $PQ$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Áp dụng định lý Thales: $MN\parallel BC\Rightarrow\frac{AM}{MB} = \frac{AN}{NC}\Leftrightarrow\frac{17}{10} = \frac{x}{9}\Leftrightarrow x = \frac{17\cdot9}{10} = 15.3$cm. (b) Áp dụng định lý Thales: $EF\parallel QR\Rightarrow\frac{EP}{PQ} = \frac{PF}{PR}\Leftrightarrow\frac{16}{x} = \frac{20}{20 + 15}\Leftrightarrow x = \frac{16\cdot35}{20} = 28$cm.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 4., p. 83]
+	Cho hình thang $ABCD$ có $AB\parallel CD$ \& $AB < CD$. Đường thẳng song song với đáy $AB$ cắt các cạnh bên $AD,BC$ theo thứ tự tại $M,N$. Chứng minh: (a) $\frac{MA}{AD} = \frac{NB}{BC}$; (b) $\frac{MA}{MD} = \frac{NB}{NC}$; (c) $\frac{MD}{DA} = \frac{NC}{CB}$.
+\end{baitoan}
+
+\begin{proof}[Chứng minh]
+	(a) $MN\parallel AB\parallel CD$ (gt). Kéo dài $DA$ \& $CB$ cắt nhau tại $E$, áp dụng định lý Thales vào $\Delta EMN,\Delta ECD$: $\frac{EA}{MA} = \frac{EB}{NB}\Leftrightarrow\frac{EA}{EB} = \frac{MA}{NB}$ \& $\frac{EA}{AD} = \frac{EB}{BC}\Leftrightarrow\frac{EA}{EB} = \frac{AD}{BC}$. Kết hợp 2 điều này suy ra $\frac{MA}{NB} = \frac{AD}{BC}$ hay $\frac{MA}{AD} = \frac{NB}{BC}$. (b) Áp dụng tính chất của tỷ lệ thức: $\frac{MA}{AD} = \frac{NB}{BC}\Leftrightarrow\frac{MA}{AD - MA} = \frac{NB}{BC - NB}\Leftrightarrow\frac{MA}{MD} = \frac{NB}{NC}$. (c) $\frac{MA}{MD} = \frac{NB}{NC}\Leftrightarrow\frac{MD}{MA} = \frac{NC}{NB}\Leftrightarrow\frac{MD}{MA + MD} = \frac{NC}{NB + NC}\Leftrightarrow\frac{MD}{AD} = \frac{NC}{BC}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 5., p. 83]
+	\label{SBT_Toan_8_tap_2 5. p. 83}
+	Cho $\Delta ABC$. Từ điểm $D$ trên cạnh $BC$, kẻ các đường thẳng song song với các cạnh $AB,AC$, chúng cắt các cạnh $AB,AC$ theo thứ tự tại $E,F$. Chứng minh: $\frac{AE}{AB} + \frac{AF}{AC} = 1$.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.2]{SBT_Toan_8_43}
+	\end{figure}
+\end{baitoan}
+
+\begin{proof}[Chứng minh]
+	
+	Xét $\Delta ABC$, vì $DE\parallel AC$ (gt), áp dụng định Thales: $\frac{AE}{AB} = \frac{CD}{CB}$. Mặt khác, vì $DF\parallel AB$ (gt), áp dụng định Thales: $\frac{AF}{AC} = \frac{BD}{BC}$. Cộng 2 đẳng thức trên, vế theo vế: $\frac{AE}{AB} + \frac{AF}{AC} = \frac{CD}{CB} + \frac{BD}{BC} = \frac{CD + BD}{BC} = \frac{BC}{BC} = 1$.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 1.1., p. 83]
+	2 đoạn thẳng $AB = 35$\emph{cm}, $CD = 105$\emph{cm} tỷ lệ với 2 đoạn thẳng $A'B' = 75$\emph{cm} \& $C'D'$. Tính $C'D'$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$\frac{AB}{CD} = \frac{A'B'}{C'D'}\Leftrightarrow\frac{35}{105} = \frac{75}{C'D'}\Leftrightarrow C'D' = \frac{105\cdot75}{35} = 225$cm.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 1.2., p. 83]
+	$\Delta ABC$ vuông tại $A$ có đường cao là $AD$, $D\in BC$. Từ $D$, kẻ $DE\bot AB$, $E\in AB$, \& $DF\bot AC$, $F\in AC$. Hỏi khi độ dài các cạnh $AB,AC$ thay đổi thì tổng $\frac{AE}{AB} + \frac{AF}{AC}$ có thay đổi không? Vì sao?
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.2]{SBT_Toan_8_bs7}
+	\end{figure}
+\end{baitoan}
+
+\begin{proof}[1st giải]	
+	$DE\bot AB$ \& $CA\bot AB\Rightarrow DE\parallel AC$. Theo định lý Thales: $\frac{AE}{AB} = \frac{CD}{CB}$. Tương tự, $DF\bot AC$ \& $AB\bot AC\Rightarrow DF\parallel AB$. Theo định lý Thales: $\frac{AF}{AC} = \frac{BD}{BC}$. Cộng 2 đẳng thức trên, vế theo vế: $\frac{AE}{AB} + \frac{AF}{AC} = \frac{CD}{CB} + \frac{BD}{BC} = \frac{CD + BD}{BC} = \frac{BC}{BC} = 1$. Vậy khi độ dài các cạnh $AB,AC$ thay đổi thì tổng $\frac{AE}{AB} + \frac{AF}{AC}$ không thay đổi vì luôn có giá trị bằng $1$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Bài toán này là 1 trường hợp đặc biệt của Bài toán \ref{SBT_Toan_8_tap_2 5. p. 83} khi $D$ là chân đường cao ứng với $BC$. Theo kết quả Bài toán \ref{SBT_Toan_8_tap_2 5. p. 83}: $\frac{AE}{AB} + \frac{AF}{AC} = 1$ nên không đổi khi độ dài các cạnh $AB,AC$ thay đổi.
+\end{proof}
+
+%------------------------------------------------------------------------------%
+
+\section{Định Lý Đảo \& Hệ Quả của Định Lý Thales}
+
+\begin{dinhly}[Thales đảo]
+	Nếu 1 đường thẳng cắt 2 cạnh của 1 tam giác \& định ra trên 2 cạnh này những đoạn thẳng tương ứng tỷ lệ thì đường thẳng đó song song với cạnh còn lại của tam giác.
+\end{dinhly}
+GT: $\Delta ABC$, $B'\in AB$, $C'\in AC$, $\frac{A'B'}{B'B} = \frac{AC'}{C'C}$. KL: $B'C'\parallel BC$.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?2, p. 60]
+	Cho $\Delta ABC$. $D\in AB,E\in AC,F\in BC$, $AD = 3$, $BD = 6$, $AE = 5$, $CE = 10$, $BF = 7$, $CF = 14$. (a) Có bao nhiêu cặp đường thẳng song song với nhau. (b) Tứ giác $BDEF$ là hình gì? (c) So sánh các tỷ số $\frac{AD}{AB},\frac{AE}{AC},\frac{DE}{BC}$ \& cho nhận xét về mối liên hệ giữa các cặp cạnh tương ứng của $\Delta ADE$ \& $\Delta ABC$.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.25]{SGK_Toan_8_9}
+	\end{figure}
+\end{baitoan}
+
+\begin{proof}[Giải]	
+	(a) Vì $\frac{AD}{DB} = \frac{AE}{EC}$ ($\frac{3}{6} = \frac{5}{10} = \frac{1}{2}$), theo định lý Thales đảo: $DE\parallel BC$. Vì $\frac{CE}{EA} = \frac{CF}{FB}$ ($\frac{10}{5} = \frac{14}{7} = 2$), theo định lý Thales đảo: $EF\parallel AB$. Vậy trong hình có 2 cặp đường thẳng song song với nhau: $DE\parallel BC$, $EF\parallel AB$. (b) Tứ giác $BDEF$ là hình bình hành vì 2 cặp cạnh đối của nó song song với nhau: $DE\parallel BF$, $BD\parallel EF$ (đã chứng minh ở (a)). (c) $\frac{AD}{AB} = \frac{3}{3 + 6} = \frac{1}{3}$, $\frac{AE}{AC} = \frac{5}{5 + 10} = \frac{1}{3}$. Vì $BDEF$ là hình bình hành (đã chứng minh ở (b)) nên $DE = BF = 7$, suy ra $\frac{DE}{BC} = \frac{7}{7 + 14} = \frac{1}{3}$. Suy ra $\frac{AD}{AB} = \frac{AE}{AC} = \frac{DE}{BC} = \frac{1}{3}$ nên các cặp cạnh tương ứng của $\Delta ADE$ \& $\Delta ABC$ tỷ lệ với nhau (có thể viết dạng tỷ lệ thức: $AD:DE:EA = AB:BC:CA$).
+\end{proof}
+
+\begin{hequa}
+	\label{col: Thales}
+	Nếu 1 đường thẳng cắt 2 cạnh của 1 tam giác \& song song với cạnh còn lại thì nó tạo thành 1 tam giác mới có 3 cạnh tương ứng tỷ lệ với 3 cạnh của tam giác đã cho.
+\end{hequa}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.25]{SGK_Toan_8_10}
+\end{figure}
+GT: $\Delta ABC$, $B'C'\parallel BC$, $B'\in AB$, $C'\in AC$. KL: $\frac{AB'}{AB} = \frac{AC'}{AC} = \frac{B'C'}{BC}$.
+
+\begin{proof}[Chứng minh]
+	Vì $B'C'\parallel BC$ nên theo định lý Thales: $\frac{AB'}{AB} = \frac{AC'}{AC}$ (1). Từ $C'$ kẻ $C'D\parallel AB$, $D\in BC$, theo định lý Thales: $\frac{AC'}{AC} = \frac{BD}{BC}$ (2). Tứ giác $B'C'DB$ là hình bình hành (vì có các cặp cạnh đối song song) nên $B'C' = BD$. Từ (1) \& (2), thay $BD$ bằng $B'C'$: $\frac{AB'}{AB} = \frac{AC'}{AC} = \frac{B'C'}{BC}$.
+\end{proof}
+Hệ quả \ref{col: Thales} vẫn đúng cho trường hợp đường thẳng $a$ song song với 1 cạnh của tam giác \& cắt phần kéo dài của 2 cạnh còn lại: $\frac{AB'}{AB} = \frac{AC'}{AC} = \frac{B'C'}{BC}$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.25]{SGK_Toan_8_11}
+\end{figure}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?3, p. 62]
+	Tính $x$.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_8_12}
+	\end{figure}
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Vì $DE\parallel BC$, theo hệ quả \ref{col: Thales} của định lý Thales: $\frac{AD}{AB} = \frac{DE}{BC}\Leftrightarrow\frac{2}{2 + 3} = \frac{x}{6.5}\Leftrightarrow x = \frac{2\cdot6.5}{5} = 2.6$. (b) Vì $MN\parallel PQ$, theo hệ quả \ref{col: Thales} của định lý Thales: $\frac{ON}{OP} = \frac{MN}{PQ}\Leftrightarrow\frac{2}{x} = \frac{3}{5.2}\Leftrightarrow x = \frac{2\cdot5.2}{3} = \frac{52}{15}$. (c) Vì $EF\bot AB$ \& $EF\bot CD\Rightarrow AB\parallel CD$, theo hệ quả \ref{col: Thales} của định lý Thales: $\frac{OE}{OF} = \frac{BE}{CF}\Leftrightarrow\frac{3}{x} = \frac{2}{3.5}\Leftrightarrow x = \frac{3\cdot3.5}{2} = 5.25$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 6., p. 62]
+	Tìm các đường thẳng song song \& chứng minh:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_8_13}
+	\end{figure}
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Vì $\frac{AP}{PB}\ne\frac{AM}{MB}$ ($\frac{3}{8}\ne\frac{5}{15} = \frac{1}{3}$), theo mệnh đề phản đảo của định lý Thales, suy ra $PM\not\,\parallel BC$. Vì $\frac{CM}{MA} = \frac{CN}{NB}$ ($\frac{15}{5} = \frac{21}{7} = 3$), theo định lý Thales đảo, suy ra $MN\parallel AB$. (b) Vì $\widehat{A"} = \widehat{OA'B'}$ (2 góc so le trong) nên $A'B'\parallel A"B"$. Vì $\frac{OA'}{A'A} = \frac{OB'}{B'B}$ ($\frac{2}{3} = \frac{3}{4.5}$), theo định lý Thales đảo, suy ra $A'B'\parallel AB$. Vậy $AB\parallel A'B'\parallel A"B"$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 7., p. 62]
+	Tính $x,y$:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_8_14}
+	\end{figure}
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Vì $MN\parallel EF$, theo định lý Thales: $\frac{DM}{DE} = \frac{MN}{EF}\Leftrightarrow\frac{9.5}{9.5 + 28} = \frac{8}{x}\Leftrightarrow x = \frac{8\cdot37.5}{9.5} = \frac{600}{19}$. (b) Vì $AA'\bot AB$ \& $AA'\bot A'B'\Rightarrow AB\parallel A'B'$, theo định lý Thales: $\frac{OA}{OA'} = \frac{OB}{OB'} = \frac{AB}{A'B'}\Leftrightarrow\frac{6}{3} = \frac{y}{\sqrt{3^2 + 4.2^2}} = \frac{x}{4.2}\Rightarrow x = \frac{6\cdot4.2}{3} = 8.4$, $y = \frac{6\sqrt{3^2 + 4.2^2}}{3} = \frac{6\sqrt{74}}{5}$.
+\end{proof}
+
+\begin{luuy}
+	Sau khi đã tính được $x$, ta cũng có thể tính $y$ bằng cách áp dụng định lý Pythagore cho $\Delta OAB$ vuông tại $A$: $y = \sqrt{x^2 + 6^2} = \sqrt{8.4^2 + 6^2} = \frac{6\sqrt{74}}{5}$ thay vì sử dụng tỷ lệ thức như trong lời giải trên cho (b).
+\end{luuy}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 8., p. 63]
+	(a) Để chia đoạn thẳng $AB$ thành 3 đoạn thẳng bằng nhau, người ta đã làm như hình sau:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_8_15}
+	\end{figure}
+	\noindent Mô tả cách làm trên \& giải thích vì sao các đoạn thẳng $AC,CD,DB$ bằng nhau? (b) Bằng cách tương tự, chia đoạn thẳng $AB$ cho trước thành $5$ đoạn bằng nhau. Hỏi có cách nào khác với cách làm như trên mà vẫn có thể chia đoạn thẳng $AB$ cho trước thành $5$ đoạn thẳng bằng nhau?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Cách làm: Vẽ đường thẳng $a\parallel AB$. Trên $a$, lấy 4 điểm $P,E,F,Q$ theo thứ tự đó sao cho $PE = EF = FQ = 1$. Lấy $O$ là giao điểm của $AQ,BP$. Lấy $C,D$ lần lượt là giao điểm của $OE,OF$ với đoạn $AB$. Vì $a\parallel AB$, theo hệ quả \ref{col: Thales} của định lý Thales: $\frac{AC}{FQ} = \frac{CD}{EF} = \frac{DB}{PE}\Leftrightarrow\frac{AC}{1} = \frac{CD}{1} = \frac{DB}{1}\Leftrightarrow AC = CD = DB$. (b) Tương tự (a), cách làm thứ nhất: Vẽ đường thẳng $a\parallel AB$. Trên $a$, lấy 6 điểm $A_1,A_2,A_3,A_4,A_5,A_6$ theo thứ tự đó sao cho $A_1A_2 = A_2A_3 = A_3A_4 = A_4A_5 = A_5A_6 = 1$. Lấy $O$ là giao điểm của $AA_6,BA_1$. Với $i = 2,3,4,5$, lấy $B_i$ lần lượt là giao điểm của $OA_i$ với đoạn $AB$. Vì $a\parallel AB$, theo hệ quả \ref{col: Thales} của định lý Thales: $\frac{AB_5}{A_5A_6} = \frac{B_4B_5}{A_4A_5} = \frac{B_3B_4}{A_3A_4} = \frac{B_2B_3}{A_2A_3} = \frac{BB_2}{A_1A_2}\Leftrightarrow\frac{AB_5}{1} = \frac{B_4B_5}{1} = \frac{B_3B_4}{1} = \frac{B_2B_3}{1} = \frac{BB_2}{1}\Leftrightarrow AB_5 = B_4B_5 = B_3B_4 = B_2B_3 = BB_2$.
+\end{proof}
+
+\begin{nhanxet}
+	Hoàn toàn tương tự, với $n\in\mathbb{N}^\star$ cho trước, ta có thể chia đoạn thẳng $AB$ thành $n$ đoạn thẳng bằng nhau. Cách làm: Vẽ đường thẳng $a\parallel AB$. Trên $a$, lấy $n+1$ điểm $A_i$, $i = 1,2,\ldots,n,n+1$, theo thứ tự đó sao cho $A_1A_2 = A_2A_3 = \ldots = A_{n-1}A_n = A_nA_{n+1} = 1$. Lấy $O$ là giao điểm của $AA_{n+1},BA_1$. Với $i = 2,3,\ldots,n$, lấy $B_i$ lần lượt là giao điểm của $OA_i$ với đoạn $AB$. Vì $a\parallel AB$, theo hệ quả \ref{col: Thales} của định lý Thales: $\frac{AB_n}{A_nA_{n+1}} = \frac{B_{n-1}B_n}{A_{n-1}A_n} = \cdots = \frac{B_2B_3}{A_2A_3} = \frac{BB_2}{A_1A_2}\Leftrightarrow\frac{AB_n}{1} = \frac{B_{n-1}B_n}{1} = \cdots = \frac{B_2B_3}{1} = \frac{BB_2}{1}\Leftrightarrow AB_n = B_{n-1}B_n = B_{n-2}B_{n-1} = \cdots = B_2B_3 = BB_2$.
+\end{nhanxet}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 9., p. 63]
+	Cho $\Delta ABC$ \& $D\in AB$ sao cho $AD = 13.5$\emph{cm}, $BD = 4.5$\emph{cm}. Tính tỷ số các khoảng cách từ các điểm $D$ \& $B$ đến cạnh $AC$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi $H,K$ lần lượt là chân đường vuông góc hạ từ $B,D$ xuống $AC$. Vì $BH\bot AC$ \& $DK\bot AC\Rightarrow BH\parallel DK$, theo hệ quả \ref{col: Thales} của định lý Thales: $\frac{DK}{BH} = \frac{AD}{AB}\Leftrightarrow\frac{DK}{BH} = \frac{13.5}{13.5 + 4.5} = \frac{3}{4}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 10., p. 63]
+	$\Delta ABC$ có đường cao $AH$. Đường thẳng $d$ song song với $BC$, cắt các cạnh $AB,AC$, \& đường cao $AH$ theo thứ tự tại các điểm $B',C'$, \& $H'$. (a) Chứng minh: $\frac{AH'}{AH} = \frac{B'C'}{BC}$. (b) Áp dụng: Cho biết $AH' = \frac{1}{3}AH$ \& diện tích $\Delta ABC$ là $67.5{\rm cm}^2$. Tính diện tích $\Delta AB'C'$.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_8_16}
+	\end{figure}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 11., p. 63]
+	$\Delta ABC$ có $BC = 15$\emph{cm}. Trên đường cao $AH$ lấy các điểm $I,K$ sao cho $AK = KI = IH$. Qua $I,K$ vẽ các đường $EF\parallel BC$, $MN\parallel BC$. (a) Tính độ dài các đoạn thẳng $MN,EF$. (b) Tính diện tích tứ giác $MNFE$ biết diện tích $\Delta ABC$ là $270{\rm cm}^2$.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_8_17}
+	\end{figure}
+\end{baitoan}
+\noindent\textit{Bài tập phụ thuộc hình vẽ}: \cite[12.--13., p. 64]{SGK_Toan_8_tap_2}.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 11., p. 64]
+	Cho 3 đoạn thẳng có độ dài là $m,n,p$ (cùng đơn vị đo). Dựng đoạn thẳng có độ dài $x$ sao cho: (a) $\frac{x}{m} = 2$; (b) $\frac{x}{n} = \frac{2}{3}$; (c) $\frac{m}{x} = \frac{n}{p}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 6., p. 84]
+	Cho $\Delta ABC$ có cạnh $BC = a$. Trên cạnh $AB$ lấy các điểm $D,E$ sao cho $AD = DE = EB$. Từ $D,E$ kẻ các đường thẳng song song với $BC$, cắt cạnh $AC$ theo thứ tự tại $M,N$. Tính $DM,EN$ theo $a$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 7., p. 84]
+	Cho hình thang $MNCB$, $MN\parallel BC$, 2 đường chéo $MC,BN$ cắt nhau tại $A$. Biết $AM = 16$\emph{cm}, $AN = 10$\emph{cm}, $AB = 25$\emph{cm}, $BC = 45$\emph{cm}. Tính $MN,AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 8., p. 84]
+	Cho $\Delta ABC$ vuông tại $A$, $M,N$ lần lượt nằm trên $AB,AC$ sao cho $MN\parallel BC$. Biết $AB = 24$\emph{cm}, $AM = 16$\emph{cm}, $AN = 12$\emph{cm}. Tính $BC,CN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 9., p. 84]
+	Hình thang $ABCD$, $AB\parallel CD$, có 2 đường chéo $AC,BD$ cắt nhau tại $O$. Chứng minh $OA\cdot OD = OB\cdot OC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 10., p. 84]
+	Cho hình thang $ABCD$, $AB\parallel CD$. Đường thẳng song song với đáy $AB$ cắt các cạnh bên \& các đường chéo $AD,BD,AC,BC$ theo thứ tự tại các điểm $M,N,P,Q$. Chứng minh $MN = PQ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 11., p. 85]
+	Cho hình thang $ABCD$, $AB\parallel CD$. Trên cạnh bên $AD$ lấy điểm $E$ sao cho $\frac{AE}{ED} = \frac{p}{q}$. Qua $E$ kẻ đường thẳng song song với đáy \& cắt $BC$ tại $F$. Chứng minh $EF = \frac{pCD + qAB}{p + q}$.
+\end{baitoan}
+\noindent\textit{Hint.} Kẻ thêm đường chéo $AC$, cắt $EF$ ở $I$, rồi áp dụng hệ quả của định lý Thales vào $\Delta ADC,\Delta CAB$.
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 12., p. 85]
+	Hình thang cân $ABCD$, $AB\parallel CD$, có 2 đường chéo $AC,BD$ cắt nhau tại $O$. Gọi $M,N$ theo thứ tự là trung điểm của $BD,AC$. Biết $MD = 3MO$, đáy lớn $CD = 5.6$\emph{cm}. (a) Tính $MN,AB$. (b) So sánh $MN$ với nửa hiệu các độ dài của $CD,AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 13., p. 85]
+	Cho hình thang $ABCD$, $AB\parallel CD$, $AB < CD$. Gọi trung điểm của các đường chéo $AC,BD$ thứ tự là $N,M$. Chứng minh: (a) $MN\parallel AB$; (b) $MN = \frac{CD - AB}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 14., p. 85]
+	Hình thang $ABCD$, $AB\parallel CD$, có 2 đường chéo $AC,BD$ cắt nhau tại $O$. Đường thẳng qua $O$ \& song song với đáy $AB$ cắt các cạnh bên $AD,BC$ theo thứ tự tại $M,N$. Chứng minh $OM = ON$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 15., p. 86]
+	Cho trước 3 đoạn thẳng có độ dài tương ứng là $m,n,p$. Dựng đoạn thẳng thứ 4 có độ dài $q$ sao cho $\frac{m}{n} = \frac{p}{q}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 16., p. 86]
+	Cho 3 đoạn thẳng $AB = 3$\emph{cm}, $CD = 5$\emph{cm}, $EF = 2$\emph{cm}. Dựng đoạn thẳng thứ 4 có độ dài $a$ sao cho $\frac{AB}{CD} = \frac{EF}{a}$ hay $\frac{3}{5} = \frac{2}{a}$. Tính giá trị của $a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 2.1., p. 86]
+	Cho hình thang $ABCD$, $AB\parallel CD$, có 2 đường chéo $AC,BD$ cắt nhau tại $O$. 1 đường thẳng qua $O$ cắt 2 cạnh $AB,CD$ lần lượt tại $M,N$. Biết $BM = 1$\emph{cm}, $OB = 1.5$\emph{cm}, $OD = 4.5$\emph{cm}, $ON = 5$\emph{cm}. Tính $MO,NO$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 2.2., p. 86]
+	$\Delta ABC$ có 2 đường trung tuyến $BM,CN$ cắt nhau tại $O$. Chứng minh: $OM\cdot OC = ON\cdot OB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 2.3., p. 86]
+	Hình thang $ABCD$, $AB\parallel CD$, có 2 đường chéo $AC,BD$ cắt nhau tại $O$. Gọi $M,K,N,H$ lần lượt là chân đường vuông góc hạ từ $O$ xuống các cạnh $AB,BC,CD,DA$. Chứng minh: (a) $\frac{OM}{ON} = \frac{AB}{CD}$; (b) $\frac{OH}{OK} = \frac{BC}{AD}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Chất Đường Phân Giác của Tam Giác}
+
+\begin{dinhly}
+	Trong tam giác, đường phân giác của 1 góc chia cạnh đối diện thành 2 đoạn thẳng tỷ lệ với 2 cạnh kề 2 đoạn ấy.
+\end{dinhly}
+GT: $\Delta ABC$, $AD$ là tia phân giác của $\widehat{BAC}$, $D\in BC$. KL: $\frac{DB}{DC} = \frac{AB}{AC}$. Định lý vẫn đúng đối với tia phân giác của  góc ngoài của tam giác.
+
+\begin{proof}[1st chứng minh]
+	Qua đỉnh $B$ vẽ đường thẳng song song với $AC$, cắt đường thẳng $AD$ tại điểm $E$. Có: $\widehat{BAE} = \widehat{CAE}$ (giả thiết). $BE\parallel AC\Rightarrow\widehat{BEA} = \widehat{CAE}$ (so le trong). Suy ra $\widehat{BAE} = \widehat{BEA}$. Do đó $\Delta ABE$ cân tại $B$, suy ra $BE = AB$ (1). Áp dụng hệ quả \ref{col: Thales} của định lý Thales đối với $\Delta DAC$: $\frac{DB}{DC} = \frac{BE}{AC}$ (2). Từ (1) \& (2) suy ra $\frac{DB}{DC} = \frac{AB}{AC}$.
+\end{proof}
+Cách chứng minh sau dựa vào công thức lượng giác tính diện tích tam giác.
+\begin{proof}[2nd chứng minh]
+	Gọi $AH$ là đường cao của $\Delta ABC$ ứng với cạnh $BC$, $H\in BC$. Có $\frac{S_{\Delta ABD}}{S_{\Delta ACD}} = \frac{\frac{1}{2}BD\cdot AH}{\frac{1}{2}CD\cdot AH} = \frac{DB}{DC}$. Cũng có:
+	\begin{align*}
+		\frac{S_{\Delta ABD}}{S_{\Delta ACD}} = \frac{\frac{1}{2}AD\cdot AB\sin\widehat{DAB}}{\frac{1}{2}AD\cdot AC\sin\widehat{DAC}} = \frac{\frac{1}{2}AD\cdot AB\sin\frac{\widehat{A}}{2}}{\frac{1}{2}AD\cdot AC\sin\frac{\widehat{A}}{2}} = \frac{AB}{AC}.
+	\end{align*}
+	Kết hợp 2 đẳng thức trên suy ra $\frac{DB}{DC} = \frac{AB}{AC}$.
+\end{proof}
+Cách chứng minh thứ 2 cho ta 1 kết quả tổng quát hơn khi $AD$ không phải là tia phân giác:
+
+\begin{baitoan}
+	Cho $\Delta ABC$, $D\in BC$. Chứng minh $\frac{DB}{DC} = \frac{AB\sin\widehat{DAB}}{AC\sin\widehat{DAC}}$.
+\end{baitoan}
+
+\begin{proof}[Chứng minh]
+	Gọi $AH$ là đường cao của $\Delta ABC$ ứng với cạnh $BC$, $H\in BC$. Có $\frac{S_{\Delta ABD}}{S_{\Delta ACD}} = \frac{\frac{1}{2}BD\cdot AH}{\frac{1}{2}CD\cdot AH} = \frac{DB}{DC}$. Cũng có:
+	\begin{align*}
+		\frac{S_{\Delta ABD}}{S_{\Delta ACD}} = \frac{\frac{1}{2}AD\cdot AB\sin\widehat{DAB}}{\frac{1}{2}AD\cdot AC\sin\widehat{DAC}} = \frac{AB\sin\widehat{DAB}}{AC\sin\widehat{DAC}}.
+	\end{align*}
+	Kết hợp 2 đẳng thức trên suy ra $\frac{DB}{DC} = \frac{AB\sin\widehat{DAB}}{AC\sin\widehat{DAC}}$.
+\end{proof}
+\noindent\textit{Bài tập phụ thuộc hình vẽ}: \cite[?2--?3, 15. p. 67]{SGK_Toan_8_tap_2}.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 16., p. 67]
+	$\Delta ABC$ có độ dài các cạnh $AB = m$, $AC = n$, \& $AD$ là đường phân giác. Chứng minh tỷ số diện tích của $\Delta ABD$ \& diện tích của $\Delta ACD$ bằng $\frac{m}{n}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 17., p. 68]
+	Cho $\Delta ABC$ với đường trung tuyến $AM$. Tia phân giác của góc $AMB$ cắt cạnh $AB$ ở $D$, tia phân giác của góc $AMC$ cắt cạnh $AC$ ở $E$. Chứng minh $DE\parallel BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 18., p. 68]
+	$\Delta ABC$ có $AB = 5$\emph{cm}, $AC = 6$\emph{cm}, \& $BC = 7$\emph{cm}. Tia phân giác của góc $BAC$ cắt cạnh $BC$ tại $E$. Tính các đoạn $EB,EC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 19., p. 68]
+	Cho hình thang $ABCD$, $AB\parallel CD$. Đường thẳng $a$ song song với $DC$, cắt các cạnh $AD,BC$ theo thứ tự tại $E,F$. Chứng minh: (a) $\frac{AE}{ED} = \frac{BF}{FC}$; (b) $\frac{AE}{AD} = \frac{BF}{BC}$; (c) $\frac{DE}{DA} = \frac{CF}{CB}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 20., p. 68]
+	Cho hình thang $ABCD$, $AB\parallel CD$. 2 đường chéo $AC,BD$ cắt nhau tại $O$. Đường thẳng $a$ qua $O$ \& song song với đáy của hình thang cắt các cạnh bên $AD,BC$ theo thứ tự tại $E,F$. Chứng minh $OE = OF$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 21., p. 68]
+	(a) Cho $\Delta ABC$ với đường trung tuyến $AM$ \& đường phân giác $AD$. Tính diện tích $\Delta ADM$ biết $AB = m$, $AC = n$, $n > m$, \& diện tích của $\Delta ABC$ là $S$. (b) Cho $n = 7$\emph{cm}, $m = 3$\emph{cm}, hỏi diện tích $\Delta ADM$ chiếm bao nhiêu \% diện tích $\Delta ABC$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 22., p. 68]
+	Cho $A,B,C,D,E,F,G$ thẳng hàng theo thứ tự đó \& $O$ nằm ngoài đường thằng chứa $7$ điểm đó sao cho $\widehat{OAB} = \widehat{OBC} = \widehat{OCD} = \widehat{ODE} = \widehat{OEF} = \widehat{OFG}$. Đặt $OA = a, OB = b, OC = c, OD = d, OE = e, OF = f, OG = g, AB = x, BC = y, CD = z, DE = t, EF = u, FG = v$. Thiết lập những tỷ lệ thức từ các kích thước đã cho.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 17., p. 87]
+	$\Delta ABC$ có $AB = 15$\emph{cm}, $AC = 20$\emph{cm}, $BC = 25$\emph{cm}. Đường phân giác góc $BAC$ cắt cạnh $BC$ tại $D$. (a) Tính $DB,DC$. (b) Tính tỷ số diện tích của $\Delta ABD,\Delta ACD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 18., p. 87]
+	$\Delta ABC$ có các đường phân giác $AD,BE,CF$. Chứng minh: $\frac{DB}{DC}\cdot\frac{EC}{EA}\cdot\frac{FA}{FB} = 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 19., p. 87]
+	$\Delta ABC$ cân tại $B$ có $BA = BC = a$, $AC = b$. Đường phân giác góc $A$ cắt $BC$ tại $M$, đường phân giác góc $C$ cắt $BA$ tại $N$. (a) Chứng minh $MN\parallel AC$. (b) Tính $MN$ theo $a,b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 20., p. 87]
+	$\Delta ABC$ có $AB = 12$\emph{cm}, $AC = 20$\emph{cm}, $BC = 28$\emph{cm}. Đường phân giác góc $A$ cắt $BC$ tại $D$. Qua $D$ kẻ $DE\parallel AB$, $E\in AC$. (a) Tính  $BD,CD,DE$. (b) Cho biết diện tích $\Delta ABC$ là $S$, tính diện tích $\Delta ABD,\Delta ADE,\Delta DCE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 21., p. 88]
+	Cho tam giác vuông $ABC$, $\widehat{A} = 90^\circ$, $AB = 21$\emph{cm}, $AC = 28$\emph{cm}; đường phân giác góc $A$ cắt $BC$ tại $D$, đường thẳng qua $D$ \& song song với $AB$, cắt $AC$ tại $E$. (a) Tính $BD,CD,DE$. (b) Tính diện tích $\Delta ABD$ \& $\Delta ACD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 22., p. 88]
+	Cho $\Delta ABC$ cân tại $A$, $AB = AC$, đường phân giác góc $B$ cắt $AC$ tại $D$ \& biết $AB = 15$\emph{cm}, $BC = 10$\emph{cm}. (a) Tính $AD,CD$. (b) Đường vuông góc với $BD$ tại $B$ cắt đường thẳng $AC$ kéo dài tại $E$. Tính $EC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 23., p. 88]
+	$\Delta ABC$ vuông tại $A$, $AB = 12$\emph{cm}, $AC = 16$\emph{cm}; đường phân giác góc $A$ cắt $BC$ tại $D$. (a) Tính $BC,BD,CD$. (b) Vẽ đường cao $AH$, tính $AH,DH,AD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 24., p. 88]
+	$\Delta ABC$ vuông tại $A$, $AB = a$\emph{cm}, $AC = b$\emph{cm}, $a < b$, trung tuyến $AM$, đường phân giác $AD$, $M,D\in BC$. (a) Tính $BC,BD,CD,AM,DM$ theo $a,b$. (b) Tính $BC,BD,CD,AM,DM$ khi $a = 4.15$\emph{cm}, $b = 7.25$\emph{cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 3.1., p. 89]
+	$\Delta ABC$ vuông tại $A$ có đường phân giác $AD$. Biết độ dài của các cạnh góc vuông $AB = 3.75$\emph{cm}, $AC = 4.5$\emph{cm}. Tính $BD,CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 3.2., p. 89]
+	Hình bình hành $ABCD$ có độ dài cạnh $AB = a = 12.5$\emph{cm}, $BC = b = 7.25$\emph{cm}. Đường phân giác của góc $B$ cắt đường chéo $AC$ tại $E$, đường phân giác của góc $D$ cắt đường chéo $AC$ tại $F$. Tính $AC$ biết $EF = m = 3.45$\emph{cm}.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Khái Niệm 2 Tam Giác Đồng Dạng}
+
+\begin{dinhnghia}[2 tam giác đồng dạng]
+	$\Delta A'B'C'$ gọi là \emph{đồng dạng} với $\Delta ABC$ nếu: $\widehat{A'} = \widehat{A}$, $\widehat{B'} = \widehat{B}$, $\widehat{C'} = \widehat{C}$, $\frac{A'B'}{AB} = \frac{B'C'}{BC} = \frac{C'A'}{CA}$.
+\end{dinhnghia}
+$\Delta A'B'C'$ đồng dạng với $\Delta ABC$ được ký hiệu là $\Delta A'B'C'\backsim\Delta ABC$ (viết theo thứ tự cặp đỉnh tương ứng). Tỷ số các cạnh tương ứng $\frac{A'B'}{AB} = \frac{B'C'}{BC} = \frac{C'A'}{CA} = k$ gọi là \textit{tỷ số đồng dạng}.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?2., p. 70]
+	(a) Nếu $\Delta A'B'C'\backsim\Delta ABC$ thì $\Delta A'B'C'$ có đồng dạng với $\Delta ABC$ không? Tỷ số đồng dạng là bao nhiêu? (b) Nếu $\Delta A'B'C'\backsim\Delta ABC$ theo tỷ số $k$ thì $\Delta ABC\backsim\Delta A'B'C'$ theo tỷ số nào?
+\end{baitoan}
+
+\begin{dinhly}[Tính chất 2 tam giác đồng dạng]
+	(a) Mỗi tam giác đồng dạng với chính nó với tỷ số đồng dạng $k = 1$. (b) Nếu $\Delta ABC\backsim\Delta A'B'C'$ với tỷ số đồng dạng $k$ thì $\Delta A'B'C'\backsim\Delta ABC$ với tỷ số đồng dạng $\frac{1}{k}$. (c) Nếu $\Delta ABC\backsim\Delta A'B'C'$ với tỷ số đồng dạng $k'$ \& $\Delta A'B'C'\backsim\Delta A"B"C"$ với tỷ số đồng dạng $k''$ thì $\Delta ABC\backsim\Delta A"B"C"$ với tỷ số đồng dạng $k = k'k"$.
+\end{dinhly}
+Do tính chất (b) ta nói $\Delta ABC$ \& $\Delta A'B'C'$ \textit{đồng dạng (với nhau)}.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?3., p. 70]
+	Cho $\Delta ABC$. Kẻ đường thẳng $a$ song song với cạnh $BC$ \& cắt 2 cạnh $AB,AC$ theo thứ tự tại $M,N$. $\Delta AMN$ \& $\Delta ABC$ có các góc \& các cạnh tương ứng như thế nào?
+\end{baitoan}
+
+\begin{dinhly}
+	Nếu 1 đường thẳng cắt 2 cạnh của tam giác \& song song với cạnh còn lại thì nó tạo thành 1 tam giác mới đồng dạng với tam giác đã cho.
+\end{dinhly}
+GT: $\Delta ABC$, $MN\parallel BC$, $M\in AB$, $N\in AC$. KL: $\Delta AMN\backsim\Delta ABC$. Định lý cũng đúng cho trường hợp đường thẳng $a$ cắt phần kéo dài 2 cạnh của tam giác \& song song với cạnh còn lại.
+
+\begin{proof}[Chứng minh]
+	Xét $\Delta ABC$ \& $MN\parallel BC$. $\Delta AMN$ \& $\Delta ABC$ cos: $\widehat{AMN} = \widehat{ABC}$, $\widehat{ANM} = \widehat{ACB}$ (các cặp góc đồng vị); $\widehat{BAC}$ là góc chung. Mặt khác, theo hệ quả \ref{col: Thales} của định lý Thales, $\Delta AMN$ \& $\Delta ABC$ có 3 cặp cạnh tương ứng tỷ lệ: $\frac{AM}{AB} = \frac{AN}{AC} = \frac{MN}{BC}$. Vậy $\Delta AMN\backsim\Delta ABC$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 23., p. 71]
+	\emph{Đ\texttt{/}S?} (a) 2 tam giác bằng nhau thì đồng dạng với nhau. (b) 2 tam giác đồng dạng với nhau thì bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 24., p. 72]
+	$\Delta A'B'C'\backsim\Delta A"B"C"$ theo tỷ số đồng dạng $k_1$, $\Delta A"B"C"\backsim\Delta ABC$ theo tỷ số đồng dạng $k_2$. Hỏi $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ theo tỷ số nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 25., p. 72]
+	Cho $\Delta ABC$. Vẽ 1 tam giác đồng dạng với $\Delta ABC$ theo tỷ số $\frac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 26., p. 72]
+	Cho $\Delta ABC$, vẽ $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ theo tỷ số đồng dạng $k = \frac{2}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 27., p. 72]
+	Từ điểm $M$ thuộc cạnh $AB$ của $\Delta ABC$ với $AM = \frac{1}{2}MB$, kẻ các tia song song với $AC,BC$, chúng cắt $BC,AC$ lần lượt tại $L,N$. (a) Nêu tất cả các cặp tam giác đồng dạng. (b) Đối với mỗi cặp tam giác đồng dạng, viết các cặp góc bằng nhau \& tỷ số đồng dạng tương ứng.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 28., p. 72]
+	$\Delta A'B'C'\backsim\Delta ABC$ theo tỷ số đồng dạng $k = \frac{3}{5}$. (a) Tính tỷ số chu vi của 2 tam giác đã cho. (b) Tính tỷ số diện tích của 2 tam giác đã cho. (c) Cho biết hiệu chu vi của 2 tam giác trên là $40$\emph{dm}, tính chu vi của mỗi tam giác.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 25., p. 89]
+	Cho $\Delta A'B'C',\Delta ABC$ đồng dạng với nhau theo tỷ số $k$. Chứng minh tỷ số chu vi của 2 tam giác cũng bằng $k$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 26., p. 89]
+	$\Delta ABC$ có $AB = 3$\emph{cm}, $BC = 5$\emph{cm}, $CA = 7$\emph{cm}. $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ có cạnh nhỏ nhất là $4.5$\emph{cm}. Tính các cạnh còn lại của $\Delta A'B'C'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 27., p. 90]
+	Cho $\Delta ABC$ có $AB = 16.2$\emph{cm}, $BC = 24.3$\emph{cm}, $AC = 32.7$\emph{cm}. Tính độ dài các cạnh của $\Delta A'B'C'$ biết $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ \&: (a) $A'B'$ lớn hơn $AB$ $10.8$\emph{cm}; (b) $A'B'$ bé hơn $AB$ $5.4$\emph{cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 28., p. 90]
+	Hình thang $ABCD$, $AB\parallel CD$, có $CD = 2AB$. Gọi $E$ là trung điểm của $CD$. Chứng minh $\Delta ADE,\Delta ABE,\Delta BEC$ đồng dạng với nhau từng đôi một.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 4.1., p. 90]
+	$\Delta ABC$ có tổng độ dài 2 cạnh $AB + AC = 10.75$\emph{cm} \& đồng dạng với $\Delta A'B'C'$ có độ dài các cạnh $A'B' = 8.5$\emph{cm}, $A'C' = 7.35$\emph{cm}, $B'C' = 6.25$\emph{cm}. Tính chu vi $\Delta ABC$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Trường Hợp Đồng Dạng Thứ Nhất}
+
+\begin{dinhly}
+	Nếu 3 cạnh của tam giác này tỷ lệ với 3 cạnh của tam giác kia thì 2 tam giác đó đồng dạng.
+\end{dinhly}
+GT: $\Delta ABC,\Delta A'B'C'$, $\frac{A'B'}{AB} = \frac{A'C'}{AC} = \frac{B'C'}{BC}$ (1). KL: $\Delta A'B'C'\backsim\Delta ABC$.
+
+\begin{proof}[Chứng minh]
+	Đặt trên tia $AB$ đoạn thẳng $AM = A'B'$. Vẽ đường thẳng $MN\parallel BC$, $N\in AC$. Xét $\Delta AMN,\Delta ABC,\Delta A'B'C'$. $MN\parallel BC\Rightarrow\Delta AMN\backsim\Delta ABC\Rightarrow\frac{AM}{AB} = \frac{AN}{AC} = \frac{MN}{BC}$ (2). Từ (1) \& (2), với chú ý $AM = A'B'$, ta có $\frac{A'C'}{AC} = \frac{AN}{AC}$ \& $\frac{B'C'}{BC} = \frac{MN}{BC}$, suy ra $AN = A'C'$ \& $MN = B'C'$. $\Delta AMN$ \& $\Delta A'B'C'$ có 3 cạnh bằng nhau từng đôi một: $AM = A'B'$ (cách dựng), $AN = A'C'$, \& $MN = B'C'$ (theo chứng minh trên). Do đó $\Delta AMN = \Delta A'B'C'$ (c.c.c). $\Delta AMN = \Delta ABC\Rightarrow\Delta A'B'C'\backsim\Delta ABC$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 29., pp. 74--75]
+	Cho $\Delta ABC,\Delta A'B'C'$ có $AB = 6, BC = 12, CA = 9, A'B' = 4, B'C' = 8, C'A' = 6$. (a) $\Delta ABC$ \& $\Delta A'B'C'$ có đồng dạng với nhau không? Vì sao? (b) Tính tỷ số chu vi của 2 tam giác đó. (c) Tính tỷ số diện tích của 2 tam giác đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 30., p. 75]
+	$\Delta ABC$ có độ dài các cạnh là $AB = 3$\emph{cm}, $AC = 5$\emph{cm}, $BC = 7$\emph{cm}. $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ \& có chu vi bằng $55$\emph{cm}. Tính độ dài các cạnh của $\Delta A'B'C'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 31., p. 75]
+	Cho 2 tam giác đồng dạng có tỷ số chu vi là $\frac{15}{17}$ \& hiệu độ dài 2 cạnh tương ứng của chúng là $12.5$\emph{cm}. Tính 2 cạnh đó.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Giả sử 2 tam giác đó là $\Delta ABC,\Delta A'B'C'$, $\frac{P_{\Delta A'B'C'}}{P_{\Delta ABC}} = \frac{15}{17}$. Giả sử 2 cạnh đó là $AB,A'B'$. Vì $\frac{15}{17} < 1$, nên $A'B' < AB$. Theo giả thiết, $AB - A'B' = 12.5$ (1), \& $\frac{AB}{A'B'} = \frac{P_{\Delta A'B'C'}}{P_{\Delta ABC}} = \frac{15}{17}$ (2). Thay $A'B' = \frac{15}{17}AB$ vào phương trình (1): $AB - \frac{15}{17}AB = 12.5\Leftrightarrow AB = \frac{12.5}{1 - \frac{15}{17}} = 106.25$cm. Suy ra $A'B' = AB - 12.5 = 106.25 - 12.5 = 93.75$cm. Vậy 2 cạnh đó dài $93.75$cm, $106.25$cm.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 29., p. 90]
+	2 tam giác mà các cạnh có độ dài như sau có đồng dạng không? (a) $4$\emph{cm}, $5$\emph{cm}, $6$\emph{cm}, \& $8$\emph{mm}, $10$\emph{mm}, $12$\emph{mm}; (b) $3$\emph{cm}, $4$\emph{cm}, $6$\emph{cm}, \& $9$\emph{cm}, $15$\emph{cm}, $18$\emph{cm}; (c) $1$\emph{dm}, $2$\emph{dm}, $2$\emph{dm}, \& $1$\emph{dm}, $1$\emph{dm}, $0.5$\emph{dm}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(c) Vì $\frac{1}{0.5} = \frac{2}{1} = \frac{2}{1} = 2$ nên 2 tam giác đó đồng dạng.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 30., p. 90]
+	$\Delta ABC$ vuông tại $A$ có $AB = 6$\emph{cm}, $AC = 8$\emph{cm}, \& $\Delta A'B'C'$ vuông tại $A'$ có $A'B' = 9$\emph{cm}, $B'C' = 15$\emph{cm}. $\Delta ABC,\Delta A'B'C'$ có đồng dạng với nhau không? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 31., p. 90]
+	$\Delta ABC$ có 3 đường trung tuyến cắt nhau tại $O$. Gọi $P,Q,R$ thứ tự là trung điểm của các đoạn thẳng $OA,OB,OC$. Chứng minh $\Delta PQR$ đồng dạng với $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 32., p. 91]
+	$\Delta ABC$ có 3 góc nhọn \& có trực tâm là điểm $H$. Gọi $K,M,N$ lần lượt là trung điểm của $AH,BH,CH$. Chứng minh $\Delta KMN$ đồng dạng với $\Delta ABC$ với tỷ số đồng dạng $k = \frac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 33., p. 91]
+	Cho $\Delta ABC$ \& 1 điểm $O$ nằm trong tam giác đó. Gọi $P,Q,R$ lần lượt là trung điểm của $OA,OB,OC$. (a) Chứng minh $\Delta PQR$ đồng dạng với $\Delta ABC$. (b) Tính chu vi $\Delta PQR$ biết $\Delta ABC$ có chu vi $p$ bằng $543$\emph{cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 34., p. 91]
+	Cho trước $\Delta ABC$. Dựng 1 tam giác đồng dạng với $\Delta ABC$ theo tỷ số $k = \frac{2}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 5.1., p. 91]
+	2 tam giác nào có độ dài 3 cạnh sau đây đồng dạng với nhau? (a) $1.5$\emph{cm}, $2$\emph{cm}, $3$\emph{cm}, \& $4.5$\emph{cm}, $6$\emph{cm}, $9$\emph{cm}. (b) $2.5$\emph{cm}, $4$\emph{cm}, $5$\emph{cm}, \& $5$\emph{cm}, $12$\emph{cm}, $8$\emph{cm}. (c) $3.5$\emph{cm}, $6$\emph{cm}, $7$\emph{cm}, \& $15$\emph{cm}, $12$\emph{cm}, $7$\emph{cm}. (d) $2$\emph{cm}, $5$\emph{cm}, $6.5$\emph{cm}, \& $13$\emph{cm}, $10$\emph{cm}, $4$\emph{cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 5.2., p. 91]
+	Cho $\Delta ABC$ nhọn \& 1 điểm $O$ bất kỳ trong tam giác đó. 3 điểm $D,E,F$ theo thứ tự là trung điểm của $AB,BC,CA$. 3 điểm $M,P,Q$ theo thứ tự là trung điểm của $OA,OB,OC$. (a) $\Delta DEF,\Delta MPQ$ có đồng dạng với nhau không? Vì sao? Tỷ số đồng dạng? (b) Khi nào lục giác $DPEQFM$ có tất cả các cạnh bằng nhau? Vẽ hình trong trường hợp đó.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Trường Hợp Đồng Dạng Thứ 2}
+
+\begin{dinhly}
+	Nếu 2 cạnh của tam giác này tỷ lệ với 2 cạnh của tam giác kia \& 2 góc tạo bởi các cặp cạnh đó bằng nhau, thì 2 tam giác đồng dạng.
+\end{dinhly}
+GT: $\Delta ABC,\Delta A'B'C'$, $\frac{A'B'}{AB} = \frac{A'C'}{AC}$ (1), $\widehat{A'} = \widehat{A}$. KL: $\Delta A'B'C'\backsim\Delta ABC$.
+
+\begin{proof}[Chứng minh]
+	Trên tia $AB$, đặt đoạn thẳng $AM = A'B'$. Qua $M$ kẻ đường thẳng $MN\parallel BC$, $N\in AC$. Ta có $\Delta AMN\backsim\Delta ABC$, do đó $\frac{AM}{AB} = \frac{AN}{AC}$. Vì $AM = A'B'$, nên suy ra $\frac{A'B'}{AB} = \frac{AN}{AC}$. Từ (1) \& (2), suy ra $AN = A'C'$. $\Delta AMN$ \& $\Delta A'B'C'$ có $AM = A'B'$ (cách dựng), $\widehat{A} = \widehat{A'}$ (giả thiết), \& $AN = A'C'$ (chứng minh ở trên), nên chúng bằng nhau (c.g.c). Từ $\Delta AMN = \Delta A'B'C'$ suy ra $\Delta A'B'C'\backsim\Delta ABC$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?3, p. 77]
+	(a) Vẽ $\Delta ABC$ có $\widehat{BAC} = 50^\circ$, $AB = 5$\emph{cm}, $AC = 7.5$\emph{cm}. (b) Lấy trên các cạnh $AB,AC$ lần lượt 2 điểm $D,E$ sao cho $AD = 3$\emph{cm}, $AE = 2$\emph{cm}. $\Delta AED,\Delta ABC$ có đồng dạng với nhau không? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 32., p. 77]
+	Trên 1 cạnh của góc $xOy$, $\widehat{xOy}\ne180^\circ$, đặt các đoạn thẳng $OA = 5$\emph{cm}, $OB = 16$\emph{cm}. Trên cạnh thứ 2 của góc đó, đặt các đoạn thẳng $OC = 8$\emph{cm}, $OD = 10$\emph{cm}. (a) Chứng minh $\Delta OCB,\Delta OAD$ đồng dạng. (b) Gọi giao điểm của các cạnh $AD,BC$ là $I$, chứng minh $\Delta IAB,\Delta ICD$ có các góc bằng nhau từng đôi một.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 33., p. 77]
+	Chứng minh nếu $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ theo tỷ số $k$, thì tỷ số của 2 đường trung tuyến tương ứng của 2 tam giác đó cũng bằng $k$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 34., p. 77]
+	Dựng $\Delta ABC$ biết $\widehat{A} = 60^\circ$, tỷ số $\frac{AB}{AC} = \frac{4}{5}$, \& đường cao $AH = 6$\emph{cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 35., p. 92]
+	Cho $\Delta ABC$ có $AB = 12$\emph{cm}, $AC = 15$\emph{cm}, $BC = 18$\emph{cm}. Trên cạnh $AB$, đặt đoạn thẳng $AM = 10$\emph{cm}, trên cạnh $AC$ đặt đoạn thẳng $AN = 8$\emph{cm} Tính $MN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 36., p. 92]
+	Hình thang $ABCD$, $AB\parallel CD$, $AB = 4$\emph{cm}, $CD = 16$\emph{cm}, $BD = 8$\emph{cm}. Chứng minh $\widehat{BAD} = \widehat{DBC}$ \& $BC = 2AD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 37., p. 92]
+	Cho $\Delta ABC$ có $\widehat{A} = 60^\circ$, $AB = 6$\emph{cm}, $AC = 9$\emph{cm}. (a) Dựng tam giác đồng dạng với $\Delta ABC$ theo tỷ số đồng dạng $k = \frac{1}{3}$. (b) Nêu 1 vài cách dựng khác \& vẽ hình trong từng trường hợp cụ thể.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 38., p. 92]
+	Cho $\Delta ABC$ có $AB = 10$\emph{cm}, $AC = 20$\emph{cm}. Trên cạnh $AC$, đặt đoạn thẳng $AD = 5$\emph{cm}. Chứng minh $\widehat{ABD} = \widehat{ACB}$.
+\end{baitoan}
+\noindent\textit{Bài tập phụ thuộc vào hình vẽ}: \cite{SBT_Toan_8_tap_2}, 6.1., pp. 92--93.
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 6.2., p. 93]
+	Hình bình hành $ABCD$ có 2 đường chéo $AC,BD$ cắt nhau tại $O$ \& $AC = 2AB$. (a) Vẽ trung tuyến $BE$ của $\Delta ABO$. Chứng minh $\widehat{ABE} = \widehat{ACB}$. (b) Gọi $M$ là trung điểm cạnh $BC$, chứng minh $EM$ vuông góc với đường chéo $BD$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Trường Hợp Đồng Dạng Thứ 3}
+
+\begin{dinhly}
+	Nếu 2 góc của tam giác này lần lượt bằng 2 góc của tam giác kia thì 2 tam giác đó đồng dạng với nhau.
+\end{dinhly}
+GT: $\Delta ABC,\Delta A'B'C'$, $\widehat{A} = \widehat{A'}$, $\widehat{B} = \widehat{B'}$. KL: $\Delta ABC\backsim\Delta A'B'C'$.
+
+\begin{proof}[Chứng minh]
+	Đặt trên tia $AB$ đoạn thẳng $AM = A'B'$. Qua $M$ kẻ đường thẳng $MN\parallel BC$, $N\in AC$. $MN\parallel BC\Rightarrow\Delta AMN\backsim\Delta ABC$. Xét $\Delta AMN$ \& $\Delta A'B'C'$: $\widehat{A} = \widehat{A'}$ (giả thiết), $AM = A'B'$ (theo cách dựng), $\widehat{AMN} = \widehat{B}$ (2 góc đồng vị). Nhưng $\widehat{B} = \widehat{B'}$ (giả thiết), do đó $\widehat{AMN} = \widehat{B'}$. Vậy $\Delta AMN = \Delta A'B'C'$ (g.c.g), suy ra $\Delta A'B'C'\backsim\Delta ABC$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?2, p. 79]
+	Cho $\Delta ABC$, $AB = 3$\emph{cm}, $AC = 4.5$\emph{cm}, \& $\widehat{ABD} = \widehat{BCA}$. (a) Có bao nhiêu tam giác? Có cặp tam giác nào đồng dạng với nhau không? (b) Tính $AD,CD$. (c) Cho biết thêm $BD$ là tia phân giác của góc $B$. Tính độ dài các đoạn thẳng $BC,BD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 35., p. 79]
+	Chứng minh nếu $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ theo tỷ số $k$ thì tỷ số của 2 đường phân giác tương ứng của chúng cũng bằng $k$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 36., p. 79]
+	Cho hình thang $ABCD$, $AB\parallel CD$, $AB = 12.5$, $CD = 28.5$, $\widehat{DAB} = \widehat{DBC}$. Tính $BD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 37., p. 79]
+	Cho hình thang vuông $ACDE$, $\widehat{A} = \widehat{C} = 90^\circ$. Lấy $B\in AC$. Biết $AE = 10$\emph{cm}, $AB = 15$\emph{cm}, $BC = 12$\emph{cm}, $\widehat{ABE} = \widehat{BDC}$. (a) Có bao nhiêu tam giác vuông? Kể tên. (b) Tính $CD,BE,BD,DE$. (c) So sánh diện tích $\Delta BDE$ với tổng diện tích của $\Delta AEB$ \& $\Delta BCD$.
+\end{baitoan}
+\noindent\textit{Bài tập phụ thuộc hình vẽ}: \cite[38., p. 79]{SGK_Toan_8_tap_2}.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 39., pp. 79--80]
+	Cho hình thang $ABCD$, $AB\parallel CD$. Gọi $O$ là giao điểm của 2 đường chéo $AC,BD$. (a) Chứng minh $OA\cdot OD = OB\cdot OC$. (b) Đường thẳng qua $O$ vuông góc với $AB,CD$ theo thứ tự tại $H,K$. Chứng minh $\frac{OH}{OK} = \frac{AB}{CD}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 40., p. 80]
+	Cho $\Delta ABC$, trong đó $AB = 15$\emph{cm}, $AC = 20$\emph{cm}. Trên 2 cạnh $AB,AC$ lần lượt lấy 2 điểm $D,E$ sao cho $AD = 8$\emph{cm}, $AE = 6$\emph{cm}. $\Delta ABC,\Delta ADE$ có đồng dạng với nhau không? Vì sao?	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 41., p. 80]
+	Tìm các dấu hiệu để nhận biết 2 tam giác cân đồng dạng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 42., p. 80]
+	So sánh các trường hợp đồng dạng của tam giác với các trường hợp bằng nhau của tam giác (nên lên những điểm giống nhau \& khác nhau).
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 43., p. 80]
+	Cho hình bình hành $ABCD$ có $AB = 12$\emph{cm}, $BC = 7$\emph{cm}. Trên cạnh $AB$ lấy 1 điểm $E$ sao cho $AE = 8$\emph{cm}. Đường thẳng $DE$ cắt cạnh $CB$ kéo dài tại $F$. (a) Có bao nhiêu cặp tam giác đồng dạng với nhau? Viết các cặp tam giác đồng dạng với nhau theo các đỉnh tương ứng. (b) Tính $EF,BF$ biết $DE = 10$\emph{cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 44., p. 80]
+	Cho $\Delta ABC$, $AB = 24$\emph{cm}, $AC = 28$\emph{cm}. Tia phân giác của góc $A$ cắt cạnh $BC$ tại $D$. Gọi $M,N$ theo thứ tự là hình chiếu của $B,C$ trên đường thẳng $AD$. (a) Tính tỷ số $\frac{BM}{CN}$. (b) Chứng minh $\frac{AM}{AN} = \frac{DM}{DN}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 45., p. 80]
+	$\Delta ABC,\Delta DEF$ có $\widehat{A} = \widehat{D}, \widehat{B} = \widehat{E}, AB = 8$\emph{cm}, $BC = 10$\emph{cm}, $DE = 6$\emph{cm}. Tính $AC,DF,EF$ biết $AC$ dài hơn $DF$ $3$\emph{cm}.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 39., p. 93]
+	Cho hình bình hành $ABCD$. Gọi $E$ là trung điểm của $AB$, $F$ là trung điểm của $CD$. Chứng minh $\Delta ADE,\Delta CBF$ đồng dạng với nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 40., p. 93]
+	Tam giác vuông $ABC$ có $\widehat{A} = 90^\circ$ \& đường cao $AH$. Từ điểm $H$ hạ đường $HK$ vuông góc với $AC$. (a) Hỏi trong hình đã cho có bao nhiêu tam giác đồng dạng với nhau? (b) Viết các cặp tam giác đồng dạng với nhau theo thứ tự các đỉnh tương ứng \& tỷ lệ thức giữa các cặp cạnh tương ứng của chúng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 41., p. 94]
+	 Hình thang $ABCD$, $AB\parallel CD$, có $AB = 2.5$\emph{cm}, $AD = 3.5$\emph{cm}, $BD = 5$\emph{cm} \& $\widehat{DAB} = \widehat{DBC}$. (a) Chứng minh $\Delta ADB\backsim\Delta BCD$. (b) Tính độ dài các cạnh $BC,CD$. (c) Sau khi tính, vẽ lại hình chính xác bằng thước \& compa.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 42., p. 94]
+	Cho tam giác vuông $ABC$, $\widehat{A} = 90^\circ$. Dựng $AD$ vuông góc với $BC$, $D\in BC$. Đường phân giác $BE$ căt $AD$ tại $F$. Chứng minh $\frac{FD}{FA} = \frac{EA}{EC}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 43., p. 94]
+	Chứng minh nếu $\Delta ABC,\Delta A'B'C'$ đồng dạng với nhau thì: (a) Tỷ số của 2 đường phân giác tương ứng bằng tỷ số đồng dạng. (b) Tỷ số của 2 trung tuyến tương ứng bằng tỷ số đồng dạng.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 7.1., p. 94]
+	$\Delta ABC$ có 2 đường cao $AD,BE$ cắt nhau tại $H$. Đếm số cặp tam giác đồng dạng với nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 7.2., p. 94]
+	Hình thang vuông, $AB\parallel CD$, có đường chéo $BD$ vuông góc với cạnh $BC$ tại $B$ \& có độ dài $BD = m = 7.25$\emph{cm}. Tính độ dài các cạnh của hình thang biết $BC = n = 10.75$\emph{cm}.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Các Trường Hợp Đồng Dạng của Tam Giác Vuông}
+
+\begin{dinhly}[2 tam giác vuông đồng dạng]
+	2 tam giác vuông đồng dạng với nhau nếu: (a) Tam giác vuông này có 1 góc nhọn bằng góc nhọn của tam giác vuông kia; hoặc (b) Tam giác vuông này có 2 cạnh góc vuông tỷ lệ với 2 cạnh góc vuông của tam giác vuông kia; hoặc (c) Nếu cạnh huyền \& 1 cạnh góc vuông của tam giác vuông này tỷ lệ với cạnh huyền \& cạnh góc vuông của tam giác vuông kia thì 2 tam giác vuông đó đồng dạng.
+\end{dinhly}
+GT: $\Delta ABC$, $\Delta A'B'C'$, $\widehat{A'} = \widehat{A} = 90^\circ$, $\frac{B'C'}{BC} = \frac{A'B'}{AB}$ (1). KL: $\Delta ABC\backsim\Delta A'B'C'$.
+
+\begin{proof}[Chứng minh]
+	Từ giả thiết (1), bình phương 2 vế, ta được: $\frac{B'C'^2}{BC^2} = \frac{A'B'^2}{AB^2}$. Theo tính chất của dãy tỷ số bằng nhau, ta có: $\frac{B'C'^2}{BC^2} = \frac{A'B'^2}{AB^2} = \frac{B'C'^2 - A'B'^2}{BC^2 - AB^2} = \frac{A'C'^2}{AC^2}$ (đẳng thức cuối suy ra từ định lý Pythagore). Lấy căn bậc 2, thu được: $\frac{B'C'}{BC} = \frac{A'B'}{AB} = \frac{A'C'}{AC}$. Vậy $\Delta A'B'C'\backsim\Delta ABC$ (c.c.c).
+\end{proof}
+
+\begin{dinhly}
+	\label{thm: heights of similar triangles}
+	Tỷ số 2 đường cao tương ứng của 2 tam giác đồng dạng bằng tỷ số đồng dạng.
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	Cho $\Delta ABC\backsim\Delta A'B'C'$ với tỷ số đồng dạng $k = \frac{AB}{A'B'}$, 2 đường cao tương ứng là $AH,A'H'$. Xét $\Delta ABH,\Delta A'B'H'$: $\widehat{B} = \widehat{B'}$ (vì $\Delta ABC\backsim\Delta A'B'C'$), $\widehat{AHB} = \widehat{A'H'B'} = 90^\circ$. Suy ra $\Delta ABH\backsim\Delta A'B'H'$ (g.g.g), suy ra $\frac{AH}{A'H'} = \frac{AB}{A'B'} = k$.
+\end{proof}
+
+\begin{dinhly}
+	Tỷ số diện tích của 2 tam giác đồng dạng bằng bình phương tỷ số đồng dạng.
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	Cho $\Delta ABC\backsim\Delta A'B'C'$ với tỷ số đồng dạng $k = \frac{AB}{A'B'}$, 2 đường cao tương ứng là $AH,A'H'$. Theo định lý \ref{thm: heights of similar triangles}, $\frac{AH}{A'H'} = k$. Suy ra $\frac{S_{\Delta ABC}}{S_{\Delta A'B'C'}} = \frac{\frac{1}{2}AH\cdot BC}{\frac{1}{2}A'H'\cdot B'C'} = \frac{AH}{A'H'}\cdot\frac{BC}{B'C'} = k\cdot k = k^2$.
+\end{proof}
+46., p. 84.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 47., p. 84]
+	$\Delta ABC$ có độ dài các cạnh là $3$\emph{cm}, $4$\emph{cm}, $5$\emph{cm}. $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ \& có diện tích là $54{\rm cm}^2$. Tính độ dài các cạnh $\Delta A'B'C'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 48., p. 84]
+	Bóng của 1 cột điện trên mặt đất có độ dài $4.5$\emph{m}. Cùng thời điểm đó, 1 thanh sắt cao $2.1$\emph{m} cắm vuông góc với mặt đất có bóng dài $0.6$\emph{m}. Tính chiều cao của cột điện.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 49., p. 84]
+	Cho $\Delta ABC$ vuông ở $A$ \& có đường cao $AH$, $AB = 12.45$\emph{cm}, $AC = 20.5$\emph{cm}. (a) Có bao nhiêu cặp tam giác đồng dạng với nhau (chỉ rõ từng cặp tam giác đồng dạng \& viết theo các đỉnh tương ứng). (b) Tính $BC,AH,BH,CH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 50., p. 84]
+	Bóng của 1 ống khói nhà máy trên mặt đất có độ dài là $36.9$\emph{m}. Cùng thời điểm đó, 1 thanh sắt cao $2.1$\emph{m} cắm vuông góc với mặt đất có bóng dài $1.62$\emph{m}. Tính chiều cao của ống khói.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 51., p. 84]
+	Chân đường cao $AH$ của tam giác vuông $ABC$ chia cạnh huyền $BC$ thành 2 đoạn thẳng có độ dài $25$\emph{cm} \& $36$\emph{cm}. Tính chu vi \& diện tích của tam giác vuông đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 52., p. 85]
+	Cho 1 tam giác vuông, trong đó cạnh huyền dài $20$\emph{cm} \& 1 cạnh góc vuông dài $12$\emph{cm}. Tính độ dài hình chiếu cạnh góc vuông kia trên cạnh huyền.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 44., p. 95]
+	Cho $\Delta ABC$ vuông tại $A$, $AC = 9$\emph{cm}, $BC = 24$\emph{cm}. Đường trung trực của $BC$ cắt đường thẳng $AC$ tại $D$, cắt $BC$ tại $M$. Tính độ dài đoạn thẳng $CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 45., p. 95]
+	Cho hình thang vuông $ABCD$, $\widehat{A} = \widehat{D} = 90^\circ$, $AB = 6$\emph{cm}, $CD = 12$\emph{cm}, $AD = 17$\emph{cm}. Trên cạnh $AD$, đặt đoạn thẳng $AE = 8$\emph{cm}. Chứng minh $\widehat{BEC} = 90^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 46., p. 95]
+	Cho $\Delta ABC$ vuông tại $A$, $AC = 4$\emph{cm}, $BC = 6$\emph{cm}. Kẻ tia $Cx$ vuông góc với $BC$, tia $Cx$ \& điểm $A$ khác phía so với đường thẳng $BC$. Lấy trên tia $Cx$ điểm $D$ sao cho $BD = 9$\emph{cm}. Chứng minh $BD\parallel AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 47., p. 95]
+	Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$, $H$ nằm trên cạnh $BC$. Lấy điểm $M$ nằm trên đoạn $CH$. $N$ là hình chiếu vuông góc của $M$ lên cạnh $AC$. Chỉ ra các tam giác đồng dạng \& chứng minh.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 48., p. 95]
+	Cho $\Delta ABC$, $\widehat{A} = 90^\circ$, có đường cao $AH$. Chứng minh $AH^2 = BH\cdot CH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 49., p. 96]
+	Đường cao của 1 tam giác vuông xuất phát từ đỉnh góc vuông chia cạnh huyền thành 2 đoạn thẳng có độ dài là $9$\emph{cm}, $16$\emph{cm}. Tính độ dài các cạnh của tam giác vuông đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 50., p. 96]
+	Tam giác vuông $ABC$, $\widehat{A} = 90^\circ$, có đường cao $AH$ \& trung tuyến $AM$. Tính diện tích $\Delta AMH$ biết $BH = 4$\emph{cm}, $CH = 9$\emph{cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 8.1., p. 96]
+	Cho góc nhọn $xOy$. Trên tia $Ox$ lấy 1 điểm $A$ sao cho $OA = 8.65$\emph{cm}. Trên tia $Oy$ lấy 1 điểm $B$ sao cho $OB = 15.45$\emph{cm}. Vẽ $AE\bot Oy$, $BF\bot Ox$. Biết $BF = 10.25$\emph{cm}. Tính $AE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 8.2., p. 96]
+	$\Delta ABC$ vuông tại $A$ có đường cao $AH = n = 10.85$\emph{cm} \& cạnh $AB = m = 12.5$\emph{cm}. Tính độ dài các cạnh còn lại của tam giác.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 8.3., p. 96]
+	Cho $\Delta ABC$ vuông tại $A$, chân $H$ của đường cao $AH$ chia cạnh huyền $BC$ thành 2 đoạn có độ dài $4$\emph{cm} \& $9$\emph{cm}. Gọi $D,E$ là hình chiếu của $H$ trên $AB,AC$. (a) Tính $DE$. (b) Các đường thẳng vuôn góc với $DE$ tại $D$ \& $E$ cắt $BC$ theo thứ tự tại $M$ \& $N$. Chứng minh $M$ là trung điểm của $BH,N$ là trung điểm $CH$. (c) Tính diện tích tứ giác $DENM$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Ứng Dụng Thực Tế của Tam Giác Đồng Dạng}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 53., p. 92]
+	1  người đo chiều cao của 1 cây nhờ 1 cọc chôn xuống đất, cọc cao $2$\emph{m} \& đặt xa cây $15$\emph{m}. Sau khi người ấy lùi ra xa cách cọc $0.8$\emph{m} thì nhìn thấy đầu cọc \& đỉnh cây cùng nằm trên 1 đường thẳng. Hỏi cây cao bao nhiêu biết khoảng cách từ chân đến mắt người ấy là $1.6$\emph{m}?
+\end{baitoan}
+\noindent\textit{Bài tập phụ thuộc hình vẽ}: \cite[54.--55., p. 87]{SGK_Toan_8_tap_2}.
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 56., p. 92]
+	Xác định tỷ số của 2 đoạn thẳng $AB,CD$ trong các trường hợp sau: (a) $AB = 5$\emph{cm}, $CD = 15$\emph{cm}; (b) $AB = 45$\emph{dm}, $CD = 150$\emph{cm}; (c) $AB = 5CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 57., p. 92]
+	Cho $\Delta ABC$, $AB < AC$. Vẽ đường cao $AH$, đường phân giác $AD$, đường trung tuyến $AM$. Nhận xét về vị trí của 3 điểm $H,D,M$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 58., p. 92]
+	Cho $\Delta ABC$ cân, $AB = AC$, vẽ các đường cao $BH,CK$. (a) Chứng minh $BK = CH$. (b) Chứng minh $KH\parallel BC$. (c) Cho biết $BC = a$, $AB = AC = b$. Tính $HK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 59., p. 92]
+	Hình thang $ABCD$, $AB\parallel CD$ có $AC,BD$ cắt nhau tại $O$, $AD,BC$ cắt nhau tại $K$. Chứng minh $OK$ đi qua trung điểm của các cạnh $AB,CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 60., p. 92]
+	Cho $\Delta ABC$ vuông, $\widehat{A} = 90^\circ$, $\widehat{C} = 30^\circ$, \& đường phân giác $BD$ ($D$ thuộc cạnh $AC$). (a) Tính tỷ số $\frac{AD}{CD}$. (b) Cho biết độ dài $AB = 12.5$\emph{cm}, tính chu vi \& diện tích $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 61., p. 92]
+	Tứ giác $ABCD$ có $AB = 4$\emph{cm}, $BC = 20$\emph{cm}, $CD = 25$\emph{cm}, $DA = 8$\emph{cm}, đường chéo $BD = 10$\emph{cm}. (a) Nêu cách vẽ tứ giác $ABCD$ có kích thước đã cho. (b) $\Delta ABD,\Delta BDC$ có đồng dạng với nhau không? Vì sao? (c) Chứng minh $AB\parallel CD$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 51., p. 97]
+	Cho $\Delta ABC$. (a) Tìm trên cạnh $AB$ điểm $M$ sao cho $\frac{AM}{BM} = \frac{2}{3}$, tìm trên cạnh $AC$ điểm $N$ sao cho $\frac{AN}{CN} = \frac{2}{3}$. (b) 2 đường thẳng $MN,BC$ có song song với nhau không? Vì sao? (c) Cho biết chu vi, diện tích $\Delta ABC$ thứ tự là $P,S$. Tính chu vi \& diện tích $\Delta AMN$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 52., p. 97]
+	Tứ giác $ABCD$ có 2 góc vuông tại đỉnh $A,C$, 2 đường chéo $AC,BD$ cắt nhau tại $O$, $\widehat{BAO} = \widehat{BDC}$. Chứng minh: (a) $\Delta ABO\backsim\Delta DCO$; (b) $\Delta BCO\backsim\Delta ADO$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 53., p. 97]
+	Cho hình chữ nhật $ABCD$ có $AB = a = 12$\emph{cm}, $BC = b = 9$\emph{cm}. Gọi $H$ là chân đường vuông góc kẻ từ $A$ xuống $BD$. (a) Chứng minh $\Delta AHD\backsim\Delta BCD$. (b) Tính $AH$. (c) Tính diện tích $\Delta AHB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 54., pp. 97--98]
+	Tứ giác $ABCD$ có 2 đường chéo $AC,BD$ cắt nhau tại $O$, $\widehat{ABD} = \widehat{ACD}$. Gọi $E$ là giao điểm của 2 đường thẳng $AD,BC$. Chứng minh: (a) $\Delta AOB\backsim\Delta DOC$; (b) $\Delta AOD\backsim\Delta BOC$; (c) $EA\cdot ED = EB\cdot EC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 55., p. 98]
+	$\Delta ABC$ có 3 đường cao $AD,BE,CF$ đồng quy tại $H$. Chứng minh $AH\cdot DH = BH\cdot EH = CH\cdot FH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 56., p. 98]
+	2 điểm $M,K$ thứ tự nằm trên cạnh $AB,BC$ của $\Delta ABC$; 2 đoạn thẳng $AK,CM$ cắt nhau tại điểm $P$. Biết $AP = 2PK$ \& $CP = 2PM$. Chứng minh $AK,CM$ là các trung tuyến của $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 57., p. 98]
+	Cho hình bình hành $ABCD$. Từ $A$ kẻ $AM\bot BC$, $AN\bot CD$, $M\in BC$, $N\in CD$. Chứng minh $\Delta MAN$ đồng dạng với $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 58., p. 98]
+	Giả sử $AC$ là đường chéo lớn của hình bình hành $ABCD$. Từ $C$, vẽ đường vuông góc $CE$ với đường thẳng $AB$, đường vuông góc $CF$ với đường thẳng $AD$, $E,F$ thuộc phần kéo dài của các cạnh $AB,AD$. Chứng minh $AB\cdot AE + AD\cdot AF = AC^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 59., p. 98]
+	$\Delta ABC$ có 2 đường cao là $AD,BE$, $D\in BC$, $E\in AC$. Chứng minh $\Delta DEC,\Delta ABC$ là 2 tam giác đồng dạng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 60., p. 98]
+	$\Delta ABC$ có 2 trung tuyến $AK,CL$ cắt nhau tại $G$. Từ 1 điểm $P$ bất kỳ trên cạnh $AC$, vẽ các đường thẳng $PE$ song song với $AK$, $PF$ song song với $CL$, $E\in BC$, $F\in AB$. Các trung tuyến $AK,CL$ cắt đoạn thẳng $EF$ theo thứ tự tại $M,N$. Chứng minh các đoạn $FM,MN,NE$ bằng nhau.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
