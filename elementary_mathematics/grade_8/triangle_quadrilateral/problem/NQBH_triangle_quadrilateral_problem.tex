@@ -1,0 +1,208 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+\def\labelitemii{$\circ$}
+
+\title{Problem: Triangles {\it\&} Quadrilaterals -- Bài Tập: Tam Giác {\it\&} Tứ Giác}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
+	Latest version:
+	\begin{itemize}
+		\item {\it Problem: Triangles \& Quadrilaterals -- Bài Tập: Tam Giác \& Tứ Giác}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+		\item {\it Problem \& Solution: Triangles \& Quadrilaterals -- Bài Tập \& Lời Giải: Tam Giác \& Tứ Giác}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+	\end{itemize}
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Quadrilateral -- Tứ Giác}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 1, p. 75]
+	Tứ giác $ABCD$ có $\widehat{B} + \widehat{D} = 180^\circ$, $BC = CD$. Chứng minh $AC$ là tia phân giác của góc $A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 1., p. 75]
+	Tứ giác $ABCD$ có 2 đường chéo vuông góc, $AB = 8${\rm cm}, $BC = 7${\rm cm}, $AD = 4${\rm cm}. Tính độ dài $CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 2., p. 76]
+	Tứ giác $ABCD$ có $\widehat{A} - \widehat{B} = 50^\circ$. Các tia phân giác của 2 góc $C$ \& $D$ cắt nhau tại $I$ \& $\widehat{CID} = 115^\circ$. Tính $\widehat{A},\widehat{B}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 3., p. 76]
+	Cho tứ giác $ABCD$, $E$ là giao điểm của các đường thẳng $AB$ \& $CD$, $F$ là giao điểm của các đường thẳng $BC$ \& $AD$. Các tia phân giác của các góc $E$ \& $F$ cắt nhau ở $I$. Chứng minh: (a) Nếu $\widehat{BAD} = 130^\circ$, $\widehat{BCD} = 50^\circ$ thì $IE$ vuông góc với $IF$. (b) Góc $EIF$ bằng nửa tổng của 1 trong 2 cặp góc đối của tứ giác $ABCD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 4., p. 76]
+	Chứng minh nếu $M$ là giao điểm các đường chéo của tứ giác $ABCD$ thì $MA + MB + MC + MD$ nhỏ hơn chu vi nhưng lớn hơn nửa chu vi tứ giác.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 5., p. 76]
+	So sánh độ dài cạnh $AB$ \& đường chéo $AC$ của tứ giác $ABCD$ biết chu vi $\Delta ABD$ nhỏ hơn hoặc bằng chu vi $\Delta ACD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 6., p. 76]
+	Tứ giác $ABCD$ có $O$ là giao điểm của 2 đường chéo, $AB = 6$, $OA = 8$, $OB = 4$, $OD = 6$. Tính độ dài $AD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 7., p. 76]
+	Cho 5 điểm trên mặt phẳng trong đó không có 3 điểm nào thẳng hàng. Chứng minh bao giờ cũng có thể chọn ra được 4 điểm là đỉnh của 1 tứ giác lồi.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Trapzoid -- Hình Thang}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 2, p. 76]
+	Cho $\Delta ABC$ có $BC = a$, các đường trung tuyến $BD,CE$. Lấy các điểm $M,N$ trên cạnh $BC$ sao cho $BM = MN = NC$. Gọi $I$ là giao điểm của $AM$ \& $BD$, $K$ là giao điểm của $AN$ \& $CE$. Tính độ dài $IK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 3, p. 77]
+	1 hình thang cân có đường cao bằng nửa tổng 2 đáy. Tính góc tạo bởi 2 đường chéo hình thang.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 8., p. 77]
+	Cho 1 hình thang có 2 đáy không bằng nhau. Chứng minh: (a) Tổng 2 góc kề đáy nhỏ lớn hơn tổng 2 góc kề đáy lớn. (b) Tổng 2 cạnh bên lớn hơn hiệu 2 đáy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 9., p. 78]
+	Hình thang $ABCD$ có $\widehat{A} = \widehat{D} = 90^\circ$, đáy nhỏ $AB = 11${\rm cm}, $AD = 12${\rm cm}, $BC = 13${\rm cm}. Tính độ dài $AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 10., p. 78]
+	Hình thang $ABCD$, $AB\parallel CD$, có $E$ là trung điểm của $BC$, $\widehat{AED} = 90^\circ$. Chứng minh $DE$ là tia phân giác của góc $D$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 11., p. 78]
+	Hình thang cân $ABCD$, $AB\parallel CD$, có đường chéo $BD$ chia hình thang thành 2 tam giác cân: $\Delta ABD$ cân tại $A$ \& $\Delta BCD$ cân tại $D$. Tính các góc của hình thang cân đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 12., p. 78]
+	Trên đoạn thẳng $AB$ lấy 1 điểm $M$, $MA > MB$. Trên cùng 1 nửa mặt phẳng có bờ $AB$, vẽ các tam giác đều $AMC,BMD$. Gọi $E,F,I,K$ theo thứ tự là trung điểm của $CM,CB,DM,DA$. Chứng minh $EFIK$ là hình thang cân \& $KF = \frac{1}{2}CD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 13., p. 78]
+	Cho điểm $M$ nằm bên trong tam giác đều $ABC$. Chứng minh trong 3 đoạn thẳng $MA,MB,MC$, đoạn lớn nhất nhỏ hơn tổng 2 đoạn kia.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 14., p. 78]
+	Cho $\Delta ABC$, trọng tâm $G$. (a) Vẽ đường thẳng $d$ qua $G$, cắt các đoạn thẳng $AB,AC$. Gọi $A',B',C'$ là hình chiếu của $A,B,C$ trên $d$. Tìm liên hệ giữa các độ dài $AA',BB',CC'$. (b) Nếu đường thẳng $d$ nằm ngoài $\Delta ABC$ \& $G'$ là hình chiếu của $G$ trên $d$ thì các độ dài $AA',BB',CC',GG'$ có liên hệ gì?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 15., p. 78]
+	Trên đoạn thẳng $AB$ lấy các điểm $M$ \& $N$ ($M$ nằm giữa $A$ \& $N$). Vẽ về 1 phía của $AB$ các tam giác đều $AMD,MNE,BNF$. Gọi $G$ là trọng tâm của $\Delta DEF$. Chứng minh khoảng cách từ $G$ đến $AB$ không phụ thuộc vào vị trí của các điểm $M,N$ trên đoạn thẳng $AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 16., p. 78]
+	Tứ giác $ABCD$ có $E,F$ theo thứ tự là trung điểm của $AD,BC$. (a) Chứng minh $EF\le\frac{1}{2}(AB + CD)$. (b) Tứ giác $ABCD$ có điều kiện gì thì $EF = \frac{1}{2}(AB + CD)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 17., p. 78]
+	Tứ giác $ABCD$ có $AB = CD$. Chứng minh đường thẳng đi qua trung điểm của 2 đườngchéo tạo với $AB$ \& $CD$ các góc bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 18., p. 78]
+	Trong tứ giác $ABCD$, gọi $A',B',C',D'$ thứ tự là trọng tâm của các tam giác $BCD,ACD,ABD,ABC$. Chứng minh 4 đường thẳng $AA',BB',CC',DD'$ đồng quy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 19., p. 78]
+	Cho $\Delta ABC$, trực tâm $H$, $M$ là trung điểm của $BC$. Qua $H$ kẻ đường thẳng vuông góc với $HM$, cắt $AB$ \& $AC$ theo thứ tự ở $E$ \& $F$. (a) Trên tia đối của tia $HC$, lấy điểm $D$ sao cho $HD = HC$. Chứng minh $E$ là trực tâm của $\Delta DBH$. (b) Chứng minh $HE = HF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 20., p. 78]
+	Tứ giác $ABCD$ có $B$ \& $C$ nằm trên đường tròn có đường kính là $AD$. Tính độ dài $CD$ biết $AD = 8$, $AB = BC = 2$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Dựng Hình Bằng Thước \& Compa}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 4., p. 80]
+	Dựng $\Delta ABC$ biết $AC = b$, $AB = c$, $\widehat{B} - \widehat{C} = \alpha$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 5., p. 81]
+	Chứng minh tồn tại 1 hình thang có độ dài 4 cạnh bằng độ dài 4 cạnh của 1 tứ giác cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 21., p. 81]
+	Dựng hình thang $ABCD$, $AB\parallel CD$, biết: (a) $AB = 1${\rm cm}, $AD = 2${\rm cm}, $BC = 3${\rm cm}, $CD = 3${\rm cm}. (b) $AB = a$, $CD = b$, $AC = c$, $BD = d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 22., p. 82]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 22., p. 82]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 22., p. 82]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, 22., p. 82]
+	
+\end{baitoan}
+
+
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
