@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+\def\labelitemii{$\circ$}
+
+\title{Elementary Inequality -- Bất Đẳng Thức Sơ Cấp}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
+	Latest version:
+	\begin{itemize}
+		\item {\it }.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+		\item {\it }.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+	\end{itemize}
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Introduction to Inequality}
+
+\begin{definition}[Inequality]
+	``In mathematics, an \emph{inequality} is a relation which makes a non-equal comparison between 2 numbers or other mathematical expressions.
+\end{definition}
+It is used most often to compare 2 numbers on the \href{https://en.wikipedia.org/wiki/Number_line}{number line} by the size. There are several different notations used to represent different kinds of inequalities: The notation $a < b$ means that $a$ is \textit{less than} $b$. The notation $a > b$ means that $a$ is \textit{greater than} $b$. In either case, $a$ is not equal to $b$. These relations are known as \textit{strict inequalities}, meaning that $a$ is strictly less than or strictly greater than $b$. Equivalence is excluded.
+
+In contrast to strict inequalities, there are 2 types of inequality relations that are not strict: The notation $a\le b$ means that $a$ is \textit{less than or equal to} $b$ (or, equivalently, at most $b$, or not greater than $b$). The notation $a\ge b$ means that $a$ is \textit{greater than or equal to} $b$ (or, equivalently, at least $b$, or not less than $b$).
+
+The relation \textit{not great than} can also be represented by $a\not > b$, the symbol for ``greater than'' bisected by a slash, ``not''. The same is true for \textit{not less than} \& $a\not < b$.
+
+The notation $a\ne b$ means that $a$ is not equal to $b$; this \href{https://en.wikipedia.org/wiki/Inequation}{\textit{inequation}} sometimes is considered a form of strict inequality. It does not say that one is greater than the other; it does not even require $a,b$  to be member of an \href{https://en.wikipedia.org/wiki/Ordered_set}{ordered set}.
+
+In engineering science, less formal use of the notation is to state that 1 quantity is ``much greater'' than another, normally by several \href{https://en.wikipedia.org/wiki/Order_of_magnitude}{orders of magnitude}. The notation $a\ll b$ means that $a$ is \textit{much less than} $b$. The notation $a\gg b$ means that $a$ is \textit{much greater than} $b$. This implies that the lesser value can be neglected with little effect on the accuracy of an \href{https://en.wikipedia.org/wiki/Approximation}{approximation} (e.g., the case of \href{https://en.wikipedia.org/wiki/Ultrarelativistic_limit}{ultrarelativistic limit} in physics).
+
+In all of the cases above, any 2 symbols mirroring each other are symmetrical; $a < b$ \& $b > a$ are equivalent, etc.'' -- \href{https://en.wikipedia.org/wiki/Inequality_(mathematics)}{Wikipedia\texttt{/}inequality (mathematics)}
+
+\subsection{Properties on the number line $\mathbb{R}$}
+
+%------------------------------------------------------------------------------%
+
+
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
