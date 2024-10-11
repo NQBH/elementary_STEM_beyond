@@ -76,6 +76,54 @@
 	\item \href{https://leviethai.wordpress.com}{{\sc Lê Việt Hải}'s WordPress blog}.
 \end{itemize}
 
+\subsection{Motivation}
+
+\begin{question}
+	Why do we need to learn elementary inequality in Elementary Mathematics? -- Tại sao chúng ta cần học bất đẳng thức sơ cấp ở Toán Sơ Cấp?
+\end{question}
+
+\begin{proof}[Answer]
+	Some reasons:
+	\begin{enumerate}
+		\item To sharp computation skills on algebraic manipulation -- Để mài bén kỹ năng tính toán về các biến đổi đại số.
+		\item To become better at mathematics -- Để trở nên giỏi Toán hơn.
+		\item To become mathematical analyst -- Để trở thành nhà Toán học về Giải tích .
+		\item To become mathematical optimist -- Để trở thành nhà Toán học về Tối ưu.
+	\end{enumerate}	
+\end{proof}
+
+\subsection{2-variable inequality hypotheses -- Giả thiết của bất đẳng thức 2 biến}
+
+\begin{enumerate}
+	\item Sum $S(a,b)\coloneqq a + b$.
+	\item Product $P(a,b)\coloneqq ab$.
+	\item Sum of squares $S_2(a,b)\coloneqq a^2 + b^2$.
+	\item Sum of cubes $S_3(a,b)\coloneqq a^3 + b^3$.
+	\item Sum of $n$th powers $S_n(a,b)\coloneqq a^n + b^n$, $\forall n\in\mathbb{R}$.
+\end{enumerate}
+
+\subsection{3-variable inequality hypotheses -- Giả thiết của bất đẳng thức 3 biến}
+
+\begin{enumerate}
+	\item Sum $S(a,b,c)\coloneqq a + b + c$.
+	\item $A(a,b,c)\coloneqq ab + bc + ca$.
+	\item Product $P(a,b,c)\coloneqq abc$.
+	\item Sum of squares $S_2(a,b,c)\coloneqq a^2 + b^2 + c^2$.
+	\item Sum of cubes $S_3(a,b,c)\coloneqq a^3 + b^3 + c^3$.
+	\item Sum of $n$th powers $S_n(a,b,c)\coloneqq a^n + b^n + c^n$, $\forall n\in\mathbb{R}$.
+\end{enumerate}
+
+\subsection{$n$-variable inequality hypotheses -- Giả thiết của bất đẳng thức $n$ biến}
+
+\begin{enumerate}
+	\item Sum $S(x_1,\ldots,x_n)\coloneqq\sum_{i=1}^n x_i = x_1 + x_2 + \cdots + x_n$.
+	\item Arithmetic mean $\bar{x}\coloneqq\frac{1}{n}S(x_1,\ldots,x_n) = \frac{1}{n}\sum_{i=1}^n x_i = \frac{1}{n}(x_1 + x_2 + \cdots + x_n)$. \href{https://en.wikipedia.org/wiki/Arithmetic_mean}{Wikipedia{\tt/}arithmetic mean}.
+	\item Product $P(x_1,\ldots,x_n)\coloneqq\prod_{i=1}^n x_i = x_1x_2\cdots x_n$.
+	\item Sum of squares $S_2(x_1,\ldots,x_n)\coloneqq\sum_{i=1}^n x_i^2 = x_1^2 + x_2^2 + \cdots + x_n^2$.
+	\item Sum of cubes $S_3(x_1,\ldots,x_n)\coloneqq\sum_{i=1}^n x_i^3 = x_1^3 + x_2^3 + \cdots + x_n^3$.
+	\item Sum of $m$th powers $S_m(x_1,\ldots,x_n)\coloneqq\sum_{i=1}^n x_i^m = x_1^m + x_2^m + \cdots + x_n^m$.
+\end{enumerate}
+
 \section{Introduction to Inequality}
 
 \begin{definition}[Inequality]
@@ -202,7 +250,7 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 
 %------------------------------------------------------------------------------%
 
-\section{Introduction}
+\section{Warm-up -- Khởi động}
 The general structure of a problem on inequality is given by:
 
 \begin{problem}
@@ -536,6 +584,43 @@ Ta có thể mở rộng bài toán trên như sau:
 
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Mở rộng Bổ đề 1.6, p. 7]
 	Chứng minh: $a^4 + b^4\ge ab(a^2 + b^2)$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Methods in Proving Inequalities -- Các Phương Pháp Chứng Minh Bất Đẳng Thức}
+
+\subsection{Undefined Coefficient Technique (UCT) -- Kỹ thuật hệ số bất định}
+
+\begin{baitoan}
+	Cho $a,b,c > 0,a + b + c = S\in(0,\infty)$. Tìm điều kiện cần \& đủ của $m,n,p,q\in\mathbb{R}$  để
+	\begin{equation}
+		\frac{m}{x^2} + nx^2\ge px + q,\forall x\in(0,S),\ \frac{m}{x^2} + nx^2 = px + q\Leftrightarrow x = \frac{S}{3}.
+	\end{equation}
+	Từ đó suy ra các bất đẳng thức có dạng
+	\begin{equation}
+		\alpha\left(\frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}\right) + \beta(a^2 + b^2 + c^2)\ge\gamma.
+	\end{equation}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4.1, p. 76]
+	Cho $a,b,c > 0$, $a + b + c = 3$. Chứng minh $\frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2} + \frac{2}{3}(a^2 + b^2 + c^2)\ge5$.
+\end{baitoan}
+{\it Hint.} $\frac{1}{a^2} + \frac{2}{3}a^2\ge-\frac{2}{3}a + \frac{7}{3}\Leftrightarrow\frac{(a - 1)^2(a^2 + 6a + 3)}{3a^2}\ge0$, $\forall a > 0$.
+
+\begin{baitoan}
+	Cho $a,b,c > 0$, $a^2 + b^2 + c^2 = S_2$. Tìm điều kiện cần \& đủ của $m,n,p,q\in\mathbb{R}$ để
+	\begin{equation}
+		mx + \frac{n}{x}\ge px^2 + q,\ \forall x\in(0,\sqrt{S_2}).
+	\end{equation}
+	Từ đó suy ra các bất đẳng thức có dạng
+	\begin{equation}
+		\alpha(a + b + c) + \beta(\frac{1}{a} + \frac{1}{b} + \frac{1}{c})\ge\gamma.
+	\end{equation}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4.2, p. 77]
+	Cho $a,b,c > 0$, $a^2 + b^2 + c^2 = S_2$. Chứng minh $2(a + b + c) + \frac{1}{a} + \frac{1}{b} + \frac{1}{c}\ge9$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
