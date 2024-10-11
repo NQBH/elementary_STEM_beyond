@@ -1,0 +1,180 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhluat}{Định luật}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+\def\labelitemii{$\circ$}
+
+\title{Functional Equation}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
+	Latest version:
+	\begin{itemize}
+		\item {\it }.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+		\item {\it }.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+	\end{itemize}
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Introduction to Functional Equation}
+
+\subsection{\href{https://en.wikipedia.org/wiki/Functional_equation}{Wikipedia\texttt{/}Functional Equation}}
+``In mathematics, a \textit{functional equation} is, in the broadest meaning, an equation in which 1 or several functions appear as \href{https://en.wikipedia.org/wiki/Unknown_(mathematics)}{unknowns}. So, \href{https://en.wikipedia.org/wiki/Differential_equation}{differential equations} \& \href{https://en.wikipedia.org/wiki/Integral_equation}{integral equations} are functional equations. However, a more restricted meaning is often used, where a \textit{functional equation} is an equation that relates several rules of the same function. E.g., the \href{https://en.wikipedia.org/wiki/Logarithm_function}{logarithm functions} are \href{https://en.wikipedia.org/wiki/Logarithm#Characterization_by_the_product_formula}{essentially characterized} by the \textit{logarithmic functional equation} $\log(xy) = \log x + \log y$.
+
+In the \href{https://en.wikipedia.org/wiki/Domain_of_a_function}{domain} of the unknown function is supposed to be the \href{https://en.wikipedia.org/wiki/Natural_number}{natural numbers}, the function is generally viewed as a \href{https://en.wikipedia.org/wiki/Sequence_(mathematics)}{sequence}, \&, in this case, a functional equation (in the narrower meaning) is called a \href{https://en.wikipedia.org/wiki/Recurrence_relation}{recurrence relation}. Thus the term \textit{functional equation} is used mainly for \href{https://en.wikipedia.org/wiki/Real_function}{real functions} \& \href{https://en.wikipedia.org/wiki/Complex_function}{complex functions}. Moreover a \href{https://en.wikipedia.org/wiki/Smooth_function}{smoothness condition} is often assumed for the solutions, since without such a condition, most functional equations have very irregular solutions. E.g., the \href{https://en.wikipedia.org/wiki/Gamma_function}{gamma function} is a function that satisfies the functional equation $f(x + 1) = xf(x)$ \& the initial value $f(1) = 1$. There are many functions that satisfy these conditions, but the gamma function is the unique one that is \href{https://en.wikipedia.org/wiki/Meromorphic_function}{meromorphic} in the whole complex plane, \& \href{https://en.wikipedia.org/wiki/Logarithmically_convex_function}{logarithmically convex} for $x$ real \& positive (\href{https://en.wikipedia.org/wiki/Bohr%E2%80%93Mollerup_theorem}{Bohr--Mollerup theorem}).'' -- \href{https://en.wikipedia.org/wiki/Functional_equation}{Wikipedia\texttt{/}functional equation}
+
+\subsubsection{Examples}
+
+\begin{enumerate}
+	\item ``\href{https://en.wikipedia.org/wiki/Recurrence_relation}{Recurrence relations} can be seen as functional equations in functions over the integers or natural numbers, in which the differences between terms' indexes can be seen as an application of the \href{https://en.wikipedia.org/wiki/Shift_operator}{shift operator}. E.g., the recurrence relation defining the \href{https://en.wikipedia.org/wiki/Fibonacci_numbers}{Fibonacci numbers}, $F_n = F_{n-1} + F_{n-2}$, where $F_0 = 0$ \& $F_1 = 1$.
+	\item $f(x + P) = f(x)$, which characterizes the \href{https://en.wikipedia.org/wiki/Periodic_function}{periodic functions}.
+	\item $f(x) = f(-x)$, which characterizes the \href{https://en.wikipedia.org/wiki/Even_function}{even functions}, \& likewise $f(x) = -f(-x)$, which characterizes the \href{https://en.wikipedia.org/wiki/Odd_function}{odd functions}.
+	\item $f(f(x)) = g(x)$, which characterizes the \href{https://en.wikipedia.org/wiki/Functional_square_root}{functional square root} of the function $g$.
+	\item $f(x + y) = f(x) + f(y)$ (\href{https://en.wikipedia.org/wiki/Cauchy%27s_functional_equation}{Cauchy's functional equation}), satisfied by \href{https://en.wikipedia.org/wiki/Linear_map}{linear maps}. The equation may, contigent on the \href{https://en.wikipedia.org/wiki/Axiom_of_choice}{axiom of choice}, also have other pathological nonlinear solutions, whose existence can be proven with a \href{https://en.wikipedia.org/wiki/Hamel_basis}{Hamel basis} for the real numbers.
+	\item $f(x + y) = f(x) + f(y)$, satisfied by all \href{https://en.wikipedia.org/wiki/Exponential_function}{exponential functions}. Like Cauchy's additive functional equation, this too may have pathological, discontinuous solutions. $\ldots$
+\end{enumerate}
+'' -- \href{https://en.wikipedia.org/wiki/Functional_equation#Examples}{Wikipedia\texttt{/}functional equation\texttt{/}example}
+
+\subsubsection{Solution}
+``1 method of solving elementary functional equations is substitution. Some solutions to functional equations have exploited \href{https://en.wikipedia.org/wiki/Surjective}{surjectivity}, \href{https://en.wikipedia.org/wiki/Injective_function}{injectivity}, \href{https://en.wikipedia.org/wiki/Odd_function}{oddness}, \& \href{https://en.wikipedia.org/wiki/Even_function}{evenness}.
+
+Some functional equations have been solved with the use of \href{https://en.wikipedia.org/wiki/Ansatz}{ansatzes}, \href{https://en.wikipedia.org/wiki/Mathematical_induction}{mathematical induction}.
+
+Some classes of functional equations can be solved by computer-assisted techniques.
+
+In \href{https://en.wikipedia.org/wiki/Dynamic_programming}{dynamic programming} a variety of successive approximation methods are used to solve \href{https://en.wikipedia.org/wiki/Bellman_equation}{Bellman's functional equation}, including methods based on \href{https://en.wikipedia.org/wiki/Fixed_point_iteration}{fixed point iterations}.'' -- \href{https://en.wikipedia.org/wiki/Functional_equation#Solution}{Wikipedia\texttt{/}functional equation\texttt{/}solution}
+
+\subsubsection{Pythagoras Equation}
+
+\begin{problem}
+	Solve the equation $x^2 + y^2 = z^2$ for $x,y,z\in\mathbf{Z}$.
+\end{problem}
+The general solution is given by $x = k(m^2 - n^2)$, $y = 2kmn$, $z = k(m^2 + n^2)$, where $k,m,n\in\mathbb{N}$.
+
+\begin{definition}[Functional equation]
+	``An equation in which unknowns are functions is called a \emph{functional equation}.
+\end{definition}
+We are asked to find all functions satisfying some given relation(s).'' -- \cite[p. 2]{Venkatachala2013}
+
+\section{Diophantine Equation}
+
+\section{General Remarks}
+``Linear Diophantine equation $ax + by = c$ may posses infinitely many solutions or many not have any solution. We observe that there is only 1 equation where as we need to determine 2 unknowns.'' -- \cite[p. 1]{Venkatachala2013}
+
+``We must specify the domain \& the range of $f$ ($\operatorname{dom}f$ \& $\mathcal{R}(f)$, resp.) before seeking any answer to the question [of functional equation].'' ``Thus a functional equation may possess a large number of solutions. To narrow down the number of solutions, we may need to impose additional conditions on the nature of $f$ in terms of either equations or properties of the function.'' -- \cite[p. 2]{Venkatachala2013}
+
+``A single equation can lead to multitude of solutions, where as just an additional equation or condition may drastically reduce the number of solutions. It should be emphasized that the number of equations is not related to the number of solutions as in the case of linear equations. We shall also see later how a single equation (or the same system of equations) can hide information about seemingly unrelated functions. This inherent capacity of a functional equation for containing a lot of information about unrelated functions make it more intractable than the class of other types of equations. \& the beauty of a functional equation also lies in its strength to hold information about distinct classes of functions.
+
+While solving a functional equation, we need to keep in mind the property of domain of the functions, their range \& also the given conditions on the functions. We shall see that various well known sets with nice structures form the domain \& range of functions: we use $\mathbb{N}$, the set of all natural numbers; $\mathbb{Z}$, the set of all integers; $\mathbb{Q}$, the set of all rational numbers; \& $\mathbb{R}$ the set of all real numbers. Occasionally, we may need $\mathbb{C}$, the est of all complex numbers \& $\mathbb{R}^n$, the Euclidean space of dimension $n$. We may also use $\mathbb{N}_0$, the set of all nonnegative integers; $\mathbb{Q}_0$, the set of all nonnegative rational numbers; $\mathbb{Q}^+$, the set of all positive rational numbers; $\mathbb{R}_0$, the set of all nonnegative real numbers; \& $\mathbb{R}^+$, the set of all positive real numbers. We shall also use a variety of conditions on the functions like monotonicity, boundedness, continuity, etc., which would help us in fixing the solutions of functional equations.
+
+The study of functional equations has a long history \& is associated with giants like D'Alembert, Euler, Cauchy, Gauss, Legendre, Darboux, Abel, \& Hilbert. D'Alembert arrived at the problem of solving the equation $f(x + y) + f(x - y) = g(x)h(y)$ for functions $f,g,h$ on $\mathbb{R}$ in his work on vibrating strings. Cauchy investigated equations of the form $f(x + y) = f(x) + f(y)$, $f(x + y) = f(x)f(y)$, $f(xy) = f(x) + f(y)$, $f(xy) = f(x)f(y)$, which made their appearances in the problems of measuring \textit{Areas} \& \textit{Normal Probability Distribution}. Thus the study of functional equations arose from practical considerations. The areas of Differential equations, Integral equations \& Difference equations which are very useful in solving many practical problems also fall in to the category of functional equations.'' [$\ldots$] ``Different methods can be employed for solving functional equations. The special structural properties of domain, range \& also the condition(s) on the functions which are sought will play a pivotal role in the method of solving a functional equation. Different equations need different approaches \& different perspective.'' -- \cite[pp. 3--4]{Venkatachala2013}
+
+``It is extremely instructive \& exhilarating to construct new solutions to the given problems. It is my experience over the years that use of elementary ideas while solving the given functional equation will go a long way in revealing the structure of that equation \& natural additional conditions to be imposed would manifest on their own. It is advisable to pursue the equation till there is no further go before looking for extra condition that has to be put on the function either as a property or as another equation.'' -- \cite[p. 5]{Venkatachala2013}
+
+%------------------------------------------------------------------------------%
+
+\section{Functional Equation on $\mathbb{N}$}
+
+\begin{problem}[\cite{Venkatachala2013}, pp. 7--8]
+	Find all functions $f:\mathbb{N}\to\mathbb{N}$ such that: (a) $f(2) = 2$; (b) $f(mn) = f(m)f(n)$, $\forall m,n\in\mathbb{N}$; (c) $f(m) < f(n)$ whenever $m < n$.
+\end{problem}
+
+%------------------------------------------------------------------------------%
+
+\section{Functional Equation on $\mathbb{R}$}
+
+\begin{problem}[\cite{Venkatachala2013}, pp. 2--3]
+	Find all $f:\mathbb{R}\to\mathbb{R}$ such that $f(-x) = -f(x)$ \& $f(xy) = x^2f(y)$, $\forall x,y\in\mathbb{R}$.
+\end{problem}
+
+\begin{proof}[Solution]
+	We have $-f(xy) = f(-xy) = f((-x)y) = (-x)^2f(y) = x^2f(y) = f(xy)\Rightarrow f(xy) = 0$, $\forall x,y\in\mathbb{R}$. Taking $y = 1$, it implies $f(x) = 0$, $\forall x\in\mathbb{R}$. Thus the set of equations given has only 1 solution: $f(x) = 0$, $\forall x\in\mathbb{R}$.
+\end{proof}
+
+\begin{problem}[\cite{Dung_cac_phuong_phap_giai_toan_qua_cac_ky_thi_olympic_2022}, p. 5]
+	Find all $f:\mathbb{R}\to\mathbb{R}$ such that $f(x) = f(x + y^2 + f(y))$, $\forall x,y\in\mathbb{R}$.
+\end{problem}
+
+\begin{problem}[\cite{Dung_cac_phuong_phap_giai_toan_qua_cac_ky_thi_olympic_2022}, p. 5]
+	Find all $f:\mathbb{R}\to\mathbb{R}$ such that $f(0)\ne0$ \& for all $n\ge2$, $n$ even, $f(x) = f(x + y^n + f(y))$, $\forall x,y\in\mathbb{R}$.
+\end{problem}
+
+%------------------------------------------------------------------------------%
+
+\section{Cauchy's Equation}
+
+\begin{theorem}[\cite{Small2007}, Thm. 2.3, p. 34]
+	Let $f:\mathbb{R}\to\mathbb{R}$ be a continuous function satisfying Cauchy's equation $f(x + y) = f(x) + f(y)$, $\forall x,y\in\mathbb{R}$. Then there exists $a\in\mathbb{R}$ such that $f(x) = ax$, $\forall x\in\mathbb{R}$.
+\end{theorem}
+
+\begin{theorem}[\cite{Small2007}, Thm. 2.4, p. 34]
+	Let $f:\mathbb{R}\to\mathbb{R}$ satisfy Cauchy's equation. Suppose in addition that there exists some interval $[c,d]$ of real numbers, where $c < d$, such that $f$ is bounded below on $[c,d]$. In other words, there exists $A\in\mathbb{R}$ such that $f(x)\ge A$ for all $c\le x\le d$. Then there exists a real number $a$ such that $f(x) = ax$, $\forall x\in\mathbb{R}$.
+\end{theorem}
+
+\begin{proposition}[\cite{Small2007}, Prop. 2.6, p. 35]
+	Suppose $f:\mathbb{R}\to\mathbb{R}$ satisfies Cauchy's equation $f(x + y) = f(x) + f(y)$, $\forall x,y\in\mathbb{R}$, \& is also monotone increasing (decreasing, resp.) in the sense that $f(x)\le f(y)$ ($f(x)\ge f(y)$, resp.), $\forall x,y\in\mathbb{R}$, $x\le y$. Then $f(x) = ax$ for some $a\ge0$ ($a\le0$, resp.).
+\end{proposition}
+
+\begin{proposition}[\cite{Small2007}, Prop. 2.7, p. 36]
+	Suppose $f:\mathbb{R}\to\mathbb{R}$ satisfies the pair of equations $f(x + y) = f(x) + f(y)$, $f(xy) = f(x)f(y)$, $\forall x,y\in\mathbb{R}$. Then either $f(x) = 0$, $\forall x\in\mathbb{R}$ or $f(x) = x$, $\forall x\in\mathbb{R}$.
+\end{proposition}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
