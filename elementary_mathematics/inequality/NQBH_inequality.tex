@@ -53,16 +53,16 @@
 	
 	Latest version:
 	\begin{itemize}
-		\item {\it }.
+		\item {\it Elementary Inequality -- Bất Đẳng Thức Sơ Cấp}.
 		
-		PDF: {\sc url}: \url{.pdf}.
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/inequality/NQBH_inequality.pdf}.
 		
-		\TeX: {\sc url}: \url{.tex}.
-		\item {\it }.
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/inequality/NQBH_inequality.tex}.
+		\item {\it A substitution \& its application to prove inequalities -- 1 Cách Đổi Biến \& Ứng Dụng Trong Chứng Minh Bất Đẳng Thức}.
 		
-		PDF: {\sc url}: \url{.pdf}.
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/inequality/substitution/NQBH_a_substitution_in_proving_inequality.pdf}.
 		
-		\TeX: {\sc url}: \url{.tex}.
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/inequality/substitution/NQBH_a_substitution_in_proving_inequality.tex}.
 	\end{itemize}
 \end{abstract}
 \tableofcontents
@@ -90,7 +90,450 @@ In all of the cases above, any 2 symbols mirroring each other are symmetrical; $
 
 %------------------------------------------------------------------------------%
 
+%------------------------------------------------------------------------------%
 
+\section{Cauchy-Schwarz Inequality -- Bất Đẳng Thức Cauchy-Schwarz}
+The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrightarrow x = 0$. $x^2 > 0\Leftrightarrow x\ne0$.
+
+\begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho 2 số không âm]
+	Chứng minh:
+	\begin{align*}
+		\boxed{a + b\ge2\sqrt{ab},\ \forall a,b\in\mathbb{R},\,a,b\ge 0.}
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}
+	Với $m,n,p$ nào thì bất đẳng thức $ma + nb\ge p\sqrt{ab}$ luôn đúng: (a) $\forall a,b\in\mathbb{R}$, $a,b\ge0$. (b) $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho 3 số không âm]
+	Chứng minh:
+	\begin{align*}
+		\boxed{a + b + c\ge3\sqrt[3]{abc},\ \forall a,b,c\in\mathbb{R},\,a,b,c\ge 0.}
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}
+	Với $m,n,p,q$ nào thì bất đẳng thức $ma + nb + pc\ge q\sqrt[3]{abc}$ luôn đúng: (a) $\forall a,b,c\in\mathbb{R}$, $a,b,c\ge0$. (b) $\forall a,b,c\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho $n$ số không âm]
+	Chứng minh:
+	\begin{align*}
+		\sum_{i=1}^n a_i\ge n\sqrt[n]{\prod_{i=1}^n a_i},\mbox{ i.e., } a_1 + a_2 + \cdots + a_n\ge\sqrt[n]{a_1a_2\cdots a_n},\ \forall n\in\mathbb{N}^\star,\ \forall a_i\in\mathbb{R},\,a_i\ge0,\,\forall i = 1,2,\ldots,n.
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}
+	Với bộ $(m,m_1,m_2,\ldots,m_n)$ nào thì bất đẳng thức:
+	\begin{align*}
+		\sum_{i=1}^n m_ia_i\ge m\sqrt[n]{\prod_{i=1}^n a_i},\mbox{ i.e., } m_1a_1 + m_2a_2 + \cdots + m_na_n\ge m\sqrt[n]{a_1a_2\cdots a_n},\ \forall n\in\mathbb{N}^\star,
+	\end{align*}
+	đúng với: (a) $\forall a_i\in\mathbb{R}$, $a_i\ge0$, $\forall i = 1,2,\ldots,n$. (b) $\forall a_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$.
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.1, p. 5]
+	Chứng minh: $4ab\le(a + b)^2\le2(a^2 + b^2)$, hay có thể viết dưới dạng $\frac{a^2 + b^2}{2}\ge\left(\frac{a + b}{2}\right)^2$, $ab\le\frac{(a + b)^2}{4}$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.2, p. 5]
+	Chứng minh: $3(ab + bc + ca)\le(a + b + c)^2\le3(a^2 + b^2 + c^2)$, hay có thể viết dưới dạng $ab + bc + ca\le\frac{1}{3}(a + b + c)^2$, $\forall a,b,c\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.3, p. 6]
+	Chứng minh: $\frac{1}{a} + \frac{1}{b}\ge\frac{4}{a + b}$, hay có thể viết dưới dạng $\frac{1}{a + b}\le\frac{1}{4}\left(\frac{1}{a} + \frac{1}{b}\right)$, $\forall a,b > 0$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.4, p. 6]
+	Chứng minh: $\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\ge\frac{9}{a + b + c}$, hay có thể viết dưới dạng $\frac{1}{a + b + c}\le\frac{1}{9}\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\right)$, $\forall a,b,c > 0$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Mở rộng Bổ đề 1.3--1.4, p. 6 cho $n$ số]
+	Chứng minh:
+	\begin{align*}
+		\frac{1}{a_1} + \ldots + \frac{1}{a_n}\ge\frac{n^2}{a_1 + \cdots + a_n},\mbox{ i.e., }\frac{1}{a_1 + \cdots + a_n}\le\frac{1}{n^2}\left(\frac{1}{a_1} + \cdots + \frac{1}{a_n}\right),\ \forall a_i > 0,\,\forall i = 1,\ldots,n,
+	\end{align*}
+	hay có thể được viết gọn lại như sau:
+	\begin{align*}
+		\sum_{i=1}^{n} \frac{1}{a_i}\ge\frac{n^2}{\sum_{i=1}^n a_i},\mbox{ i.e., }\frac{1}{\sum_{i=1}^n a_i}\le\frac{1}{n^2}\sum_{i=1}^n \frac{1}{a_i},\ \forall a_i > 0,\,\forall i = 1,\ldots,n.
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.5, p. 7]
+	Chứng minh: $\sqrt{a + b}\le\sqrt{a} + \sqrt{b}\le\sqrt{2(a + b)}$, $\forall a,b\ge 0$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Mở rộng Bổ đề 1.5, p. 7]
+	Chứng minh: $\sqrt{a + b + c}\le\sqrt{a} + \sqrt{b} + \sqrt{c}\le\sqrt{3(a + b + c)}$, $\forall a,b,c\ge 0$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Mở rộng Bổ đề 1.5, p. 7 cho $n$ số]
+	Chứng minh: $\sqrt{a_1 + \cdots + a_n}\le\sqrt{a_1} + \cdots + \sqrt{a_n}\le\sqrt{n(a_1 + \cdots + a_n)}$, $\forall a_i\ge 0$, $\forall i = 1,\ldots,n$, hay có thể được viết gọn lại như sau:
+	\begin{align*}
+		\sqrt{\sum_{i=1}^n a_i}\le\sum_{i=1}^n \sqrt{a_i}\le\sqrt{n\sum_{i=1}^n a_i},\ \forall a_i\ge 0,\,\forall i = 1,\ldots,n.
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.6, p. 7]
+	Chứng minh: $a^3 + b^3\ge ab(a + b)$, $\forall a,b\in\mathbb{R}$, $a + b\ge 0$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Mở rộng Bổ đề 1.6, p. 7]
+	Chứng minh: $a^4 + b^4\ge ab(a^2 + b^2)$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Introduction}
+The general structure of a problem on inequality is given by:
+
+\begin{problem}
+	Let $x_i$, $\forall i = 1,2,\ldots,n$ satisfy the condition $C(x_1,x_2,\ldots,x_n) = 0$ \& $C^\star(x_1,x_2,\ldots,x_n)\ge0$. Prove that: (a) $A(x_1,x_2,\ldots,x_n)\le0$. (b) $B(x_1,x_2,\ldots,x_n)\ge0$. (c) Find the minimum \& maximum of $A(x_1,x_2,\ldots,x_n)$ \& $B(x_1,x_2,\ldots,x_n)$.
+\end{problem}
+Cấu trúc tổng quát của 1 bài toán bất đẳng thức:
+
+\begin{baitoan}
+	Cho các biến $x_i$, $\forall i = 1,2,\ldots,n$ thỏa mãn điều kiện $C(x_1,x_2,\ldots,x_n) = 0$. Chứng minh: (a) $A(x_1,x_2,\ldots,x_n)\le0$. (b) $B(x_1,x_2,\ldots,x_n)\ge0$. (c) Tìm {\rm GTNN} \& {\rm GTLN} của biểu thức $A(x_1,x_2,\ldots,x_n)$ \& $B(x_1,x_2,\ldots,x_n)$.
+\end{baitoan}
+Để nghiên cứu các bài toán bất đẳng thức \& cực trị 1 cách có hệ thống, ta sẽ nghiên cứu 1 số dạng thường gặp của các \textit{biểu thức cần tìm cực trị} $A,B$ \& đặc biệt là các \textit{đẳng thức điều kiện} $C(x_1,x_2,\ldots,x_n) = 0$ \& \textit{bất đẳng thức điều kiện} $C^\star(x_1,x_2,\ldots,x_n)\ge0$.
+
+%------------------------------------------------------------------------------%
+
+\section{Cauchy-Schwarz Inequality -- Bất Đẳng Thức Cauchy-Schwarz}
+The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrightarrow x = 0$. $x^2 > 0\Leftrightarrow x\ne0$.
+
+\textit{Ý nghĩa hình học}: Diện tích hình vuông thì không âm. Diện tích của hình vuông bằng 0 $\Leftrightarrow$ hình vuông đó suy biến thành 1 điểm. Cụ thể, công thức tính diện tích hình vuông cạnh $a$: $S = a^2$. Khi đó $S = a^2\ge0$, $\forall a\ge0$ \& $S = 0\Leftrightarrow a = 0$.
+
+\begin{baitoan}
+	Chứng minh:
+	\begin{align}
+		\label{1}
+		4ab\le2(|ab| + ab)\le(a + b)^2\le(|a| + |b|)^2\le2(a^2 + b^2),\ \forall a,b\in\mathbb{R}.
+	\end{align}
+\end{baitoan}
+
+\begin{proof}[1st chứng minh]
+	(a) $4ab\le2(|ab| + ab)\Leftrightarrow2ab\le2|ab|\Leftrightarrow ab\le|ab|$ luôn đúng $\forall a,b\in\mathbb{R}$. ``$=$'' $\Leftrightarrow ab\ge0$. (b) $2(|ab| + ab)\le(a + b)^2\Leftrightarrow2|ab| + 2ab\le a^2 + 2ab + b^2\Leftrightarrow2|ab|\le a^2 + b^2\Leftrightarrow(|a| - |b|)^2\ge0$ luôn đúng $\forall a,b\in\mathbb{R}$. ``$=$'' $\Leftrightarrow|a| = |b|$. (c) $(a + b)^2\le(|a| + |b|)^2\Leftrightarrow a^2 + 2ab + b^2\le|a|^2 + 2|a||b| + |b|^2\Leftrightarrow ab\le|ab|$ luôn đúng $\forall a,b\in\mathbb{R}$. ``$=$'' $\Leftrightarrow ab\ge0$. (d) $(|a| + |b|)^2\le2(a^2 + b^2)\Leftrightarrow|a|^2 + 2|a||b| + |b|^2\le2a^2 + 2b^2\Leftrightarrow(|a| - |b|)^2\ge0$ luôn đúng $\forall a,b\in\mathbb{R}$. ``$=$'' $\Leftrightarrow|a| = |b|$.
+\end{proof}
+
+\begin{proof}[2nd chứng minh]
+	(d) Áp dụng bất đẳng thức Cauchy cho 2 số $a^2$ \& $b^2$: $a^2 + b^2\ge2\sqrt{a^2b^2} = 2|ab|$, 
+\end{proof}
+
+\begin{luuy}
+	Trị tuyệt đối của 1 số thực không nhỏ hơn số thực đó, i.e., $|x|\ge x$, $\forall x\in\mathbb{R}$. $|x| = x\Leftrightarrow x\ge0$.
+\end{luuy}
+
+\begin{baitoan}
+	Bất đẳng thức $(a + b)^2\ge4|ab|$ đúng khi nào?
+\end{baitoan}
+
+\begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho 2 số không âm]
+	Chứng minh:
+	\begin{align*}
+		\boxed{a + b\ge2\sqrt{ab},\ \forall a,b\in\mathbb{R},\,a,b\ge 0.}
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{proof}[1st proof]
+	$a + b - 2\sqrt{ab} = (\sqrt{a} - \sqrt{b})^2\ge0\Rightarrow a + b\ge2\sqrt{ab}$, $\forall a,b\in\mathbb{R}$, $a,b\ge 0$. ``$=$'' $\Leftrightarrow\sqrt{a} = \sqrt{b}\Leftrightarrow a = b$.
+\end{proof}
+
+\begin{proof}[2nd proof]
+	$(a + b)^2 - (2\sqrt{ab})^2 = a^2 + 2ab + b^2 - 4ab = a^2 - 2ab + b^2 = (a - b)^2\ge0\Rightarrow(a + b)^2\ge(2\sqrt{ab})^2\Rightarrow a + b\ge2\sqrt{ab}$ (vì $a,b\ge0$ nên $a + b\ge0$ \& $2\sqrt{ab}\ge0$). ``$=$'' $\Leftrightarrow a = b$.
+\end{proof}
+
+\begin{luuy}
+	Ở 2nd proof, ta đã vận dụng tính chất cơ bản của căn bậc 2: \fbox{$0\le a\le b\Leftrightarrow\sqrt{a}\le\sqrt{b}$, $\forall a,b\in\mathbb{R}$}. Phiên bản chặt\emph{\texttt{/}}ngặt (strict) là: \fbox{$0\le a < b\Leftrightarrow\sqrt{a} < \sqrt{b}$, $\forall a,b\in\mathbb{R}$}. Ý nghĩa hình học của 2 tính chất này: Hình vuông nào có cạnh lớn hơn thì có diện tích lớn hơn \& ngược lại, hình vuông nào có diện tích lớn hơn thì có cạnh lớn hơn.
+\end{luuy}
+
+\begin{proof}[3rd proof]
+	Đặt $x\coloneqq\sqrt{a}$, $y\coloneqq\sqrt{b}$, $x,y\in\mathbb{R}$, $x,y\ge0$. Có $a + b - 2\sqrt{ab} = a + b - 2\sqrt{a}\sqrt{b} = x^2 + y^2 - 2xy = (x - y)^2\ge0\Rightarrow a + b\ge2\sqrt{ab}$. ``$=$'' $\Leftrightarrow x = y\Leftrightarrow\sqrt{a} = \sqrt{b}\Leftrightarrow a = b$.
+\end{proof}
+
+\begin{luuy}
+	Ở 3rd proof, ta đã sử dụng tính chất giao hoán của phép nhân \& phép khai phương: \fbox{$\sqrt{ab} = \sqrt{a}\sqrt{b}$, $\forall a,b\in\mathbb{R}$, $a,b\ge0$}.
+\end{luuy}
+
+\begin{baitoan}
+	Với $m,n,p$ nào thì bất đẳng thức $ma + nb\ge p\sqrt{ab}$ luôn đúng: (a) $\forall a,b\in\mathbb{R}$, $a,b\ge0$. (b) $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho 3 số không âm]
+	Chứng minh:
+	\begin{align*}
+		\boxed{a + b + c\ge3\sqrt[3]{abc},\ \forall a,b,c\in\mathbb{R},\,a,b,c\ge 0.}
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}
+	Với $m,n,p,q$ nào thì bất đẳng thức $ma + nb + pc\ge q\sqrt[3]{abc}$ luôn đúng: (a) $\forall a,b,c\in\mathbb{R}$, $a,b,c\ge0$. (b) $\forall a,b,c\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho $n$ số không âm]
+	Chứng minh:
+	\begin{align*}
+		\sum_{i=1}^n a_i\ge n\sqrt[n]{\prod_{i=1}^n a_i},\mbox{ i.e., } a_1 + a_2 + \cdots + a_n\ge\sqrt[n]{a_1a_2\cdots a_n},\ \forall n\in\mathbb{N}^\star,\ \forall a_i\in\mathbb{R},\,a_i\ge0,\,\forall i = 1,2,\ldots,n.
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $n\in\mathbb{N}^\star$. Với bộ $(m,m_1,m_2,\ldots,m_n)$ nào thì bất đẳng thức:
+	\begin{align*}
+		\sum_{i=1}^n m_ia_i\ge m\sqrt[n]{\prod_{i=1}^n a_i},\mbox{ i.e., } m_1a_1 + m_2a_2 + \cdots + m_na_n\ge m\sqrt[n]{a_1a_2\cdots a_n},
+	\end{align*}
+	đúng với: (a) $\forall a_i\in\mathbb{R}$, $a_i\ge0$, $\forall i = 1,2,\ldots,n$. (b) $\forall a_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$.
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+
+%------------------------------------------------------------------------------%
+
+\section{Áp Dụng Bất Đẳng Thức Cauchy--Schwarz Để Tìm Cực Trị}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 9, p. 23]
+	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$. Tìm {\rm GTNN} của biểu thức $A = \sqrt{x} + \sqrt{y}$.
+\end{baitoan}
+
+\begin{proof}[1st proof]
+	Vì $x,y > 0$ nên $\frac{1}{x},\frac{1}{y},\sqrt{x},\sqrt{y} > 0$. Áp dụng bất đẳng thức Cauchy cho 2 số dương $\frac{1}{x},\frac{1}{y}$, được: $\sqrt{\frac{1}{x}\cdot\frac{1}{y}}\le\frac{1}{2}\left(\frac{1}{x} + \frac{1}{y}\right) = \frac{1}{2}\cdot\frac{1}{2} = \frac{1}{4}\Rightarrow\frac{1}{\sqrt{xy}}\le\frac{1}{4}\Rightarrow\sqrt{xy}\ge4$. Áp dụng bất đẳng thức Cauchy cho 2 số dương $\sqrt{x},\sqrt{y}$, được: $A = \sqrt{x} + \sqrt{y}\ge2\sqrt{\sqrt{x}\sqrt{y}} = 2\sqrt{\sqrt{xy}}\ge2\sqrt{4} = 4$. ``$=$'' $\Leftrightarrow x = y$ \& $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}\Leftrightarrow x = y = 4$. Vậy $\min A = 4\Leftrightarrow x = y = 4$.
+\end{proof}
+
+\begin{proof}[2nd proof]
+	Áp dụng bất đẳng thức Cauchy lần lượt cho $(\sqrt{x},\sqrt{y})$ \& $\left(\frac{1}{x},\frac{1}{y}\right)$, được:
+	\begin{align*}
+		A = \sqrt{x} + \sqrt{y}\ge2\sqrt{\sqrt{x}\sqrt{y}} = 2\sqrt{\dfrac{1}{\dfrac{1}{\sqrt{x}}\cdot\dfrac{1}{\sqrt{y}}}}\ge2\sqrt{\frac{1}{\dfrac{1}{2}\left(\dfrac{1}{x} + \dfrac{1}{y}\right)}} = 2\sqrt{\dfrac{1}{\dfrac{1}{2}\cdot\dfrac{1}{2}}} = 4.
+	\end{align*}
+	``$=$'' $\Leftrightarrow \sqrt{x} = \sqrt{y}$ \& $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}\Leftrightarrow x = y$ \& $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}\Leftrightarrow x = y = 4$. Vậy $\min_{x,y\in\mathbb{R},\,x,y > 0} A = 4\Leftrightarrow x = y = 4$.
+\end{proof}
+
+\begin{nhanxet}
+	``Trong thí dụ trên ta đã vận dụng bất đẳng thức Cauchy--Schwarz theo 2 chiều ngược nhau. Lần thứ nhất ta đã ``làm trội'' $\sqrt{\frac{1}{x}\cdot\frac{1}{y}}$ bằng cách vận dụng $\sqrt{ab}\le\frac{a + b}{2}$ để dùng điều kiện tổng $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$, từ đó được $\sqrt{xy}\ge4$. Lần thứ 2 ta đã ``làm giảm'' tổng $\sqrt{x} + \sqrt{y}$ bằng cách vận dụng bất đẳng thức Cauchy--Schwarz theo chiều $a + b\ge2\sqrt{ab}$ để dùng kết quả $\sqrt{xy}\ge4$. Không phải lúc nào ta cũng có thể dùng trực tiếp bất đẳng thức Cauchy--Schwarz đối với các số trong đề bài.'' -- \emph{\cite[p. 24]{Tuyen_Toan_9}}
+\end{nhanxet}
+
+\begin{luuy}
+	TXĐ của $A$ chỉ là $D_A\coloneqq\{(x,y)\in\mathbb{R}^2|x,y\ge0\}$, nhưng để điều kiện $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$ có nghĩa thì cần thêm $x\ne0$, $y\ne0$, nên ta cần xét $A$ trên tập hợp $D\coloneqq\{(x,y)\in\mathbb{R}^2|x,y > 0,\,\frac{1}{x} + \frac{1}{y} = \frac{1}{2}\}\subset D_A$. Hơn nữa, nếu viết {\rm GTNN} của biểu thức $A = A(x,y)$ trên tập $D = \{(x,y)\in\mathbb{R}^2|x > 0,y > 0\}$ 1 cách chính xác về mặt toán học thì nên viết tường minh là $\min_{x,y\in\mathbb{R},\,x,y > 0} A(x,y)$ hoặc $\min_{(x,y)\in D} A(x,y)$ hoặc $\min_{x,y\in\mathbb{R},\,x,y > 0} A$ như trong 2nd proof thay vì chỉ đơn giản là $\min A$ như trong 1st proof.
+\end{luuy}
+Ta có thể mở rộng \& tổng quát bài toán trên như sau:
+
+\begin{baitoan}
+	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{1}{x} + \frac{1}{y} = m > 0$, $m\in\mathbb{R}$ cho trước. Có thể tìm {\rm GTNN} \& {\rm GTLN} của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{a}{x} + \frac{b}{y} = m > 0$, $a,b,m\in\mathbb{R}$ cho trước. Có thể tìm {\rm GTNN} \& {\rm GTLN} của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $x,y\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $\frac{a}{x} + \frac{b}{y} + \frac{c}{z} = m > 0$, $a,b,c,m\in\mathbb{R}$ cho trước. Có thể tìm {\rm GTNN} \& {\rm GTLN} của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $n\in\mathbb{N}^\star$, $x_i\in\mathbb{R}$, $x_i > 0$, $\forall i = 1,2,\ldots,n$, thỏa mãn điều kiện $\sum_{i=1}^n \frac{a_i}{x_i} = m > 0$, $a_i,m\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, cho trước. Có thể tìm {\rm GTNN} \& {\rm GTLN} của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 10, p. 24]
+	Tìm {\rm GTLN} \& {\rm GTNN} của biểu thức $A = \sqrt{3x - 5} + \sqrt{7 - 3x}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	ĐKXĐ: $\frac{5}{3}\le x\le\frac{7}{3}$. $A^2 = 3x - 5 + 7 - 3x + 2\sqrt{3x - 5}\sqrt{7 - 3x}\le2 + (3x - 5 + 7 - 3x) = 4\Rightarrow A\le2$ ($A\ge0$ vì $\sqrt{3x - 5}\ge0$, $\sqrt{7 - 3x}\ge0$). ``$=$'' $\Leftrightarrow 3x - 5 = 7 - 3x\Leftrightarrow x = 2$. Mặt khác, $A^2 = 2 + 2\sqrt{3x - 5}\sqrt{7 - 3x}\ge2$. ``$=$'' $\Leftrightarrow(3x - 5)(7 - 3x) = 0\Leftrightarrow x\in\{\frac{5}{3},\frac{7}{3}\}$. Vậy $\max A = 2\Leftrightarrow x = 2$ \& $\min A = \sqrt{2}\Leftrightarrow x\in\{\frac{5}{3},\frac{7}{3}\}$.
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_9}, Ví dụ 10, p. 24]
+	Biện luận theo các tham số $a,b,c,d\in\mathbb{R}$ để tìm {\rm GTLN} \& {\rm GTNN} của biểu thức $A = \sqrt{ax + b} + \sqrt{cx + d}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 11, p. 25]
+	Tìm {\rm GTLN} \& {\rm GTNN} của biểu thức $A = \dfrac{\sqrt{x - 9}}{5x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 12, p. 25]
+	Tìm {\rm GTNN} của biểu thức $A = \dfrac{3x^4 + 16}{x^3}$. $A$ có {\rm GTLN} không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 13, p. 26]
+	Cho $0 < x < 2$, tìm {\rm GTNN} của biểu thức $A = \dfrac{9x}{2 - x} + \dfrac{2}{x}$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 14, p. 27]
+	Cho $x,y,z\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $x + y + z = 2$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{x^2}{y + z} + \dfrac{y^2}{z + x} + \dfrac{z^2}{x + y}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 63., p. 28]
+	Cho $a,x,y\in\mathbb{R}$, $a,x,y > 0$, $x + y = 2a$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{1}{x} + \dfrac{1}{y}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 64., p. 28]
+	Tìm {\rm GTLN} của biểu thức $A = \sqrt{x - 5} + \sqrt{23 - x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 65., p. 28]
+	Cho $x + y = 15$, tìm {\rm GTNN}, {\rm GTLN} của biểu thức $A = \sqrt{x - 4} + \sqrt{y - 3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 66., p. 28]
+	Tìm {\rm GTNN} của biểu thức $A = \dfrac{2x^2 - 6x + 5}{2x}$ với $x\in\mathbb{R}$, $x > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 67., p. 28]
+	Cho $a,b,x\in\mathbb{R}$, $a,b,x > 0$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{(x + a)(x + b)}{x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 68., p. 28]
+	Cho $x\in\mathbb{R}$, $x\ge0$, tìm {\rm GTNN} của biểu thức $A = \dfrac{x^2 + 2x + 17}{2(x + 1)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 69., p. 28]
+	Tìm {\rm GTNN} của biểu thức $A = \dfrac{x + 6\sqrt{x} + 36}{\sqrt{x} + 3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 70., p. 28]
+	Cho $x\in\mathbb{R}$, $x > 0$, tìm {\rm GTNN} của biểu thức $A = \dfrac{x^3 + 2000}{x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 71., p. 28]
+	Cho $x,y\in\mathbb{R}$, $x,y > 0$ \& $x + y\ge6$. Tìm {\rm GTNN} của biểu thức: $A = 5x + 3y + \dfrac{12}{x} + \dfrac{16}{y}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 72., p. 29]
+	Cho $x,y\in\mathbb{R}$, $x > y$ \& $xy = 5$, tìm {\rm GTNN} của biểu thức $A = \dfrac{x^2 + 1.2xy + y^2}{x - y}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 73., p. 29]
+	Cho $x\in\mathbb{R}$, $x > 1$, tìm {\rm GTLN} của biểu thức $A = 4x + \dfrac{25}{x - 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 74., p. 29]
+	Cho $x\in\mathbb{R}$, $0 < x < 1$, tìm {\rm GTNN} của biểu thức $A = \dfrac{3}{1 - x} + \dfrac{4}{x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 75., p. 29]
+	Cho $x,y,z\in\mathbb{R}$, $x,y,z\ge0$ thỏa mãn điều kiện $x + y + z = a$. (a) Tìm {\rm GTLN} của biểu thức $A = xy + yz + zx$. (b) Tìm {\rm GTNN} của biểu thức $B = x^2 + y^2 + z^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 76., p. 29]
+	Cho $x,y,z\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $x + y + z\ge12$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{x}{\sqrt{y}} + \dfrac{y}{\sqrt{z}} + \dfrac{z}{\sqrt{x}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 77., p. 29]
+	Cho $x,y,z\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $x + y + z = a$. Tìm {\rm GTNN} của biểu thức $A = \left(1 + \dfrac{a}{x}\right)\left(1 + \dfrac{a}{y}\right)\left(1 + \dfrac{a}{z}\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 78., p. 29]
+	Cho $a,b,c\in\mathbb{R}$, $a,b,c > 0$ thỏa mãn điều kiện $a + b + c = 1$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{(1 + a)(1 + b)(1 + c)}{(1 - a)(1 - b)(1 - c)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 79., p. 29]
+	Cho $x,y\in\mathbb{R}$ thỏa mãn điều kiện $x + y = 1$ \& $x > 0$. Tìm {\rm GTLN} của biểu thức $B = x^2y^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Dung_Can_Anh_BDT_8_9}, Ví dụ 1.5.1, p. 73, TS PTNK ĐHQG Tp HCM 2006]
+	Cho $x,y\in\mathbb{R}$ thỏa mãn $x + y = 2$. Chứng minh $xy(x^2 + y^2)\le2$.
+\end{baitoan}
+
+\begin{proof}[1st chứng minh]
+	Sử dụng bất đẳng thức $ab\le\frac{1}{4}(a + b)^2$ ở \eqref{1}, có: $xy(x^2 + y^2) = \frac{1}{2}(2xy)(x^2 + y^2)\le\frac{1}{8}[2xy + (x^2 + y^2)]^2 = \frac{1}{8}(x + y)^4 = 2$. ``$=$'' $\Leftrightarrow x + y = 2$ \& $2xy = x^2 + y^2\Leftrightarrow x + y = 2$ \& $(x - y)^2 = 0\Leftrightarrow x = y = 1$.
+\end{proof}
+
+\begin{proof}[2nd chứng minh]
+	Sử dụng \textit{kỹ thuật đồng bậc}, cần chứng minh $8xy(x^2 + y^2)\le(x + y)^4$ (cả 2 vế đều là bậc 4). Bất đẳng thức này đúng vì $8xy(x^2 + y^2)\le(x + y)^4\Leftrightarrow8xy(x^2 + y^2)\le x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4\Leftrightarrow x^4 - 4x^3y + 6x^2y^2 - 4xy^3 + y^4\ge0\Leftrightarrow(x - y)^4\ge0$ hiển nhiên đúng $\forall x,y\in\mathbb{R}$. ``$=$'' $\Leftrightarrow x = y$ \& $x + y = 2\Leftrightarrow x = y = 1$.
+\end{proof}
+Ta có thể mở rộng bài toán trên như sau:
+
+\begin{baitoan}
+	Cho $x,y,m\in\mathbb{R}$ thỏa mãn $x + y = m$. Biện luận theo tham số $m$ để tìm {\rm GTLN} \& {\rm GTNN} của: (a) $A = xy(x^2 + y^2)$. (b) $B = xy(x^3 + y^3)$. (c) $B = xy(x^4 + y^4)$. (d${}^\star$) $x^ay^a(x^b + y^b)$ với $a,b\in\mathbb{Z}$. 
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Uncategorized}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.1, p. 5]
+	Chứng minh: $4ab\le(a + b)^2\le2(a^2 + b^2)$, hay có thể viết dưới dạng $\frac{a^2 + b^2}{2}\ge\left(\frac{a + b}{2}\right)^2$, $ab\le\frac{(a + b)^2}{4}$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{proof}[Hint]
+	$(a + b)^2 - 4ab = (a - b)^2\ge 0$, $2(a^2 + b^2) - (a + b)^2 = (a - b)^2\ge 0$, $\forall a,b\in\mathbb{R}$. ``$=$'' $\Leftrightarrow a = b$.
+\end{proof}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.2, p. 5]
+	Chứng minh: $3(ab + bc + ca)\le(a + b + c)^2\le3(a^2 + b^2 + c^2)$, hay có thể viết dưới dạng $ab + bc + ca\le\frac{1}{3}(a + b + c)^2$, $\forall a,b,c\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{proof}[Hint]
+	$(a + b + c)^2 - 3(ab + bc + ca) = \frac{1}{2}\left[(a - b)^2 + (b - c)^2 + (c - a)^2\right]\ge 0$, $3(a^2 + b^2 + c^2) - (a + b + c)^2 = (a - b)^2 + (b - c)^2 + (c - a)^2\ge 0$, $\forall a,b,c\in\mathbb{R}$. ``$=$'' $\Leftrightarrow a = b = c$.
+\end{proof}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.3, p. 6]
+	Chứng minh: $\frac{1}{a} + \frac{1}{b}\ge\frac{4}{a + b}$, hay có thể viết dưới dạng $\frac{1}{a + b}\le\frac{1}{4}\left(\frac{1}{a} + \frac{1}{b}\right)$, $\forall a,b > 0$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{proof}[Hint]
+	$\frac{1}{a} + \frac{1}{b} - \frac{4}{a + b} = \frac{(a - b)^2}{ab(a + b)}\ge 0$, $\forall a,b > 0$. ``$=$'' $\Leftrightarrow a = b > 0$.
+\end{proof}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.4, p. 6]
+	Chứng minh: $\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\ge\frac{9}{a + b + c}$, hay có thể viết dưới dạng $\frac{1}{a + b + c}\le\frac{1}{9}\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\right)$, $\forall a,b,c > 0$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Mở rộng Bổ đề 1.3--1.4, p. 6 cho $n$ số]
+	Chứng minh:
+	\begin{align*}
+		\frac{1}{a_1} + \ldots + \frac{1}{a_n}\ge\frac{n^2}{a_1 + \cdots + a_n},\mbox{ i.e., }\frac{1}{a_1 + \cdots + a_n}\le\frac{1}{n^2}\left(\frac{1}{a_1} + \cdots + \frac{1}{a_n}\right),\ \forall a_i > 0,\,\forall i = 1,\ldots,n,
+	\end{align*}
+	hay có thể được viết gọn lại như sau:
+	\begin{align*}
+		\sum_{i=1}^{n} \frac{1}{a_i}\ge\frac{n^2}{\sum_{i=1}^n a_i},\mbox{ i.e., }\frac{1}{\sum_{i=1}^n a_i}\le\frac{1}{n^2}\sum_{i=1}^n \frac{1}{a_i},\ \forall a_i > 0,\,\forall i = 1,\ldots,n.
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.5, p. 7]
+	Chứng minh: $\sqrt{a + b}\le\sqrt{a} + \sqrt{b}\le\sqrt{2(a + b)}$, $\forall a,b\ge 0$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Mở rộng Bổ đề 1.5, p. 7]
+	Chứng minh: $\sqrt{a + b + c}\le\sqrt{a} + \sqrt{b} + \sqrt{c}\le\sqrt{3(a + b + c)}$, $\forall a,b,c\ge 0$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Mở rộng Bổ đề 1.5, p. 7 cho $n$ số]
+	Chứng minh: $\sqrt{a_1 + \cdots + a_n}\le\sqrt{a_1} + \cdots + \sqrt{a_n}\le\sqrt{n(a_1 + \cdots + a_n)}$, $\forall a_i\ge 0$, $\forall i = 1,\ldots,n$, hay có thể được viết gọn lại như sau:
+	\begin{align*}
+		\sqrt{\sum_{i=1}^n a_i}\le\sum_{i=1}^n \sqrt{a_i}\le\sqrt{n\sum_{i=1}^n a_i},\ \forall a_i\ge 0,\,\forall i = 1,\ldots,n.
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.6, p. 7]
+	Chứng minh: $a^3 + b^3\ge ab(a + b)$, $\forall a,b\in\mathbb{R}$, $a + b\ge 0$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{proof}[Hint]
+	$a^3 + b^3 - ab(a + b) = (a + b)(a - b)^2\ge 0$, $\forall a,b\in\mathbb{R}$, $a + b\ge 0$. ``$=$'' $\Leftrightarrow a = \pm b$.
+\end{proof}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Mở rộng Bổ đề 1.6, p. 7]
+	Chứng minh: $a^4 + b^4\ge ab(a^2 + b^2)$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
 
 %------------------------------------------------------------------------------%
 
