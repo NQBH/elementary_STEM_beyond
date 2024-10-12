@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usepackage{amsmath,amssymb,amsthm,enumitem,float,graphicx,mathtools,tikz}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
@@ -39,6 +39,8 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 \def\labelitemii{$\circ$}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
 
 \title{Elementary Inequality -- Bất Đẳng Thức Sơ Cấp}
 \author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
@@ -72,6 +74,12 @@
 \section{Basic}
 \textbf{\textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
+	\item \cite{Anh_Quang_bdt_lem}. {\sc Nguyễn Tuấn Anh, Cao Minh Quang}. {\it Bất Đẳng Thức Dưới Góc Nhìn của Các Bổ Đề}.
+	\item \cite{Hardy_Littlewood_Polya1952}. {\sc G. H. Hardy, J. E. Littlewood, G. P\'{o}lya}. {\it Inequalities}.
+	\item \cite{Dung_Can_Anh_bdt_8_9}. {\sc Nguyễn Văn Dũng, Võ Quốc Bá Cẩn, Trần Quốc Anh}. {\it Phương Pháp Giải Toán Bất Đẳng Thức \& Cực Trị Dành Cho Học Sinh Lớp 8, 9}.
+	\item {\sc Phạm Kim Hùng}. {\it Sáng Tạo Bất Đẳng Thức}.
+	\item \cite{Khai_Huong_bdt}. {\sc Phan Huy Khải, Đoàn Thanh Hương}. {\it Các Phương Pháp Hiệu Quả Giải Bài Toán Về Bất Đẳng Thức \& Giá Trị Lớn Nhất Nhỏ Nhất}.
+	\item \cite{Son_Nghiep_Trung_Can_bdt}. {\sc Nguyễn Ngọc Sơn, Chu Đình Nghiệp, Lê Hải Trung, Võ Quốc Bá Cẩn}. {\it Các Chủ Đề Bất Đẳng Thức Ôn Thi Vào Lớp 10}.
 	\item \href{https://nguyenhuyenag.wordpress.com/}{{\sc Nguyễn Văn Huyện}'s WordPress blog}. \href{https://mathifc.wordpress.com/}{The Simplest Solution Is The Best Solution}.
 	\item \href{https://leviethai.wordpress.com}{{\sc Lê Việt Hải}'s WordPress blog}.
 \end{itemize}
@@ -85,7 +93,7 @@
 \begin{proof}[Answer]
 	Some reasons:
 	\begin{enumerate}
-		\item To sharp computation skills on algebraic manipulation -- Để mài bén kỹ năng tính toán về các biến đổi đại số.
+		\item To sharp computation skills on algebraic manipulations -- Để mài bén kỹ năng tính toán về các biến đổi đại số.
 		\item To become better at mathematics -- Để trở nên giỏi Toán hơn.
 		\item To become mathematical analyst -- Để trở thành nhà Toán học về Giải tích .
 		\item To become mathematical optimist -- Để trở thành nhà Toán học về Tối ưu.
@@ -360,7 +368,7 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 
 \section{Áp Dụng Bất Đẳng Thức Cauchy--Schwarz Để Tìm Cực Trị}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 9, p. 23]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, Ví dụ 9, p. 23]
 	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$. Tìm {\rm GTNN} của biểu thức $A = \sqrt{x} + \sqrt{y}$.
 \end{baitoan}
 
@@ -377,7 +385,7 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 \end{proof}
 
 \begin{nhanxet}
-	``Trong thí dụ trên ta đã vận dụng bất đẳng thức Cauchy--Schwarz theo 2 chiều ngược nhau. Lần thứ nhất ta đã ``làm trội'' $\sqrt{\frac{1}{x}\cdot\frac{1}{y}}$ bằng cách vận dụng $\sqrt{ab}\le\frac{a + b}{2}$ để dùng điều kiện tổng $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$, từ đó được $\sqrt{xy}\ge4$. Lần thứ 2 ta đã ``làm giảm'' tổng $\sqrt{x} + \sqrt{y}$ bằng cách vận dụng bất đẳng thức Cauchy--Schwarz theo chiều $a + b\ge2\sqrt{ab}$ để dùng kết quả $\sqrt{xy}\ge4$. Không phải lúc nào ta cũng có thể dùng trực tiếp bất đẳng thức Cauchy--Schwarz đối với các số trong đề bài.'' -- \emph{\cite[p. 24]{Tuyen_Toan_9}}
+	``Trong thí dụ trên ta đã vận dụng bất đẳng thức Cauchy--Schwarz theo 2 chiều ngược nhau. Lần thứ nhất ta đã ``làm trội'' $\sqrt{\frac{1}{x}\cdot\frac{1}{y}}$ bằng cách vận dụng $\sqrt{ab}\le\frac{a + b}{2}$ để dùng điều kiện tổng $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$, từ đó được $\sqrt{xy}\ge4$. Lần thứ 2 ta đã ``làm giảm'' tổng $\sqrt{x} + \sqrt{y}$ bằng cách vận dụng bất đẳng thức Cauchy--Schwarz theo chiều $a + b\ge2\sqrt{ab}$ để dùng kết quả $\sqrt{xy}\ge4$. Không phải lúc nào ta cũng có thể dùng trực tiếp bất đẳng thức Cauchy--Schwarz đối với các số trong đề bài.'' -- \emph{\cite[p. 24]{Tuyen_Toan_9_old}}
 \end{nhanxet}
 
 \begin{luuy}
@@ -401,7 +409,7 @@ Ta có thể mở rộng \& tổng quát bài toán trên như sau:
 	Cho $n\in\mathbb{N}^\star$, $x_i\in\mathbb{R}$, $x_i > 0$, $\forall i = 1,2,\ldots,n$, thỏa mãn điều kiện $\sum_{i=1}^n \frac{a_i}{x_i} = m > 0$, $a_i,m\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, cho trước. Có thể tìm {\rm GTNN} \& {\rm GTLN} của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 10, p. 24]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, Ví dụ 10, p. 24]
 	Tìm {\rm GTLN} \& {\rm GTNN} của biểu thức $A = \sqrt{3x - 5} + \sqrt{7 - 3x}$.
 \end{baitoan}
 
@@ -409,91 +417,91 @@ Ta có thể mở rộng \& tổng quát bài toán trên như sau:
 	ĐKXĐ: $\frac{5}{3}\le x\le\frac{7}{3}$. $A^2 = 3x - 5 + 7 - 3x + 2\sqrt{3x - 5}\sqrt{7 - 3x}\le2 + (3x - 5 + 7 - 3x) = 4\Rightarrow A\le2$ ($A\ge0$ vì $\sqrt{3x - 5}\ge0$, $\sqrt{7 - 3x}\ge0$). ``$=$'' $\Leftrightarrow 3x - 5 = 7 - 3x\Leftrightarrow x = 2$. Mặt khác, $A^2 = 2 + 2\sqrt{3x - 5}\sqrt{7 - 3x}\ge2$. ``$=$'' $\Leftrightarrow(3x - 5)(7 - 3x) = 0\Leftrightarrow x\in\{\frac{5}{3},\frac{7}{3}\}$. Vậy $\max A = 2\Leftrightarrow x = 2$ \& $\min A = \sqrt{2}\Leftrightarrow x\in\{\frac{5}{3},\frac{7}{3}\}$.
 \end{proof}
 
-\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_9}, Ví dụ 10, p. 24]
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_9_old}, Ví dụ 10, p. 24]
 	Biện luận theo các tham số $a,b,c,d\in\mathbb{R}$ để tìm {\rm GTLN} \& {\rm GTNN} của biểu thức $A = \sqrt{ax + b} + \sqrt{cx + d}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 11, p. 25]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, Ví dụ 11, p. 25]
 	Tìm {\rm GTLN} \& {\rm GTNN} của biểu thức $A = \dfrac{\sqrt{x - 9}}{5x}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 12, p. 25]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, Ví dụ 12, p. 25]
 	Tìm {\rm GTNN} của biểu thức $A = \dfrac{3x^4 + 16}{x^3}$. $A$ có {\rm GTLN} không?
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 13, p. 26]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, Ví dụ 13, p. 26]
 	Cho $0 < x < 2$, tìm {\rm GTNN} của biểu thức $A = \dfrac{9x}{2 - x} + \dfrac{2}{x}$. 
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 14, p. 27]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, Ví dụ 14, p. 27]
 	Cho $x,y,z\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $x + y + z = 2$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{x^2}{y + z} + \dfrac{y^2}{z + x} + \dfrac{z^2}{x + y}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 63., p. 28]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 63., p. 28]
 	Cho $a,x,y\in\mathbb{R}$, $a,x,y > 0$, $x + y = 2a$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{1}{x} + \dfrac{1}{y}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 64., p. 28]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 64., p. 28]
 	Tìm {\rm GTLN} của biểu thức $A = \sqrt{x - 5} + \sqrt{23 - x}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 65., p. 28]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 65., p. 28]
 	Cho $x + y = 15$, tìm {\rm GTNN}, {\rm GTLN} của biểu thức $A = \sqrt{x - 4} + \sqrt{y - 3}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 66., p. 28]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 66., p. 28]
 	Tìm {\rm GTNN} của biểu thức $A = \dfrac{2x^2 - 6x + 5}{2x}$ với $x\in\mathbb{R}$, $x > 0$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 67., p. 28]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 67., p. 28]
 	Cho $a,b,x\in\mathbb{R}$, $a,b,x > 0$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{(x + a)(x + b)}{x}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 68., p. 28]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 68., p. 28]
 	Cho $x\in\mathbb{R}$, $x\ge0$, tìm {\rm GTNN} của biểu thức $A = \dfrac{x^2 + 2x + 17}{2(x + 1)}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 69., p. 28]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 69., p. 28]
 	Tìm {\rm GTNN} của biểu thức $A = \dfrac{x + 6\sqrt{x} + 36}{\sqrt{x} + 3}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 70., p. 28]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 70., p. 28]
 	Cho $x\in\mathbb{R}$, $x > 0$, tìm {\rm GTNN} của biểu thức $A = \dfrac{x^3 + 2000}{x}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 71., p. 28]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 71., p. 28]
 	Cho $x,y\in\mathbb{R}$, $x,y > 0$ \& $x + y\ge6$. Tìm {\rm GTNN} của biểu thức: $A = 5x + 3y + \dfrac{12}{x} + \dfrac{16}{y}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 72., p. 29]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 72., p. 29]
 	Cho $x,y\in\mathbb{R}$, $x > y$ \& $xy = 5$, tìm {\rm GTNN} của biểu thức $A = \dfrac{x^2 + 1.2xy + y^2}{x - y}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 73., p. 29]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 73., p. 29]
 	Cho $x\in\mathbb{R}$, $x > 1$, tìm {\rm GTLN} của biểu thức $A = 4x + \dfrac{25}{x - 1}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 74., p. 29]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 74., p. 29]
 	Cho $x\in\mathbb{R}$, $0 < x < 1$, tìm {\rm GTNN} của biểu thức $A = \dfrac{3}{1 - x} + \dfrac{4}{x}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 75., p. 29]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 75., p. 29]
 	Cho $x,y,z\in\mathbb{R}$, $x,y,z\ge0$ thỏa mãn điều kiện $x + y + z = a$. (a) Tìm {\rm GTLN} của biểu thức $A = xy + yz + zx$. (b) Tìm {\rm GTNN} của biểu thức $B = x^2 + y^2 + z^2$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 76., p. 29]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 76., p. 29]
 	Cho $x,y,z\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $x + y + z\ge12$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{x}{\sqrt{y}} + \dfrac{y}{\sqrt{z}} + \dfrac{z}{\sqrt{x}}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 77., p. 29]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 77., p. 29]
 	Cho $x,y,z\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $x + y + z = a$. Tìm {\rm GTNN} của biểu thức $A = \left(1 + \dfrac{a}{x}\right)\left(1 + \dfrac{a}{y}\right)\left(1 + \dfrac{a}{z}\right)$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 78., p. 29]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 78., p. 29]
 	Cho $a,b,c\in\mathbb{R}$, $a,b,c > 0$ thỏa mãn điều kiện $a + b + c = 1$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{(1 + a)(1 + b)(1 + c)}{(1 - a)(1 - b)(1 - c)}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_9}, 79., p. 29]
+\begin{baitoan}[\cite{Tuyen_Toan_9_old}, 79., p. 29]
 	Cho $x,y\in\mathbb{R}$ thỏa mãn điều kiện $x + y = 1$ \& $x > 0$. Tìm {\rm GTLN} của biểu thức $B = x^2y^3$.
 \end{baitoan}
 
@@ -593,30 +601,35 @@ Ta có thể mở rộng bài toán trên như sau:
 \subsection{Undefined Coefficient Technique (UCT) -- Kỹ thuật hệ số bất định}
 
 \begin{baitoan}
-	Cho $a,b,c > 0,a + b + c = S\in(0,\infty)$. Tìm điều kiện cần \& đủ của $m,n,p,q\in\mathbb{R}$  để
-	\begin{equation}
-		\frac{m}{x^2} + nx^2\ge px + q,\forall x\in(0,S),\ \frac{m}{x^2} + nx^2 = px + q\Leftrightarrow x = \frac{S}{3}.
-	\end{equation}
+	Cho $a,b,c > 0,a + b + c = S\in(0,\infty)$. Tìm điều kiện cần \& đủ của $\alpha,\beta,\gamma,\delta\in\mathbb{R}$  để
+	\begin{equation*}
+		\left\{\begin{split}
+			\frac{\alpha}{x^2} + \beta x^2&\ge\gamma x + \delta,\ \forall x\in(0,S),\\
+			\frac{\alpha}{x^2} + \beta x^2 &= \gamma x + \delta\Leftrightarrow x = \frac{S}{3}.
+		\end{split}\right.
+	\end{equation*}
 	Từ đó suy ra các bất đẳng thức có dạng
-	\begin{equation}
-		\alpha\left(\frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}\right) + \beta(a^2 + b^2 + c^2)\ge\gamma.
-	\end{equation}
+	\begin{align}
+		m\left(\frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}\right) + n(a^2 + b^2 + c^2)&\ge p(a + b + c) + 3q = pS + 3q,\\
+		m\left(\frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}\right) + n(a^2 + b^2 + c^2) &= p(a + b + c) + 3q = pS + 3q\Leftrightarrow a = b = c = \frac{S}{3}.
+	\end{align}
 \end{baitoan}
 
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4.1, p. 76]
-	Cho $a,b,c > 0$, $a + b + c = 3$. Chứng minh $\frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2} + \frac{2}{3}(a^2 + b^2 + c^2)\ge5$.
+	Cho $a,b,c > 0$, $a + b + c = 3$. Chứng minh $\dfrac{1}{a^2} + \dfrac{1}{b^2} + \dfrac{1}{c^2} + \dfrac{2}{3}(a^2 + b^2 + c^2)\ge5$.
 \end{baitoan}
-{\it Hint.} $\frac{1}{a^2} + \frac{2}{3}a^2\ge-\frac{2}{3}a + \frac{7}{3}\Leftrightarrow\frac{(a - 1)^2(a^2 + 6a + 3)}{3a^2}\ge0$, $\forall a > 0$.
+{\it Hint.} $\dfrac{1}{a^2} + \dfrac{2}{3}a^2\ge-\dfrac{2}{3}a + \dfrac{7}{3}\Leftrightarrow\dfrac{(a - 1)^2(a^2 + 6a + 3)}{3a^2}\ge0$, $\forall a > 0$.
 
 \begin{baitoan}
 	Cho $a,b,c > 0$, $a^2 + b^2 + c^2 = S_2$. Tìm điều kiện cần \& đủ của $m,n,p,q\in\mathbb{R}$ để
-	\begin{equation}
+	\begin{equation*}
 		mx + \frac{n}{x}\ge px^2 + q,\ \forall x\in(0,\sqrt{S_2}).
-	\end{equation}
+	\end{equation*}
 	Từ đó suy ra các bất đẳng thức có dạng
-	\begin{equation}
-		\alpha(a + b + c) + \beta(\frac{1}{a} + \frac{1}{b} + \frac{1}{c})\ge\gamma.
-	\end{equation}
+	\begin{align*}
+		m(a + b + c) + n\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\right)&\ge p(a^2 + b^2 + c^2) + 3q = pS_2 + 3q,\\
+		m(a + b + c) + n\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\right) &= p(a^2 + b^2 + c^2) + 3q = pS_2 + 3q\Leftrightarrow a = b = c = \sqrt{\frac{S_2}{3}}.
+	\end{align*}
 \end{baitoan}
 
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4.2, p. 77]
