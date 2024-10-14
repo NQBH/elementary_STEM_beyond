@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usepackage{amsmath,amssymb,amsthm,enumitem,float,graphicx,mathtools,tikz}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
@@ -39,8 +39,10 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 \def\labelitemii{$\circ$}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
 
-\title{Problem: Mathematical Optimization -- Bài Tập: Ứng Dụng Toán Học Để Giải Quyết 1 Số Bài Toán Tối Ưu}
+\title{Problem: Mathematical Optimization\\Bài Tập: Ứng Dụng Toán Học Để Giải Quyết 1 Số Bài Toán Tối Ưu}
 \author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
 \date{\today}
 
@@ -89,6 +91,55 @@ Linear programming can be applied to various fields of study, which is widely us
 \begin{dinhnghia}[Quy hoạch tuyến tính]
 	Bài toán \emph{quy hoạch tuyến tính} là bài toán tìm {\rm GTLN{\tt/}GTNN} của \emph{hàm mục tiêu} trong điều kiện hàm mục tiêu là hàm bậc nhất đối với các biến \& mỗi 1 điều kiện ràng buộc là bất phương trình bậc nhất đối với các biến (không kể điều kiện ràng buộc biến thuộc tập số nào, e.g., $\mathbb{N},\mathbb{Q},\mathbb{R},\mathbb{C}$.
 \end{dinhnghia}
+Ta có thể viết bài toán quy hoạch tuyến tính 2 biến $x,y$ về dạng sau:
+\begin{align}
+	\max T&\coloneqq\alpha x + \beta y\mbox{ s.t } a_ix + b_iy\le c_i,\ \forall i = 1,2,\ldots,n,\label{linear programming 2 vars max}\tag{lp2max}\\
+	\min T&\coloneqq\alpha x + \beta y\mbox{ s.t } a_ix + b_iy\le c_i,\ \forall i = 1,2,\ldots,n,\label{linear programming 2 vars min}\tag{lp2min}
+\end{align}
+trong đó các điều kiện ràng buộc đều là các bất phương trình bậc nhất đối với $x,y$. See also:
+\begin{itemize}
+	\item {\it Problem: Inequation \& Linear System of Inequations -- Bài Tập: Bất Phương Trình \& Hệ Bất Phương Trình}.
+	
+	Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Mathematics{\tt/}grade 10{\tt/}linear system inequations{\tt/}problem}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/linear_system_inequations/problem/NQBH_linear_system_inequations_problem.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/linear_system_inequations/problem/NQBH_linear_system_inequations_problem.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/linear_system_inequations/problem/NQBH_linear_system_inequations_problem.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/linear_system_inequations/problem/NQBH_linear_system_inequations_problem.tex}.}].
+	\begin{itemize}
+		\item {\it Problem \& Solution: Inequation \& Linear System of Inequations -- Bài Tập \& Lời Giải: Bất Phương Trình \& Hệ Bất Phương Trình}.
+		
+		Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Mathematics{\tt/}grade 10{\tt/}linear system inequations{\tt/}solution}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/linear_system_inequations/solution/NQBH_linear_system_inequations_solution.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/linear_system_inequations/solution/NQBH_linear_system_inequations_solution.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/linear_system_inequations/solution/NQBH_linear_system_inequations_solution.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/linear_system_inequations/solution/NQBH_linear_system_inequations_solution.tex}.}].
+	\end{itemize}
+\end{itemize}
+
+\subsection{How to solve some linear programmings -- Cách giải 1 số bài toán quy hoạch tuyến tính}
+Có thể giải 1 số bài toán quy hoạch tuyến tính dạng \eqref{linear programming 2 vars max} hay \eqref{linear programming 2 vars min} theo 2 bước:
+\begin{enumerate}
+	\item Xác định miền nghiệm $S\subset\mathbb{R}^2$ của hệ bất phương trình $a_ix + b_iy\le c_i$, $\forall i = 1,\ldots,n$.
+	\item Tìm điểm $(x,y)\in S$ sao cho biểu thức $T = T(x,y) = \alpha x + \beta y$ có {\rm GTLN} ở bài toán \eqref{linear programming 2 vars max} hoặc có {\rm GTNN} ở bài toán \eqref{linear programming 2 vars min}.
+	
+	Khi miền nghiệm $S$ là đa giác (polygon), biểu thức $T(x,y) = \alpha x + \beta y$ đạt GTLN{\tt/}GTNN (gộp chung gọi là {\it cực trị}) tại $(x,y)\in\mathbb{R}^2$ là tọa độ 1 trong các đỉnh của đa giác đó. Khi đó, bước 2 có thể được thực hiện như sau:
+	\begin{enumerate}
+		\item Xác định tọa độ các đỉnh của đa giác đó.
+		\item Tính giá trị của biểu thức $T(x,y) = \alpha x + \beta y$ tại các đỉnh của đa giác đó.
+		\item So sánh các giá trị \& kết luận.
+	\end{enumerate}
+\end{enumerate}
+\cite[Chuyên đề II, \S1, LT1--3, 1., 2., 3., 4., 5., pp. 20--25]{CDHT_Toan_12_Canh_Dieu}.
+
+%------------------------------------------------------------------------------%
+
+\section{Application of Derivative to Solve Some Optimization Problems in Reality -- Vận Dụng Đạo Hàm Để Giải Quyết 1 Số Bài Toán Tối Ưu Trong Thực Tiễn}
+
+\subsection{Application of derivative to solve some optimization problems in science, engineering, \& technology -- Vận dụng đạo hàm để giải quyết 1 số bài toán tối ưu trong khoa học, kỹ thuật, \& công nghệ}
+Đạo hàm là 1 khái niệm toán học xuất phát từ nhiều vấn đề trong khoa học, kỹ thuật, \& công nghệ (STEM) nên đạo hàm là 1 công cụ quan trọng để giải quyết 1 số bài toán tối ưu trong thực tiễn.
+
+\subsection{Application of derivative to solve some optimization problems in economy -- Vận dụng đạo hàm để giải quyết 1 số bài toán tối ưu trong kinh tế}
+Đạo hàm là 1 công cụ quan trọng để giải quyết 1 số bài toán tối ưu trong kinh tế, e.g., bài toán tối ưu hóa chi phí sản xuất, bài toán tối ưu hóa lợi nhuận, $\ldots$ Xem thêm Vận Trù Học.
+
+Để giải quyết bài toán tối ưu trong thực tiễn bằng phương pháp sử dụng đạo hàm:
+\begin{enumerate}
+	\item Xây dựng hàm số biểu thị đại lượng biến thiên trong bài toán tối ưu đó.
+	\item Sử dụng đạo hàm để tìm GTLN{\tt/}GTNN của hàm số vừa nhận được.
+	\item Dựa trên GTLN{\tt/}GTNN của hàm số vừa nhận được ở Bước 2, có thể xác định được nghiệm của bài toán tối ưu ban đầu.
+\end{enumerate}
+\cite[Chuyên đề II, \S2, LT1--2, 1., 2., 3., 4., 5., pp. 29--37]{CDHT_Toan_12_Canh_Dieu}.
 
 %------------------------------------------------------------------------------%
 
