@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usepackage{amsmath,amssymb,amsthm,enumitem,float,graphicx,mathtools,tikz}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
@@ -38,22 +38,41 @@
 \DeclareRobustCommand{\divby}{%
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
+\def\labelitemii{$\circ$}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
 
 \title{Problem: Trigonometry In Triangles\\Bài Tập: Hệ Thức Lượng Trong Tam Giác}
-\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
 \date{\today}
 
 \begin{document}
 \maketitle
 \begin{abstract}
-	Last updated version: \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/problem/NQBH_trigonometry_problem.pdf}{GitHub{\tt/}NQBH{\tt/}elementary STEM \& beyond{\tt/}elementary mathematics{\tt/}grade 9{\tt/}trigonometry{\tt/}problem: set $\mathbb{Q}$ of trigonometrys [pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/problem/NQBH_trigonometry_problem.pdf}.} [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/problem/NQBH_trigonometry_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/rational/problem/NQBH_trigonometry_problem.tex}.}. 
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
+	Latest version:
+	\begin{itemize}
+		\item {\it Problem: Trigonometry In Triangles -- Bài Tập: Hệ Thức Lượng Trong Tam Giác}.
+		
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/problem/NQBH_trigonometry_problem.pdf}.
+		
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/problem/NQBH_trigonometry_problem.tex}.
+		\item {\it Problem \& Solution: Trigonometry In Triangles -- Bài Tập \& Lời Giải: Hệ Thức Lượng Trong Tam Giác}.
+		
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/solution/NQBH_trigonometry_solution.pdf}.
+		
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/trigonometry/solution/NQBH_trigonometry_solution.tex}.
+	\end{itemize}
 \end{abstract}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
 
 \section{1 Số Hệ Thức Lượng về Cạnh \& Đường Cao Trong Tam Giác Vuông}
-\textbf{\textsf{Ký hiệu.}} $\Delta ABC$ vuông tại $A$: $a\coloneqq BC$, $b\coloneqq CA$, $c\coloneqq AB$, $b'\coloneqq CH$, $c'\coloneqq BH$, $h\coloneqq AH$.\\\textbf{\textsf{Tính chất.}} \fbox{1} $b^2 = ab'$, $c^2 = ac'$. \fbox{2} \textit{Định lý Pythagore thuận \& đảo}: $\Delta ABC$ vuông tại $A\Leftrightarrow a^2 = b^2 + c^2$. \fbox{3} $h^2 = b'c'$. \fbox{4} $ah = bc = 2S_{ABC}$. \fbox{5} $\dfrac{1}{h^2} = \dfrac{1}{b^2} + \dfrac{1}{c^2}$.
+$\Delta ABC$ vuông tại $A$: $a\coloneqq BC$, $b\coloneqq CA$, $c\coloneqq AB$, $b'\coloneqq CH$, $c'\coloneqq BH$, $h\coloneqq AH$. \fbox{1} $b^2 = ab'$, $c^2 = ac'$. \fbox{2} \textit{Định lý Pythagore thuận \& đảo}: $\Delta ABC$ vuông tại $A\Leftrightarrow a^2 = b^2 + c^2$. \fbox{3} $h^2 = b'c'$. \fbox{4} $ah = bc = 2S_{ABC}$. \fbox{5} $\dfrac{1}{h^2} = \dfrac{1}{b^2} + \dfrac{1}{c^2}$.
 
 \begin{baitoan}[\cite{Tuyen_Toan_9_old}, Thí dụ 1, p. 103]
 	Cho hình thang $ABCD$ có $\widehat{B} = \widehat{C} = 90^\circ$, 2 đường chéo vuông góc với nhau tại $H$. Biết $AB = 3\sqrt{5}$ \emph{cm}, $HA = 3$ \emph{cm}. Chứng minh: (a) $HA:HB:HC:HD = 1:2:4:8$. (b) $\dfrac{1}{AB^2} - \dfrac{1}{CD^2} = \dfrac{1}{HB^2} - \dfrac{1}{HC^2}$. (c) Tính $AD,CD$.
