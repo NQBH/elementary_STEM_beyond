@@ -10,6 +10,7 @@
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{}
+\newtheorem{bode}{Bổ đề}
 \newtheorem{cauhoi}{Câu hỏi}
 \newtheorem{conjecture}{Conjecture}
 \newtheorem{corollary}{Corollary}
@@ -79,6 +80,7 @@
 	\item \cite{Dung_Can_Anh_bdt_8_9}. {\sc Nguyễn Văn Dũng, Võ Quốc Bá Cẩn, Trần Quốc Anh}. {\it Phương Pháp Giải Toán Bất Đẳng Thức \& Cực Trị Dành Cho Học Sinh Lớp 8, 9}.
 	\item {\sc Phạm Kim Hùng}. {\it Sáng Tạo Bất Đẳng Thức}.
 	\item \cite{Khai_Huong_bdt}. {\sc Phan Huy Khải, Đoàn Thanh Hương}. {\it Các Phương Pháp Hiệu Quả Giải Bài Toán Về Bất Đẳng Thức \& Giá Trị Lớn Nhất Nhỏ Nhất}.
+	\item {\sc Trần Phương}. {\it Những Viên Kim Cương Của Bất Đẳng Thức}.
 	\item \cite{Son_Nghiep_Trung_Can_bdt}. {\sc Nguyễn Ngọc Sơn, Chu Đình Nghiệp, Lê Hải Trung, Võ Quốc Bá Cẩn}. {\it Các Chủ Đề Bất Đẳng Thức Ôn Thi Vào Lớp 10}.
 	\item \href{https://nguyenhuyenag.wordpress.com/}{{\sc Nguyễn Văn Huyện}'s WordPress blog}. \href{https://mathifc.wordpress.com/}{The Simplest Solution Is The Best Solution}.
 	\item \href{https://leviethai.wordpress.com}{{\sc Lê Việt Hải}'s WordPress blog}.
@@ -103,7 +105,7 @@
 \subsection{2-variable inequality hypotheses -- Giả thiết của bất đẳng thức 2 biến}
 
 \begin{enumerate}
-	\item Sum $S(a,b)\coloneqq a + b$.
+	\item Sum $S(a,b) = S_1(a,b)\coloneqq a + b$.
 	\item Product $P(a,b)\coloneqq ab$.
 	\item Sum of squares $S_2(a,b)\coloneqq a^2 + b^2$.
 	\item Sum of cubes $S_3(a,b)\coloneqq a^3 + b^3$.
@@ -113,7 +115,7 @@
 \subsection{3-variable inequality hypotheses -- Giả thiết của bất đẳng thức 3 biến}
 
 \begin{enumerate}
-	\item Sum $S(a,b,c)\coloneqq a + b + c$.
+	\item Sum $S(a,b,c) = S_1(a,b,c) = \coloneqq a + b + c$.
 	\item $A(a,b,c)\coloneqq ab + bc + ca$.
 	\item Product $P(a,b,c)\coloneqq abc$.
 	\item Sum of squares $S_2(a,b,c)\coloneqq a^2 + b^2 + c^2$.
@@ -124,13 +126,110 @@
 \subsection{$n$-variable inequality hypotheses -- Giả thiết của bất đẳng thức $n$ biến}
 
 \begin{enumerate}
-	\item Sum $S(x_1,\ldots,x_n)\coloneqq\sum_{i=1}^n x_i = x_1 + x_2 + \cdots + x_n$.
+	\item Sum $S(x_1,\ldots,x_n) = S_1(x_1,\ldots,x_n)\coloneqq\sum_{i=1}^n x_i = x_1 + x_2 + \cdots + x_n$.
 	\item Arithmetic mean $\bar{x}\coloneqq\frac{1}{n}S(x_1,\ldots,x_n) = \frac{1}{n}\sum_{i=1}^n x_i = \frac{1}{n}(x_1 + x_2 + \cdots + x_n)$. \href{https://en.wikipedia.org/wiki/Arithmetic_mean}{Wikipedia{\tt/}arithmetic mean}.
 	\item Product $P(x_1,\ldots,x_n)\coloneqq\prod_{i=1}^n x_i = x_1x_2\cdots x_n$.
 	\item Sum of squares $S_2(x_1,\ldots,x_n)\coloneqq\sum_{i=1}^n x_i^2 = x_1^2 + x_2^2 + \cdots + x_n^2$.
 	\item Sum of cubes $S_3(x_1,\ldots,x_n)\coloneqq\sum_{i=1}^n x_i^3 = x_1^3 + x_2^3 + \cdots + x_n^3$.
 	\item Sum of $m$th powers $S_m(x_1,\ldots,x_n)\coloneqq\sum_{i=1}^n x_i^m = x_1^m + x_2^m + \cdots + x_n^m$.
 \end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\section{Some Elementary Algebraic Inequalities -- 1 Số Bất Đẳng Thức Đại Số Sơ Cấp}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+	\item \cite[Chap. 1, \S1.1: Các bất đẳng thức đại số quan trọng]{Phuong_Quan_ptb3_htl}. {\sc Tạ Duy Phượng, Hoàng Minh Quân}. {\it Phương Trình Bậc 3 với Các Hệ Thức Hình Học \& Lượng Giác Trong Tam Giác}.
+	\item \cite{Hardy_Littlewood_Polya1952}. {\sc G. H. Hardy, J. E. Littlewood, G. P\'{o}lya}. {\it Inequalities}.
+\end{enumerate}
+
+\begin{dinhnghia}[2 dãy đơn điệu]
+	Với $n\in\mathbb{N}^\star$, 2 dãy số thực $(a_i)_{i=1}^n,(b_i)_{i=1}^n$ được gọi là \emph{sắp cùng thứ tự} (hoặc \emph{cùng chiều}) nếu cả 2 dãy cùng tăng, i.e., $a_1\le a_2\le\cdots\le a_n$ \& $b_1\le b_2\le\cdots\le b_n$, hoặc cùng giảm, i.e., $a_1\ge a_2\ge\cdots\ge a_n$ \& $b_1\ge b_2\ge\cdots\ge b_n$. 2 dãy được gọi là \emph{sắp ngược thứ tự} (hoặc \emph{ngược chiều}) nếu 1 dãy tăng \& 1 dãy giảm.
+\end{dinhnghia}
+
+\begin{bode}[Bổ đề về dãy đơn điệu]
+	Với $n\in\mathbb{N}^\star$, 2 dãy số thực $(a_i)_{i=1}^n,(b_i)_{i=1}^n\subset\mathbb{R}$. Giả sử $(x_i)_{i=1}^n$ là 1 hoán vị của $(b_i)_{i=1}^n$.
+	\item(i) Nếu $(a_i)_{i=1}^n,(b_i)_{i=1}^n$ sắp cùng thứ tự thì $\sum_{i=1}^n a_ib_i\ge\sum_{i=1}^n a_ix_i\ge\sum_{i=1}^n a_ib_{n + 1 - i}$.
+	\item(i) Nếu $(a_i)_{i=1}^n,(b_i)_{i=1}^n$ sắp ngược thứ tự thì $\sum_{i=1}^n a_ib_i\le\sum_{i=1}^n a_ix_i\le\sum_{i=1}^n a_ib_{n + 1 - i}$.
+	
+	Dấu $=$ xảy ra $\Leftrightarrow$ 1 trong 2 dãy là dãy hằng hoặc $x_i = b_i$, $\forall i = 1,\ldots,n$.
+\end{bode}
+
+\begin{hequa}
+	Với $n\in\mathbb{N}^\star$, nếu $(a_i)_{i=1}^n\subset\mathbb{R}$ \& $(x_i)_{i=1}^n$ là 1 hoán vị của $(a_i)_{i=1}^n$ thì $\sum_{i=1}^n a_i^2\ge\sum_{i=1}^n a_ix_i$.
+\end{hequa}
+
+\begin{hequa}
+	Với $n\in\mathbb{N}^\star$, nếu $(a_i)_{i=1}^n\subset(0,\infty)$ \& $(x_i)_{i=1}^n$ là 1 hoán vị của $(a_i)_{i=1}^n$ thì $\sum_{i=1}^n \frac{a_i}{x_i}\ge n$.
+\end{hequa}
+
+\begin{dinhly}[Bất đẳng thức Bunyakovsky]
+	Với Với $n\in\mathbb{N}^\star$, mọi bộ $2n$ số thực $a_i,b_i$, $i = 1,\ldots,n$,
+	\begin{equation}
+		\label{Bunyakovsky inequality}
+		\tag{B}
+		\left(\sum_{i=1}^n a_ib_i\right)^2\le\left(\sum_{i=1}^n a_i^2\right)\left(\sum_{i=1}^n b_i^2\right).
+	\end{equation}
+	Dấu $=$ xảy ra $\Leftrightarrow$ tồn tại số $t\in\mathbb{R}$ sao cho $b_i = ta_i$ hoặc $a_i = tb_i$, $i = 1,\ldots,n$.
+\end{dinhly}
+
+\begin{dinhly}[Bất đẳng thức Chebyshev]
+	Với $n\in\mathbb{N}^\star$:
+	\item(i) Với 2 dãy đơn điệu cùng chiều $a_1\ge a_2\ge\cdots\ge a_n$, $b_1\ge b_2\ge\cdots\ge b_n$,
+	\begin{equation}
+		\label{Chebyshev inequality 1}
+		\tag{Ch1}
+		\left(\sum_{i=1}^n a_i\right)\left(\sum_{i=1}^n b_i\right)\le n\sum_{i=1}^n a_ib_i.
+	\end{equation}
+	\item(ii) Với 2 dãy đơn điệu trái chiều $a_1\ge a_2\ge\cdots\ge a_n$, $b_1\le b_2\le\cdots\le b_n$,
+	\begin{equation}
+		\label{Chebyshev inequality 2}
+		\tag{Ch2}
+		\left(\sum_{i=1}^n a_i\right)\left(\sum_{i=1}^n b_i\right)\ge n\sum_{i=1}^n a_ib_i.
+	\end{equation}
+	Trong cả 2 dạng, dấu $=$ xảy ra $\Leftrightarrow$ hoặc $a_1 = a_2 = \cdots = a_n$ hoặc $b_1 = b_2 = \cdots = b_n$.
+\end{dinhly}
+
+\begin{dinhly}[Bất đẳng thức Cauchy--Schwarz, bất đẳng thức trung bình cộng--trung bình nhân, bất đẳng thức AM--GM]
+	Với $n\in\mathbb{N}^\star$, $a_i\in[0,\infty)$, $\forall i = 1,\ldots,n$,
+	\begin{align*}
+		\sum_{i=1}^n a_i\ge n\sqrt[n]{\prod_{i=1}^n a_i},\mbox{ i.e., } a_1 + a_2 + \cdots + a_n\ge\sqrt[n]{a_1a_2\cdots a_n},\ \forall n\in\mathbb{N}^\star,\ \forall a_i\in[0,\infty),\,\forall i = 1,\ldots,n.
+	\end{align*}
+	Dấu $=$ xảy ra $\Leftrightarrow$ hoặc $a_1 = a_2 = \cdots = a_n$.
+\end{dinhly}
+
+\begin{dinhly}[Bất đẳng thức Nesbit]
+	Với $a,b,c\in(0,\infty)$,
+	\begin{equation}
+		\label{Nesbit inequality}
+		\tag{N}
+		\frac{a}{b + c} + \frac{b}{c + a} + \frac{c}{a + b}\ge\frac{3}{2}.
+	\end{equation}
+\end{dinhly}
+
+\begin{dinhly}[Bất đẳng thức Schwarz]
+	Với $n\in\mathbb{N}^\star$, $a_i\in\mathbb{R}$, $b_i\in(0,\infty)$, $\forall i = 1,\ldots,n$:
+	\begin{equation}
+		\label{Schwarz inequality}
+		\tag{Sch}
+		\sum_{i=1}^n \frac{a_i^2}{b_i}\ge\frac{\left(\sum_{i=1}^n a_i\right)^2}{\sum_{i=1}^n b_i}.
+	\end{equation}
+	Dấu $=$ xảy ra $\Leftrightarrow$ hoặc $a_1 = a_2 = \cdots = a_n$.
+\end{dinhly}
+
+\begin{dinhly}[Bất đẳng thức Bernoulli]
+	Với $x\in(-1,\infty)$,
+	\begin{equation}
+		\label{Bernoulli inequality}
+		\tag{B}
+		(1 + x)^\alpha\left\{\begin{split}
+			&\le1 + \alpha x&&\mbox{if }\alpha\in[0,1],\\
+			&\ge1 + \alpha x&&\mbox{if }\alpha\in(-\infty,0]\cup[1,\infty),\\
+		\end{split}\right.
+	\end{equation}
+\end{dinhly}
+
+%------------------------------------------------------------------------------%
 
 \section{Introduction to Inequality}
 
@@ -185,7 +284,7 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 \begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho $n$ số không âm]
 	Chứng minh:
 	\begin{align*}
-		\sum_{i=1}^n a_i\ge n\sqrt[n]{\prod_{i=1}^n a_i},\mbox{ i.e., } a_1 + a_2 + \cdots + a_n\ge\sqrt[n]{a_1a_2\cdots a_n},\ \forall n\in\mathbb{N}^\star,\ \forall a_i\in\mathbb{R},\,a_i\ge0,\,\forall i = 1,2,\ldots,n.
+		\sum_{i=1}^n a_i\ge n\sqrt[n]{\prod_{i=1}^n a_i},\mbox{ i.e., } a_1 + a_2 + \cdots + a_n\ge\sqrt[n]{a_1a_2\cdots a_n},\ \forall n\in\mathbb{N}^\star,\ \forall a_i\in[0,\infty),\,\forall i = 1,\ldots,n.
 	\end{align*}
 	Đẳng thức xảy ra khi nào?
 \end{baitoan}
@@ -505,7 +604,7 @@ Ta có thể mở rộng \& tổng quát bài toán trên như sau:
 	Cho $x,y\in\mathbb{R}$ thỏa mãn điều kiện $x + y = 1$ \& $x > 0$. Tìm {\rm GTLN} của biểu thức $B = x^2y^3$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Dung_Can_Anh_BDT_8_9}, Ví dụ 1.5.1, p. 73, TS PTNK ĐHQG Tp HCM 2006]
+\begin{baitoan}[\cite{Dung_Can_Anh_bdt_8_9}, Ví dụ 1.5.1, p. 73, TS PTNK ĐHQG Tp HCM 2006]
 	Cho $x,y\in\mathbb{R}$ thỏa mãn $x + y = 2$. Chứng minh $xy(x^2 + y^2)\le2$.
 \end{baitoan}
 
@@ -605,14 +704,19 @@ Ta có thể mở rộng bài toán trên như sau:
 \subsection{Undefined Coefficient Technique (UCT) -- Kỹ thuật hệ số bất định}
 
 \begin{baitoan}
-	Cho $n\in\mathbb{N}^\star$, $x_i\in(0,\infty)$, $i = 1,2,\ldots,n$ thỏa $\sum_{i=1}^n x_i = S(x_1,\ldots,x_n)\in(0,\infty)$. Tìm điều kiện cần \& đủ của $\alpha,\beta,\gamma,\delta\in\mathbb{R}$  để
+	Cho $n\in\mathbb{N}^\star$, $x_i\in(0,\infty)$, $i = 1,2,\ldots,n$ thỏa $S(x_1,\ldots,x_n) = \sum_{i=1}^n x_i = S\in(0,\infty)$. Tìm điều kiện cần \& đủ của $\alpha,\beta,\gamma,\delta\in\mathbb{R}$  để
 	\begin{equation*}
 		\left\{\begin{split}
 			\frac{\alpha}{x^2} + \beta x^2&\ge\gamma x + \delta,\ \forall x\in(0,S),\\
-			\frac{\alpha}{x^2} + \beta x^2 &= \gamma x + \delta\Leftrightarrow x = \frac{S}{3}.
+			\frac{\alpha}{x^2} + \beta x^2 &= \gamma x + \delta\Leftrightarrow x = \frac{S}{n} = \bar{x}.
 		\end{split}\right.
 	\end{equation*}
 	Từ đó suy ra các bất đẳng thức có dạng
+	\begin{align*}
+		\alpha\sum_{i=1}^n \frac{1}{x_1^2} + \beta\sum_{i=1}^n x_i^2&\ge\gamma\sum_{i=1}^n x_i + n\delta = \gamma S + n\delta,\\
+		\alpha\sum_{i=1}^n \frac{1}{x_1^2} + \beta\sum_{i=1}^n x_i^2 &= \gamma\sum_{i=1}^n x_i + n\delta = \gamma S + n\delta\Leftrightarrow x_i = \bar{x} = \frac{S}{n},\ \forall i = 1,\ldots,n.
+	\end{align*}	
+	Đặc biệt với $n = 2$ \& $n = 3$:
 	\begin{align}
 		m\left(\frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}\right) + n(a^2 + b^2 + c^2)&\ge p(a + b + c) + 3q = pS + 3q,\\
 		m\left(\frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}\right) + n(a^2 + b^2 + c^2) &= p(a + b + c) + 3q = pS + 3q\Leftrightarrow a = b = c = \frac{S}{3}.
@@ -622,7 +726,7 @@ Ta có thể mở rộng bài toán trên như sau:
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4.1, p. 76]
 	Cho $a,b,c > 0$, $a + b + c = 3$. Chứng minh $\dfrac{1}{a^2} + \dfrac{1}{b^2} + \dfrac{1}{c^2} + \dfrac{2}{3}(a^2 + b^2 + c^2)\ge5$.
 \end{baitoan}
-{\it Hint.} $\dfrac{1}{a^2} + \dfrac{2}{3}a^2\ge-\dfrac{2}{3}a + \dfrac{7}{3}\Leftrightarrow\dfrac{(a - 1)^2(a^2 + 6a + 3)}{3a^2}\ge0$, $\forall a > 0$.
+{\sf Hint.} $\dfrac{1}{x^2} + \dfrac{2}{3}x^2\ge-\dfrac{2}{3}x + \dfrac{7}{3}\Leftrightarrow\dfrac{(x - 1)^2(x^2 + 6x + 3)}{3x^2}\ge0$, $\forall x > 0$.
 
 \begin{baitoan}
 	Cho $a,b,c > 0$, $a^2 + b^2 + c^2 = S_2$. Tìm điều kiện cần \& đủ của $m,n,p,q\in\mathbb{R}$ để
@@ -637,8 +741,42 @@ Ta có thể mở rộng bài toán trên như sau:
 \end{baitoan}
 
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4.2, p. 77]
-	Cho $a,b,c > 0$, $a^2 + b^2 + c^2 = S_2$. Chứng minh $2(a + b + c) + \frac{1}{a} + \frac{1}{b} + \frac{1}{c}\ge9$.
+	Cho $a,b,c > 0$, $a^2 + b^2 + c^2 = 3$. Chứng minh $2(a + b + c) + \dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c}\ge9$.
 \end{baitoan}
+{\sf Hint.} $2x + \dfrac{1}{x}\ge\dfrac{1}{2}x^2 + \dfrac{5}{2}\Leftrightarrow(x - 1)^2(x - 2)\le0$, $\forall x\in(0,\sqrt{3})$.
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4.3, p. 78]
+	Cho $a,b,c > 0$ thỏa $a^3 + b^3 + c^3 = 3$. Chứng minh $4\left(\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c}\right) + 5(a^2 + b^2 + c^2)\ge27$.
+\end{baitoan}
+{\sf Hint.} $\dfrac{4}{x} + 5x^2\ge2x^3 + 7\Leftrightarrow(x - 1)^2(2x^2 - x - 4)\le0$, $\forall x\in(0,\sqrt[3]{3})$.
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4.4, p. 79]
+	Cho $a,b,c > 0$, $a^2 + b^2 + c^2 = 3$. Chứng minh $\dfrac{a}{b^2 + c^2} + \dfrac{b}{c^2 + a^2} + \dfrac{c}{a^2 + b^2}\ge\dfrac{3}{2}$.
+\end{baitoan}
+{\sf Hint.} $\dfrac{x}{3 - x^2}\ge\dfrac{x^2}{2}$, $\forall x\in(0,\sqrt{3})$.
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4.5, p. 80]
+	Cho $x,y,z > 0$ thỏa $x + y + z = 3$. Tìm {\rm GTNN} của $A = \sqrt{x^2- xy + y^2} + \sqrt{y^2 - yz + z^2} + \sqrt{z^2 - zx + x^2}$.
+\end{baitoan}
+{\sf Hint.} $\sqrt{x^2- xy + y^2} = \sqrt{\frac{1}{4}(x + y)^2 + \frac{3}{4}(x - y)^2}\ge\frac{1}{2}(x + y)$.
+
+\begin{baitoan}
+	Tìm điều kiện cần \& đủ của $m,n\in\mathbb{R}$ theo $a,b,c\in\mathbb{R}$ để $\sqrt{ax^2 + bxy + cy^2}\ge mx + ny$, $\forall x,y\in(\alpha,\beta)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4., p. ]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4., p. ]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Son_Nghiep_Trung_Can_bdt}, VD4., p. ]
+	
+\end{baitoan}
+
+
 
 \subsection{Phương pháp đồng bậc chứng minh bất đẳng thức}
 
