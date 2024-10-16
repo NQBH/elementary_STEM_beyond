@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usepackage{amsmath,amssymb,amsthm,enumitem,float,graphicx,mathtools,tikz}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
@@ -42,6 +42,8 @@
 \title{Problem: Vector -- Bài Tập: Vector}
 \author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
 \date{\today}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
 
 \begin{document}
 \maketitle
@@ -69,6 +71,32 @@
 %------------------------------------------------------------------------------%
 
 \section{Vector \& Các Phép Toán Trên Vector}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+	\item \cite[Chuyên đề 1: {\it Vector Phẳng}]{Pho_Dung_chuyen_de_Toan_PT_1}. {\sc Lê Hoành Phò, Trần Nam Dũng}. {\it Tuyển Chọn Các Chuyên Đề Toán Phổ Thông Tập 1}.
+	\item \cite{TLCT_hinh_hoc_10}. {\it Tài Liệu Chuyên Toán Hình Học 10}.
+\end{enumerate}
+\fbox{1} {\it Quy tắc 3 điểm}: $\overrightarrow{AC} = \overrightarrow{AB} + \overrightarrow{CC}$, $\forall A,B,C\in\mathbb{R}^d$, $d\in\mathbb{N}^\star$. \fbox{2} {\sf Trung điểm.} $I$ là trung điểm của đoạn thẳng $AB$, $M$ là 1 điểm bất kỳ $\Rightarrow\overrightarrow{IA} + \overrightarrow{IB} = \vec{0}$, $\overrightarrow{MA} + \overrightarrow{MB} = 2\overrightarrow{MI}$. \fbox{3} {\sf Trọng tâm.} $G$ là trọng tâm $\Delta ABC$, $M$ là 1 điểm bất kỳ $\Rightarrow\overrightarrow{GA} + \overrightarrow{GB} + \overrightarrow{GC} = \vec{0}$, $\overrightarrow{MA} + \overrightarrow{MB} + \overrightarrow{MC} = 3\overrightarrow{MG}$. \fbox{4} {\sf Hình bình hành.} $ABCD$ là hình bình hành $\Rightarrow\overrightarrow{AB} + \overrightarrow{AD} = \overrightarrow{AC}$, $\overrightarrow{AB} - \overrightarrow{AD} = \overrightarrow{DB}$. \fbox{5} {\sf Chia tỷ lệ.} Điểm $M$ được gọi là chia đoạn $AB$ theo tỷ số $k\in\mathbb{R}\backslash\{1\}$ nếu $\overrightarrow{MA} = k\overrightarrow{MB}\Leftrightarrow\overrightarrow{OM} = \dfrac{\overrightarrow{OA} - k\overrightarrow{OB}}{1 - k}$. \fbox{6} {\sf Phân tích 2 vector không cùng phương.} Nếu 2 vector $\vec{a},\vec{b}$ không cùng phương thì với mọi vector $\vec{c}$, tồn tại duy nhất $m,n\in\mathbb{R}$ thỏa $\vec{c} = m\vec{a} + n\vec{b}$. \fbox{7} {\sf Tâm tỷ cự.} Với $n\in\mathbb{N}^\star$ điểm $A_i$ \& $a_i\in\mathbb{R}$, $i = 1,\ldots,n$ có tổng khác 0, i.e., $\sum_{i=1}^n a_i\ne0$, tồn tại duy nhất điểm $I$ thỏa $\sum_{i=1}^n a_i\overrightarrow{IA_i} = \vec{0}$. Điểm $I$ được gọi là {\it tâm tỷ cự} của hệ điểm $(A_i)_{i=1}^n$ với bộ trọng số $(a_i)_{i=1}^n$ tương ứng. \fbox{8} {\sf Điều kiện vuông góc.} $AB\bot CD\Leftrightarrow\overrightarrow{AB}\cdot\overrightarrow{CD} = 0$. \fbox{9} {\sf Điều kiện thẳng hàng.} $A,B,C$ thẳng hàng $\Leftrightarrow\overrightarrow{AB} = k\overrightarrow{AC}$. \fbox{10} $\Delta ABC$ có $\overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC} = \overrightarrow{OH} = 3\overrightarrow{OG}$, $a\overrightarrow{IA} + b\overrightarrow{IB} + c\overrightarrow{IC} = \vec{0}$.
+
+\begin{baitoan}[\cite{Pho_Dung_chuyen_de_Toan_PT_1}, VD1.1, p. 9]
+	Tứ giác $ABCD$, $M,N$ chia $AD,BC$ theo tỷ số $k\in(-\infty,0)$. (a) Tìm tập hợp trung điểm $I$ của $MN$ khi $k$ thay đổi. (b) Biểu diễn $\overrightarrow{MN}$ theo $\overrightarrow{AB},\overrightarrow{DC},k$ để suy ra $MN\le\max\{AB,CD\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Pho_Dung_chuyen_de_Toan_PT_1}, VD1.2, p. 10]
+	Cho $n$-giác đều $A_1A_2\ldots A_n$ nội tiếp trong đường tròn $(O,R)$ \& điểm $M\in(O,R)$. Chứng minh: (a) $\sum_{i=1}^n \overrightarrow{OA_i} = \vec{0}$. (b) $\sum_{i=1}^n \cos\widehat{MOA_i} = 0$, $\sum_{i=1}^n MA_i^2 = 2nR^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Pho_Dung_chuyen_de_Toan_PT_1}, VD1.3, p. 11]
+	$\Delta ABC$. Chứng minh: (a) $c^2 CM^2 = a^2AM^2 + b^2BM^2 + (a^2 + b^2 - c^2)AM\cdot BM$ với mọi điểm $M$ thuộc cạnh $AB$. (b) Độ dài đường phân giác $l_a^2 = \dfrac{4bc}{(a + b)^2}p(p - a)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Pho_Dung_chuyen_de_Toan_PT_1}, VD1.4, p. 13]
+	Tứ giác $ABCD$ có 2 đường chéo $AC,BD$ cắt nhau tại $O$. $H,K$ là trực tâm $\Delta ABO,\Delta CDO$, $I,J$ lần lượt là trung điểm $AD,BC$. Chứng minh $HK\bot IJ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Pho_Dung_chuyen_de_Toan_PT_1}, VD1.5, p. 14]
+	Cho 3 dây cung song song $AA',BB',CC'$ của đường tròn $(O)$. Chứng minh 3 trực tâm của $\Delta ABC',\Delta BCA',CAB'$ thẳng hàng.
+\end{baitoan}
 
 \begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, VD1, p. 59]
 	Cho đoạn thẳng $AB$ \& $I$ là trung điểm của $AB$. Chứng minh: (a) $\overrightarrow{IA} + \overrightarrow{IB} = \vec{0}$. (b)  $\overrightarrow{MA} + \overrightarrow{MB} = 2\overrightarrow{MI}$ với mọi điểm $M$.
