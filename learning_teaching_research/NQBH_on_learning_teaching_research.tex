@@ -147,44 +147,44 @@ Hắn thấy mình đang mệt nhoài, toàn thân rã rời, lê bước trở 
 	
 	Santa Claus continues to ask: ``What can be said when there is no pipe getting almost frozen?''
 	\item(ii) {\sf Criterion for almost frozen pipes.} Elf Bob says: ``There is no pipe getting almost frozen iff the following inequality holds:
-	\begin{equation}
-		\frac{r_{ij} - \varepsilon}{\alpha} > t_i\coloneqq\frac{V_i}{\sum_{j = 1}^n Q_{ij}},\ \forall i = 1,\ldots,m,\,j = 1,\ldots,n.''
-	\end{equation}
+	\begin{equation*}
+		\frac{r_{ij} - \varepsilon}{\alpha} > t_i\coloneqq\frac{V_i}{\sum_{j = 1}^n Q_{ij}},\ \forall i = 1,\ldots,m,\,j = 1,\ldots,n.\mbox{''}
+	\end{equation*}
 	\item(iii) {\sf Total length estimate.} Elf Camille says: ``The \emph{total length} $l\coloneqq\sum_{i = 1}^m\sum_{j = 1}^n l_{ij}$ of all pipes in the network satisfies
-	\begin{equation}
-		l < \frac{M_0}{\pi\delta(\delta + 2\varepsilon + 2\alpha\min_{1\le i\le m} t_i)}.''
-	\end{equation}
+	\begin{equation*}
+		l < \frac{M_0}{\pi\delta(\delta + 2\varepsilon + 2\alpha\min_{1\le i\le m} t_i)}.\mbox{''}
+	\end{equation*}
 	\item(iv) {\sf Length estimate.} Elf Dominic says: ``If the total length of all pipes of each factory are equal, i.e., $\sum_{j = 1}^n l_{ij} = l_0$, $\forall i = 1,\ldots,m$ \& a $l_0\in(0,\infty)$, then
-	\begin{equation}
-		l_0 < \frac{M_0}{\pi\delta(m\delta + 2m\varepsilon + 2\alpha\sum_{i = 1}^m t_i)}.''
-	\end{equation}
+	\begin{equation*}
+		l_0 < \frac{M_0}{\pi\delta(m\delta + 2m\varepsilon + 2\alpha\sum_{i = 1}^m t_i)}.\mbox{''}
+	\end{equation*}
 	\item(v) {\sf Capacity estimate.} Elf Elsa says: ``If the total length of all pipes of each factory are equal, the \emph{total capacity} $V$ of all the pipes, defined by
-	\begin{equation}
+	\begin{equation*}
 		\tag{V}
 		V\coloneqq\sum_{i = 1}^m\sum_{j = 1}^n \pi r_{ij}^2l_{ij}
-	\end{equation}
+	\end{equation*}
 	satisfies
-	\begin{equation}
-		V > \pi l_0\sum_{i = 1}^m (\varepsilon + \alpha t_i)^2.''
-	\end{equation}
+	\begin{equation*}
+		V > \pi l_0\sum_{i = 1}^m (\varepsilon + \alpha t_i)^2.\mbox{''}
+	\end{equation*}
 	Santa Claus asks again: ``What can be said if there is no water left in any water tank?''
 	\item(vi) {\sf Criterion for empty tanks.} Elf Federico says: ``There is no water left in any want tank iff
-	\begin{equation}
-		\sum_{j = 1}^n (r_{ij} - \varepsilon)Q_{ij}\ge\alpha V_i,\ \forall i = 1,\ldots,m.''
-	\end{equation}
+	\begin{equation*}
+		\sum_{j = 1}^n (r_{ij} - \varepsilon)Q_{ij}\ge\alpha V_i,\ \forall i = 1,\ldots,m.\mbox{''}
+	\end{equation*}
 	Santa Claus asks: ``In each watermill, bakers will need $10\ {\rm cm}^3$ water to make a cookie. If there is still water in all water tanks after all water pump engines have stopped pumping, how many cookies all watermills can make at maximum?''
 	\item(vii) {\sf Amount of cookies.} Elf Gwen says: ``The maximum number of cookies all watermills can produce is given by
-	\begin{equation}
-		\sum_{i = 1}^m\sum_{j = 1}^n \lfloor10^5\left(Q_{ij}\frac{r_{ij} - \varepsilon}{\alpha} - \frac{\pi}{1.09}r_{ij}^2l_{ij}\right)\rfloor.''
-	\end{equation}
+	\begin{equation*}
+		\sum_{i = 1}^m\sum_{j = 1}^n \left\lfloor10^5\left(Q_{ij}\frac{r_{ij} - \varepsilon}{\alpha} - \frac{\pi}{1.09}r_{ij}^2l_{ij}\right)\right\rfloor.\mbox{''}
+	\end{equation*}
 	Here $\lfloor x\rfloor$ is the \emph{integral part} of $x\in\mathbb{R}$ which is the largest integer that does not exceed $x$.
 	
 	Which elves are wrong?
 \end{problem}
-Actually, no elf is wrong. {\it The only person who is wrong is me}.
+Actually, no elf is wrong. {\it The only person being wrong is me}.
 
 \begin{quote}
-	{\sf Hồng [24; 1st-year Mathematical PhD student]}: Ban đầu thầy tôi bảo đây là 1 tờ báo uy tín về Toán cho học sinh phổ thông của Đức, tương tự như Tạp chí Toán học Tuổi trẻ ở Việt Nam. Tôi nghe mê lắm, nên nhận việc, mặc dù còn nhiều thứ phải làm do tôi đang chuyển từ mảng Giải tích thuần túy (Mathematical Analysis) sang Tối ưu (Mathematical Optimization{\tt/}Programming). Thầy tôi bảo cứ làm 1 bài về mạng lưới nước với bản chất là quy về việc giải 1 hệ phương trình tuyến tính bình thường. Như thế thì dễ quá, khó được accept, tôi bảo thế. Nên tôi chế ra bài toán này. Thầy tôi trêu để xem trình độ Toán phổ thông Việt Nam thế nào. \& ông ta đã không giải được. Ông quạo. Cuối cùng ông dùng email của tôi thông báo với Ban Tổ Chức rút bài toán được được chấp nhận đó.
+	{\sf Hồng [24; 1st-year Mathematical PhD student]}: Ban đầu thầy tôi bảo đây là 1 tờ báo uy tín về Toán cho học sinh phổ thông của Đức, tương tự như Tạp chí Toán học Tuổi trẻ ở Việt Nam. Tôi nghe mê lắm, nên nhận việc, mặc dù còn nhiều thứ phải làm do tôi đang chuyển từ mảng Giải tích thuần túy (Mathematical Analysis) sang Tối ưu (Mathematical Optimization{\tt/}Programming). Thầy tôi bảo cứ làm 1 bài về mạng lưới nước với bản chất là quy về việc giải 1 hệ phương trình tuyến tính bình thường. Như thế thì dễ quá, khó được accept, tôi bảo thế. Nên tôi chế ra bài toán này. Thầy tôi trêu để xem trình độ Toán phổ thông Việt Nam thế nào. \& ông ta đã không giải được. Ông quê nên quạo đeo. Máu dồn lên mặt đỏ rực, ánh mắt tức bực, sát khí hừng hực. Cuối cùng ông dùng email của ông ta hoặc email của tôi thông báo với Ban Tổ Chức rút bài toán được được chấp nhận đó.
 	
 	{\sf Hồng [28; Detective]}: Nhưng sao anh phát hiện được? Đâu có bằng chứng gì?
 	
@@ -3532,7 +3532,7 @@ Trường không bao giờ cho Trinh chơi với nhóm bạn riêng của Trư�
 
 Hồng thì lúc nào cũng giúp Trinh. Nhưng Trinh thì coi như lẽ hiển nhiên. Trinh lúc nào cũng khinh Hồng. Trinh thèm chơi với Trường. Người giỏi chơi với người giỏi. Con giáo viên chỉ chơi với con giáo viên, không chơi với con nông dân. Gió tầng nào gặp mây tầng đó. Cũng 1 cái bảng định kiến tương tự sinh ra từ cái cuộc thi Học Sinh Giỏi Quốc Gia THPT như trong quyển \cite{Long2021}: {\it Học Trường Chuyên -- Những Góc Nhìn Đa Chiều}. Toàn dạng á khoa, thủ khoa. Hồng thì chả bao giờ ham mấy chuyện đó, nhưng hắn thừa biết là nước ngoài họ đòi hỏi ở mức độ rất khác mà thủ khoa Việt Nam chưa chắc ăn thua gì.
 
-Hồng lại thêm 1 lần nữa thất vọng trong việc giúp đỡ người khác. Hắn vẫn chưa tởn. Nhìn cái mối quan hệ Trường--Trinh đầy phức tạp (cái quái gì đang xảy ra với mấy đứa tên chữ `Tr' thế?), Hồng chợt nhớ tới chị Phương hồi ở Pháp. Hồng giúp Phương thì Phương thù, Phương ghét, Phương khinh, Phương đạp. Thọ hại Phương, thao túng tâm lý Phương thì Phương thờ, Phương phụng. Trinh cũng thế. Chả đâu vào đâu. Những cái định kiến mệt mỏi của cuộc đời khiến Hồng chả muốn tiếp tục làm người tốt. Lòng tốt thì bị khinh. Còn bị thao túng tâm lý thì phê lắm, sướng lắm, như kiểu máu M, cứ sáp vô kẻ hãm hại hoặc kẻ thao túng như hiệu ứng Stockholm. Tâm lý con người quả là 1 mớ hỗ lốn đầy khó hiểu, muốn hiểu thì lại nhức đầu, rồi chả đâu vào đâu. Ấy vậy mà 1 phần nhân cách của con chuột quê như Hồng lại quyết định rồi quyết tâm trở thành nhà Tâm lý học. Thế mới hài.
+Hồng lại thêm 1 lần nữa thất vọng trong việc giúp đỡ người khác. Hắn vẫn chưa tởn. Nhìn cái mối quan hệ Trường--Trinh đầy phức tạp (cái quái gì đang xảy ra với mấy đứa tên chữ `Tr' thế?), Hồng chợt nhớ tới chị Phương hồi ở Pháp. Hồng giúp Phương thì Phương thù, Phương ghét, Phương khinh, Phương đạp. Thọ hại Phương, thao túng tâm lý Phương thì Phương thờ, Phương phụng. Trinh cũng thế. Chả đâu vào đâu. Những cái định kiến mệt mỏi của cuộc đời khiến Hồng chả muốn tiếp tục làm người tốt. Lòng tốt thì bị khinh. Còn bị thao túng tâm lý thì phê lắm, sướng lắm, như kiểu máu M, cứ sáp vô kẻ hãm hại hoặc kẻ thao túng như hiệu ứng Stockholm. Tâm lý con người quả là 1 mớ hỗ lốn đầy khó hiểu, muốn hiểu thì lại nhức đầu, rồi chả đâu vào đâu. Ấy vậy mà 1 phần nhân cách của con chuột quê như Hồng lại quyết định rồi quyết tâm trở thành nhà Tâm lý học. Thế mới hài. Just another serious joke.
 
 \subsection{The last moonwalk in the Inferno -- Điệu nhảy moonwalk cuối cùng ở Hỏa Ngục}
 Những kẻ ái kỷ cần học cách quan tâm, yêu thương người khác cho dù họ không có bất cứ cảm giác chân thành nào. Những kẻ chống đối xã hội nên tập chung tay xây dựng cộng đồng, dù chỉ là đạo đức giả, nhưng quan trọng là hành động. Những kẻ thái nhân cách nên bớt hãm hại người khác 1 cách tàn độc. 3 ba đen tối nên học cách giúp đỡ, thấu hiểu người khác, tập cảm nhận niềm tin, lòng chân thành, sự thấu cảm để cải thiện nhân cách \& các thiếu sót về mặt cấu trúc, chức năng của não bộ theo khía cạnh Khoa học Thần kinh để hòa nhập với cộng đồng theo xu hướng tích cực cho cả bản thân \& cho cộng đồng mà họ có ảnh hưởng tới.
