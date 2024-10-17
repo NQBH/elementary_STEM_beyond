@@ -118,7 +118,7 @@ Hắn thấy mình đang mệt nhoài, toàn thân rã rời, lê bước trở 
 \end{figure}
 Ít ra thì hắn cũng có 1 bài toán nhỏ với thầy của hắn được xuất bản trên 1 tạp chí toán phổ thông nổi tiếng của Đức, tựa tựa tạp chí Toán học \& Tuổi trẻ ở quê nhà của hắn. Hắn mừng lắm. Chẳn phải xuất bản khoa học, nhưng cũng được tính KPI (key performance indicator) để giảm bớt áp lực công việc.
 
-\begin{problem}[Water supply network, submitted to Math Kalendar, accepted but then rejected]
+\begin{problem}[Water supply network\footnote{{\sc url}: \url{https://github.com/NQBH/WIAS/blob/master/math_calendar/water_supply_network.pdf}.}, submitted to German {\sc Math Kalendar}, accepted but then rejected]
 	Far away in Frozen Kingdom, to guarantee a happy Christmas holiday, Santa Claus \& some elves Alice, Bob, Camille, Dominic, Elsa, Federico, \& Gwen want to set up a water network to supply water to watermills in order to make flour for cookies. Precisely, $m\in\mathbb{N}^\star$ water supply factories denoted by $(F_i)_{i=1}^m$ will supply $n\in\mathbb{N}^\star$ watermills $(W_j)_{j=1}^n$. For each $i = 1,\ldots,m$ \& $j = 1,\ldots,n$, the factory $F_i$ stores water of volume $V_i$ in its own water tank \& is connected to the watermill $W_j$ by an individual empty pipe, denoted by $p_{ij}$ being uniformly cylindrical with the size uniquely characterized by a fixed wall thickness $\delta > 0$, length $l_{ij}$, \& radius $r_{ij}$ of its interior. At the inlet of each pipe $p_{ij}$, a water pump engine is configured to supply water with a constant \emph{volumetric flow rate}\footnote{{\it Volumetric flow rate} of water is defined to be the volume of fluid $V$ which passes during a period of time $t > 0$: $Q\coloneqq\frac{V}{t}$.} $Q_{ij}\ {\rm m}^3{\tt/}{\rm s}$.
 	\begin{table}[H]
 		\centering
@@ -142,8 +142,46 @@ Hắn thấy mình đang mệt nhoài, toàn thân rã rời, lê bước trở 
 	
 	To prevent pipes from getting broken due to that volume expansion, Santa Clause chooses a fixed small positive number $\varepsilon$ 1st \& requires all the pipes to be designed such that their radii are larger than $\varepsilon$. For each pipe $p_{ij}$, the associated water pump engine will stop pumping if the thickness of the ice layer equals $r_{ij} - \varepsilon$ or the water tank of $F_i$ is empty. When a water pump engine stops, we assume that the remaining water between the ice layer flows immediately to the corresponding watermill, \& we call that pipe \emph{almost frozen}.
 	
+	Moreover, to build this network of pipes, there is a fixed amount of steel available which can be used to produce at maximum $M_0\ {\rm m}^3$ pipe walls. Santa Claus asks the elves: ``To compute the amount of steel used to build our network, we need to know the total volume of all pipe walls. How can we compute it in terms of the size of the pipes?''
+	\item(i) {\sf Amount of necessary steel.} Elf Alice says: ``The total volume of all pipe walls is given by $\delta\sum_{i = 1}^m\sum_{j = 1}^n \pi r_{ij}^2l_{ij}$.''
 	
+	Santa Claus continues to ask: ``What can be said when there is no pipe getting almost frozen?''
+	\item(ii) {\sf Criterion for almost frozen pipes.} Elf Bob says: ``There is no pipe getting almost frozen iff the following inequality holds:
+	\begin{equation}
+		\frac{r_{ij} - \varepsilon}{\alpha} > t_i\coloneqq\frac{V_i}{\sum_{j = 1}^n Q_{ij}},\ \forall i = 1,\ldots,m,\,j = 1,\ldots,n.''
+	\end{equation}
+	\item(iii) {\sf Total length estimate.} Elf Camille says: ``The \emph{total length} $l\coloneqq\sum_{i = 1}^m\sum_{j = 1}^n l_{ij}$ of all pipes in the network satisfies
+	\begin{equation}
+		l < \frac{M_0}{\pi\delta(\delta + 2\varepsilon + 2\alpha\min_{1\le i\le m} t_i)}.''
+	\end{equation}
+	\item(iv) {\sf Length estimate.} Elf Dominic says: ``If the total length of all pipes of each factory are equal, i.e., $\sum_{j = 1}^n l_{ij} = l_0$, $\forall i = 1,\ldots,m$ \& a $l_0\in(0,\infty)$, then
+	\begin{equation}
+		l_0 < \frac{M_0}{\pi\delta(m\delta + 2m\varepsilon + 2\alpha\sum_{i = 1}^m t_i)}.''
+	\end{equation}
+	\item(v) {\sf Capacity estimate.} Elf Elsa says: ``If the total length of all pipes of each factory are equal, the \emph{total capacity} $V$ of all the pipes, defined by
+	\begin{equation}
+		\tag{V}
+		V\coloneqq\sum_{i = 1}^m\sum_{j = 1}^n \pi r_{ij}^2l_{ij}
+	\end{equation}
+	satisfies
+	\begin{equation}
+		V > \pi l_0\sum_{i = 1}^m (\varepsilon + \alpha t_i)^2.''
+	\end{equation}
+	Santa Claus asks again: ``What can be said if there is no water left in any water tank?''
+	\item(vi) {\sf Criterion for empty tanks.} Elf Federico says: ``There is no water left in any want tank iff
+	\begin{equation}
+		\sum_{j = 1}^n (r_{ij} - \varepsilon)Q_{ij}\ge\alpha V_i,\ \forall i = 1,\ldots,m.''
+	\end{equation}
+	Santa Claus asks: ``In each watermill, bakers will need $10\ {\rm cm}^3$ water to make a cookie. If there is still water in all water tanks after all water pump engines have stopped pumping, how many cookies all watermills can make at maximum?''
+	\item(vii) {\sf Amount of cookies.} Elf Gwen says: ``The maximum number of cookies all watermills can produce is given by
+	\begin{equation}
+		\sum_{i = 1}^m\sum_{j = 1}^n \lfloor10^5\left(Q_{ij}\frac{r_{ij} - \varepsilon}{\alpha} - \frac{\pi}{1.09}r_{ij}^2l_{ij}\right)\rfloor.''
+	\end{equation}
+	Here $\lfloor x\rfloor$ is the \emph{integral part} of $x\in\mathbb{R}$ which is the largest integer that does not exceed $x$.
+	
+	Which elves are wrong?
 \end{problem}
+
 
 Sáng Giáng sinh năm ấy hắn dậy sớm, ra siêu thị mua đồ ăn ngon. 
 
@@ -156,6 +194,7 @@ Hắn nhớ lại cha hắn. Chợt hiểu ra vài thứ. Có lẽ hắn không 
 	
 	{\sf Hồng [24; physicist wannabe]}: Việc tích góp kiến thức nhiều năm cũng na ná việc độ dịch chuyển của 1 người có lợi thế xuất phát sớm thì đương nhiên sẽ bỏ xa 1 kẻ trẻ người non dạ mới đặt chân vô vạch xuất phát \& chổng mông lên chuẩn bị chạy vậy. Nhưng vấn đề ở đây không phải là độ dịch chuyển $\vec{\bf d}$ hay tọa độ ${\bf x}$ trên cuộc đua kiến thức, e.g., về Toán học như anh nói, vấn đề ở đây là vận tốc ${\bf v} = d{\bf x}{\tt/}dt$, à không, tôi xin lỗi, cái quan trọng ở đây là ông thầy của tôi nhìn thấy cái gia tốc ${\bf a} = d{\bf v}{\tt/}dt = d^2{\bf x}{\tt/}dt^2$ đến khác người của tôi. Tôi đã làm việc đến đêm muộn \& không biết ngày nghỉ là gì. Thậm chí vận tốc của gia tốc đó $d^3{\bf x}{\tt/}dt^3$ hoặc gia tốc của gia tốc đó $d^4{\bf x}{\tt/}dt^4$. Anh có hiểu không? Mỗi lần tôi tính ra 1 kết quả hoàn toàn mới, như cái adjoint equation siêu phức tạp của $k$-$\epsilon$ turbulence model mà trước đó chả có ai dám tính tay cả nói chi tính không nổi. Thầy của tôi tỏ ra khó chịu cực kỳ \& kiểm soát vi mô (micro-manage) tôi ngày nhiều hơn. Thậm chí tôi có làm hết \& thầy tôi chỉ hướng dẫn, đưa ra vài mệnh lệnh \& đứng tên chung thì ông ta vẫn khó chịu. Vấn đề không phải là tôi gồng mình làm hết \& ông ta có thể ở không hưởng thụ. Vấn đề là ông ta chả muốn tôi có bất cứ sản phẩm khoa học nào cả \& ông ta quyết tâm phá. Chỉnh vài công thức thành sai hoặc đổi style gõ. Tôi bị chứng rối loạn ám ảnh cưỡng chế (Obsessive--Compulsive Disorder, abbr., OCD) nữa. Tôi không thích điều đó nhưng vẫn im lặng sửa cho đúng vì tôi là học trò, là cấp dưới. Sửa sai không đủ đô nên ông ta tiếp tục xóa vài thư mục lúc tôi đi ăn \& 1 lần sơ suất không chú ý nên bị ông ta phát hiện mật khẩu khi đứng đằng sau lưng tôi mà tôi không hay. 1 sự tiệt diệt của cội nguồn sáng tạo: ông ta muốn bứng cái gốc sáng tạo của tôi ra, phá hoại đến chừng nào nó không còn sản xuất ra được gì mang tính sáng tạo nữa thì thôi: He is a {\it Creativity Destroyer}.
 \end{quote}
+Thế ông ta làm thế nào mà có thể hủy diệt cái mạch nước ngầm của sự sáng tạo? Chúng tôi sẽ bàn kỹ về điều này hơn ở Sect. ? psychological manipulation.
 
 A dark student room in Alex-Wedding-Strasse, opposite the main Police station. No sound. No sign of life. He can't feel anything from himself. He is not presented.
 
@@ -259,7 +298,7 @@ Tạm dịch: {\it Trên thế giới này, vận mệnh của loài người c�
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width = 15cm]{Berserk_behelit_color}
+	\includegraphics[width = 10cm]{Berserk_behelit_color}
 	\caption{The Hand of God holds the Behelit in Berserk.}
 \end{figure}
 
@@ -480,7 +519,7 @@ It is okay. Just split into Giver $\oplus$ Matcher.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width = 15cm]{Gojo_awaken}
-	\caption{{\sc Gojo Satoru} awakens before the fight with {\sc Toji Fushiguro} \href{https://www.imdb.com/title/tt12343534/}{\rm Jujutsu Kaisen} (2020--).}
+	\caption{{\sc Gojo Satoru} awakens before the fight with {\sc Toji Fushiguro} \href{https://www.imdb.com/title/tt12343534/}{\it Jujutsu Kaisen} (2020--).}
 \end{figure}
 
 \subsection{Divergences: The ultimate split? -- Các đợt phân kỳ: Sự chia tách cuối cùng?}
