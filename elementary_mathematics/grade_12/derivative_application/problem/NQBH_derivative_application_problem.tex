@@ -5,7 +5,8 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{}
@@ -14,6 +15,7 @@
 \newtheorem{corollary}{Corollary}
 \newtheorem{dangtoan}{Dạng toán}
 \newtheorem{definition}{Definition}
+\newtheorem{dinhluat}{Định luật}
 \newtheorem{dinhly}{Định lý}
 \newtheorem{dinhnghia}{Định nghĩa}
 \newtheorem{example}{Example}
@@ -37,19 +39,47 @@
 \DeclareRobustCommand{\divby}{%
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
+\def\labelitemii{$\circ$}
 
 \title{Problem: Application of Derivative to Survey {\it\&} Draw Graph of Functions\\Bài Tập: Ứng Dụng Đạo Hàm Để Khảo Sát {\it\&} Vẽ Đồ Thị Của Hàm Số}
-\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
 \date{\today}
 
 \begin{document}
 \maketitle
+\begin{abstract}
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
+	Latest version:
+	\begin{itemize}
+		\item {\it Problem: Application of Derivative to Survey \& Draw Graph of Functions -- Bài Tập: Ứng Dụng Đạo Hàm Để Khảo Sát \& Vẽ Đồ Thị Của Hàm Số}.
+		
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_12/derivative_application/problem/NQBH_derivative_application_problem.pdf}.
+		
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_12/derivative_application/problem/NQBH_derivative_application_problem.tex}.
+		\item {\it Problem \& Solution: Application of Derivative to Survey \& Draw Graph of Functions -- Bài Tập \& Lời Giải: Ứng Dụng Đạo Hàm Để Khảo Sát \& Vẽ Đồ Thị Của Hàm Số}.
+		
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_12/derivative_application/solution/NQBH_derivative_application_solution.pdf}.
+		
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_12/derivative_application/solution/NQBH_derivative_application_solution.tex}.
+	\end{itemize}
+\end{abstract}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
 
 \section{Monotonicity of Function -- Tính Đơn Điệu của Hàm Số}
 \cite[Chap. I, \S1, pp. 5--14]{SGK_Toan_12_Canh_Dieu_tap_1}: HD1. LT1. LT2. HD2. LT3. LT4. HD3. HD4. LT5. 1. 2. 3. 4. 5. 6. 7.
+
+\begin{dangtoan}
+	Cho hàm số $y = f(x)$ có đồ thị như hình vẽ. Tìm khoảng đồng biến \& nghịch biến của hàm số $y = f(x)$.
+\end{dangtoan}
+
+\begin{proof}[Cách giải]
+	Nhìn vào đồ thị, từ trái sang phải, khoảng nào hàm số $y = f(x)$ đi lên là khoảng đồng biến của hàm số $y = f(x)$, khoảng nào hàm số $y = f(x)$ đi xuống là khoảng nghịch biến của hàm số $y = f(x)$.
+\end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, VD1, p. 5]
 	Chứng minh hàm số $f(x) = \sqrt{1 - x^2}$ nghịch biến trên đoạn $[0,1]$.
@@ -259,11 +289,43 @@
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, 32., p. 28]
-	Xác định tâm đối xứng của đồ thị mỗi hàm số sau: (a) $y = \dfrac{2}{x - 1} + 1$. (b) $y = \dfrac{3x - 2}{x + 1}$.
+	Xác định tâm đối xứng của đồ thị hàm số: (a) $y = \dfrac{2}{x - 1} + 1$. (b) $y = \dfrac{3x - 2}{x + 1}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, 33., p. 28]
 	Cho đường cong $(\mathcal{C})$ có phương trình $y = ax + b + \dfrac{c}{x - x_0}$, trong đó $a\ne0$, $c\ne0$ \& điểm $I$ có tọa độ $(x_0,y_0)$ thỏa mãn $y_0 = ax_0 + b$. Viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\vec{OI}$ \& phương trình của $(\mathcal{C})$ đối với hệ tọa độ $IXY$. Từ đó suy ra $I$ là tâm đối xứng của đường cong $(\mathcal{C})$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD1, p. 7]
+	Cho đường cong $(C)$ có phương trình $y = \frac{1}{2}(x - 2)^3 - 1$ \& điểm $I(2;-1)$. (a) Viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\overrightarrow{OI}$ \& viết phương trình của đường cong $(C)$ đối với hệ tọa độ $IXY$. (b) Từ đó suy ra rằng $I$ là tâm đối xứng của đường cong $(C)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{1.}, p. 9]
+	Xác định đỉnh $I$ của mỗi parabol $(P)$ sau đây. Viết công thức chuyển tọa độ trong phép tịnh tiến theo vector $\overrightarrow{OI}$ \& viết phương trình của parabol $(P)$ đối với hệ tọa độ $IXY$. (a) $y = 2x^2 - 4x + 1$. (b) $y = \frac{1}{2}x^2 - x - 2$. (c) $y = x - x^2$. (d) $y = x^2 + 3x + 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{2.}, p. 9]
+	Cho hàm số $f(x) = x^3 - 3x^2 + 1$. (a) Xác định điểm $I$ thuộc đồ thị $(C)$ của hàm số, biết rằng hoành độ của điểm $I$ là nghiệm của phương trình $f''(x) = 0$. (b) Viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\overrightarrow{OI}$ \& viết phương trình của đường cong $(C)$ đôi với hệ tọa độ $IXY$. Từ đó suy ra rằng $I$ là tâm đối xứng của đường cong $(C)$. (c) Viết phương trình tiếp tuyến của đường cong $(C)$ tại điểm $I$ đối với hệ tọa độ $Oxy$. Chứng minh rằng trên khoảng $(-\infty;1)$, đường cong $(C)$ nằm phía dưới tiếp tuyến tại $I$ của $(C)$ \& trên khoảng $(1;+\infty)$, đường cong $(C)$ nằm phía trên tiếp tuyến đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{3.}, p. 9]
+	Xác định tâm đối xứng của đồ thị hàm số: (a) $y = \frac{2}{x - 1} + 1$. (b) $y = \frac{3x - 1}{x + 1}$. (c) $y = (x - 2)^3 - 1$. (d) $y = x^3 - 3x + 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{4.}, p. 10]
+	Cho đường cong $(C)$ có phương trình $y = ax + b + \frac{c}{x - x_0}$, trong đó $a\ne 0$, $c\ne 0$, \& điểm $I$ có tọa độ $(x_0;y_0)$ thỏa mãn $y_0 = ax_0 + b$. Viết công thức chuyển hệ tọa độ trong phép tịnh tiến vector $\overrightarrow{OI}$ \& phương trình của $(C)$ đối với hệ tọa độ $IXY$. Từ đó suy ra rằng $I$ là tâm đối xứng của đường cong $(C)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{5.}, p. 10]
+	(a) Vẽ đồ thị $(G)$ của hàm số $y = |x|$. (b) Từ đồ thị $(G)$, suy ra đồ thị của hàm sô $y = |x - 3|$. (c) Từ đồ thị $(G)$, suy ra đồ thị của hàm số $y = 2|x|$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{6.}, p. 10]
+	Từ đồ thị $(G)$ của hàm số $y = x^2 - 2x$, suy ra đồ thị hàm số: (a) $y = |x^2 - 2x|$. (b) $y = 2x^2 - 4x$. (c) $y = |x|(x - 2)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{7.}, p. 10]
+	Từ đồ thị hàm số $y = \sin x$, suy ra đồ thị các hàm số $y = \cos x$, $y = \sin 2x$ bằng các phép biến đổi đồ thị thích hợp.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
@@ -300,23 +362,75 @@
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, 34., p. 35]
-	Tìm các đường tiệm cận của đồ thị mỗi hàm số sau: (a) $y = \dfrac{x - 2}{3x + 2}$. (b) $y = \dfrac{-2x - 2}{x + 3}$. (c) $y = x + 2 - \dfrac{1}{x - 3}$. (d) $y = \dfrac{x^2 - 3x + 4}{2x + 1}$. (e) $y = \dfrac{x + 2}{x^2 - 1}$. (f) $y = \dfrac{x}{x^3 + 1}$.
+	Tìm các đường tiệm cận của đồ thị hàm số: (a) $y = \dfrac{x - 2}{3x + 2}$. (b) $y = \dfrac{-2x - 2}{x + 3}$. (c) $y = x + 2 - \dfrac{1}{x - 3}$. (d) $y = \dfrac{x^2 - 3x + 4}{2x + 1}$. (e) $y = \dfrac{x + 2}{x^2 - 1}$. (f) $y = \dfrac{x}{x^3 + 1}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, 35., p. 35]
-	Tìm các đường tiệm cận của đồ thị mỗi hàm số sau: (a) $y = \dfrac{2x - 1}{x^2} + x - 3$. (b) $y = \dfrac{x^3 + 2}{x^2 - 2x}$. (c) $y = \dfrac{x^3 + x + 1}{x^2 - 1}$. (d) $y = \dfrac{x^2 + x + 1}{-5x^2 - 2x + 3}$.
+	Tìm các đường tiệm cận của đồ thị hàm số: (a) $y = \dfrac{2x - 1}{x^2} + x - 3$. (b) $y = \dfrac{x^3 + 2}{x^2 - 2x}$. (c) $y = \dfrac{x^3 + x + 1}{x^2 - 1}$. (d) $y = \dfrac{x^2 + x + 1}{-5x^2 - 2x + 3}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, 36., p. 36]
-	Tìm các đường tiệm cận của đồ thị mỗi hàm số sau: (a) $y = \sqrt{x^2 - 1}$. (b) $y = 2x + \sqrt{x^2 - 1}$. (c) $y = x + \sqrt{x^2 + 1}$. (d) $y = \sqrt{x^2 + x + 1}$.
+	Tìm các đường tiệm cận của đồ thị hàm số: (a) $y = \sqrt{x^2 - 1}$. (b) $y = 2x + \sqrt{x^2 - 1}$. (c) $y = x + \sqrt{x^2 + 1}$. (d) $y = \sqrt{x^2 + x + 1}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, 37., p. 36]
-	Tìm các đường tiệm cận của đồ thị mỗi hàm số sau: (a) $y = x + \sqrt{x^2 - 1}$. (b) $y = \sqrt{x^2 - 4x + 3}$. (c) $y = \sqrt{x^2 + 4}$. (d) $y = \dfrac{x^2 + x + 1}{x^2 - 1}$.
+	Tìm các đường tiệm cận của đồ thị hàm số: (a) $y = x + \sqrt{x^2 - 1}$. (b) $y = \sqrt{x^2 - 4x + 3}$. (c) $y = \sqrt{x^2 + 4}$. (d) $y = \dfrac{x^2 + x + 1}{x^2 - 1}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, 38., p. 36]
-	(a) Tìm tiệm cận đứng \& tiệm cận xiên của đồ thị $(\mathcal{C})$ của 3 hàm số $y = f_1(x) = \dfrac{x^2 - 2x + 2}{x - 3}$, $y = f_2(x) = \dfrac{x^2 + x - 4}{x + 2}$, $y = f_3(x) = \dfrac{x^2 - 8x + 19}{x - 5}$. (b) Xác định giao điểm $I$ của 2 tiệm cận trên \& viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\vec{OI}$. (c) Viết phương trình của đường cong $(\mathcal{C})$ đối với hệ tọa độ $IXY$. Từ đó suy ra $I$ là tâm đối xứng của đường cong $(\mathcal{C})$.
+	(a) Tìm tiệm cận đứng \& tiệm cận xiên của đồ thị $(\mathcal{C})$ của 3 hàm số $y = f_1(x) = \dfrac{x^2 - 2x + 2}{x - 3}$, $y = f_2(x) = \dfrac{x^2 + x - 4}{x + 2}$, $y = f_3(x) = \dfrac{x^2 - 8x + 19}{x - 5}$. (b) Xác định giao điểm $I$ của 2 tiệm cận trên \& viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\overrightarrow{OI}$. (c) Viết phương trình của đường cong $(\mathcal{C})$ đối với hệ tọa độ $IXY$. Từ đó suy ra $I$ là tâm đối xứng của đường cong $(\mathcal{C})$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD1, p. 12]
+	Tìm tiệm cận ngang \& tiệm cận đứng của đồ thị hàm số $y = \frac{2x + 1}{x + 2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD2, p. 12]
+	Tìm tiệm cận ngang \& tiệm cận đứng của đồ thị hàm số $y = \frac{\sqrt{x^2 + 1}}{x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, H1, p. 13]
+	Tìm tiệm cận ngang \& tiệm cận đứng của đồ thị hàm số $y = \frac{1 - 4x^2}{1 - x^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD3, p. 14]
+	Tìm tiệm cận xiên của đồ thị hàm số $f(x) = x + \frac{x}{x^2 + 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, H1, p. 14]
+	Chứng minh rằng đường thẳng $y = x + 1$ là đường tiệm cận xiên của đồ thị hàm số $y = \frac{x^2}{x - 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD4, p. 15]
+	Tìm tiệm cận xiên của đồ thị hàm số $f(x) = \frac{x^3}{x^2 - 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{8.}, p. 15]
+	Tìm các đường tiệm cận của đồ thị hàm số: (a) $y = \frac{2x - 3}{3x - 2}$. (b) $y = x + 2 - \frac{1}{x - 3}$. (c) $y = \frac{x + 2}{x^2 - 1}$. (d) $y = \frac{x^2 - 3x + 5}{2x + 1}$. (e) $y = \frac{x^3 + 2}{x^2 - 1}$. (f) $y = \frac{x^2 + x + 1}{x^2 - x + 1}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{9.}, p. 15]
+	Tìm các đường tiệm cận của đồ thị hàm số: (a) $y = \sqrt{x^2 - 1}$. (b) $y = 2x + \sqrt{x^2 - 1}$. (c) $y = x + \sqrt{x^2 + 1}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{10.}, p. 15]
+	Tìm các đường tiệm cận của đồ thị hàm số: (a) $y = \sqrt{x^2 + x + 1}$. (b) $y = \frac{x^2 + 1}{x^2 - 4}$. (c) $y = \frac{\lfloor x\rfloor}{x}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{11.}, p. 16]	
+	(a) Tìm tiệm cận đứng \& tiệm cận xiên của đồ thị $(C)$ của hàm số $y = \frac{x^2 + x}{x - 2}$. (b) Xác định giao điểm $I$ của 2 tiệm cận trên \& viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\overrightarrow{OI}$. (c) Viết phương trình đường cong $(C)$ đối với hệ tọa độ $IXY$. Từ đó suy ra rằng $I$ là tâm đối xứng của đường cong $(C)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{12.}, p. 16]
+	Cho $(C_m)$ là đường cong có phương trình $y = \frac{2x^2 + (m + 1)x - 3}{x + m}$. (a) Tìm $m$ để tiệm cận xiên của $(C_m)$ đi qua $A(1;1)$. (b) Tìm $m$ để giao điểm của 2 tiệm cận nằm trên đường cong $(P)$: $y = x^2 + 3$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{13.}, p. 16]
+	Cho $(C)$: $y = \frac{x^2 + x}{x - 2}$. Chứng minh rằng tích các khoảng cách từ điểm $M$ bất kỳ trên $(C)$ đến 2 tiệm cận của $(C)$ bằng 1 hằng số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{14.}, p. 16]
+	Tìm những điểm trên đường cong $(C)$ có phương trình $y = \frac{x^2 + x + 1}{x + 2}$ sao cho tổng khoảng cách từ điểm đó đến 2 tiệm cận là nhỏ nhất.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
@@ -326,6 +440,234 @@
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, VD1, p. 37]
 	Khảo sát sự biến thiên \& vẽ đồ thị $(\mathcal{C})$ của hàm số $y = \frac{1}{3}(x^3 - 3x^2 - 9x - 5)$.
+\end{baitoan}
+
+\subsection{Khảo Sát Sự Biến Thiên \& Vẽ Đồ Thị của 1 Số Hàm Đa Thức}
+
+\begin{dangtoan}
+	Khảo sát sự biến thiên \& vẽ đồ thị hàm số $y = f(x)$ với hàm số $f$ cho trước có thể chứa tham số.
+\end{dangtoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD1, p. 17]
+	Khảo sát sự biến thiên \& vẽ đồ thị hàm số $y = \sqrt{x^2 + x + 1}$.
+\end{baitoan}
+
+\subsubsection{Khảo sát sự biến thiên \& vẽ đồ thị của hàm số bậc 1 $y = ax + b$, $a\ne 0$}
+
+\begin{baitoan}
+	Khảo sát sự biến thiên \& vẽ đồ thị hàm số bậc nhất $y = f(x) = ax + b$, $a\ne 0$.
+\end{baitoan}
+
+\subsubsection{Khảo sát sự biến thiên \& vẽ đồ thị của hàm số bậc 2 $y = ax^2 + bx + c$, $a\ne 0$}
+
+\begin{baitoan}
+	Khảo sát sự biến thiên \& vẽ đồ thị hàm số\emph{\texttt{/}}tam thức bậc 2 $y = f(x) = ax^2 + bx + c$, $a\ne 0$.
+\end{baitoan}
+
+\subsubsection{Khảo sát sự biến thiên \& vẽ đồ thị của hàm số bậc 3 $y = ax^3 + bx^2 + cx + d$, $a\ne 0$}
+
+\begin{baitoan}
+	Khảo sát sự biến thiên \& vẽ đồ thị hàm số bậc 3 $y = f(x) = ax^3 + bx^2 + cx + d$, $a\ne 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD2, p. 19]
+	Cho hàm số bậc 3 $y = x^3 - 3x^2 + mx$ với $m$ là tham số. (a) Khảo sát \& vẽ đồ thị hàm số ứng với $m = 0$. (b) Tìm tất cả các giá trị của tham số $m$ sao cho đồ thị của hàm số có điểm cực đại, cực tiểu. Trong trường hợp đó, viết phương trình đường thẳng đi qua 2 điểm cực trị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{15.}, p. 22]
+	(a) Biết rằng đồ thị của hàm số $y = (3a^2 - 1)x^3 - (b^3 + 1)x^2 + 3c^2x + 4d$ có 2 điểm cực trị là $(1;-7)$, $(2,-8)$. Xác định $M = a^2 + b^2 + c^2 + d^2$. (b) Chứng minh rằng đồ thị hàm số $y = x^4 + 2m^2x^2 + 1$ luôn cắt đường thẳng $y = x + 1$ tại đúng 2 điểm phân biệt với mọi giá trị $m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{16.}, p. 23]
+	Cho hàm số $y = -x^3 - 3x^2 + mx + 4$ với $m$ là tham số thực. (a) Khảo sát sự biến thiên \& vẽ đồ thị hàm số khi $m = 0$. (b) Tìm tất cả các giá trị của tham số $m$ để hàm số đã cho nghịch biến trên $(0;+\infty)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{18.}, p. 23]
+	Cho hàm số $y = f(x) = mx^3 + 3mx^2 - (m - 1)x - 1$ với $m$ là tham số. (a) Khảo sát sự biến thiên \& vẽ đồ thị hàm số khi $m = 1$. (b) Xác định tất cả các giá trị $m$ để hàm số $y = f(x)$ không có cực trị.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{19.}, p. 23]
+	Cho hàm số $y = -2x^3 + 6x^2 - 5$ có đồ thị $(C)$. (a) Khảo sát sự biến thiên \& vẽ đồ thị hàm số $(C)$. (b) Viết phương trình tiếp tuyến của $(C)$ đi qua điểm $A(-1;-13)$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{20.}, p. 23]
+	Cho hàm số $y = x^3 - 3x^2 - 9x + m$ với tham số $m$. (a) Khảo sát sự biến thiên \& vẽ đồ thị hàm số đã cho khi $m = 0$. (b) Tìm tất cả các giá trị $m$ để đồ thị hàm số cắt trục hoành tại 3 điểm phân biệt có hoành độ lập thành cấp số cộng.	
+\end{baitoan}
+
+\subsubsection{Khảo sát sự biến thiên \& vẽ đồ thị của hàm số bậc 4 dạng trùng phương $y = ax^4 + bx^2 + c$, $a\ne 0$}
+
+\begin{baitoan}
+	Khảo sát sự biến thiên \& vẽ đồ thị hàm số bậc 4 dạng trùng phương $y = f(x) = ax^4 + bx^2 + c$, $a\ne 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD3, p. 19]
+	Cho hàm số $y = x^4 - 2m^2x^2 + 1$ $(C_m)$ với $m$ là tham số. (a) Khảo sát \& vẽ đồ thị hàm số khi $m = 1$. (b) Tìm $m$ để đồ thị $(C_m)$ có 3 điểm cực trị tạo thành 1 tam giác có diện tích bằng $32$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{17.}, p. 23]
+	Cho hàm số $y = f(x) = 8x^4 - 9x^2 + 1$. (a) Khảo sát sự biến thiên \& vẽ đồ thị hàm số trên. (b) Dựa vào đồ thị trên, biện luận theo $m$ số nghiệm của phương trình lượng giác $8\cos^4x - 9\cos^2x + m = 0$ với $x\in[0;\pi]$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{21.}, p. 23]
+	Cho hàm số $y = f(x) = x^4 - 2x^2$ có đồ thị $(C)$. (a) Khảo sát \& vẽ đồ thị $(C)$. (b) Trên đồ thị $(C)$ lấy 2 điểm phân biệt là $A$ \& $B$ có hoành độ lần lượt là $a,b$. Tìm điều kiện của $a,b$ để tiếp tuyến tại $(C)$ tại các điểm $A$ \& $B$ song song với nhau.
+\end{baitoan}
+
+\subsubsection{Khảo sát sự biến thiên \& vẽ đồ thị của hàm số bậc 4 $y = ax^4 + bx^3 + cx^2 + dx + e$ $[\star]$}
+
+\begin{baitoan}[$\star$]
+	Khảo sát sự biến thiên \& vẽ đồ thị hàm số bậc 4 $y = f(x) = ax^4 + bx^3 + cx^2 + dx + e$, $a\ne 0$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Khảo Sát Sự Biến Thiên \& Vẽ Đồ Thị của 1 Số Hàm Phân Thức Hữu Tỷ}
+
+\subsubsection{Khảo sát sự biến thiên \& vẽ đồ thị của hàm số nhất biến $y = \frac{ax + b}{cx + d}$, $c\ne 0$, $ad - bc\ne 0$}
+
+\begin{baitoan}
+	Khảo sát sự biến thiên \& vẽ đồ thị hàm số nhất biến $y = \frac{ax + b}{cx + d}$, $c\ne 0$, $ad - bc\ne 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD1, p. 24]
+	Cho hàm số $y = \frac{2x + 1}{x - 1}$. (a) Khảo sát sự biến thiên \& vẽ đồ thị hàm số. (b) Gọi $M$ là 1 điểm di động trên $(C)$. Tiếp tuyến tại $M$ của đồ thị $(C)$ cắt 2 đường tiệm cận tại $A$ \& $B$. Tìm giá trị nhỏ nhất của độ dài đoạn $AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{22.}, p. 29]
+	Biết rằng đồ thị hàm số $y = \frac{ax + b}{cx + d}$, $ac\ne 0$, $ad - bc\ne 0$ có tâm đối xứng là $I\left(2;\frac{1}{2}\right)$ \& đi qua gốc tọa độ. Xác định tung độ của điểm có hoành độ là $1$ thuộc đồ thị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{23.}, p. 29]
+	(a) Chứng minh rằng $\forall m\ne 1$ thì đồ thị của hàm số $y = \frac{(2m - 1)x - m^2}{x - 1}$ luôn tiếp xúc với đường phân giác của góc phần tư thứ nhất. (b) Tìm $m$ để tiệm cận xiên của đồ thị hàm số $y = \frac{x^2 + (m + 2)x + 2m + 2}{x + 2}$ tiếp xúc với đường cong $(C):y = x^3 - 3x^2 - 8x$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{25.}, pp. 29--30]
+	Cho hàm số $y = \frac{x}{4(x - 3)}$ có đồ thị $(C)$. (a) Khảo sát \& vẽ đồ thị của hàm số đã cho. (b) Tìm tọa độ điểm $M\in(C)$ sao cho tiếp tuyến của $(C)$ tại $M$ cắt 2 trục tọa độ $Ox,Oy$ lần lượt tại 2 điểm $A,B$ \& diện tích $\Delta OAB$ là $\frac{3}{8}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{26.}, p. 30]
+	Cho hàm số $y = \frac{x - 1}{2x + 3}$ có đồ thị $(C)$. (a) Khảo sát \& vẽ đồ thị hàm số. (b) Với mỗi điểm $M$ bất kỳ thuộc $(C)$, tìm giá trị nhỏ nhất của tổng khoảng cách từ $M$ đến 2 trục tọa độ.	
+\end{baitoan}
+
+\subsubsection{Khảo sát sự biến thiên \& vẽ đồ thị của hàm số $y = \frac{ax^2 + bx + c}{a'x + b'}$, $a\ne 0$, $a'\ne 0$ \& tử thức $\not\vdots$ mẫu thức}
+
+\begin{baitoan}
+	Khảo sát sự biến thiên \& vẽ đồ thị hàm số $y = \frac{ax^2 + bx + c}{a'x + b'}$, $a\ne 0$, $a'\ne 0$ \& tử thức không chia hết cho mẫu thức.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD2, p. 27]
+	Cho hàm số $y = \frac{x^2 + x + 1}{x + 1}$ có đồ thị $(C)$. (a) Khảo sát \& vẽ đồ thị hàm số. (b) Biết rằng $A$ \& $B$ là 2 điểm phân biệt trên đồ thị sao cho tiếp tuyến tại 2 điểm này song song với nhau. Chứng minh rằng $A,B$ đối xứng với nhau qua tâm đối xứng của đồ thị $(C)$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{27.}, p. 30]
+	Cho hàm số $y = 2x - 1 + \frac{1}{x - 1}$. (a) Khảo sát \& vẽ đồ thị hàm số. (b) Tìm tọa độ điểm $M$ thuộc đồ thị sao cho tổng khoảng cách từ $M$ đến 2 đường tiệm cận nhỏ nhất.	
+\end{baitoan}
+
+\subsubsection{Khảo sát sự biến thiên \& vẽ đồ thị của hàm số $y = \frac{ax + b}{a'x^2 + b'x + c}$, $a\ne 0$, $a'\ne 0$ \& mẫu thức $\not\vdots$ tử thức}
+
+\begin{baitoan}
+	Khảo sát sự biến thiên \& vẽ đồ thị hàm số $y = \frac{ax + b}{a'x^2 + b'x + c}$, $a\ne 0$, $a'\ne 0$, \& mẫu thức không chia hết cho tử thức.
+\end{baitoan}
+
+\subsubsection{Khảo sát sự biến thiên \& vẽ đồ thị của hàm số $y = \frac{ax^2 + bx + c}{a'x^2 + b'x + c'}$, $a\ne 0$, $a'\ne 0$, tử thức \& mẫu thức không có nhân tử chung}
+
+\begin{baitoan}
+	Khảo sát sự biến thiên \& vẽ đồ thị hàm số $y = \frac{ax^2 + bx + c}{a'x^2 + b'x + c'}$, $a\ne 0$, $a'\ne 0$, \& tử thức \& mẫu thức không có nhân tử chung.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{24.}, p. 29]
+	(a) Cho hàm số $y = \frac{x^2 + px + q}{x^2 + 1}$ trong đó $p\ne 0$, $p^2 + q^2 = 1$. Tìm tất cả các giá trị $p,q$ sao cho khoảng cách giữa 2 điểm cực trị là $\sqrt{10}$. (b) Chứng minh rằng $\forall m\in\mathbb{R}$ thì đồ thị của hàm số $y = \frac{x^2 + (m + 1)x + m + 1}{x + 1}$ luôn có 2 điểm cực trị \& khoảng cách giữa chúng không đổi.	
+\end{baitoan}
+
+\subsubsection{Miscellaneous}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{28.}, p. 30]
+	Cho hàm số $y = \frac{(x - 1)^3 + a + 1}{x}$. (a) Tìm các giá trị của $a$ để đồ thị của hàm số có 3 cực trị \& chứng minh rằng với các giá trị đó thì các cực trị này sẽ nằm trên 1 parabol cố định. (b) Chứng minh rằng $\forall a\in\mathbb{R}$, đồ thị của hàm số $y = \frac{x + a}{x^2 + x + 1}$ luôn có 3 điểm uốn thẳng hàng.	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{1 Số Bài Toán Thường Gặp về Đồ Thị}
+
+\subsubsection{Viết phương trình đường thẳng đi qua các điểm đặc biệt của đồ thị hàm số}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD1, p. 31]
+	Viết phương trình đường thẳng đi qua các điểm cực trị của đồ thị hàm số $y = x^3 - 3x + 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD2, p. 31]
+	Chứng minh rằng $\forall a\in\mathbb{R}$, đồ thị của hàm số $y = \frac{x + a}{x^2 + 1}$ luôn có 3 điểm thẳng hàng.
+\end{baitoan}
+
+\subsubsection{Họ đường cong phụ thuộc tham số}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD3, p. 32]
+	Cho hàm số $y = x^3 - mx^2 + (2m + 1)x - m - 2$ $(C_m)$. (a) Tìm điểm cố định của họ $(C_m)$ khi $m$ thay đổi. (b) Tìm $m$ để $(C_m)$ cắt $y = 0$ tại 3 điểm phân biệt có hoành độ dương.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD4, p. 33]
+	Cho hàm số $y = (m + 1)x^3 - (2m + 1)x - m + 1$ $(C_m)$. (a) Chứng minh rằng $\forall m\in\mathbb{R}$, $(C_m)$ luôn đi qua 3 điểm cố định thẳng hàng. (b) Với giá trị nào của $m$ thì $(C_m)$ có tiếp tuyến vuông góc với đường thẳng chứa 3 điểm cố định nói trong câu (a).	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD5, p. 34]
+	Cho hàm số $y = \frac{(3m + 1)x - (m^2 - m)}{x + m}$ ($m\ne 0$). Tìm tất cả các điểm trên mặt phẳng mà đồ thị không thể đi qua khi $m$ thay đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD6, p. 35]
+	Cho hàm số $y = x^3 - 3mx^2 + 3(m^2 - 1)x + 1 - m^2$ $(C_m)$. Tìm $m$ để $(C_m)$ có 2 điểm phân biệt đối xứng với nhau qua gốc tọa độ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD7, p. 35]
+	Cho hàm số $y = x^3 - 3x^2 + m^2x + m$. Tìm tất cả các giá trị của $m$ để hàm số có các điểm cực đại, cực tiểu đối xứng nhau qua đường thẳng $(d)$: $x - 2y - 5 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD8, p. 36]
+	Cho hàm số $y = \frac{2x + 1}{x - 2}$ có đồ thị $(C)$. Tìm phương trình đường cong $(C')$ đối xứng với $(C)$ qua đường thẳng $(d)$ có phương trình $y = 2$. 
+\end{baitoan}
+
+\subsubsection{Ứng dụng đồ thị hàm số trong các bài toán biện luận số nghiệm của phương trình}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD9, p. 36]
+	Biện luận số nghiệm của phương trình sau theo tham số $m$: $x^3 - 3x + 2 = m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD10, p. 37]
+	Biện luận theo $m$ số nghiệm của phương trình $4|x|^3 - 3|x| = m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, VD11, p. 37]
+	Tìm $m$ để phương trình sau có 1 nghiệm duy nhất: $x^3 - x^2 = mx - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, H3, p. 38]
+	Tìm tất cả các giá trị $m$ sao cho phương trình $x^3 - x^2 = (m^2 + m)x - 1$ có nghiệm duy nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{29.}, p. 39]
+	Cho $(C_m)$ có phương trình $y = x^3 + (m - 1)x - (m + 3)x - 1$. (a) Khảo sát \& vẽ đồ thị $(C)$ của hàm số khi $m = 1$. (b) Chứng minh rằng $\forall m\in\mathbb{R}$, hàm số có cực đại, cực tiểu. Viết phương trình đường thẳng đi qua các điểm cực đại \& cực tiểu của đồ thị. (c) Tìm những cặp điểm nguyên trên $(C)$ đối xứng với nhau qua đường thẳng $y = x$ \& không nằm trên đường thẳng đó.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{30.}, p. 39]
+	Cho họ đường cong $(C_m)$: $y = \frac{-x^2 + mx - m^2}{x - m}$. (a) Khảo sát \& vẽ đồ thị $(C)$ của hàm số khi $m = 1$. (b) Xác định $m$ để hàm số có cực đại, cực tiểu. Viết phương trình đường thẳng đi qua các điểm cực đại \& cực tiểu của đồ thị hàm số. (c) Tìm các điểm trong mặt phẳng sao cho có đúng 2 đường của của họ $(C_m)$ đi qua.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{31.}, p. 39]
+	Cho hàm số $y = x^3 - 3(m + 1)x^2 + 2(m^2 + 4m + 1)x - 4m(m + 1)$ $(C_m)$. (a) Chứng minh rằng $(C_m)$ luôn đi qua 1 điểm cố định khi $m$ thay đổi. (b) Tìm $m$ sao cho $(C_m)$ cắt trục hoành tại 3 điểm phân biệt.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{32.}, p. 39]
+	Cho hàm số $y = \frac{x^2}{x - 1}$ $(C)$. (a) Khảo sát sự biến thiên \& vẽ đồ thị $(C)$. (b) Tìm 2 điểm $A,B\in(C)$ \& đối xứng nhau qua đường thẳng $y = x - 1$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{33.}, p. 39]
+	Cho hàm số $y = \frac{2x^2 + (6 - m)x + 4}{mx + 2}$. Chứng minh rằng $\forall m\in\mathbb{R}$, đồ thị hàm số luôn đi qua 1 điểm cố định duy nhất. Xác định tọa độ của điểm đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{34.}, p. 39]
+	Cho hàm số $y = \frac{(x - 1)^2}{x + 2}$. (a) Khảo sát sự biến thiên \& vẽ đồ thị hàm số đã cho. (b) Biện luận theo $m$ số nghiệm của phương trình $\frac{(x - 1)^2}{|x + 2|} = m$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, \textbf{35.}, p. 39]
+	Tìm $m$ để phương trình sau có 4 nghiệm phân biệt: $4|x|^3 - 3|x| - 1 = mx - m$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
