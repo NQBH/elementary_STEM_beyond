@@ -71,6 +71,11 @@
 
 \section{Exponentiation with Real Exponent -- Lũy Thừa Với Số Mũ Thực}
 
+\begin{dinhly}[So sánh các lũy thừa cùng cơ số]
+	\label{thm: so sanh luy thua cung co so}
+	$\forall m,n\in\mathbb{Z}$, $a^m > a^n\Leftrightarrow m > n$, $\forall a > 1$; $a^m > a^n\Leftrightarrow m < n$, $\forall a\in(0,1)$.
+\end{dinhly}
+
 \begin{baitoan}[\cite{BTNC_Toan_11_DSGTXSTK}, p. 143]
 	Cho $a,b\in(0,\infty)$. Rút gọn biểu thức $A = \dfrac{a^{\frac{11}{5}}b^2 + a^2b^{\frac{11}{5}}}{\sqrt[5]{a} + \sqrt[5]{b}}$.
 \end{baitoan}
@@ -103,6 +108,91 @@
 	Cho $x,y\in(0,\infty)$. Viết biểu thức $A = \sqrt[5]{\dfrac{y^7}{x^3}\sqrt[3]{\dfrac{x^2}{y^2}\sqrt{\dfrac{x^5}{y^7}}}}$ dưới dạng lũy thừa của 1 số với số mũ hữu tỷ.
 \end{baitoan}
 
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, Ví dụ 1, p. 42]
+	Không dùng máy tính, so sánh $99^{100} + 100^{100}$ \& $101^{100}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Có $99^{100} + 100^{100}\le 2\cdot 100^{100}$, cần chứng minh $2\cdot 100^{100} < 101^{100}$. Thật vậy, theo bất đẳng thức Bernoulli: $\left(\frac{101}{100}\right)^{100} = \left(1 + \frac{1}{100}\right)^{100} > 1 + 100\cdot\frac{1}{100} = 2\Rightarrow 2\cdot 100^{100} < 101^{100}$. Do đó $99^{100} + 100^{100} < 101^{100}$.
+\end{proof}
+``Các bất đẳng thức dạng này khá yếu \& thường khi giải bất phương trình mũ, ta sẽ dùng các đánh giá trung gian đưa về cùng số mũ hoặc cùng cơ số rồi so sánh dựa vào định lý \ref{thm: so sanh luy thua cung co so}.'' -- \cite[p. 42]{TLCT_giai_tich_12}
+
+``In mathematics, \textit{Bernoulli's inequality} (named after \href{https://en.wikipedia.org/wiki/Jacob_Bernoulli}{Jacob Bernoulli}) is an \href{https://en.wikipedia.org/wiki/Inequality_(mathematics)}{inequality} that approximates \href{https://en.wikipedia.org/wiki/Exponentiation}{exponentiations} of $1 + x$. It is often employed in \href{https://en.wikipedia.org/wiki/Real_analysis}{real analysis}. It has several useful variants:
+\begin{itemize}
+	\item $(1 + x)^r\ge 1 + rx$, $\forall r\in\mathbb{N}$, $\forall x\in\mathbb{R}$, $x > - 1$. The inequality is strict if $x\ne 0$ \& $r\ge 2$.
+	\item $(1 + x)^r\ge 1 + rx$, $\forall r\in\mathbb{N}$, $r\divby 2$, $\forall x\in\mathbb{R}$.
+	\item $(1 + x)^r\ge 1 + rx$, $\forall r\in\mathbb{N}$, $\forall x\ge -2$.
+	\item $(1 + x)^r\ge 1 + rx$, $\forall r\in[1,\infty)$, $x\ge -1$. The inequalities are strict if $x\ne 0$ \& $r\notin\{0,1\}$.
+	\item $(1 + x)^r\le 1 + rx$, $\forall r\in[0,1]$, $x\ge -1$.'' -- \href{https://en.wikipedia.org/wiki/Bernoulli%27s_inequality}{Wikipedia\texttt{/}Bernoulli's inequality}
+\end{itemize}
+
+\begin{dinhly}[Bernoulli's inequality]
+	$(1 + x)^r\ge 1 + rx$, $\forall r\in\mathbb{N}$, $\forall x\in\mathbb{R}$, $x > - 1$.
+\end{dinhly}
+
+\begin{baitoan}[Mở rộng \cite{TLCT_giai_tich_12}, Ví dụ 1, p. 42]
+	So sánh $m^n + (m + 1)^n$ \& $(m + 2)^n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, Ví dụ 2, p. 42]
+	Chứng minh:
+	\begin{align*}
+		\frac{a^7 + b^7 + c^7}{7} = \frac{a^4 + b^4 + c^4}{2}\frac{a^3 + b^3 + c^3}{3},\ \forall a,b,c\in\mathbb{R},\,a + b + c = 0.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, H1, p. 42]
+	Với những giá trị nguyên dương nào của $n$ thì $\sum_{i=1}^{9} i^n = 1^n + 2^n + \cdots + 9^n < 10^n$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, Ví dụ 3, p. 43]
+	Chứng minh: $\sqrt{x + 4\sqrt{x - 4}} + \sqrt{x - 4\sqrt{x - 4}} = \mbox{const}$, $\forall x\in[4,8]$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$\sqrt{x + 4\sqrt{x - 4}} + \sqrt{x - 4\sqrt{x - 4}} = \sqrt{(\sqrt{x - 4} + 2)^2} + \sqrt{(\sqrt{x - 4} - 2)^2} = |\sqrt{x - 4} + 2| + |\sqrt{x - 4} - 2| = \sqrt{x - 4} + 2 + 2 - \sqrt{x - 4} = 4$, $\forall x\in[4,8]$, trong đó $|\sqrt{x - 4} - 2| = 2 - \sqrt{x - 4}$ vì $x\le 8$, nên $\sqrt{x - 4}\le\sqrt{8 - 4} = 2$.
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{TLCT_giai_tich_12}, Ví dụ 3, p. 43]
+	Biện luận theo tham số $a$ để rút gọn biểu thức $A = \sqrt{x + 2a\sqrt{x - a^2}} + \sqrt{x - 2a\sqrt{x - a^2}}$ \& $B = \sqrt{x + 2a\sqrt{x - a^2}} - \sqrt{x - 2a\sqrt{x - a^2}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, H2, p. 43]
+	Rút gọn biểu thức $M = \sqrt[3]{11\sqrt{2} + 9\sqrt{3}} + \sqrt[3]{11\sqrt{2} - 9\sqrt{3}}$.
+\end{baitoan}
+\noindent\textit{Phân tích.} Dưới dấu $\sqrt[3]{\cdot}$ là biểu thức có dạng $A\sqrt{2} + B\sqrt{3}$, ta nghĩ ngay đến $(a\sqrt{2} + b\sqrt{3})^3 = 2a^3\sqrt{2} + 6a^2b\sqrt{3} + 9ab^2\sqrt{2} + 3b^3\sqrt{3} = (2a^3 + 9ab^2)\sqrt{2} + (6a^2b + 3b^3)\sqrt{3}$. Đồng nhất hệ số: $2a^3 + 9ab^2 = 11$ \& $6a^2b + 3b^3 = 9$, suy ra $a = b = 1$, hay $11\sqrt{2}\pm9\sqrt{3} = (\sqrt{2}\pm\sqrt{3})^3$.
+
+\begin{proof}[Giải]
+	$M = \sqrt[3]{11\sqrt{2} + 9\sqrt{3}} + \sqrt[3]{11\sqrt{2} - 9\sqrt{3}} = \sqrt[3]{(\sqrt{2} + \sqrt{3})^3} + \sqrt[3]{(\sqrt{2} - \sqrt{3})^3} = \sqrt{2} + \sqrt{3} + \sqrt{2} - \sqrt{3} = 2\sqrt{2}$.
+\end{proof}
+Từ phân tích trên, ta có 1 mở rộng của bài toán vừa giải như sau:
+
+\begin{baitoan}[Mở rộng \cite{TLCT_giai_tich_12}, H2, p. 43]
+	Rút gọn biểu thức
+	\begin{align*}
+		A = \sqrt[3]{(2a^3 + 9ab^2)\sqrt{2} + (6a^2b + 3b^3)\sqrt{3}} + \sqrt[3]{(2a^3 + 9ab^2)\sqrt{2} - (6a^2b + 3b^3)\sqrt{3}},\ \forall a,b\in\mathbb{R}.
+	\end{align*}
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$A = \sqrt[3]{(2a^3 + 9ab^2)\sqrt{2} + (6a^2b + 3b^3)\sqrt{3}} + \sqrt[3]{(2a^3 + 9ab^2)\sqrt{2} - (6a^2b + 3b^3)\sqrt{3}} = \sqrt[3]{(a\sqrt{2} + b\sqrt{3})^3} + \sqrt[3]{(a\sqrt{2} - b\sqrt{3})^3} = a\sqrt{2} + b\sqrt{3} + a\sqrt{2} - b\sqrt{3} = 2a\sqrt{2}$, $\forall a,b\in\mathbb{R}$.
+\end{proof}
+
+\begin{luuy}
+	Kết quả rút gọn của biểu thức $A$ chỉ phụ thuộc vào mỗi tham số $a$, \& độc lập với tham số $b$.
+\end{luuy}
+Mở rộng hơn nữa bằng cách thay $\sqrt{2},\sqrt{3}$ bởi $\sqrt{m},\sqrt{n}$:
+
+\begin{baitoan}[Mở rộng \cite{TLCT_giai_tich_12}, H2, p. 43]
+	Rút gọn biểu thức
+	
+\end{baitoan}
+Mở rộng hơn nữa bằng cách thay $\sqrt{\cdot},\sqrt[3]{\cdot}$ bởi $\sqrt[n]{\cdot}$.
+\begin{baitoan}[Mở rộng \cite{TLCT_giai_tich_12}, H2, p. 43]
+	Rút gọn biểu thức
+	
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Logarithm}
@@ -114,6 +204,27 @@
 %------------------------------------------------------------------------------%
 
 \section{Exponential \& Logarithmic Equation, Inequation -- Phương Trình, Bất Phương Trình Mũ \& Logarith}
+
+\textit{1 số tính chất cơ bản của phương trình mũ \& logarithm}:
+\begin{itemize}
+	\item Phương trình $a^x = m$, $0 < a\ne 1$. Nếu $m\le 0$ thì phương trình vô nghiệm. Nếu $m > 0$ thì phương trình có nghiệm duy nhất là $x = \log_am$.
+	\item Phương trình $\log_ax = m$, $0 < a\ne 1$ luôn có nghiệm duy nhất là $x = a^m$.
+\end{itemize}
+
+\subsection{Phương trình có dạng $a^{f(x)} = b^{g(x)}$}
+``\textit{Cách giải chung}:
+\begin{itemize}
+	\item Nếu $a = b$ thì theo tính chất của hàm số mũ, ta có $f(x) = g(x)$, đưa bài toán về dạng đơn giản hơn -- \textit{phương pháp đưa về cùng cơ số}.
+	\item Nếu $a\ne b$ thì lấy logarith cơ số $a$ (hoặc $b$) 2 vế đưa về $f(x) = \log_ab\cdot g(x)$. Do $\log_ab$ cũng là 1 hằng số nên tính chất của phương trình này cũng tương tự trường hợp $a = b$.'' -- \cite[p. 71]{TLCT_giai_tich_12}
+\end{itemize}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, Ví dụ 1, p. 71]
+	Giải phương trình: (a) $(5^{x+2})^{x+1} + (5^x)^{x+3} = (2^{x+1})^{x+5} - 6(2^{x+6})^x$. (b) $(10 + 6\sqrt{3})^{2\sin x} = \sqrt{(\sqrt{3} + 1)^{\sin 4x}}$. (c) $\left(\frac{8}{3}\right)^{x^2 - x + 1}\left(\frac{3}{5}\right)^{2x^2 - 3x + 2}\left(\frac{5}{7}\right)^{3x^2 - 4x + 3}\left(\frac{7}{2}\right)^{4x^2 - 5x + 4} = 210^{(x - 1)^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_giai_tich_12}, H1, p. 72]
+	(a) Giải các phương trình sau: $2^x\cdot 3^x\cdot 4^{x^2} = 4\cdot 36^{\frac{x}{x + 1}}$. (b) Với $a > 1$, giải phương trình $\left(\frac{a}{a^2 + 1}\right)^x\left(\frac{a^2 - 1}{a^2 - 1}\right)^{2x} = 6$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
