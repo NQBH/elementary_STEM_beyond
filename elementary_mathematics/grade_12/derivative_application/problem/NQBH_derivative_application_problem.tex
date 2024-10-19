@@ -265,14 +265,29 @@
 
 %------------------------------------------------------------------------------%
 
-\section{Đồ Thị của Hàm Số \& Phép Tịnh Tiến Hệ Tọa Độ}
+\section{Graph of a Function \& Some Graph Transformations -- Đồ Thị của Hàm Số \& 1 Số Phép Biến Đổi Đồ Thị}
+\fbox{1} {\sf Đồ thị hàm số}: Nếu $f$ là 1 hàm số có miền xác định $D$ (also $D_f,{\rm dom}(f)$) thì đồ thị hàm số $f$ là tập hợp các cặp sắp thứ tự $G_f\coloneqq\{(x,f(x));x\in D\}$, i.e., đồ thị của $f$ bao gồm tất cả các điểm $(x,y)$ trong mặt phẳng tọa độ $Oxy$ với $y = f(x)$ \& $x$ thuộc vào miền xác định của $f$; đôi khi cũng gọi đồ thị đó là 1 {\it đường cong} (curve), đặc biệt khi miền xác định là 1 khoảng, đoạn. \fbox{2} Trong mặt phẳng tọa độ $Oxy$, cho đồ thị $(G)$ của hàm số $y = f(x)$, $p,q\in(0,\infty)$. {\sf Phép tịnh tiến song song với trục tọa độ}: Tịnh tiến $(G)$ lên trên $q$ đơn vị được đồ thị hàm số $y = f(x) + q$, xuống dưới $q$ đơn vị được đồ thị hàm số $y = f(x) - q$, sang trái $p$ đơn vị được đồ thị hàm số $y = f(x + p)$, sang phải $p$ đơn vị được đồ thị hàm số $y = f(x - p)$. {\sf Phép đối xứng song song với trục tọa độ}: Nếu lấy hình đối xứng của $(G)$ qua trục $Oy$, được đồ thị hàm số $y = f(-x)$. Nếu lấy phần $(G^{\rm r})$ của $(G)$ nằm bên phải (right) của trục $Oy$ hợp với ảnh của $(G^{\rm r})$ qua phép đối xứng qua trục $Oy$, được đồ thị hàm số $y = f(|x|)$. Nếu lấy hình đối xứng của $(G)$ qua trục $Ox$, được đồ thị hàm số $y = -f(x)$. Nếu lấy phần $(G^{\rm a})$ của $(G)$ nằm bên trên (above) trục $Ox$ hợp với ảnh của $(G^{\rm b})$ -- phần của $(G)$ nằm bên dưới (below) trục $Ox$ -- qua phép đối xứng qua trục $Ox$, được đồ thị hàm số $y = |f(x)|$.
+
+\begin{baitoan}
+	Trong mặt phẳng tọa độ $Oxy$: (a) Hình thu được qua phép đối xứng tâm $M(a,b)$, với $a,b\in\mathbb{R}$, của đồ thị hàm số $y = f(x)$ là đồ thị của hàm số nào? (b) Hình thu được qua phép đối xứng trục với trục đối xứng $d:y = ax + b$, với $a,b\in\mathbb{R}$, của đồ thị hàm số $y = f(x)$ là đồ thị của hàm số nào?
+\end{baitoan}
+
+\begin{baitoan}
+	Trong không gian tọa độ $Oxyz$: (a) Hình thu được qua phép đối xứng tâm $M(a,b,c)$, với $a,b,c\in\mathbb{R}$, của đồ thị hàm số $z = f(x,y)$ là đồ thị của hàm số nào? (b) Hình thu được qua phép đối xứng trục với mặt phẳng trục đối xứng $(P):ax + by + cz + d = 0$, với $a,b,c,d\in\mathbb{R}$, của đồ thị hàm số $z = f(x,y)$ là đồ thị của hàm số nào?
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng phép tịnh tiến \& phép đối xứng cho không gian Euclid $\mathbb{R}^d$]
+	Trong không gian tọa độ $d\in\mathbb{N}^\star$ ($d$: dimension) chiều $Ox_1x_2\ldots x_d$: (a) Hình thu được qua phép đối xứng tâm $A(a_1,a_2,\ldots,a_d)$, với $a_i\in\mathbb{R}$, $\forall i = 1,\ldots,d$, của đồ thị hàm số $x_d = f(x_1,x_2,\ldots,x_{d-1})$ là đồ thị của hàm số nào? (b) Hình thu được qua phép đối xứng trục với siêu phẳng $d - 1$-chiều trục đối xứng $H:x_n = \sum_{i=1}^{d-1} b_ix_i$, với $b_i\in\mathbb{R}$, $\forall i = 1,\ldots,d$, của đồ thị hàm số $x_n = f(x_1,x_2,\ldots,x_{d-1})$ là đồ thị của hàm số nào?
+\end{baitoan}
+
+\subsection{Phép tịnh tiến hệ tọa độ}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, Ví dụ, p. 26]
-	Cho đường cong $(\mathcal{C})$ có phương trình: $y = \frac{1}{2}(x - 2)^3 - 1$ \& điểm $I(2,-1)$. (a) Viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\vec{OI}$ \& viết phương trình của đường cong $(\mathcal{C})$ đối với hệ tọa độ $IXY$. (b) Từ đó suy ra $I$ là tâm đối xứng của đường cong $(\mathcal{C})$.
+	Cho đường cong $(\mathcal{C})$ có phương trình: $y = \frac{1}{2}(x - 2)^3 - 1$ \& điểm $I(2,-1)$. (a) Viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\overrightarrow{OI}$ \& viết phương trình của đường cong $(\mathcal{C})$ đối với hệ tọa độ $IXY$. (b) Từ đó suy ra $I$ là tâm đối xứng của đường cong $(\mathcal{C})$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, H, p. 26]
-	(a) Tìm tọa độ đỉnh $I$ của parabol $(\mathcal{P})$ có phương trình là $y = 2x^2 - 4x$. (b) Viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\overline{OI}$ \& viết phương trình của parabol $(\mathcal{P})$ đối với hệ tọa độ $IXY$.
+	(a) Tìm tọa độ đỉnh $I$ của parabol $(\mathcal{P})$ có phương trình là $y = 2x^2 - 4x$. (b) Viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\overrightarrow{OI}$ \& viết phương trình của parabol $(\mathcal{P})$ đối với hệ tọa độ $IXY$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, 29., p. 27]
@@ -285,7 +300,7 @@
 \noindent{\sf Hint.} Trên khoảng $(-\infty,1)$, đường cong $(\mathcal{C})$ nằm phía dưới tiếp tuyến $y = ax + b$ nếu $f(x) < ax + b$ với mọi $x < 1$.
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, 31., p. 27]
-	Cho đường cong $(\mathcal{C})$ có phương trình $y = 2 - \frac{1}{x + 2}$ \& điểm $I(-2,2)$. Viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\vec{OI}$ \& viết phương trình của đường cong $(\mathcal{C})$ đối với hệ tọa độ $IXY$. Từ đó suy ra $I$ là tâm đối xứng của $(\mathcal{C})$.
+	Cho đường cong $(\mathcal{C})$ có phương trình $y = 2 - \frac{1}{x + 2}$ \& điểm $I(-2,2)$. Viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\overrightarrow{OI}$ \& viết phương trình của đường cong $(\mathcal{C})$ đối với hệ tọa độ $IXY$. Từ đó suy ra $I$ là tâm đối xứng của $(\mathcal{C})$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, 32., p. 28]
@@ -293,7 +308,7 @@
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, 33., p. 28]
-	Cho đường cong $(\mathcal{C})$ có phương trình $y = ax + b + \dfrac{c}{x - x_0}$, trong đó $a\ne0$, $c\ne0$ \& điểm $I$ có tọa độ $(x_0,y_0)$ thỏa mãn $y_0 = ax_0 + b$. Viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\vec{OI}$ \& phương trình của $(\mathcal{C})$ đối với hệ tọa độ $IXY$. Từ đó suy ra $I$ là tâm đối xứng của đường cong $(\mathcal{C})$.
+	Cho đường cong $(\mathcal{C})$ có phương trình $y = ax + b + \dfrac{c}{x - x_0}$, trong đó $a\ne0$, $c\ne0$ \& điểm $I$ có tọa độ $(x_0,y_0)$ thỏa mãn $y_0 = ax_0 + b$. Viết công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\overrightarrow{OI}$ \& phương trình của $(\mathcal{C})$ đối với hệ tọa độ $IXY$. Từ đó suy ra $I$ là tâm đối xứng của đường cong $(\mathcal{C})$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_giai_tich_12}, VD1, p. 7]
