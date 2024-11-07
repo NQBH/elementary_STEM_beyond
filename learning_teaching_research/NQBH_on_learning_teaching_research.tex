@@ -6,7 +6,8 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,graphicx,mathtools,multicol,musicography,soul,subfig,tikz}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,glossaries,graphicx,mathtools,multicol,musicography,soul,subfig,tikz}
+\makeglossaries
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
@@ -38,6 +39,12 @@
 }
 \setlist[itemize]{leftmargin=*}
 \setlist[enumerate]{leftmargin=*}
+
+\newglossaryentry{psy-manipulation}
+{
+	name=psychological manipulation,
+	description={Psychological Manipulation}
+}
 
 \title{Some Thoughts On Learning, Teaching, {\it\&} Research\\Vài Suy Nghĩ Về Việc Học, Việc Dạy, {\it\&} Nghề Nghiên Cứu\\{\Large\sf A Short Novel -- 1 Tiểu Thuyết Ngắn}}
 \author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}\and Nguyễn Quản Trung Nhân\footnote{In the Void: Classified information.}}
@@ -203,7 +210,7 @@ I really do not understand: {\it absolutely confused} \& {\it overwhelmed}$\ldot
 
 {\it Tại sao mình có cảm giác bị đâm lén sau lưng liên tục nhưng không biết chính xác là ai cả? Tại sao ai cũng đối xử mình như thứ rác rưởi mặc dù mình giúp họ khá nhiều? Tại sao mình cảm giác bản thân không đủ tốt \& làm việc chưa đủ cần cù trong khi mình đã làm được những điều mà những người tiền nhiệm ở vị trí của mình chưa từng làm được: ví dụ nâng cấp phần mềm được phát triển \& sử dụng suốt 10 năm trong vòng chưa tới 10 tháng?}
 
-Yeah, everything is so weird, very weird, super weird. This kind of feeling is exactly like there is an invisible ``Black Hole of Truth'' somewhere behind your back. You can feel its existence as a blur, but you cannot see it or touch it directly. So annoying$\ldots$ Very tired$\ldots$ Completely exhausted$\ldots$
+Yeah, everything is so weird, very weird, super weird. This kind of feeling is exactly like there is an invisible ``Black Hole\footnote{Cf. Glory Hole of Lust.} of Truth'' somewhere behind your back. You can feel its existence as a blur, but you cannot see it or touch it directly. So annoying. Very tired. Completely exhausted $\ldots$
 
 - {\it Can you figure out the reason why I hate such a ``Black Hole'' that much?}
 
@@ -377,7 +384,9 @@ Nah, these things so difficult. I get back to my mathematics, my calculus.
 	\item \cite{Kushner_bad_things_good_people}. {\sc Harold S. Kushner}. {\it When Bad Things Happen to Good People}.
 \end{itemize}
 
-{\it What is the point of all of this?}
+{\it What is the fucking point of all of this?}
+
+-- Tất cả những thứ này có ý nghĩa quái gì vậy?
 
 Oh oh, so if I can do all these math, my father's liver cancer will disappear right? He can live right? He can be normal again like nothing happens right?
 
@@ -473,7 +482,7 @@ Maybe he never nails it, the kind of thoughts \& writings he always wants to pur
 	-- 1 gã{\tt/}ả có tài, thậm chí có nhiều tài hay nhiều loại năng khiếu, nhưng lại không chịu{\tt/}không thể (?) để lại bất cứ tác phẩm nghệ thuật nào, không có 1 chút cống hiến hay truyền lại bất cứ di sản nào cho (các) thế hệ tiếp theo sau hắn{\tt/}ả. 1 sự phí phạm tài năng đến mức kinh khủng \& đáng bị nguyền rủa!
 \end{quote}
 
-\section{An Initial Configuration-- 1 Màn{\tt/}Thiết Lập Ban Đầu}
+\section{An Initial Configuration-- 1 Thiết Lập Ban Đầu}
 Bằng cách đặt ra 1 số nguyên lý (principles) \& quy tắc (rules), chúng tôi tin là `cuộc thập tự chinh' này sẽ có chỗ để bám níu vào, chúng có tác dụng như những cái mỏ neo, ít nhất để không bị lạc giữa đại dương tri thức mênh mông với những con quái vật của sự vô tri (ignorance monsters) \& những con quỷ của sự ngu dốt \& ác độc (devils of stupidities \& cruelties) chầu chực chờ sẵn dưới đáy đại dương sâu thẳm -- the deep bottom of a dark ocean -- có thể vồ túm lấy ta bất cứ lúc nào khi mà nhận thức của ta bị đánh lừa \& rơi vào trạng thái u mê mất cảnh giác.
 
 \subsection{Rules -- Các quy tắc}
@@ -482,10 +491,6 @@ Mỗi người $P$ (abbr., person) có một xuất phát điểm $\{P(t)\}_{0\l
 Quy tắc đầu tiên ở đây là:
 \begin{Rule}[On judgment -- Bàn về phán xét]
 	Không phán xét, công kích, e.g., dí trên mạng xã hội, bất cứ ai. Cũng không áp đặt ai, thậm chí cả việc áp đặt ai đó không được áp đặt người khác. Tạo cho người khác 1 cảm giác thoải mái tối thiểu khi tiếp xúc.
-\end{Rule}
-
-\begin{Rule}[On stalking -- Bàn về rình rập]
-	Không quá tò mò vào cuộc sống cá nhân của người khác, e.g., stalk in social media -- rình mò trên các nền tảng mạng xã hội, xâm phạm tài khoản  riêng tư cá nhân bất hợp pháp. Keep healthy boundaries for both.
 \end{Rule}
 
 \begin{Rule}[On system reset -- Bàn về khởi động lại hệ thống]
@@ -820,7 +825,7 @@ He enters the realm of Thought, totally \& completely open-minded to feel litera
 
 Từ khoảng 11 tuổi đến 22 tuổi, ai cũng hy vọng hắn sẽ trở nên giàu có, thành công rực rỡ, rồi quay về giúp đỡ những người dân quê, xây dựng đất nước. Ai dè đến lúc 25 tuổi, hắn bị `trầm cảm' nặng. `Trầm cảm' ở đây không phải 1 phép ví von kiểu buồn chán nặng hay giả vờ thế để thu hút sự quan tâm, thương hại từ người khác, mà là trầm cảm theo cái nghĩa chính thống của nó. Hắn cảm thấy suy nhược cơ thể \& suy nhược thần kinh. Bạn có thể phán là nếu suy nhược cơ thể thì chỉ cần ăn đầy đủ chất dinh dưỡng, kèm tập thể dục thường xuyên là sẽ trị được. Đấy là bạn chưa hiểu. That is your ignorance of how human mind actually works -- Đấy là sự thiếu hiểu biết của bạn về việc não bộ con người thực sự hoạt động như thế nào. {\it Suy nhược thần kinh mới là vấn đề cốt lõi}. Nó khiến việc suy nhược cơ thể trở nên khó trị, đúng hơn là bất trị, e.g., ăn vào ói ra hoặc không tiêu hóa được thức ăn tới nơi tới chốn mà phải thải vội ra ngoài: rối loạn chức năng tiêu hóa \& suy giảm hệ thống miễn dịch. Kiểu như cái CPU của 1 cái máy tính mà hư thì dẫu bạn có tân trang bàn phím cơ xịn xò, chuột gaming đắt tiền, đổi màn hình OLED tối tân thì cả dàn máy vẫn thế, vẫn có vấn đề: {\it Bạn phải sửa hoặc thay con CPU}. Thay vì tiếp tục học Toán Cao Cấp, hay làm Khoa Học Tự Nhiên, hắn bao lấy mình bởi hàng trăm quyển sách về Tâm Lý Học (psychological books), trị liệu tâm lý (psychotherapy books), Triết Học (philosophical books), có cả các quyển về Thần Học (theology books), \& Tâm Linh (books on spirituality) nữa. Eo ơi cái thằng bé thiên phú Hội Họa \& khá giỏi Toán ngày nào. ``Tưởng giỏi lắm, tài lắm, ai dè cũng dạng hạ đẳng, chẳng thua gì súc sanh!'' Thật đáng thất vọng \& đáng bị khinh bỉ.
 
-Thời đại học, hắn phải sống trong Ký Túc Xá với cái phòng ọp ẹp nhét 10 đứa con trai vào đấy. Từ ``phải'' ở đây do cái hoàn cảnh gia đình \& cái mớ bệnh tâm lý rối nùi của hắn. Căn phòng Ký Túc Xá không có bàn ghế -- như 1 khu ổ chuột thu nhỏ giữa Quận 1 xa xỉ giữa lòng Sài Gòn. Hắn phải mua 1 cái bàn nhựa nhỏ cho con nít, ngồi bẹp dưới sàn nhà khá bẩn, lưng dựa vào 1 thanh sắt chắn khung giường đôi. Hắn ước gì mình có 1 cái bàn đủ rộng để viết. Năm 25 tuổi, hắn từ {\sc á}o trở về căn nhà nhỏ mà cha hắn để lại cho 3 mẹ con. Trước bàn thờ của cha, mẹ hắn có mua 1 cái bàn khá rộng, mua từ tiền hắn gửi về lúc còn làm ở Đức. Hắn thích cái bàn ấy lắm, mặc dù không phải đặt ở góc phòng như kiểu nhà văn kinh dị nổi tiếng người Mỹ {\sc Stephen King} khuyên trong quyển {\it On Writing: A Memoir of the Craft} \cite{King2000,King2010}: Cái bàn gỗ của phòng thờ nhà hắn được đặt ở giữa cái phòng thờ--phòng khách kết hợp với kích thước vô cùng chật hẹp. Nhưng hắn thích lắm, cuối cùng cũng có 1 cái bàn đủ rộng để tha hồ viết \& sáng tạo, được ngồi bình thường để lưng không phải bị cong hay bị hằn các lằn đỏ mà thanh sắt chắn giường của Ký Túc Xá để lại lên cái lưng trần của hắn nữa. Hắn thậm chí còn chả có phòng ngủ. \& hắn cảm thấy hoàn toàn ổn với điều đó. Hắn trải 1 cái chiếu, mà thật ra đa phần không cần, kế bên cái bàn vừa đủ lớn. Khi đọc sách, nghiên cứu, \& tập tành viết lách đủ mệt hoặc đôi khi ráng đến thấm mệt thì hắn lăn ngay ra ngủ. Ngủ 1 giấc thẳng cẳng, không cần biết trời trăng. Chừng nào thức dậy hắn pha cafe rồi tiếp tục ngồi vào bàn. Cuộc sống lặp đi lặp lại 1 cách đơn điệu như thế kéo dài hơn 3 năm nay. Đối với người khác thì đó là 1 cơn ác mộng kinh khủng của sự  buồn chán, đơn điệu, \& cô độc tột \st{lùn} cùng. Nhưng hắn thích điều đó. Suốt hơn 3 năm nay hắn ít ra khỏi cổng nhà, chỉ đi ra ngoài khi cần hớt tóc, mua cafe, hoặc mua các quyển sách mà không thể mua ở Tiki hoặc Shopee hoặc các nhà sách online được. 1 cuộc sống tịnh tu, nói không với các cuộc họp mặt ăn nhậu với bạn bè, \& nói không với các cuộc ân ái hoan lạc không ngừng nghỉ. \& giờ đây, sau 3 năm bế quan tu luyện, có lẽ hắn đã sẵn sàng để xuất \st{tinh} sơn. Có lẽ vậy.
+Thời đại học, hắn phải sống trong Ký Túc Xá với cái phòng ọp ẹp nhét 10 đứa con trai vào đấy. Từ ``phải'' ở đây do cái hoàn cảnh gia đình \& cái mớ bệnh tâm lý rối nùi của hắn. Căn phòng Ký Túc Xá không có bàn ghế -- như 1 khu ổ chuột thu nhỏ giữa Quận 1 xa xỉ giữa lòng Sài Gòn. Hắn phải mua 1 cái bàn nhựa nhỏ cho con nít, ngồi bẹp dưới sàn nhà khá bẩn, lưng dựa vào 1 thanh sắt chắn khung giường đôi. Hắn ước gì mình có 1 cái bàn đủ rộng để viết. Năm 25 tuổi, hắn từ {\sc á}o trở về căn nhà nhỏ mà cha hắn để lại cho 3 mẹ con. Trước bàn thờ của cha, mẹ hắn có mua 1 cái bàn khá rộng, mua từ tiền hắn gửi về lúc còn làm ở Đức. Hắn thích cái bàn ấy lắm, mặc dù không phải đặt ở góc phòng như kiểu nhà văn kinh dị nổi tiếng người Mỹ {\sc Stephen King} khuyên trong quyển {\it On Writing: A Memoir of the Craft} \cite{King2000,King2010}: Cái bàn gỗ của phòng thờ nhà hắn được đặt ở giữa cái phòng thờ--phòng khách kết hợp với kích thước vô cùng chật hẹp. Nhưng hắn thích lắm, cuối cùng cũng có 1 cái bàn đủ rộng để tha hồ viết \& sáng tạo, được ngồi bình thường để lưng không phải bị cong hay bị hằn các lằn đỏ mà thanh sắt chắn giường của Ký Túc Xá để lại lên cái lưng trần của hắn nữa. Hắn thậm chí còn chả có phòng ngủ. \& hắn cảm thấy hoàn toàn ổn với điều đó. Hắn trải 1 cái chiếu, mà thật ra đa phần không cần, kế bên cái bàn vừa đủ lớn. Khi đọc sách, nghiên cứu, \& tập tành viết lách đủ mệt hoặc đôi khi ráng đến thấm mệt thì hắn lăn ngay ra ngủ. Ngủ 1 giấc thẳng cẳng, không cần biết trời trăng. Chừng nào thức dậy hắn pha cafe rồi tiếp tục ngồi vào bàn. Cuộc sống lặp đi lặp lại 1 cách đơn điệu như thế kéo dài hơn 3 năm nay. Đối với người khác thì đó là 1 cơn ác mộng kinh khủng của sự  buồn chán, đơn điệu, \& cô độc tột \st{lùn} cùng. Nhưng hắn thích điều đó. Suốt hơn 3 năm nay hắn ít ra khỏi cổng nhà, chỉ đi ra ngoài khi cần hớt tóc, mua cafe, hoặc mua các quyển sách mà không thể mua ở Tiki hoặc Shopee hoặc các nhà sách online được. 1 cuộc sống tịnh tu, nói không với các cuộc họp mặt ăn nhậu với bạn bè, \& nói không với các cuộc ân ái hoan lạc không ngừng nghỉ. \& giờ đây, sau 3 năm bế quan tu luyện, có lẽ hắn đã sẵn sàng để xuất \st{tinh} sơn\footnote{Việc tác giả thứ nhất gạch đi sự cố ý viết nhầm của tác giả thứ 2 ở đây hoàn toàn là do sự nghiêm túc cực độ trong nghề viết lách, không thích đùa bựa, giỡn nhây, chứ không liên quan đến Truyền thuyết {\it Sơn Tinh, Thủy Tinh}.}. Có lẽ vậy.
 
 Alright. Let me build our army. 1st we need a fighter, a real warrior, named him {\sf Hồng [disagreeable]}. We also need some medics, healers, e.g., {\sf Hồng [psychiatrist], Hồng [psychologist]}, but we need to separate these medics with {\sc Lust} because if not, we will have, as a result of a sexual combination of medics \& lust, \href{https://www.imdb.com/title/tt13370404/}{\it Kaifuku Jutsushi no Yarinaoshi $\star$ Redo of Healer} (2021) [18+].
 
@@ -953,7 +958,7 @@ We need arts for life. -- Chúng ta cần các dạng nghệ thuật cho cuộc 
 \begin{quote}
 	{\sf Hồng [25; depressed mathematician wannabe]}: Nhưng tao chưa có bằng PhD, ai sẽ nghe lời tao chứ?
 	
-	{\sf Nhân [25; DotA2 5k mmr player]}: Mảnh bằng Tiến sĩ hay PhD chỉ là 1 minh chứng cho việc mày có khả năng nghiên cứu. Mày nên đọc bài viết \href{https://cse.buffalo.edu/~hungngo/Vietnamese/phd.html}{\it Tản mạn về mảnh bằng Ph.D}\footnote{{\sc url}: \url{https://cse.buffalo.edu/~hungngo/Vietnamese/phd.html}.} của Prof. {\sc Ngô Quang Hưng}. Cái quan trọng là việc mày cống hiến cái gì \& cống hiến như thế nào. Chẳng hạn, tao chơi DotA2 (abbr., {\it Defense of the Ancients}), 1 game 5 đấu 5. Mày nghĩ rằng chỉ có thằng carry mới được đồng đội tôn trọng à? Không, cái thằng giết nhiều địch hoặc tạo nhiều pha kiến tạo nhất -- {\it The Playmaker} -- mới là thằng khiến đồng đội của hắn tôn trọng, nể phục 1 cách tự nhiên \& nghe các chỉ thị, những lời điều binh khiển tướng của hắn như ``thánh chỉ'', thậm chí mày có chơi 1 con hero support ghẻ đi chăng nữa. Thằng carry hoặc mấy thằng core mà chơi ngu thì đồng đội còn khinh nữa là, nói chi nể. Cái quan trọng không phải role carry hay cores (including Carry, Midlaner, Offlaner), cái quan trọng là sự cống hiến \& tạo chiến thuật cho lối chơi của cả team, của cả tập thể mà mày đang đóng 1 vai trò chủ chốt trong đó.
+	{\sf Nhân [25; DotA2 5k mmr player]}: Mảnh bằng Tiến sĩ hay PhD chỉ là 1 minh chứng cho việc mày có khả năng nghiên cứu. Mày nên đọc bài viết \href{https://cse.buffalo.edu/~hungngo/Vietnamese/phd.html}{\it Tản mạn về mảnh bằng Ph.D}\footnote{{\sc url}: \url{https://cse.buffalo.edu/~hungngo/Vietnamese/phd.html}.} của Prof. Dr. {\sc Ngô Quang Hưng}. Cái quan trọng là việc mày cống hiến cái gì \& cống hiến như thế nào. Chẳng hạn, tao chơi DotA2 (abbr., {\it Defense of the Ancients}), 1 game 5 đấu 5. Mày nghĩ rằng chỉ có thằng carry mới được đồng đội tôn trọng à? Không, cái thằng giết nhiều địch hoặc tạo nhiều pha kiến tạo nhất -- {\it The Playmaker} -- mới là thằng khiến đồng đội của hắn tôn trọng, nể phục 1 cách tự nhiên \& nghe các chỉ thị, những lời điều binh khiển tướng của hắn như ``thánh chỉ'', thậm chí mày có chơi 1 con hero support ghẻ đi chăng nữa. Thằng carry hoặc mấy thằng core mà chơi ngu thì đồng đội còn khinh nữa là, nói chi nể. Cái quan trọng không phải role carry hay cores (including Carry, Midlaner, Offlaner), cái quan trọng là sự cống hiến \& tạo chiến thuật cho lối chơi của cả team, của cả tập thể mà mày đang đóng 1 vai trò chủ chốt trong đó.
 \end{quote}
 
 \begin{quotation}
@@ -1326,8 +1331,8 @@ We use simplicity to fight difficulty. We do not add more unnecessary complexiti
 
 \subsubsection{Obsession -- Sự ám ảnh}
 
-\begin{quotation}\it
-	``There's no talent here, this is hard work. This is an obsession. Talent does not exist, we are all equals as human beings. You could be anyone if you put in the time. You will reach the top, and that's that. I am not talented. I am obsessed.'' -- {\sc Conor McGregor}, Notorious
+\begin{quotation}
+	{\it``There's no talent here, this is hard work. This is an obsession. Talent does not exist, we are all equals as human beings. You could be anyone if you put in the time. You will reach the top, and that's that. I am not talented. I am obsessed.''} -- {\sc Conor McGregor}, Notorious
 \end{quotation}
 
 \begin{example}[{\sc Conor McGregor}, mixed martial artist, abbr., MMA champion weight classes]
@@ -1408,7 +1413,7 @@ Trước hết, để tôi giải thích cho bạn vì sao tôi lại là 1 tron
 
 \subsection{Psychological manipulation 101 -- Thao túng tâm lý cơ bản}
 \label{sect: psychological manipulation}
-{\bf Keywords -- Từ khóa.} {\it Psychological manipulation -- thao túng tâm lý, psychological abuse -- lạm dụng tâm lý, emotional abuse -- lạm dụng cảm xúc, mental abuse -- lạm dụng tinh thần,  psychological violence -- bạo lực tâm lý, breaking point -- điểm gãy{\tt/}vỡ{\tt/}nguy kịch, social isolation -- cô lập xã hội, anxiety disorder -- rối loạn lo âu, depression -- trầm cảm}.
+{\bf Keywords -- Từ khóa.} {\it Psychological manipulation\Gls{psy-manipulation} -- thao túng tâm lý, psychological abuse -- lạm dụng tâm lý, emotional abuse -- lạm dụng cảm xúc, mental abuse -- lạm dụng tinh thần,  psychological violence -- bạo lực tâm lý, breaking point -- điểm gãy{\tt/}vỡ{\tt/}nguy kịch, social isolation -- cô lập xã hội, anxiety disorder -- rối loạn lo âu, depression -- trầm cảm}.
 
 \begin{goal}[On $\Psi$-manipulation]
 	Understand what ``psychological manipulation' is, why, \& how to detect \& conquer it.
@@ -1457,8 +1462,8 @@ Trước hết, để tôi giải thích cho bạn vì sao tôi lại là 1 tron
 	What is ``psychological manipulation''? Why? \& how to detect \& conquer it? -- Thao túng tâm lý là gì? Tại sao? \& làm cách nào để phát hiện cũng như chống lại nó?
 \end{question}
 
-\begin{quotation}\it
-	``I just want to protect her. I don't want her to lose it. I don't want her to go through anything I went through. I don't wish that upon anybody.'' -- {\sc Justin Bieber}'s tearful interview about wanting to 'protect' {\sc Billie Eilish} from music industry resurfaces after Diddy's arrest\footnote{\href{https://www.dailymail.co.uk/news/article-13885907/justin-bieber-tearful-interview-resurface-billie-eilish-diddy-arrest.html}{DailyMail{\tt/}{\sc Justin Bieber}'s tearful interview about wanting to `protect' {\sc Billie Eilish} from music industry resurfaces after Diddy's arrest}.}
+\begin{quotation}
+	{\it``I just want to protect her. I don't want her to lose it. I don't want her to go through anything I went through. I don't wish that upon anybody.''} -- {\sc Justin Bieber}'s tearful interview about wanting to 'protect' {\sc Billie Eilish} from music industry resurfaces after Diddy's arrest\footnote{\href{https://www.dailymail.co.uk/news/article-13885907/justin-bieber-tearful-interview-resurface-billie-eilish-diddy-arrest.html}{DailyMail{\tt/}{\sc Justin Bieber}'s tearful interview about wanting to `protect' {\sc Billie Eilish} from music industry resurfaces after Diddy's arrest}.}
 \end{quotation}
 Kẻ thao túng tâm lý là kẻ tiểu nhân, nham hiểm, đê tiện. Tùy vào mức độ thao túng tâm lý thành thạo đến mức nào, mà hậu quả tâm lý, sức khỏe có thể nghiêm trọng đến ngưỡng tương đương, tùy vào sức chống chọi tâm lý \& nhận thức của nạn nhân. Các người sống sót, tạm gọi là {\it (psychological manipulated) survivor}, sau các cuộc thao túng tâm lý nặng có thể trở thành những kẻ mạnh mẽ về tâm lý \& chia sẻ cho những người đang bị thao túng tâm lý khác để có thể trở thành những người sống sót mạnh mẽ như chính họ đã từng trải qua.
 
@@ -1499,7 +1504,7 @@ Kẻ thao túng tâm lý là kẻ tiểu nhân, nham hiểm, đê tiện. Tùy v
 {\it But the victim of what? I do not understand.} Like the metaphor about the Black Hole of Truth mentioned above, the conflict between your genuine perception \& the toxic reality in any relationships (see, especially, \cite{Bancroft_why_he_do,Bancroft_why_he_do_VN}) and{\tt/}or any working environments, except the case of \href{https://en.wikipedia.org/wiki/Schizophrenia}{schizophrenia}\footnote{Tâm thần phân liệt.} of course, as a matter of fact, indicates the existence of such an invisible truth-destroyer within your environment, which is usually very close to you: {\it a psychological manipulator}$\ldots$
 
 \begin{quotation}
-	{\it``The 1st step in solving a problem is to recognize that it does exist.''} - Zig Ziglar
+	{\it``The 1st step in solving a problem is to recognize that it does exist.''} -- {\sc Zig Ziglar}
 \end{quotation}
 
 Actually, I met \& dealt with such a person in the past, 1 year ago when I studied my Master in Pure Math in France. Ironically, although I already had some experience or thought to have it, it took me a lot of months{\tt/}efforts to detect who is the real monster in my current working environment. Sadly, I even paid a lot of trusts \& respects to that manipulator for a long time$\ldots$ Because the situation at this time is much worse for me: a psychological manipulator with a master manipulation skills in a very, very different level$\ldots$
@@ -1510,7 +1515,7 @@ It seems to me that the main objective of a typical psychological manipulator is
 
 The relationship with a psychological manipulator is like a never-ending{\tt/}endless nightmare that no matter how hard you have been struggling to wake up, you just keep going deeper \& deeper to the rock bottom, and$\ldots$
 \begin{quotation}
-	{\it``I've had a lot of what I thought were rock bottoms, only to discover another, rockier bottom underneath.''} - BoJack Horseman, {\it BoJack Horseman} (2014--2020).
+	{\it``I've had a lot of what I thought were rock bottoms, only to discover another, rockier bottom underneath.''} -- BoJack Horseman, {\it BoJack Horseman} (2014--2020).
 \end{quotation}
 Under several psychological effects of a psychological manipulator, like a black hole, everything gets sucked in \& destroyed brutally. \& even worse, that kind of person absorbs all the lights in our daily life \& then spits all darkness which each of us never wants to experience any single moment in it. All the truths are deformed{\tt/}perturbed{\tt/}twisted via the dark-magic mouth of a psychological manipulator to gradually become a germ of harsh realities in the past of somebody \& nightmare scenarios of life in his{\tt/}her future. Nothing can grow{\tt/}thrive{\tt/}flourish. The necessity to deal with this situation becomes urgent, critical, \& even vital!
 
@@ -1540,7 +1545,7 @@ So the next question is: {\it Which option{\tt/}strategy should I choose?} My in
 		\item \href{https://www.youtube.com/watch?v=qYvXk_bqlBk}{Who are you, really? The puzzle of personality | Brian Little}. TED.
 \end{itemize}}.
 \begin{quotation}
-	{\it``Life is a matter of choices, \& every choice you make makes you.''} - John C. Maxwell
+	{\it``Life is a matter of choices, \& every choice you make makes you.''} -- {\sc John C. Maxwell}
 \end{quotation}
 The most important question to me, in the matter of choice in life, is: {\it Are you introvert or extrovert, or in between: ambivert?}
 
@@ -1588,12 +1593,14 @@ It seems to me the most fundamental motive of psychologically manipulative behav
 - I am still confused, {\it why is there such a PM in our civilized society?}
 
 - Didn't you see it yet? Because:
-\begin{quotation}
-	Psychological manipulation is the only way to make a coward become a fucking hero!!!
-\end{quotation}
+\begin{psy-theorem}[$\Psi$-manipulation: coward $\mapsto$ hero]
+	Psychological manipulation is the only way to make a coward become a fucking hero.
+	
+	-- Thao túng tâm lý là cách duy nhất để biến một kẻ hèn nhát trở thành anh hùng.
+\end{psy-theorem}
 
 \begin{quotation}
-	{\it``I hate weak people. Weak people$\ldots$ never fight face to face. \& poison well. Despicable. Weak people$\ldots$ They lack patience. They will quickly reap what they sow. I killed people with these `protecting fists'. I blooded my master's previous Soryuu style. I couldn't respect my father's last words. That's right. That's who I wanted to kill.''} -- Akaza, before committing suicide, Chap. 155, {\it Demon Slayer: Kimetsu No Yaiba} (2016--2020).
+	{\it``I hate weak people. Weak people$\ldots$ never fight face to face. \& poison well. Despicable. Weak people$\ldots$ They lack patience. They will quickly reap what they sow. I killed people with these `protecting fists'. I blooded my master's previous Soryuu style. I couldn't respect my father's last words. That's right. That's who I wanted to kill.''} -- {\sf Akaza}, before committing suicide, Chap. 155, manga {\it Demon Slayer: Kimetsu No Yaiba} (2016--2020).
 	
 	{\it``Sometimes people try to destroy you, precisely because they recognize your power - not because they don't see it, but because they see it \& they don't want it to exist.''} -- {\sc Bell Hooks}
 \end{quotation}
@@ -1623,12 +1630,12 @@ Let me introduce the following table to ``approximately model'' the last 2 quote
 
 Thực ra thì 1 câu hỏi khác nên xuất hiện sớm hơn trước câu hỏi kiểu dehumanizing đó: {\it Chúng ta có nên đánh giá{\tt/}phán xét ai đó hay không?}
 \begin{quotation}
-	{\it``You know what's more destructive than a nuclear bomb?$\ldots$ Words.''} - {\sf Kim Jong-un}, {\it The Interview} (2014)
+	{\it``You know what's more destructive than a nuclear bomb?$\ldots$ Words.''} -- {\sf Kim Jong-un}, {\it The Interview} (2014)
 \end{quotation}
 I am not trying to complicate matters here, alright? Everything is already complicated like that by its own nature. Like the mysterious but fascinating depth in the nature of anything, we cannot measure{\tt/}understand them exactly{\tt/}directly{\tt/}absolutely, we can only try our best to create models which seem reasonable enough to us to reflect partially their insights in a deeper \& clearer way$\ldots$
 
 \begin{quotation}
-	{\it``This is real life. It's not perfect, but it's real.''}\footnote{There is no ultimately complete{\tt/}perfect person, since if that person existed, he{\tt/}she would be lack of the incompleteness part(s) at least.} - Jesse, {\it Before Midnight} (2017).
+	{\it``This is real life. It's not perfect, but it's real.''}\footnote{There is no ultimately complete{\tt/}perfect person, since if that person existed, he{\tt/}she would be lack of the incompleteness part(s) at least.} -- {\sf Jesse}, {\it Before Midnight} (2017).
 \end{quotation}
 Another couple of questions arises: {\it How can we understand the depth of anything in life if they are so complicated like that? Perhaps it would be much better if we stop questioning ourselves?}\footnote{``{\it Life is like riding a bicycle. To keep your balance, you must keep moving}.'' - Albert Einstein}
 
@@ -1735,7 +1742,7 @@ Do not blame yourself as a drama-magnet, you should be proud of it instead!
 
 {\it Is emotion a type of energy?} We are always carried{\tt/}driven by our own emotions, deliberately{\tt/}intentionally sometimes \& unconsciously some other times: {\it We live for it, work for it, fight for it, also being taken down because of it}$\ldots$ {\it We are just emotion's slaves: emotion hiders and{\tt/}or emotion seekers}$\ldots$
 \begin{quotation}
-	``{\it If you place your hopes in anything, they will be betrayed. Promises will go unfulfilled \& faith will let you down}.'' - Mitsuru{\tt/}326, {\it {\sc Darling} in the {\sc Franxx}} (2018)
+	{\it``If you place your hopes in anything, they will be betrayed. Promises will go unfulfilled \& faith will let you down.''} - {\sf Mitsuru{\tt/}326}, {\it{\sc Darling} in the {\sc Franxx}} (2018)
 	
 	``{\it Damned human wannabes}.'' - Klaxosaur Princess{\tt/}001 about VIRM after killing Tarsier, {\it {\sc Darling} in the {\sc Franxx}} (2018)
 	
@@ -1811,11 +1818,23 @@ Watch e.g., \href{https://www.youtube.com/watch?v=Pt21dU5Pu8g}{BoJack Horseman -
 \begin{itemize}
 	\item Kẻ thao túng tâm lý là kẻ xảo quyệt, luôn rình rập con mồi, nên bạn có thể vô tình hoặc hữu ý tìm thấy hắn núp ở 1 góc kín, góc khuất tầm nhìn nào đấy để theo dõi con mồi của hắn hoặc theo dõi bạn trong trường hợp bạn đang bị hắn nhắm tới.
 	\item Kẻ thao túng tâm lý là bậc thầy trong việc tìm điểm yếu (Grand Master of seeking weaknesses) của đối phương, \& cực kỳ tài giỏi trong việc khơi dậy những khía cạnh đen tối \& xấu xa nhất của bản chất con người. Điều khá hay là chả có ai dạy 1 cách đàng hoàng cho kẻ thao túng tâm lý cả. Thường hắn sẽ quan sát cách đối xử vợ của cha hắn \& bắt chước theo, rồi phát triển các thủ thuật lên thành kỹ năng thao túng riêng của hắn. Tất cả những sự phát triển theo chiều hướng độc hại của kẻ thao túng tâm lý là dựa vào bản năng sinh tồn tự nhiên của kẻ săn mồi 1 cách hoàn toàn tự nhiên \& thuần túy về mặt sinh học của thuyết tiến hóa Darwin.
-	\item Kẻ thao túng tâm lý thường thích tỏa sáng, cực kỳ thích dành trọn spotlight trong mắt mọi người, có thể là 1 nhóm nhỏ, 1 team ở nơi làm việc, hoặc sân khấu nghệ thuật. Kẻ thao túng tâm lý sẽ tỏ ra cực kỳ khó chịu khi ai đó khác ``sáng chói'', thu hút sự chú ý của mọi người hơn hắn, hoặc chỉ vì hắn ta cảm thấy thế. Khi đó, hắn sẽ dùng mọi tiểu xảo để ngắt lời người đang dành được sự chú ý, có thể đẩy vai, hoặc xô vào người đó khiến họ mất thằng bằng \& ngã khỏi vị trí spotlight hắn đang thèm khát. Như 1 đứa con nít thích chiếm trọn sự chú ý của mọi người 1 cách toàn tâm toàn ý, \& sẽ kiếm chuyện, thậm chí đánh nhau với bất cứ đứa con nít nào dành sự chú ý mà đứa bé ích kỷ đấy thèm khát. Tính nết \& cách suy nghĩ lệch lạc này đi theo kẻ thao túng tâm lý đến tuổi trưởng thành, khiến hắn không thể trưởng thành về mặt tâm sinh lý trong 1 cơ thể lớn xác, chỉ trưởng thành về mặt vật lý \& tế bào sinh học.
+	\item Kẻ thao túng tâm lý thường thích tỏa sáng, cực kỳ thích dành trọn spotlight (i..e, ánh đèn sân khấu) trong mắt mọi người, có thể là 1 nhóm nhỏ, 1 team ở nơi làm việc, hoặc sân khấu nghệ thuật. Kẻ thao túng tâm lý sẽ tỏ ra cực kỳ khó chịu khi ai đó khác ``sáng chói'', thu hút sự chú ý của mọi người hơn hắn, hoặc chỉ vì hắn ta cảm thấy thế. Khi đó, hắn sẽ dùng mọi tiểu xảo để ngắt lời người đang dành được sự chú ý, có thể đẩy vai, hoặc xô vào người đó khiến họ mất thằng bằng \& ngã khỏi vị trí spotlight hắn đang thèm khát. Như 1 đứa con nít thích chiếm trọn sự chú ý của mọi người 1 cách toàn tâm toàn ý, \& sẽ kiếm chuyện, thậm chí đánh nhau với bất cứ đứa con nít nào dành sự chú ý mà đứa bé ích kỷ đấy thèm khát. Tính nết \& cách suy nghĩ lệch lạc này đi theo kẻ thao túng tâm lý đến tuổi trưởng thành, khiến hắn không thể trưởng thành về mặt tâm sinh lý trong 1 cơ thể lớn xác, chỉ trưởng thành về mặt vật lý \& tế bào sinh học.
 \end{itemize}
+
+\begin{Rule}[On stalking -- Bàn về rình rập]
+	Không quá tò mò vào cuộc sống cá nhân của người khác, e.g., stalk in social media -- rình mò trên các nền tảng mạng xã hội, xâm phạm tài khoản  riêng tư cá nhân bất hợp pháp. Keep healthy boundaries for both, for all -- Giữ các ranh giới lành mạnh cho cả 2, cho cả thảy.
+\end{Rule}
 Khi bạn đối mặt với tay sai của 1 kẻ thao túng tâm lý, bạn phải giết hoặc làm suy yếu chính cái phần tốt lành \& phần ngây thơ của bạn, chúng sẽ hồi phục hoặc hồi sinh lại sau khi cuộc chiến đã kết thúc nên bạn cứ yên tâm, bạn phải giáng các đòn tâm lý vào cái phần xấu xí, độc ác mà kẻ thao túng tâm lý khơi gợi \& thúc đẩy sự phát triển ở những tay sai này. Có nghĩa là bạn không hại họ, mà bạn chỉ tấn công cái phần xấu của họ, khiến họ giác ngộ, để cho trống chỗ trong tâm trí \& linh hồn của họ, để cái phần tốt tánh có chỗ để sinh sôi nảy nở trở lại. Bạn thuần hóa tay sai của kẻ thao túng bằng cách đó. Còn nếu họ không còn phần tốt nào, hãy xem tay sai đó ngang hàng với kẻ thao túng tâm lý \& cứ thẳng tay tấn công các đòn đánh tâm lý.
 
 \subsection{The Dark Triad: narcissist, sociopath, \& psychopath -- Bộ 3 đen tối: kẻ ái kỷ, kẻ chống đối xã hội, \& kẻ thái nhân cách}
+
+\begin{definition}[Dark triad]
+	``The \emph{dark triad} is a psychological theory of personality, 1st published by \href{https://en.wikipedia.org/wiki/Delroy_L._Paulhus}{\sc Delroy L. Paulhus} \& {\sc Kevin M. Williams} in 2002, that describes 3 notably offensive, but \href{https://en.wikipedia.org/wiki/Psychopathology}{non-pathological} personality types: \href{https://en.wikipedia.org/wiki/Machiavellianism_(psychology)}{Machiavellianism}, sub-clinical \href{https://en.wikipedia.org/wiki/Narcissism}{narcissism}, \& sub-clinical \href{https://en.wikipedia.org/wiki/Psychopathy}{psychopathy}. Each of these personality types is called \emph{dark} because each is considered to contain malevolent qualities.'' -- \href{https://en.wikipedia.org/wiki/Dark_triad}{Wikipedia{\tt/}dark triad}
+\end{definition}
+
+\begin{dinhnghia}[Bộ 3 đen tối]
+	\emph{Bộ 3 đen tối} là một lý thuyết tâm lý về tính cách, được xuất bản lần đầu tiên bởi \href{https://en.wikipedia.org/wiki/Delroy_L._Paulhus}{\sc Delroy L. Paulhus} \& {\sc Kevin M. Williams} vào năm 2002, mô tả 3 loại tính cách gây khó chịu nhưng không bệnh lý: Chủ nghĩa xảo quyệt, chứng tự ái cận lâm sàng, \& bệnh tâm thần cận lâm sàng. Mỗi loại tính cách này được gọi là \emph{đen tối} vì mỗi loại được coi là chứa đựng những phẩm chất xấu xa.
+\end{dinhnghia}
 
 \subsubsection{Narcissists -- Những kẻ ái kỷ}
 {\bf \textsf{Resources -- Tài nguyên.}}
@@ -1986,19 +2005,19 @@ Có 2 môn võ tôi khuyến khích bạn thử học là Jeet-Kune Do -- Tiệt
 	\item \cite{Eun-Jung_hurt_VN}. {\sc Yoo Eun-Jung}. {\it Không Ai Có Thể Làm Bạn Tổn Thương Trừ Khi Bạn Cho Phép}.
 	\item \cite{Giang_dai_duong_den}. {\sc Đặng Hoàng Giang}. {\it Đại Dương Đen: Những Câu Chuyện Từ Thế Giới Của Trầm Cảm}.
 	\item \cite{Harper_unfuck_brain}. {\sc Faith G. Harper}. {\it Unfuck Your Brain: Getting Over Anxiety, Depression, Anger, Freak-Outs, and Triggers with science (5-Minute Therapy)}.
-	\begin{quotation}
-		{\it``Emotions last longer than 90 seconds because we continue to fuel them with our thoughts. We do this by telling ourselves the same stories about the triggering situation over \& over. This is when they stop being emotions \& start becoming moods.''}
+	\begin{itemize}
+		\item {\it``Emotions last longer than 90 seconds because we continue to fuel them with our thoughts. We do this by telling ourselves the same stories about the triggering situation over \& over. This is when they stop being emotions \& start becoming moods.''}
 		
 		-- Cảm xúc tồn tại lâu hơn 90 giây vì chúng ta tiếp tục tiếp thêm năng lượng cho chúng bằng suy nghĩ của mình. Chúng ta làm điều này bằng cách tự kể cho mình những câu chuyện tương tự về tình huống kích hoạt lặp đi lặp lại. Đây là lúc chúng không còn là cảm xúc \& bắt đầu trở thành tâm trạng.
 		
-		{\it``Taking care of {\sc ourselves} often becomes a luxury we can't afford, rather than a necessity we can't ignore.''}
+		\item {\it``Taking care of {\sc ourselves} often becomes a luxury we can't afford, rather than a necessity we can't ignore.''}
 		
 		-- Việc chăm sóc {\sc bản thân mình} thường trở thành một điều xa xỉ mà chúng ta không thể mua được, hơn là một điều cần thiết mà chúng ta không thể bỏ qua.
 		
-		{\it``Most of the time, it takes about 3 months to reestablish equilibrium after a trauma. That is, after about $90$ days, our emotional sensors are no longer operating at hyper warp speed mode, \& return to normal.''}
+		\item {\it``Most of the time, it takes about 3 months to reestablish equilibrium after a trauma. That is, after about $90$ days, our emotional sensors are no longer operating at hyper warp speed mode, \& return to normal.''}
 		
 		-- Thông thường, phải mất khoảng 3 tháng để thiết lập lại trạng thái cân bằng sau chấn thương. Tức là, sau khoảng $90$ ngày, các cảm biến cảm xúc của chúng ta không còn hoạt động ở chế độ siêu tốc độ nữa, \& trở lại bình thường.
-	\end{quotation}
+	\end{itemize}
 	\item \cite{Harper_unfuck_anger}. {\sc Faith G. Harper}. {\it Unfuck Your Anger: Using Science to Understand Frustration, Rage, and Forgiveness (5-Minute Therapy)}.
 	\item \cite{Solomon_depression}. {\sc Andrew Solomon}. {\it The Noonday Demon: An Atlas of Depression}.
 	\item \cite{Korb_Siegel_upward_spiral}. {\sc Alex Korb, Daniel J. Siegel MD}. {\it The Upward Spiral: Using Neuroscience to Reverse the Course of Depression, One Small Change at a Time}.
@@ -2050,51 +2069,51 @@ Read also:
 \begin{enumerate}
 	\item {\sc Coursera}'s wildly popular massive open online course {\it``Learning How to Learn''} with the companion book:	
 	\item \cite{Oakley_mind_number}. {\sc Barbara Oakley}. {\it A Mind for Numbers: How to Excel at Math \& Science (Even If You Flunked Algebra)}.
-	\begin{quotation}
-		{\it``A good rule of thumb, when you are 1st learning new concepts, is not to let things go untouched for longer than a day.''}
+	\begin{itemize}
+		\item {\it``A good rule of thumb, when you are 1st learning new concepts, is not to let things go untouched for longer than a day.''}
 		
 		-- Một nguyên tắc nhỏ, khi bạn lần đầu tiên học các khái niệm mới, là đừng để mọi thứ không được động tới lâu hơn một ngày.
 		
-		{\it``The harder you push your brain to come up with something creative, the less creative your ideas will be.''}
+		\item {\it``The harder you push your brain to come up with something creative, the less creative your ideas will be.''}
 		
 		-- Bạn càng thúc ép bộ não nghĩ ra điều gì đó sáng tạo thì ý tưởng của bạn sẽ càng kém sáng tạo.
 		
-		{\it``But as long as we are consciously focusing on a problem, we are blocking the diffuse mode.''}
+		\item {\it``But as long as we are consciously focusing on a problem, we are blocking the diffuse mode.''}
 		
 		-- Nhưng chừng nào chúng ta còn tập trung một cách có ý thức vào một vấn đề thì chúng ta đang chặn chế độ khuếch tán.
-	\end{quotation}
+	\end{itemize}
 	Với bản dịch tiếng Việt:
 	\item \cite{Oakley_mind_number_VN}. {\sc Barbara Oakley}. {\it A Mind for Numbers: How to Excel at Math \& Science (Even If You Flunked Algebra) -- Cách Chinh Phục Toán \& Khoa Học (Ngay Cả Khi Bạn Vừa Trượt Môn Đại Số)}.
 	\item \cite{Oakley_Sejnowski_McConville_learn_how_learn}. {\sc Barbara Oakley, Terrence J. Sejnowski, Alistair McConville}. {\it Learning How to Learn: How to Succeed in School Without Spending All Your Time Studying; A Guide for Kids \& Teens}.
-	\begin{quotation}
-		{\it``When you are trying to learn something new, you must 1st focus intently on it in order to ``turn on'' those parts of the brain \& get the learning process started.''}
+	\begin{itemize}
+		\item {\it``When you are trying to learn something new, you must 1st focus intently on it in order to ``turn on'' those parts of the brain \& get the learning process started.''}
 		
 		-- Khi bạn đang cố gắng học một điều gì đó mới, trước tiên bạn phải tập trung chăm chú vào nó để ``kích hoạt'' những phần đó của não \& khiến bắt đầu quá trình học tập.
 		
-		{\it``Diffuse mode is when your mind is relaxed \& free. You're thinking about nothing in particular.''}
+		\item {\it``Diffuse mode is when your mind is relaxed \& free. You're thinking about nothing in particular.''}
 		
 		-- Chế độ khuếch tán là khi tâm trí bạn được thư giãn \& tự do. Bạn đang không nghĩ về điều gì đặc biệt cả.
 		
-		{\it``When you're using your focused mode, it means that you're paying attention.''}
+		\item {\it``When you're using your focused mode, it means that you're paying attention.''}
 		
 		-- Khi bạn đang sử dụng chế độ tập trung, điều đó có nghĩa là bạn đang chú ý.
-	\end{quotation}
+	\end{itemize}
 	Với bản dịch tiếng Việt:
 	\item \cite{Oakley_Sejnowski_McConville_learn_how_learn_VN}. {\sc Barbara Oakley, Terrence J. Sejnowski, Alistair McConville}. {\it Learning How to Learn: How to Succeed in School Without Spending All Your Time Studying; A Guide for Kids \& Teens -- Học Cách Học: Công Cụ Trí Tuệ Mạnh Mẽ Chinh Phục Mọi Môn Học}.
 	\item \cite{Oakley_Rogowsky_Sejnowski_McConville_uncommon_sense_teaching}. {\sc Barbara Oakley, Beth Rogowsky, Terrence J. Sejnowski}. {\it Uncommon Sense Teaching: Practical Insights in Brain Science to Help Students Learn}.
-	\begin{quotation}
-		{\it``People's real problem with memory isn't how much they can store. It's getting the information into or out of memory.''}
+	\begin{itemize}
+		\item {\it``People's real problem with memory isn't how much they can store. It's getting the information into or out of memory.''}
 		
 		-- ``Vấn đề thực sự của chúng ta với trí nhớ không phải là chúng ta có thể lưu trữ bao nhiêu mà là việc nạp \& truy xuất thông tin trong đó.'' -- \cite[p. 19]{Oakley_Rogowsky_Sejnowski_McConville_uncommon_sense_teaching_VN}
 		
-		{\it``Active learning engages students in the process of learning through activities \&{\tt/}or discussion in class, as opposed to passively listening to an expert. It emphasizes higher-order thinking \& often involves group work.''}
+		\item {\it``Active learning engages students in the process of learning through activities \&{\tt/}or discussion in class, as opposed to passively listening to an expert. It emphasizes higher-order thinking \& often involves group work.''}
 		
 		-- Học tập tích cực thu hút học sinh vào quá trình học tập thông qua các hoạt động \&{\tt/}hoặc thảo luận trong lớp, trái ngược với việc thụ động lắng nghe chuyên gia. Nó nhấn mạnh tư duy bậc cao \& thường liên quan đến làm việc nhóm.
 		
-		{\it``\& this is why instruction that includes multiple opportunities for practice to break up the lesson can be so valuable.''}
+		\item {\it``\& this is why instruction that includes multiple opportunities for practice to break up the lesson can be so valuable.''}
 		
 		-- \& đây là lý do tại sao việc hướng dẫn bao gồm nhiều cơ hội thực hành để chia nhỏ bài học lại có giá trị đến vậy.
-	\end{quotation}
+	\end{itemize}
 	Với bản dịch tiếng Việt:
 	\item \cite{Oakley_Rogowsky_Sejnowski_McConville_uncommon_sense_teaching_VN}. {\sc Barbara Oakley, Beth Rogowsky, Terrence J. Sejnowski}. {\it Uncommon Sense Teaching: Practical Insights in Brain Science to Help Students Learn -- Dạy Học Không Theo Lối Mòn: Hiểu Đúng Về Trí Nhớ \& Khoa Học Não Bộ Để Dạy Học Hiệu Quả Trong Mọi Hoàn Cảnh}.
 	\item {\sc Peter C. Brown, Henry L. Roediger III, Mark A. McDaniel}. {\it Make It Stick: The Science of Successful Learning}.
@@ -2283,7 +2302,7 @@ Có lẽ không phải chỉ là làm cái gì, đương nhiên chả làm gì t
 \end{quote}
 Có 1 trích dẫn hay \& đúng về ý này của 1 giáo sư Toán ở Đại Học Khoa Học Tự Nhiên Hà Nội:
 \begin{quote}\it
-	``Chạy Marathon $42.195$ km là môn thể thao mà hồi còn nhỏ tôi rất ghét, vì nó nặng nhọc \& buồn chán; nhưng càng trưởng thành thì tôi càng thích. Tôi dần dần hiểu ra rằng Marathon chính là môn thể thao gần với cuộc đời nhất: Nặng nhọc \& buồn chán chính là những thuộc tính của cuộc đời, nói riêng là thuộc tính của việc nghiên cứu khoa học. Khi đã vượt được chừng 30km thì mỗi người chạy marathon chỉ còn đua với chính mình, sự ganh đua với người khác dường như không còn đáng kể.'' -- Prof. {\sc Nguyễn Hữu Việt Hưng}
+	``Chạy Marathon $42.195$ km là môn thể thao mà hồi còn nhỏ tôi rất ghét, vì nó nặng nhọc \& buồn chán; nhưng càng trưởng thành thì tôi càng thích. Tôi dần dần hiểu ra rằng Marathon chính là môn thể thao gần với cuộc đời nhất: Nặng nhọc \& buồn chán chính là những thuộc tính của cuộc đời, nói riêng là thuộc tính của việc nghiên cứu khoa học. Khi đã vượt được chừng 30km thì mỗi người chạy marathon chỉ còn đua với chính mình, sự ganh đua với người khác dường như không còn đáng kể.'' -- Prof. Dr. {\sc Nguyễn Hữu Việt Hưng}
 \end{quote}
 
 \subsection{Design Series: Some Topics in Elementary STEM \& Beyond -- Thiết Kế Chuỗi Tài Liệu \& Sách: 1 Số Chủ Đề STEM Sơ Cấp \& Hơn Thế Nữa}
@@ -3397,13 +3416,19 @@ Mỗi khi tôi, trong vai trò là 1 gia sư hoặc 1 giáo viên, thấy 1 đ�
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{Cain_quiet}. {\sc Susan Cain}. {\it Quiet: The Power of Introverts in a World That Can't Stop Talking}.\footnote{Amazon link: \url{https://www.amazon.com/Quiet-Power-Introverts-World-Talking/dp/0307352153}.}
-	\begin{quotation}
-		``Open-plan offices have been found to reduce productivity \& impair memory.''
+	\begin{itemize}
+		\item {\it``Open-plan offices have been found to reduce productivity \& impair memory.''}
 		
-		``Peer pressure, in other words, is not only unpleasant, but can actually change your view of a problem.''
+		-- Các văn phòng có kế hoạch mở được cho là làm giảm năng suất \& làm suy giảm trí nhớ.
 		
-		``The ``Bus to Abilene'' anecdote reveals our tendency to follow those who initiate action -- any action.''
-	\end{quotation}
+		\item {\it``Peer pressure, in other words, is not only unpleasant, but can actually change your view of a problem.''}
+		
+		-- Nói cách khác, áp lực từ bạn bè không chỉ gây khó chịu mà còn thực sự có thể thay đổi quan điểm của bạn về một vấn đề.
+		
+		\item {\it``The ``Bus to Abilene'' anecdote reveals our tendency to follow those who initiate action -- any action.''}
+		
+		-- Giai thoại “Xe buýt đến Abilene” tiết lộ xu hướng của chúng ta là đi theo những người khởi xướng hành động – bất kỳ hành động nào.
+	\end{itemize}
 	Với bản dịch tiếng Việt:
 	\item \cite{Cain_quiet_VN}. {\sc Susan Cain}. {\it Quiet: The Power of Introverts in a World That Can't Stop Talking -- Hướng Nội: Sức Mạnh của Sự Yên Lặng Trong 1 Thế Giới Nói Không Ngừng}.
 	\item \cite{Cain_Mone_Moroz_quiet_power}. {\sc Susan Cain, Gregory Mone, Erica Moroz}. {\it Quiet Power: The Secret Strengths of Introverted Kids}.
@@ -3416,19 +3441,19 @@ Mỗi khi tôi, trong vai trò là 1 gia sư hoặc 1 giáo viên, thấy 1 đ�
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{Aron_HSP}. {\sc Elaine N. Aron}. {\it The Highly Sensitive Person: How to Thrive When the World Overwhelms You}.\footnote{Amazon link: \url{https://www.amazon.com/Highly-Sensitive-Person-Thrive-Overwhelms/dp/0553062182}.} (Chưa có bản dịch tiếng Việt đến thời điểm dòng này được viết.)
-	\begin{quotation}
-		{\it``This greater awareness of the subtle tends to make you more intuitive, which simply means picking up \& working through information in a semiconscious or unconscious way. The result is that you often ``just know'' without realizing how.''}
+	\begin{itemize}
+		\item {\it``This greater awareness of the subtle tends to make you more intuitive, which simply means picking up \& working through information in a semiconscious or unconscious way. The result is that you often ``just know'' without realizing how.''}
 		
 		-- Nhận thức rõ hơn về những điều tinh tế này có xu hướng khiến bạn trở nên trực quan hơn, điều này đơn giản có nghĩa là tiếp thu \& xử lý thông tin theo cách nửa vô thức hoặc vô thức. Kết quả là bạn thường ``chỉ biết'' mà không hiểu bằng cách nào.		
 		
-		{\it``We are so skilled, but alas, when being watched, timed, or evaluated, we often cannot display our competence.''}
+		\item {\it``We are so skilled, but alas, when being watched, timed, or evaluated, we often cannot display our competence.''}
 		
 		-- Chúng ta rất tài năng, nhưng than ôi, khi bị theo dõi, tính giờ hoặc đánh giá, chúng ta thường không thể thể hiện được năng lực của mình.
 		
-		{\it``The way to come to tolerate \& then enjoy being involved in the world is by being in the world.''}
+		\item {\it``The way to come to tolerate \& then enjoy being involved in the world is by being in the world.''}
 		
 		-- Cách để khoan dung \& rồi tận hưởng việc tham gia vào thế giới là ở trong thế giới.
-	\end{quotation}
+	\end{itemize}
 \end{enumerate}
 
 %------------------------------------------------------------------------------%
@@ -3451,7 +3476,7 @@ You need to learn from book \& learn from life to have both book smart \& street
 	\item \cite{Oakley_Sejnowski_McConville_learn_how_learn_VN}. {\sc Barbara Oakley, Terrence J. Sejnowski, Alistair McConville}. {\it Learning How to Learn: How to Succeed in School Without Spending All Your Time Studying; A Guide for Kids \& Teens -- Học Cách Học: Công Cụ Trí Tuệ Mạnh Mẽ Chinh Phục Mọi Môn Học}.
 	\item \cite{Oakley_Rogowsky_Sejnowski_McConville_uncommon_sense_teaching}. {\sc Barbara Oakley, Beth Rogowsky, Terrence J. Sejnowski}. {\it Uncommon Sense Teaching: Practical Insights in Brain Science to Help Students Learn}. Với bản dịch tiếng Việt:
 	\item \cite{Oakley_Rogowsky_Sejnowski_McConville_uncommon_sense_teaching_VN}. {\sc Barbara Oakley, Beth Rogowsky, Terrence J. Sejnowski}. {\it Uncommon Sense Teaching: Practical Insights in Brain Science to Help Students Learn -- Dạy Học Không Theo Lối Mòn: Hiểu Đúng Về Trí Nhớ \& Khoa Học Não Bộ Để Dạy Học Hiệu Quả Trong Mọi Hoàn Cảnh}.
-	\item \cite{VanVu2022}. Prof. {\sc Vũ Hà Văn}. {\it Giáo Sư Phiêu Lưu Ký: Tản Mạn với Một Nhà Toán Học}.
+	\item \cite{VanVu2022}. Prof. Dr. {\sc Vũ Hà Văn}. {\it Giáo Sư Phiêu Lưu Ký: Tản Mạn với Một Nhà Toán Học}.
 	\item \cite{Westover_educated}. {\sc Tara Westover}. {\it Educated: A Memoir}.
 	
 	Với bản dịch tiếng Việt:
@@ -3518,6 +3543,13 @@ Nói nom na, đôi khi ``mất dạy'' chút cũng chả sao, mất cái này c�
 	Howard Behar, cựu Chủ tịch Starbucks nói với {\rm Charles Duhigg} trong quyển sách {\rm\cite{Duhigg_habit}}: ``Huấn luyện viên xuất sắc nhất trong dịch vụ khách hàng -- đi làm đúng giờ, không nổi giận với khách hàng \& niềm nở phục vụ mọi người trong khi vẫn nhớ các yêu cầu của khách hàng \& nếu có thể, tên của họ -- là điều cần thiết. Ai cũng mong muốn 1 tách cà phê sữa đắt tiền được giao với 1 nụ cười rạng rỡ. ``Chúng tôi không thuộc ngành kinh dành cà phê để phục vụ mọi người,'' ``Chúng tôi thuộc ngành kinh doanh con người để phục vụ cà phê. Toàn bộ mô hình kinh doanh của chúng tôi dựa vào dịch vụ chăm sóc khách hàng tuyệt vời. Nếu không có nó, chúng tôi không tồn tại.'' Starbucks khám phá được giải pháp chính là chuyển tính kỷ luật thành 1 thói quen của tổ chức.'' -- {\rm\cite[p. 220]{Duhigg_habit_VN}}
 \end{example}
 
+\subsection{On question-driven learning -- Bàn về việc học được thúc đẩy bởi các câu hỏi}
+Học tập nên được định hình từ các câu hỏi, hỏi người khác, e.g., bạn bè, thầy cô, đàn em, đàn anh, đàn chị, hoặc tự vấn.
+
+A good question has much more values than a bunch of stupid meaningless or average answers.
+
+-- Một câu hỏi hay có nhiều giá trị hơn một loạt các câu trả lời ngu ngốc, vô nghĩa hoặc trung bình.
+
 \subsection{On stupidity \& awareness of stupidity -- Bàn về sự ngu dốt \& nhận thức về sự ngu dốt}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
@@ -3538,14 +3570,14 @@ Nói nom na, đôi khi ``mất dạy'' chút cũng chả sao, mất cái này c�
 	
 	-- Tôi đủ thông minh để biết rằng mình ngu ngốc.
 \end{quote}
-Trong lớp học về Phần Tử Hữu Hạn (Finite Element Methods, abbr., FEMs) \& Thể Tích Hữu Hạn (Finite Volume Methods, abbr., FVMs) của Prof. {\sc Nicolas Seguin}, chị Thương lại hỏi hắn cái ngu gì đấy về việc thầy của chỉ lại viết sai công thức hoặc có thể chị ta đang thử thăm dò thực lực của hắn. Bất chợt chị Thương chỉ lên bảng \& hỏi tại sao cái hàm $u\in L^2([-1,1])$ xác định bởi
+Trong lớp học về Phần Tử Hữu Hạn (Finite Element Methods, abbr., FEMs) \& Thể Tích Hữu Hạn (Finite Volume Methods, abbr., FVMs) của Prof. Dr. {\sc Nicolas Seguin}, chị Thương lại hỏi hắn cái ngu gì đấy về việc thầy của chỉ lại viết sai công thức hoặc có thể chị ta đang thử thăm dò thực lực của hắn. Bất chợt chị Thương chỉ lên bảng \& hỏi tại sao cái hàm $u\in L^2([-1,1])$ xác định bởi
 \begin{equation*}
 	u(x) = \left\{\begin{split}
 		&1&&\mbox{if } x\in(0,1],\\
 		-&1&&\mbox{if } x\in[-1,0),
 	\end{split}\right.
 \end{equation*}
-lại không có giá trị tại $0$ vậy thầy? Hắn giật mình. Cả lớp người Pháp giật mình. Prof. {\sc Nicolas Seguin} cũng giật mình rồi mặt ửng đỏ. Cả lớp quay lại nhìn người vừa đặt câu hỏi rồi nhìn sang hắn. Má ơi! Chị Thương lủng kiến thức Lý Thuyết Độ Đo (Measure Theory) dành cho sinh viên năm nhất, năm 2 Đại học ở Việt Nam. Hắn chợt nhớ bạn bè hồi Đại Học của hắn hay kể\footnote{Xin lỗi Prof. {\sc Dương Minh Đức} vì em hay cúp học.} Prof. {\sc Dương Minh Đức} có khuyến khích sinh viên đặt các câu hỏi ngu (dummy questions) rồi cho điểm 10, điểm đỏ, điểm 10 đỏ để khuyến khích sự tò mò của sinh viên ngành Toán Tin. Khuyến khích đặt câu hỏi ngu là 1 mẹo tự học, dạy học, nghiên cứu (learning, teaching, \& research as in the spirit \& the title of this novel) đúng đắn \& mang tính tích cực. Nhưng đặt câu hỏi ngu chỉ là vế đầu. Vế sau là đặt câu hỏi ngu với ai ({\it With whom?}) \& trong hoàn cảnh nào nữa ({\it When? Where?}). {\it When? Where?} Cái lớp đó là cái lớp của các anh chị hệ ENS Rennes, \& chả hiểu năm đó Pháp đồn tăng học phí sao mà các anh chị hệ ENS từ Paris ùa về Rennes, vì chỉ có trường Rennes tuyên bố là sẽ không tăng học phí từ 240\texteuro\ lên thành mấy ngàn \texteuro. Có lẽ lại là định mệnh cuộc đời (abbr., đ.m. cuộc đời). {\it\& Whom?} Prof. {\sc Nicolas Seguin} là thầy hướng dẫn luận án Tiến sĩ của chị Thương, mà sự cạnh tranh th\`eses (i.e., suất \& đề tài làm nghiên cứu sinh bậc Tiến sĩ) ở Pháp cực kỳ gay gắt \& khắc nghiệt. Vị giáo sư cảm thấy nhục nhã vì vô tình để các sinh viên gốc Pháp biết mình đang hướng dẫn 1 con nhỏ người Việt Nam không có kiến thức thuộc dạng căn bản nhất của Giải tích Toán học (Mathematical Analysis) mà lại làm luận văn Tiến sĩ về Giải tích số (Numerical Analysis). Còn hắn thì bị vạ lây, chỉ vì ngồi im mà không nói năng gì. Hắn nhìn sang chị Thương. Chị ta đang nở 1 nụ cười mãn nguyện như vừa đặt 1 trong những câu hỏi hay nhất, hóc búa nhất trên đời mà chả Giáo sư Toán học người Pháp nào đỡ nổi. Chắc chị ta khiến thầy của chỉ phải xem xét, cân nhắc, suy tính cực kỳ cẩn thận về việc gia nhập {\it Hội những người không đỡ nổi những người khó đỡ} (The Undefendable of The Undefendable). {\it Nhưng tại sao chị Thương lại có thể thể hiện sự ngu dốt, thiếu hiểu biết, mất kiến thức căn bản trầm trọng 1 cách đầy tự tin \& đầy tự hào kiểu như vừa mới đóng góp vào mớ tri thức của nền Toán học nhân loại như vậy?} Hắn thoáng nghĩ nhưng học Toán nặng nên mệt quá thành ra mặc kệ. Vài tháng sau, chị Thương ganh với học bổng Master 2 của hắn, tới 1 mức độ mà hắn hiểu là đã vượt quá lằn ranh giới chịu đựng vô cùng nhân ái của hắn. Hắn bắt đầu suy nghĩ lại câu hỏi đó. \& đây là 1 trong những câu trả lời mà hắn cho là thuần logic nhất mà cái đầu ngu dốt, thiếu hiểu biết về bản chất con người của hắn có thể nghĩ ra: Kiểu như 1 đứa trẻ Mẫu Giáo hay học sinh Tiểu Học lỡ ỉa bậy trong lớp do tối hôm trước đó lỡ ăn hoặc bị buộc phải ăn 1 món mà cha hoặc mẹ (hoặc cả 2) của đứa trẻ đó vừa mới ``sáng tạo'' ra công thức hoàn toàn mới (a completely new cooking recipe) hoặc đồ ăn Mexico, e.g., spicy Taco. Khi đứa trẻ đó lỡ ỉa bậy lần đầu, cả lớp sẽ cười chê \& tha hồ sỉ nhục đứa trẻ dơ dáy đó. Khi đứa trẻ đó ỉa bậy thứ 2, cả lớp vẫn sẽ cười nhưng sẽ bớt cười thả ga chút đỉnh \& bắt đầu cảm thấy kinh tởm. Đến khi đứa trẻ đó đã quá quen với việc ỉa bậy thì đứa trẻ đó không còn sợ ai nữa, mà giáo viên với đám bạn phải sợ đứa trẻ đam mê ỉa bậy đó. Yo! I am the Shit Master! Ngửi đi! Hít đi! Ta sẽ gieo rắc sự ngu dốt \& sự thống khổ chứa đầy tình thương\footnote{Thì ra Thương ở đây là `đau thương', `bi thương', `bị thương', \& `tổn thương', chứ không phải `yêu thương'. Thật là hoài niệm.} \& đầy tính đặc ân cho chúng bây. Điều đó cũng tương tự với việc bạn ngu dốt khi qua tuổi trưởng thành mà không chịu trưởng thành về mặt tâm lý \& trí tuệ. Khi bạn quá ngu dốt để có thể tự nhận thức được sự ngu dốt của bản thân thì bạn đách còn sợ cái đéo gì nữa trên đời nữa\footnote{{\sf Hồng [28; writer]}: Hay nên chuyển ``đách sợ cái đéo'' thành ``đéo sợ cái đách'' thì hay hơn, i.e., nghe êm tai hơn \& du dương hơn nhỉ? Bloody hell! I still suck at writing.}. Bạn là Nhất. Mình xin nhỗi được chưa? Có khi cái thực thể tên là Nhất còn phải chịu thua cả bạn. A bloody Shit (i.e., trĩ) Master wannabe was born that day.
+lại không có giá trị tại $0$ vậy thầy? Hắn giật mình. Cả lớp người Pháp giật mình. Prof. Dr. {\sc Nicolas Seguin} cũng giật mình rồi mặt ửng đỏ. Cả lớp quay lại nhìn người vừa đặt câu hỏi rồi nhìn sang hắn. Má ơi! Chị Thương lủng kiến thức Lý Thuyết Độ Đo (Measure Theory) dành cho sinh viên năm nhất, năm 2 Đại học ở Việt Nam. Hắn chợt nhớ bạn bè hồi Đại Học của hắn hay kể\footnote{Xin lỗi Prof. Dr. {\sc Dương Minh Đức} vì em hay cúp học.} Prof. Dr. {\sc Dương Minh Đức} có khuyến khích sinh viên đặt các câu hỏi ngu (dummy questions) rồi cho điểm 10, điểm đỏ, điểm 10 đỏ để khuyến khích sự tò mò của sinh viên ngành Toán Tin. Khuyến khích đặt câu hỏi ngu là 1 mẹo tự học, dạy học, nghiên cứu (learning, teaching, \& research as in the spirit \& the title of this novel) đúng đắn \& mang tính tích cực. Nhưng đặt câu hỏi ngu chỉ là vế đầu. Vế sau là đặt câu hỏi ngu với ai ({\it With whom?}) \& trong hoàn cảnh nào nữa ({\it When? Where?}). {\it When? Where?} Cái lớp đó là cái lớp của các anh chị hệ ENS Rennes, \& chả hiểu năm đó Pháp đồn tăng học phí sao mà các anh chị hệ ENS từ Paris ùa về Rennes, vì chỉ có trường Rennes tuyên bố là sẽ không tăng học phí từ 240\texteuro\ lên thành mấy ngàn \texteuro. Có lẽ lại là định mệnh cuộc đời (abbr., đ.m. cuộc đời). {\it\& Whom?} Prof. Dr. {\sc Nicolas Seguin} là thầy hướng dẫn luận án Tiến sĩ của chị Thương, mà sự cạnh tranh th\`eses (i.e., suất \& đề tài làm nghiên cứu sinh bậc Tiến sĩ) ở Pháp cực kỳ gay gắt \& khắc nghiệt. Vị giáo sư cảm thấy nhục nhã vì vô tình để các sinh viên gốc Pháp biết mình đang hướng dẫn 1 con nhỏ người Việt Nam không có kiến thức thuộc dạng căn bản nhất của Giải tích Toán học (Mathematical Analysis) mà lại làm luận văn Tiến sĩ về Giải tích số (Numerical Analysis). Còn hắn thì bị vạ lây, chỉ vì ngồi im mà không nói năng gì. Hắn nhìn sang chị Thương. Chị ta đang nở 1 nụ cười mãn nguyện như vừa đặt 1 trong những câu hỏi hay nhất, hóc búa nhất trên đời mà chả Giáo sư Toán học người Pháp nào đỡ nổi. Chắc chị ta khiến thầy của chỉ phải xem xét, cân nhắc, suy tính cực kỳ cẩn thận về việc gia nhập {\it Hội những người không đỡ nổi những người khó đỡ} (The Undefendable of The Undefendable). {\it Nhưng tại sao chị Thương lại có thể thể hiện sự ngu dốt, thiếu hiểu biết, mất kiến thức căn bản trầm trọng 1 cách đầy tự tin \& đầy tự hào kiểu như vừa mới đóng góp vào mớ tri thức của nền Toán học nhân loại như vậy?} Hắn thoáng nghĩ nhưng học Toán nặng nên mệt quá thành ra mặc kệ. Vài tháng sau, chị Thương ganh với học bổng Master 2 của hắn, tới 1 mức độ mà hắn hiểu là đã vượt quá lằn ranh giới chịu đựng vô cùng nhân ái của hắn. Hắn bắt đầu suy nghĩ lại câu hỏi đó. \& đây là 1 trong những câu trả lời mà hắn cho là thuần logic nhất mà cái đầu ngu dốt, thiếu hiểu biết về bản chất con người của hắn có thể nghĩ ra: Kiểu như 1 đứa trẻ Mẫu Giáo hay học sinh Tiểu Học lỡ ỉa bậy trong lớp do tối hôm trước đó lỡ ăn hoặc bị buộc phải ăn 1 món mà cha hoặc mẹ (hoặc cả 2) của đứa trẻ đó vừa mới ``sáng tạo'' ra công thức hoàn toàn mới (a completely new cooking recipe) hoặc đồ ăn Mexico, e.g., spicy Taco. Khi đứa trẻ đó lỡ ỉa bậy lần đầu, cả lớp sẽ cười chê \& tha hồ sỉ nhục đứa trẻ dơ dáy đó. Khi đứa trẻ đó ỉa bậy thứ 2, cả lớp vẫn sẽ cười nhưng sẽ bớt cười thả ga chút đỉnh \& bắt đầu cảm thấy kinh tởm. Đến khi đứa trẻ đó đã quá quen với việc ỉa bậy thì đứa trẻ đó không còn sợ ai nữa, mà giáo viên với đám bạn phải sợ đứa trẻ đam mê ỉa bậy đó. Yo! I am the Shit Master! Ngửi đi! Hít đi! Ta sẽ gieo rắc sự ngu dốt \& sự thống khổ chứa đầy tình thương\footnote{Thì ra Thương ở đây là `đau thương', `bi thương', `bị thương', \& `tổn thương', chứ không phải `yêu thương'. Thật là hoài niệm.} \& đầy tính đặc ân cho chúng bây. Điều đó cũng tương tự với việc bạn ngu dốt khi qua tuổi trưởng thành mà không chịu trưởng thành về mặt tâm lý \& trí tuệ. Khi bạn quá ngu dốt để có thể tự nhận thức được sự ngu dốt của bản thân thì bạn đách còn sợ cái đéo gì nữa trên đời nữa\footnote{{\sf Hồng [28; writer]}: Hay nên chuyển ``đách sợ cái đéo'' thành ``đéo sợ cái đách'' thì hay hơn, i.e., nghe êm tai hơn \& du dương hơn nhỉ? Bloody hell! I still suck at writing.}. Bạn là Nhất. Mình xin nhỗi được chưa? Có khi cái thực thể tên là Nhất còn phải chịu thua cả bạn. A bloody Shit (i.e., trĩ) Master wannabe was born that day.
 
 \begin{quote}
 	{\sf Hồng [25; philosopher wannabe]}: Oh yes, I want to become the Fool! Then everyone will be afraid of me! Muahahaha!
@@ -3559,13 +3591,13 @@ Chỉ khi bạn tự nhận thức \& chấp nhận mình ngu, bạn mới có t
 \end{Rule}
 Chấp nhận làm bạn với cái ngu dốt của mình để cải thiện nó cũng là 1 cách để kiểm soát nỗi sợ nguyên thủy (primal fear) sinh ra từ sự vô tri sống sâu trong tiềm thức của chúng ta.
 
-\begin{quotation}
-	{\sf[cn$\to$vi]} {\it``Chớ có đem đá chọi đá, phải biết cách cúi đầu trước đứa ngu.''} -- {\sc Tư Mã Ý}
+\begin{itemize}
+	\item {\sf[cn$\to$vi]} {\it``Chớ có đem đá chọi đá, phải biết cách cúi đầu trước đứa ngu.''} -- {\sc Tư Mã Ý}
 	
-	{\it``Reason can be fought with reason. How are you going to fight the unreasonable?''} -- \cite{Rand_fountainhead}
+	\item {\it``Reason can be fought with reason. How are you going to fight the unreasonable?''} -- \cite{Rand_fountainhead}
 	
 	-- Lý trí có thể được chiến đấu bằng lý trí. Thế bạn sẽ đấu tranh với điều vô lý \& những con người vô lý như thế nào?
-\end{quotation}
+\end{itemize}
 
 %------------------------------------------------------------------------------%
 
@@ -3623,7 +3655,7 @@ Nhưng nếu bạn học được cách sử dụng nó đúng cách, nó sẽ n
 	\end{itemize}
 	{\sf Nhân [3--?; eidetiker]}: Trí nhớ điện tử của tui không có tác dụng với chữ viết \& công thức, mà chỉ có tác dụng với hình ảnh. Điều đó giải thích vì sao tui thích vẽ từ lúc bắt đầu nhận thức được mọi thứ lúc 3, 4 tuổi. Ký ức rõ ràng đầu tiên là lúc tui đi xuống nhà dưới đứng sau lưng mẹ xem mẹ thái rau chuẩn bị nấu cơm. Sau đó tui lục các ngăn tủ đựng tài liệu của cha để vẽ bằng các cây bút màu nhờ lấy trộm, à nhầm, mượn đỡ hộp bút màu của chị tui. Việc tui tiến bộ 1 cách nhanh chóng trong Hội Họa gần như là điều tất yếu. Bởi lúc nào trong đầu tui cũng có hình ảnh gì đó mà tui vô tình ``chụp bằng mắt'' trước đó hoặc tui tự tưởng tượng ra cả. Đến lớp 5, lần đầu tiên đi học vẽ ở nhà cô Phượng, các thầy cô dạy vẽ cho tui không tài nào hiểu được tại sao lại tồn tại 1 đứa học sinh lớp 5 có nét vẽ ngang với 1 sinh viên Đại Học ngành Mỹ thuật. Tui cũng chả biết giải thích sao. Câu hỏi đó khá hóc búa. Như anh hỏi tại sao {\sc Mozart} tự biết đánh đàn hay {\sc Beethoven} viết nhạc được dẫu có bị điếc vậy. Vẽ vời là thứ có nghĩa duy nhất đối với tui lúc ấy. Chỉ là tui cảm nhận rất rõ mọi hình ảnh tui muốn vẽ, liên tục thúc ép trí tưởng tượng của bản thân để ép bàn tay \& cổ tay tui o theo sự tưởng tượng đó thôi. Cố gắng cải thiện liên tục trong từng đường nét phác thảo, trong từng nét bút chì. Chỉ có vậy. Xin anh đừng hỏi tại sao. Đơn giản là tui chỉ làm theo bản năng, ngoài ra tui không biết. Tui không thể biết để giải thích.
 	
-	Tiện thể, tui muốn thú nhận\footnote{I also have other kinky confessions but I will not state here in the context of memory. -- Tôi cũng có những lời thú nhận lập dị khác nhưng tôi sẽ không nêu ở đây trong bối cảnh ký ức..} 1 điều: Tui chưa bao giờ có tài năng về Toán học hay các môn Khoa Học Tự Nhiên như Toán, Vật Lý, Hóa Học, hay Tin Học cả. Đơn giản vì tui tiếp xúc với chúng quá trễ. Nếu việc 1 đứa trẻ tiếp xúc với 1 cái gì đó từ sớm để có thể thay đổi cấu trúc của bộ não \& các sự liên kết neuron cần thiết, giữa các thành phần não chuyên biệt để định hình cho sự phát triển cái thứ đó, hay cái môn học đó thì có lẽ tui có thể sẽ giỏi Toán hoặc bất cứ môn nào tui quan tâm. Nhưng tui chỉ có tài năng Hội Họa. Nhưng tại sao tui dám sử dụng từ ``tài năng'' á? Đó là do tui ``cảm'' được cái lằn ranh giới giữa làm việc chăm chỉ \& khả năng thiên phú trong Hội Họa. Đối với Toán Học tui hoàn toàn không ``cảm'' được cái gọi là ``dòng chảy Toán học'' có thể chảy qua tui. Đối với Hội Họa, tui cảm được cái lằn ranh giới giữa cố gắng--thiên phú ở đâu \& biết cách vượt qua nó, nhưng Toán học thì khác, tui thậm chí còn không thể mường tượng hay cảm nhận được cái lằn ranh giới giữa làm việc chăm chỉ \& khả năng thiên phú về Toán là như thế nào. Tui có thể cố gắng hết sức trong việc học Toán để trở nên giỏi Toán. Nhưng sự cố gắng hết mức đó chỉ đưa tui tiến tới cái lằn ranh giới đó bằng cách cho tui vài giải thưởng thi Học Sinh Giỏi Toán lúc cấp 2, cấp 3, hay cuộc thi Sinh viên giỏi Toán lúc học Đại Học, chứ không thể giúp tui tiến gần tới cái lằn ranh giới giữa chăm chỉ--thiên phú: not even close. Bằng chứng là tới năm 28 tuổi, tui vẫn chưa thể phát triển khả năng tư duy Toán học của mình cho ra hình ra thù, để đặt 1 dấu ấn trên bản đồ Toán học. Cho nên, tui xin thú nhận 1 cách rõ ràng: Tui hoàn toàn không có tài năng về Toán Học. \& tui không hề buồn về điều ấy. Nếu tui được cha mẹ cho tiếp xúc với Toán học sớm, thì đấy có thể là 1 câu chuyện khác, ở 1 dòng thời gian khác, 1 vũ trụ khác trong bức tranh đa vũ trụ (an alternative universe in the Multiverse). Nhưng ở đây thì tui chấp nhận khả năng Toán học của mình chỉ đủ ở mức làm tui có 1 thú vui tao nhã, nhưng không bao giờ làm tui thỏa mãn được.
+	Tiện thể, tui muốn thú nhận\footnote{I also have other kinky confessions but I will not state here in the context of memory. -- Tôi cũng có những lời thú nhận lập dị khác nhưng tôi sẽ không nêu ở đây trong bối cảnh của trí nhớ \& ký ức.} 1 điều: Tui chưa bao giờ có tài năng về Toán học hay các môn Khoa Học Tự Nhiên như Toán, Vật Lý, Hóa Học, hay Tin Học cả. Đơn giản vì tui tiếp xúc với chúng quá trễ. Nếu việc 1 đứa trẻ tiếp xúc với 1 cái gì đó từ sớm để có thể thay đổi cấu trúc của bộ não \& các sự liên kết neuron cần thiết, giữa các thành phần não chuyên biệt để định hình cho sự phát triển cái thứ đó, hay cái môn học đó thì có lẽ tui có thể sẽ giỏi Toán hoặc bất cứ môn nào tui quan tâm. Nhưng tui chỉ có tài năng Hội Họa. Nhưng tại sao tui dám sử dụng từ ``tài năng'' á? Đó là do tui ``cảm'' được cái lằn ranh giới giữa làm việc chăm chỉ \& khả năng thiên phú trong Hội Họa. Đối với Toán Học tui hoàn toàn không ``cảm'' được cái gọi là ``dòng chảy Toán học'' có thể chảy qua tui. Đối với Hội Họa, tui cảm được cái lằn ranh giới giữa cố gắng--thiên phú ở đâu \& biết cách vượt qua nó, nhưng Toán học thì khác, tui thậm chí còn không thể mường tượng hay cảm nhận được cái lằn ranh giới giữa làm việc chăm chỉ \& khả năng thiên phú về Toán là như thế nào. Tui có thể cố gắng hết sức trong việc học Toán để trở nên giỏi Toán. Nhưng sự cố gắng hết mức đó chỉ đưa tui tiến tới cái lằn ranh giới đó bằng cách cho tui vài giải thưởng thi Học Sinh Giỏi Toán lúc cấp 2, cấp 3, hay cuộc thi Sinh viên giỏi Toán lúc học Đại Học, chứ không thể giúp tui tiến gần tới cái lằn ranh giới giữa chăm chỉ--thiên phú: not even close. Bằng chứng là tới năm 28 tuổi, tui vẫn chưa thể phát triển khả năng tư duy Toán học của mình cho ra hình ra thù, để đặt 1 dấu ấn trên bản đồ Toán học. Cho nên, tui xin thú nhận 1 cách rõ ràng: Tui hoàn toàn không có tài năng về Toán Học. \& tui không hề buồn về điều ấy. Nếu tui được cha mẹ cho tiếp xúc với Toán học sớm, thì đấy có thể là 1 câu chuyện khác, ở 1 dòng thời gian khác, 1 vũ trụ khác trong bức tranh đa vũ trụ (an alternative universe in the Multiverse). Nhưng ở đây thì tui chấp nhận khả năng Toán học của mình chỉ đủ ở mức làm tui có 1 thú vui tao nhã, nhưng không bao giờ làm tui thỏa mãn được.
 \end{quote}
 
 \subsection{On calmness -- Bàn về sự điềm tĩnh, tính điềm đạm}
@@ -3670,13 +3702,13 @@ Còn nếu bạn đã biết quá rành về khái niệm này, cho phép 2 tác
 	{\sf Hồng [28; philosopher]}: It is alright. You cannot win all the battles in your whole life. If you can, teach me then. After having lost, you need to ask yourself: {\it How did we lose? \& Why did we lose?} Only when you try to reflect yourself in order to answer these questions, you can win some of battles after that painful but useful defeat. Let your enemy become your teacher. Let your enemy help you, teach you, harden you, \& help you harden yourself.
 \end{quote}
 
-\begin{quotation}
-	{\it``Người không được hèn, nhưng cũng không thể không biết kính sợ, phải biết kính sợ đối thủ của mình.''} -- {\sc Tư Mã Ý}
+\begin{itemize}
+	\item {\it``Người không được hèn, nhưng cũng không thể không biết kính sợ, phải biết kính sợ đối thủ của mình.''} -- {\sc Tư Mã Ý}
 	
-	{\it``Thua mà không đau, thua mà không nhục, cái cần học trước tiên là giỏi thua.''} -- {\sc Tư Mã Ý}
+	\item {\it``Thua mà không đau, thua mà không nhục, cái cần học trước tiên là giỏi thua.''} -- {\sc Tư Mã Ý}
 	
-	{\it``What will you do? Rebuild it. Just the way it was. Brick for brick.''} -- Dark Knight Trilogy directed by Director {\sc Christopher Nolan}
-\end{quotation}
+	\item {\it``What will you do? Rebuild it. Just the way it was. Brick for brick.''} -- Dark Knight Trilogy directed by Director {\sc Christopher Nolan}
+\end{itemize}
 
 %------------------------------------------------------------------------------%
 
@@ -3736,21 +3768,21 @@ Khoan đã, nhưng tại sao lại phải theo chủ nghĩa phân cực polarism
 	-- ``Vận mệnh của 1 người đã được định sẵn trong linh hồn anh ta.'' -- -- {\sc Herodotus}, \cite[p. 4]{Adler_human_nature_VN}
 \end{quote}
 {\bf \textsf{Resources -- Tài nguyên.}}
-\begin{enumerate}
+\begin{itemize}
 	\item \cite{Hanh_silence}. {\sc Thích Nhật Hạnh}. {\it Silence: The Power of Quiet in a World Full of Noise}.\footnote{Amazon link: \url{https://www.amazon.com/Silence-Power-Quiet-World-Noise/dp/0062224697}.}	
-	\begin{quotation}
-		{\it``Consciously choosing what \& who you surround yourself with is among the keys to finding more space for joy.''}
+	\begin{itemize}
+		\item {\it``Consciously choosing what \& who you surround yourself with is among the keys to finding more space for joy.''}
 		
 		-- Lựa chọn một cách có ý thức những người xung quanh bạn là một trong những chìa khóa để tìm thêm không gian cho niềm vui.
 		
-		{\it``Am I doing what I most want to be doing with my life? Do I even know what that is?''}
+		\item {\it``Am I doing what I most want to be doing with my life? Do I even know what that is?''}
 		
 		-- Tôi có đang làm điều tôi muốn làm nhất trong đời mình không? Tôi thậm chí có biết đó là gì không?
 		
-		{\it``The 2nd sound is the Sound of the One Who Observes the World. This is the sound of listening, the sound of silence.''}
+		\item {\it``The 2nd sound is the Sound of the One Who Observes the World. This is the sound of listening, the sound of silence.''}
 		
 		-- Âm thanh thứ hai là Âm thanh của Người quan sát thế giới. Đây là âm thanh của sự lắng nghe, âm thanh của sự im lặng.
-	\end{quotation}
+	\end{itemize}
 	Với bản dịch tiếng Việt:
 	\item \cite{Hanh_silence_VN}. {\sc Thích Nhật Hạnh}. {\it Silence -- Tĩnh Lặng: Sức Mạnh Tĩnh Lặng Trong Thế Giới Huyên Náo}.
 	\item \cite{Ruiz_4_agreements}. {\sc don Miguel Ruiz}. {\it The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book)}.
@@ -3759,27 +3791,27 @@ Khoan đã, nhưng tại sao lại phải theo chủ nghĩa phân cực polarism
 	\item \cite{Ruiz_Mills_4_agreements_VN}. {\sc don Miguel Ruiz, Janet Mills}. {\it The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book) -- 4 Thỏa Ước: Bí Quyết Sống Tự Do, Bình An, Hạnh Phúc Giữa Thế Giới Bất Định}.
 	\item \cite{Ruiz_Ruiz_5th_agreement}. {\sc don Miguel Ruiz, don Jose Ruiz, Janet Mills}. {\it The Fifth Agreement: A Practical Guide to Self-Mastery (A Toltec Wisdom Book)}.
 	\item \cite{Ruiz_mastery_self}. {\sc don Miguel Ruiz Jr.} {\it The Mastery of Self: A Toltec Guide to Personal Freedom (Toltec Mastery Series)}.\footnote{Amazon link: \url{https://www.amazon.com/Mastery-Self-Toltec-Personal-Freedom/dp/1938289692}.}
-	\begin{quotation}
-		{\it``Self-domestication is the act of accepting ourselves on the condition that we live up to the ideals we have adopted from others in the Dream of the Planet, without ever considering if those ideals are what we truly want.''}
+	\begin{itemize}
+		\item {\it``Self-domestication is the act of accepting ourselves on the condition that we live up to the ideals we have adopted from others in the Dream of the Planet, without ever considering if those ideals are what we truly want.''}
 		
 		-- Tự thuần hóa là hành động chấp nhận bản thân với điều kiện chúng ta phải sống theo những lý tưởng mà chúng ta đã tiếp nhận từ những người khác trong Giấc mơ về Hành tinh mà không bao giờ cân nhắc xem liệu những lý tưởng đó có phải là điều chúng ta thực sự mong muốn hay không.
 				
-		{\it``You become a Master of Self when you can engage the Dream of the Planet \& everyone in it without losing sight of your Authentic Self, \& while maintaining the awareness that every choice you make is your own.''}
+		\item {\it``You become a Master of Self when you can engage the Dream of the Planet \& everyone in it without losing sight of your Authentic Self, \& while maintaining the awareness that every choice you make is your own.''}
 		
 		-- Bạn trở thành Bậc thầy của Bản thân khi bạn có thể tham gia vào Giấc mơ của Hành tinh \& mọi người trong đó mà không đánh mất Con người Đích thực của mình, \& trong khi duy trì nhận thức rằng mọi lựa chọn bạn đưa ra đều là của riêng bạn.
 		
-		{\it``An attachment is the action of taking something that is not a part of you \& making it a part of you through an emotional or energetic investment.''}
+		\item {\it``An attachment is the action of taking something that is not a part of you \& making it a part of you through an emotional or energetic investment.''}
 		
 		-- Sự gắn bó là hành động lấy đi thứ gì đó không phải là một phần của bạn \& biến nó thành một phần của bạn thông qua một sự đầu tư đầy cảm xúc hoặc năng lượng.
 		
-		{\it``I am responsible for what I say, but I am not responsible for what you hear.''}
+		\item {\it``I am responsible for what I say, but I am not responsible for what you hear.''}
 		
 		-- Tôi chịu trách nhiệm về những gì tôi nói, nhưng tôi không chịu trách nhiệm về những gì bạn nghe.
 		
-		{\it``This is what resentment is: self-inflicted suffering with the emotional poison we wish for another.''}
+		\item {\it``This is what resentment is: self-inflicted suffering with the emotional poison we wish for another.''}
 		
 		-- Đây chính là sự oán giận: sự đau khổ tự gây ra bằng chất độc cảm xúc mà chúng ta mong muốn cho người khác.
-	\end{quotation}
+	\end{itemize}
 	Với bản dịch tiếng Việt:
 	\item \cite{Ruiz_mastery_self}. {\sc don Miguel Ruiz Jr.} {\it The Mastery of Self: A Toltec Guide to Personal Freedom (Toltec Mastery Series) -- The Mastery of Self: A Toltec Guide to Personal Freedom (Toltec Mastery Series) -- Hành Trình Thấu Hiểu Bản Thân \& Tìm Thấy Tự Do}.
 	\item \cite{Tolle_oneness}. {\sc Eckhart Tolle}. {\it Oneness With All Life}.
@@ -3789,77 +3821,77 @@ Khoan đã, nhưng tại sao lại phải theo chủ nghĩa phân cực polarism
 	\item \cite{Tolle_now}. {\sc Eckhart Tolle}. {\it The Power of Now: A Guide to Spiritual Enlightenment}. Với bản dịch tiếng Việt:
 	\item \cite{Tolle_now_VN}. {\sc Eckhart Tolle}. {\it The Power of Now: A Guide to Spiritual Enlightenment -- Sức Mạnh của Hiện Tại}.
 	\item \cite{Tolle_practice_now}. {\sc Eckhart Tolle}. {\it Practicing The Power of Now: Essential Teachings, Meditations, \& Exercises From The Power of Now}.
-	\begin{quotation}
-		{\it``Realize deeply that the present moment is all you ever have. Make the Now the primary focus of your life.''}
+	\begin{itemize}
+		\item {\it``Realize deeply that the present moment is all you ever have. Make the Now the primary focus of your life.''}
 		
 		-- Hãy nhận thức sâu sắc rằng khoảnh khắc hiện tại là tất cả những gì bạn có. Hãy biến cái Hiện tại thành trọng tâm chính trong cuộc đời bạn.
 		
-		{\it``The single most vital step on your journey toward enlightenment is this: Learn to disidentify from your mind. Every time you create a gap in the stream of mind, the light of your consciousness grows stronger.''}
+		\item {\it``The single most vital step on your journey toward enlightenment is this: Learn to disidentify from your mind. Every time you create a gap in the stream of mind, the light of your consciousness grows stronger.''}
 		
 		-- Bước quan trọng nhất trên hành trình hướng tới giác ngộ của bạn là: Học cách loại bỏ sự đồng nhất khỏi tâm trí của bạn. Mỗi khi bạn tạo ra một khoảng trống trong dòng tâm thức, ánh sáng ý thức của bạn ngày càng mạnh mẽ hơn.
 		
-		{\it``The beginning of freedom is the realization that you are not the possessing entity -- the thinker. Knowing this enables you to observe the entity. The moment you start watching the thinker, a higher level of consciousness becomes activated.''}
+		\item {\it``The beginning of freedom is the realization that you are not the possessing entity -- the thinker. Knowing this enables you to observe the entity. The moment you start watching the thinker, a higher level of consciousness becomes activated.''}
 		
 		-- Sự khởi đầu của tự do là việc nhận ra rằng bạn không phải là thực thể sở hữu - người suy nghĩ. Biết được điều này cho phép bạn quan sát thực thể. Khoảnh khắc bạn bắt đầu quan sát người suy nghĩ, mức độ ý thức cao hơn sẽ được kích hoạt.
-	\end{quotation}
+	\end{itemize}
 	Với bản dịch tiếng Việt:
 	\item \cite{Tolle_practice_now_VN}. {\sc Eckhart Tolle}. {\it Practicing The Power of Now -- Trải Nghiệm Sức Mạnh Hiện Tại}.
 	\item \cite{Tolle_earth_VN}. {\sc Eckhart Tolle}. {\it A New Earth: Awakening to Your Life's Purpose -- Thức Tỉnh Mục Đích Sống}.
 	\item \cite{Tolle_stillness_VN}. {\sc Eckhart Tolle}. {\it Stilless Speaks -- Sức Mạnh của Tĩnh Lặng}.
 	\item \cite{Frankl_meaning,Frankl_meaning_revised}. {\sc Viktor Emil Frankl}. {\it Man's Search For Meaning}.
-	\begin{quotation}
-		{\it``Life ultimately means taking the responsibility to find the right answer to its problems \& to fulfill the tasks which it constantly sets for each individual.''}
+	\begin{itemize}
+		\item {\it``Life ultimately means taking the responsibility to find the right answer to its problems \& to fulfill the tasks which it constantly sets for each individual.''}
 		
 		-- Cuộc sống suy cho cùng có nghĩa là có trách nhiệm tìm ra câu trả lời đúng đắn cho những vấn đề của mình \& để hoàn thành những nhiệm vụ mà nó không ngừng đặt ra cho mỗi cá nhân.
 		
-		{\it``Emotion, which is suffering, ceases to be suffering as soon as we form a clear \& precise picture of it.''}
+		\item {\it``Emotion, which is suffering, ceases to be suffering as soon as we form a clear \& precise picture of it.''}
 		
 		-- Cảm xúc, tức là đau khổ, sẽ ngừng đau khổ ngay khi chúng ta hình thành một bức tranh rõ ràng \& chính xác về nó.
 		
-		{\it``If there is a meaning in life at all, then there must be a meaning in suffering. Suffering is an ineradicable part of life, even as fate \& death. Without suffering \& death human life cannot be complete.''}
+		\item {\it``If there is a meaning in life at all, then there must be a meaning in suffering. Suffering is an ineradicable part of life, even as fate \& death. Without suffering \& death human life cannot be complete.''}
 		
 		-- Nếu cuộc sống có ý nghĩa gì đó thì đau khổ cũng phải có ý nghĩa. Đau khổ là một phần không thể xóa bỏ được của cuộc sống, kể cả số phận và cái chết. Không có đau khổ và cái chết, cuộc sống con người không thể trọn vẹn.
-	\end{quotation}
+	\end{itemize}
 	Với bản dịch tiếng Việt:
 	\item \cite{Frankl_meaning_VN}. {\sc Viktor Emil Frankl}. {\it Man's Search For Meaning -- Đi Tìm Lẽ Sống}.
 	\item \cite{Adler_science_living}. {\sc Alfred Adler}. {\it The Science of Living}.
-	\begin{quotation}
-		{\it``Curiously enough we will find that no 2 children, even those born in the same family, grow up in the same situation. Even within the same family the atmosphere that surrounds each individual child is quite particular. Thus the 1st child has notoriously a different set of circumstances from the other children. The 1st child is at 1st alone \& is thus the center of attention. Once the 2nd child is born, he finds himself dethroned \& he does not like the change of situation. In fact it is quite a tragedy in his life that he has been in power \& is so no longer. This sense of tragedy goes into the formation of his prototype \& will crop out in his adult characteristics.''}
+	\begin{itemize}
+		\item {\it``Curiously enough we will find that no 2 children, even those born in the same family, grow up in the same situation. Even within the same family the atmosphere that surrounds each individual child is quite particular. Thus the 1st child has notoriously a different set of circumstances from the other children. The 1st child is at 1st alone \& is thus the center of attention. Once the 2nd child is born, he finds himself dethroned \& he does not like the change of situation. In fact it is quite a tragedy in his life that he has been in power \& is so no longer. This sense of tragedy goes into the formation of his prototype \& will crop out in his adult characteristics.''}
 		
 		-- Thật kỳ lạ, chúng ta sẽ thấy rằng không có 2 đứa trẻ nào, kể cả những đứa trẻ sinh ra trong cùng một gia đình, đều lớn lên trong hoàn cảnh giống nhau. Ngay cả trong cùng một gia đình, bầu không khí xung quanh mỗi đứa trẻ cũng khá đặc biệt. Vì vậy, đứa trẻ đầu tiên nổi tiếng là có hoàn cảnh khác với những đứa trẻ khác. Đứa con thứ nhất đứng đầu một mình \& nên là trung tâm của sự chú ý. Khi đứa con thứ 2 chào đời, anh thấy mình bị truất ngôi \& anh không thích sự thay đổi của hoàn cảnh. Trên thực tế, đó là một bi kịch trong cuộc đời anh ta khi anh ta đã nắm quyền \& không còn nữa. Cảm giác bi kịch này đi vào quá trình hình thành nguyên mẫu của anh ấy \& sẽ thể hiện những đặc điểm trưởng thành của anh ấy.
 		
-		{\it``Nature is so rich \& the possibilities of stimuli, instincts, \& mistakes are so numerous, that it is not possible for 2 persons to be exactly identical.''}
+		\item {\it``Nature is so rich \& the possibilities of stimuli, instincts, \& mistakes are so numerous, that it is not possible for 2 persons to be exactly identical.''}
 		
 		-- Thiên nhiên rất phong phú \& khả năng kích thích, bản năng, \& sai lầm nhiều đến mức không thể có 2 người giống hệt nhau được.
 		
-		{\it``Another fact to be borne in mind in connection with criminals is that if we increase the punishments, so far from frightening the individual criminal, we merely help to increase his belief that he is a hero. We must not forget that the criminal lives in a self-centered world, a world in which one will never find true courage, self-confidence, communal sense, or understanding of common values. It is not possible for such persons to join a society. Neurotics seldom start a club, \& it is an impossible feat for persons suffering from agoraphobia or for insane persons. Problem children or persons who commit suicide never make friends, a fact for which the reason is never given. There is a reason, however: they never make friends because their early life took a self-centered direction. Their prototypes were oriented towards false goals \& followed lines of direction on the useless side of life.''}
+		\item {\it``Another fact to be borne in mind in connection with criminals is that if we increase the punishments, so far from frightening the individual criminal, we merely help to increase his belief that he is a hero. We must not forget that the criminal lives in a self-centered world, a world in which one will never find true courage, self-confidence, communal sense, or understanding of common values. It is not possible for such persons to join a society. Neurotics seldom start a club, \& it is an impossible feat for persons suffering from agoraphobia or for insane persons. Problem children or persons who commit suicide never make friends, a fact for which the reason is never given. There is a reason, however: they never make friends because their early life took a self-centered direction. Their prototypes were oriented towards false goals \& followed lines of direction on the useless side of life.''}
 		
 		-- Một thực tế khác cần lưu ý liên quan đến tội phạm là nếu chúng ta tăng các hình phạt, thay vì khiến cá nhân tội phạm sợ hãi, chúng ta chỉ giúp tăng cường niềm tin của anh ta rằng anh ta là anh hùng. Chúng ta không được quên rằng tội phạm sống trong một thế giới lấy bản thân làm trung tâm, một thế giới mà người ta sẽ không bao giờ tìm thấy lòng dũng cảm thực sự, sự tự tin, ý thức cộng đồng hoặc sự hiểu biết về các giá trị chung. Những người như vậy không thể gia nhập một xã hội. Những kẻ thần kinh hiếm khi thành lập một câu lạc bộ, \& đó là một kỳ tích không thể thực hiện được đối với những người mắc chứng sợ khoảng rộng hoặc những người mất trí. Những đứa trẻ có vấn đề hoặc những người tự tử không bao giờ kết bạn, một sự thật mà lý do không bao giờ được đưa ra. Tuy nhiên, có một lý do: họ không bao giờ kết bạn vì cuộc sống ban đầu của họ có hướng ích kỷ. Nguyên mẫu của họ hướng tới những mục tiêu sai lầm \& đi theo những hướng đi về phía vô ích của cuộc sống.
-	\end{quotation}
+	\end{itemize}
 	\item \cite{Adler_human_nature}. {\sc Alfred Adler}. {\it Understanding Human Nature}.
 	
 	\item \cite{Adler_human_nature_VN}. {\sc Alfred Adler}. {\it Understanding Human Nature -- Hiểu Về Bản Chất Con Người}.
 	\item {\sc Alfred Adler}. {\it What Life Should Mean To You}.
 	\item {\sc Alfred Adler}. {\it The Case of Miss R: The Interpretation of A Life Story}.
 	\item \cite{Wiest_101_essays}. {\sc Brianna Wiest}. {\it 101 Essays That Will Change The Way You Think}.
-	\begin{quotation}
-		{\it``Accomplishing goals is not success. How much you expand in the process is.''}
+	\begin{itemize}
+		\item {\it``Accomplishing goals is not success. How much you expand in the process is.''}
 		
 		-- Hoàn thành các mục tiêu không phải là thành công. Mà việc bạn mở rộng bao nhiêu trong quá trình này mới là thành công.
 		
-		{\it``Your habits create your mood, \& your mood is a filter through which you experience your life.''}
+		\item {\it``Your habits create your mood, \& your mood is a filter through which you experience your life.''}
 		
 		-- Thói quen của bạn tạo ra tâm trạng của bạn, \& tâm trạng của bạn là một bộ lọc để bạn trải nghiệm cuộc sống của mình.
 		
-		{\it``You must learn to let your conscious decisions dictate your day -- not your fears or impulses.''}
+		\item {\it``You must learn to let your conscious decisions dictate your day -- not your fears or impulses.''}
 		
 		-- Bạn phải học cách để những quyết định có ý thức quyết định ngày của bạn -- chứ không phải nỗi sợ hãi hay sự bốc đồng của bạn
-	\end{quotation}	
+	\end{itemize}	
 	Với bản dịch tiếng Việt:
 	\item \cite{Wiest_101_essays_VN}. {\sc Brianna Wiest}. {\it 101 Essays That Will Change The Way You Think -- Sống Khai Vấn, Sống Tỉnh Thức}.
-\end{enumerate}
+\end{itemize}
 
-\begin{question}
+\begin{question}[Meaning of life]
 	What is living? Why do we live? What to live for? Who to live with? How to live?
 	
 	-- Sống là gì? Tại sao ta sống? Ta sống vì điều gì? Ai mà ta sống chung với? Sống thế nào?
@@ -3902,34 +3934,34 @@ Let's cook.
 \begin{quote}
 	{\sf Thương [25; 2nd year mathematics PhD; sucked at mathematics]}: Hồng như 1 tờ giấy trắng vậy, mong manh dễ vỡ.
 	
-	{\sf Nhân [23; Master 2 pure mathematics students]} nghĩ trong đầu: {\it Why does this stupid bitch talk so much? Can she just shut the fuck up \& let me alone?} -- Tại sao con đĩ ngu xuẩn, nứng \st{lồn} âm vật mong manh này nói lắm thế? Bộ ả ta không thể câm mồm lại \& để tôi yên được à?
+	{\sf Nhân [23; Master 2 pure mathematics students]} nghĩ trong đầu: {\it Why does this stupid bitch talk so much? Can she just shut the fuck up \& let me alone?} -- Tại sao con đĩ ngu xuẩn, nứng \st{lồn} âm vật mong manh này nói lắm thế? Bộ ả ta không thể câm mồm lại \& để tui yên được à?
 \end{quote}
 
 \begin{example}[Nobel văn học Han Kang]
 	On fragility of human beings.
 \end{example}
 
-\subsubsection{On joy vs. pain -- Bàn về lạc thú vs. nỗi đau \& cách cân bằng chúng}
+\subsubsection{On joy vs. pain \& how to balance them -- Bàn về lạc thú vs. nỗi đau \& cách cân bằng chúng}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{Lembke_dopamine}. {\sc Anna Lembke}. {\it Dopamine Nation: Finding Balance in the Age of Indulgence}.
-	\begin{quotation}
-		{\it``This book is about pleasure. It's also about pain. Most important, it's about how to find the delicate balance between the two, and why now more than ever finding balance is essential.''}
+	\begin{itemize}
+		\item {\it``This book is about pleasure. It's also about pain. Most important, it's about how to find the delicate balance between the two, and why now more than ever finding balance is essential.''}
 		
 		-- ``Cuốn sách này nói về lạc thú. Nó cũng nói về nỗi đau. Nhưng trên hết, nó nói về mối quan hệ giữa lạc thú \& nỗi đau, cũng như tầm quan trọng của việc hiểu được mối quan hệ đó để sống 1 cuộc đời đúng nghĩa.'' -- \cite[p. 9]{Lembke_dopamine_VN}
 		
-		{\it``The paradox is that hedonism, the pursuit of pleasure for its own sake, leads to anhedonia, which is the inability to enjoy pleasure of any kind.''}
+		\item {\it``The paradox is that hedonism, the pursuit of pleasure for its own sake, leads to anhedonia, which is the inability to enjoy pleasure of any kind.''}
 		
 		-- Điều nghịch lý là chủ nghĩa khoái lạc, việc theo đuổi thú vui vì lợi ích riêng của nó, dẫn đến anhedonia, tức là không có khả năng tận hưởng bất kỳ loại khoái cảm nào.
 		
-		{\it``The reason we're all so miserable may be because we're working so hard to avoid being miserable.''}
+		\item {\it``The reason we're all so miserable may be because we're working so hard to avoid being miserable.''}
 		
 		-- Lý do khiến tất cả chúng ta đau khổ đến vậy có thể là vì chúng ta đang cố gắng quá nhiều để tránh bị đau khổ.
 		
-		{\it``Dopamine may play a bigger role in the motivation to get a reward than the pleasure of the reward itself. Wanting more than liking.''}
+		\item {\it``Dopamine may play a bigger role in the motivation to get a reward than the pleasure of the reward itself. Wanting more than liking.''}
 		
 		-- Dopamine có thể đóng một vai trò lớn hơn trong việc tạo động lực để nhận được phần thưởng hơn là niềm vui khi nhận được phần thưởng đó. Muốn nhiều hơn là thích.
-	\end{quotation}
+	\end{itemize}
 	Với bản dịch tiếng Việt:	
 	\item \cite{Lembke_dopamine_VN}. {\sc Anna Lembke}. {\it Dopamine Nation: Finding Balance in the Age of Indulgence -- Giải Mã Hoóc-môn Dopamine: Sống Cân Bằng Trong Thời Đại Đầy Cám Dỗ}.
 \end{enumerate}
@@ -3969,8 +4001,8 @@ Nếu bạn bắt nạt 1 chú chó, được ai đó hay chính bạn nuôi ho�
 
 ``{\it``The Town Mouse \& the Country Mouse''} is 1 of \href{https://en.wikipedia.org/wiki/Aesop%27s_Fables}{Aesop's Fables}.'' -- \href{https://en.wikipedia.org/wiki/The_Town_Mouse_and_the_Country_Mouse}{Wikipedia{\tt/}The Town Mouse \& the Country Mouse}.
 
-\begin{quotation}\it
-	``The Country mouse gets used to live in safety, but doesn't get to eat delicious food like they have in the city. The Town mouse gets to eat delicious food, but runs a higher risk of being killed by humans or cats.'' -- {\sc Angel Devil}, \href{https://www.imdb.com/title/tt13616990/}{Chainsaw Man} (2022)
+\begin{quotation}
+	{\it``The Country mouse gets used to live in safety, but doesn't get to eat delicious food like they have in the city. The Town mouse gets to eat delicious food, but runs a higher risk of being killed by humans or cats.''} -- {\sc Angel Devil}, \href{https://www.imdb.com/title/tt13616990/}{Chainsaw Man} (2022)
 \end{quotation}
 {\sf Tạm dịch}: Chuột quê đã quen với cuộc sống an toàn nhưng không được ăn những món ngon như ở thành phố. Chuột Thị trấn được ăn đồ ăn ngon nhưng có nguy cơ bị người hoặc mèo giết cao hơn.
 
@@ -4030,6 +4062,12 @@ Tôi sẽ tiếp tục các di sản của tất cả thầy cô của tôi, i.e
 
 \section{Miscellaneous -- Linh tinh}
 
+\subsection{Some future plans -- Vài dự định tương lai}
+Có nhiều chủ đề khác về việc học, việc dạy, \& nghề nghiên cứu chưa được bàn đến trong tiểu thuyết hư cấu này. 1 trong số chúng bao gồm:
+\begin{itemize}
+	\item 
+\end{itemize}
+
 %------------------------------------------------------------------------------%
 
 \appendix
@@ -4050,18 +4088,20 @@ else {
 \end{Verbatim}
 We thank all the people who helped us, have helping us, also who, without knowing it, made me what I am today \& made us what we are today.
 
-Xin cảm ơn các bài viết sâu sắc về giáo dục của thầy{\tt/}Dr. {\sc Trần Nam Dũng}, về giáo dục \& nghiên cứu Toán cao cấp của thầy{\tt/}Prof. {\sc Nguyễn Hữu Việt Hưng}, Prof. {\sc Ngô Bảo Châu}, Prof. {\sc Hà Huy Khoái}, Prof. {\sc Phan Thành Nam}, Prof. {\sc Đào Hải Long}. 2 tác giả không hề có bất cứ trao đổi nào với các người thầy này, nhưng bài viết của họ đã đủ để các tác giả bắt tay vào chấp bút cho 1 số ý tưởng của phần bàn về việc học \& bàn về việc dạy. Nếu có bất cứ lỗi nào xảy ra trong tiểu thuyết, đó hoàn toàn là lỗi của 2 tác giả đã hiểu sai ý từ các bài viết gốc. Hoàn toàn không liên quan đến ý tốt hay các tư tưởng của những người thầy này.
+Xin cảm ơn các bài viết sâu sắc về giáo dục của thầy{\tt/}Dr. {\sc Trần Nam Dũng}, về giáo dục \& nghiên cứu Toán cao cấp của thầy{\tt/}Prof. Dr. {\sc Nguyễn Hữu Việt Hưng}, Prof. Dr. {\sc Ngô Bảo Châu}, Prof. Dr. {\sc Hà Huy Khoái}, Prof. Dr. {\sc Phan Thành Nam}, Prof. Dr. {\sc Đào Hải Long}. 2 tác giả không hề có bất cứ trao đổi nào với các người thầy này, nhưng bài viết của họ đã đủ để các tác giả bắt tay vào chấp bút cho 1 số ý tưởng của phần bàn về việc học \& bàn về việc dạy. Nếu có bất cứ lỗi nào xảy ra trong tiểu thuyết, đó hoàn toàn là lỗi của 2 tác giả đã hiểu sai ý từ các bài viết gốc. Hoàn toàn không liên quan đến ý tốt hay các tư tưởng của những người thầy này.
 
-Xin chân thành những người đã từng giúp, đã từng thương hoặc thương hắn đến tận ngày hôm nay. Cuộc hành trình mưu cầu hạnh phúc \& khám phá tri thức sẽ thật khó khăn nếu không có họ củng cố niềm tin của 2 tác giả. Xin cảm ơn chị{\tt/}Dr. {\sc Lê Thị Minh Thảo}, anh {\sc Hoàng Công Đức}, anh{\tt/}thầy{\tt/}Dr. {\sc Lê Phúc Lữ}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Mạnh Khang}, chị{\tt/}Dr.  {\sc Lan Hương}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Nguyên Anh}, Prof. {\sc Jesús Ildefonso Díaz}, thầy{\tt/}anh{\tt/}Dr.  {\sc Trà Quốc Khanh}, thầy{\tt/}anh {\sc Lê Văn Chánh}, cô {\sc Lê Thị Thanh Lĩu}, cô{\tt/}M.Sc. {\sc Dương Thị Xuân An} đã truyền động lực trên hành trình học Toán của 2 tác giả. Xin cảm ơn cô {\sc Đặng Thị Hạnh}, cô {\sc Đặng Thị Bích Thư}, thầy {\sc Võ Văn Huynh} đã viếng đám tang của cha 2 tác giả, để họ không bị nỗi sợ bị bỏ rơi nuốt chửng. Xin cảm ơn thầy {\sc Lê Hoàng Minh}, thầy {\sc Nguyễn Thanh Tài}, thầy {\sc Võ Văn Huynh}, thầy {\sc Đệ}, thầy {\sc Lê Thanh Hải}, thầy {\sc Trần Thanh Liêm}, thầy {\sc Nguyễn Văn Quí}\footnote{Rest In Peace, my respected Elementary Mathematics teacher. I dedicate this work \& future works on Mathematics, both Elementary \& Advanced, \& their bridges connecting themselves, for you.}, thầy{\tt/}Dr.  {\sc Trần Nam Dũng}, thầy{\tt/}Dr. {\sc Nguyễn Tấn Trung}, thầy{\tt/}Prof. {\sc Huỳnh Quang Vũ}, thầy{\tt/}Prof. {\sc Đặng Đức Trọng}, đã là những mẫu hình người thầy tuyệt vời để 2 tác giả bắt chước theo. Phải trưởng thành mà không có sự giúp đỡ \& hình mẫu của người cha (father as a role model) trong điều kiện thiếu thốn cả về kiến thức, vật chất, lẫn tinh thần, thật không dễ dàng gì.
+Xin chân thành những người đã từng giúp, đã từng thương hoặc thương hắn đến tận ngày hôm nay. Cuộc hành trình mưu cầu hạnh phúc \& khám phá tri thức sẽ thật khó khăn nếu không có họ củng cố niềm tin của 2 tác giả. Xin cảm ơn chị{\tt/}Dr. {\sc Lê Thị Minh Thảo}, anh {\sc Hoàng Công Đức}, anh{\tt/}thầy{\tt/}Dr. {\sc Lê Phúc Lữ}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Mạnh Khang}, chị{\tt/}Dr.  {\sc Lan Hương}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Nguyên Anh}, Prof. Dr. {\sc Jesús Ildefonso Díaz}, thầy{\tt/}anh{\tt/}Dr.  {\sc Trà Quốc Khanh}, thầy{\tt/}anh {\sc Lê Văn Chánh}, cô {\sc Lê Thị Thanh Lĩu}, cô {\sc Dương Thị Xuân An} đã truyền động lực trên hành trình học Toán của 2 tác giả. Xin cảm ơn cô {\sc Đặng Thị Hạnh}, cô {\sc Đặng Thị Bích Thư}, thầy {\sc Võ Văn Huynh} đã viếng đám tang của cha 2 tác giả, để họ không bị nỗi sợ bị bỏ rơi nuốt chửng. Xin cảm ơn thầy {\sc Lê Hoàng Minh}, thầy {\sc Nguyễn Thanh Tài}, thầy {\sc Võ Văn Huynh}, thầy {\sc Đệ}, thầy {\sc Lê Thanh Hải}, thầy {\sc Trần Thanh Liêm}, thầy {\sc Nguyễn Văn Quí}\footnote{Rest In Peace, my respected Elementary Mathematics teacher. I dedicate this work \& future works on Mathematics, both Elementary \& Advanced, \& their bridges connecting themselves, for you.}, thầy{\tt/}Dr.  {\sc Trần Nam Dũng}, thầy{\tt/}Dr. {\sc Nguyễn Tấn Trung}, thầy{\tt/}Prof. Dr. {\sc Huỳnh Quang Vũ}, thầy{\tt/}Prof. Dr. {\sc Đặng Đức Trọng}, đã là những mẫu hình người thầy tuyệt vời để 2 tác giả bắt chước theo. Phải trưởng thành mà không có sự giúp đỡ \& hình mẫu của người cha (father as a role model) trong điều kiện thiếu thốn cả về kiến thức, vật chất, lẫn tinh thần, thật không dễ dàng gì.
 
 We apologize that we should start this project sooner. But the struggle to mentally grow up is great \& devastating enough to prevent us from doing that.
+
+-- Chúng tôi xin lỗi vì chúng tôi nên bắt đầu dự án này sớm hơn. Nhưng cuộc đấu tranh để trưởng thành về mặt tinh thần đủ lớn \& tàn khốc đến mức ngăn cản chúng ta làm được điều đó.
 
 Bạn đọc có thể dễ dàng nhận thấy đây là 1 chủ đề vô cùng nhạy cảm, cực kỳ nguy hiểm. Nên nếu dự án này thất bại, thì đều do sự non nớt của 2 tác giả với ngòi bút chưa đủ sắc bén nên không thể giải phẫu vấn đề này đến nơi đến chốn, không liên quan gì đến bất cứ ai \& khẳng định là không ai giúp 2 tác giả trong tiểu thuyết này. 2 tác giả xin hoàn toàn chịu trách nhiệm về sự thất bại nếu có.
 
 %------------------------------------------------------------------------------%
 
 \section{Lists -- Các Danh Sách}
-We, the authors, love making \st{love} lists. Chúng tôi, 2 tác giả, thích tạo ra các danh sách.
+We, the authors, love making \st{love} lists. We are list lovers. Chúng tôi, 2 tác giả, thích tạo ra các danh sách.
 
 \subsection{A summary list of goals -- Danh sách tổng hợp các mục tiêu}
 
@@ -4117,9 +4157,9 @@ We, the authors, love making \st{love} lists. Chúng tôi, 2 tác giả, thích 
 	
 	Yêu chó [Dog\st{(gy)} Lover]. Yêu \st{sex} sách (Book Lover). Yêu sự chân thành, ghét sự giả dối. Sẵn sàng \st{từ bỏ xu hướng tính dục \& dục vọng} dùng vài năm không bon chen kiếm việc lương cao, sẵn sàng thí nghiệm tâm lý lên chính bản thân để đạt được mục tiêu riêng nhưng có thể có ích chung, nhốt mình ở nhà để viết 1 cuốn \st{tự truyện (autobiography)} tiểu thuyết hư cấu ngắn (a short fictional novel) để khóa mõm các kẻ thích bắt nạt trí tuệ \& nghiên cứu về các nhân cách độc hại, có tác động xấu đến người khác \& các cộng đồng.
 	
-	Hắn là kiểu sinh ra trong gia cảnh nghèo mà có tính cầu toàn khó ưa. Eo ơi cái chủ nghĩa hoàn hảo (perfectionism) chết tiệt! Hắn có thể phá hủy cả 1 tác phẩm do hắn làm (hắn tôn trọng bất cứ tác phẩm nào của người khác nên không có chuyện hắn phá tác phẩm của người khác) chỉ đơn giản vì hắn không thích 1 (vài) chi tiết nào trong tác phẩm đó mà hắn không thể sửa được. Điểm này giống nhân vật {\sc Rust Cohl} trong series film \href{https://www.imdb.com/title/tt2356777/}{True Detective}:
-	\begin{quotation}\it
-		``Rust would pick a fight with the sky if he didn't like its shade of blue. But when we finally got him over to the house - this is when that case was hot - the bastard looks like he was on his way to firing squad.'' -- \href{https://www.imdb.com/title/tt2356777/}{True Detective} (2014--) [S1.E1].
+	Hắn là kiểu sinh ra trong gia cảnh nghèo mà có tính cầu toàn khó ưa. Eo ơi cái chủ nghĩa hoàn hảo (perfectionism) chết tiệt! Hắn có thể phá hủy cả 1 tác phẩm do hắn làm (hắn tôn trọng bất cứ tác phẩm nào của người khác nên không có chuyện hắn phá tác phẩm của người khác) chỉ đơn giản vì hắn không thích 1 (vài) chi tiết nào trong tác phẩm đó mà hắn không thể sửa được. Điểm này giống nhân vật {\sf Rust Cohl} trong series film \href{https://www.imdb.com/title/tt2356777/}{True Detective}:
+	\begin{quotation}
+		{\it``{\sf Rust} would pick a fight with the sky if he didn't like its shade of blue. But when we finally got him over to the house - this is when that case was hot - the bastard looks like he was on his way to firing squad.''} -- \href{https://www.imdb.com/title/tt2356777/}{True Detective} (2014--) [S1.E1].
 	\end{quotation}
 	\begin{itemize}
 		\item CV: {\sc url}: \url{https://github.com/NQBH/publication/blob/master/CV/NQBH_CV.pdf}.
@@ -4165,6 +4205,8 @@ Tiểu thuyết này cùng các tài liệu liên quan được bán với giá 
 \end{itemize}
 
 %------------------------------------------------------------------------------%
+
+\printglossaries
 
 \printbibliography[heading=bibintoc]
 \label{ref}
