@@ -68,6 +68,11 @@
 
 %------------------------------------------------------------------------------%
 
+\noindent\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+	\item \cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}. {\sc Phan Việt Hải, Trần Quang Hùng, Ninh Văn Thu, Phạm Đình Tùng}. {\it Nâng Cao \& Phát Triển Toán 10. Tập 2}.
+\end{enumerate}
+
 \section{2D Coordinate Vector -- Tọa Độ của Vector Trong Mặt Phẳng}
 \fbox{1} {\sf Tọa độ của 1 điểm}: Ký hiệu $M(x_M,y_M)$ với $x_M,y_M\in\mathbb{R}$ lần lượt là hoành độ, tung độ của điểm $M\in\mathbb{R}^2$, cặp số $(x_M,y_M)$ được gọi là {\it tọa độ} của điểm $M$ trong mặt phẳng tọa độ $Oxy$. \fbox{2} {\sf Tọa độ của 1 vector}: $\overrightarrow{OM} = (a,b)\Leftrightarrow M(a,b)$. $\vec{i}(1,0),\vec{j}(0,1)$ lần lượt là {\it vector đơn vị} trên trục $Ox,Oy$. Với mỗi vector $\vec{u}$ trong mặt phẳng tọa độ $Oxy$, tọa độ của vector $\vec{u}$ là tọa độ của điểm $A(x_A,y_A)$ thỏa $\overrightarrow{OA} = \vec{u}$, khi đó $x_A,y_A$ lần lượt là hoành độ, tung độ của vector $\vec{u}$. \fbox{3} $\vec{u} = (a,b)\Leftrightarrow\vec{u} = a\vec{i} + b\vec{j}$. \fbox{4} $\vec{a} = \vec{b}\Leftrightarrow x_{\vec{a}} = x_{\vec{b}}\land y_{\vec{a}} = y_{\vec{b}}$. \fbox{4} $A(x_A,y_A),B(x_B,y_B)\Rightarrow\overrightarrow{AB} = (x_B - x_A,y_B - y_A)$. \fbox{5} Các điểm đối xứng với điểm $A(x_A,y_A)$ trong mặt phẳng tọa độ $Oxy$ qua gốc $O$, trục $Ox$, trục $Oy$ lần lượt là $(-x_A,-y_A),(x_A,-y_A),(-x_A,y_A)$. See \href{https://en.wikipedia.org/wiki/Coordinate_vector}{Wikipedia{\tt/}coordinate vector}.
 
@@ -231,7 +236,51 @@
 
 %------------------------------------------------------------------------------%
 
-\section{Circle Equation -- Phương Trình Đường Tròn}
+\section{2D Circle Equation -- Phương Trình Đường Tròn Trong Mặt Phẳng}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD1, p. 59]
+	Cho họ đường tròn $(C_m):x^2 + y^2 - 2mx + 2(m + 1)y - 2m - 1 = 0$, $m\in\mathbb{R}$. (a) Tìm $m\in\mathbb{R}$ để $(C_m)$ là phương trình đường tròn. (b) Có tồn tại $R_m$ nhỏ nhất hoặc lớn nhất không? (c) Tìm quỹ tích tâm $I_m$. (d) Đường tròn có đi qua điểm cố định không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD2, p. 59]
+	Cho họ đường tròn $(C_m):x^2 + y^2 - 2(\cos\alpha - 1)x - 2(\sin\alpha - 1)y - 1 = 0$ với tham số $\alpha\in\mathbb{R}$. (a) Tìm $m\in\mathbb{R}$ để $(C_m)$ là phương trình đường tròn. (b) Có tồn tại $R_m$ nhỏ nhất hoặc lớn nhất không? (c) Tìm quỹ tích tâm $I_m$. (d) Đường tròn có đi qua điểm cố định không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD3, p. 60]
+	Cho 2 điểm $A,B$. Viết phương trình đường tròn $(C)$ đi qua 2 điểm $A,B$ thỏa: (a) Đường tròn bé nhất. (b) Bán kính cho trước. (c) Có tâm $I$ thuộc đường thẳng $d$ cho trước. (d) Tiếp xúc với đường thẳng $d_1$ cho trước. (e) Tiếp xúc với đường tròn $(C_1)$ cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD4, p. 61]
+	Cho 3 điểm $A(0,2),B(-2,2),C(4,-2)$. Viết phương trình: (a) đường tròn ngoại tiếp $\Delta ABC$. (b) đường tròn bé nhất chứa $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD5, p. 62]
+	Cho $\Delta ABC$ có $AB = AC$. Đường tròn $(C)$ tiếp xúc với $AB$ tại $B$, tiếp xúc với $AC$ tại $C$ \& điểm $M\in(C)$ tùy ý. $A_1,B_1,C_1$ lần lượt là hình chiếu của $M$ lên $BC,CA,AB$. Chứng minh $MA_1^2 = MB_1\cdot MC_1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD6, p. 63]
+	Cho đường tròn $(O)$, điểm $A$ cố định nằm ngoài đường tròn \& điểm $M$ thuộc đường tròn. Xét đường tròn $(M;MA)$. Chứng minh trục đẳng phương của 2 đường tròn luôn tiếp xúc với 1 đường tròn cố định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, 26.1., p. 64]
+	Cho họ đường tròn $(C_m):x^2 + y^2 - 2(m + 1)x + 4my - 5 = 0$, $m\in\mathbb{R}$, \& đường tròn $(C):x^2 + y^2 = 1$. (a) Chứng minh có 2 đường tròn thuộc họ $(C_m)$ tiếp xúc với $(C)$. (b) Viết phương trình các tiếp tuyến chung của 2 đường tròn thu được. (c) Tìm $m\in\mathbb{R}$ để $(C_m)$ cắt $(C)$ theo 1 dây cung lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, 26.2., p. 64]
+	Cho $\Delta ABC$ có $A(1,5),B(4,-1),C(-4,-5)$. Viết phương trình các đường tròn nội tiếp \& bàng tiếp của $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, 26.3., p. 64]
+	Cho đường tròn $(C):x^2 + y^2 = 4$ \& điểm $M(1,-1)$. Viết phương trình đường tròn $(C_1)$ có bán kính $R_1 = 3$ \& cắt đường tròn $(C)$ theo dây cung bé nhất qua $M$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, 26.4., p. 64]
+	Cho đường thẳng $\Delta_1:mx - (m + 1)y + 2m - 1 = 0$, $\Delta_2:(m + 1)x + my - m + 2 = 0$, $m\in\mathbb{R}$. Tìm quỹ tích giao điểm của $\Delta_1,\Delta_2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, 26.5., p. 64]
+	Cho đường tròn tâm $O$ đường kính $AB$ \& điểm $M$ chuyển động trên đường tròn. Kẻ $MH\bot AB$, $H\in AB$. Vẽ đường tròn $(M;MH)$ cắt đường tròn $(O)$ tại $C,D$. Chứng minh đường thẳng $CD$ là tiếp tuyến chung của 2 đường tròn đường kính $HA,HB$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
