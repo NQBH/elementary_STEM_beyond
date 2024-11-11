@@ -69,7 +69,7 @@
 %------------------------------------------------------------------------------%
 
 \section{2D Coordinate Vector -- Tọa Độ của Vector Trong Mặt Phẳng}
-\fbox{1} {\sf Tọa độ của 1 điểm}: Ký hiệu $M(x_M,y_M)$ với $x_M,y_M\in\mathbb{R}$ lần lượt là hoành độ, tung độ của điểm $M\in\mathbb{R}^2$, cặp số $(x_M,y_M)$ được gọi là {\it tọa độ} của điểm $M$ trong mặt phẳng tọa độ $Oxy$. \fbox{2} {\sf Tọa độ của 1 vector}: $\overrightarrow{OM} = (a,b)\Leftrightarrow M(a,b)$. $\vec{i}(1,0),\vec{j}(0,1)$ lần lượt là {\it vector đơn vị} trên trục $Ox,Oy$. Với mỗi vector $\vec{u}$ trong mặt phẳng tọa độ $Oxy$, tọa độ của vector $\vec{u}$ là tọa độ của điểm $A(x_A,y_A)$ thỏa $\overrightarrow{OA} = \vec{u}$, khi đó $x_A,y_A$ lần lượt là hoành độ, tung độ của vector $\vec{u}$. \fbox{3} $\vec{u} = (a,b)\Leftrightarrow\vec{u} = a\vec{i} + b\vec{j}$. \fbox{4} $\vec{a} = \vec{b}\Leftrightarrow x_{\vec{a}} = x_{\vec{b}}\land y_{\vec{a}} = y_{\vec{b}}$. \fbox{4} $A(x_A,y_A),B(x_B,y_B)\Rightarrow\overrightarrow{AB} = (x_B - x_A,y_B - y_A)$. \fbox{5} Các điểm đối xứng với điểm $A(x_A,y_A)$ trong mặt phẳng tọa độ $Oxy$ qua gốc $O$, trục $Ox$, trục $Oy$ lần lượt là $(-x_A,-y_A),(x_A,-y_A),(-x_A,y_A)$.
+\fbox{1} {\sf Tọa độ của 1 điểm}: Ký hiệu $M(x_M,y_M)$ với $x_M,y_M\in\mathbb{R}$ lần lượt là hoành độ, tung độ của điểm $M\in\mathbb{R}^2$, cặp số $(x_M,y_M)$ được gọi là {\it tọa độ} của điểm $M$ trong mặt phẳng tọa độ $Oxy$. \fbox{2} {\sf Tọa độ của 1 vector}: $\overrightarrow{OM} = (a,b)\Leftrightarrow M(a,b)$. $\vec{i}(1,0),\vec{j}(0,1)$ lần lượt là {\it vector đơn vị} trên trục $Ox,Oy$. Với mỗi vector $\vec{u}$ trong mặt phẳng tọa độ $Oxy$, tọa độ của vector $\vec{u}$ là tọa độ của điểm $A(x_A,y_A)$ thỏa $\overrightarrow{OA} = \vec{u}$, khi đó $x_A,y_A$ lần lượt là hoành độ, tung độ của vector $\vec{u}$. \fbox{3} $\vec{u} = (a,b)\Leftrightarrow\vec{u} = a\vec{i} + b\vec{j}$. \fbox{4} $\vec{a} = \vec{b}\Leftrightarrow x_{\vec{a}} = x_{\vec{b}}\land y_{\vec{a}} = y_{\vec{b}}$. \fbox{4} $A(x_A,y_A),B(x_B,y_B)\Rightarrow\overrightarrow{AB} = (x_B - x_A,y_B - y_A)$. \fbox{5} Các điểm đối xứng với điểm $A(x_A,y_A)$ trong mặt phẳng tọa độ $Oxy$ qua gốc $O$, trục $Ox$, trục $Oy$ lần lượt là $(-x_A,-y_A),(x_A,-y_A),(-x_A,y_A)$. See \href{https://en.wikipedia.org/wiki/Coordinate_vector}{Wikipedia{\tt/}coordinate vector}.
 
 \begin{baitoan}[Cf. segment vs. vector]
 	(a) So sánh 2 khái niệm `2 đoạn thẳng bằng nhau' \& `2 vectors bằng nhau'. (b) So sánh 2 khái niệm `2 đoạn thẳng song song' \& `2 vectors song song'. (c) So sánh 2 khái niệm `2 tia đối nhau' \& `2 vectors đối nhau'.
@@ -100,7 +100,6 @@
 \begin{baitoan}[Mở rộng \cite{SBT_Toan_10_Canh_Dieu_tap_2}, 11., p. 62]
 		Trong mặt phẳng tọa độ $Oxy$, cho tọa độ 3 điểm không thẳng hàng $A(x_A,y_A),B(x_B,y_B)$, $C(x_C,y_C)$. Tìm tọa độ điểm D sao cho tứ giác ABCD là hình thang có $AB\parallel CD$ \& $CD = aAB$ với $a > 0$ cho trước.
 \end{baitoan}
-See also \href{https://en.wikipedia.org/wiki/Coordinate_vector}{Wikipedia{\tt/}coordinate vector}.
 
 %------------------------------------------------------------------------------%
 
@@ -156,7 +155,75 @@ See also \href{https://en.wikipedia.org/wiki/Coordinate_vector}{Wikipedia{\tt/}c
 
 %------------------------------------------------------------------------------%
 
-\section{Line Equation -- Phương Trình Đường Thẳng}
+\section{2D Line Equation -- Phương Trình Đường Thẳng Trong Mặt Phẳng}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD1, p. 48]
+	Cho 3 điểm $A(0,2),B(2,2),C(4,-2)$. (a) Viết phương trình 3 cạnh $\Delta ABC$. (b) Viết phương trình 3 đường cao của $\Delta ABC$. Từ đó chứng minh chúng đồng quy tại trực tâm $H$. (c) Viết phương trình 3 đường trung tuyến của $\Delta ABC$. Từ đó chứng minh chúng đồng quy tại trọng tâm $G$. (d) Viết phương trình 3 đường trung trực của $\Delta ABC$. Từ đó chứng minh chúng đồng quy tại tâm đường tròn ngoại tiếp $E$. Tính bán kính đường tròn ngoại tiếp $\Delta ABC$. (e) Kiểm tra lại đường thẳng Euler theo tọa độ. Từ đó viết phương trình đường thẳng Euler. (f) Viết phương trình các đường trung bình của $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD2, p. 49]
+	Cho $\Delta ABC$ biết $A(0,2)$, phương trình 2 đường cao $BB_2:x - y = 0,CC_2: x = 4$. Tìm tọa độ $B,C$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD3, p. 50]
+	Cho $\Delta ABC$ biết $A(0,2)$, phương trình đường cao $BB_2:x - y = 0$ \& phương trình đường trung tuyến $CC_1:4x + 3y - 10 = 0$. Tìm tọa độ $B,C$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD4, p. 50]
+	Cho điểm $A(1,1)$, điểm $C$ nằm trên trục hoành \& điểm $B$ thuộc đường thẳng $d:y - 3 = 0$. Tìm tọa độ $B,C$ để $\Delta ABC$ đều.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD5, p. 51]
+	Cho $\Delta ABC$ vuông tại $A$, $AB = c,AC = b$, $b,c > 0$ không đổi. $B,C$ lần lượt chuyển động trên $(x'Ox),(y'Oy)$. Tìm quỹ tích của điểm $A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD6, p. 52]
+	Cho $A(a,0),B(0,b)$ với $a,b\in\mathbb{R}^\star$: hằng số. $M,N$ lần lượt thuộc trục hoành, trục tung thỏa mãn $\dfrac{\overline{OM}}{\overline{OA}} + \dfrac{\overline{ON}}{\overline{OB}} = 2$, $(AN)\cap(BM) = E$. Tìm quỹ tích của $E$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD7, p. 52]
+	Cho điểm $M(1,2)$. Xét đường thẳng $d$ đi qua $M$ cắt 2 tia $Ox,Oy$ lần lượt tại $A,B\ne O$. Viết phương trình đường thẳng $d$ nếu: (a) $OA = OB$. (b) $OA = 2OB$, $OA = aOB$ với $a\in(0,\infty)$. (c) $S_{OAB}$ nhỏ nhất. (d) $OA + OB$ nhỏ nhất. (e) $\left(\dfrac{1}{OA^2} + \dfrac{1}{OB^2}\right)$ nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD8, p. 53]
+	Trên mặt phẳng tọa độ cho $A(1,3),B(4,2)$. Viết phương trình đường thẳng $d$ biết: (a) $d$ đi qua $A$ \& cách $B$ $3$ đơn vị. (b) $d$ đi qua $A$ \& cách $B$ 1 khoảng nhỏ nhất. (c) $d$ đi qua $A$ \& cách $B$ 1 khoảng lớn nhất. (d) $d$ cách $A$ 1 đơn vị \& cách $B$ $2$ đơn vị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD9, p. 54]
+	Cho đường thẳng $d$ \& 2 điểm $M_1,M_2\notin d$. Tìm thuật toán để xác định điểm $M\in d$ thỏa: (a) $MM_1 + MM_2$ nhỏ nhất. (b) $|MM_1 - MM_2|$ lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD10, p. 54]
+	Cho $M_1(1,2),M_2(0,3),d:3x - 4y + 6 = 0$. Tìm điểm $M\in d$ thỏa: (a) $MM_1 + MM_2$ nhỏ nhất. (b) $|MM_1 - MM_2|$ lớn nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD11, p. 55]
+	Cho 2 đường thẳng $d_1:a_1x + b_1y + c_1 = 0$, $d_2:a_2x + b_2y + c_2 = 0$. Tìm \& lập phương trình quỹ tích các điểm $M$ sao cho $M$ cách đều 2 đường thẳng $d_1,d_2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD12, p. 55]
+	Cho 2 đường thẳng $d_1:x + y + 2 = 0,d_2:7x - y + 5 = 0$. Tìm quỹ tích của điểm $M$ sao cho $M$ cách đều 2 đường thẳng $d_1,d_2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD13, p. 56]
+	Cho $\Delta ABC$, biết tọa độ 3 đỉnh. Tìm thuật toán xác định tọa độ tâm đường tròn nội tiếp, tâm 3 đường tròn bàng tiếp \& tính 4 bán kính tương ứng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, VD14, p. 56]
+	Cho điểm $A(\frac{28}{3},\frac{22}{3}),B(1,1),C(0,-6)$. Xác định tọa độ tâm đường tròn nội tiếp, tâm 3 đường tròn bàng tiếp \& tính 4 bán kính tương ứng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, 25.1., p. 57]
+	Cho $\Delta ABC$ biết $A(0,2)$, phương trình đường cao $BB_2:x - y = 0$, phương trình đường trung tuyến $BB_1:x = 2$. Tìm tọa độ $B,C$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, 25.2., p. 57]
+	Cho $\Delta ABC$ biết $A(0,2)$, phương trình 2 đường trung tuyến $BB_1:x = 2$, $CC_1:4x + 3y - 10 = 0$. Tìm tọa độ $B,C$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung_ncpt_Toan_10_tap_2}, 25.3., p. 57]
+	Cho đường thẳng $d:x - 2y + 1 = 0$. (a) Viết phương trình đường thẳng $\Delta\parallel d$ \& cách $d$ $3$ đơn vị. (b) Trong các đường thẳng thu được, đường thẳng nào \& gốc tọa độ nằm về 2 phía của $d$?
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
