@@ -6,7 +6,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,glossaries,graphicx,mathtools,multicol,musicography,soul,subfig,tikz}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,glossaries,graphicx,mathtools,multicol,musicography,soul,subfig,tikz,tipa}
 \makeglossaries
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
@@ -72,10 +72,10 @@ We, the authors, in the role of the narrators of this novel, clearly state that:
 	\item Any character names mentioned in this piece of writing is purely imaginary. If there is any coincidence, so that a person in real life in the three-dimensional physical space, denoted by $\mathbb{R}^3$, feels disturbed or deeply offended. Well, this century is the optimal era of the offensive, we guess. We can apologize, if we feel necessary, but we take no responsibility.
 	\item {\it Warning}: This novel contains sexuality, violence, \& profanities. Consider carefully before you decide to read. If you feel disturbed \& even depressed, We will take no responsibility.
 \end{itemize}
-Chúng tôi, các tác giả, trong vai trò người kể chuyện, tuyên bố 1 cách rõ ràng rằng:
+Chúng tôi, 2 tác giả, trong vai trò người kể chuyện, tuyên bố 1 cách rõ ràng rằng:
 \begin{itemize}
 	\item Bất kỳ tên nhân vật nào trong câu chuyện này đều là thuần hư cấu. Nếu xảy ra bất cứ sự trùng hợp nào, để mà 1 người nào đó ngoài đời thực trong không gian vật lý 3 chiều, tạm ký hiệu là $\mathbb{R}^3$, cảm thấy khó chịu hoặc bị xúc phạm sâu sắc. Chà, thế kỷ này là thời đại tối ưu của giới dễ bị xúc phạm, chúng tôi đoán thế. Chúng tôi có thể xin lỗi nếu cảm thấy cần thiết nhưng từ chối nhận trách nhiệm.
-	\item {\it Cảnh báo}: Tiểu thuyết có chứa các yếu tố tình dục, bạo lực, \& thô tục. Cân nhắc cẩn thận trước khi bạn quyết định đọc. Nếu bạn cảm thấy khó chịu, thậm chí là trầm cảm, chúng tôi không chịu trách nhiệm.
+	\item {\it Cảnh báo}: Tiểu thuyết có chứa các yếu tố tình dục, bạo lực, \& thô tục. Cân nhắc cẩn thận trước khi bạn quyết định đọc. Nếu bạn cảm thấy khó chịu, thậm chí là trầm cảm, chúng tôi, 2 tác giả, không chịu trách nhiệm.
 \end{itemize}
 
 \subsection{Notation \& convention -- Ký hiệu \& quy ước}
@@ -94,7 +94,7 @@ Chúng tôi, các tác giả, trong vai trò người kể chuyện, tuyên bố
 	\item e.g.: `for example', `for instance', `ví dụ như', `chẳng hạn'. Trong tiếng Latin, e.g. là viết tắt của exempli gratia, so: exempli gratia (abbr., e.g.)
 	\item env: Environment function ${\rm env}(t)$ -- hàm môi trường mà 1 con người $P$ hiện đang sinh sống \& phát triển tại thời điểm $t$.
 	\item i.e.: `that is', `that means', `nghĩa là', `nói cách khác'.
-	\item if [{\sf condition}], then [{\sf result}]: Tiểu thuyết này sử dụng cấu trúc {\tt if then} \& {\tt if then else then} của Tin Học, Khoa Học Máy Tính, chứ không phải cấu trúc ngữ pháp câu điều kiện {\it conditional clause} trong tiếng Anh. Đây là 1 sự hy sinh về mặt ngữ pháp để chú trọng bản chất của tiểu thuyết này gồm nhiều câu lệnh cấu thành nên như 1 chương trình máy tính (program, code, script).
+	\item if [{\sf condition}], then [{\sf result}]: Tiểu thuyết này sử dụng cấu trúc {\tt if then} \& {\tt if then else then} của Tin Học, Khoa Học Máy Tính (Computer Science), chứ không phải cấu trúc ngữ pháp câu điều kiện {\it conditional clause} trong tiếng Anh. Đây là 1 sự hy sinh về mặt ngữ pháp để chú trọng bản chất của tiểu thuyết này gồm nhiều câu lệnh cấu thành nên như 1 chương trình máy tính (program, code, script).
 	\item $P$: a typical person -- 1 con người điển hình. P cũng là viết tắt của Point, có thể hiểu như 1 điểm trong không gian Euclidean $\mathbb{R}^3$. Kiểu hiểu này có lợi khi xét tương tác giữa 2 hay nhiều người với nhau cũng tương tự như tương tác giữa các hạt trong lý thuyết kinetics\footnote{1st author được học môn này của lớp Master 2 ở Rennes, Pháp.}, see, e.g., \cite{Tartar2008}.
 	\item $P[t;j;\psi;\phi]$: Với 1 người $P$, $t$ là tuổi, $j$ là nghề nghiệp (job) hoặc chức vụ (title), $\psi$ là các đặc điểm tính cách, tâm lý đặc trưng (characters \& psychological characteristics), $\phi$ là các quan điểm hay trường phái triết học (philosophical schools) của người $P$ đó. Ở đây sự phụ thuộc của 3 hàm $j,\psi,\phi$ vào biến thời gian $t$ \& biến không gian (spatial variable) ${\bf x}\in{\rm env}(t)\subset\mathbb{R}^3$, tức môi trường đang làm việc ở thời điểm $t$ được ngầm hiểu. 1 ký hiệu toán học ngắn gọn cho 1 mô hình toán học đơn giản:
 	\begin{equation}
@@ -671,6 +671,15 @@ FOMO vs. JOMO. Fear of missing out vs. Joy of missing out.
 	{\sf Hồng [28--?; writer]}: À, chả có gì to tát. Tôi nhờ anh bạn {\sf Hồng [25--?; programmer, computer scientist wannabe]} giúp tôi. Tôi thích kiểu bút mực, giấy trắng truyền thống, nhưng tôi cũng không muốn mù tịt công nghệ mãi cho tới lúc chết được. Nếu cứ như vậy thì chắc chắn sẽ thua với các cây bút trẻ đang lên.
 \end{quote}
 
+\subsubsection{Dictionary -- Từ điển}
+We have used:
+\begin{itemize}
+	\item {\it Oxfords Dictionaries.} Including {\it Oxford Advanced Learner's Dictionary, Oxford Learner's Dictionary of Academic English}. \url{https://www.oxfordlearnersdictionaries.com/}.
+	\item {\it Cambridge Dictionary} \url{https://dictionary.cambridge.org/}.
+	\item {\it Merriam-Webster Dictionaries.} \url{https://www.merriam-webster.com/}.
+\end{itemize}
+Note that there are many words that we need but not included in any of these dictionaries. Google then.
+
 \subsubsection{Writing standards -- Các tiêu chuẩn viết lách}
 
 \begin{quote}
@@ -689,7 +698,24 @@ FOMO vs. JOMO. Fear of missing out vs. Joy of missing out.
 	{\sf Hồng [25; writer wannabe, literary retard]}: Nhưng tập thể dục thì có liên quan gì đến suy nghĩ?
 	
 	{\sf Hồng [28--?; writer]}: Anh nên đọc quyển {\it What I Talk about When I Talk about Running: A Memoir -- Tôi Nói Gì Khi Nói Về Chạy Bộ} của nhà văn người Nhật Bản {\sc Haruki Murakami} để hiểu vận động \& viết lách có liên quan mật thiết với nhau như thế nào. Thậm chí đối với {\sc Haruki Murakami}, viết lách \& chạy bộ là 1.
+	
+	{\sf Hồng [25; writer wannabe, literary retard]}: Nhưng tôi cần bắt những loại bướm nào? Anh phải nói rõ ra cho tôi biết. Với cái tính tham lam của tôi thì bướm già, bướm trẻ, bướm xinh, bướm nát gì tôi cũng muốn bắt hết. Nếu thế thì tôi nên đi đâu là tốt nhất?
+	
+	{\sf Hồng [28--?; writer]}: Đi tù anh nhé: Tốt cho phái nữ \& cho cả thế gian.
 \end{quote}
+
+\subsubsection{Some rules \& principles in writing}
+Some of own rules \& principles in writing our crafts are the following:
+
+-- Vài quy tắc \& nguyên tắc trong việc viết các bản thảo của chúng tôi:
+\begin{enumerate}
+	\item Provide all necessary vocabularies for a new concept or an old but important one, their pronunciation via the International Phonetic Alphabet\footnote{see, e.g., \href{https://en.wikipedia.org/wiki/International_Phonetic_Alphabet}{Wikipedia{\tt/}International Phonetic Alphabet}, \href{https://www.internationalphoneticalphabet.org/}{International Phonetic Alphabet.org}.} (abbr., IPA), also their word families.
+	
+	-- Cung cấp các từ vựng cần thiết cho 1 khái niệm mới hoặc 1 khái niệm cũ nhưng quan trọng, \& các gia đình từ tương ứng.
+	\item Always cite clearly references. Use quotations as accurate as possible.
+	
+	-- Luôn trích dẫn rõ ràng các nguồn tài nguyên (có thể là nguồn tài liệu, nguồn hình ảnh, nguồn video, etc.). Sử dụng các dấu ngoặc kép{\tt/}nháy đôi để chỉ rõ các phần được trích dẫn (nhưng cũng cần phân biệt với việc sử dụng dấu nháy đôi để châm biếm 1 từ với nghĩa ngược lại).
+\end{enumerate}
 
 %------------------------------------------------------------------------------%
 
@@ -1244,7 +1270,7 @@ Có 1 bài viết phân loại học giả hay của GS. Nguyễn Tiến Zũng c
 	
 	Hàm đối tượng trơn chưa đủ, để đặt tốt 1 bài toán, miền xác định, i.e., nơi hàm đó sống, phải đủ trơn nữa, tức là cái mép (boundary $\Gamma\coloneqq\partial\Omega$) của cái miền $\Omega$ phải đủ trơn để xài các công thức tích phân từng phần (integration by parts formulas or Green's identities) để tạo ra dạng yếu (weak formulation or variational formulation). Những miền quá thô, e.g., có các góc nhọn (rough boundaries with corners), kỳ dị (singularities), chỗ nhọn dễ bị đâm (cusps), có nhiều lỗ (holes) hoặc gai (thorns) sẽ không thích hợp để làm chỗ chơi đối với các nghiệm trơn, dẫu mấy cái nghiệm đó có trơn chùi cỡ nào đi chăng nữa, vẫn không đảm bảo an toàn để chơi với chúng. Safety 1st.
 	
-	Ngoài lề, dù hay thắc mắc với việc đòi hỏi các nghiệm trơn, nghiệm nhớt của phương trình vi phân đạo hàm riêng có đủ trơn, đủ nhớt hay không để mà có thể vô tư chơi với chúng, tuổi thơ của các nhà giải tích cho thấy họ không có liên quan đến bất kỳ vấn đề gì về tình dục sớm kiểu con nít quỷ hoặc sống thử, hay bị lạm dụng tình dục nào cả. Cho nên việc đề xuất những khẳng định kiểu như của {\sc Sigmund Freud}, e.g., các nhà toán học loay hoay với câu hỏi đủ trơn thường có tuổi thơ liên quan đến các vấn đề tình dục sớm do cha mẹ hoặc người tình của họ không quan hệ kín đáo để cho con cái vô tình bắt gặp hoặc các sang chấn tâm lý do chịu lạm dụng tình dục từ sớm; hoặc lý luận kiểu {\sc Malcolm Gladwell} trong quyển {\it Outliers: The Story of Success} \cite{Gladwell2008} hay bản dịch {\it Những Kẻ Xuất Chúng: Cái Nhìn Mới Lạ Về Nguồn Gốc Của Thành Công} \cite{Gladwell_outlier} ngụ ý việc tiếp xúc 1 cách vô thức với các từ gợi hình (gợi dục) tác động đến tiềm thức sâu bên dưới ý thức dẫn đến xu hướng chỉ thích làm với các đối tượng đủ trơn hoặc cuồng với các khái niệm đủ nhớt, etc. là hoàn toàn không có sơ sở.
+	Ngoài lề, dù hay thắc mắc với việc đòi hỏi các nghiệm trơn, nghiệm nhớt của phương trình vi phân đạo hàm riêng có đủ trơn, đủ nhớt hay không để mà có thể vô tư chơi với chúng, tuổi thơ của các nhà giải tích cho thấy họ không có liên quan đến bất kỳ vấn đề gì về tình dục sớm kiểu con nít quỷ hoặc sống thử, hay bị lạm dụng tình dục nào cả. Cho nên việc đề xuất những khẳng định kiểu như của {\sc Sigmund Freud}, e.g., các nhà toán học loay hoay với câu hỏi đủ trơn thường có tuổi thơ liên quan đến các vấn đề tình dục sớm do cha mẹ hoặc người tình của họ không quan hệ kín đáo để cho con cái vô tình bắt gặp hoặc các sang chấn tâm lý do chịu lạm dụng tình dục từ sớm; hoặc lý luận kiểu {\sc Malcolm Gladwell} trong quyển {\it Outliers: The Story of Success} \cite{Gladwell2008} hay bản dịch {\it Những Kẻ Xuất Chúng: Cái Nhìn Mới Lạ Về Nguồn Gốc Của Thành Công} \cite{Gladwell_outlier} ngụ ý việc tiếp xúc 1 cách vô thức với các từ gợi hình (gợi dục) tác động đến tiềm thức sâu bên dưới ý thức dẫn đến xu hướng chỉ thích làm với các đối tượng đủ trơn hoặc cuồng với các khái niệm đủ nhớt, etc. là hoàn toàn không có sơ sở. Ọt ọt. Ọt ọt ọt.
 	
 	{\sf Hồng [28]}: {\it What is so wrong with you?}
 \end{quote}
@@ -1271,7 +1297,7 @@ Lời khuyên (tự thân) này na ná câu trích dẫn sau của Abraham Linco
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width = 12cm]{high_salary}
+	\includegraphics[width = 10cm]{high_salary}
 	\caption{Credit: \href{https://www.linkedin.com/posts/judy-soloai_i-didnt-learn-this-in-school-i-learned-activity-7089014937494179840-jTze/}{Linkedin{\tt/}Judy Soloai{\tt/}I didn't learn this in school}.}
 \end{figure}
 Hiển nhiên 1 câu hỏi khó muôn thở. Khó chịu lẫn khó nhằn theo nhiều nghĩa. Nghĩa thứ nhất là nó không rõ ràng, \& sự không rõ ràng đến từ việc bản thân nó phụ thuộc vào quá nhiều yếu tố không thể xác định hết như các yếu tố về phương diện vật chất, e.g., lương, tài chính; cũng như các yếu tố về phương diện tinh thần, e.g., ý nghĩa công việc, cân bằng công việc--cuộc sống (work-life balance), sự phát triển cá nhân, cùng sự tương tác lẫn nhau giữa các yếu tố trong 2 phương diện đó; \& nếu lùi xa hơn nữa về quá khứ thì chúng cũng phụ thuộc vào nhiều yếu tố ban đầu của 1 cá nhân như điểm xuất phát mà bố mẹ mang lại, hoàn cảnh như khả năng tài chính của gia đình, sự ủng hộ từ dòng họ, \& ảnh hưởng của các mâu thuẫn, xung đột, lục đục nội bộ trong 2 môi trường nền tảng đó.
@@ -1279,9 +1305,38 @@ Hiển nhiên 1 câu hỏi khó muôn thở. Khó chịu lẫn khó nhằn theo 
 Tôi không hề nghĩ sẽ cố trả lời 1 cách hoàn hảo câu hỏi này hay giải quyết vấn đề này. Đồng ý là tôi ngu, nhưng chưa ngu đến mức vậy. Chưa kể có bất kỳ câu trả lời nào không (no guarantee of existence), nếu có thì cũng không hề có câu trả lời duy nhất (even if the existence is assumed, the nonuniqueness is still valid), cũng như chưa \& sẽ không chả có câu trả lời nào sẽ thỏa mãn hết tất cả các phương diện giá trị được suy xét ở {\it biểu diễn phân hoạch các giá trị \& ý nghĩa của cuộc đời} ({\it a decomposition of values \& meanings in life}) sẽ được xét đến trong Sect. \ref{sect: bullshit theory on live}: {\it A Bullshit Theory on Living -- 1 Lý Thuyết Nhảm Nhí Về Việc Sống}.
 
 \subsubsection{Accuracy{\tt/}Precision -- Tính chính xác}
+Sự chính xác là ưu tiên hàng đầu của các nhà Toán học (Mahematicians), nhà Vật Lý Học (Physicists), 
 
 \subsubsection{Simplicity -- Sự giản đơn}
-We use simplicity to fight difficulty. We do not add more unnecessary complexities \& redundancies to the war because if we do so, we will have to fight ourselves, our entanglements.
+\textbf{\textsf{\small Vocabulary -- Từ vựng.}}
+\begin{itemize}\small
+	\item {\sf simplicity} [n] {\tt/}\textipa{sIm'plIs@ti}{\tt/} (pl. simplicities) 1. [uncountable] the quality of being easy to understand or use; 2. [uncountable] ({\it approving}) the quality of being natural \& plain; 3. [countable, usually plural] an aspect of something that is easy, natural, or plain; {\sf be simplicity itself} [idiom] to be very easy or plain.
+	\item {\sf simplification} [n] {\tt/}\textipa{,sImpl@f@'keISn}{\tt/} 1. [uncountable, singular] the process of making something easier to do or understand; 2. [countable] the thing that results when you make a problem, statement, system, etc. easier to understand or do.
+	\item {\sf simplify} [v] {\tt/}\textipa{'sImpl@,faI}{\tt/} {\it simplify sth}: to make something easier to do or understand.
+	\item {\sf simplistic} [a] {\tt/}\textipa{sIm'plIstIk}{\tt/} making a problem, situation, etc. seem less difficult or complicated than it really is. {\sf simplistically} [adv] {\tt/}\textipa{sIm'plIstIkli}{\tt/}.
+	\item {\sf complexity} [n] {\tt/}\textipa{k@m'pleks@ti}{\tt/} 1. [uncountable] the state of being formed of many parts; the state of being difficult to understand; 2. {\it complexities} [plural] the features of a problem or situation that are difficult to understand.
+\end{itemize}
+{\bf General theme.} We use simplicity to fight difficulty. We do not add more unnecessary complexities \& redundancies to the war because if we do so, we will have to fight ourselves, our entanglements.
+
+-- Chúng ta sử dụng sự đơn giản để chống lại khó khăn, khó nhằn. Chúng ta không thêm vào những phức tạp không cần thiết \& sự dư thừa cho cuộc chiến vì nếu chúng ta làm như vậy, chúng ta sẽ phải tự chiến đấu với chính mình, với những vướng mắc, những sự nhập nhằng của bản thân chúng ta.
+
+\paragraph{Simplicity in Natural Science -- Sự giản đơn trong Khoa Học Tự Nhiên.} Bất cứ nhà toán học tên tuổi nào cũng sẽ nhất trí rằng sự giản đơn là 1 trong những công cụ mạnh nhất để nghiên cứu Toán học nói riêng, \& Khoa Học Tự Nhiên nói chung.
+
+\begin{example}
+	{\sc Sullivan}
+\end{example}
+
+\paragraph{Simplicity in Social Science -- Sự giản đơn trong Khoa Học Xã Hội.}
+
+\paragraph{Simplicity in Psychology -- Sự giản đơn trong Tâm Lý Học.} Mỗi 1 người $P$ (person), xét về mặt tâm lý, là 1 thực thể phức tạp của nhiều mảnh vá tâm lý được gắn lại với nhau. Khi ta nghiên cứu tâm lý của 1 đối tượng động vật, bao gồm người $P$ (Person) hoặc động vật $A$ (Animal), ta sẽ bị choáng ngợp bởi sự phức tạp trong cơ cấu của hệ thống tâm lý của đối tượng nghiên cứu đó. {\it Why?} Bởi sự tương tác phức tạp của các mảnh vá tâm lý với nhau trong cùng 1 cá thể, \& sự tương tác của từng mảnh vá tâm lý \& các tổ hợp các mảnh vá tâm lý của 1 cá thể đối với môi trường sống của cá thể đó, \& của cá thể đó với xã hội. Vậy, trong vai trò của 1 người nghiên cứu về tâm lý, ta nên làm gì? Câu trả lời của chúng tôi là ta nên phân hoạch hệ thống cấu trúc tâm lý của 1 đối tượng nghiên cứu tâm lý ra, thành từng phần nhỏ, dễ nghiên cứu hơn: 
+
+\begin{principle}
+	Split the whole Complexity into small Simplicies.
+\end{principle}
+
+\begin{example}
+	Xét đối tượng {\sf Hồng} trong tiểu thuyết ngắn này. Điều đầu tiên có thể nói là {\sf Hồng} là 1 con người, chứ không phải súc vật hay động vật khác con người nói chung. Hắn là 1 cá thể vừa đơn giản vừa phức tạp. Mâu thuẫn ư? Không hề. Sự đơn giản của hắn đề từ việc các mảnh vá tâm lý hay nói đúng hơn là các mảnh nhân cách của hắn vô cùng rõ ràng, được phân định rạch ròi với các mảnh vá tâm lý \& các mảnh nhân cách khác bên trong hắn. Sự phức tạp của hắn đến từ việc hắn có quá nhiều mảnh vá tâm lý như vậy. Thậm chí đến ngay cả hắn vẫn không thể hiểu hết về các luồng nhân cách của hắn, lẫn tiềm năng sẽ được từ các luồng nhân cách đó trong trường hợp hắn có thể kiểm soát được tất cả chúng 1 cách hài hòa (harmonically). Thay vì tìm hiểu trên tổng thể về cấu trúc nhân cách của {\sf Hồng}, chúng ta phải đập nhỏ, phân nhỏ cấu trúc này ra thành từng mảnh nhỏ để mà nghiên cứu.
+\end{example}
 
 \subsubsection{Minimality -- Sự tối giản}
 \noindent{\bf \textsf{Resources -- Tài nguyên.}}
@@ -2271,7 +2326,9 @@ Sự thành công việc dạy không chỉ là giúp học sinh, sinh viên có
 Tui có dịp gặp lại cô Phượng, giáo viên dạy Mỹ thuật hồi Tiểu học của tui:
 
 \begin{quote}
-	{\sf Phượng [40--50; Primary School teacher]}: 
+	{\sf Nhân [26; STEM tutor{\tt/}teacher]}: Em khó tính thiệt. Kiểu khó trình bày với vụ im lặng. Em bị dị ứng với tiếng ồn. Nên làm dữ lắm thì em mới khó. Còn nếu ngoan với siêng thì em nice lắm.
+	
+	{\sf Phượng [40--50; Primary School teacher]}: Cô biết em. Em là làm gì phải đạt kết quả cho tới.
 	
 	{\sf Nhân [26; STEM tutor{\tt/}teacher]}: 
 \end{quote}
@@ -3756,6 +3813,18 @@ You cannot just stand there to wait scientists, all the kind of smart people to 
 %------------------------------------------------------------------------------%
 
 \section{On Research: Stage 2 -- Bàn Về Nghiên Cứu: Hồi 2}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+	\item \cite{Feibelman2011}. {\sc Peter J. Feibelman}. {\it A PhD Is Not Enough!: A Guide to Survival in Science}.
+\end{enumerate}
+
+\subsection{1 vài câu hỏi tự vấn}
+
+\begin{itemize}
+	\item {\it Is the general structure of my draft{\tt/}craft good enough yet?}
+	
+	-- Liệu cấu trúc tổng thể của bản thảo{\tt/}công trình của tôi có đủ tốt chưa?
+\end{itemize}
 
 %------------------------------------------------------------------------------%
 
@@ -3793,11 +3862,12 @@ Trước khi cha hắn chết, thoi thóp chỉ để ráng nói 1 câu: ``Ráng
 
 1 quy luật của thế giới tự nhiên về các quần xã động vật: 1 cá thể non nớt khi bị ép buộc phải vào đời, bị quăng vào xã hội khắc nghiệt, đầy phức tạp mà không có sự giúp đỡ từ cha mẹ thì sẽ gần như đồng nghĩa với việc chắn chắc cá thể đó sẽ phải chết. Chỉ có 1 xác suất cực nhỏ là sẽ xuất hiện 1 vài cá thể ngoại lai (outliers) đủ kiên cường vượt qua quá trình sinh tồn khắc nghiệt đó mà không bị biến chất hay hắc hóa.
 
-Khoan đã, nhưng tại sao lại phải theo chủ nghĩa phân cực polarism nhể? Hắn chỉ cần sống có đức với những người xứng đáng cái đức, cái lòng tốt của hắn, \& hắn sống có tài để lấy cái tài tác động đến những người cần cái tài của hắn. Nếu ai đó xứng đáng cả 2 thì hắn sẽ trao cho cả 2. Oh, that is it: the fucking ``blending principle'' in OpenFOAM \& in Fluid Dynamics:
+Khoan đã, nhưng tại sao lại phải theo chủ nghĩa phân cực polarism hay chủ nghĩa nhị nguyên nhể? Hắn chỉ cần sống có đức với những người xứng đáng cái đức, cái lòng tốt của hắn, \& hắn sống có tài để lấy cái tài tác động đến những người cần cái tài của hắn. Nếu ai đó xứng đáng cả 2 thì hắn sẽ trao cho cả 2. Oh, that is it: the fucking ``blending principle'' in OpenFOAM \& in Fluid Dynamics:
 
 \begin{Rule}[Blending linear combinations \& generalizations]
 	Khi bạn có nhiều lựa chọn $A_i$ với $i = 1,2,\ldots,n\in\mathbb{N}^\star$, thay vì suy nghĩ phiến diện hoặc cực đoan chỉ chọn 1 hay 1 vài trong số chúng, hãy (thử) chọn 1 tổ hợp tuyến tính (linear combination, see, e.g., {\rm\cite{Hung_linear_algebra,Trefethen_Bau1997,Trefethen_Bau2022}}) gồm tất cả các lựa chọn đó, i.e., $\sum_{i = 1}^n c_iA_i$ với các hệ số $c_i > 0$ thỏa mãn $\sum_{i = 1}^n c_i = 1$ \& mỗi hệ số $c_i$ phải được chặn dưới bởi ngưỡng cực tiểu $c_{i,\min}$ (minimum threshold), i.e., $c_{i,\min}\le c_i$, \& chặn trên bởi ngưỡng cực đại (maximum threshold) $c_{i,\max}$, i.e., $c_i\le c_{i,\max}$, gom cả 2 lại thành $c_i\in[c_{i,\min},c_{i,\max}]$. Luôn cố gắng giữ các hệ số trong khoảng này để tránh trường hợp khai thác không đủ tốt, i.e., $c_i < c_{i,\min}$ hoặc quá lạm dụng (abusive), i.e., $c_i > c_{i,\max}$. Luôn tinh chỉnh không ngừng các hệ số $c_i$ để dò tìm tổ hợp tuyến tính tối ưu cho từng hoàn cảnh, trường hợp cụ thể để xây dựng hệ thống kinh nghiệm tương ứng với 1 phổ ứng dụng các trường hợp đã, đang, \& sẽ xảy ra. Nếu (các) lựa chọn $A_i$ nào đó có tác hại thì cứ xét $c_i < 0$ vẫn thêm các ngưỡng $c_{i,\min},c_{i,\max}$ tương ứng để luôn kiểm soát sự cân bằng. Đừng ngần ngại phá vỡ ranh giới của tính sự tuyến tính, xét tổ hợp phi tuyến (nonlinear combination) nếu cần thiết.
 \end{Rule}
+Try to imagine \& then try to feel a small, narrow, but balanced cave in the $d$-dimensional box or even $\infty$-dimensional box if you can reflect on yourself that good.
 
 \subsection{Heavens on Earth -- Các thiên đàng trên thế gian}
 \begin{quote}
@@ -4128,11 +4198,11 @@ We thank all the people who helped us, have helping us, also who, without knowin
 
 Xin cảm ơn các bài viết sâu sắc về giáo dục của thầy{\tt/}Dr. {\sc Trần Nam Dũng}, về giáo dục \& nghiên cứu Toán cao cấp của thầy{\tt/}Prof. Dr. {\sc Nguyễn Hữu Việt Hưng}, Prof. Dr. {\sc Ngô Bảo Châu}, Prof. Dr. {\sc Hà Huy Khoái}, Prof. Dr. {\sc Phan Thành Nam}, Prof. Dr. {\sc Đào Hải Long}. 2 tác giả không hề có bất cứ trao đổi nào với các người thầy này, nhưng bài viết của họ đã đủ để các tác giả bắt tay vào chấp bút cho 1 số ý tưởng của phần bàn về việc học \& bàn về việc dạy. Nếu có bất cứ lỗi nào xảy ra trong tiểu thuyết, đó hoàn toàn là lỗi của 2 tác giả đã hiểu sai ý từ các bài viết gốc. Hoàn toàn không liên quan đến ý tốt hay các tư tưởng của những người thầy này.
 
-Xin chân thành những người đã từng giúp, đã từng thương hoặc thương hắn đến tận ngày hôm nay. Cuộc hành trình mưu cầu hạnh phúc \& khám phá tri thức sẽ thật khó khăn nếu không có họ củng cố niềm tin của 2 tác giả. Xin cảm ơn chị{\tt/}Dr. {\sc Lê Thị Minh Thảo}, anh {\sc Hoàng Công Đức}, anh{\tt/}thầy{\tt/}Dr. {\sc Lê Phúc Lữ}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Mạnh Khang}, chị{\tt/}Dr.  {\sc Lan Hương}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Nguyên Anh}, Prof. Dr. {\sc Jesús Ildefonso Díaz}, thầy{\tt/}anh{\tt/}Dr.  {\sc Trà Quốc Khanh}, thầy{\tt/}anh {\sc Lê Văn Chánh}, cô {\sc Lê Thị Thanh Lĩu}, cô {\sc Dương Thị Xuân An} đã truyền động lực trên hành trình học Toán của 2 tác giả. Xin cảm ơn cô {\sc Đặng Thị Hạnh}, cô {\sc Đặng Thị Bích Thư}, thầy {\sc Võ Văn Huynh} đã viếng đám tang của cha 2 tác giả, để họ không bị nỗi sợ bị bỏ rơi nuốt chửng. Xin cảm ơn thầy {\sc Lê Hoàng Minh}, thầy {\sc Nguyễn Thanh Tài}, thầy {\sc Võ Văn Huynh}, thầy {\sc Đệ}, thầy {\sc Lê Thanh Hải}, thầy {\sc Trần Thanh Liêm}, thầy {\sc Nguyễn Văn Quí}\footnote{Rest In Peace, my respected Elementary Mathematics teacher. I dedicate this work \& future works on Mathematics, both Elementary \& Advanced, \& their bridges connecting themselves, for you.}, thầy{\tt/}Dr.  {\sc Trần Nam Dũng}, thầy{\tt/}Dr. {\sc Nguyễn Tấn Trung}, thầy{\tt/}Prof. Dr. {\sc Huỳnh Quang Vũ}, thầy{\tt/}Prof. Dr. {\sc Đặng Đức Trọng}, đã là những mẫu hình người thầy tuyệt vời để 2 tác giả bắt chước theo. Phải trưởng thành mà không có sự giúp đỡ \& hình mẫu của người cha (father as a role model) trong điều kiện thiếu thốn cả về kiến thức, vật chất, lẫn tinh thần, thật không dễ dàng gì.
+Xin chân thành những người đã từng giúp, đã từng thương hoặc thương hắn đến tận ngày hôm nay. Cuộc hành trình mưu cầu hạnh phúc \& khám phá tri thức sẽ thật khó khăn nếu không có họ củng cố niềm tin của 2 tác giả. Xin cảm ơn chị{\tt/}Dr. {\sc Lê Thị Minh Thảo}, anh {\sc Hoàng Công Đức}, anh{\tt/}thầy{\tt/}Dr. {\sc Lê Phúc Lữ}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Mạnh Khang}, chị{\tt/}Dr.  {\sc Lan Hương}, anh{\tt/}thầy{\tt/}Dr.  {\sc Đào Nguyên Anh}, Prof. Dr. {\sc Jesús Ildefonso Díaz}, thầy{\tt/}anh{\tt/}Dr.  {\sc Trà Quốc Khanh}, thầy{\tt/}anh {\sc Lê Văn Chánh}, cô {\sc Lê Thị Thanh Lĩu}, cô {\sc Dương Thị Xuân An} đã truyền động lực trên hành trình học Toán của 2 tác giả. Xin cảm ơn cô {\sc Đặng Thị Hạnh}, cô {\sc Đặng Thị Bích Thư}, thầy {\sc Võ Văn Huynh} đã viếng đám tang của cha 2 tác giả, để họ không bị nỗi sợ bị bỏ rơi nuốt chửng. Xin cảm ơn thầy {\sc Lê Hoàng Minh}, thầy {\sc Nguyễn Thanh Tài}, thầy {\sc Võ Văn Huynh}, thầy {\sc Tạ Minh Quang}, thầy {\sc Đệ}, thầy {\sc Lê Thanh Hải}, thầy {\sc Trần Thanh Liêm}, thầy {\sc Nguyễn Văn Quí}\footnote{Rest In Peace, my respected Elementary Mathematics teacher. I dedicate this work \& future works on Mathematics, both Elementary \& Advanced, \& their bridges connecting themselves, for you.}, thầy{\tt/}Dr.  {\sc Trần Nam Dũng}, thầy{\tt/}Dr. {\sc Nguyễn Tấn Trung}, thầy{\tt/}Prof. Dr. {\sc Huỳnh Quang Vũ}, thầy{\tt/}Prof. Dr. {\sc Đặng Đức Trọng}, đã là những mẫu hình người thầy tuyệt vời để 2 tác giả bắt chước theo. Phải trưởng thành mà không có sự giúp đỡ \& hình mẫu của người cha (father as a role model) trong điều kiện thiếu thốn cả về kiến thức, vật chất, lẫn tinh thần, thật không dễ dàng gì.
 
 We apologize that we should start this project sooner. But the struggle to mentally grow up is great \& devastating enough to prevent us from doing that.
 
--- Chúng tôi xin lỗi vì chúng tôi nên bắt đầu dự án này sớm hơn. Nhưng cuộc đấu tranh để trưởng thành về mặt tinh thần đủ lớn \& tàn khốc đến mức ngăn cản chúng ta làm được điều đó.
+-- Chúng tôi xin lỗi vì chúng tôi nên bắt đầu dự án này sớm hơn. Nhưng cuộc đấu tranh để trưởng thành về mặt tinh thần đủ lớn \& tàn khốc đến mức ngăn cản chúng tôi làm được điều đó.
 
 Bạn đọc có thể dễ dàng nhận thấy đây là 1 chủ đề vô cùng nhạy cảm, cực kỳ nguy hiểm. Nên nếu dự án này thất bại, thì đều do sự non nớt của 2 tác giả với ngòi bút chưa đủ sắc bén nên không thể giải phẫu vấn đề này đến nơi đến chốn, không liên quan gì đến bất cứ ai \& khẳng định là không ai giúp 2 tác giả trong tiểu thuyết này. 2 tác giả xin hoàn toàn chịu trách nhiệm về sự thất bại nếu có.
 
