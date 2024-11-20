@@ -229,6 +229,31 @@
 	\end{equation}
 \end{dinhly}
 
+\subsection{AM--GM \& Cauchy--Schwarz inequalities -- Bất đẳng thức trung bình cộng--trung bình nhân \& bất đẳng thức Cauchy--Schwarz}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+	\item \cite[Chap. 3: AM--GM \& Cauchy--Schwarz, pp. 55--80]{Vinh_dinh_huong_Olympic_Toan}. {\sc Lê Anh Vinh, Võ Quốc Bá Cẩn, Nguyễn Tuấn Hải Đăng, Phạm Đức Hiệp, Nguyễn Thế Hoàn, Nguyễn Huy Hoàng, Trần Quang Hùng, Phạm Việt Hùng, Hoàng Đỗ Kiên, Nguyễn Văn Linh, Lê Phúc Lữ, Trần Đăng Phúc, Nguyễn Văn Quý, Hà Hữu Cao Trình, Nguyễn Huy Tùng}. {\it Định Hướng Bồi Dưỡng Học Sinh Năng Khiếu Toán}.
+\end{enumerate}
+
+\begin{baitoan}
+	Tìm phản ví dụ để chứng minh bất đẳng thức AM--GM sai khi có ít nhất 1 số âm trong các số đã cho.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Khi $n = 2$, chọn $(a,b) = (-1,0)$ hoặc $(a,b) = (-1,-1)$.
+\end{proof}
+
+\begin{proposition}
+	The following inequalities hold:
+	\begin{align}
+		a + b&\ge(n + 1)\sqrt[n + 1]{\frac{a^nb}{b^n}},\ \forall a,b\in[0,\infty),\,\forall n\in\mathbb{N}^\star,\\
+		a + b&\ge(m + n)\sqrt[m + n]{\frac{a^mb^n}{m^mn^n}},\ \forall a,b\in[0,\infty),\,\forall m,n\in\mathbb{N}^\star,\\
+		a + b + c&\ge(m + n + p)\sqrt[m + n+ p]{\frac{a^mb^nc^p}{m^mn^np^p}},\ \forall a,b,c\in[0,\infty),\,\forall m,n,p\in\mathbb{N}^\star,\\
+		\sum_{i=1}^n a_i&\ge\left(\sum_{i=1}^n m_i\right)\sqrt[\sum_{i=1}^n m_i]{\prod_{i=1}^n \frac{a^{m_i}}{m_i^{m_i}}},\ \forall n\in\mathbb{N}^\star,\,\forall a_i\in[0,\infty),\,\forall m_i\in\mathbb{N}^\star,\,\forall i = 1,2,\ldots,n.
+	\end{align}
+\end{proposition}
+
+
 %------------------------------------------------------------------------------%
 
 \section{Introduction to Inequality}
@@ -789,6 +814,21 @@ Ta có thể mở rộng bài toán trên như sau:
 \subsection{Phương pháp phản chứng}
 
 \subsection{Phương pháp làm trội}
+
+\subsection{Phương pháp tiếp tuyến}
+Giả thiết trong các bất đẳng thức sử dụng được phương pháp tiếp tuyến để chứng minh nên có dạng tổng, i.e., $a + b = S_1$, $a + b + c = S_1$, $\sum_{i=1}^n a_i = S_1$ bởi vì:
+
+\begin{dinhly}
+	Nếu $y = ax + b = f'(x_0)(x - x_0) + f(x_0) = f'(x_0)x + f(x_0) - x_0f'(x_0)$ là tiếp tuyến của đường cong $y = f(x)$ tại điểm $M(x_0,f(x_0))$ \& nếu $M$ không phải là điểm uốn, thì luôn tồn tại 1 khoảng $D$ chứa $x_0$ sao cho $\forall x\in D$, $f(x)\ge ax + b$ hoặc $f(x)\le ax + b$. Dấu $=$ xảy ra $\Leftrightarrow x = x_0$.
+\end{dinhly}
+
+\begin{dinhly}
+	Khi $y = ax + b$ là tiếp tuyến của $f(x)$ tại $M$ thì ta có biểu diễn $f(x) - (ax + b) = (x - x_0)^kg(x)$ với $k\ge2$.
+\end{dinhly}
+
+\begin{baitoan}[\cite{Khai_Huong_bdt}, VD1, p. 265]
+	Cho $a,b,c,d\in(0,\infty)$, $a + b + c + d = 1$. Tìm {\rm GTNN} của $A = 6(a^3 + b^3 + c^3 + d^3) - (a^2 + b^2 + c^2 + d^2)$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
