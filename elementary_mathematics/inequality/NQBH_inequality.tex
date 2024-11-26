@@ -1,11 +1,11 @@
 \documentclass{article}
 \usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
-\usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,enumitem,float,graphicx,mathtools,tikz}
+\usepackage[utf8]{vietnam}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
@@ -283,6 +283,29 @@
 \begin{enumerate}
 	\item \cite[Chap. 3: AM--GM \& Cauchy--Schwarz, pp. 55--80]{Vinh_dinh_huong_Olympic_Toan}. {\sc Lê Anh Vinh, Võ Quốc Bá Cẩn, Nguyễn Tuấn Hải Đăng, Phạm Đức Hiệp, Nguyễn Thế Hoàn, Nguyễn Huy Hoàng, Trần Quang Hùng, Phạm Việt Hùng, Hoàng Đỗ Kiên, Nguyễn Văn Linh, Lê Phúc Lữ, Trần Đăng Phúc, Nguyễn Văn Quý, Hà Hữu Cao Trình, Nguyễn Huy Tùng}. {\it Định Hướng Bồi Dưỡng Học Sinh Năng Khiếu Toán}.
 \end{enumerate}
+``In mathematics, the {\it inequality of arithmetic \& geometric means}, or briefly the {\it AM--GM inequality}, states that the \href{https://en.wikipedia.org/wiki/Arithmetic_mean}{arithmetic mean} of a list of nonnegative real numbers is greater than or equal to the \href{https://en.wikipedia.org/wiki/Geometric_mean}{geometric mean} of the same list; \& further, that the 2 means are equal iff every number in the list is the same (in which case they are both that number).
+
+The simplest non-trivial case is for 2 nonnegative numbers $x,y$:
+\begin{equation}
+	\label{AM--GM inquality n = 2}
+	\frac{x + y}{2}\ge\sqrt{xy},\ \frac{x + y}{2} = \sqrt{xy}\Leftrightarrow x = y.
+\end{equation}
+This follows from the fact that the square of a real number is always non-negative ($\ge0$) \& from the identity $(a\pm b)^2 = a^2\pm2ab + b^2$.
+
+For a geometrical interpretation, consider a \href{https://en.wikipedia.org/wiki/Rectangle}{rectangle} with sides of length $x,y$; it has \href{https://en.wikipedia.org/wiki/Perimeter}{perimeter} $2x + 2y$ \& \href{https://en.wikipedia.org/wiki/Area}{area} $xy$. Similarly, a \href{https://en.wikipedia.org/wiki/Square}{square} with all sides of length $\sqrt{xy}$ has the perimeter $4\sqrt{xy}$ \& the same area as the rectangle. The simplest nontrivial case of the AM--GM inequality implies for the perimeters that $2x + 2y\ge4\sqrt{xy}$ \& that only the square has the smallest perimeter amongst all rectangles of equal area. The simplest case is implicit in \href{https://en.wikipedia.org/wiki/Euclid%27s_Elements}{Euclid's Elements}, Book 5, Proposition 25. Extensions of the AM--GM inequality treat \href{https://en.wikipedia.org/wiki/AM%E2%80%93GM_inequality#Weighted_AM.E2.80.93GM_inequality}{weighted means} \& \href{https://en.wikipedia.org/wiki/Generalized_mean}{generalized means}.
+
+\begin{theorem}[AM--GM inequality]
+	For any list $n$ nonnegative real numbers $x_1,x_2,\ldots,x_n$,
+	\begin{equation}
+		\label{AM--GM inequality}
+		\frac{1}{n}\sum_{i=1}^n x_i\ge\sqrt[n]{\prod_{i=1}^n x_i}\mbox{ i.e., }\frac{x_1 + x_2 + \cdots + x_n}{n}\ge\sqrt[n]{x_1x_2\cdots x_n},
+	\end{equation}
+	\& the equality holds iff $x_1 = x_2 = \cdots = x_n$.
+\end{theorem}
+
+\begin{proof}
+	By mathematical introduction.
+\end{proof}
 
 \begin{baitoan}
 	Tìm phản ví dụ để chứng minh bất đẳng thức AM--GM sai khi có ít nhất 1 số âm trong các số đã cho.
@@ -771,7 +794,21 @@ Ta có thể mở rộng bài toán trên như sau:
 
 \section{Methods in Proving Inequalities -- Các Phương Pháp Chứng Minh Bất Đẳng Thức}
 
+\subsection{Phương pháp sắp thứ tự}
+
+\begin{question}
+	Với các bất đẳng thức 3 biến $a,b,c$ có dạng $F(a,b,c)\ge0$ với giả thiết $E(a,b,c) = 0$ hoặc $I(a,b,c)\ge0$ thì việc giả sử $a = \min\{a,b,c\}$ hoặc sắp thứ tự 3 biến $a\le b\le c$ có tác dụng hay đem lại lợi thế gì? Tương tự cho các bất đẳng thức $n$ biến số.
+\end{question}
+
+\begin{proof}[Answer]
+	Sắp xếp thứ tự các biến để đưa bất đẳng thức nhiều biến cần chứng minh về bất đẳng thức 1 biến số, hoặc ít nhất là bất đẳng thức ít biến hơn.
+\end{proof}
+
 \subsection{Phương pháp chọn điểm rơi}
+
+\begin{question}
+	Phương pháp chọn điểm rơi có tốt đối với các bất đẳng thức có điểm rơi không đối xứng giữa các biến như các bất đẳng thức có điểm rơi đối xứng giữa các biến do vai trò bình đẳng (có thể đổi chỗ cho nhau mà vẫn giữ nguyên bất đẳng thức cần chứng minh) giữa các biến của bất đẳng thức đó không? Nếu có, hay đưa ra 1 phương pháp để ``đo'' độ tốt hay độ hiệu quả của phương pháp chọn điểm rơi trong 2 loại bất đẳng thức này.
+\end{question}
 
 \subsection{Change of variables -- Phương pháp đổi biến}
 
@@ -889,12 +926,32 @@ Giả thiết trong các bất đẳng thức sử dụng được phương phá
 \end{proof}
 
 \begin{baitoan}[\cite{Khai_Huong_bdt}, VD3, p. 267]
-	Cho $a,b,c\in(0,\infty)$, $a^2 + b^2 + c^2 = 1$. Tìm {\rm GTNN} của $A = \frac{1}{a} + \frac{1}{b} + \frac{1}{c} - (a + b + c)$.
+	Cho $a,b,c\in(0,\infty)$, $a^2 + b^2 + c^2 = 1$. Tìm {\rm GTNN} của $A = \dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c} - (a + b + c)$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Khai_Huong_bdt}, VD1, p. 265]
 	
 \end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Find the Best{\tt/}Optimal Constant -- Tìm Hằng Số Tốt Nhất{\tt/}Tối Ưu}
+
+\begin{baitoan}[\cite{Anh_Quang_bdt_lem}, 179., p. 245, mở rộng IMO2001]
+	Tìm tất cả các giá trị $\lambda > 0$ để
+	\begin{equation*}
+		\frac{a}{\sqrt{a^2 + \lambda bc}} + \frac{b}{\sqrt{b^2 + \lambda ca}} + \frac{c}{\sqrt{c^2 + \lambda ab}}\ge\frac{3}{\sqrt{\lambda + 1}},\ \forall a,b,c\in(0,\infty).
+	\end{equation*}
+\end{baitoan}
+{\sf Ans.} $\lambda\in[8,\infty)$. {\sf Hint.} Cho $b = c = 1,a\to\infty$ được $\lambda\ge8$.
+
+\begin{baitoan}[\cite{Anh_Quang_bdt_lem}, 180., p. 246, làm chặt IMO1984]
+	Tìm tất cả các giá trị $\lambda > 0$ để
+	\begin{equation*}
+		0\le ab + bc + ca - \lambda abc\le\frac{9 - \lambda}{27},\ \forall a,b,c\in[0,\infty),\,a + b + c = 1.
+	\end{equation*}
+\end{baitoan}
+{\sf Ans.} $\lambda\in(-\infty,\frac{9}{4}]$.
 
 %------------------------------------------------------------------------------%
 
