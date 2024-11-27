@@ -1,0 +1,145 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,enumitem,float,graphicx,mathtools,tikz}
+\usepackage[version=4]{mhchem}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{goal}{Goal}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+\def\labelitemii{$\circ$}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+
+\title{Problem: Nuclear Physics -- Bài Tập: Vật Lý Hạt Nhân}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
+	Latest version:
+	\begin{itemize}
+		\item {\it Problem: Nuclear Physics -- Bài Tập: Vật Lý Hạt Nhân}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+		\item {\it Problem \& Solution: Nuclear Physics -- Bài Tập \& Lời Giải: Vật Lý Hạt Nhân}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+	\end{itemize}
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Basic}
+Nguyên tử được cấu tạo bởi các electron \& hạt nhân. Tìm hiểu về cấu tạo \& các đặc điểm của hạt nhân nguyên tử, các phản ứng phân hạch, nhiệt hạch, \& phân rã phóng xạ. Các quá trình biến đổi hạt nhân này là cơ sở cho nhiều ứng dụng quan trọng của các ngành công nghiệp hạt nhân trong cuộc sống.
+
+%------------------------------------------------------------------------------%
+
+\section{Cấu trúc hạt nhân}
+
+\begin{goal}
+	Rút ra được sự tồn tại \& đánh giá được kích thước của hạt nhân từ phân tích kết quả thí nghiệm tán xạ hạt $\alpha$. Biểu diễn được ký hiệu hạt nhân của nguyên tử bằng số nucleon \& số proton. Mô tả được mô hình đơn giản của nguyên tử gồm proton, neutron, \& electron.
+\end{goal}
+
+\subsection{Tóm tắt kiến thức}
+
+\begin{itemize}
+	\item Thí nghiệm tán xạ hạt $\alpha$ đã cung cấp bằng chứng cho sự tồn tại của hạt nhân. Hạt nhân mang điện tích dương, có đường kính cỡ $10^{-14}$ m, nằm tại tâm của nguyên tử \& tập trung gần như toàn bộ khối lượng nguyên tử.
+	\item Hạt nhân cấu tạo gồm $A$ nucleon, trong đó có $Z$ proton \& $N = A - Z$ neutron.
+	\item Ký hiệu hạt nhân: ${}_Z^AX$.
+	\item Đơn vị khối lượng nguyên tử được ký hiệu là amu (viết tắt: u): 1 amu $= 1.66055\cdot10^{-27}$ kg.
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\section{Năng lượng hạt nhân}
+
+\begin{goal}
+	Hệ thức $E = mc^2$, nêu được liên hệ giữa khối lượng \& năng lượng. Mối liên hệ giữa năng lượng liên kết riêng \& độ bền vững của hạt nhân. Sự phân hạch \& sự tổng hợp hạt nhân. Đánh giá được vai trò của vài ngành công nghiệp hạt nhân trong đời sống.
+\end{goal}
+
+\subsection{Tóm tắt kiến thức}
+
+\begin{itemize}
+	\item {\it Hệ thức Einstein giữa khối lượng \& năng lượng}: $E = mc^2$.
+	\item Năng lượng liên kết hạt nhân bằng năng lượng tối thiểu cần cung cấp để tách hạt nhân đó thành các nucleon riêng lẻ, được tính bằng công thức: $W_{\rm lk} = \Delta mc^2 = [Zm_{\rm p} + (A - Z)m_{\rm n} - m_{\rm X}]c^2$.
+	\item {\it Năng lượng liên kết riêng} là năng lượng liên kết tính cho 1 nucleon. Năng lượng liên kết riêng đặc trưng cho độ bền vững của hạt nhân.
+	\item {\it Phân hạch} là quá trình trong đó 1 hạt nhân nặng vỡ thành các hạt nhân nhẹ hơn.
+	\item {\it Nhiệt hạch} là quá trình trong đó 2 hay nhiều hạt nhân nhẹ kết hợp lại thành hạt nhân nặng hơn.
+	\item Các ngành công nghiệp hạt nhân như công nghiệp năng lượng hạt nhân, sản xuất vật liệu phóng xạ có nhiều ứng dụng trong nghiên cứu khoa học, y học, sản xuất, \& đời sống.
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\section{Phóng xạ}
+
+\begin{goal}
+	Bản chất tự phát \& ngẫu nhiên của sự phân rã phóng xạ. Mô tả được sơ lược vài tính chất của 3 phóng xạ $\alpha,\beta,\gamma$. Viết được đúng phương trình phân rã hạt nhân đơn giản. Định nghĩa được độ phóng xạ, hằng số phóng xạ, \& vận dụng được liên hệ $H = \lambda N$. Vận dụng được công thức $H = H_0e^{-\lambda t}$ hoặc $N = N_0e^{-\lambda t}$. Định nghĩa được chu kỳ bán rã. Nhận biết được dấu hiệu ví trí có phóng xạ thông qua các biển báo. Các nguyên tắc an toàn phóng xạ; tuân thủ quy tắc an toàn phóng xạ.
+\end{goal}
+
+\subsection{Tóm tắt kiến thức}
+
+\begin{itemize}
+	\item {\it Phóng xạ} là quá trình phân rã tự phát \& ngẫu nhiên của 1 hạt nhân không bền vững.
+	\item 3 phương trình biểu diễn 3 quá trình phóng xạ: phóng xạ $\alpha$: \ce{_Z^A X -> _{Z-2}^{A-4}Y + _2^4He}, phóng xạ $\beta^-$: \ce{_Z^A X -> _{Z+1}^AY + _{-1}^0e + _0^0$\tilde{v}$}, phóng xạ $\beta^+$: \ce{_Z^A X -> _{Z-1}^AY + _1^0e + _0^0v}.
+	\item Hạt nhân sinh ra trong các quá trình phóng xạ $\alpha$ hoặc $\beta$ có thể ở trạng thái kích thích \& phóng ra tia $\gamma$ để trở về trạng thái cơ bản.
+	\item {\it Chu kỳ bán rã} $T$ là khoảng thời gian để số hạt nhân chất phóng xạ giảm còn $\frac{1}{2}$ số hạt nhân ban đầu. Đơn vị của $T$ là s.
+	\item {\it Hằng số phóng xạ} $\lambda$ đặc trưng cho chất phóng xạ \& được xác định bằng công thức: $\lambda = \dfrac{\ln2}{T}$. Hằng số phóng xạ càng lớn thì chất phóng xạ phân rã càng nhanh. Đơn vị của $\lambda$ là $\rm s^{-1}$.
+	\item {\it Độ phóng xạ} $H$ được xác định bằng số hạt nhân chất phóng xạ phân rã trong 1 s. Đơn vị đo là Bq.
+	\item Độ phóng xạ liên hệ với hằng số phóng xạ \& số hạt nhân chất phóng xạ trong mẫu theo công thức: $H = \lambda N$.
+	\item Số hạt nhân chất phóng xạ \& độ phóng xạ của 1 mẫu đều giảm theo quy luật hàm số mũ: $N = N_0e^{-\lambda t},H = H_0e^{-\lambda t}$.
+	\item Các nguyên tắc an toàn phóng xạ được thiết lập để đảm bảo con người nhận được liều lượng phóng xạ thấp, trong giới hạn an toàn. 3 nguyên tắc cơ bản khi tiếp xúc với nguồn phóng xạ: giảm thời gian tiếp xúc, tăng khoảng cách, \& sử dụng vật liệu che chắn phù hợp.
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
