@@ -1,0 +1,168 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,enumitem,float,graphicx,mathtools,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{goal}{Goal}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+\def\labelitemii{$\circ$}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+
+\title{Problem: Thermal Physics -- Bài Tập: Vật Lý Nhiệt}
+\author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	This text is a part of the series {\it Some Topics in Elementary STEM \& Beyond}:
+	
+	{\sc url}: \url{https://nqbh.github.io/elementary_STEM}.
+	
+	Latest version:
+	\begin{itemize}
+		\item {\it Problem: Thermal Physics -- Bài Tập: Vật Lý Nhiệt}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+		\item {\it Problem \& Solution: Thermal Physics -- Bài Tập \& Lời Giải: Vật Lý Nhiệt}.
+		
+		PDF: {\sc url}: \url{.pdf}.
+		
+		\TeX: {\sc url}: \url{.tex}.
+	\end{itemize}
+\end{abstract}
+Khi nhiệt độ của vật thay đổi, nhiều tính chất vật lý của vật cũng thay đổi. Vật Lý Nhiệt (Thermal Physics) giải thích sự thay đổi tính chất vật lý của vật liên quan đến nhiệt độ dựa trên cơ sở cấu trúc phân tử của vật.
+
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Basic}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+	\item \cite[Chủ đề 1: {\it Vật Lý Nhiệt}]{SGK_Vat_Ly_12_CD}. {\sc Nguyễn Văn Khánh, Phạm Thùy Giang, Đoàn Thị Hải Quỳnh, Trần Bá Trình, Trương Anh Tuấn}. {\it Vật Lý 12 Cánh Diều}.
+	
+	\item \cite[Chủ đề 1: {\it Vật Lý Nhiệt}]{SBT_Vat_Ly_12_CD}. {\sc Nguyễn Văn Khánh, Phạm Thùy Giang, Đoàn Thị Hải Quỳnh, Đỗ Hương Trà, Mai Văn Túc, Trương Anh Tuấn}. {\it Bài Tập Vật Lý 12 Cánh Diều}.
+\end{enumerate}
+See also, e.g., \href{https://vi.wikipedia.org/wiki/V%E1%BA%ADt_l%C3%BD_nhi%E1%BB%87t}{Wikipedia{\tt/}vật lý nhiệt}, \href{https://en.wikipedia.org/wiki/Thermal_physics}{Wikipedia{\tt/}thermal physics}.
+
+\begin{definition}[Thermal physics]
+	``{\rm Thermal physics} is the combined study of \href{https://en.wikipedia.org/wiki/Thermodynamics}{thermodynamics}, \href{https://en.wikipedia.org/wiki/Statistical_mechanics}{statistical mechanics}, \& \href{https://en.wikipedia.org/wiki/Kinetic_theory_of_gases}{kinetic theory of gases}. This umbrella-subject is typically designed for physics students \& functions to provide a general introduction to each of 3 core heat-related subjects. Other authors, however, define thermal physics loosely as a summation of only thermodynamics \& statistical mechanics. Thermal physics can be seen as the study of system with larger number of atom, it unites thermodynamics to statistical mechanics.'' -- \href{https://en.wikipedia.org/wiki/Thermal_physics}{Wikipedia{\tt/}thermal physics}
+\end{definition}
+
+\begin{dinhnghia}[Vật lý nhiệt]
+	``{\rm Vật lý nhiệt} là môn khoa học nghiên cứu kết hợp về \href{https://vi.wikipedia.org/wiki/Nhi%E1%BB%87t_%C4%91%E1%BB%99ng_l%E1%BB%B1c_h%E1%BB%8Dc}{nhiệt động lực học}, \href{https://vi.wikipedia.org/wiki/C%C6%A1_h%E1%BB%8Dc_th%E1%BB%91ng_k%C3%AA}{cơ học thống kê}, \& \href{https://vi.wikipedia.org/wiki/Thuy%E1%BA%BFt_%C4%91%E1%BB%99ng_h%E1%BB%8Dc_ch%E1%BA%A5t_kh%C3%AD}{lý thuyết động học của chất khí}. Chủ đề bao này thường được thiết kế cho sinh viên Vật Lý \& các ngành liên quan để cung cấp giới thiệu chung cho mỗi 3 môn học liên quan đến nhiệt cốt lõi. Tuy nhiên, các tác giả khác định nghĩa Vật Lý Nhiệt lỏng lẻo là tổng của chỉ gồm nhiệt động lực học \& cơ học thống kê.'' -- \href{https://vi.wikipedia.org/wiki/V%E1%BA%ADt_l%C3%BD_nhi%E1%BB%87t}{Wikipedia{\tt/}vật lý nhiệt}
+\end{dinhnghia}
+
+\section{Sự chuyển thể của các chất}
+
+\begin{goal}
+	Sử dụng mô hình động học phân tử, nêu được sơ lược cấu trúc của chất rắn, chất lỏng, chất khí. Giải thích được sơ lược vài hiện tượng vật lý liên quan đến sự chuyển thể: sự nóng chảy, sự hóa hơi.
+\end{goal}
+
+\subsection{Tóm tắt kiến thức}
+
+\begin{itemize}
+	\item Trong chất rắn, các phân tử ở gần nhau, lực tương tác mạnh \& mỗi phân tử dao động xung quanh vị trí cân bằng xác định.
+	\item Trong chất lỏng, khoảng cách giữa các phân tử xa hơn so với trong chất rắn, lực tương tác yếu hơn so với trong chất rắn \& các phân tử dao động xung quanh các vị trí cân bằng có thể di chuyển được.
+	\item Trong chất khí, khoảng cách giữa các phân tử rất lớn, lực tương tác giữa các phân tử không đáng kể nên các phân tử chuyển động hỗn loạn, không ngừng.
+	\item Khi nóng chảy, các phân tử chất rắn nhận năng lượng sẽ phá vỡ liên kết với 1 số phân tử xung quanh \& trở nên linh động hơn. Chất rắn chuyển thành chất lỏng.
+	\item Khi hóa hơi, các phân tử chất lỏng nhận được năng lượng sẽ tách khỏi liên kết với các phân tử khác, thoát khỏi khối chất lỏng \& chuyển động tự do. Chất lỏng chuyển thành chất khí.
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\section{Định luật 1 nhiệt động lực học}
+
+\begin{goal}
+	Thực hiện thí nghiệm, nêu được mối liên hệ nội năng của vật với năng lượng của các phân tử tạo nên vật, định luật 1 của nhiệt động lực học. Vận dụng được định luật 1 của nhiệt động lực học trong 1 số trường hợp đơn giản.
+\end{goal}
+
+\subsection{Tóm tắt kiến thức}
+
+\begin{itemize}
+	\item Nội năng của 1 hệ là tổng động năng \& thế năng tương tác của các phân tử tạo nên hệ.
+	\item Định luật 1 của nhiệt động lực học thể hiện sự bảo toàn năng lượng: $\Delta U = Q + A$: độ biến thiên nội năng $=$ nhiệt lượng nhận được $+$ công nhận được.
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\section{Thang nhiệt độ}
+
+\begin{goal}
+	Thực hiện thí nghiệm đơn giản, thảo luận để nêu được sự chênh lệch nhiệt độ giữa 2 vật tiếp xúc nhau có thể cho biết chiều truyền năng lượng nhiệt giữa chúng; từ đó nêu được khi 2 vật tiếp xúc với nhau, ở cùng nhiệt độ, sẽ không có sự truyền năng lượng nhiệt giữa chúng. Nêu được nhiệt độ không tuyệt đối là nhiệt độ mà tại đó tất cả các chất có động năng chuyển động nhiệt của các phân tử hoặc nguyên tử bằng không \& thế năng của chúng là tối thiểu. Chuyển đổi được nhiệt độ đo theo thang Celsius sang nhiệt độ đo theo thang Kelvin \& ngược lại.
+\end{goal}
+
+\subsection{Tóm tắt kiến thức}
+
+\begin{itemize}
+	\item Năng lượng nhiệt tự truyền từ vật có nhiệt độ cao hơn sang vật có nhiệt độ thấp hơn. Năng lượng nhiệt không tự truyền giữa 2 vật có cùng nhiệt độ.
+	\item Ở nhiệt độ không tuyệt đối 0 K, tất cả các hệ đều có nội năng tối thiểu.
+	\item Mỗi độ chia $1^\circ$C trong thang Celcius bằng $\frac{1}{100}$ của khoảng cách giữa nhiệt độ tan chảy của nước tinh khiết đóng băng \& nhiệt độ sôi của nước tinh khiết (ở áp suất tiêu chuẩn).
+	\item Mỗi độ chia 1 K trong thang Kelvin bằng $\frac{1}{273.16}$ của khoảng cách giữa nhiệt độ không tuyệt đối \& nhiệt độ mà nước tinh khiết tồn tại đồng thời ở thể rắn, lỏng, \& hơi (ở áp suất tiêu chuẩn).
+	\item Liên hệ giữa nhiệt độ theo thang Kelvin \& nhiệt độ theo thang Celsius (khi làm tròn số): $T$ (K) $= t$ (${}^\circ$C) $+ 273$, $ $ (${}^\circ$C) $= T$ (K) $- 273$.
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\section{Nhiệt dung riêng, nhiệt nóng chảy riêng, nhiệt hóa hơi riêng}
+
+\begin{goal}
+	Nêu được định nghĩa nhiệt dung riêng, nhiệt độ nóng chảy riêng, nhiệt độ hóa hơi riêng. Thiết kể phương án hoặc lựa chọn phương án \& thực hiện phương án, đo được nhiệt dung riêng, nhiệt nóng chảy riêng, nhiệt hóa hơi riêng bằng dụng cụ thực hành.
+\end{goal}
+
+\subsection{Tóm tắt kiến thức}
+
+\begin{itemize}
+	\item {\it Nhiệt dung riêng} của 1 chất là nhiệt lượng cần để 1 kg chất đó tăng thêm 1 K hoặc $1^\circ$C.
+	\item {\it Nhiệt lượng} cần để làm thay đổi nhiệt độ của 1 lượng chất: $Q = mc\Delta T$.
+	\item {\it Nhiệt nóng chảy riêng} $\lambda$ của 1 chất là nhiệt lượng cần để 1 kg chất đó chuyển hoàn toàn từ thể rắn sang thể lỏng ở nhiệt độ nóng chảy. Nhiệt lượng cần để 1 vật rắn nóng chảy hoàn toàn tại nhiệt độ nóng chảy: $Q = m\lambda$.
+	\item {\it Nhiệt hóa hơi riêng} $L$ của 1 chất là nhiệt lượng cần để 1 kg chất đó chuyển hoàn toàn từ thể lỏng sang thể khí ở nhiệt độ sôi. Nhiệt lượng cần để 1 lượng chất lỏng hóa hơi hoàn toàn tại nhiệt độ sôi: $Q = mL$.
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
