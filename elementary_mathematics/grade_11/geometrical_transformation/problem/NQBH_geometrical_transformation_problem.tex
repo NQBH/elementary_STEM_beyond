@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usepackage{amsmath,amssymb,amsthm,enumitem,float,graphicx,mathtools,tikz}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
@@ -23,6 +23,7 @@
 \newtheorem{hypothesis}{Hypothesis}
 \newtheorem{lemma}{Lemma}
 \newtheorem{luuy}{Lưu ý}
+\newtheorem{menhde}{Mệnh đề}
 \newtheorem{nhanxet}{Nhận xét}
 \newtheorem{notation}{Notation}
 \newtheorem{note}{Note}
@@ -39,6 +40,8 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 \def\labelitemii{$\circ$}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
 
 \title{Problem: Geometrical Transformation -- Bài Tập: Phép Biến Hình Phẳng}
 \author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
@@ -69,7 +72,71 @@
 
 %------------------------------------------------------------------------------%
 
-\section{}
+\section{Basic}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+	\item \cite{CDHT_Toan_11_CD}. {\sc Đỗ Đức Thái, Phạm Xuân Chung, Nguyễn Sơn Hà, Nguyễn Thị Phương Loan, Phạm Sỹ Nam, Phạm Minh Phương}. {\it Chuyên Đề Học Tập Toán 11 Cánh Diều}.
+	\item \cite{Pompe_phep_quay}. {\sc Waldemar Pompe}. {\it Xung Quanh Phép Quay: Hướng Dẫn Môn Hình Học Sơ Cấp}.
+	
+	{\sf Nội dung.} ``$\ldots$ trình bày 1 cách tiếp cận mới mẻ \& bổ ích của môn hình học sơ cấp [Elementary Geometry], dựa trên các phép biến đổi đối xứng bảo toàn hình, cụ thể là {\it phép quay, phép tịnh tiến, \& phép đối xứng qua trục}. Cách tiếp cận bằng đối xứng chính là 1 công cụ quan trọng của Toán học hiện đại [Modern Mathematics], với nhiều vấn đề giải được thông qua việc nghiên cứu cấu trúc nhóm đối xứng của nó.'' ``$\ldots$ phần lớn các định lý, tính chất hay trong hình học sơ cấp, từ dễ đến khó, đều có thể suy ra được từ 2 điều cơ bản: điều thứ nahats là {\it bất đẳng thức tam giác} (tổng 2 cạnh lớn hơn cạnh thứ 3), \& điều thứ 2 chính là các phép quay, tịnh tiến, \& đối xứng trục là những phép bảo toàn các góc \& độ dài các đoạn thẳng.'' -- \cite[Lời giới thiệu]{Pompe_phep_quay}
+	\item \cite{Son_phep_bien_hinh_2D}. {\sc Đỗ Thanh Sơn}. {\it Chuyên Đề Bồi Dưỡng Học Sinh Giỏi Toán Trung Học Phổ Thông: Phép Biến Hình Trong Mặt Phẳng}.
+\end{enumerate}
+
+\begin{menhde}
+	Phép tịnh tiến, phép quay, \& phép đối xứng trục không thay đổi hình dạng \& độ lớn của các hình, mà cụ thể là không thay đổi chiều dài đoạn thẳng \& độ lớn của góc.
+\end{menhde}
+
+\begin{dinhly}[Bất đẳng thức tam giác]
+	Trong 1 tam giác bất kỳ, tổng chiều dài 2 cạnh lớn hơn chiều dài cạnh thứ 3.
+\end{dinhly}
+``Khi tịnh tiến hoặc quay 1 hình nào đó, hoặc lấy hình đối xứng của nó qua 1 trục, ta không làm thay đổi hình dạng cũng như độ lớn của hình mà chỉ thay đổi vị trí của hình đó. Đường thẳng chuyển thành đường thẳng, đoạn thẳng thành đoạn thẳng có cùng chiều dài, còn góc thì thành góc có cùng độ lớn.'' -- \cite[p. 10]{Pompe_phep_quay}
+
+\begin{dinhly}
+	Tổng 3 góc trong của 1 tam giác luôn bằng $180^\circ$.
+\end{dinhly}
+
+\begin{hequa}
+	Tổng 2 góc trong của 1 tam giác luôn bằng góc ngoài tại đỉnh thứ 3 của tam giác đó.
+\end{hequa}
+
+\begin{baitoan}
+	Chứng minh tổng $n\in\mathbb{N},n\ge3$ góc trong của 1 $n$-giác lồi bất kỳ luôn bằng $(n - 2)180^\circ$.
+\end{baitoan}
+{\sf Hint.} Từ 1 đỉnh vẽ $n - 3$ đường chéo chia $n$-giác lồi thành $n - 2$ tam giác.
+
+\begin{dinhly}[\cite{Pompe_phep_quay}, ĐL1.3, p. 12]
+	Cho 1 điểm $O$ \& đường thẳng $k$. $k'$ là ảnh của phép quay đường thẳng $k$ xung quanh điểm $O$ 1 góc $\alpha\in(0^\circ,180^\circ)$. Khi đó, 1 trong 2 góc được tạo thành bởi $k,k'$ có số đo bằng $\alpha$.
+\end{dinhly}
+
+\begin{baitoan}[\cite{Pompe_phep_quay}, VD1.4, p. 13]
+	Trên 2 cạnh $CD,DA$ của hình vuông $ABCD$ chọn 2 điểm $E,F$ thỏa $DE = AF$. Chứng minh $AE\bot BF$.
+\end{baitoan}
+{\sf Hint.} Xét phép quay tâm $O$ với góc $90^\circ$.
+
+%------------------------------------------------------------------------------%
+
+\section{Phép Dời Hình}
+
+\subsection{Phép biến hình}
+
+\begin{dinhnghia}[Phép biến hình]
+	Quy tắc đặt tương ứng mỗi điểm $M$ của mặt phẳng với 1 điểm xác định duy nhất $M'$ của mặt phẳng đó được gọi là {\rm phép biến hình} trong mặt phẳng.
+\end{dinhnghia}
+Nếu phép biến hình $F$ đặt tương ứng điểm $M$ với điểm $M'$ thì điểm $M'$ gọi là {\it ảnh} của điểm $M$ qua phép biến hình $F$ hay còn nói $F$ biến $M$ thành $M'$, ký hiệu $M' = F(M)$ hay $F:M\mapsto M'$. Đối với phép biến hình $F$ \& hình $\mathcal{H}$ trong mặt phẳng, với mọi điểm $M\in\mathcal{H}$, các ảnh $M' = F(M)$ tạo thành hình $\mathcal{H}'$. Hình $\mathcal{H}'$ gọi là {\it ảnh của hình $\mathcal{H}$} qua phép biến hình $F$ hay còn nói $F$ biến $\mathcal{H}$ thành $\mathcal{H}'$, ký hiệu $\mathcal{H}' = F(\mathcal{H})$ hay $F:\mathcal{H}\mapsto\mathcal{H}'$. Quy tắc đặt tương ứng mỗi điểm $M$ của mặt phẳng với chính nó là 1 phép biến hình, gọi là {\it phép đồng nhất}.
+
+\subsection{Phép tịnh tiến}
+
+\subsection{Phép đối xứng trục}
+
+\subsection{Phép đối xứng tâm}
+
+\subsection{Phép quay}
+
+\subsection{Phép dời hình}
+
+%------------------------------------------------------------------------------%
+
+\section{Phép Đồng Dạng}
 
 %------------------------------------------------------------------------------%
 
