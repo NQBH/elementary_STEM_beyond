@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usepackage{amsmath,amssymb,amsthm,enumitem,float,graphicx,mathtools,tikz}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
@@ -40,6 +40,8 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 \def\labelitemii{$\circ$}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
 
 \title{Functional Equation -- Phương Trình Hàm}
 \author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
@@ -62,6 +64,21 @@
 	\end{itemize}
 \end{abstract}
 \tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Basic}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+	\item \cite{Chung_Pho_pth}. {\sc Nguyễn Tài Chung, Lê Hoành Phò}. {\it Chuyên Khảo Phương Trình Hàm}.
+	
+	Xem \cite[Chap. 1, Sect. 1.1: {\it 1 số kiến thức về hàm số \& ánh xạ}]{Chung_Pho_pth} để nắm các kiến thức cơ bản.
+	\item \cite{Small2007}. {\sc Christopher G. Small}. {\it Functional Equations \& How To Solve Them}.	
+	\item \cite{Venkatachala2013}. {\sc B. J. Venkatachala}. {\it Functional Equations: A Problem Solving Approach}.
+\end{enumerate}
+
+\subsection{Some problems about functions -- Vài dạng toán về hàm số}
+Cho 1 hàm số $f(x)$ với công thức cụ thể (explicit formula), 1 bài toán xuôi{\tt/}thuận (forward problem) là tính giá trị của hàm số tại 1 điểm $x = a$, i.e., tính $f(a)$ với bài toán đảo (inverse problem) tương ứng là cho 1 giá trị $b\in\operatorname{range}(f)\coloneqq f(D_f)$ trong tập giá trị của $f$, tính tập ảnh ngược $f^{-1}(b)$. Nếu $b\notin\operatorname{range}(f)\coloneqq f(D_f)$ thì $f^{-1}(b) = \emptyset$. Bài toán ngược này đòi hỏi phải giải 1 phương trình tương ứng, nên bài toán ngược này sẽ rắc rối hơn nhiều so với bài toán thuận.
 
 %------------------------------------------------------------------------------%
 
