@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usepackage{amsmath,amssymb,amsthm,enumitem,float,graphicx,mathtools,tikz}
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
@@ -39,6 +39,8 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 \def\labelitemii{$\circ$}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
 
 \title{Problem: Derivative -- Bài Tập: Đạo Hàm}
 \author{Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}}
@@ -69,7 +71,50 @@
 
 %------------------------------------------------------------------------------%
 
-\section{}
+\section{Basic}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+	\item \cite{SGK_Toan_11_CD_tap_2}. {\sc Đỗ Đức Thái, Phạm Xuân Chung, Nguyễn Sơn Hà, Nguyễn Thị Phương Loan, Phạm Sỹ Nam, Phạm Minh
+	Phương}. {\it Toán 11 Tập 1. Cánh Diều}.
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\section{Định Nghĩa Đạo Hàm. Ý Nghĩa Hình Học Của Đạo Hàm}
+Nếu quỹ đạo chuyển động của 1 vật hay 1 chất điểm được miêu tả bằng hàm số ${\bf x}(t)$ theo thời gian thì vận tốc ${\bf v}(t) = {\bf x}'(t)$ biểu thị độ nhanh chậm của chuyển động tại 1 thời điểm $t$.
+
+\begin{baitoan}[Derivative of polynomials -- Đạo hàm của các đa thức]
+	Tính đạo hàm của hàm số đa thức
+	\begin{equation}
+		\label{polynomial}
+		\tag{P}
+		P(x;n,{\bf a})\coloneqq\sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0,
+	\end{equation}
+	tại $x = x_0$ bằng định nghĩa, với $\deg P(x;n,{\bf a}) = n\in\mathbb{N}$ \& vector chứa các hệ số của đa thức $P(x;n,{\bf a})$ là ${\bf a}\coloneqq(a_0,a_1,\ldots,a_n)\in\mathbb{R}^n\times\mathbb{R}^\star$.
+\end{baitoan}
+
+\begin{baitoan}[Derivative of rational function -- Đạo hàm của phân thức]
+	Tính đạo hàm của hàm số phân thức
+	\begin{equation}
+		\label{rational function}
+		\tag{Q}
+		Q(x;m,n,{\bf a},{\bf b})\coloneqq\frac{\sum_{i=0}^m a_ix^i}{\sum_{i=0}^n b_ix^i} = \frac{a_mx^m + a_{m-1}x^{m-1} + \cdots + a_1x + a_0}{b_nx^n + b_{n-1}x^{n-1} + \cdots + b_1x + b_0},
+	\end{equation}
+	tại $x = x_0$ bằng định nghĩa.
+\end{baitoan}
+
+\begin{baitoan}[Đạo hàm của căn thức]
+	Tính đạo hàm của hàm số căn thức $f(x) = \sqrt[n]{x} = x^{\frac{1}{n}}$, với $n\in\mathbb{N}^\star$, tại $x = x_0$ bằng định nghĩa.
+\end{baitoan}
+Ta có 3 dạng hàm số sơ cấp thường gặp: hàm đa thức $P(x;n,{\bf a})\coloneqq\sum_{i=0}^n a_ix^i$, hàm phân thức $Q(x;m,n,{\bf a},{\bf b})\coloneqq\frac{\sum_{i=0}^m a_ix^i}{\sum_{i=0}^n b_ix^i}$, hàm căn thức $R_n(x)\coloneqq\sqrt[n]{x}$.
+
+%------------------------------------------------------------------------------%
+
+\section{Differentiation Rules -- Các Quy Tắc Tính Đạo Hàm}
+
+%------------------------------------------------------------------------------%
+
+\section{2nd-Order Derivative -- Đạo Hàm Cấp 2}
 
 %------------------------------------------------------------------------------%
 
