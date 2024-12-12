@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{book}
 \usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
 \usepackage[utf8]{vietnam}
 \addbibresource{/home/nqbh/reference/bib.bib}
@@ -6,7 +6,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,glossaries,graphicx,mathtools,multicol,musicography,soul,subfig,tikz,tipa}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,glossaries,graphicx,mathtools,minitoc,multicol,musicography,soul,subfig,tikz,tipa}
 \usepackage[version=4]{mhchem}
 \makeglossaries
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
@@ -53,28 +53,28 @@
 
 \begin{document}
 \maketitle
-\begin{abstract}	
-	{\sf[en]} This short novel consists of some pieces of my writing, which are able to be shared {\it\&} I am willing to share, in order to sharpen my flows of thoughts, to balance my scientific work via various aesomethingetic forms, {\it\&} to track psychologically \& mentally my transitions from boyhood to manhood if there is any.
-	\vspace{2mm}
-
-	{\sf[vi]} Tiểu thuyết ngắn này bao gồm 1 số bài viết của tôi, những bài có thể chia sẻ được {\it\&} tôi tự nguyện chia sẻ chúng, để mài bén các dòng suy nghĩ của tôi hơn, để cân bằng với các công việc nghiên cứu khoa học thông qua muôn vàn các hình thái nghệ thuật, {\it\&} để đánh dấu các bước chuyển mình về mặt tâm lý {\it\&} trí tuệ của tôi từ 1 cậu nhóc choai choai trở thành 1 người đàn ông trưởng thành nếu có bất cứ sự thay đổi nào xảy ra.
-	\vspace{2mm}
-	
-	{\sf[fr]} Ce court roman est constitué de quelques morceaux de mes écrits, qui peuvent être partagés. Je suis prêt à partager, afin d'aiguiser mes flux de pensées, d'équilibrer mon travail scientifique via diverses formes esomethingétiques, de suivre psychologiquement et mentalement mes transitions de l'enfance à l'âge adulte s'il y en a.
-	\vspace{2mm}
-	
-	{\sf[de]} Dieser Kurzroman besteht aus einigen Teilen meines Schreibens, die geteilt werden können {\it\&} Ich bin bereit, sie zu teilen, um meine Gedankenflüsse zu schärfen, meine wissenschaftliche Arbeit durch verschiedene äsomethingetische Formen auszubalancieren, {\it\&} um meine Übergänge vom Jungen- zum Mannesalter psychologisch und mental zu verfolgen, falls es welche gibt.
-\end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
-\newpage
+\dominitoc% Initialization
 \tableofcontents
-\newpage
+
+\chapter*{Preface}
+{\sf[en]} This short novel consists of some pieces of my writing, which are able to be shared {\it\&} I am willing to share, in order to sharpen my flows of thoughts, to balance my scientific work via various aesomethingetic forms, {\it\&} to track psychologically \& mentally my transitions from boyhood to manhood if there is any.
+\vspace{2mm}
+
+{\sf[vi]} Tiểu thuyết ngắn này bao gồm 1 số bài viết của tôi, những bài có thể chia sẻ được {\it\&} tôi tự nguyện chia sẻ chúng, để mài bén các dòng suy nghĩ của tôi hơn, để cân bằng với các công việc nghiên cứu khoa học thông qua muôn vàn các hình thái nghệ thuật, {\it\&} để đánh dấu các bước chuyển mình về mặt tâm lý {\it\&} trí tuệ của tôi từ 1 cậu nhóc choai choai trở thành 1 người đàn ông trưởng thành nếu có bất cứ sự thay đổi nào xảy ra.
+\vspace{2mm}
+
+{\sf[fr]} Ce court roman est constitué de quelques morceaux de mes écrits, qui peuvent être partagés. Je suis prêt à partager, afin d'aiguiser mes flux de pensées, d'équilibrer mon travail scientifique via diverses formes esomethingétiques, de suivre psychologiquement et mentalement mes transitions de l'enfance à l'âge adulte s'il y en a.
+\vspace{2mm}
+
+{\sf[de]} Dieser Kurzroman besteht aus einigen Teilen meines Schreibens, die geteilt werden können {\it\&} Ich bin bereit, sie zu teilen, um meine Gedankenflüsse zu schärfen, meine wissenschaftliche Arbeit durch verschiedene äsomethingetische Formen auszubalancieren, {\it\&} um meine Übergänge vom Jungen- zum Mannesalter psychologisch und mental zu verfolgen, falls es welche gibt.
 
 %------------------------------------------------------------------------------%
 
-\section{Appetizer{\tt/}Foreplay -- Khai Vị{\tt/}Màn Dạo Đầu}
-\textbf{\textsf{\small Vocabulary -- Từ vựng.}}
+\chapter{Appetizer{\tt/}Foreplay -- Khai Vị{\tt/}Màn Dạo Đầu}
+\minitoc
+\noindent\textbf{\textsf{\small Vocabulary -- Từ vựng.}}
 \begin{itemize}\small\sf
 	\item {\it appetizer} [n] {\tt/}\textipa{`\ae p@,taIz@r}{\tt/}: a small amount of food or a drink that you have before a meal or before the main course of a meal.
 	\item {\it foreplay} [n] {\tt/}\textipa{`f@:pleI}{\tt/}: sexual activity, e.g. touching the sexual organs \& kissing, that takes place before people have sex.
@@ -83,7 +83,7 @@
 
 Trước khi ăn món chính, phải ăn khai vị để giúp kích thích vị giác, tạo cảm giác thèm ăn, sự ngon miệng, \& để bao tử tập làm quen. Trước khi ``ăn'' ``món chính''\footnote{E.g., {\sf Akane} nấu ăn cho {\sf Aqua}, Manga {\it Oshi no Ko}, Chaps. \href{https://readoshino.com/manga/oshi-no-ko-chapter-52/}{52}--\href{https://readoshino.com/manga/oshi-no-ko-chapter-53/}{53}.}, phải làm màn dạo đầu thì mọi thứ sau đó mới trơn tru được, không là \st{sex} sẽ bị Thượng Mã Phong ngay. Đạo trong Thực (i.e., ăn, húp) \& trong Dục (i.e., ``ăn'', ``húp'') ở đây chỉ có vậy. Chưa khởi động kỹ lưỡng mà nhào vô phần chính thì sẽ bị trào vị, sẽ bị gãy ngang ngay. Đấy là chưa am hiểu về Đạo (Tao) trong Đời Sống (Life): Taos of Life.
 
-\subsection{Confession -- Lời thú tội}
+\section{Confession -- Lời thú tội}
 \textbf{\textsf{\small Vocabulary -- Từ vựng.}}
 \begin{itemize}\small\sf
 	\item {\it confess} [v] {\tt/}\textipa{k@n'fes}{\tt/}: 1. to admit, especially formally or to the police, that you have done something wrong or illegal; 2. to admit something that you feel ashamed or embarrassed about; 3. {confess (something) (to somebody)} (especially in the Roman Catholic Church) to tell God or a priest about the bad things you have done so that you can say that you are sorry \& be forgiven; 4. {\sf confess somebody} (of a priest) to hear somebody confess their sins ($=$ the bad things they have done).
@@ -103,7 +103,7 @@ Trước khi đi vào phần chính của Tiểu thuyết này, chúng tôi mu�
 	\item {\sf Confession on religion -- Thú tội về tôn giáo}: 2 tác giả của tiểu thuyết là 2 kẻ vô thần, i.e., không chính thức theo 1 hay vài tôn giáo nào cả. Nhưng chúng tôi thích phần hay của mỗi tôn giáo \& trộn chúng lại với nhau. Xin lỗi, chúng tôi, mặc dù là 2 kẻ vô thần, nhưng lại là 2 kẻ thực dụng trong vấn đề tôn giáo. Chúng tôi sẽ cố gắng để không bị ``rối loạn tôn giáo'' (tựa tựa như `rối loạn nhân cách') kiểu ``Amen A Di Đà Phật'' của Tiên Tri Vũ Trụ {\sc Trần Dần}: ``Amen $\ldots$ tui đạo Phật mà''.
 \end{enumerate}
 
-\subsection{Wonder -- Tự vấn}
+\section{Wonder -- Tự vấn}
 \textbf{\textsf{\small Vocabulary -- Từ vựng.}}
 \begin{itemize}\small
 	\item {\sf wonder} [v] {\tt/}\textipa{`w2nd@r}{\tt/} 1. to think about something \& try to decide what is true, what will happen, what you should do, etc.; 2. {\it wonder if, whether $\ldots$} used as a polite way of asking a question or asking somebody to do something; 3. to be very surprised by something. [n] 1. a feeling of surprise \& pleasure that you have when you see or experience something beautiful, unusual or unexpected, $=$ {\sf awe}; 2. something that fills you with surprise \& pleasure; 3. a person who is very clever at doing something; a person or thing that seems very good or effective.
@@ -123,10 +123,11 @@ Những lúc buồn chán \& thất vọng, bạn thường có những suy ngh�
 
 %------------------------------------------------------------------------------%
 
-\section{Preliminaries -- Các Khâu Chuẩn Bị}
+\chapter{Preliminaries -- Các Khâu Chuẩn Bị}
+\minitoc
 Lúc còn làm về động cơ đốt trong (combustion engines), có 1 giai đoạn tôi, tác giả thứ nhất, phải học luật \& các vấn đề đạo đức (ethical issues) phát sinh phòng trường hợp research output của đề tài mà tôi làm bị ứng dụng sai vào các mục đích quân đội (military purposes) hoặc các mục đích dân dụng (civil purposes), làm gây thiệt hại nghiêm trọng. Lúc đó tôi chỉ thấy phiền mà không hiểu cho lắm. Nhưng trải qua vài chuyện thì thấy nó cần thiết thật, với nhiều cái hay lắm (thảo nào mấy cuốn sách luật ở Đức dày 1 cách quái dị). Nên tôi nghĩ điều đó cũng cần phải nêu rõ ở đây, khi mà các vấn đề về tâm lý chưa bao giờ là dễ dàng để tiếp cận, để đề phòng các tình huống xấu nhất. Có lẽ thời gian tôi phải đọc tài liệu về luật \& làm các workshop về scientific ethics (i.e., nonfiction) triền miên, ngốn cả thời gian làm nghiên cứu raw của tôi, cuối cùng sau vài năm cũng được bù đắp theo cách dị hợm nhất có thể: tôi dùng nó cho fiction novel -- tiểu thuyết hư cấu. What a joke in the endless series of {\it Infinite Jest} \cite{Wallace_jest} viết bởi cây bút thiên tài người Mỹ {\sc David Foster Wallace}.
 
-\subsection{Disclaimer -- Tuyên bố từ chối trách nhiệm}
+\section{Disclaimer -- Tuyên bố từ chối trách nhiệm}
 We, the authors, in the role of the narrators of this novel, clearly state that:
 \begin{itemize}
 	\item Any character names mentioned in this piece of writing is purely imaginary. If there is any coincidence, so that a person in real life in the three-dimensional physical space, denoted by $\mathbb{R}^3$, feels disturbed or deeply offended. Well, this century is the optimal era of the offensive, we guess. We can apologize, if we feel necessary, but we take no responsibility.
@@ -138,7 +139,7 @@ Chúng tôi, 2 tác giả, trong vai trò người kể chuyện, tuyên bố 1 
 	\item {\it Cảnh báo}: Tiểu thuyết có chứa các yếu tố tình dục, bạo lực, \& thô tục. Cân nhắc cẩn thận trước khi bạn quyết định đọc. Nếu bạn cảm thấy khó chịu, thậm chí là trầm cảm, chúng tôi, 2 tác giả, không chịu trách nhiệm.
 \end{itemize}
 
-\subsection{Notation \& convention -- Ký hiệu \& quy ước}
+\section{Notation \& convention -- Ký hiệu \& quy ước}
 
 \begin{itemize}
 	\item $\mathbb{R}^3$: three-dimensional (3D) physical space -- không gian vật lý 3 chiều.
@@ -177,15 +178,16 @@ Chúng tôi, 2 tác giả, trong vai trò người kể chuyện, tuyên bố 1 
 	\item \cite{Murakami_ngoi_1}. {\sc Haruki Murakami}. {\it First Person Singular: Stories -- Ngôi Thứ Nhất Số Ít}.
 \end{itemize}
 
-\subsection{Outline -- Dàn ý phác thảo}
+\section{Outline -- Dàn ý phác thảo}
 3 phần chính của tiểu thuyết này là bàn về việc học, bàn về việc dạy, \& bàn về nghiên cứu, đáng lẽ sẽ theo thứ tự trưởng thành dần theo chiều phát triển của 1 con người. Nhưng chúng tôi chợt nghĩ có khi thứ tự đó lại không chuẩn cho lắm, thứ tự mà chúng tôi cho là ``đúng'' \& ``chuẩn'' chính là bàn về nghiên cứu, rồi bàn về việc dạy, \& cuối cùng là bàn về việc học. Nghe có vẻ ngược ngạo, nhưng từ những trải nghiệm của tác giả trên con đường nghiên cứu chuyên nghiệp, chúng tôi nhận ra có nhiều thứ quý giá hơn ngoài văn phòng nghiên cứu. Nên sau khi nêu 1 số suy nghĩ về nghiên cứu ở Sect. \ref{sect: research stage 1}: {\it On Researching}, chúng tôi xem lại về việc dạy ở Sect. \ref{sect: teaching}: {\it On Teaching}, cuối cùng là bàn về các sự tinh chỉnh không ngừng trong nghiệp\footnote{`Nghiệp'' ở đây có thể hiểu là ``sự nghiệp'' hoặc ``nghiệp chướng'', e.g., các bài báo \href{https://vnexpress.net/huy-chuong-vang-toan-tre-nhat-lam-toan-vi-nghiep-chuong-2393718.html}{VNExpress{\tt/}Huy chương vàng toán trẻ nhất làm toán vì 'nghiệp chướng' }, \href{https://dantri.com.vn/giao-duc/hcv-toan-hoc-tre-nhat-lam-toan-vi-nghiep-chuong-1354447180.htm}{Dân Trí{\tt/}HCV Toán học trẻ nhất: Làm toán vì ``nghiệp chướng''}.} học vấn trong cả cuộc đời của 1 con người trong Sect. \ref{sect: learning}: {\it On Learning}.
 
-\section{Ignition -- Mồi Lửa}
+\chapter{Ignition -- Mồi Lửa}
+\minitoc
 Nhân vật chính trong tiểu thuyết ngắn này có tên là {\sf Hồng} -- 1 nghiên cứu sinh Toán học trầm cảm, tự vấn về những gì hắn đã trải qua, những hắn đang làm, \& những gì hắn sẽ làm trong tương lại cho đến thời điểm hắn chết đi trong không gian vật lý $\mathbb{R}^3$. {\it Liệu 1 phần linh hồn của hắn sẽ tiếp tục sống trong 1 không gian khác ``dày'' hơn, i.e., nhiều chiều hơn hay ``dẹp'' hơn, i.e., ít chiều hơn (do 3 chiều về vật lý đã tan rã theo cơ thể sinh học trong không gian vật lý $\mathbb{R}^3$) không?} Như những tác giả của những cuốn sách yêu thích của hắn: họ đã chết từ lâu, nhưng khi đọc thì hắn cảm giác đang được nói chuyện với họ. Cái ý ``tiếp tục sống'' ở đây là vậy: thần giao cách cảm (telepathic communications) \& các cuộc trò chuyện vượt ra xa ngoài ảnh hưởng của biến thời gian $t\in\mathbb{R}$ với mốc thời gian $t = 0$ được tính từ lúc con người có ý thức, i.e., $t < 0$ ứng với giai đoạn ăn lông ở lỗ, vô tri thuần túy của loài người.
 
 {\it Quy ước về tên nhân vật trong tiểu thuyết}: Mặc dù nhân vật chính {\sf Hồng} trùng tên với tác giả thứ nhất, nhưng không có nghĩa họ cùng là 1 người. Chúng tôi thường thấy các tác giả, đặc biệt là các nhà Tâm Lý Học \& các nhà Tâm Lý Trị Liệu \&{\tt/}or Vật Lý Trị Liệu, hay sử dụng phương pháp thay đổi tên của 1 người có thực để đảm bảo sự bảo mật danh tính, nhưng theo nghĩa về mặt câu đố, thì điều đó có nghĩa là người giải đã có thể loại ra 1 trường hợp, hoàn toàn miễn phí mà không tốn chút sức, tức người tên {\sf A} trong tác phẩm chắc chắn sẽ không có tên là {\sf A} trong thực tế. Nếu vậy thì dễ dãi quá. Chúng tôi nghĩ thế này hóc búa hơn: Tên các nhân vật có thể thuần hư cấu hoặc có thể được xây dựng dựa trên 1 số người có thật ngoài đời; dù trong trường hợp nào đi chăng nữa, tên các nhân vật có thể trùng hoặc không trùng với tên của các hình mẫu tương ứng có thực ngoài đời, nếu nhân vật đó được xây dựng dựa trên hình mẫu có thực đó. Thế thì bí hiểm hơn hẳn. Vậy mới đúng chất ảo diệu \& tinh thần phi thực tế của tiểu thuyết hư cấu.
 
-\subsection{When things fall apart -- Khi mọi thứ sụp đổ}
+\section{When things fall apart -- Khi mọi thứ sụp đổ}
 Tên của mục này lấy từ tựa đề của quyển:
 \begin{itemize}
 	\item \cite{Chodron_fall_apart}. Sư mục {\sc Pema Ch\"odr\"on}. {\it When Things Fall Apart: Heart Advice for Difficult Times}.
@@ -320,7 +322,7 @@ the ability to calm yourself in order to consider{\tt/}contemplate{\tt/}examine 
 		\end{align*}
 \end{itemize}} to connect as many dots as possible, requires much more time \& efforts, especially the expertise{\tt/}experiences, which are usually possessed{\tt/}gained only by hardened and{\tt/}or wise enough individuals. Ironically, in spite of all of these serious investigations, sympathy, empathy, \& humanity have been almost all the time being undervalued{\tt/}underrated{\tt/}underestimated, even ignored from the majority of human beings, which is the prototypical \& fundamental effect of \href{https://dictionary.apa.org/majority-influence}{majority influence}.
 
-\subsection{A ``warm'' \&{\tt/}but cold Christmas}
+\section{A ``warm'' \&{\tt/}but cold Christmas}
 {\it Nên bắt đầu từ đâu nhỉ?} Để mình lục lại ký ức phát $\ldots$ Có vẻ nên chọn Giáng sinh năm 2020 -- 1 trong những cột mốc quan trọng trong cuộc đời của mình. Lúc ấy mình đang nghỉ lễ. Cả ngày chỉ quanh quẩn ở nhà.
 \begin{flushright}
 	Christmas Eve, Winter 2020. [$-5^\circ$C]--[$-10^\circ$C]. Berlin, Germany.
@@ -447,7 +449,7 @@ Hắn tự huyền hoặc bản thân với 1 trí nhớ tốt như 1 cỗ máy 
 
 Nah, these things so difficult. I get back to my mathematics, my calculus.
 
-\subsection{Why bad things always happen to good people? -- Tại sao người tốt luôn gặp chuyện xấu?}
+\section{Why bad things always happen to good people? -- Tại sao người tốt luôn gặp chuyện xấu?}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Kushner_bad_things_good_people}. {\sc Harold S. Kushner}. {\it When Bad Things Happen to Good People}.
@@ -551,10 +553,11 @@ Maybe he never nails it, the kind of thoughts \& writings he always wants to pur
 	-- 1 gã{\tt/}ả có tài, thậm chí có nhiều tài hay nhiều loại năng khiếu, nhưng lại không chịu{\tt/}không thể (?) để lại bất cứ tác phẩm nghệ thuật nào, không có 1 chút cống hiến hay truyền lại bất cứ di sản nào cho (các) thế hệ tiếp theo sau hắn{\tt/}ả. 1 sự phí phạm tài năng đến mức kinh khủng \& đáng bị nguyền rủa!
 \end{quote}
 
-\section{An Initial Configuration-- 1 Thiết Lập Ban Đầu}
+\chapter{An Initial Configuration-- 1 Thiết Lập Ban Đầu}
+\minitoc
 Bằng cách đặt ra 1 số nguyên lý (principles) \& quy tắc (rules), chúng tôi tin là `cuộc thập tự chinh' này sẽ có chỗ để bám níu vào, chúng có tác dụng như những cái mỏ neo, ít nhất để không bị lạc giữa đại dương tri thức mênh mông với những con quái vật của sự vô tri (ignorance monsters) \& những con quỷ của sự ngu dốt \& ác độc (devils of stupidities \& cruelties) chầu chực chờ sẵn dưới đáy đại dương sâu thẳm -- the deep bottom of a dark ocean -- có thể vồ túm lấy ta bất cứ lúc nào khi mà nhận thức của ta bị đánh lừa \& rơi vào trạng thái u mê mất cảnh giác.
 
-\subsection{Rules -- Các quy tắc}
+\section{Rules -- Các quy tắc}
 Mỗi người $P$ (abbr., person) có một xuất phát điểm $\{P(t)\}_{0\le t\le t_0}$ khác nhau, được hưởng hoặc bị ép nhồi các nền tảng giáo dục khác nhau, sự tương tác với những người khác nhau, cùng vô vàn những chuyện \& những biến cố họ gặp trong suốt 1 cuộc đời hoàn toàn khác nhau, thành ra nền tảng nhận thức \& xu hướng phát triển nhận thức, cùng sự hình thành các cấu trúc niềm tin \& các hệ giá trị cơ bản cùng thế giới quan của mỗi người hoàn toàn khác nhau.
 
 Quy tắc đầu tiên ở đây là:
@@ -566,12 +569,12 @@ Quy tắc đầu tiên ở đây là:
 	Một phản tư xa hơn trong tương lai có lẽ là chẳng có hành trình phát triển tự thân nào mà đủ sức chống chọi 1 cách hiệu quả với các tương tác xã hội cả, đặc biệt là các tương tác xấu \& các mối quan hệ độc hại (toxic relationships) cả. Khi đó thì tất cả các ghi chú ở đây sẽ bị xóa. Mọi thứ trở về cấu hình sống nhiều mặt phổ dụng để che giấu bản thân.
 \end{Rule} 
 
-\subsection{Goals -- Các mục tiêu}
+\section{Goals -- Các mục tiêu}
 This writing activity is one of many ways, which is likely to become the main one, to balance between my scientific work \& personal life. I believe some arts will be the tool.
 
 Việc viết lách, theo mình nghĩ, bằng cách này hay cách khác, một lúc nào đó \& theo 1 cách tự nhiên nào đó, cũng sẽ tìm tới những kẻ thích suy nghĩ, những kẻ hay nghĩ nhiều, \& những kẻ mệt mỏi vì cái tật đó, e.g., nhà nghiên cứu, nghiên cứu sinh, các học giả, nói chung là những người làm trong mảng học thuật hoặc phải tiếp xúc nhiều với chữ. Tật hay tài thì chưa biết nhưng ắt hẳn việc viết dùng để sắp xếp mọi thứ trong đầu cho ngăn nắp thì không thể tránh khỏi đối với những người làm việc đầu óc nhiều.
 
-\subsection{Styles -- Các phong cách}
+\section{Styles -- Các phong cách}
 
 \begin{itemize}
 	\item {\it Original style}: khi bắt đầu tự học về nghề viết, chúng tôi tham khảo quyển {\it The Elements of Style} \cite{Strunk_element_style,Strunk_White_element_style} của giáo sư tiếng Anh người Mỹ {\sc William Strunk Jr.} tại Đại học Cornell.
@@ -589,7 +592,8 @@ Việc viết lách, theo mình nghĩ, bằng cách này hay cách khác, một 
 	-- Mỗi phần, phần con sẽ được khởi tạo với {\sf Keywords -- Từ Khóa, Resources -- Tài Nguyên, Goals -- Các Mục Tiêu}.
 \end{itemize}
 
-\section{On Writing: Literary Writing for A Literary Retard -- Bàn Về Việc Viết: Học Viết Văn Cho Kẻ Dốt Đặc Văn Chương}
+\chapter{On Writing: Literary Writing for A Literary Retard -- Bàn Về Việc Viết: Học Viết Văn Cho Kẻ Dốt Đặc Văn Chương}
+\minitoc
 {\bf \textsf{Keywords -- Từ khóa.}} {\it Literary -- văn chương, prose -- văn xuôi, writing style -- văn phong}.
 
 Trước hết, để tôi giải thích cho bạn vì sao tôi là 1 trong những người phù hợp nhất trên cái hành tinh này để viết 1 cái phần có tên là {\it On Writing: Literary writing for a literary retard -- Bàn về việc viết: Học viết văn cho kẻ dốt đặc văn}. Đơn giản vì: tôi là 1 kẻ thiểu năng văn chương đúng nghĩa đen.
@@ -608,7 +612,7 @@ Trước hết, để tôi giải thích cho bạn vì sao tôi là 1 trong nh�
 	{\sf Hồng [26--?; critically practical disagreeable writer]}: Oh my fucking gosh! It is true that I am an atheist but what in the bloody hell are you even thinking about my sexuality? Let me alone. Get the fuck out of my head. I need to write.
 \end{quote}
 
-\subsection{I want to be a writer -- Tôi muốn trở thành 1 nhà văn}
+\section{I want to be a writer -- Tôi muốn trở thành 1 nhà văn}
 \label{sect: writer wannabe}
 Tên phần này bắt chước tựa đề của quyển {\it I want to be a mathematician: An Automathography} \cite{Halmos1985,Halmos1985_3_parts} (tạm dịch: {\it Tôi muốn trở thành 1 nhà toán học: tự truyện cho nghề làm toán}) của nhà toán học \& nhà triển lãm nghệ thuật về khoa học nổi tiếng người Áo--Hungary {\sc Paul Halmos}. Đa số những nhà Toán học giỏi thường là những bậc thầy về ngôn từ (masters of word)-- mình tin là như vậy. {\it Why though?}
 
@@ -683,7 +687,7 @@ Không kể xuất thân từ đâu, học thức cơ bản thế nào, con ngư
 	``It has long been 1 of the contentions of {\sc Alfred Adler} that scientific knowledge must never remain the private property to those who, by virtue of their special training, have been enabled to win new truths from Nature: the value of all knowledge is relative to its usefulness to humanity.'' -- \cite[Translator's Preface, p. vii]{Adler_human_nature}
 \end{quotation}
 
-\subsection{Authenticity -- Tính xác thực}
+\section{Authenticity -- Tính xác thực}
 
 \begin{quote}
 	{\sf Hồng [25; writer wannabe, literary retard]}: Lúc tôi mới từ Đức về thì tôi nản lắm. Anh Quang Vinh, nghệ danh Vinhmath, trước tôi 1 khóa có nhắn đểu cho tôi. Anh này cấp 3 chuyên Tin, nhưng lên Đại học thì học ngành Toán-Tin giống tôi. Nếu có thể diễn tả ngắn gọn về ảnh thì tôi nghĩ là: ảnh tính xác suất của 1 sự kiện ra mấy triệu, mấy tỷ mà vẫn tự tin khoe chiến tích tính toán rầm rầm trên mạng xã hội cho các học viên là các bé cấp 2, cấp 3 dễ dụ, dễ bị thao túng. Anh ta không phân biệt được 2 phân môn Xác Suất (Probability) \& Thống Kê (Statistics) có thể do 2 môn này thường được gom chung thành môn Xác Suất Thống Kê cho các ngành không sử dụng Toán học nhiều. Nhưng anh Vinh là sinh viên ngành Toán Tin giống tôi cơ mà. Nói chung chả hiểu. Anh ta nói khá nhiều, về nhiều lĩnh vực \& mỗi lĩnh vực thì nói cũng nhiều. Nói chung là viết dài lắm mà ý hông bao nhiêu. Như thằng {\sf Tử}, bạn học chung lớp chuyên Toán của tôi hồi cấp 3 hay nói là: {\it``Xuất tinh ra 1 đống mà toàn là nước, chả có con nòng nọc nào trong đó cả.''}. Kiểu kiểu vậy, phép ví von hơi kỳ nhưng chắc anh hiểu ý tôi.
@@ -713,7 +717,7 @@ Không kể xuất thân từ đâu, học thức cơ bản thế nào, con ngư
 	-- Cứ để sự cô độc gặm nhắm toàn bộ cơ thể vật lý của anh \& toàn bộ tâm trí anh, rồi sau đó cố gắng làm chủ (các) giọng nói trong đầu anh. Biến chúng từ kẻ thù bên trong anh thành đồng minh của anh. Anh rồi sẽ hiểu ý tôi thôi khi đã làm chủ được chúng.
 \end{quote}
 
-\subsection{Into the wild \& a peaceful life in the woods -- Tìm về chốn hoang dã \& 1 cuộc sống yên ả trong rừng sâu}
+\section{Into the wild \& a peaceful life in the woods -- Tìm về chốn hoang dã \& 1 cuộc sống yên ả trong rừng sâu}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Giang_nature}. {\sc Đặng Hoàng Giang}. {\it Vẻ Đẹp Của Cảnh Sắc Tầm Thường Hay Vì Sao Chúng Ta Cần Thay Đổi Cách Thưởng Thức Thiên Nhiên?}.
@@ -731,7 +735,7 @@ Trong phim \href{https://www.imdb.com/title/tt0097165}{\it Dead Poets Society} (
 
 FOMO vs. JOMO. Fear of missing out vs. Joy of missing out.
 
-\subsection{I want to write a book -- Tôi muốn viết 1 cuốn sách}
+\section{I want to write a book -- Tôi muốn viết 1 cuốn sách}
 
 \begin{quote}
 	{\sf Hồng [25; writer wannabe]}: Tôi muốn viết 1 cuốn sách nho nhỏ, e.g., 1 tiểu thuyết ngắn. Nhưng tôi mới học viết nên chưa biết phải bắt đầu từ đâu.
@@ -746,7 +750,7 @@ FOMO vs. JOMO. Fear of missing out vs. Joy of missing out.
 \end{quote}
 {\it What an arrogant freak!} I can hear that silently but clearly from you. But for me, this is totally fine, at least for a monomaniac.
 
-\subsubsection{Establish writing habits -- Thiết lập các thói quen viết lách}
+\subsection{Establish writing habits -- Thiết lập các thói quen viết lách}
 
 \begin{quote}
 	{\sf Hồng [28--?; writer]}: Thú thật. Tôi có 1 thói quen cực xấu: Tôi luôn viết lách kiểu tốc ký vào 1 tờ giấy, bất cứ loại giấy gì, thường là giấy A4, nhưng cũng có thể là giấy súc (i.e., giấy vệ sinh). Nếu anh thắc mắc tại sao lại có cuộn giấy súc trên bàn viết lách được đặt ngay trước bàn thờ nhà tôi thì tôi sẽ không giải thích. Có thể là tôi sợ đổ cafe dơ các xấp giấy mới tinh của tôi. Quên. Lạc đề. Thói quen cực xấu khi viết lách của tôi là tôi hay quăng các bản thảo của tôi \& xé chúng. Nếu anh hỏi tại sao thì có lẽ 1 phần trong não, đúng hơn là 1 phần linh hồn của tôi không chấp nhận mong muốn trở thành nhà văn của tôi, chúng bắt tôi làm Toán. Thành ra có 1 sự giằng xé sâu sắc \& quyết liệt ở những lằn ranh giới về lựa chọn nghề nghiệp đó. Tôi không muốn anh phá hủy các bản nháp, bảo thảo chưa công bố của anh như tôi. Nếu tôi giữ lại tất cả các bản thảo mà tôi đã, đang, \& sẽ phá hủy thì cuốn tiểu thuyết mà anh đang đọc sẽ dày lên đáng kể. Tôi nghiêm túc, không hề phóng đại.
@@ -760,7 +764,7 @@ FOMO vs. JOMO. Fear of missing out vs. Joy of missing out.
 	{\sf Hồng [28--?; writer]}: À, chả có gì to tát. Tôi nhờ anh bạn {\sf Hồng [25--?; programmer, computer scientist wannabe]} giúp tôi. Tôi thích kiểu bút mực, giấy trắng truyền thống, nhưng tôi cũng không muốn mù tịt công nghệ mãi cho tới lúc chết được. Nếu cứ như vậy thì chắc chắn sẽ thua với các cây bút trẻ đang lên.
 \end{quote}
 
-\subsubsection{Dictionary -- Từ điển}
+\subsection{Dictionary -- Từ điển}
 We have used:
 \begin{itemize}
 	\item {\it Oxfords Dictionaries.} Including {\it Oxford Advanced Learner's Dictionary, Oxford Learner's Dictionary of Academic English}. \url{https://www.oxfordlearnersdictionaries.com/}. Từ điển Oxford chú trọng giải nghĩa của 1 từ hơn là cho ví dụ.
@@ -771,7 +775,7 @@ Note that there are many words that we need but not included in any of these dic
 
 -- Lưu ý rằng có nhiều từ chúng ta cần nhưng không có trong bất kỳ từ điển nào trong số này. Vậy thì Google nhé.
 
-\subsubsection{Translation operator -- Toán tử dịch thuật}
+\subsection{Translation operator -- Toán tử dịch thuật}
 \textbf{\textsf{\small Vocabulary -- Từ vựng.}}
 \begin{itemize}\small
 	\item {\sf translate} [v] {\tt/}\textipa{tr\ae nz`leIt}{\tt/} 1. to express the meaning of speech or writing in a different language; 2. to be changed from 1 language to another; 3. to change something into a different form; to lead to a particular result; 4. {\it translate (something) (as something)} to understand something in a particular way or give something a particular meaning, $=$ {\sf interpret}.
@@ -792,7 +796,7 @@ Mỗi quốc gia thường có 1 loại ngôn ngữ chính, see, e.g., \href{htt
 \end{example}
 
 
-\subsubsection{Writing standards -- Các tiêu chuẩn viết lách}
+\subsection{Writing standards -- Các tiêu chuẩn viết lách}
 
 \begin{quote}
 	{\sf Hồng [25; writer wannabe, literary retard]}: Làm thế nào để biết tôi viết ổn?
@@ -816,7 +820,7 @@ Mỗi quốc gia thường có 1 loại ngôn ngữ chính, see, e.g., \href{htt
 	{\sf Hồng [28--?; writer]}: Đi tù anh nhé: Tốt cho phái nữ \& cho cả thế gian.
 \end{quote}
 
-\subsubsection{Some rules \& principles in writing}
+\subsection{Some rules \& principles in writing}
 Some of own rules \& principles in writing our crafts are the following:
 
 {\sf[en]$\to$[vi]} Vài quy tắc \& nguyên tắc trong việc viết các bản thảo của chúng tôi:
@@ -853,7 +857,7 @@ We used to split the Series: {\it A Personal Journey to Realms of Knowledge: Won
 \end{itemize}
 But now we find it unnecessary to split like that, so we merge all of them.
 
-\subsection{Dumbphone vs. smartphone -- Điện thoại ngu{\tt/}cùi bắp vs. Điện thoại khôn{\tt/}thông minh}
+\section{Dumbphone vs. smartphone -- Điện thoại ngu{\tt/}cùi bắp vs. Điện thoại khôn{\tt/}thông minh}
 \textbf{\textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Giang_smartphone}. {\sc Đặng Hoàng Giang}. {\it Thiện, Ác \& Smart Phone}.
@@ -912,7 +916,8 @@ Cuối năm lớp 9, ôn thi chuyển cấp thì mình định thi sang Trườn
 
 %------------------------------------------------------------------------------%
 
-\section{Combustion: Order {\it\&}{\tt/}vs. Chaos -- Bùng Cháy: Trật tự {\it\&}{\tt/}vs. Hỗn loạn}
+\chapter{Combustion: Order {\it\&}{\tt/}vs. Chaos -- Bùng Cháy: Trật tự {\it\&}{\tt/}vs. Hỗn loạn}
+\minitoc
 \noindent{\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Peterson_rule}. {\sc Jordan B. Peterson}. {\it 12 Rules for Life: An Antidote to Chaos}.
@@ -996,7 +1001,7 @@ It is okay. Just split into Giver $\oplus$ Matcher.
 	\caption{{\sc Gojo Satoru} awakens before the fight with {\sc Toji Fushiguro} \href{https://www.imdb.com/title/tt12343534/}{\it Jujutsu Kaisen} (2020--?).}
 \end{figure}
 
-\subsection{Divergences: The ultimate split? -- Các đợt phân kỳ: Sự chia tách cuối cùng?}
+\section{Divergences: The ultimate split? -- Các đợt phân kỳ: Sự chia tách cuối cùng?}
 \begin{flushright}
 	\musEighth[\href{https://www.youtube.com/watch?v=_4m02-f9aQs}{Hyori Ittai Lamento for Piano} | Hunter $\times$ Hunter]\musEighth
 \end{flushright}
@@ -1037,7 +1042,7 @@ If a human body is a physical vessel in order to contain a soul or multiple soul
 	Nếu cả lũ chúng mày xúm tụm lại để úp sọt tao như 1 lũ Goblins bu lại giết Goblin Slayer (\href{https://www.imdb.com/title/tt8690728/}{\it Goblin Slayer} (2018--2023)) hòng giết cái phần nhân cách ngây thơ đến mức nhu nhược của tao thì cứ tự nhiên mà cắn xé. Tao sẽ xây dựng trên cái xác phần nhân cách ngây thơ đó 1 nhân cách khác đủ mạnh, thậm chí mạnh đến mức có thể diệt sạch tất cả cái phần ác của lũ Goblins chúng mày mà không cần tương tác vật lý. Hỗn chiến kiểu tác động vật lý là cho lũ con nít ranh ấu trĩ, người lớn tẩn nhau ở đấu trường của tâm trí. Chúng mày rồi sẽ phải hiểu điều đó để mà có thể trưởng thành.
 \end{quote}
 
-\subsubsection{The Room of Thought -- Căn phòng của Nghĩ Suy}
+\subsection{The Room of Thought -- Căn phòng của Nghĩ Suy}
 He enters the realm of Thought, totally \& completely open-minded to feel literally anything that is close to him or come towards him, like a topological object which is ready to open all of its holes, except its asshole because it is still afraid of {\sc P. Diddy} with some bottles of Baby Oil, to accept anything in order to filter it.
 
 {\sf[en]$\to$[vi]} Hắn bước vào địa hạt của Nghĩ Suy, hoàn toàn mở tung tâm trí để cảm nhận theo nghĩa đen bất cứ thứ gì gần hắn hay đang tiến về phía hắn, như 1 vật thể tôpô sẵn sàng dạng{\tt/}banh rộng hết tất cả các lỗ, trừ lỗ nhị do hắn vẫn khiếp sợ {\sc P. Diddy} với \st{dâm} dăm 3 chai Baby Oil, để đón nhận tất cả mọi thứ để lọc chúng.
@@ -1051,7 +1056,7 @@ Thời đại học, hắn phải sống trong Ký Túc Xá với cái phòng �
 \end{goal}
 {\sc1-Man Army}: Alright. Let me build our army. 1st we need a fighter, a real warrior, named him {\sf Hồng [disagreeable]}. We also need some medics, healers, e.g., {\sf Hồng [psychiatrist], Hồng [psychologist]}, but we need to separate these medics with {\sc Lust} because if not, we will have, as a result of a sexual combination of medics \& lust, \href{https://www.imdb.com/title/tt13370404/}{\it Kaifuku Jutsushi no Yarinaoshi $\star$ Redo of Healer} (2021) [18+]\footnote{Các em học sinh cấp 2, cấp 3 đừng nên xem nhé! Ui thui thui, ngăn cấm tụi nhóc này cái gì là xác định tụi nhỏ xem cho bằng được rồi. Dòng dõi của {\sf Adam \& Eva} mà lị.}.
 
-\subsection{Art \& life -- Nghệ thuật \& cuộc sống}
+\section{Art \& life -- Nghệ thuật \& cuộc sống}
 We need arts for life. -- Chúng ta cần các dạng nghệ thuật cho cuộc sống. An advise for artists by Sir {\sc Ian McKellen}:
 \begin{quotation}
 	{\it``Practice any art to experience becoming. To find out what's inside you \& make your soul grow.'' -- Sir {\sc Ian McKellen} reads {\sc Kurt Vonnegut}'s inspiring letter to a group of school students.}
@@ -1084,7 +1089,8 @@ We need arts for life. -- Chúng ta cần các dạng nghệ thuật cho cuộc 
 
 %------------------------------------------------------------------------------%
 
-\section{Towards the $\Psi$-Flow: Optimal Experiences -- Hướng Đến Dòng Chảy Tâm Lý Học $\Psi$: Các Trải Nghiệm Tối Ưu}
+\chapter{Towards the $\Psi$-Flow: Optimal Experiences -- Hướng Đến Dòng Chảy Tâm Lý Học $\Psi$: Các Trải Nghiệm Tối Ưu}
+\minitoc
 \noindent{\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Csikszentmihalyi_flow}. {\sc Mihaly Csikszentmihalyi}. {\it Flow: The Psychology of Optimal Experience}.
@@ -1105,10 +1111,10 @@ We need arts for life. -- Chúng ta cần các dạng nghệ thuật cho cuộc 
 	\item \cite{Csikszentmihalyi_flow_VN}. {\sc Mihaly Csikszentmihalyi}. {\it Flow: The Psychology of Optimal Experience -- Dòng Chảy: Tâm Lý Học Hiện Đại Trải Nghiệm Tối Ưu}.
 \end{itemize}
 
-\subsection{Various types of flows -- Các loại dòng chảy khác nhau}
+\section{Various types of flows -- Các loại dòng chảy khác nhau}
 `Flow' -- `dòng chảy' có nhiều loại khác nhau, trong những địa hạt khác nhau. Trang \href{https://en.wikipedia.org/wiki/Flow}{Wikipedia{\tt/}flow} đề cập đến nhiều thể loại `flow' khác nhau.
 
-\subsubsection{Flows in Mathematics realm -- Các dòng chảy trong địa hạt Toán Học}
+\subsection{Flows in Mathematics realm -- Các dòng chảy trong địa hạt Toán Học}
 ``In \href{https://en.wikipedia.org/wiki/Mathematics}{mathematics},  a {\it flow} formalizes the idea of the motion of particles in a fluid. Flows are ubiquitous in science, including \href{https://en.wikipedia.org/wiki/Engineering}{engineering} \& \href{https://en.wikipedia.org/wiki/Physics}{physics}. The notion of flow is basic to the study of \href{https://en.wikipedia.org/wiki/Ordinary_differential_equation}{ordinary differential equations} (ODEs). Informally, a flow may be viewed as a continuous motion of points over time. More formally, a flow is a \href{https://en.wikipedia.org/wiki/Group_action_(mathematics)}{grou action} of the \href{https://en.wikipedia.org/wiki/Real_number}{real numbers} on a \href{https://en.wikipedia.org/wiki/Set_(mathematics)}{set}.'' -- \href{https://en.wikipedia.org/wiki/Flow_(mathematics)}{Wikipedia{\tt/}flow (mathematics)}
 
 \begin{definition}[Flow in mathematics]
@@ -1125,7 +1131,7 @@ We need arts for life. -- Chúng ta cần các dạng nghệ thuật cho cuộc 
 \end{definition}
 Set $\varphi^t(x)\coloneqq\varphi(t,x)$, then \eqref{flow} can be expressed as $\varphi^0 = {\rm Id}$ (the \href{https://en.wikipedia.org/wiki/Identity_function}{identity function}) \& $\varphi^s\circ\varphi^t = \varphi^{s + t}$ (group law). Then, $\forall t\in\mathbb{R}$, the mapping $\varphi^t:X\to X$ is a bijective with inverse $\varphi^{-t}:X\to X$. This follows from Def. \ref{def: flow}, \& the real parameter $t$ may be taken as a generalized \href{https://en.wikipedia.org/wiki/Functional_power}{functional power}, as in \href{https://en.wikipedia.org/wiki/Function_iteration}{function iteration}.
 
-\subsubsection{Flows in Psychology realm -- Các dòng chảy trong địa hạt Tâm Lý Học}
+\subsection{Flows in Psychology realm -- Các dòng chảy trong địa hạt Tâm Lý Học}
 
 \begin{definition}[$\Psi$-flow]
 	``\emph{Flow} in \href{https://en.wikipedia.org/wiki/Positive_psychology}{positive psychology}, also known colloquially as being \emph{in the zone} or \emph{locked in}, is the \href{https://en.wikipedia.org/wiki/Mental_state}{mental state} in which a person performing some activity is fully immersed in a feeling of energized focus, full involvement, \& enjoyment in the process of activity. In essence, flow is characterized by the complete absorption in what one does, \& a resulting transformation in one's sense of time. Flow is the melting together of action \& \href{https://en.wikipedia.org/wiki/Consciousness}{consciousness}; the state of finding a balance between a skill \& how challenging that task is. It requires a high level of concentration. Flow is used as a \href{https://en.wikipedia.org/wiki/Coping}{coping} skill for stress \& anxiety when productively pursuing a form of leisure  that matches one's skill set.'' -- \href{https://en.wikipedia.org/wiki/Flow_(psychology)}{Wikipedia{\tt/}flow (psychology)}
@@ -1135,9 +1141,9 @@ Set $\varphi^t(x)\coloneqq\varphi(t,x)$, then \eqref{flow} can be expressed as $
 	\emph{Dòng chảy} trong tâm lý học tích cực, còn được gọi thông tục là \emph{ở trong vùng} hoặc \emph{bị nhốt}, là trạng thái tinh thần trong đó 1 người thực hiện 1 số hoạt động hoàn toàn đắm chìm trong cảm giác tập trung tràn đầy năng lượng, tham gia trọn vẹn, \& thích thú trong quá trình hoạt động. Về bản chất, dòng chảy được đặc trưng bởi sự tập trung hoàn toàn vào những gì 1 người làm \& dẫn đến sự biến đổi trong nhận thức về thời gian của 1 người. Dòng chảy là sự hòa tan của sự hành động \& ý thức; trạng thái tìm kiếm sự cân bằng giữa 1 kỹ năng \& mức độ thách thức của nhiệm vụ đó. Dòng chảy đỏi hỏi mức độ tập trung cao. Dòng chảy được sử dụng như 1 kỹ năng đối phó với căng thẳng \& lo lắng khi theo đuổi 1 hình thức giải trí phù hợp với kỹ năng của 1 người 1 cách hiệu quả. 
 \end{dinhnghia}
 
-\subsubsection{Flows in Philosophy realm -- Các dòng chảy trong địa hạt Triết Học}
+\subsection{Flows in Philosophy realm -- Các dòng chảy trong địa hạt Triết Học}
 
-\subsubsection{Flows in Music realm -- Các dòng chảy trong địa hạt Âm Nhạc}
+\subsection{Flows in Music realm -- Các dòng chảy trong địa hạt Âm Nhạc}
 ````Flow'' is defined as ``the rhythms \& rhymes'' of a hip-hop song's lyrics \& how they interact -- the book \href{https://en.wikipedia.org/wiki/How_to_Rap}{How to Rap} breaks flow down into rhyme, \href{https://en.wikipedia.org/wiki/Rhyme_scheme}{rhyme schemes}, \& rhythm (also known as \href{https://en.wikipedia.org/wiki/Cadence_(music)}{cadence}). `Flow' is also sometimes used to refer to elements of the delivery (\href{https://en.wikipedia.org/wiki/Pitch_(music)}{pitch}, \href{https://en.wikipedia.org/wiki/Timbre}{timbre}, \href{https://en.wikipedia.org/wiki/Loudness}{volume}) as well, though often a distinction is made between the flow \& the delivery. Staying on the beat is central to rap's flow -- many \href{https://en.wikipedia.org/wiki/Master_of_Ceremonies#Hip_hop}{Master of Ceremonies} (abbr., MCs)  note the importance of staying on-beat in {\it How to Rap} including [list of MCs $\ldots$]''
 
 {\sf[en]$\to$[vi]}: ``Flow'' được định nghĩa là ``nhịp điệu \& vần điệu'' của lời bài hát hip-hop \& cách chúng tương tác với nhau -- cuốn sách {\it How to Rap} chia flow thành vần điệu, các sơ đồ vần điệu \& nhịp điệu (còn được gọi là nhịp điệu). 'Flow' đôi khi cũng được dùng để chỉ các yếu tố của cách truyền tải (cao độ, âm sắc, âm lượng), mặc dù thường có sự phân biệt giữa flow \& cách truyền tải. Giữ đúng nhịp là yếu tố cốt lõi của dòng rap -- nhiều Người dẫn chương trình (viết tắt là MC) lưu ý tầm quan trọng của việc giữ đúng nhịp trong {\it How to Rap} bao gồm [danh sách các MCs $\ldots$]
@@ -1156,7 +1162,7 @@ Set $\varphi^t(x)\coloneqq\varphi(t,x)$, then \eqref{flow} can be expressed as $
 
 For more details in the topic of Rapping (with double `p'!), see, e.g., \href{https://en.wikipedia.org/wiki/Rapping}{Wikipedia{\tt/}rapping}.
 
-\subsection{Passion -- Niềm đam mê}
+\section{Passion -- Niềm đam mê}
 \textbf{\textsf{\small Vocabulary -- Từ vựng.}}
 \begin{itemize}\small
 	\item {\sf passion} [n] {\tt/}`p\ae Sn{\tt/} 1. a very strong feeling of love, hate, anger, enthusiasm, etc.; 2. a very strong feeling of liking something; a hobby, an activity, etc. that you like very much; 3. {\it passion (for somebody)} a very strong feeling of sexual love; 4. a state of being very angry, $=$ {\sf rage}; 5. {\it the Passion} (in Christianity) the suffering \& death of {\sf Jesus Christ}.
@@ -1204,7 +1210,7 @@ For more details in the topic of Rapping (with double `p'!), see, e.g., \href{ht
 
 %------------------------------------------------------------------------------%
 
-\subsection{Boredom vs. Creativity -- Cơn buồn chán  vs. Sự sáng tạo}
+\section{Boredom vs. Creativity -- Cơn buồn chán  vs. Sự sáng tạo}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Csikszentmihalyi_creativity}. {\sc Mihaly Csikszentmihalyi}. {\it Creativity: Flow \& the Psychology of Discovery \& Invention}.
@@ -1237,7 +1243,7 @@ Read also:
 
 %------------------------------------------------------------------------------%
 
-\subsection{Contributions {\it\&} Legacies -- Sự cống hiến {\it\&} Các di sản}
+\section{Contributions {\it\&} Legacies -- Sự cống hiến {\it\&} Các di sản}
 
 \begin{quote}
 	{\sf Hồng [25; depressed mathematician wannabe]}: Nhưng tao chưa có bằng PhD, ai sẽ nghe lời tao chứ?
@@ -1265,7 +1271,7 @@ If you want to know more about the legendary physicists {\sc Richard Feynman}, r
 
 ***Aoashi***
 
-\subsection{Convergences: Towards the endless unifications -- Các đợt hội tụ: Tiến tới các sự hợp nhất bất tận}
+\section{Convergences: Towards the endless unifications -- Các đợt hội tụ: Tiến tới các sự hợp nhất bất tận}
 Walking \& thinking on the common boundaries of different domains with enough knowledge about them obtained from the corresponding divergence processes.
 
 {\sf[en]$\to$[vi]} Dạo bước \& suy tư trên các phần biên{\tt/}ranh giới chung của các địa hạt khác nhau, với lượng kiến thức vừa đủ về các địa hạt đó thu được từ các quá trình phân kỳ tương ứng.
@@ -1274,14 +1280,15 @@ Walking \& thinking on the common boundaries of different domains with enough kn
 
 %------------------------------------------------------------------------------%
 
-\section{On Research: Stage 1 -- Bàn Về Nghiên Cứu: Hồi 1}
+\chapter{On Research: Stage 1 -- Bàn Về Nghiên Cứu: Hồi 1}
 \label{sect: research stage 1}
+\minitoc
 Chúng tôi dùng phần này để bàn sơ qua về các vấn đề chính sau:
 \begin{itemize}
 	\item Subsect. \ref{subsect: dirty tricks} bàn về dirty tricks -- các thủ đoạn bẩn thỉu hay mưu hèn kế bẩn thường gặp trong môi trường học tập, môi trường làm việc.
 \end{itemize}
 
-\subsection{Dirty trick -- Thủ đoạn bẩn thỉu{\tt/}Mưu hèn kế bẩn}
+\section{Dirty trick -- Thủ đoạn bẩn thỉu{\tt/}Mưu hèn kế bẩn}
 \label{subsect: dirty tricks}
 {\it Range of application -- Phạm vi áp dụng.} Các thủ đoạn dưới đây cũng áp dụng trong môi trường văn phòng, \& các môi trường làm việc trong phòng kín (why?).
 
@@ -1317,7 +1324,7 @@ Chúng tôi dùng phần này để bàn sơ qua về các vấn đề chính sa
 {\it The devil is in the details}\footnote{See, e.g., \href{https://en.wikipedia.org/wiki/The_devil_is_in_the_details}{Wikipedia{\tt/}the devil is in the details}.}.
 
 
-\subsubsection{Pretend to borrow documents -- Giả vờ xin tài liệu}
+\subsection{Pretend to borrow documents -- Giả vờ xin tài liệu}
 1 văn phòng nghiên cứu viện {\sc Weierstrass}, Berlin, Đức. Hắn thấy mình đang cặm cụi tính, chợt đồng nghiệp người Anh gốc Ấn Độ của hắn hỏi mượn tài liệu. Hắn chả nghĩ nhiều, cứ gửi qua bản tiếng Đức, kèm luôn cả bản dịch tiếng Anh mà hắn tự soạn, thêm cả ghi chú cá nhân vào đó. Hắn chợt nhớ tới chị Thương, senpai trước hắn 2 khóa, lúc hắn học Master 2. Hắn may mắn được học bổng của 1 viện nghiên cứu Pháp, {\sc Henri Lebesgue centre de math\'ematiques}\footnote{\url{https://www.lebesgue.fr/en}.}. Chị ta cũng hay xin đề thi \& tài liệu của hắn. Hắn chả nghĩ nhiều nên cho mượn tuốt. Mỗi lần đưa là chỉ sẽ nói đề khó quá, có khi chỉ làm không nổi, cười mỉm, rồi sau lưng hỏi điểm từng đứa. Hắn lúc đó tự hỏi:
 \begin{quote}
 	{\sf Hồng [22; mathematics Master 2 student]}: Sao chỉ làm nổi nhỉ? Mình thấy chuyện hốt giải nhất Olympic sinh viên toàn quốc còn dễ chịu hơn mấy cái đề master 2 này. Toàn mánh khóe, calculus tricks đủ kiểu. Phải cày liên tục suốt vài năm mới nhớ đủ trick để làm nổi. Trong khi chỉ còn chưa biết là hàm bình phương khả tích $L^2$, thậm chí $L^p$ với $p\in[1,\infty]$, thì được không cho giá trị tại 1 vài điểm, nói đúng hơn là 1 tập có độ đo không (sets with zero-Lebesgue-measure). Chắc chỉ chỉ đùa cho vui. Chắc thế.
@@ -1349,7 +1356,7 @@ Tất cả tài liệu hắn đưa cho chị ta, chỉ đều phán: ``Chị th�
 	{\sf Hồng [23; mathematics Master 2 student]}: Anh Dương có chân cẳng đầy đủ. Để tự ảnh lấy. Anh đừng đem qua kiểu như hầu hạ.
 \end{quote}
 
-\subsubsection{Verbal bullying -- Bắt nạt lời nói}
+\subsection{Verbal bullying -- Bắt nạt lời nói}
 
 \begin{quote}
 	{\sf Dương [26; 2nd year mathematics PhD student in mathematical analysis, sucked at coding \& numerics; Rook]}: Mày lấy cái cứt gì mà qua được tới đây hả thằng kia?
@@ -1368,7 +1375,7 @@ Dần dần, hắn căm ghét những buổi ăn chung tưởng chừng như đo
 
 Từ 1 đứa cố gắng sống tốt, trở nên có ích để giúp đỡ mọi người, bất cứ ai cần giúp hắn đều sẵn sàng giúp, giờ đây hắn dần hắc hóa thành 1 kẻ khó chịu. Điều mà sau này hắn nhìn lại thì thấy đó là 1 lẽ tất yếu. Hắn phải giết chết hoặc ít nhất là hạn chế cái phần agreeable -- dễ chịu tới mức quá lành của hắn, bằng cách đặt ra ngưỡng tối đa -- maximum threshold -- thì hắn mới phát triển 1 cách lành mạnh được.
 
-\subsubsection{Micro-envy \& micro-greedy -- Đố kỵ vi mô \& tham lam từng ly từng tý}
+\subsection{Micro-envy \& micro-greedy -- Đố kỵ vi mô \& tham lam từng ly từng tý}
 
 \begin{quote}
 	{\sf Hồng [27--?; psychiatrist]}: Tại sao anh không tham gia ăn cùng với mọi người mà toàn ăn 1 mình? Những anh chị nghiên cứu sinh Tiến sĩ chắc hẳn sẽ phải đối tốt với học viên Thạc sĩ như anh mới phải lẽ chứ hả?
@@ -1488,20 +1495,20 @@ Hắn đeo tai nghe vào, mở gần max volume bài {\it Beautiful} của rappe
 	Dẫu cho bạn làm bất cứ ngành nghề nào, đừng quên nhiệm vụ chính của việc làm người là phát triển nhân cách 1 cách toàn diện. Đừng phát triển nhân cách theo xu hướng của 1 kẻ khốn nạn, thích bắt nạt bất cứ ai mà bạn cho là dưới cơ hay yếu thế hơn bạn.
 \end{Rule}
 
-\subsubsection{Steal books, delete files -- Trộm sách, xóa tập tin}
+\subsection{Steal books, delete files -- Trộm sách, xóa tập tin}
 
 \begin{question}
 	Bạn sẽ làm gì khi phát hiện bạn bè, đồng nghiệp, thậm chí là người quản lý hoặc sếp nếu làm trong môi trường công sở hoặc chính thầy{\tt/}cô, người hướng dẫn, thậm chí giáo sư nếu làm trong mảng học thuật xóa bài hoặc hủy hoại các công trình của bạn?
 \end{question}
 
-\subsubsection{Divide to control groups -- Chia rẽ khiến lục đục nội bộ để dễ dàng kiểm soát}
+\subsection{Divide to control groups -- Chia rẽ khiến lục đục nội bộ để dễ dàng kiểm soát}
 Thay vì phương pháp {\it chia để trị -- divide to conquer} như trong mảng {\it Bất đẳng thức -- Inequality} trong địa hạt của Toán học, phần này bàn về {\it divide to control \& micro-managing -- phương pháp chia rẽ để kiểm soát \& quản lý vi mô}.
 
 \begin{question}
 	Trong cuộc chạy đua vũ trang để mưu sinh \& để khẳng định thực lực bản thân, con người ta cần phải tốn hay phải từ bỏ 1 cách phí phạm bao nhiêu phần nhân tính tốt thuần khiết để có thể chiến thắng trên đấu trường vật chất, đấu trường vị thế, cùng nhiều thể loại đấu trường khác, bằng các phương pháp bạo lực, vô đạo đức, các thủ đoạn bẩn thỉu, hèn hạ, etc. để rồi lại thua cuộc trên đấu trường về nhân tính (humanity) \& lương tâm (conscience)?
 \end{question}
 
-\subsection{Standards -- Các tiêu chuẩn}
+\section{Standards -- Các tiêu chuẩn}
 It is kind of funny, ironic, \& sarcastic that the 1st author of this writing is a dropout PhD student from one of the best research institutes of Applied Mathematics in Germany, Europe. Anyhow, it is also a good idea to see from the outside. The perspective of an outsider sometimes may shine some light \& reveal some insight to a dark room.
 
 Khá là hài hước, mỉa mai, \& châm biếm khi mà tác giả đầu tiên của bài viết này lại là 1 nghiên cứu sinh bậc Tiến sĩ bỏ cuộc từ 1 trong các viện nghiên cứu tốt nhất về Toán ứng dụng của Đức. Dù gì đi nữa, cũng sẽ là 1 ý hay khi mà nhìn mọi thứ từ bên ngoài (từ tầm mắt của 1 đứa bỏ học, nghỉ việc ngang). Tầm nhìn của 1 kẻ ngoại lai đôi khi lại có thể chiếu vài tia sáng \& tiết lộ vài cái nhìn sâu sắc hay sự hiểu biết vào 1 căn phòng tối tăm.
@@ -1526,7 +1533,7 @@ Hắn cũng chả hiểu anh ta cho lắm, chỉ biết nhiều anh chị lớn 
 	{\sf Hồng [28--?; applied mathematician]}: Cái quan trọng là sự liên kết giữa các công trình của anh. Kiểu anh trồng 1 cái cây vậy. Cái quan trọng là anh phải giúp cho nhựa cây luồng qua mạch dẫn khắp cái cây, liên kết với nhau, i.e., các chủ đề nghiên cứu của anh phải liên kết với nhau. Nếu anh chỉ nghiên cứu những chủ đề nghiên cứu rời rạc, hoàn toàn tách xa nhau, thì cái đấy không phải trồng cây, mà là gom củi. Có thể anh sẽ tích nhặt được khá nhiều củi, lâu lâu có 1 cây củi to, hoặc được đốn từ loài gỗ quý thì anh thấy sảng khoái, vỗ ngực đùng đùng như 1 con tinh tinh kiểu xem trí khôn của ta đây [{\sc Pride}]. Nhưng nó chỉ đến thế, niềm vui của anh vẫn rời rạc, không hề có sự liên kết \& phát triển [{\sc Disappointment}], chưa kể đến sự kết nối với các cây khác trong rừng hoặc hòa trộn các nhánh nghiên cứu với nhau như phương pháp cấy ghép, chiết cành. Anh sẽ vẫn giàu nhờ tiền bán củi, nhưng sẽ không bao giờ hiểu được cái niềm vui trồng cây đúng nghĩa nếu cứ gom củi kiểu ấy.
 \end{quote}
 
-\subsection{Philosophical methodologies -- Các phương pháp luận triết học}
+\section{Philosophical methodologies -- Các phương pháp luận triết học}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Popper_logic_science}. {\sc Karl Popper}. {\it The Logic of Scientific Discovery}.
@@ -1552,7 +1559,7 @@ Chắc mình thuộc loại 2, hoặc ít nhất là mình tự ép bản thân 
 
 Có 1 bài viết phân loại học giả hay của Prof. {\sc Nguyễn Tiến Zũng} của ĐH Toulouse, Pháp. Tiếc là sau khi Prof. Zũng hỗn chiến với bác  Phùng Xuân Nhạ thì website cá nhân \url{http://zung.zetamu.net/} của Prof. {\sc Zũng} trước bị lỗi font đến mức không thể đọc được \& giờ có lẽ đã bay màu. Mình rất thích nhiều bài viết trên trang web của Giáo sư, nhất là bài về thiên tài toán học người Pháp gốc Đức {\sc Alexander Grothendieck}.
 
-\subsection{Trends \& choices -- Các xu hướng \& lựa chọn}	
+\section{Trends \& choices -- Các xu hướng \& lựa chọn}	
 
 \begin{quote}
 	{\sf Nhân [23]}: Thế anh có biết những sở thích thời học sinh của 1 người ảnh hưởng thế nào đến xu hướng các lựa chọn chuyên ngành trong tương lai của họ không?
@@ -1578,9 +1585,9 @@ Có 1 bài viết phân loại học giả hay của Prof. {\sc Nguyễn Tiến 
 	{\sf Hồng [28]}: {\it What is so wrong with you?}
 \end{quote}
 
-\subsection{Signs -- Các dấu hiệu}
+\section{Signs -- Các dấu hiệu}
 
-\subsubsection{Personal systems of notations, abbreviations, \& conventions}
+\subsection{Personal systems of notations, abbreviations, \& conventions}
 Bộ (tuple), tập hợp (set), hay hệ thống các ký hiệu, cách viết tắt, \& các quy ước cá nhân -- a personal set{\tt/}system of notations, abbreviations, \& conventions -- của 1 nhà khoa học tự nhiên thiên về lý thuyết hơn là về tính toán engineering thuần ứng dụng, e.g., nhà toán học (mathematicians), nhà vật lý (physicists), nhà khoa học máy tính (computer scientist), etc. là dấu hiệu đầu tiên cho biết trình độ của họ. Đơn giản vì các môn khoa học này có 1 đặc thù là đòi hỏi độ nhất quán (consistency) cực kỳ cao cho nên 1 hệ thống ký hiệu nhất quán, không mâu thuẫn, tiện dụng, không tạo ra bất kỳ sự mơ hồ, mờ mập (confusion) sẽ phản ánh phần nào trình độ của họ. Đấy là dấu hiệu dễ nhận biết đầu tiên -- nhưng còn xa so với mức phán xét -- của 1 người làm khoa học giỏi hoặc ít nhất là có 1 người thầy, người hướng dẫn giỏi.
 
 Riêng các nhà hóa học (chemists) thì có lẽ họ được quy định chung bởi các danh pháp quốc tế như International Union of Pure \& Applied Chemistry (abbr., IUPAC)\footnote{\url{https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry}.} nên không{\tt/}chưa thể dùng hệ thống ký hiệu cá nhân để đánh giá sơ bộ. Có lẽ mình nên kết thêm vài đứa bạn chuyên ngành Hóa để hiểu thêm (vừa đủ).
@@ -1592,7 +1599,7 @@ Lời khuyên (tự thân) này na ná câu trích dẫn sau của Abraham Linco
 	``Give me 6 hours to chop down a tree \& I will spend the 1st 4 sharpening the axe.'' -- {\sc Abraham Lincoln} (1809--1865) -- 16th President of the United States (1861--1865)
 \end{quote}
 
-\subsubsection{Consistency -- Sự nhất quán}
+\subsection{Consistency -- Sự nhất quán}
 
 \begin{question}
 	Liệu có nên (dấn thân) theo 1 nghề cố định, không chịu{\tt/}thèm nhảy nghề không? 
@@ -1607,10 +1614,10 @@ Hiển nhiên 1 câu hỏi khó muôn thở. Khó chịu lẫn khó nhằn theo 
 
 Tôi không hề nghĩ sẽ cố trả lời 1 cách hoàn hảo câu hỏi này hay giải quyết vấn đề này. Đồng ý là tôi ngu, nhưng chưa ngu đến mức vậy. Chưa kể có bất kỳ câu trả lời nào không (no guarantee of existence), nếu có thì cũng không hề có câu trả lời duy nhất (even if the existence is assumed, the nonuniqueness is still valid), cũng như chưa \& sẽ không chả có câu trả lời nào sẽ thỏa mãn hết tất cả các phương diện giá trị được suy xét ở {\it biểu diễn phân hoạch các giá trị \& ý nghĩa của cuộc đời} ({\it a decomposition of values \& meanings in life}) sẽ được xét đến trong Sect. \ref{sect: bullshit theory on live}: {\it A Bullshit Theory on Living -- 1 Lý Thuyết Nhảm Nhí Về Việc Sống}.
 
-\subsubsection{Accuracy{\tt/}Precision -- Tính chính xác}
+\subsection{Accuracy{\tt/}Precision -- Tính chính xác}
 Sự chính xác là ưu tiên hàng đầu của các nhà Toán học (Mahematicians), nhà Vật Lý Học (Physicists), 
 
-\subsubsection{Simplicity -- Sự giản đơn}
+\subsection{Simplicity -- Sự giản đơn}
 \textbf{\textsf{\small Vocabulary -- Từ vựng.}}
 \begin{itemize}\small
 	\item {\sf simplicity} [n] {\tt/}\textipa{sIm'plIs@ti}{\tt/} (pl. simplicities) 1. [uncountable] the quality of being easy to understand or use; 2. [uncountable] ({\it approving}) the quality of being natural \& plain; 3. [countable, usually plural] an aspect of something that is easy, natural, or plain; {\sf be simplicity itself} [idiom] to be very easy or plain.
@@ -1623,15 +1630,15 @@ Sự chính xác là ưu tiên hàng đầu của các nhà Toán học (Mahemat
 
 {\sf[en]$\to$[vi]} Chúng ta sử dụng sự đơn giản để chống lại khó khăn, khó nhằn. Chúng ta không thêm vào những phức tạp không cần thiết \& sự dư thừa cho cuộc chiến vì nếu chúng ta làm như vậy, chúng ta sẽ phải tự chiến đấu với chính mình, với những vướng mắc, những sự nhập nhằng của bản thân chúng ta.
 
-\paragraph{Simplicity in Natural Science -- Sự giản đơn trong Khoa Học Tự Nhiên.} Bất cứ nhà toán học tên tuổi nào cũng sẽ nhất trí rằng sự giản đơn là 1 trong những công cụ mạnh nhất để nghiên cứu Toán học nói riêng, \& Khoa Học Tự Nhiên nói chung.
+\subsubsection{Simplicity in Natural Science -- Sự giản đơn trong Khoa Học Tự Nhiên.} Bất cứ nhà toán học tên tuổi nào cũng sẽ nhất trí rằng sự giản đơn là 1 trong những công cụ mạnh nhất để nghiên cứu Toán học nói riêng, \& Khoa Học Tự Nhiên nói chung.
 
 \begin{example}[{\sc Dennis Sullivan}]
 	{\sc Dennis Sullivan}
 \end{example}
 
-\paragraph{Simplicity in Social Science -- Sự giản đơn trong Khoa Học Xã Hội.}
+\subsubsection{Simplicity in Social Science -- Sự giản đơn trong Khoa Học Xã Hội.}
 
-\paragraph{Simplicity in Psychology -- Sự giản đơn trong Tâm Lý Học.} Mỗi 1 người $P$ (person), xét về mặt tâm lý, là 1 thực thể phức tạp của nhiều mảnh vá tâm lý được gắn lại với nhau. Khi ta nghiên cứu tâm lý của 1 đối tượng động vật, bao gồm người $P$ (Person) hoặc động vật $A$ (Animal), ta sẽ bị choáng ngợp bởi sự phức tạp trong cơ cấu của hệ thống tâm lý của đối tượng nghiên cứu đó. {\it Why?} Bởi sự tương tác phức tạp của các mảnh vá tâm lý với nhau trong cùng 1 cá thể, \& sự tương tác của từng mảnh vá tâm lý \& các tổ hợp các mảnh vá tâm lý của 1 cá thể đối với môi trường sống của cá thể đó, \& của cá thể đó với xã hội. Vậy, trong vai trò của 1 người nghiên cứu về tâm lý, ta nên làm gì? Câu trả lời của chúng tôi là ta nên phân hoạch hệ thống cấu trúc tâm lý của 1 đối tượng nghiên cứu tâm lý ra, thành từng phần nhỏ, dễ nghiên cứu hơn: 
+\subsubsection{Simplicity in Psychology -- Sự giản đơn trong Tâm Lý Học.} Mỗi 1 người $P$ (person), xét về mặt tâm lý, là 1 thực thể phức tạp của nhiều mảnh vá tâm lý được gắn lại với nhau. Khi ta nghiên cứu tâm lý của 1 đối tượng động vật, bao gồm người $P$ (Person) hoặc động vật $A$ (Animal), ta sẽ bị choáng ngợp bởi sự phức tạp trong cơ cấu của hệ thống tâm lý của đối tượng nghiên cứu đó. {\it Why?} Bởi sự tương tác phức tạp của các mảnh vá tâm lý với nhau trong cùng 1 cá thể, \& sự tương tác của từng mảnh vá tâm lý \& các tổ hợp các mảnh vá tâm lý của 1 cá thể đối với môi trường sống của cá thể đó, \& của cá thể đó với xã hội. Vậy, trong vai trò của 1 người nghiên cứu về tâm lý, ta nên làm gì? Câu trả lời của chúng tôi là ta nên phân hoạch hệ thống cấu trúc tâm lý của 1 đối tượng nghiên cứu tâm lý ra, thành từng phần nhỏ, dễ nghiên cứu hơn: 
 
 \begin{principle}[Split: Complexity $\mapsto$ Simplicities]
 	Split the whole Complexity into small Simplicities.
@@ -1643,7 +1650,7 @@ Sự chính xác là ưu tiên hàng đầu của các nhà Toán học (Mahemat
 	Xét đối tượng {\sf Hồng} trong tiểu thuyết ngắn này. Điều đầu tiên có thể nói là {\sf Hồng} là 1 con người, chứ không phải súc vật hay động vật khác con người nói chung. Hắn là 1 cá thể vừa đơn giản vừa phức tạp. Mâu thuẫn ư? Không hề. Sự đơn giản của hắn đề từ việc các mảnh vá tâm lý hay nói đúng hơn là các mảnh nhân cách của hắn vô cùng rõ ràng, được phân định rạch ròi với các mảnh vá tâm lý \& các mảnh nhân cách khác bên trong hắn. Sự phức tạp của hắn đến từ việc hắn có quá nhiều mảnh vá tâm lý như vậy. Thậm chí đến ngay cả hắn vẫn không thể hiểu hết về các luồng nhân cách của hắn, lẫn tiềm năng sẽ được từ các luồng nhân cách đó trong trường hợp hắn có thể kiểm soát được tất cả chúng 1 cách hài hòa (harmonically). Thay vì tìm hiểu trên tổng thể về cấu trúc nhân cách của {\sf Hồng}, chúng ta phải đập nhỏ, phân nhỏ cấu trúc này ra thành từng mảnh nhỏ để mà nghiên cứu.
 \end{example}
 
-\subsubsection{Minimality -- Sự tối giản}
+\subsection{Minimality -- Sự tối giản}
 \noindent{\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Chi2022}. {\sc Chi, Nguyễn -- The Present Writer}. {\it Một Cuốn Sách về Chủ Nghĩa Tối Giản}.
@@ -1677,7 +1684,7 @@ Sự chính xác là ưu tiên hàng đầu của các nhà Toán học (Mahemat
 	{\sf Nhân [26--?; Jeet Kune Do practitioner] \& Hồng [26--?; boxing practitioner]}: Chà, ông ta là thiên tài võ thuật mà. Cần chi phải học mấy cái đó? {\sc Lý Tiểu Long} chỉ cần cảm nhận theo bản năng tự nhiên của ông ta thôi. Luyện 1 cú đá cả ngàn lần. Chỉ cần cái bộ cảm biến cơ bắp siêu nhạy cảm (highly sensitive muscle system) cùng 1 trí tuệ kiểu tư duy phản biện triết học (philosophical critical thinking) đã là quá đủ cho sự ra đời của trường phái võ thuật Jeet Kune Do. Dù là nghiên cứu sinh học thuật, nhưng anh cũng nên thử qua vài món võ thuật như Jeet Kune Do hoặc Boxing, biết đâu lại cần.
 \end{quote}
 
-\subsubsection{Critical thinking -- Tư duy phản biện}
+\subsection{Critical thinking -- Tư duy phản biện}
 \textbf{\textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Rutherford_critical_thinking}. {\sc Albert Rutherford}. {\it The Art of Thinking Critically: Ask Great Questions, Spot Illogical Reasoning, \& Make Sharp Arguments (The critical Thinker Book 5)}.
@@ -1698,7 +1705,7 @@ Viết văn chương cũng cần phải phản biện: {\it Liệu nhân vật m
 	{\sf Nhân [5--?; movie geek]}: {\sc Christopher Nolan} tài năng \& khá lập dị, ông ép giờ giấc sinh học của ông phải tuân theo những quy tắc bất di bất dịch do chính ông đặt ra, e.g., lên lịch cho giờ đi vệ sinh. Tôi không chắc nếu cho ông thưởng thức ẩm thực đường phố Ấn Độ kết hợp với đồ ăn siêu cay của Mexico thì cái lịch đi tiểu--đại tiện của ông có giữ vững được không. Nhưng với tính tình kỷ luật đến mức lập dị thế, chắc ông ta có thể sẽ chuẩn bị vài cuồn giấy súc ở bàn viết kịch bản \& xin bọc mũ hoặc thùng rác để sẵn trong phòng làm việc để không phá lệ. Quả là sự đáng sợ của tinh thần kỷ luật trong từng hành vi, đặc biệt là trong các hành vi bài tiết.
 \end{quote}
 
-\subsubsection{Vigor -- Khí lực, sức mãnh liệt}
+\subsection{Vigor -- Khí lực, sức mãnh liệt}
 \textbf{\textsf{\small Vocabulary -- Từ vựng.}}
 \begin{itemize}\small
 	\item {\sf vigour{\tt/}vigor} [n] {\tt/}\textipa{`vIg@r}{\tt/} energy, force or enthusiasm $=$ {\sf vitality}.
@@ -1719,20 +1726,20 @@ Xem Quy tắc thứ 13: Loại bỏ các từ không cần trong quyển \cite{S
 	{\sf[en]$\to$[vi]} 1 vi phạm phổ biến về tính cô đọng là trình bày 1 ý tưởng phức tạp duy nhất, từng bước 1, trong 1 loạt các câu có thể có lợi khi kết hợp thành một câu.
 \end{quote}
 
-\subsubsection{Rigor -- Tính chặt chẽ}
+\subsection{Rigor -- Tính chặt chẽ}
 \textbf{\textsf{\small Vocabulary -- Từ vựng.}}
 \begin{itemize}\small
 	\item {\sf rigor{\tt/}rigour} [n] {\tt/}\textipa{`rIg@r}{\tt/} 1. the fact of being careful \& paying great attention to detail, e.g., academic {\tt/}intellectual{\tt/}scientific, etc. rigor; 2. the fact of being strict or severe $=$ {\sf severity}; 3. {\sf the rigors of something} the difficulties \& unpleasant conditions of something.
 	\item {\sf rigorous} [a] 
 \end{itemize}
 
-\subsubsection{Thoroughness -- Tính triệt để}
+\subsection{Thoroughness -- Tính triệt để}
 
 \begin{example}
 	{\sc Fukuzawa Yukichi} (1834--1901) được người Nhật Bản xem như 1 trong những bậc ``khai quốc công thần'' của nước Nhật Bản hiện đại, được tôn vinh là ``Voiltaire của Nhật Bản'' vì tính triệt để, tầm mức vượt trội trong tư tưởng, \& cùng các đồng chí của ông là những người khai sáng tinh thần quốc dân Nhật Bản, đem lại linh hồn, động lực, \& sự hậu thuẫn tinh thần cho công cuộc Duy tân của chính phủ Minh Trị, với hình ảnh ông được in trên đồng tiền có mệnh giá cao nhất ở Nhật: {\rm10000 \textyen}  {\rm\cite{Yukichi_encourage_learn,Yukichi_khuyen_hoc}}.
 \end{example}
 
-\subsubsection{Obsession -- Sự ám ảnh}
+\subsection{Obsession -- Sự ám ảnh}
 
 \begin{quotation}
 	{\it``There's no talent here, this is hard work. This is an obsession. Talent does not exist, we are all equals as human beings. You could be anyone if you put in the time. You will reach the top, and that's that. I am not talented. I am obsessed.''} -- {\sc Conor McGregor}, Notorious
@@ -1754,7 +1761,7 @@ Xem Quy tắc thứ 13: Loại bỏ các từ không cần trong quyển \cite{S
 	
 \end{example}
 
-\subsubsection{Highly sensitive \& Sensational -- Tính nhạy cảm cao \& mức giật gân}
+\subsection{Highly sensitive \& Sensational -- Tính nhạy cảm cao \& mức giật gân}
 
 \begin{example}[{\sc David Foster Wallace} writer genius]
 	
@@ -1778,7 +1785,7 @@ Xem Quy tắc thứ 13: Loại bỏ các từ không cần trong quyển \cite{S
 	See {\rm\cite{Duhigg_habit}, \cite[pp. 176--184]{Duhigg_habit_VN}}.
 \end{example}
 
-\subsubsection{Integrity -- Sự chính trực}
+\subsection{Integrity -- Sự chính trực}
 \textbf{\textsf{\small Vocabulary -- Từ vựng.}}
 \begin{itemize}\small
 	\item {\sf integrity} [n] {\tt/}\textipa{In`tegr@ti}{\tt/} 1. the quality of being honest \& having strong moral principles. 2. the state of being whole \& not divided $=$ {\sf unity}.
@@ -1800,7 +1807,7 @@ See also, e.g., \href{https://en.wikipedia.org/wiki/Integrity}{Wikipedia{\tt/}in
 	\item \href{https://www.imdb.com/title/tt7366338/}{\it Chernobyl} (2019) về thảm họa lò phản ứng hạt nhân Chernobyl. ``In Apr 1986, the city of Chernobyl in the Soviet Union suffers 1 of the worst nuclear disasters in the history of mankind. Consequently, many heroes put their lives on the line in the following days, weeks, \& months'' -- {\sf IMDb brief description}
 \end{itemize}
 
-\subsubsection{Visionary -- Nhìn xa trông rộng}
+\subsection{Visionary -- Nhìn xa trông rộng}
 \textbf{\textsf{\small Vocabulary -- Từ vựng.}}
 \begin{itemize}\small
 	\item {\sf visionary} [a] {\tt/}\textipa{`vIZ@nri}{\tt/} {\tt/}\textipa{`vIZ@neri}{\tt/} 1. original \& showing the ability to think about or plan the future with great imagination \& intelligence. 2. relating to dreams or strange experiences, especially of a religious kind. [n] a person who has the ability to think about or plan the future in a way that is intelligent \& shows imagination.
@@ -1817,12 +1824,13 @@ Mở ra các hướng mới trong địa hạt Toán học: {\sc Jacques-Louis L
 
 %------------------------------------------------------------------------------%
 
-\section{Dark Psychology $\boldsymbol{\Psi}$ -- Tâm Lý Học Hắc Ám $\boldsymbol{\Psi}$}
+\chapter{Dark Psychology $\boldsymbol{\Psi}$ -- Tâm Lý Học Hắc Ám $\boldsymbol{\Psi}$}
+\minitoc
 
-\subsection{A Journey to Psychology}
+\section{A Journey to Psychology}
 Đã bao lần kể từ cái ngày mình rời khỏi đất Pháp, mình luôn dằn vặt \& tự hỏi mình {\it ``Tại sao mày không chịu tự học tâm lý sớm hơn?''} Đúng. Nếu học tâm lý sớm hơn, thì nhiều chuyện buồn đã không xảy ra. Cái câu hỏi đó cứ vang lên trong đầu. Cả lúc tỉnh lẫn mê. Có cái gì đó thúc đẩy mình đọc về nó nhiều hơn.
 
-\subsubsection{Aggressiveness}
+\subsection{Aggressiveness}
 \begin{quotation}
 	- Này, mày nhìn chị ta đi. Thú thật đi, mày có {\it cảm giác gì đầu tiên}?
 	
@@ -1896,7 +1904,7 @@ Bạn hoàn toàn có thể xem những câu chuyện này là tưởng tượng
 
 Tiếp theo mình sẽ sử dụng \& xây dựng 1 vài mẫu chuyện, để làm rõ các khái niệm tâm lý được nêu trên.
 
-\subsection{Introduction to Dark Psychology}
+\section{Introduction to Dark Psychology}
 
 \begin{flushright}\it
 	``It takes a wolf to catch a wolf.'' -- \href{https://www.imdb.com/title/tt0139654/}{Training Day} (2001)
@@ -1920,7 +1928,7 @@ Trước hết, để tôi giải thích cho bạn vì sao tôi lại là 1 tron
 	-- Chúng tôi dùng phần này để mở rộng 1 bài viết cũ của chúng tôi: \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/learning_teaching_research/psychological_manipulation/NQBH_psychological_manipulation.pdf}{Psychological Manipulation -- Thao Túng Tâm Lý}, được viết hồi tháng Chạp 2020, sau 1 đêm Giáng sinh kinh hoàng. \& giải thích 1 số chất liệu tâm lý \& triết học trong bản bản nháp tốc ký đó.
 \end{goal}
 
-\subsection{Psychological manipulation 101 -- Thao túng tâm lý cơ bản}
+\section{Psychological manipulation 101 -- Thao túng tâm lý cơ bản}
 \label{sect: psychological manipulation}
 {\bf Keywords -- Từ khóa.} {\it Psychological manipulation\Gls{psy-manipulation} -- thao túng tâm lý, psychological abuse -- lạm dụng tâm lý, emotional abuse -- lạm dụng cảm xúc, mental abuse -- lạm dụng tinh thần,  psychological violence -- bạo lực tâm lý, breaking point -- điểm gãy{\tt/}vỡ{\tt/}nguy kịch, social isolation -- cô lập xã hội, anxiety disorder -- rối loạn lo âu, depression -- trầm cảm}.
 
@@ -2185,7 +2193,7 @@ Love, trust, \& respect are so special. I cannot force{\tt/}manipulate anyone to
 
 {\it It is all about a well-deserved victory indeed} $\ldots$
 
-\subsubsection{{\color{gray}/* Quick sketches */}}
+\subsection{{\color{gray}/* Quick sketches */}}
 \fbox{{\bf 13}} I have been using \href{https://github.com}{GitHub} during the beginning of my PhD journey. It seems to me at this moment that \href{https://git-scm.com/}{git} is a perfect tool for blogging! This {\tt git add-commit-push} working style is so perfect to motivate me \& push my workflow in a more disciplined way, which is highly suitable for an undisciplined shitty person like me.
 
 {\it - How many commits have you attempted to push your limit today, man?}
@@ -2246,7 +2254,7 @@ Do not blame yourself as a drama-magnet, you should be proud of it instead!
 	- Sugoiii!!!
 \end{quote}
 
-\subsubsection{{\it Emotions}: good{\tt/}bad? {\it Emotionless?}}
+\subsection{{\it Emotions}: good{\tt/}bad? {\it Emotionless?}}
 \fbox{{\bf 17}} We start loving something{\tt/}someone, or being attracted by something{\tt/}someone, because that thing{\tt/} person seems to give us a lot of energy{\tt/}happiness{\tt/}emotions\footnote{E.g., music, movie, sport, subject, relationship, career, etc.} and{\tt/}or reduce{\tt/}release our pain{\tt/}suffering\footnote{E.g., lyrics, sex, alcohol, drugs, etc.}. But after playing with it{\tt/}him{\tt/}her, consuming it{\tt/}him{\tt/}her for a while, we get bored, we find another one, a new source of emotion generators\footnote{Oh my fucking god, Japanese! You always knew it, didn't you?}. \& that will be repeated \& repeated. These emotions are exactly the things that make each of us a human being (Fig. \ref{fig5})$\ldots$
 
 {\it Is emotion a type of energy?} We are always carried{\tt/}driven by our own emotions, deliberately{\tt/}intentionally sometimes \& unconsciously some other times: {\it We live for it, work for it, fight for it, also being taken down because of it}$\ldots$ {\it We are just emotion's slaves: emotion hiders and{\tt/}or emotion seekers}$\ldots$
@@ -2322,7 +2330,7 @@ Watch e.g., \href{https://www.youtube.com/watch?v=Pt21dU5Pu8g}{BoJack Horseman -
 	{\sf Hồng [23--?; psychological manipulated survivor]}: Chính xác. Nhưng hắn bắt buộc anh phải tham gia vào cái trò chơi đấu trí hại não này. Cái thời điểm kẻ thao túng tâm lý nhấc con tốt đầu tiên thì hắn sẽ phải thua. Hắn có thể sẽ thắng ván cờ thao túng, khiến con mồi đau khổ, đôi khi đến mức sống dở chết dở, muốn tự tử. Nhưng hắn sẽ thua trên 1 Bàn Cờ lớn hơn, đó là bàn cờ về lương tâm. Tại sao ư? Hắn đã chơi cái trò chơi thao túng quá nhiều ván cờ, nên những ai đủ trưởng thành, chính chắn đã biết tỏng cái mánh hèn hạ của hắn, nên họ sẽ cẩn thận với hắn hơn, không dễ mắc mưu cái trò thao túng bẩn thỉu của hắn nữa. Xét về nghĩa tạo ra các người sống sót điềm tĩnh (calm survivor) \& nghĩa xây dựng cộng đồng tích cực, thì kẻ thao túng tâm lý là 1 kẻ bại trận thực sự: {\it a real loser in the battles of positivity \& building psychologically stable \& positive communities}. Check Mate. Assholes.
 \end{quote}
 
-\subsubsection{Signs of psychological manipulators -- Các dấu hiệu của những kẻ thao túng tâm lý}
+\subsection{Signs of psychological manipulators -- Các dấu hiệu của những kẻ thao túng tâm lý}
 
 \begin{itemize}
 	\item Kẻ thao túng tâm lý là kẻ xảo quyệt, luôn rình rập con mồi, nên bạn có thể vô tình hoặc hữu ý tìm thấy hắn núp ở 1 góc kín, góc khuất tầm nhìn nào đấy để theo dõi con mồi của hắn hoặc theo dõi bạn trong trường hợp bạn đang bị hắn nhắm tới.
@@ -2341,7 +2349,7 @@ Watch e.g., \href{https://www.youtube.com/watch?v=Pt21dU5Pu8g}{BoJack Horseman -
 \end{Rule}
 Khi bạn đối mặt với tay sai của 1 kẻ thao túng tâm lý, bạn phải giết hoặc làm suy yếu chính cái phần tốt lành \& phần ngây thơ của bạn, chúng sẽ hồi phục hoặc hồi sinh lại sau khi cuộc chiến đã kết thúc nên bạn cứ yên tâm, bạn phải giáng các đòn tâm lý vào cái phần xấu xí, độc ác mà kẻ thao túng tâm lý khơi gợi \& thúc đẩy sự phát triển ở những tay sai này. Có nghĩa là bạn không hại họ, mà bạn chỉ tấn công cái phần xấu của họ, khiến họ giác ngộ, để cho trống chỗ trong tâm trí \& linh hồn của họ, để cái phần tốt tánh có chỗ để sinh sôi nảy nở trở lại. Bạn thuần hóa tay sai của kẻ thao túng bằng cách đó. Còn nếu họ không còn phần tốt nào, hãy xem tay sai đó ngang hàng với kẻ thao túng tâm lý \& cứ thẳng tay tấn công các đòn đánh tâm lý.
 
-\subsubsection{Survivors -- Những kẻ sống sót}
+\subsection{Survivors -- Những kẻ sống sót}
 
 \begin{example}[YouTuber, influencer {\sc Giang Ơi}]
 	Trong 1 bài vlog của mình, YouTuber {\sc Giang Ơi} đã kể về quá khứ bị bắt nạt, tẩy chay, phải trốn trong toilet trong giờ ra chơi.
@@ -2354,7 +2362,7 @@ Xem phim \href{https://www.imdb.com/title/tt18926162/}{\it Tomorrow}, tập \hre
 
 Nếu xem những kẻ sống sót từ tệ nạn bắt nạt, bạo lực học đường là những cá thể hội tụ tinh túy những điều đẹp đẽ nhất về các giá trị tình cảm, tinh thần, thì có lẽ nên thay `quá khứ bị bắt nạt' thành `quá khứ được bắt nạt'. Nhưng `được' thì nghe có vẻ máu M quá, nên chốt là viết thành `quá khứ được{\tt/}bị bắt nạt' để cho thấy 2 mặt của 1 đồng xu, 2 khía cạnh trái ngược nhau nhưng hỗ trợ cho nhau: 1 khía cạnh thì tiêu cực đen tối, còn 1 khía cạnh thì tích cực, đầy ánh sáng, đầy lòng trắc ẩn \& tình yêu thương.
 
-\subsection{The Dark Triad: narcissist, sociopath, \& psychopath -- Bộ 3 đen tối: kẻ ái kỷ, kẻ chống đối xã hội, \& kẻ thái nhân cách}
+\section{The Dark Triad: narcissist, sociopath, \& psychopath -- Bộ 3 đen tối: kẻ ái kỷ, kẻ chống đối xã hội, \& kẻ thái nhân cách}
 
 \begin{definition}[Dark triad]
 	``The \emph{dark triad} is a psychological theory of personality, 1st published by \href{https://en.wikipedia.org/wiki/Delroy_L._Paulhus}{\sc Delroy L. Paulhus} \& {\sc Kevin M. Williams} in 2002, that describes 3 notably offensive, but \href{https://en.wikipedia.org/wiki/Psychopathology}{non-pathological} personality types: \href{https://en.wikipedia.org/wiki/Machiavellianism_(psychology)}{Machiavellianism}, sub-clinical \href{https://en.wikipedia.org/wiki/Narcissism}{narcissism}, \& sub-clinical \href{https://en.wikipedia.org/wiki/Psychopathy}{psychopathy}. Each of these personality types is called \emph{dark} because each is considered to contain malevolent qualities.'' -- \href{https://en.wikipedia.org/wiki/Dark_triad}{Wikipedia{\tt/}dark triad}
@@ -2364,7 +2372,7 @@ Nếu xem những kẻ sống sót từ tệ nạn bắt nạt, bạo lực họ
 	\emph{Bộ 3 đen tối} là một lý thuyết tâm lý về tính cách, được xuất bản lần đầu tiên bởi \href{https://en.wikipedia.org/wiki/Delroy_L._Paulhus}{\sc Delroy L. Paulhus} \& {\sc Kevin M. Williams} vào năm 2002, mô tả 3 loại tính cách gây khó chịu nhưng không bệnh lý: Chủ nghĩa xảo quyệt, chứng tự ái cận lâm sàng, \& bệnh tâm thần cận lâm sàng. Mỗi loại tính cách này được gọi là \emph{đen tối} vì mỗi loại được coi là chứa đựng những phẩm chất xấu xa.
 \end{dinhnghia}
 
-\subsubsection{Narcissists -- Những kẻ ái kỷ}
+\subsection{Narcissists -- Những kẻ ái kỷ}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{MacKenzie2015} {\sc Jackson MacKenzie} (tác giả gay trẻ). {\it Psychopath Free: Recovering from Emotionally Abusive Relationships With Narcissists, Sociopaths, \& Other Toxic People}.
@@ -2405,7 +2413,7 @@ Hắn thoáng nghĩ, mặc dù không có nhiều thông tin lắm về anh Toà
 	{\sf Hồng [25; psychologist wannabe]}: Dùng cái trí nhớ điện tử chó cắn của mày mà nghiên cứu những đứa khuyết tật lương tâm. Nghiên cứu đúng nghĩa: tìm các dấu hiệu (sign), cố gắng xây dựng các đặc trưng (psychological characteristics), tạo các nền móng, xây dựng các bức tường, thành lũy vững chắc để tạo nên đế chế tinh thần (empire of mentalities) trong tâm trí mày, để sau này mày dễ dàng đối phó với các nhân cách thối nát tương tự. Giờ thì cứ đau khổ cho đã đi. Rồi cũng tới lúc gặm nhấm đau khổ đến phát chán, mày sẽ tự vực dậy thôi.
 \end{quote}
 
-\paragraph{Signs -- Các dấu hiệu}
+\subsubsection{Signs -- Các dấu hiệu}
 \begin{itemize}
 	\item Cách xưng hô khá quan trọng. Nếu 1 người sử dụng xưng hô ``ta'' \& ``mi'' với bạn, coi thường, hạ thấp bạn, \& tính tình siêu ít kỷ, chỉ biết quan tâm đến lợi ích của bản thân, có thể đó là 1 dấu hiệu cho biết người đó là kẻ ái kỷ.
 	\item Cực kỳ thích nói dối, đến mức nói dối trở thành 1 thói quen, 1 phản xạ tự nhiên khi nói chuyện với người khác.
@@ -2432,7 +2440,7 @@ Hắn thoáng nghĩ, mặc dù không có nhiều thông tin lắm về anh Toà
 	Vụ ly hôn của Tài tử điện ảnh {\sc Johnny Depp} \& cô vợ ái kỷ Amber Heard với các chẩn đoán về tâm thần nặng như Borderline Personality Disorder. Shit on their bed. Fecal matters.
 \end{example}
 
-\paragraph{How to manipulate manipulative narcissists -- Cách thao túng các kẻ ái kỷ thích thao túng}
+\subsubsection{How to manipulate manipulative narcissists -- Cách thao túng các kẻ ái kỷ thích thao túng}
 
 \begin{quote}
 	{\sf Hồng [25; depressed mathematician wannabe; agreeable giver wanna change]}: Anh nói sao? {\it Thao túng những kẻ ái kỷ?} Tôi tưởng những kẻ ái kỷ mới thao túng người khác chứ?
@@ -2456,7 +2464,7 @@ Hắn thoáng nghĩ, mặc dù không có nhiều thông tin lắm về anh Toà
 	-- Ê ê. Ngưng ngay cái trò mở rộng \& tổng quát hóa 1 nỗi đau riêng lẻ thành nhiều nỗi đau lớn hơn cái thằng tâm thần bệnh hoạn kia. Hỡi ơi thiệt chứ.
 \end{quote}
 
-\subsubsection{Sociopaths -- Những kẻ chống đối xã hội}
+\subsection{Sociopaths -- Những kẻ chống đối xã hội}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Stout_sociopath}. {\sc Martha Stout}. {\it The Sociopath Next Door}.
@@ -2477,9 +2485,9 @@ Hắn thoáng nghĩ, mặc dù không có nhiều thông tin lắm về anh Toà
 	{\sf Hồng [26; psychologist wannabe]}: Tôi không chắc chính xác không do không phải dân Toán nhưng ít nhất $0.04\in[0,1]\cap\mathbb{Q}$, i.e., 1 số hữu tỷ trong đoạn $[0,1]$, chứ không phải mấy triệu, mấy tỷ như bên Thống kê. Vượt qua tiêu chí đầu tiên, nên có vẻ đúng.
 \end{quote}
 
-\subsubsection{Machiavellianism -- Chủ nghĩa xảo quyệt}
+\subsection{Machiavellianism -- Chủ nghĩa xảo quyệt}
 
-\subsubsection{Psychopaths -- Những kẻ thái nhân cách}
+\subsection{Psychopaths -- Những kẻ thái nhân cách}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item Quyển {\it Psychopath Free: Recovering from Emotionally Abusive Relationships With Narcissists, Sociopaths, \& Other Toxic People} \cite{MacKenzie2015} của tác giả gay trẻ {\sc Jackson MacKenzie}.
@@ -2493,7 +2501,7 @@ Hắn thoáng nghĩ, mặc dù không có nhiều thông tin lắm về anh Toà
 	{\sf Nhân [28; sex detoxed boy]}: Anh có biết {\sc P. Diddy} đi xe đạp không cần yên không? Nhờ rapper ngưỡi Mỹ gốc Phi {\sc 50 Cent} (tên thật: {\sc Curtis James Jackson III}) đá xéo {\sc P. Diddy} mà tôi mới biết đấy. Laugh my ass off (abbr., LMAO). Fucking savage!
 \end{quote}
 
-\subsection{Defense Against the Dark Triad 101 -- Lớp học phòng chống bộ 3 đen tối cơ bản}
+\section{Defense Against the Dark Triad 101 -- Lớp học phòng chống bộ 3 đen tối cơ bản}
 Lấy cảm hứng từ bộ môn {\it Phòng chống Nghệ thuật Hắc ám -- Defence Against the Dark Arts} -- dạy các phương pháp \& kỹ thuật chống lại Nghệ thuật Hắc ám \& các sinh vật Hắc ám trong bộ truyện tuổi thơ nổi tiếng {\it Harry Potter} của nhà văn, nhà từ thiện, nhà sản xuất phim \& truyền hình, nhà biên kịch người Anh {\sc J. K. Rowling}, phần này được dùng để mô tả các bước cơ bản để phòng chống nghệ thuật thao túng hắc ám.
 
 \begin{question}[Sign of Dark Triads]
@@ -2506,7 +2514,7 @@ Lấy cảm hứng từ bộ môn {\it Phòng chống Nghệ thuật Hắc ám -
 	How to deal with Dark Triads? {\sf[en]$\to$[vi]} Làm thế nào để đối phó với Bộ 3 Đen Tối?
 \end{question}
 
-\subsubsection{Intellectual bullying -- Bắt nạt trí tuệ}
+\subsection{Intellectual bullying -- Bắt nạt trí tuệ}
 When a person decided to bully, but cannot do it physically, he{\tt/}she will intellectually bully.
 
 {\sf[en]$\to$[vi]} Khi 1 người đã quyết định bắt nạt, nhưng không thể bắt nạt kiểu vật lý do con mồi lớn con hơn, vạm vỡ hơn kẻ bắt nạt--kẻ săn mồi, thì hắn ta{\tt/}ả ta sẽ bắt nạt trí tuệ, để xoa dịu phần thiếu sót của bản thân gây ra bởi phức cảm tự ti, nhưng không dám thừa nhận do sự quá hèn nhát của bản thân.
@@ -2524,7 +2532,7 @@ Bullying never ends if you do nothing to stop it. Bullying just gets better, \& 
 
 {\sf[en]$\to$[vi]} Bắt nạt không bao giờ chấm dứt nếu bạn không làm gì để ngăn chặn nó. Bắt nạt chỉ trở nên tốt hơn, \& tốt hơn cho những kẻ bắt nạt, tức là, nó trở nên tệ hơn \& tệ hơn cho những người bị bắt nạt. Nếu tệ hơn là tốt hơn, thì bạn chắc chắn thích BDSM (bao gồm trói buộc, kỷ luật, thống trị, \& phục tùng, khổ dâm.
 
-\subsubsection{De-operator -- Toán tử Triệt Tiêu}
+\subsection{De-operator -- Toán tử Triệt Tiêu}
 \textbf{\textsf{\small Vocabulary -- Từ vựng.}}
 \begin{itemize}\small
 	\item {\sf de-} [prefix] {\tt/}\textipa{di:}{\tt/} in verbs \& related nouns, adjectives \& adverbs. 1. the opposite of. 2. removing something.
@@ -2550,7 +2558,7 @@ Why the abbreviation of Germany{\tt/}Deutschland is {\tt de}? Sometimes, they de
 	E.g., $\operatorname{Dewannabe}:\mbox{writer wannabe}\mapsto\mbox{writer},\mbox{mathematician wannabe}\mapsto\mbox{mathematician}$.
 \end{example}
 
-\subsubsection{Martial art vs. violence -- Võ thuật vs. bạo lực}
+\subsection{Martial art vs. violence -- Võ thuật vs. bạo lực}
 Practicing martial arts is 1 of the best solutions for the problem of abusing physical violence. You do not use what you learn from martial arts to hurt people. But you need to be capable of it. You need to be dangerous. You also need to control your danger. So your predators need to consider very carefully before deciding to attack you, physically, mentally, psychologically or any combination of these.
 
 {\sf[en]$\to$[vi]} Luyện võ là 1 trong những cách giải quyết tốt nhất cho vấn đề lạm dụng bạo lực vật lý. Không phải bạn sẽ sử dụng những gì bạn học được từ võ thuật để làm tổn thương người khác. Mà bạn cần có khả năng, dư sức làm điều đó. Bạn cần phải trở nên nguy hiểm. Bạn cũng cần kiểm soát sự nguy hiểm toát ra từ bạn. Để các kẻ săn mồi của bạn phải suy nghĩ cực kỳ cẩn thận trước khi quyết định tấn công bạn, theo nghĩa vật lý, tinh thần, tâm lý hay bất cứ tổ hợp nào của các phương diện tấn công này.
@@ -2559,7 +2567,7 @@ Có 2 môn võ tôi khuyến khích bạn thử học là Jeet-Kune Do -- Tiệt
 
 %------------------------------------------------------------------------------%
 
-\subsection{On depression -- Bàn về trầm cảm}
+\section{On depression -- Bàn về trầm cảm}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{Eun-Jung_hurt_VN}. {\sc Yoo Eun-Jung}. {\it Không Ai Có Thể Làm Bạn Tổn Thương Trừ Khi Bạn Cho Phép}.
@@ -2623,9 +2631,10 @@ Read also:
 
 %------------------------------------------------------------------------------%
 
-\section{On Teaching: Stage 1 -- Bàn Về Việc Dạy: Hồi 1}
+\chapter{On Teaching: Stage 1 -- Bàn Về Việc Dạy: Hồi 1}
 \label{sect: teaching}
-{\bf \textsf{Resources -- Tài nguyên.}}
+\minitoc
+\noindent\textbf{\textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item {\sc Coursera}'s wildly popular massive open online course {\it``Learning How to Learn''} with the companion book:	
 	\item \cite{Oakley_mind_number}. {\sc Barbara Oakley}. {\it A Mind for Numbers: How to Excel at Math \& Science (Even If You Flunked Algebra)}.
@@ -2708,7 +2717,7 @@ Tôi gặp Hồng [nam, 27 tuổi] đang loay hoay viết về buổi trò chuy�
 
 Nghe lời tôi khuyên, hắn bắt đầu viết. Cụ thể như sau.
 
-\subsection{Teaching kids in countryside -- Dạy trẻ vùng quê}
+\section{Teaching kids in countryside -- Dạy trẻ vùng quê}
 
 \begin{quote}\small\it
 	``Tâm hồn của anh, anh không chắc nó hợp thời đại.
@@ -2804,7 +2813,7 @@ Sự thành công việc dạy không chỉ là giúp học sinh, sinh viên có
 	Trước khi bạn quyết định bắt nạt hoặc hãm hại 1 ai đó, tự hỏi bản thân là nếu thay đổi vị trí cho nhau thì bạn có thích bị bắt nạt hay hãm hại như thế không. Hoặc hơn thế, liệu con bạn trong tương lai có thể chịu những hành vi mà bạn đang áp lên người khác, liệu bạn có chịu nổi những gì tương tự sẽ xảy ra với con cái của bạn không?
 \end{Rule}
 
-\subsubsection{Teaching in modern day -- Nghề dạy học trong thời hiện đại}
+\subsection{Teaching in modern day -- Nghề dạy học trong thời hiện đại}
 Tui có dịp gặp lại cô Phượng, giáo viên dạy Mỹ thuật hồi Tiểu học của tui:
 
 \begin{quote}
@@ -2816,7 +2825,7 @@ Tui có dịp gặp lại cô Phượng, giáo viên dạy Mỹ thuật hồi Ti
 \end{quote}
 
 
-\subsubsection{Teaching uneducated kids -- Nghề chăn báo}
+\subsection{Teaching uneducated kids -- Nghề chăn báo}
 Tui dự định viết ghi chú này từ cuối năm 2020, cho bản thân là chính (self-growth -- phát triển cá nhân\footnote{Xem \href{https://vi.wikipedia.org/wiki/Phat_trien_ca_nhan}{Wikipedia{\tt/}phát triển cá nhân}.}), chứ tui không viết {\it vì ai đó hoặc vì muốn tốt cho người khác}, hoặc để thể hiện hoặc sẽ viết vì mục đích thể hiện cả. Tui đã từng nhiều lần làm thế rồi, nên bây giờ \& từ giờ trở đi tui sẽ không làm thế, bởi tui thấy nó thật vô nghĩa \& tui biết vậy. Đơn giản là nếu chỉ để thể hiện như 1 con ngựa non háo đá, tui sẽ nhanh chóng nhận ra mình ngu dốt, thiếu chín chắn, thùng rỗng kêu to cỡ nào rồi lại tự nhục, rồi xóa, rồi kiếm 1 cái gì khác để thể hiện, rồi lại tự nhận thức được rồi nhục, rồi lại tự xóa. Cái vòng thể hiện-nhục-thể hiện-nhục lẩn quẩn cứ lặp đi lặp lại nếu tui mãi không phát triển nhận thức, nên tui sẽ cắt nó ngay từ đầu. Trong hơn 3 năm qua, kể từ cuối năm 2020 -- lần nói chuyện cuối cùng với thầy Quí - thầy dạy Toán cấp 3 của tui, đến nay, đầu năm 2024, có nhiều điều đã thay đổi trong cách nhìn của tui về hành vi, mục đích, các lựa chọn của bản thân \& quan trọng hơn là những cách nhìn mới về cuộc sống. Có thể tui cũng chỉ đang trải qua những giai đoạn trưởng thành bên trong mà nhiều người bạn hoặc nhiều em ít tuổi hơn tui đã trải qua từ kiếp nào so với 1 đứa trưởng thành về cảm xúc vừa chậm vừa trễ như tui, nhưng cũng đáng để ghi lại.
 
 Ban đầu tui định đặt tên cho ghi chú này là {\it ``Some Topics on Elementary STEM \& Beyond: A Personal, Psychological \& Philosophical Perspective: Vài Vấn Đề Trong STEM Sơ Cấp \& Xa Hơn Thế: 1 Góc Nhìn Cá Nhân, Tâm Lý Học, \& Triết Học.''} nhưng đọc tới đọc lui thấy nó hào nhoáng kiểu tởm quá xá, chưa kể tựa đọc nghe cọp mà nội dung như hạch thì lại áp lực mà phải sửa văn cho hay, cho phù hợp. Thế là tui đọc sách để kiếm 1 cái tên đơn giản để phù hợp. Có vẻ cuốn sách gần nhất với nội dung mà tui định viết là cuốn {\it Bắt Trẻ Đồng Xanh} \cite{Salinger_btdx} của {\sc Jerome David Salinger} (tựa gốc tiếng anh: {\it The Catcher In The Rye} \cite{Salinger_catcher_in_rye}). Tui hay nói đùa với mấy đứa học tui là để làm nghề chăn báo dưới quê thì phải đọc quyển này để hiểu rõ tâm lý chán chường, quậy phá, nông nổi của lũ trẻ, đặc biệt là lũ báo non. Nhưng nếu tui bắt chước theo mà đặt tên cho bài viết của tui là ``Bắt Trẻ Đồng Quê'' hoặc ``Bắt Trẻ Vùng Quê'' thì nghe như pedophile\footnote{Vài thầy giáo trường cấp 2 cũ của tui có sở thích kê sát người rồi hửi học sinh nữ. Vài ông còn làm cho nhiều học sinh nữ có bầu nên tui tuyệt đối tránh điều này. Tui chỉ mê phụ nữ có tuổi hơn kém tui 3 đơn vị, i.e., phải thỏa mãn điều ràng buộc $\rm|age(I) - age(her)|\le3\land\min\{age(I),age(her)\}\ge18$.}, hay Child Trafficking, không khéo lại vô tù nên chả ổn tí nào. Thành ra ``Dạy Trẻ Vùng Quê'' là ổn nhất, ``Dạy Trẻ Đồng Quê'' không hợp lắm vì ``Đồng Quê'' áp chỉ sự nghèo khó nhưng chất phác của dân quê, nhưng giờ thì nhiều nhà ở quê giàu quá nên áp vào lại sai be bét. Cái chính vẫn là mớ tâm lý bất ổn, rối nùi như cái mớ bòng bong, với cách hành xử của bọn trẻ Gen Z với mọi người xung quanh ở quê trong cái thời đại mà mọi công nghệ tiên tiến đều được đáp ứng đủ phần nào để lũ trẻ thoát khỏi cái tuổi thơ rừng rú của tui để ham học, nhưng lại tối ngày đi stalk acc online người khác, xem phim heo, \& đủ thứ chuyện hại não khác làm cho chúng sau này chả tập trung làm được điều gì cho đâu vào đấy. Chính là ở chỗ ấy: {\it tập trung để làm 1 cái gì đó đâu vào đấy}. Cái ấy mới quan trọng cho lũ nhỏ, không phải tiền bạc dư thừa để mua laptop hoặc nguyên dàn PC Gaming siêu xịn để cả lũ con trai lớp 4, 5 túm tụm xem phim heo \& thuộc lòng nhiều tên diễn viên người lớn hơn các ông thầy cô đơn của chúng, trong khi không nhớ nổi 1 công thức toán hoặc giải 1 phương trình đơn giản. Đấy lại là nỗi đau thứ 2 của các ông thầy.
@@ -2879,7 +2888,7 @@ Có 1 trích dẫn hay \& đúng về ý này của 1 giáo sư Toán ở Đại
 	``Chạy Marathon $42.195$ km là môn thể thao mà hồi còn nhỏ tôi rất ghét, vì nó nặng nhọc \& buồn chán; nhưng càng trưởng thành thì tôi càng thích. Tôi dần dần hiểu ra rằng Marathon chính là môn thể thao gần với cuộc đời nhất: Nặng nhọc \& buồn chán chính là những thuộc tính của cuộc đời, nói riêng là thuộc tính của việc nghiên cứu khoa học. Khi đã vượt được chừng 30km thì mỗi người chạy marathon chỉ còn đua với chính mình, sự ganh đua với người khác dường như không còn đáng kể.'' -- Prof. Dr. {\sc Nguyễn Hữu Việt Hưng}
 \end{quote}
 
-\subsection{Design Series: Some Topics in Elementary STEM \& Beyond -- Thiết Kế Chuỗi Tài Liệu \& Sách: 1 Số Chủ Đề STEM Sơ Cấp \& Hơn Thế Nữa}
+\section{Design Series: Some Topics in Elementary STEM \& Beyond -- Thiết Kế Chuỗi Tài Liệu \& Sách: 1 Số Chủ Đề STEM Sơ Cấp \& Hơn Thế Nữa}
 
 \begin{goal}[Elementary STEM]
 	Write a series of books, documents, essays, etc., on Elementary STEM. Build a strong foundation for it. Establish a stable set of design principles for it.
@@ -2907,7 +2916,7 @@ We will plant 2 big trees:
 \end{itemize}
 \& then try to feed them, develop them, \& connect them so that they can grow together in various strong \& stable ways.
 
-\subsubsection{Design principle -- Nguyên lý thiết kế}
+\subsection{Design principle -- Nguyên lý thiết kế}
 
 \begin{enumerate}
 	\item Trước khi cho bài tập thêm \& bài tập nâng cao, học sinh nên làm tất cả, hoặc ít nhất hầu hết, các câu hỏi, luyện tập, bài tập trong Sách Giáo Khoa (abbr., SGK) \& Sách Bài Tập (abbr., SBT) của 1 trong 3 hoặc 2 trong 3 hoặc cả 3 bộ SGK hiện nay, gồm: Cánh Diều, Chân Trời Sáng Tạo, \& Kết Nối Tri Thức với Cuộc Sống.
@@ -2920,7 +2929,7 @@ We will plant 2 big trees:
 	\item Explain some ideas, concepts, terminologies in easy \& funny ways to attract student's attentions {\sf[en]$\to$[vi]} giải thích, cắt nghĩa 1 số ý tưởng, khái niệm, thuật ngữ theo các lối dễ hiểu \& hóm hỉnh để thu hút sự chú ý của học sinh, sinh viên.
 \end{enumerate}
 
-\subsubsection{Purposes of a problem -- Các mục đích của 1 bài toán}
+\subsection{Purposes of a problem -- Các mục đích của 1 bài toán}
 
 \begin{itemize}
 	\item ``Mỗi bài toán có 1 vai trò riêng của nó. Có bài được đề ra để kiểm tra khả năng tư duy, suy luận, có bài sẽ kiểm tra khả năng ghi nhớ công thức, 1 số bài là để kiểm tra khả năng tính toán \& cũng có bài thách thức người học để bứt phá bản thân. Vậy nên, để việc học Toán trở nên nhẹ nhàng hơn, thú vị hơn, hãy đặt mỗi bài toán vào đúng vị trí, vai trò của nó \& sự sáng tạo cũng nảy mầm từ đây. Bất đẳng thức (abbr., BĐT, inequality) cũng chỉ cần có vậy!'' -- \cite[Lời nói đầu, p. 3]{Anh_Quang_bdt_lem}
@@ -2935,15 +2944,15 @@ Câu trả lời có lẽ là tùy tình huống.
 
 %------------------------------------------------------------------------------%
 
-\subsection{Series: Some Topics in Elementary STEM \& Beyond -- Chuỗi Tài Liệu \& Sách: 1 Số Chủ Đề STEM Sơ Cấp \& Hơn Thế Nữa}
+\section{Series: Some Topics in Elementary STEM \& Beyond -- Chuỗi Tài Liệu \& Sách: 1 Số Chủ Đề STEM Sơ Cấp \& Hơn Thế Nữa}
 Series: Some Topics in Elementary STEM \& Beyond này gồm các chủ đề về Elementary Mathematics -- Toán Học Sơ Cấp, Elementary Physics -- Vật Lý Sơ Cấp, Elementary Chemistry -- Hóa Học Sơ Cấp, Elementary Computer Science -- Tin Học{\tt/}Khoa Học Máy Tính Sơ Cấp.
 
-\subsubsection{Some topics in Elementary Mathematics -- Vài chủ đề trong Toán Sơ Cấp}
+\subsection{Some topics in Elementary Mathematics -- Vài chủ đề trong Toán Sơ Cấp}
 Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng xa. Tui từng thích Toán Olympic. Nhưng với học sinh đại trà thì đấy là thứ xa xỉ, nên cứ dạy Toán phổ thông trước, chỉ đứa nào cảm nhận được ``Toán Olympic là 1 dạng nghệ thuật hay đỉnh cao của Toán Sơ Cấp'' theo nghĩa nào đấy thì mới bồi dưỡng thêm, không được ép. Giờ mới hiểu dạy Toán Olympic giàu là vì cần nhiều thời gian để người dạy trau dồi kỹ năng, \& những đứa học sinh thích nghệ thuật kiểu này thì thường có tiền chi cho nghệ thuật, y như kiểu người lớn vậy.
 
 Ưu tiên hiện tại vẫn là thúc tụi nhỏ học vững kiến thức trước, lập trình được để cụ thể bài toán \& tự động hóa việc giải bài toán, rồi mới nghĩ tới Toán Olympic sau.
 
-\paragraph{Elementary Mathematics Grade 6 -- Toán Sơ Cấp lớp 6}
+\subsubsection{Elementary Mathematics Grade 6 -- Toán Sơ Cấp lớp 6}
 
 \begin{enumerate}
 	\item {\it Cheatsheet: Elementary Mathematics Grade 6}. [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/cheatsheet/NQBH_elementary_mathematics_grade_6_cheatsheet.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/cheatsheet/NQBH_elementary_mathematics_grade_6_cheatsheet.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/cheatsheet/NQBH_elementary_mathematics_grade_6_cheatsheet.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_6/cheatsheet/NQBH_elementary_mathematics_grade_6_cheatsheet.tex}.}].
@@ -3053,7 +3062,7 @@ Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng
 	\end{itemize}
 \end{enumerate}
 
-\paragraph{Elementary Mathematics Grade 7 -- Toán Sơ Cấp lớp 7}
+\subsubsection{Elementary Mathematics Grade 7 -- Toán Sơ Cấp lớp 7}
 
 \begin{enumerate}
 	\item {\it Cheatsheet: Elementary Mathematics Grade 7}.
@@ -3122,7 +3131,7 @@ Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng
 	\end{itemize}
 \end{enumerate}
 
-\paragraph{Elementary Mathematics Grade 8 -- Toán Sơ Cấp lớp 8}
+\subsubsection{Elementary Mathematics Grade 8 -- Toán Sơ Cấp lớp 8}
 
 \begin{enumerate}
 	\item {\it Cheatsheet: Elementary Mathematics Grade 8}.
@@ -3221,7 +3230,7 @@ Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng
 	\end{itemize}
 \end{enumerate}
 
-\paragraph{Elementary Mathematics Grade 9 -- Toán Sơ Cấp lớp 9}
+\subsubsection{Elementary Mathematics Grade 9 -- Toán Sơ Cấp lớp 9}
 
 \begin{enumerate}
 	\item {\it Cheatsheet: Elementary Mathematics Grade 9}. [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cheatsheet/NQBH_cheatsheet_mathematics_grade_9.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cheatsheet/NQBH_cheatsheet_mathematics_grade_9.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cheatsheet/NQBH_cheatsheet_mathematics_grade_9.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_9/cheatsheet/NQBH_cheatsheet_mathematics_grade_9.tex}.}].
@@ -3368,7 +3377,7 @@ Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng
 	\end{itemize}
 \end{enumerate}
 
-\paragraph{Elementary Mathematics Grade 10 -- Toán Sơ Cấp lớp 10}
+\subsubsection{Elementary Mathematics Grade 10 -- Toán Sơ Cấp lớp 10}
 
 \begin{enumerate}
 	\item {\it Cheatsheet: Elementary Mathematics Grade 10}.
@@ -3467,7 +3476,7 @@ Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng
 	\end{itemize}
 \end{enumerate}
 
-\paragraph{Elementary Mathematics Grade 11 -- Toán Sơ Cấp lớp 11}
+\subsubsection{Elementary Mathematics Grade 11 -- Toán Sơ Cấp lớp 11}
 
 \begin{enumerate}
 	\item {\it Cheatsheet: Elementary Mathematics Grade 11}.
@@ -3572,7 +3581,7 @@ Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng
 	\end{itemize}
 \end{enumerate}
 
-\paragraph{Elementary Mathematics Grade 12 -- Toán Sơ Cấp lớp 12}
+\subsubsection{Elementary Mathematics Grade 12 -- Toán Sơ Cấp lớp 12}
 
 \begin{enumerate}
 	\item {\it Cheatsheet: Elementary Mathematics Grade 12}.
@@ -3659,7 +3668,7 @@ Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng
 	\end{itemize}
 \end{enumerate}
 
-\paragraph{Elementary Mathematics for High School Students -- Toán Sơ Cấp THPT}
+\subsubsection{Elementary Mathematics for High School Students -- Toán Sơ Cấp THPT}
 
 \begin{enumerate}
 	% SOLVABLE POLYNOMIAL EQNS
@@ -3696,7 +3705,7 @@ Tạm thời, tui không quá đầu tư vào Toán Olympic cho học sinh vùng
 	\end{itemize}
 \end{enumerate}
 
-\subsubsection{Bridges from Elementary Mathematics to Advanced Mathematics -- Các cầu nối từ Toán Sơ Cấp lên Toán Cao Cấp}
+\subsection{Bridges from Elementary Mathematics to Advanced Mathematics -- Các cầu nối từ Toán Sơ Cấp lên Toán Cao Cấp}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{Andreescu_Dospinescu2010}. {\sc Titu Andreescu, Gabriel Dospinescu}. {\it Problems From The Book}. {\sf Tạm dịch}: {\it Các Vấn Đề Từ Quyển Sách}.
@@ -3707,7 +3716,7 @@ Toán Cao Cấp khác nhiều so với Toán Sơ Cấp. Theo quan điểm của 
 
 %------------------------------------------------------------------------------%
 
-\subsubsection{Some topics in Elementary Physics -- Vài chủ đề trong Vật Lý Sơ Cấp}
+\subsection{Some topics in Elementary Physics -- Vài chủ đề trong Vật Lý Sơ Cấp}
 Trong các tờ bài tập Toán tui sưu tầm từ các sách, tui có thêm vài bài cá nhân vào đó. Các bài này không quá khó, nhưng kiểu mở rộng, tổng quát bài toán hoặc 1 bài toán mở mà tui chưa thử giải trước khi quăng cho học sinh.
 
 \begin{quote}
@@ -3718,7 +3727,7 @@ Trong các tờ bài tập Toán tui sưu tầm từ các sách, tui có thêm v
 \end{quote}
 Thuật ngữ Toán Lý Thuyết ở đây tác giả cho là không hợp lý lắm mà thuật ngữ Toán Thuần Túy thì chuẩn hơn. Vì đã là Toán thì phải mang tính Lý thuyết. Các môn học như Vật Lý, Hóa Học, Khoa Học Máy Tính khác với Toán. Chúng đều có 2 mặt là Lý Thuyết \& Thực Tiễn. Nên bạn sẽ có Theoretical Physics -- Vật Lý Lý Thuyết, Theoretical Chemistry -- Hóa Học Lý Thuyết, Theoretical Computer Science -- Lý Thuyết Khoa Học Máy Tính.
 
-\paragraph{Elementary Physics Grade 6 -- Vật Lý Sơ Cấp lớp 6}
+\subsubsection{Elementary Physics Grade 6 -- Vật Lý Sơ Cấp lớp 6}
 \textbf{\textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{SGK_KHTN_6_CD}. {\sc Mai Sỹ Tuấn, Nguyễn Văn Khánh, Đặng Thị Oanh, Lê Minh Cầm, Ngô Ngọc Hoa, Lê Thị Phương Hoa, Phan Thị Thanh Hội, Đỗ Thanh Hữu, Cao Tiến Khoa, Lê Thị Thanh, Nguyễn Đức Trường, Trương Anh Tuấn}. {\it Khoa Học Tự Nhiên 6 Cánh Diều}.
@@ -3732,7 +3741,7 @@ Thuật ngữ Toán Lý Thuyết ở đây tác giả cho là không hợp lý l
 	{\sf Nội dung.} {\it Measurement -- Phép đo}: đo chiều dài, đo khối lượng, đo thời gian, đo nhiệt độ, thang nhiệt độ Celsius. {\it Force -- Lực}: lực \& biểu diễn lực, tác dụng của lực, lực hấp dẫn \& trọng lượng, lực tiếp xúc \& lực không tiếp xúc, biến dạng của lò xo, phép đo lực, lực ma sát. {\it Energy \& life -- Năng lượng \& cuộc sống}: năng lượng, bảo toàn năng lượng, sử dụng năng lượng. {\it Earth \& Sky}: observable movement of the Sun \& the Moon -- chuyển động nhìn thấy của Mặt Trời \& Mặt Trăng, Solar System -- Hệ Mặt Trời, Milky Way -- Ngân Hà.
 \end{itemize}
 
-\paragraph{Elementary Physics Grade 7 -- Vật Lý Sơ Cấp lớp 7}
+\subsubsection{Elementary Physics Grade 7 -- Vật Lý Sơ Cấp lớp 7}
 4 chủ đề chính: speed -- tốc độ, sound -- âm thanh, light -- ánh sáng, magnetic property of substance -- tính chất từ của chất.
 \begin{enumerate}
 	\item {\it Problem: Mechanical Motion -- Bài Tập: Chuyển Động Cơ}. [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_7/mechanical_motion/problem/NQBH_mechanical_motion_problem.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_7/mechanical_motion/problem/NQBH_mechanical_motion_problem.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_7/mechanical_motion/problem/NQBH_mechanical_motion_problem.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_7/mechanical_motion/problem/NQBH_mechanical_motion_problem.tex}.}].
@@ -3757,7 +3766,7 @@ Thuật ngữ Toán Lý Thuyết ở đây tác giả cho là không hợp lý l
 	\end{itemize}
 \end{enumerate}
 
-\paragraph{Elementary Physics Grade 8 -- Vật Lý Sơ Cấp lớp 8}
+\subsubsection{Elementary Physics Grade 8 -- Vật Lý Sơ Cấp lớp 8}
 
 \begin{enumerate}
 	\item {\it Problem: Pressure -- Bài Tập: Áp Suất}. [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_8/pressure/problem/NQBH_pressure_problem.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_8/pressure/problem/NQBH_pressure_problem.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_8/pressure/problem/NQBH_pressure_problem.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_8/pressure/problem/NQBH_pressure_problem.tex}.}].
@@ -3770,9 +3779,9 @@ Thuật ngữ Toán Lý Thuyết ở đây tác giả cho là không hợp lý l
 	\end{itemize}
 \end{enumerate}
 
-\paragraph{Elementary Physics Grade 9 -- Vật Lý Sơ Cấp lớp 9}
+\subsubsection{Elementary Physics Grade 9 -- Vật Lý Sơ Cấp lớp 9}
 
-\paragraph{Elementary Physics Grade 10 -- Vật Lý Sơ Cấp lớp 10}
+\subsubsection{Elementary Physics Grade 10 -- Vật Lý Sơ Cấp lớp 10}
 
 \begin{enumerate}
 	% KINEMATIC
@@ -3827,13 +3836,13 @@ Thuật ngữ Toán Lý Thuyết ở đây tác giả cho là không hợp lý l
 	Folder: {\sf Elementary STEM \& Beyond{\tt/}Elementary Physics{\tt/}grade 10{\tt/}deformation{\tt/}solution}: [\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_10/deformation/solution/NQBH_deformation_solid_pressure_fluid_solution.pdf}{pdf}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_10/deformation/solution/NQBH_deformation_solid_pressure_fluid_solution.pdf}.}][\href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_10/deformation/solution/NQBH_deformation_solid_pressure_fluid_solution.tex}{\TeX}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_physics/grade_10/deformation/solution/NQBH_deformation_solid_pressure_fluid_solution.tex}.}].
 \end{enumerate}
 
-\paragraph{Elementary Physics Grade 11 -- Vật Lý Sơ Cấp lớp 11}
+\subsubsection{Elementary Physics Grade 11 -- Vật Lý Sơ Cấp lớp 11}
 
-\paragraph{Elementary Physics Grade 12 -- Vật Lý Sơ Cấp lớp 12}
+\subsubsection{Elementary Physics Grade 12 -- Vật Lý Sơ Cấp lớp 12}
 
 %------------------------------------------------------------------------------%
 
-\subsubsection{Some Topics in Elementary Computer Science -- Vài chủ đề trong Khoa Học Máy Tính}
+\subsection{Some Topics in Elementary Computer Science -- Vài chủ đề trong Khoa Học Máy Tính}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{Duc_200_BT_Python}. {\sc Nguyễn Tiến Đức}. {\it Tuyển Tập 200 Bài Tập Lập Trình Bằng Ngôn Ngữ Python}.
@@ -3869,27 +3878,27 @@ Bài tập lập trình:
 
 %------------------------------------------------------------------------------%
 
-\subsubsection{Some Topics in Elementary Chemistry -- Vài chủ đề trong Hóa Học Sơ Cấp}
+\subsection{Some Topics in Elementary Chemistry -- Vài chủ đề trong Hóa Học Sơ Cấp}
 Tôi có thử xài 2 gói {\tt mchem, chemfig} để vẽ công thức hóa hữu cơ, nhưng có vẻ mất nhiều thời gian.
 
 \begin{question}
 	Có cấu trúc hóa học nào mà có thể phát triển 1 bài toán hơi hớm tổ hợp đếm bên mấy hợp chất hữu cơ không?
 \end{question}
 
-\paragraph{Elementary Chemistry Grade 6.} Hóa Học Sơ Cấp lớp 6 khá đơn giản, chỉ nêu lên 1 số khái niệm cơ bản, chưa có công thức hóa học, \& các phương trình hóa học. Nên chúng tôi chỉ sử dụng 1 file duy nhất để tóm tắt kiến thức Hóa Học Sơ Cấp lớp 6, thậm chí không cần cheatsheet:
+\subsubsection{Elementary Chemistry Grade 6.} Hóa Học Sơ Cấp lớp 6 khá đơn giản, chỉ nêu lên 1 số khái niệm cơ bản, chưa có công thức hóa học, \& các phương trình hóa học. Nên chúng tôi chỉ sử dụng 1 file duy nhất để tóm tắt kiến thức Hóa Học Sơ Cấp lớp 6, thậm chí không cần cheatsheet:
 \begin{itemize}
 	\item Elementary Chemistry Grade 6.
 	
 	{\sf Nội dung.} Sự đa dạng \& các thể cơ bản của chất, tính chất của chất, oxygen \ce{O2}, không khí, bảo vệ môi trường không khí, vật liệu thông dụng, nhiên liệu, an ninh năng lượng, vài nguyên liệu, lương thực -- thực phẩm, chất tinh khiết, hỗn hợp, phương pháp tách chất ra khỏi hỗn hợp.
 \end{itemize}
 
-\paragraph{Elementary Chemistry Grade 7}
+\subsubsection{Elementary Chemistry Grade 7}
 
-\paragraph{Elementary Chemistry Grade 8}
+\subsubsection{Elementary Chemistry Grade 8}
 
-\paragraph{Elementary Chemistry Grade 9}
+\subsubsection{Elementary Chemistry Grade 9}
 
-\paragraph{Elementary Chemistry Grade 10}
+\subsubsection{Elementary Chemistry Grade 10}
 
 \begin{enumerate}
 	\item Cheatsheet: Elementary Chemistry Grade 10
@@ -3923,7 +3932,7 @@ Tôi có thử xài 2 gói {\tt mchem, chemfig} để vẽ công thức hóa h�
 	\end{itemize}
 \end{enumerate}
 
-\paragraph{Elementary Chemistry Grade 11}
+\subsubsection{Elementary Chemistry Grade 11}
 
 \begin{enumerate}
 	\item Cheatsheet: Elementary Chemistry Grade 11
@@ -3953,7 +3962,7 @@ Tôi có thử xài 2 gói {\tt mchem, chemfig} để vẽ công thức hóa h�
 	\end{itemize}
 \end{enumerate}
 
-\paragraph{Elementary Chemistry Grade 12}
+\subsubsection{Elementary Chemistry Grade 12}
 
 \begin{enumerate}
 	\item Cheatsheet: Elementary Chemistry Grade 12
@@ -3993,7 +4002,7 @@ Tôi có thử xài 2 gói {\tt mchem, chemfig} để vẽ công thức hóa h�
 
 %------------------------------------------------------------------------------%
 
-\subsubsection{Miscellaneous}
+\subsection{Miscellaneous}
 \hrule
 \begin{multicols}{2}\small
 	{\it ``What are you doing actually?''} ``I am writing a book.'' {\it ``About what?''} ``I don't know yet.'' {\it ``Huh? You want to write a book but you don't know specifically what to write yet? How can that be?''} ``Everything starts with a sheer will to write, I suppose.'' {\it ``What a joke!''} ``Yeah, let my innocent Infinite Jest \footnote{{\it Infinite Jest} is the name of a book written by {\sc David Foster Wallace}, a genius, suicide in ??.} begin.''
@@ -4007,7 +4016,7 @@ Tôi có thử xài 2 gói {\tt mchem, chemfig} để vẽ công thức hóa h�
 	nqbh@nqbh-mind:~$ reboot
 \end{verbatim}
 
-\paragraph{How to solve it vs. How to sell it? - Cách giải 1 bài toán vs. Cách kinh doanh 1 bài toán: Bài học kinh doanh.}
+\subsubsection{How to solve it vs. How to sell it? - Cách giải 1 bài toán vs. Cách kinh doanh 1 bài toán: Bài học kinh doanh.}
 It is not about how much money you can give \&{\tt/}or will give to your children, to each of your son(s) \& your daughter(s). It is how you teach them to use properly \& appropriately every single penny in that amount of money you decided to give them.
 
 {\sf[en]$\to$[vi]} Không quan trọng anh có thể cho \&{\tt/}hoặc sẽ cho các con của anh, chia phần như thế nào cho (các) đứa con trai, (các) đứa con gái của anh. Cái chuyện quan trọng là anh sẽ dạy chúng cách xài từng cắc bạc trong cái mớ tiền anh cho chúng đúng cách \& hợp lý thế nào.
@@ -4020,7 +4029,7 @@ Trước hết, để tôi giải thích vì sao nhiều hoặc đa số thầy 
 	
 %------------------------------------------------------------------------------%
 
-\subsection{Parental role in child development -- Vai trò của cha mẹ trong sự phát triển của con cái}
+\section{Parental role in child development -- Vai trò của cha mẹ trong sự phát triển của con cái}
 
 \begin{figure}[H]
 	\centering
@@ -4107,17 +4116,17 @@ Cha hắn là 1 kẻ ít học, tính nóng nảy, cực kỳ bạo lực, thíc
 	
 	{\sf Đằng [45; farmer]} [cười khúc khích giỡn tiếp với thằng con xong cắn tay thằng con chảy máu rồi để lại 1 vết thẹo hình trăng khuyết trên bàn tay trái của thằng con]
 \end{quote}
-Nếu bạn bắt tui cho 1 nhân vật để có thể mường tượng ngay về cha của nhân vật ``hắn'' thì đó chính là cha của {\sc Tara West} trong tác phẩm {\it Educated} \cite{Westover_educated} với bản dịch tiếng Việt {\it Được Học} \cite{Westover_educated_VN}. Cha hắn chỉ học lớp bình dân học vụ thời chiến, học khá dốt, chỉ giỏi cầm súng thời chống Mỹ, lao động chân tay thời bình, không có năng khiếu gì thật sự đặc biệt. Nhưng nếu bạn ép tui kể nét đặc biệt về cha của chính tui thì có lẽ đó là: Ông ta {\it cực kỳ giỏi tận dụng mọi thứ, mặc dù thứ đó chả giống ai}. Chẳng hạn, cha tui không có tiền mui gối ôm cho thằng con 4--5 tuổi ôm ngủ? Không sao, cha tui đưa cho tui cây súng AK47 thời cha đi kháng chiến chống Mỹ để tui ôm ngủ \& đưa hộp đạn luôn. Tui không nói đùa đâu. Ký ức đó còn rõ ràng trong tui. Cha tui không sợ tui bắn ai cả. Vì đơn giản là lúc tui 4 tuổi, có dùng cả 2 chân \& cả thân người cũng không lên nòng được (1 phần lúc đó tui bị suy dinh dưỡng nặng). Sau này quân đội thu lại súng đạn thì tui mất ``cái gối ôm'' mà tui ôm suốt thời tuổi thơ. Còn cái này mới hay, có lần cha đèo tui trên chiếc xe đạp của cha, tui thấy những đứa trẻ khác được cha mẹ chúng mua bong bóng cho chơi. Tui đòi cha. Cha nhìn rồi suy tư. Sau đó, cha lôi 1 túi đen ở nhà ra \& thỏi bong bóng cho tui chơi. Cái bong bóng trắng hơi đục ở đầu nhô ra 1 cái mục nhỏ nhìn như vú heo nái. Tui không rõ rành lắm, chỉ thấy mẹ với chị cười. Tui nghịch cái bong bóng đó, đá nó khắp nhà mà nó không hề bể. Cái bong bóng đó siêu dai. Vài ngày sau cái bong bóng bị xẹp do thoát khí. Tui lục cái túi đen mà cha tui lấy bong bóng ra. Có mấy cái bong bóng bị thắt rút lại, \& có gì đục đục bên trong. Mẹ tui kịp thấy nên quánh cản tui rồi giấu cái bịt đen chứa đầy bong bóng thời tuổi thơ của tui đi. Không cho tui chơi bong bóng nữa. Mãi sau này tui mới biết vì sao mẹ \& chị tui lại cười lúc tui chơi bong bóng \& cái núm nhô nhô ra đó rốt cuộc là cái gì. Chúng không phải bong bóng bình thường: Chúng là bao cao su (condom).
+Nếu bạn bắt tui cho 1 nhân vật để có thể mường tượng ngay về cha của nhân vật ``hắn'' thì đó chính là cha của {\sc Tara West} trong tác phẩm {\it Educated} \cite{Westover_educated} với bản dịch tiếng Việt {\it Được Học} \cite{Westover_educated_VN}. Cha hắn chỉ học lớp bình dân học vụ thời chiến, học khá dốt, chỉ giỏi cầm súng thời chống Mỹ, lao động chân tay thời bình, không có năng khiếu gì thật sự đặc biệt. Nhưng nếu bạn ép tui kể nét đặc biệt về cha của chính tui thì có lẽ đó là: Ông ta {\it cực kỳ giỏi tận dụng mọi thứ, mặc dù thứ đó chả giống ai}. Chẳng hạn, cha tui không có tiền mui gối ôm cho thằng con 4--5 tuổi ôm ngủ? Không sao, cha tui đưa cho tui cây súng AK47 thời cha đi kháng chiến chống Mỹ để tui ôm ngủ \& đưa hộp đạn luôn. Tui không nói đùa đâu. Ký ức đó còn rõ ràng trong tui. Cha tui không sợ tui bắn ai cả. Vì đơn giản là lúc tui 4 tuổi, có dùng cả 2 chân \& cả thân người cũng không lên nòng được (1 phần lúc đó tui bị suy dinh dưỡng nặng). Sau này quân đội thu lại súng đạn thì tui mất ``cái gối ôm'' mà tui ôm suốt thời tuổi thơ. Còn cái này mới hay, có lần cha đèo tui trên chiếc xe đạp của cha, tui thấy những đứa trẻ khác được cha mẹ chúng mua bong bóng cho chơi. Tui đòi cha. Cha nhìn rồi suy tư. Sau đó, cha lôi 1 túi đen ở nhà ra \& thổi bong bóng cho tui chơi. Cái bong bóng trắng hơi đục ở đầu nhô ra 1 cái mục nhỏ nhìn như vú heo nái. Tui không rõ rành lắm, chỉ thấy mẹ với chị cười. Tui nghịch cái bong bóng đó, đá nó khắp nhà mà nó không hề bể. Cái bong bóng đó siêu dai. Vài ngày sau cái bong bóng bị xẹp do thoát khí. Tui lục cái túi đen mà cha tui lấy bong bóng ra. Có mấy cái bong bóng bị thắt rút lại, \& có gì đục đục bên trong. Mẹ tui kịp thấy nên quánh tui, cản tui rồi giấu cái bịt đen chứa đầy bong bóng thời tuổi thơ của tui đi. Không cho tui chơi bong bóng nữa. Mãi sau này tui mới biết vì sao mẹ \& chị tui lại cười lúc tui chơi bong bóng \& cái núm nhô nhô ra đó rốt cuộc là cái gì. Chúng không phải bong bóng bình thường: Chúng là bao cao su (condom).
 
 Được nuôi dưỡng từ 1 người cha bạo lực, mà nguồn gốc của bạo lực là từ sự bất lực của bản thân trong việc làm trụ cột kinh tế cho gia đình, {\sf Nhân} cứ thế lớn lên với 1 bản tính ngang tàn, nói chuyện đôi khi vô học, khá mất dạy, nhưng hắn trọng tình nghĩa, sống theo bản năng, quan trọng trực giác hơn sách vở, cái thứ mà {\sf Hồng} cứ khao khát mà không có được suốt thời thơ ấu.
 
-{\sf Hồng} trái ngược hẳn với {\sf Nhân}. Hắn được nuôi dưỡng bởi người mẹ hiền từ, chịu làm lụng, luôn nhẫn nhịn. {\sf Hồng} thích sách vở do mẹ {\sf Hồng} dù chỉ học tới lớp 7 do hoàn cảnh gia đình, phải nghỉ học để đi làm đồng phụ cha từ sớm, nhưng mẹ rất thích đọc tiểu thuyết kiếm hiệp \& truyện của {\sf Kim Dung}. Lúc nào cái tủ đồ mà cha hắn đựng mấy cái bịt đen ở ngăn dưới, thì mẹ hắn cũng dành dụm tiền để mua vài quyển truyện kiếm hiệp để trên nóc tủ, giấy cha hắn. {\sf Hồng} bản tính hiền lành, hướng nội, nhút nhát. Nguyên nhân chắc có lẽ vì hắn lớn lên trong 1 khu đất rộng 1 mẫu ($=$ 10 công $= 10000\ {\rm m}^2$), nên không có đứa trẻ nào chơi chung với hắn suốt thời thơ ấu cả. Hắn lúc nào cũng 1 mình, tìm thứ gì đó để chơi 1 mình, lâu lâu thì vẽ vời với {\sf Nhân}. {\sf Nhân} là 1 đứa có năng khiếu vẽ, có mắt nghệ thuật, giỏi nhìn các hình khối \& cảm nhận cấu trúc của nhiều thứ, nhưng tính tình nóng nảy, nhanh nhẩu đoảng, không bao giờ chịu dừng lại suy nghĩ thấu đáo trước khi làm gì, không thích học hay đọc sách, chỉ thích làm theo cảm tính, sống theo bản năng, \& tìm tòi đủ thứ về nghệ thuật mà không chịu tuân theo các quy tắc sách vở cố định nào.
+{\sf Hồng} trái ngược hẳn với {\sf Nhân}. Hắn được nuôi dưỡng bởi người mẹ hiền từ, chịu làm lụng, luôn nhẫn nhịn. {\sf Hồng} thích sách vở do mẹ {\sf Hồng} dù chỉ học tới lớp 7 do hoàn cảnh gia đình, phải nghỉ học để đi làm đồng phụ cha của mẹ, i.e., ông ngoại của {\sf Hồng} từ sớm, nhưng mẹ rất thích đọc tiểu thuyết kiếm hiệp \& truyện của {\sc Kim Dung}. Lúc nào cái tủ đồ mà cha hắn đựng mấy cái bịt đen ở ngăn dưới, thì mẹ hắn cũng dành dụm tiền để mua vài quyển truyện kiếm hiệp để trên nóc tủ, giấu cha hắn, sợ bị cha hắn chửi là lãng phí tiền. {\sf Hồng} bản tính hiền lành, hướng nội, nhút nhát. Nguyên nhân chắc có lẽ vì hắn lớn lên trong 1 khu đất rộng 1 mẫu ($=$ 10 công $= 10000\ {\rm m}^2$), nên không có đứa trẻ nào chơi chung với hắn suốt thời thơ ấu cả. Hắn lúc nào cũng 1 mình, tìm thứ gì đó để chơi 1 mình, lâu lâu thì vẽ vời với {\sf Nhân}. {\sf Nhân} là 1 đứa có năng khiếu vẽ, có mắt nghệ thuật, giỏi nhìn các hình khối \& cảm nhận cấu trúc của nhiều thứ, nhưng tính tình nóng nảy, nhanh nhẩu đoảng, không bao giờ chịu dừng lại suy nghĩ thấu đáo trước khi làm gì, không thích học hay đọc sách, chỉ thích làm theo cảm tính, sống theo bản năng, \& tìm tòi đủ thứ về nghệ thuật mà không chịu tuân theo các quy tắc sách vở cố định nào.
 
 Nếu mẹ dạy {\sf Hồng} về đức tính nhẫn nhịn, thậm chí là nhịn nhục để không ai ghét thì cha {\sf Nhân} dạy kiểu đứa nào đụng là đập. Cha hắn đã từng dùng khẩu súng AK47 để bắn sượt gót chân của 1 kẻ trộm vào vườn. May mà sau này súng \& đạn được thu hồi lại, không thì cha hắn lại ăn cơm tù do cái tính nóng nảy, bạo lực không thể kiểm soát đó. Mẹ hắn là 1 người dễ tính (agreeable) điển hình, quá hiền lành, nên thường bị ăn hiếp, chèn ép. 
 
-Nếu xét phần chung, tức phần giao của cha \& mẹ hắn, thì đó là cả cha \& mẹ hắn đều không biết sử dụng điện thoại (tất cả các loại điện thoại, từ cùi bắp, điện thoại bàn đến điện thoại cảm ứng), \& không biết chạy xe máy. Chỉ 2 điều này thôi là đủ để hắn cảm giác bị thua xa với các đứa trẻ khác. Hắn vẫn bị gọi là ``người tối cổ'' ở tuổi 24--25.
+Nếu xét phần chung, tức phần giao của cha \& mẹ hắn, thì đó là cả cha \& mẹ hắn đều không biết sử dụng điện thoại (tất cả các loại điện thoại, từ cùi bắp, điện thoại bàn đến điện thoại cảm ứng), \& không biết chạy xe máy. Chỉ 2 điều này thôi là đủ để hắn cảm giác bị thua xa với các đứa trẻ khác. Hắn vẫn bị {\sf Trinh [26--27; junior Amazon developer]} gọi là ``người tối cổ'' ở tuổi 24--25.
 
-\subsection{Courage to be happy, to be disliked, \& to take responsibility -- Dám hạnh phúc, dám bị ghét, \& dám lãnh trách nhiệm}
+\section{Courage to be happy, to be disliked, \& to take responsibility -- Dám hạnh phúc, dám bị ghét, \& dám lãnh trách nhiệm}
 Tên của phần này lấy cảm hứng từ tựa đề của 2 quyển sách về kỹ năng sống của 2 tác giả Nhật Bản cùng bản dịch tiếng Việt:
 \begin{enumerate}
 	\item \cite{Ichiro_Fumitake_disliked}. {\sc Kishimi Ichiro \& Koga Fumiake}. {\it The Courage to Be Disliked: The Japanese Phenomenon That Shows You How to Change Your Life \& Achieve Real Happiness}. Với bản dịch tiếng Việt:
@@ -4137,7 +4146,7 @@ Mỗi khi tôi, trong vai trò là 1 gia sư hoặc 1 giáo viên, thấy 1 đ�
 \end{quote}
 {\it Thế cái vòng tròn lẩn quẩn vô trách nhiệm ấy nguy hiểm như thế nào?} 1 sáng sớm nọ, khi tôi còn đang ngáy ngủ. Bỗng dưng 1 tiếng thét vang lên: Cách nhà tôi tầm 5 phút đi bộ, con trai lớn, 37 tuổi (hơn tôi đúng 10 tuổi, nên tôi 27 tuổi khi đang viết dòng này), của 1 bà cô mà gia đình tôi quen biết từ nhỏ treo cổ tự tử trong đêm, bỏ lại 2 đứa con nhỏ lớp 6, lớp 7 nheo nhóc. Tiếng thét là của người mẹ. Người cha thì chết điếng nên không la lên được. Chả rõ treo cổ khi nào, lúc phát hiện thì mặt đã tụ máu bầm tím, miệng sùi bọt mép. Sau khi định thần lại, người cha, người mẹ mới nhận ra việc chuẩn bị đi tới cái chết đã có nhiều dấu hiệu báo trước trong vài ngày trước đó. Đấy không phải là 1 gia đình nghèo khó, mà cực kỳ giàu là đằng khác. Cha mẹ làm nghề chăn nuôi quy mô lớn \& cho mướn mặt bằng phòng học để các giáo viên trường cấp 2, cấp 3 có thể dạy thêm với số lượng lớn, với sức chứa tối đa tầm 50--60 đứa mỗi lớp học. Đây là câu hỏi quan trọng mà tôi sẽ không tách riêng ra thành Question như thường lệ: {\it Bạn kinh doanh, bạn giàu có nứt vách để làm gì khi mà bạn không thể dạy con, khiến con đua đòi rồi cuối cùng trầm cảm tới mức phải tìm đến cái chết để tự giải thoát?} Đây là 1 câu hỏi ám ảnh tôi suốt vài tháng sau đó. Người anh cả tự tử đó thường chơi các trò chơi của con nít (say no \& never to any adult game with kids or among kids) với tôi \& chị tôi lúc nhỏ, e.g., nhảy dây, leo cây dừa, trốn tìm, bịt mắt bắt dê, etc. Việc anh ra đi với cái tin nhắn với nội dung đại loại kiểu ``Con xin lỗi mẹ. Con có lỗi với mẹ nhiều lắm.'' viết sai chính tả do không được học hành đàng hoàng khiến tôi bứt rứt mãi. Liệu trách nhiệm của người làm giáo dục chỉ là cung cấp kiến thức sách sở, hàn lâm học thuật, để rồi thiếu sót 1 phần lớn trong phát triển nhân cách của trẻ, tức dạy về ổn định tâm lý, xây dựng đời sống cảm xúc \& tinh thần, etc., để rồi khiến cái phần khiếm khuyết đó ngày càng lớn dần theo thời gian, được nuôi dưỡng với các thói hư tật xấu của đám bạn ăn chơi hút chích, vay mượn bạc nóng của xã hội đen, etc., để rồi cuối cùng cái thảm cảnh kẻ đầu bạc tiễn kẻ đầu xanh, các đứa con nheo nhóc cùng người vợ đã ly thân{\tt/}ly hôn phải tiễn cha, tiễn chồng, lớp học thêm trở thành nhà tang lễ hay bình địa? {\it Chúng ta, với vai trò những người làm giáo dục, đang dạy học sinh, đặc biệt là các học sinh học dốt, học sinh cá biệt cái quái gì vậy?}
 
-\subsection{On teaching growth -- Dạy về trưởng thành}
+\section{On teaching growth -- Dạy về trưởng thành}
 
 \begin{quote}
 	{\sf Student [13; 7th grader, Hitler's fangay]}: Dạ con đủ 18 tuổi là trưởng thành rồi muốn làm gì làm phải hông thầy?
@@ -4157,7 +4166,7 @@ Mỗi khi tôi, trong vai trò là 1 gia sư hoặc 1 giáo viên, thấy 1 đ�
 	{\sf Hồng [28; mathematics teacher; philosopher wannabe]}: Rau củ được nấu nhừ bằng dòng điện tích electron tươi ngon đúng nghĩa. Just joking. Don't do it.
 \end{quote}
 
-\subsection{On specialization \& generalization -- Bàn về đặc biệt hóa \& tổng quát hóa}
+\section{On specialization \& generalization -- Bàn về đặc biệt hóa \& tổng quát hóa}
 
 \begin{itemize}\small
 	\item {\sf specialization} [n] the process of becoming an expert in a particular area of work, study or business; the fact of spending more time on one area of work, etc. than on others; specialization (in something) a particular area of work, study or business which somebody spends more time on than on other areas.
@@ -4173,7 +4182,7 @@ Mỗi khi tôi, trong vai trò là 1 gia sư hoặc 1 giáo viên, thấy 1 đ�
 	{\sf Hồng [27; STEM teacher]}: Khi dạy học sinh bất cứu mảng gì mới, tôi bắt chúng đặc biệt hóa (specialization) để xét các trường hợp đặc biệt nếu chưa rõ cấu trúc 1 bài toán. Nếu đã giải được bài toán đó rồi, thì sau đó tổng quát ``bài toán'' đó lên. ``Bài toán'' ở đây được hiểu là 1 vấn đề của môn Toán Sơ Cấp, Vật Lý Sơ Cấp, Hóa học sơ cấp, hoặc Tin học lập trình cơ bản. Tổng quát thế nào? Đầu tiên thay các số cụ thể bởi các tham số. Xem liệu bài toán có còn giải chung cách giải như vừa làm hay không. Sau đó, tổng số số đối tượng của bài toán lên thành $n\in\mathbb{N}$, e.g., nếu bài toán có 2 điểm hay 3 người, tôi yêu cầu học sinh tổng quát lên thành $n$ điểm \& $m$ người, với $m,n\in\mathbb{N}^\star$. Tiếp theo là tổng quát lên các tập số, e.g., nếu bài toán chỉ cho trên tập số tự nhiên $\mathbb{N}$, tôi sẽ hỏi học sinh là bài toán này nếu tổng quát lên tập số nguyên $\mathbb{Z}$, tập số hữu tỷ $\mathbb{Q}$, tập số thực $\mathbb{R}$, thậm chí là tập số phức $\mathbb{C}$ nếu đấy là học sinh cấp 3, lớp 11, 12, thì có còn đúng \& sử dụng được phương pháp giải hay phương pháp chứng minh của bài toán gốc hay không. Cấu trúc của bài toán là gì \& bản chất của bài toán cùng bản chất của phương pháp bạn vừa chứng minh là gì? Có mở rộng, nhờ bản chất vừa tìm được, các chứng minh đó cho các bài toán khác hay không.
 \end{quote}
 
-\subsection{On teaching power of habits -- Bàn về việc dạy sức mạnh của các thói quen}
+\section{On teaching power of habits -- Bàn về việc dạy sức mạnh của các thói quen}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{Clear_habit}. {\sc James Clear}. {\it Atomic Habits; An Easy \& Proven Way to Build Good Habits \& Break Bad Ones}. Với bản dịch tiếng Việt:
@@ -4193,7 +4202,7 @@ I.e., càng tính (chính xác) thường sẽ càng giỏi, càng chuẩn chỉ
 
 Anyway, I gonna give myself some juicy mathematics between these psychology reading then.
 
-\subsection{On teaching introverted \& extroverted students -- Bàn về việc dạy trẻ hướng nội \& trẻ hướng ngoại}
+\section{On teaching introverted \& extroverted students -- Bàn về việc dạy trẻ hướng nội \& trẻ hướng ngoại}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{Cain_quiet}. {\sc Susan Cain}. {\it Quiet: The Power of Introverts in a World That Can't Stop Talking}.\footnote{Amazon link: \url{https://www.amazon.com/Quiet-Power-Introverts-World-Talking/dp/0307352153}.}
@@ -4218,7 +4227,7 @@ Anyway, I gonna give myself some juicy mathematics between these psychology read
 	\item \cite{Cain_Mone_Moroz_quiet_power_VN}. {\sc Susan Cain, Gregory Mone, Erica Moroz}. {\it Quiet Power: The Secret Strengths of Introverted Kids -- Trầm Lặng: Sức Mạnh Tiềm Ẩn Của Người Hướng Nội}.
 \end{enumerate}
 
-\subsection{On teaching highly sensitive students -- Bàn về việc dạy trẻ cực kỳ nhạy cảm}
+\section{On teaching highly sensitive students -- Bàn về việc dạy trẻ cực kỳ nhạy cảm}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{Aron_HSP}. {\sc Elaine N. Aron}. {\it The Highly Sensitive Person: How to Thrive When the World Overwhelms You}.\footnote{Amazon link: \url{https://www.amazon.com/Highly-Sensitive-Person-Thrive-Overwhelms/dp/0553062182}.} (Chưa có bản dịch tiếng Việt đến thời điểm dòng này được viết.)
@@ -4239,13 +4248,14 @@ Anyway, I gonna give myself some juicy mathematics between these psychology read
 
 %------------------------------------------------------------------------------%
 
-\subsection{On book smart vs. street smart -- Bàn về trí thông minh sách vở vs. trí thông minh đường phố}
+\section{On book smart vs. street smart -- Bàn về trí thông minh sách vở vs. trí thông minh đường phố}
 You need to learn from book \& learn from life to have both book smart \& street smart. If you lack any 1 of these, you will get into several serious troubles.
 
 %------------------------------------------------------------------------------%
 
-\section{On Learning: Stage 1 -- Bàn Về Việc Học: Hồi 1}
+\chapter{On Learning: Stage 1 -- Bàn Về Việc Học: Hồi 1}
 \label{sect: learning}
+\minitoc
 We devote this section to try to answer partially the following important question on learning:
 
 \begin{question}[Learn: What? Why? How? When? Which? Where? Who? With whom?]
@@ -4319,7 +4329,7 @@ Tôi nhớ tới chị {\sf Phương [26; 2nd-year mathematics PhD student in al
 	``Các em có thể trở thành những người lao động chân chính, những nhà kỹ thuật có chuyên môn giỏi, những nhà nghiên cứu thành công, những doanh nghiệp tầm cỡ, những nhà lãnh đạo xuất sắc, $\ldots$ nhưng trước hết phải là những người tử tế.'' -- {\sc Văn Như Cương}
 \end{quotation}
 
-\subsection{Some principles on self-learning -- Vài nguyên tắc tự học}
+\section{Some principles on self-learning -- Vài nguyên tắc tự học}
 Việc tự học thường bắt đầu khá khó khăn, như bạn có thể thấy nhân vật {\sf Hồng [25; writer wannabe, literary retard]} ở Sect. \ref{sect: writer wannabe} khi hắn muốn tự học để trở thành 1 nhà văn từ 1 kẻ dốt đặc văn chương \& thường bị các giáo viên Văn cười chê suốt thời đi học.
 
 \begin{Rule}[On learning new things -- Bàn về việc học các điều mới]
@@ -4351,14 +4361,14 @@ Bạn thấy không? Phải cần hiểu biết sâu trên khá nhiều lĩnh v�
 	\item Tôi không muốn đạt cảnh giới có học mà như vô học như những người tôi từng gặp. Cái tôi muốn là mặc dù xuất phát từ vạch ``vô học'' nhưng cố gắng để đạt được cảnh giới có học. Có học nhưng như vô học không bằng 1 góc của vô học mà như có học.
 \end{enumerate}
 
-\subsection{On question-driven learning -- Bàn về việc học được thúc đẩy bởi các câu hỏi}
+\section{On question-driven learning -- Bàn về việc học được thúc đẩy bởi các câu hỏi}
 Học tập nên được định hình từ các câu hỏi, hỏi người khác, e.g., bạn bè, thầy cô, đàn em, đàn anh, đàn chị, hoặc tự vấn.
 
 A good question has much more values than a bunch of stupid meaningless or average answers.
 
 {\sf[en]$\to$[vi]} Một câu hỏi hay có nhiều giá trị hơn một loạt các câu trả lời ngu ngốc, vô nghĩa hoặc trung bình.
 
-\subsection{On stupidity \& awareness of stupidity -- Bàn về sự ngu dốt \& sự nhận thức về sự ngu dốt}
+\section{On stupidity \& awareness of stupidity -- Bàn về sự ngu dốt \& sự nhận thức về sự ngu dốt}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{McRaney_not_smart}. {\sc David McRaney}. {\it You Are Not So Smart: Why You Have Too Many Friends on Facebook, Why Your Memory Is Mostly Fiction, an d 46 Other Ways You're Deluding Yourself}.
@@ -4409,7 +4419,7 @@ Chấp nhận làm bạn với cái ngu dốt của mình để cải thiện n�
 
 %------------------------------------------------------------------------------%
 
-\subsection{On giving \& taking -- Bàn về việc cho đi \& nhận lại}
+\section{On giving \& taking -- Bàn về việc cho đi \& nhận lại}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Burg_Mann_giver_VN}. {\sc Bob Burg, John David Mann}. {\it Go-Givers Sell More -- Người Dám Cho Đi Bán Được Nhiều Hơn}.
@@ -4454,7 +4464,7 @@ if (hurt_feeling_detector == true) {
 }
 \end{Verbatim}
 
-\subsection{On eidetic memory -- Bàn về trí nhớ điện tử}
+\section{On eidetic memory -- Bàn về trí nhớ điện tử}
 
 \begin{question}[Eidetic memory -- Trí nhớ điện tử]
 	Is eidetic memory a gift or a curse?
@@ -4491,7 +4501,7 @@ Không có 1 trí nhớ tốt cỡ như trí nhớ điện tử, thậm chí tr�
 	\item \cite{Foer_remember_VN}. {\sc Joshua Foer}. {\it Moonwalking with Einstein: The Art \& Science of Remembering Everything -- Nhảy Moonwalk Cùng Einstein: Nghệ Thuật \& Khoa Học Để Nhớ Được Mọi Thứ}.
 \end{itemize}
 
-\subsection{On calmness -- Bàn về sự điềm tĩnh, tính điềm đạm}
+\section{On calmness -- Bàn về sự điềm tĩnh, tính điềm đạm}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Can_dung_thanh_nhan}. {\sc Nguyễn Duy Cần (Thu Giang)}. {\it Cái Dũng Của Thánh Nhân}.
@@ -4502,7 +4512,7 @@ Không có 1 trí nhớ tốt cỡ như trí nhớ điện tử, thậm chí tr�
 	\end{itemize}
 \end{itemize}
 
-\subsection{Importance of understanding \& then applying psychology in life -- Tầm quan trọng của việc hiểu \& sau đó ứng dụng Tâm Lý Học vào đời sống}
+\section{Importance of understanding \& then applying psychology in life -- Tầm quan trọng của việc hiểu \& sau đó ứng dụng Tâm Lý Học vào đời sống}
 \textbf{\textsf{Resources -- Tài nguyên.}}
 \begin{itemize}
 	\item \cite{Giang_after_childhood}. {\sc Đặng Hoàng Giang}. {\it Tìm Mình Trong Thế Giới Hậu Tuổi Thơ}.
@@ -4521,7 +4531,7 @@ Several people misunderstand strength as angriness and{\tt/}or dominant aggressi
 
 {\sf[en]$\to$[vi]} {\it Bạn đã bao giờ để ý rằng có cụm từ ``logic'' ở cuối thuật ngữ ``tâm lý'', cụm từ này dường như coi những điều vô nghĩa{\tt/}lập luận phi logic{\tt/}sự kiện{\tt/}tình huống từ những điều nhảm nhí của con người sau khi phần logic của nó có vẻ vô dụng không?} Nếu bất cứ điều gì không logic{\tt/}không có ý nghĩa ngay từ đầu, thay vào đó bạn nên xem xét nó theo quan điểm tâm lý, khi đó có lẽ nó sẽ còn ``logic'' hơn nữa.
 
-\subsection{On conscious mind vs. subconscious mind -- Bàn về ý thức vs. tiềm thức}
+\section{On conscious mind vs. subconscious mind -- Bàn về ý thức vs. tiềm thức}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{Murphy_subconscious}. {\sc Joseph Murphy}. {\it The Power of Subconscious Mind}.
@@ -4535,7 +4545,7 @@ Nếu bạn biết sơ về khái niệm về {\it tổng trực tiếp} (direct
 \end{equation}
 Còn nếu bạn đã biết quá rành về khái niệm này, cho phép 2 tác giả xin lỗi vì đã múa rìu qua mắt thợ. Dù sao đi chăng nữa, điều đó không quan trọng lắm, vì mục đích của chúng tôi ở đây là cố gắng mô tả mối tương quan của 2 khía cạnh trong Tâm thức của não bộ loài người là Ý thức (Conscious Mind) \& Tiềm thức (Subconscious Mind). Ý thức điều khiển những việc ta chủ động \& được điều khiển bởi ý chí của ta. Nhưng điều đó không có nghĩa là những hành động tạo bởi Ý thức đều chắc chắn là những hành động thông minh, sáng suốt, thuần logic. Điều đó lại được quyết định bởi cách tư duy \& nhận thức của 1 người chi phối Ý thức hệ của họ. Còn Tiềm thức thì khác, các hoạt động được điều khiển bởi tiềm thức thường nằm sâu bên dưới, thường là lúc ngủ hoặc lúc ta không để ý. 1 cách ví von, khi bạn chạy, Ý thức quyết định việc chuyển động của chân \& tay của bạn, nhưng khi bạn muốn dừng lại, thì Tiềm thức là cái quán tính theo sau ngay đó \& tiếp tục làm việc ở mode background như ở hệ điều hành Unix{\tt/}Linux (operating system, abbr., OS). Việc kiểm soát ý thức hệ sẽ cải thiện đáng kể về các hành động điều khiển bởi Ý thức, nhưng nếu bạn có thể tận dụng Tiềm thức, khiến nó tác động lên các hoạt động này trong 1 thời gian dài theo 1 cách ngấm ngầm. Hoạt động đó sẽ được nâng lên 1 tầm cao hoàn toàn mới. Nguyên lý triết học ở đây là đủ sự thay đổi về lượng sẽ dẫn tới sự thay đổi về chất. Việc thay đổi về lượng là việc tinh chỉnh các tiểu tiết nhỏ nhặt của thói quen (\cite{Clear_habit,Clear_habit_VN,Duhigg_habit,Duhigg_habit_VN}) khiến chúng thay đổi mỗi lần 1 ít, 1 lượng nhỏ. Nhưng nhiều hạt cát nhỏ sẽ tạo thành 1 đống cát to, \& nhiều đống cát to sẽ tạo thành sa mạc. Khi đó Tiềm thức sẽ là thứ chi phối sự thay đổi giữa các nền tảng (platform) hoặc trình độ ở 1 đẳng cấp khác (a whole new level) của 1 hành động bất kỳ.
 
-\subsection{On winning vs. losing -- Bàn về thắng vs. thua}
+\section{On winning vs. losing -- Bàn về thắng vs. thua}
 
 \begin{quote}
 	{\sf Hồng [?--25; loser]}: I just lost again. {\it What should I do?}
@@ -4557,12 +4567,12 @@ Còn nếu bạn đã biết quá rành về khái niệm này, cho phép 2 tác
 
 %------------------------------------------------------------------------------%
 
-\subsection{On theoretical vs. practical -- Bàn về lý thuyết vs. thực dụng}
+\section{On theoretical vs. practical -- Bàn về lý thuyết vs. thực dụng}
 You cannot just stand there to wait scientists, all the kind of smart people to build all the foundations, all the infrastructure for you so that you can start to build your beautiful \& ``rigorous'' house of thoughts to be able to live properly. You need to develop your survival instincts that your parents \& your teachers do not teach you (since they just cannot). Why should we wait scientists, both natural \& social? There are always outliers, prodigies, geniuses at any period in the human race. These are smart, sensitive, \& especially they are good \& kind enough to become a giver or necessary villain, e.g., {\sf Lelouch Lamperouge} in \href{https://www.imdb.com/title/tt0994314}{\it Code Geass} (2006--2008), {\sf Eren Yeager} in Attack on Titan. They will spend their life energy to contribute to the knowledge of human beings, to build our society \& direct us into various good \& right ways. If you destroy all outliers, you destroy human beings \& help us self-sabotage in a massive scale to lead our society to inevitable downfall.
 
 {\sf[en]$\to$[vi]} Bạn không thể chỉ đứng đó chờ các nhà khoa học, tất cả những người thông minh xây dựng mọi nền tảng, mọi cơ sở hạ tầng cho bạn để bạn có thể bắt đầu xây dựng ngôi nhà suy nghĩ \& ``nghiêm ngặt'' tuyệt đẹp của mình để có thể sống một cách đàng hoàng. Bạn cần phát triển bản năng sinh tồn mà cha mẹ \& giáo viên của bạn không dạy bạn (vì họ không thể). Tại sao chúng ta phải chờ các nhà khoa học, cả về mặt tự nhiên \& xã hội? Luôn có những người khác biệt, thần đồng, thiên tài ở bất kỳ thời kỳ nào trong loài người. Họ thông minh, nhạy cảm, \& đặc biệt họ tốt \& đủ tử tế để trở thành người cho đi hoặc nhân vật phản diện cần thiết, ví dụ như {\sf Lelouch Lamperouge} trong \href{https://www.imdb.com/title/tt0994314}{\it Code Geass} (2006--2008), {\sf Eren Yeager} trong Attack on Titan. Họ sẽ dành năng lượng cuộc sống của mình để đóng góp vào kiến thức của con người, để xây dựng xã hội của chúng ta \& hướng chúng ta vào nhiều con đường tốt \& đúng đắn. Nếu bạn tiêu diệt tất cả những kẻ lạc loài, bạn sẽ tiêu diệt con người \& giúp chúng ta tự phá hoại bản thân ở quy mô lớn để dẫn dắt xã hội của chúng ta đến sự sụp đổ không thể tránh khỏi.
 
-\subsection{On sympathy \& empathy -- Bàn về sự thông cảm \& sự đồng cảm}
+\section{On sympathy \& empathy -- Bàn về sự thông cảm \& sự đồng cảm}
 
 \begin{quote}
 	{\sf Hồng [23--?; highly sensitive empathizer -- kẻ thấu cảm nhạy cảm cao]}: Có 1 khái niệm tâm lý không chính thống trong các tài liệu học thuật mà tôi muốn giới thiệu cho bạn: Mental Trace -- Truy Vết Tinh Thần. Có lẽ khái niệm này được mô tả gần đúng nhất trong bộ anime {\it Psycho-Pass}: \url{https://psychopass.fandom.com/wiki/Mental_Trace} \& trong TV-series {\it Hannibal}.
@@ -4578,8 +4588,9 @@ You cannot just stand there to wait scientists, all the kind of smart people to 
 
 %------------------------------------------------------------------------------%
 
-\section{On Research: Stage 2 -- Bàn Về Nghiên Cứu: Hồi 2}
+\chapter{On Research: Stage 2 -- Bàn Về Nghiên Cứu: Hồi 2}
 \label{sect: research stage 2}
+\minitoc
 This section is a ``clean'' counterpart of Sect. \ref{sect: research stage 1}.
 
 {\sf[en]$\to$[vi]} Nếu Sect. \ref{sect: research stage 1}: {\it On Research: Stage 1 -- Bàn Về Nghiên Cứu: Hồi 1} chủ yếu bàn về các thủ đoạn dơ bẩn trong môi trường nghiên cứu, thì phần này -- hồi thứ 2 của luận về nghiên cứu -- sẽ bàn về các yếu tố mà chúng tôi cho là nên có để xây dựng 1 sự nghiệp nghiên cứu, nghiệp dư hoặc chuyên nghiệp, trong sạch, liêm khiết, \& bền vững.
@@ -4598,7 +4609,7 @@ This section is a ``clean'' counterpart of Sect. \ref{sect: research stage 1}.
 	{\sf[en]$\to$[vi]} Xây dựng lại 1 sự nghiệp làm nghiên cứu Khoa Học mới hoàn toàn cho bản thân bạn.
 \end{goal}
 
-\subsection{Some self-questions -- Vài câu hỏi tự vấn}
+\section{Some self-questions -- Vài câu hỏi tự vấn}
 
 \begin{itemize}
 	\item {\it Is the general structure of my draft{\tt/}craft good enough yet?}
@@ -4606,7 +4617,7 @@ This section is a ``clean'' counterpart of Sect. \ref{sect: research stage 1}.
 	{\sf[en]$\to$[vi]} Liệu cấu trúc tổng thể của bản thảo{\tt/}công trình của tôi có đủ tốt chưa?
 \end{itemize}
 
-\subsection{Some rules \& principles in building scientific career -- Vài quy tắc \& nguyên lý trong việc xây dựng sự nghiệp khoa học}
+\section{Some rules \& principles in building scientific career -- Vài quy tắc \& nguyên lý trong việc xây dựng sự nghiệp khoa học}
 
 \begin{Rule}[Local vs. Global -- Cục bộ{\tt/}địa phương vs. Toàn cục{\tt/}tổng thể]
 	If you fail to do something locally, then do it globally. If you fail to do something globally, then do it locally. Change scale (microscale $\leftrightarrow$ macroscale) \& perspective, angles of introspection regularly, especially when stucking.
@@ -4614,12 +4625,13 @@ This section is a ``clean'' counterpart of Sect. \ref{sect: research stage 1}.
 	{\sf[en]$\to$[vi]} Nếu bạn không làm được điều gì đó cục bộ, hãy làm nó toàn cục. Nếu bạn không làm được điều gì đó toàn cục, hãy làm nó cục bộ. Thay đổi tỷ lệ (microscale $\leftrightarrow$ macroscale) \& phối cảnh, góc nhìn nội quan thường xuyên, đặc biệt là khi bị kẹt.
 \end{Rule}
 
-\paragraph*{A personal ``black list'' of scientific colleagues \& collaborators -- 1 danh sách đen cá nhân các đồng nghiệp \& cộng tác viên khoa học.} Tôi bắt chước cách mà vài thầy cũ của tôi cho tôi vào ``danh sách đen'' (Black List, not \href{https://www.imdb.com/title/tt0108052/}{\it Schindler's List} (1993)) học bổng, tôi cũng tự lập 1 danh sách đen, bao gồm những đứa, e.g., đàn em, bạn cùng lứa, đàn anh, đàn chị, để sau này nếu tôi có dấn thân vào Khoa học, thì sẽ nhất quyết không làm chung với họ, \& đảm bảo những đồng nghiệp (colleagues), những người cộng tác làm khoa học (scientific collaborators) của tôi sẽ không bị họ chơi dơ hoặc hãm hại như họ đã chơi dơ hoặc hãm hại tôi. 1 lần là quá đủ. Đầu danh sách sẽ là 3 senpai ám ảnh thời tôi còn học Master 2 ở Rennes, Bretagne, Pháp: {\sf Thương, Dương, Thọ}. Những kẻ chế giễu tôi khi tôi vấp ngã cũng thêm vào danh sách tuốt. Có thể bạn sẽ liên hệ điều này với danh sách dăng dẳng các kẻ thù không đội trời chung của nhân vật {\sf Sheldon Cooper} (Ph.D. in Theoretical Physics -- Tiến Sĩ về Vật Lý Lý Thuyết) trong TV-series nổi tiếng \href{https://www.imdb.com/title/tt0898266}{\it The Big Bang Theory} (2007--2009), nhưng đấy là do {\sf Sheldon Cooper} là cậu bé lớn xác, thiểu năng EQ hay giận nhảm. Còn mục đích của tôi là muốn bảo vệ những người tôi sẽ làm việc chung trong hiện tại \& tương lai, cho đến cuối đời. {\it Tại sao lại cần Black List?} Vì nếu không có, tôi sẽ bị kẻ thù của tôi tung ra đòn Hắc Thiểm (Black Fist in \href{https://www.imdb.com/title/tt12343534/}{\it Jujutsu Kaisen} (2020--?) -- Chú Thuật Sư Hồi Chiến) bất ngờ khiến tôi lại trượt dốc \& tốn nhiều thời gian để đứng dậy \& leo lên lần nữa. Tấn công trước chặn đường tấn công của đối thủ là cách phòng thủ tốt nhất. Đấy là 1 trong những nguyên lý cốt lõi của {\sf Jeet Kune Do -- Tiệt Quyền Đạo}, see, e.g., \href{https://en.wikipedia.org/wiki/Jeet_Kune_Do}{Wikipedia{\tt/}Jeet Kune Do}.
+\subsubsection*{A personal ``black list'' of scientific colleagues \& collaborators -- 1 danh sách đen cá nhân các đồng nghiệp \& cộng tác viên khoa học.} Tôi bắt chước cách mà vài thầy cũ của tôi cho tôi vào ``danh sách đen'' (Black List, not \href{https://www.imdb.com/title/tt0108052/}{\it Schindler's List} (1993)) học bổng, tôi cũng tự lập 1 danh sách đen, bao gồm những đứa, e.g., đàn em, bạn cùng lứa, đàn anh, đàn chị, để sau này nếu tôi có dấn thân vào Khoa học, thì sẽ nhất quyết không làm chung với họ, \& đảm bảo những đồng nghiệp (colleagues), những người cộng tác làm khoa học (scientific collaborators) của tôi sẽ không bị họ chơi dơ hoặc hãm hại như họ đã chơi dơ hoặc hãm hại tôi. 1 lần là quá đủ. Đầu danh sách sẽ là 3 senpai ám ảnh thời tôi còn học Master 2 ở Rennes, Bretagne, Pháp: {\sf Thương, Dương, Thọ}. Những kẻ chế giễu tôi khi tôi vấp ngã cũng thêm vào danh sách tuốt. Có thể bạn sẽ liên hệ điều này với danh sách dăng dẳng các kẻ thù không đội trời chung của nhân vật {\sf Sheldon Cooper} (Ph.D. in Theoretical Physics -- Tiến Sĩ về Vật Lý Lý Thuyết) trong TV-series nổi tiếng \href{https://www.imdb.com/title/tt0898266}{\it The Big Bang Theory} (2007--2009), nhưng đấy là do {\sf Sheldon Cooper} là cậu bé lớn xác, thiểu năng EQ hay giận nhảm. Còn mục đích của tôi là muốn bảo vệ những người tôi sẽ làm việc chung trong hiện tại \& tương lai, cho đến cuối đời. {\it Tại sao lại cần Black List?} Vì nếu không có, tôi sẽ bị kẻ thù của tôi tung ra đòn Hắc Thiểm (Black Fist in \href{https://www.imdb.com/title/tt12343534/}{\it Jujutsu Kaisen} (2020--?) -- Chú Thuật Sư Hồi Chiến) bất ngờ khiến tôi lại trượt dốc \& tốn nhiều thời gian để đứng dậy \& leo lên lần nữa. Tấn công trước chặn đường tấn công của đối thủ là cách phòng thủ tốt nhất. Đấy là 1 trong những nguyên lý cốt lõi của {\sf Jeet Kune Do -- Tiệt Quyền Đạo}, see, e.g., \href{https://en.wikipedia.org/wiki/Jeet_Kune_Do}{Wikipedia{\tt/}Jeet Kune Do}.
 
 %------------------------------------------------------------------------------%
 
-\section{A Bullshit Theory on Living -- 1 Thuyết Nhảm Nhí Về Việc Sống}
+\chapter{A Bullshit Theory on Living -- 1 Thuyết Nhảm Nhí Về Việc Sống}
 \label{sect: bullshit theory on live}
+\minitoc
 
 \begin{quotation}\it
 	``No matter what anybody tells you, words \& ideas can change the world.'' -- {\sc Tom Schulman}, \href{https://www.imdb.com/title/tt0097165}{Dead Poets Society} (1989)
@@ -4627,7 +4639,7 @@ This section is a ``clean'' counterpart of Sect. \ref{sect: research stage 1}.
 	{\sf[en]$\to$[vi]} Bất luận ai nói gì với bạn đi nữa, ngôn từ \& ý tưởng có thể thay đổi cả thế giới.
 \end{quotation}
 
-\subsection{Love, Death, Robots, \& Artificial Intelligence -- Tình yêu, cái chết, người máy, \& Trí tuệ nhân tạo}
+\section{Love, Death, Robots, \& Artificial Intelligence -- Tình yêu, cái chết, người máy, \& Trí tuệ nhân tạo}
 Tên của phần này được lấy cảm hứng từ series film \href{https://www.imdb.com/title/tt9561862}{\it Love, Death \& Robots} (2019--) của nhà sáng tác {\sc Tim Miller} với phần mở rộng là Trí tuệ nhân tạo (AI) trong thời đại AI bắt đầu chiếm lĩnh trên khắp các lĩnh vực của cuộc sống con người.
 
 Riêng về phần Trí Tuệ Nhân Tạo, chúng tôi sẽ bàn kỹ hơn, theo mặt xác suất thống kê \& nền tảng toán học của AI (mathematical foundations of Artificial Intelligence), trong 1 quyển sách của {\it Series: Some Topics in Advanced STEM \& Beyond} song song với {\it Series: Some Topics in Elementary STEM \& Beyond} (quyển sách này là 1 trong những cầu nối giữa 2 series này, được xem như 1 cái rễ chung giữa 2 cái cây), bởi vì để viết đủ sâu về chủ đề AI, cần đến khá nhiều kiến thức Toán Cao Cấp (mặc dù tính đến thời điểm tôi đang viết dòng này -- Dec 2024 -- thì chưa rigorous như Giải Tích Toán Học -- Mathematical Analysis được).
@@ -4715,7 +4727,7 @@ Khoan đã, nhưng tại sao lại phải theo chủ nghĩa phân cực polarism
 \end{Rule}
 Try to imagine \& then try to feel a small, narrow, but balanced cave in the $d$-dimensional box or even $\infty$-dimensional box if you can reflect on yourself that good.
 
-\subsection{Heavens on Earth -- Các thiên đàng trên thế gian}
+\section{Heavens on Earth -- Các thiên đàng trên thế gian}
 \begin{quote}
 	{\it``The destiny of man lies in his soul.''} -- {\sc Herodotus}, \cite[p. 1]{Adler_human_nature}
 	
@@ -4883,7 +4895,7 @@ Let's cook.
 	{\sf[en]$\to$[vi]} Chỉ chịu trách nhiệm cho ai xứng đáng với trách nhiệm của bạn.
 \end{Rule}
 
-\subsubsection{On fragility vs. hardening process -- Bàn về sự mong manh vs. quá trình cường hóa}
+\subsection{On fragility vs. hardening process -- Bàn về sự mong manh vs. quá trình cường hóa}
 
 \begin{quote}
 	{\sf Thương [25; 2nd year mathematics PhD; sucked at mathematics]}: Hồng như 1 tờ giấy trắng vậy, mong manh dễ vỡ.
@@ -4895,7 +4907,7 @@ Let's cook.
 	On fragility of human beings.
 \end{example}
 
-\subsubsection{On joy vs. pain \& how to balance them -- Bàn về lạc thú vs. nỗi đau \& cách cân bằng chúng}
+\subsection{On joy vs. pain \& how to balance them -- Bàn về lạc thú vs. nỗi đau \& cách cân bằng chúng}
 {\bf \textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
 	\item \cite{Lembke_dopamine}. {\sc Anna Lembke}. {\it Dopamine Nation: Finding Balance in the Age of Indulgence}.
@@ -4920,7 +4932,7 @@ Let's cook.
 	\item \cite{Lembke_dopamine_VN}. {\sc Anna Lembke}. {\it Dopamine Nation: Finding Balance in the Age of Indulgence -- Giải Mã Hoóc-môn Dopamine: Sống Cân Bằng Trong Thời Đại Đầy Cám Dỗ}.
 \end{enumerate}
 
-\subsubsection{On betrayal vs. loyalty -- Bàn về sự phản bội vs.{\tt/}\& lòng trung thành}
+\subsection{On betrayal vs. loyalty -- Bàn về sự phản bội vs.{\tt/}\& lòng trung thành}
 Nếu bạn có xem phim \href{https://www.imdb.com/title/tt1028532/}{\it Hachi: A Dog's Tale} (2009) kể về chú chó {\sc Hachiko} có thật ở Nhật Bản, bạn sẽ hiểu lòng trung thành (loyalty) là như thế nào. Nhà tôi thích nuôi chó, không biết từ đời nào, chỉ biết là đến giờ mẹ tôi vẫn nuôi vài con, \& tôi yêu tất cả những chú chó từng sống, hiện sống, \& sẽ sống với chúng tôi. Chúng trung thành, quan tâm chủ, tận tụy đi theo theo chủ từ sáng sớm đến tận khuya -- do cha mẹ tôi là nông dân (farmers) \& tôi là con nông dân (farmer boy). Chó còn được dùng như 1 người bạn đồng hành để trị liệu tâm lý cho những người bị chứng rối loạn cảm xúc hoặc mắc chứng trầm cảm. Xem \href{https://en.wikipedia.org/wiki/Therapy_dog}{Wikipedia{\tt/}therapy dog} -- chó trị liệu.
 
 Nếu bạn có cơ hội gặp 1 con chó hoang (stray dog) bị ngược đãi, bạn sẽ hiểu rõ hơn về sự run rẫy, sự sợ hãi, sự đau khổ trước nghịch cảnh cuộc đời của chúng. Khi bạn cho 1 con chó hoang ăn, nó sẽ ít khi nào hoặc sẽ không bao giờ cắn bạn. Nó sẽ vẫy đuôi, nếu còn chút sức lực sót lại, sự hung dữ kích hoạt bởi {\it cơ chế tự vệ} ({\it defending mechanism}) do sợ hãi vì bị ngược đãi trước đây dần dịu đi, ánh mắt cũng dần dịu xuống rồi nhìn bạn 1 cách trìu mến. Tôi thường có thể vuốt ve 1 chú chó hoang 1 cách dễ dàng sau khi gặp chúng trong tầm 10 phút đến nửa tiếng. Trong khoảng thời gian đó, tôi cố thiết lập sự tin tưởng ở chúng đối với tôi. Các người huấn luyện chó nói riêng hoặc động vật nói chung thường hiểu rất rõ ngôn ngữ cơ thể \& ánh mắt dịu dàng, đầy ắp sự quan tâm là 2 trong những điều quan trọng nhất khi tiếp xúc với 1 con vật hoang bị ngược đãi. Chúng mất lòng tin ở cả đồng loại \& ở con người. Bạn cần thời gian để xoa dịu nỗi đau ở chúng. {\it Establish the real trust \& then the loyalty will naturally follow as a reward that you deserve}. It is 1 of the most obvious but easy-to-ignore rule in the natural world of animals. Có thể tôi chỉ là 1 con vật độc ác nào đấy được{\tt/}bị vài người thầy của tôi trước đây ví von như trên kênh Discovery Channel. Nhưng đối với lũ chó hoang thì tôi là ân nhân của chúng.
@@ -4951,7 +4963,7 @@ Con người thì khác. Nhiều người lạ lắm. Có vài người bạn ch
 
 Nếu bạn bắt nạt 1 chú chó, được ai đó hay chính bạn nuôi hoặc chó hoang, thì chúng tôi sẽ gọi ngay cho {\sf John Wick}\footnote{\href{https://www.imdb.com/title/tt2911666}{\it John Wick} (2014), \href{https://www.imdb.com/title/tt4425200}{\it John Wick: Chapter 2} (2017), \href{https://www.imdb.com/title/tt6146586}{\it John Wick: Chapter 3 -- Parabellum} (2019), \href{https://www.imdb.com/title/tt10366206}{\it John Wick: Chapter 4} (2023). Let's see when this film series ends, \& {\it Fast \& Furious} series also.} đóng bởi tài tử {\sc Keanu Reeves} tới xử bạn: 1 lần \& mãi mãi. Mở rộng điều tương tự cho các động vật khác.
 
-\subsubsection{On rat race -- Bàn về cuộc đua chuột}
+\subsection{On rat race -- Bàn về cuộc đua chuột}
 
 ``{\it``The Town Mouse \& the Country Mouse''} is 1 of \href{https://en.wikipedia.org/wiki/Aesop%27s_Fables}{Aesop's Fables}.'' -- \href{https://en.wikipedia.org/wiki/The_Town_Mouse_and_the_Country_Mouse}{Wikipedia{\tt/}The Town Mouse \& the Country Mouse}.
 
@@ -4988,7 +5000,7 @@ Hồng thì lúc nào cũng giúp Trinh. Nhưng Trinh thì  coi việc được 
 
 Hồng lại thêm 1 lần nữa thất vọng trong việc giúp đỡ người khác. Hắn vẫn chưa tởn. Nhìn cái mối quan hệ Trường--Trinh đầy phức tạp\footnote{Thêm nhân vật Trung ăn cắp sách nữa: Cái quái gì đang xảy ra với mấy đứa tên chữ `Tr' lứa sinh năm 1995--1996 thế hả {\sc Malcom Gladwell}?}, Hồng chợt nhớ tới chị {\sf Phương [26; 2nd-year mathematics PhD student in algebraic]} hồi ở Pháp. Hồng giúp Phương thì Phương thù, Phương ghét, Phương khinh, Phương đạp. {\sf Thọ [26; 3rd-year mathematics PhD student in mathematical physics]} hại Phương, thao túng tâm lý Phương thì Phương thờ, Phương phụng. Trinh cũng thế. Chả đâu vào đâu. Những cái thiên kiến, định kiến mệt mỏi của cuộc đời khiến Hồng chả muốn tiếp tục làm người tốt. Nhưng cái lõi của Hồng là người tốt, hoặc ít nhất mẹ hắn nắn hắn thế. Thành ra Hồng mệt mỏi trong chuyện làm người, sống như 1 con người đúng nghĩa. Lòng tốt thì bị khinh. Còn bị, à nhầm, được thao túng tâm lý thì phê lắm, sướng lắm, như kiểu máu M, cứ sáp vô kẻ hãm hại hoặc kẻ thao túng như hiệu ứng Stockholm khi mà con tin bị bắt cóc dần yêu kẻ bắt cóc \& không thể tách rời được. Tâm lý con người quả là 1 mớ hỗ lốn đầy khó hiểu, muốn hiểu thì lại nhức đầu, rồi chả đâu vào đâu, ấy vậy mà 1 phần nhân cách của con chuột quê như Hồng lại quyết định trở thành nhà Tâm lý học rồi quyết tâm làm điều đó. Thế mới hài. {\it Just another serious joke in the $\infty$ series of jokes}. Just let me inherit a small piece of your huge legacy, {\sc David Foster Wallace}.
 
-\subsubsection{On hatred vs. forgiveness -- Bàn về lòng căm hận vs. sự tha thứ}
+\subsection{On hatred vs. forgiveness -- Bàn về lòng căm hận vs. sự tha thứ}
 
 \begin{quote}
 	{\sf Hồng [24--25; depressed mathematics PhD student in Optimization]}: Tôi ghét thầy hướng dẫn người Đức của tôi cực. Tôi bỏ bao nhiêu công sức ra làm cho ổng mà ổng phá ngấm ngầm hết lần này tới lần khác. Vậy mà tôi còn biết ơn \& thậm chí ngưỡng mộ ổng nữa. Sau này nếu có quay lại địa hạt Toán học, tôi sẽ lao đầu vào làm Toán chừng nào nhiều trích dẫn hơn mấy chục năm làm Toán của ông ta mới thôi. Thế tôi mới hả dạ. Chỉ có thể tôi mới sống tiếp 1 cách đàng hoàng được.
@@ -5004,18 +5016,18 @@ Hồng lại thêm 1 lần nữa thất vọng trong việc giúp đỡ người
 	{\sf Hồng [28; wibu \& psychologist \& phisopher]}: Khi cậu tiến lên 1 nền tảng về nhận thức cao hơn, cậu sẽ không còn căm hận các kẻ thù của cậu nữa. Không phải vì cậu tỏ vẻ thương hại họ để tự lừa dối bản thân, nhằm che đậy phức cảm tự ti (inferiority complex) 1 cách sợ hãi \& dữ dằn như 1 con mèo mẹ hoang xù lông lên khi cậu cố bắt con của nó, \& bợ đít cái phức cảm thượng đẳng (superiority complex) để tỏ ra 1 cách đầy giả tạo kiểu cậu đã trở thành dạng thánh thần, đã đạt tới cảnh giới Niết bàn trong Phật giáo. Cậu phải hiểu rằng chả có Niết bàn nào ở đây cho cậu cả. Đơn giản là khi cậu tiến lên 1 nền tảng về nhận thức cao hơn, cậu sẽ thấu hiểu vì sao các kẻ thù của cậu lại làm thế với cậu, tại sao họ hại cậu \& giúp cậu tự hại cậu, cậu hiểu nguyên nhân về tâm lý của từng đối tượng ấy 1 khi cậu đã rành đường trong địa hạt Tâm Lý Học (Psychology $\Psi$), rồi cậu hiểu nguyên nhân sâu xa hơn về mặt xã hội 1 khi cậu rành đường hơn trong địa hạt Xã Hội Học (Sociology), cậu sẽ bắt đầu tha thứ cho họ, để có thể tha thứ cho bản thân cậu. Thay vì tiếp tục cảm thấy hận thù, cậu thấy tội nghiệp cho họ, hệt như cái cách mà {\sf Itadori Yuji} tội nghiệp nguyền hồn {\sf Ryomen Sukuna} trong {\it Jujutsu Kaisen -- Chú Thuật Hồi Chiến} trước khi hủy diệt hắn vậy. This is the Ultimate Empathy -- lòng thấu cảm tột cùng. Tiến lên 1 nền tảng cao hơn đơn giản là việc cậu rành đường ở nhiều địa hạt quan trọng khác nhau thay vì cứ lạc lối trong tâm trí \& linh hồn của cậu. Tới đây cậu đã bớt lạc đường hơn, không còn sợ bị bỏ rơi nữa thì cũng có lẽ là lúc cậu phải tự bước đi trên đôi chân của mình \& gánh vác các tránh nhiệm cần thiết trên đôi vai của cậu, dẫu chúng có nhỏ bé \& yếu ớt tới mức nào đi chăng nữa. You have to go there to see it, to feel it, \& then to live with it, the Tree of Life in {\it Attack on Titan}. But in order to go there, you have to live, to work, to think, to reflect yourself, to balance between living \& working, to feel the flow of this life, all the pains inside it, also all the loves inside it. You must practice day by day. You will get there at the end of your life in this physical world $\mathbb{R}^3$, before transferring to another realms of the soul if there is any.
 \end{quote}
 
-\subsection{The last moonwalk in the Inferno -- Điệu nhảy moonwalk cuối cùng ở Hỏa Ngục}
+\section{The last moonwalk in the Inferno -- Điệu nhảy moonwalk cuối cùng ở Hỏa Ngục}
 
-\paragraph*{Dark triad -- Bộ 3 đen tối.} Những kẻ ái kỷ cần học cách quan tâm, yêu thương người khác cho dù họ không có bất cứ cảm giác chân thành nào. Những kẻ xảo quyệt cần bớt gian xảo \& học cách cư xử thành thật hơn. Những kẻ chống đối xã hội nên tập chung tay xây dựng cộng đồng, dù chỉ là đạo đức giả, nhưng quan trọng là hành động. Những kẻ thái nhân cách nên bớt hãm hại người khác 1 cách tàn độc. 3 ba đen tối nên học cách giúp đỡ, thấu hiểu người khác, tập cảm nhận niềm tin, lòng chân thành, sự thấu cảm để cải thiện nhân cách \& các thiếu sót về mặt cấu trúc, chức năng của não bộ theo khía cạnh Khoa học Thần kinh để hòa nhập với cộng đồng theo xu hướng tích cực cho cả bản thân \& cho cộng đồng mà họ có ảnh hưởng tới.
+\subsubsection*{Dark triad -- Bộ 3 đen tối.} Những kẻ ái kỷ cần học cách quan tâm, yêu thương người khác cho dù họ không có bất cứ cảm giác chân thành nào. Những kẻ xảo quyệt cần bớt gian xảo \& học cách cư xử thành thật hơn. Những kẻ chống đối xã hội nên tập chung tay xây dựng cộng đồng, dù chỉ là đạo đức giả, nhưng quan trọng là hành động. Những kẻ thái nhân cách nên bớt hãm hại người khác 1 cách tàn độc. 3 ba đen tối nên học cách giúp đỡ, thấu hiểu người khác, tập cảm nhận niềm tin, lòng chân thành, sự thấu cảm để cải thiện nhân cách \& các thiếu sót về mặt cấu trúc, chức năng của não bộ theo khía cạnh Khoa học Thần kinh để hòa nhập với cộng đồng theo xu hướng tích cực cho cả bản thân \& cho cộng đồng mà họ có ảnh hưởng tới.
 
-\paragraph*{Teacher-student relationship -- tình sư trò.} I will continue your legacies (i.e., inherit, develop, \& upgrade like a developer), all of my teachers, \& then I will find someone to continue mine. So, now I need to built my legacy. I am building it. Someone will inherit it someday. \& his{\tt/}her students will inherit his{\tt/}hers. Life goes on \& on. Goodness \& positivity need spreading on this Earth, in human communities in particular \& in the whole human society in general, \& in the animal kingdoms, through realms of Psychology $\Psi$, Philosophy $\Phi$, \& Spirituality.
+\subsubsection*{Teacher-student relationship -- tình sư trò.} I will continue your legacies (i.e., inherit, develop, \& upgrade like a developer), all of my teachers, \& then I will find someone to continue mine. So, now I need to built my legacy. I am building it. Someone will inherit it someday. \& his{\tt/}her students will inherit his{\tt/}hers. Life goes on \& on. Goodness \& positivity need spreading on this Earth, in human communities in particular \& in the whole human society in general, \& in the animal kingdoms, through realms of Psychology $\Psi$, Philosophy $\Phi$, \& Spirituality.
 
 Tôi sẽ tiếp tục các di sản của tất cả thầy cô của tôi, i.e., tôi sẽ kế thừa, phát triển, \& nâng cấp chúng lên, \& rồi tôi sẽ tìm ai đó để kế thừa các di sản của tôi (các học trò của tôi). Cho nên bây giờ tôi nên bắt đầu xây dựng di sản của mình. Tôi đang làm điều đó. Ai đó rồi sẽ kế thừa nó vào 1 ngày nào đó. \& các học sinh, sinh viên của (những) người đó sẽ tiếp tục kế thừa các di sản của người đó. Cuộc sống cứ thế tiếp diễn. Các điều tốt lành \& tích cực cần được lan truyền rộng rãi trên Trái Đất này, trong các cộng đồng loài người nói riêng \& tổng thể xã hội loài người nói chung, \& trong các vương quốc của loài vật, xuyên qua các địa hạt của Tâm Lý Học $\Psi$, Triết Học $\Phi$, \& Tâm Linh Học.
 
 %------------------------------------------------------------------------------%
 
-\section{Miscellaneous -- Linh tinh}
-
+\chapter{Miscellaneous -- Linh tinh}
+\minitoc
 \begin{question}[Dehumanization operator: Human $\mapsto$ Animal]
 	Nếu bạn tự miêu tả bản thân mình thông qua 1 con vật trong thế giới động vật, không phải con người, hoặc mong muốn trở thành 1 con vật thì bạn sẽ chọn con gì?
 \end{question}
@@ -5026,7 +5038,7 @@ Tôi sẽ tiếp tục các di sản của tất cả thầy cô của tôi, i.e
 	{\sf Hồng [28--?; psychologist \& philosopher]}: Tôi nghĩ tôi muốn hóa kiếp thành 1 con trùng biến hình như trong Pokémon để có thể hóa thân thành bất cứ con gì để thấu hiểu loài động vật đó rồi sau đó hóa thân thành thiên địch tương ứng nếu cảm thấy cần thiết. Trùng biến hình tương tự như dòng nước, nhưng tự thân hữu hình, i.e., bản thân con trùng biến hình có thể tự quyết định hình dáng mà nó muốn biến đổi, không như Nước, phải như vật đựng (container) để quyết định hình dạng của 1 lượng nước nhất định.
 \end{quote}
 
-\subsection{Keywords \& phrases -- Các từ khóa \& các cụm từ}
+\section{Keywords \& phrases -- Các từ khóa \& các cụm từ}
 Cái mục gọi là {\it Keywords} này thường được đặt ở đầu văn bản, ngay sau phần Abstract -- Tóm tắt nội dung trong các bài báo khoa học hoặc các bài viết Khoa học. Tuy nhiên, đây là tiểu thuyết hư cấu, thành ra mục này nên được đặt ở cuối tiểu thuyết để bảo toàn yếu tố ngạc nhiên (surprise factor of novels).
 
 \noindent{\bf Keywords \& phrases -- Các từ khóa \& các cụm từ.} 
@@ -5045,7 +5057,7 @@ Cái mục gọi là {\it Keywords} này thường được đặt ở đầu v�
 	\end{enumerate}
 \end{itemize}
 
-\subsection{Some future plans -- Vài dự định tương lai}
+\section{Some future plans -- Vài dự định tương lai}
 Có nhiều chủ đề khác về việc học, việc dạy, \& nghề nghiên cứu chưa được bàn đến trong tiểu thuyết hư cấu này. 1 trong số chúng bao gồm:
 \begin{itemize}
 	\item Vài suy nghĩ về tình yêu lứa đôi (e.g., trai--gái, trai--trai, gái--gái, etc.).
@@ -5060,7 +5072,8 @@ Có nhiều chủ đề khác về việc học, việc dạy, \& nghề nghiên
 
 %------------------------------------------------------------------------------%
 
-\section{Acknowledgment -- Lời tri ân}
+\chapter{Acknowledgment -- Lời tri ân}
+\minitoc
 We, the authors, apologize to save this part for the last. Set the {\it acknowledgment switch variable} is $\delta_{\rm ack}$. Đặt {\it biến công tắc cảm ơn} là $\delta_{\rm ack}$\footnote{Distinguished with {\sc Mikasa Ackerman} or {\sc Levi Ackerman} in {\it Attack on Titan}.}.
 
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
@@ -5086,7 +5099,8 @@ Bạn đọc có thể dễ dàng nhận thấy đây là 1 chủ đề vô cùn
 
 %------------------------------------------------------------------------------%
 
-\section{Lists -- Các Danh Sách}
+\chapter{Lists -- Các Danh Sách}
+\minitoc
 We, the authors, love making \st{love} lists. We are list lovers. Chúng tôi, 2 tác giả, thích tạo ra các danh sách.
 
 Trong phần này, chúng tôi liệt kê vài danh sách quan trọng sau:
@@ -5097,7 +5111,7 @@ Trong phần này, chúng tôi liệt kê vài danh sách quan trọng sau:
 	\item A summary list of $\Psi$-theorems, $\Phi$-theorems -- Danh sách tổng hợp các ``định lý'' về tâm lý \& triết học
 \end{itemize}
 
-\subsection{A summary list of goals -- Danh sách tổng hợp các mục tiêu}
+\section{A summary list of goals -- Danh sách tổng hợp các mục tiêu}
 
 \begin{goal}[Mental maps -- Các tấm bản đồ tinh thần]
 	Quyển sách này là 1 quyển sách nhỏ nói về các quyển sách mà 2 tác giả cho là cần thiết đối với học sinh cấp 2 bắt đầu tuổi dạy thì, học sinh cấp 3 chuẩn bị bước vào trường Đại học hoặc trường đời hoặc cả 2, cho các sinh viên mới ra trường bắt đầu hoang mang kiếm việc làm, cũng như 1 tài liệu tham khảo dành cho quý phụ huynh, quý thầy cô, những người quan tâm đến giáo dục con cái, trẻ em, học sinh, sinh viên của mình. Quyển sách đóng vai trò như 1 cái Google Map, nhưng không phải về Địa Lý trong thế giới Vật Lý, mà trong thế giới của Tâm Trí để giúp các bạn trẻ không bị lạc đường, đặc biệt là các bạn thiếu sự quan tâm, tình thương của cha mẹ, \& các bạn mất cha hoặc mẹ hoặc cả 2. Quyển sách cũng nhằm mục đích cho các bạn học sinh, sinh viên, nghiên cứu viên có 1 cái nhìn thực tế để mường tượng ra được rìa bên kia thế giới, ý là du học, chứ không phải siêu thoát.
@@ -5116,13 +5130,13 @@ Surely, I will die some day, soon or late, but I want that my soul becomes immor
 	{\sf[en]$\to$[vi]} Tôi, một người phàm, muốn linh hồn tôi trở nên bất tử trong trái tim của những ai đã giúp đỡ tôi, biết đến tôi và những thế hệ tiếp theo.
 \end{goal}
 
-\subsection{A summary list of principles -- Danh sách tổng hợp các nguyên lý}
+\section{A summary list of principles -- Danh sách tổng hợp các nguyên lý}
 
 \begin{principle}[Principle of positivity non-conservation -- Nguyên lý về sự không bảo toàn của tính tích cực]
 	If there is a huge loss of psychological positivity that a person has tried to generate \& spread to other people around that person, then there exists at least a psychological manipulator in the role of the psychological Black Hole with the purpose of destroying all the positivities \& generating negativities \& then spread to people surrounding that psychological manipulated victim.
 \end{principle}
 
-\subsection{A summary list of rules -- Danh sách tổng hợp các nguyên tắc}
+\section{A summary list of rules -- Danh sách tổng hợp các nguyên tắc}
 
 \begin{enumerate}
 	\item {\it On judgment -- Bàn về phán xét.} Không phán xét, công kích, e.g., dí trên mạng xã hội, bất cứ ai. Cũng không áp đặt ai, thậm chí cả việc áp đặt ai đó không được áp đặt người khác. Tạo cho người khác 1 cảm giác thoải mái tối thiểu khi tiếp xúc.
@@ -5137,7 +5151,7 @@ Surely, I will die some day, soon or late, but I want that my soul becomes immor
 	\item {\it On deserving responsibility -- Bàn về sự xứng đáng về trách nhiệm.} Only take responsibility for whom deserved your responsibility. -- Chỉ chịu trách nhiệm cho ai xứng đáng với trách nhiệm của bạn.
 \end{enumerate}
 
-\subsection{A summary list of $\Psi$-theorems, $\Phi$-theorems -- Danh sách tổng hợp các ``định lý'' về tâm lý \& triết học}
+\section{A summary list of $\Psi$-theorems, $\Phi$-theorems -- Danh sách tổng hợp các ``định lý'' về tâm lý \& triết học}
 
 \begin{psy-theorem}[Eidetic memory $+$ critical thinking $+$ integrity vs. $\Psi$-manipulation]
 	A combination of eidetic memory, a sharp critical thinking, \& a high enough integrity is a natural enemy of psychological manipulation. Consequently, eidetiker with a sharp critical thinking \& a high enough integrity is a natural enemy of psychological manipulators.
@@ -5149,8 +5163,8 @@ Surely, I will die some day, soon or late, but I want that my soul becomes immor
 	Cố gắng cho đi những người cần sự giúp đỡ của bạn \& xứng đáng với nó, cùng sự phòng thủ đối với các nhân cách độc hại, e.g., các kẻ thao túng tâm lý, bộ 3 đen tối (kẻ ái kỷ, kẻ chống đối xã hội, kẻ thái nhân cách), cố gắng học từ các nỗi đau trong quá khứ \& hiện tại, chấp nhận các nỗi đau sẽ tới trong tương lai, đi thăng bằng trên chiếc xe đạp của {\sc Albert Einstein}, với thanh thăng bằng có 1 bên là đạo đức, 1 bên là lương tâm, cố gắng tối ưu hóa việc tạo ra sự tích cực của cá nhân cho cuộc sống của cộng đồng mà bạn có ảnh hưởng tích cực tới.
 \end{psy-theorem}
 
-\section{Authors Bibliography -- Đôi điều về các tác giả}
-
+\chapter{Authors Bibliography -- Đôi điều về các tác giả}
+\minitoc
 \begin{enumerate}
 	\item {\sc Nguyễn Quản Bá Hồng} (1996--?): Tự thân vận động để đậu lớp chuyên Toán khóa 2011--2014 dưới sự ngăn cấm thi trường chuyên của cha mẹ do hoàn cảnh nghèo rớt mồng $\ldots$, à nhầm, không có cọng mồng tơi để rớt của gia đình. Kẻ hủy diệt ngôn ngữ (Vietnamese Literary Destroyer) khiến gần như tất cả các giáo viên dạy Văn của trường chuyên đều ghét, hoặc ít nhất là không ưa. Kẻ dốt tiếng Anh (English Destroyer) nên được học bổng du học mà chưa có bằng {\sc Ielts} hay {\sc Toefl}. May mắn được phép học Thạc sĩ năm cuối, bỏ Thạc sĩ năm đầu (straight into Master 2, skipped Master 1) ở Đại học Rennes 1 (University of Rennes 1\footnote{Universit\'e de Rennes 1: \url{https://www.univ-rennes.fr/}.}, France) trong lớp ENS của Rennes \& ENS Paris trộn lại. Tiến sĩ Toán Tối Ưu {\it hụt} tại Đại học Humboldt ở Berlin, Đức (Humboldt University of Berlin\footnote{Humboldt-Universität zu Berlin: \url{https://www.hu-berlin.de/en}.}) khi còn làm việc ở Viện Weierstrass (Weierstrass Institute for Applied Analysis \& Stochastics\footnote{Weierstraß-Institut für Angewandte Analysis und Stochastik: \url{https://www.wias-berlin.de/}.}) với sự hỗ trợ của quỹ Marie--Curie -- 1 trong những quỹ khoa học danh giá bậc nhất châu {\sc âu}.
 	
@@ -5175,7 +5189,7 @@ Surely, I will die some day, soon or late, but I want that my soul becomes immor
 	\item {\sc Nguyễn Quản Trung Nhân} (?--?): Classified information (?) -- thông tin tuyệt mật (?). You can read some from this book, but there is no information given further.
 \end{enumerate}
 
-\subsection{Versions -- Các phiên bản}
+\section{Versions -- Các phiên bản}
 Bạn đọc có thể truy cập lịch sử cập nhật, cùng các phiên bản trước đó nếu có 1 sự hiểu biết tối thiểu về công cụ quản lý phiên bản Git hoặc chịu khó mò mẫm đủ lâu.
 \begin{itemize}
 	\item The last updated version of this short novel is stored at the following (permanent?\footnote{This permanence depends on the fact that stalkers such as {\sf Trung [21], Trinh [27]}, \& {\sf Axel Kr\"oner [$\approx$ 45--50]} in this short novel still like to invade personal \& private account to see all secrets of someone, e.g., the authors of this fictional novel, \& then decide to delete some files or destroy all repositories again. {\it What the hell is so wrong with this modern world filled with full of stalkers \& destroyers?}}) link:\\{\sc url}: {\sf\small\url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/learning_teaching_research/NQBH_on_learning_teaching_research.pdf}}.
@@ -5192,12 +5206,12 @@ Tiểu thuyết này có 3 phiên bản với 3 cỡ chữ (3 different font siz
 	\item 12pt (mainly used to distribute novels): \href{https://github.com/NQBH/elementary_STEM_beyond/blob/main/learning_teaching_research/NQBH_on_learning_teaching_research_12pt.pdf}{\it Some Thoughts On Learning, Teaching, \& Research: A Short Novel -- Vài Suy Nghĩ Về Việc Học, Việc Dạy, \& Nghề Nghiên Cứu: 1 Tiểu Thuyết Ngắn: 12pt version}\footnote{{\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/learning_teaching_research/NQBH_on_learning_teaching_research_12pt.pdf}.}: dành cho người cao tuổi mắt kém.
 \end{itemize}
 
-\subsection{Price -- Giá bán}
+\section{Price -- Giá bán}
 Tiểu thuyết này cùng các tài liệu liên quan được bán với giá $x$ VND{\tt/}\${\tt/}\texteuro, với $x\in[0,\infty)$ là 1 số thực không âm, i.e., muốn trả bao nhiêu cũng được, tùy vào đánh giá độ hay, độ hữu ích theo nhu cầu, nhận thức, \& thị hiếu của bạn đọc.
 
 {\it Lý do}: Nếu $x < 0$ thì bỏ 1 đống công sức ra phá sản thì không được thông minh cho lắm, không xứng đáng để dạy Toán \& đầu tư kinh doanh cho các lứa học sinh, sinh viên trong tương lai. Nên các tác giả từ chối bán với giá là 1 số thực âm. Còn nếu $x\in\mathbb{C}\backslash\mathbb{R}$, tức 1 số tiền ảo không thuần thực, i.e., $x = a + bi$ với $a\in\mathbb{R},b\in\mathbb{R}^\star\coloneqq\mathbb{R}\backslash\{0\}$ thì phải xem lại `đồng tiền ảo' như Bitcoin, hay tệ hơn là Luna Coin xài được hay lâu dài hay không.
 
-\subsection{Donation{\tt/}Payment -- Quyên góp{\tt/}Thanh toán}
+\section{Donation{\tt/}Payment -- Quyên góp{\tt/}Thanh toán}
 Note: `Thanh toán' ở đây có object là `tiền', `phí', chứ không phải ``thanh toán 1 ai đó''.
 \vspace{2mm}
 
