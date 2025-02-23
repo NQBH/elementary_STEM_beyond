@@ -55,14 +55,14 @@
 	\begin{itemize}
 		\item {\it Problem: Probability \& Statistics -- Bài Tập: Xác Suất \& Thống Kê}.
 		
-		PDF: {\sc url}: \url{.pdf}.
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/probability_statistics/problem/NQBH_probability_statistics_problem.pdf.pdf}.
 		
-		\TeX: {\sc url}: \url{.tex}.
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/probability_statistics/problem/NQBH_probability_statistics_problem.tex}.
 		\item {\it Problem \& Solution: Probability \& Statistics -- Bài Tập \& Lời Giải: Xác Suất \& Thống Kê}.
 		
-		PDF: {\sc url}: \url{.pdf}.
+		PDF: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/probability_statistics/problem/NQBH_probability_statistics_solution.pdf}.
 		
-		\TeX: {\sc url}: \url{.tex}.
+		\TeX: {\sc url}: \url{https://github.com/NQBH/elementary_STEM_beyond/blob/main/elementary_mathematics/grade_10/probability_statistics/problem/NQBH_probability_statistics_solution.tex}.
 	\end{itemize}
 \end{abstract}
 \tableofcontents
@@ -75,7 +75,20 @@
 %------------------------------------------------------------------------------%
 
 \section{Các Số Đặc Trưng Đo Xu Thế Trung Tâm Cho Mẫu Số Liệu Không Ghép Nhóm}
-\fbox{1} {\it Số trung bình cộng} (average) của 1 mẫu $n\in\mathbb{N}^\star$ số liệu thống kê bằng tổng của các số liệu chia cho số các số liệu đó. Số trung bình cộng của mẫu số liệu $x_1,\ldots,x_n$ bằng $\overline{x} = \frac{1}{n}\sum_{i=1}^n x_i = \dfrac{x_1 + \cdots + x_n}{n}$.
+\fbox{1} {\it Số trung bình cộng} (average{\tt/}mean value) của 1 mẫu $n\in\mathbb{N}^\star$ số liệu thống kê bằng tổng của các số liệu chia cho số các số liệu đó. Số trung bình cộng của mẫu số liệu $x_1,\ldots,x_n$ bằng $\overline{x} = \frac{1}{n}\sum_{i=1}^n x_i = \dfrac{x_1 + \cdots + x_n}{n}$. Số trung bình cộng của mẫu số liệu thống kê trong bảng phân bố tần số \& bảng phân bố tần số tương đối lần lượt là:
+\begin{equation*}
+	\overline{x} = \dfrac{\sum_{i=1}^k n_ix_i}{\sum_{i=1}^k n_i} = \dfrac{n_1x_1 + \cdots + n_kx_k}{n_1 + \cdots + n_k} = \sum_{i=1}^k f_ix_i\mbox{ với } f_i = \dfrac{n_i}{n},\ \forall i = 1,\ldots,k,\ n = \sum_{i=1}^k n_i.
+\end{equation*}
+{\it Ý nghĩa}: Khi các số liệu trong mẫu ít sai lệch với số trung bình cộng, có thể giải quyết được vấn đề bằng cách lấy số trung bình cộng làm đại diện cho mẫu số liệu. \fbox{2} 
+
+%------------------------------------------------------------------------------%
+
+\section{Các Số Đặc Trưng Đo Mức Độ Phân Tán Cho Mẫu Số Liệu Không Ghép Nhóm}
+\fbox{1} Trong 1 mẫu số liệu, {\it khoảng biến thiên} là hiệu số giữa GNLN $x_{\max}$ \& GTNN $x_{\min}$ của mẫu số liệu đó. Công thức tính khoảng biến thiên $R$ của mẫu số liệu: $R = x_{\max} - x_{\min}$. Gọi $Q_1,Q_2,Q_3$ là tứ phân vị của mẫu số liệu, {\it khoảng tứ phân vị} của mẫu số liệu đó: $\Delta_Q\coloneqq Q_3 - Q_1$. Khoảng tứ phân vị của mẫu số liệu còn được gọi là {\it khoảng trải giữa} (InterQuartile Range -- IQR) của mẫu số liệu đó. \fbox{2} Cho mẫu số liệu thống kê có $n\in\mathbb{N}^\star$ giá trị $x_1,\ldots,x_n$ \& số trung bình cộng là $\overline{x}$, gọi $s^2 = \frac{1}{n}\sum_{i=1}^n (x_i - \overline{x})^2$ là {\it phương sai} của mẫu số liệu trên.
+
+%------------------------------------------------------------------------------%
+
+\section{Xác Suất Của Biến Cố Trong Vài Trò Chơi Đơn Giản}
 
 %------------------------------------------------------------------------------%
 
