@@ -8,6 +8,14 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,glossaries,graphicx,mathtools,minitoc,multicol,musicography,soul,subfig,tikz,tipa}
 \usepackage[version=4]{mhchem}
+\usepackage{fancyhdr}
+\renewcommand{\chaptermark}[1]{%
+	\markboth{#1}{}}  
+\fancyhf{} % clear header and footer fields
+%\ifthenelse{\boolean{@tufte@twoside}}
+{\fancyhead[LE]{\thepage\quad\smallcaps{\newlinetospace{\plaintitle}}}%
+	\fancyhead[RO]{\smallcaps{\newlinetospace{\chaptername{}~\thechapter. \leftmark}}\quad\thepage}}
+{\fancyhead[RE,RO]{\smallcaps{\newlinetospace{\chaptername{}~\thechapter. \leftmark}}\quad\thepage}}
 \makeglossaries
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
@@ -48,7 +56,7 @@
 }
 
 \title{Some Thoughts On Learning, Teaching, {\it\&} Research\\Vài Suy Nghĩ Về Việc Học, Việc Dạy, {\it\&} Nghề Nghiên Cứu\\{\Large\sf A Short Novel -- 1 Tiểu Thuyết Ngắn}}
-\author{\sc Nguyễn Quản Bá Hồng\footnote{A Scientist {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}\and\sf Nguyễn Quản Trung Nhân\footnote{In the Void (?): Classified information (?).}}
+\author{\sc Nguyễn Quản Bá Hồng\footnote{A Scientist- {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}\and\sf Nguyễn Quản Trung Nhân\footnote{In the Void (?): Classified information (?).}}
 \date{Version{\tt/}Updated to \today}
 
 \begin{document}
@@ -59,6 +67,8 @@
 \tableofcontents
 
 \chapter*{Preface}
+
+\section*{Abstract}
 {\sf[en]} This short novel consists of some pieces of my writing, which are able to be shared {\it\&} I am willing to share, in order to sharpen my flows of thoughts, to balance my scientific work via various aesomethingetic forms, {\it\&} to track psychologically \& mentally my transitions from boyhood to manhood if there is any.
 \vspace{2mm}
 
@@ -69,6 +79,15 @@
 \vspace{2mm}
 
 \noindent{\sf[de]} Dieser Kurzroman besteht aus einigen Teilen meines Schreibens, die geteilt werden können {\it\&} Ich bin bereit, sie zu teilen, um meine Gedankenflüsse zu schärfen, meine wissenschaftliche Arbeit durch verschiedene äsomethingetische Formen auszubalancieren, {\it\&} um meine Übergänge vom Jungen- zum Mannesalter psychologisch und mental zu verfolgen, falls es welche gibt.
+
+\section*{Audiences}
+Tiểu thuyết này hướng đến các đối tượng độc giả sau:
+\begin{itemize}
+	\item Học sinh cấp 2 \& cấp 3, đặc biệt là học sinh thuộc các lớp chuyên của các môn Khoa Học Tự Nhiên, bao gồm chuyên Toán, chuyên Lý, chuyên Hóa, \& chuyên Tin.
+	\item Những người theo nghiệp giáo dục, hoặc chỉ đơn giản là quan tâm đến giáo dục vì hứng thú nhất thời.
+	\item Các bậc phụ huynh muốn giáo dục con cái đúng cách nhưng chưa biết cách (không phải bậc phụ huynh nào cũng muốn giáo dục con cái của mình).
+	\item Bất kỳ ai đam mê Tâm Lý Học, Triết Học.
+\end{itemize}
 
 %------------------------------------------------------------------------------%
 
@@ -147,6 +166,7 @@ Chúng tôi, 2 tác giả, trong vai trò người kể chuyện, tuyên bố 1 
 \begin{itemize}
 	\item Bất kỳ tên nhân vật nào trong câu chuyện này đều có thể là thuần hư cấu. Nếu xảy ra bất cứ sự trùng hợp nào, để mà 1 người nào đó ngoài đời thực trong không gian vật lý 3 chiều, tạm ký hiệu là $\mathbb{R}^3$, cảm thấy khó chịu hoặc bị xúc phạm sâu sắc. Chà, thế kỷ này là thời đại tối ưu của giới dễ bị xúc phạm, chúng tôi đoán thế. Chúng tôi có thể xin lỗi nếu cảm thấy cần thiết nhưng từ chối nhận trách nhiệm.
 	\item {\it Cảnh báo}: Tiểu thuyết có chứa các yếu tố tình dục, bạo lực, \& thô tục. Cân nhắc cẩn thận trước khi bạn quyết định đọc. Nếu bạn cảm thấy khó chịu, thậm chí là trầm cảm, chúng tôi, 2 tác giả, không chịu trách nhiệm.
+	\item Tiểu thuyết này do chúng tôi chịu trách nhiệm. Không 1 tổ chức hay cá nhân nào khác cùng chịu trách nhiệm với chúng tôi.
 \end{itemize}
 
 \section{Notation \& convention -- Ký hiệu \& quy ước}
