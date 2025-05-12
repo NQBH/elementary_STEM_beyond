@@ -1,4 +1,4 @@
-\documentclass[12pt,oneside]{book}
+\documentclass[12pt,twoside]{book}
 \usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
 \usepackage[utf8]{vietnam}
 \addbibresource{/home/nqbh/reference/bib.bib}
@@ -9,13 +9,7 @@
 \usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,glossaries,graphicx,mathtools,minitoc,multicol,musicography,soul,subfig,tikz,tipa}
 \usepackage[version=4]{mhchem}
 \usepackage{fancyhdr}
-\renewcommand{\chaptermark}[1]{%
-	\markboth{#1}{}}  
-\fancyhf{} % clear header and footer fields
-%\ifthenelse{\boolean{@tufte@twoside}}
-{\fancyhead[LE]{\thepage\quad\smallcaps{\newlinetospace{\plaintitle}}}%
-	\fancyhead[RO]{\smallcaps{\newlinetospace{\chaptername{}~\thechapter. \leftmark}}\quad\thepage}}
-{\fancyhead[RE,RO]{\smallcaps{\newlinetospace{\chaptername{}~\thechapter. \leftmark}}\quad\thepage}}
+\pagestyle{plain}
 \makeglossaries
 \usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
@@ -56,7 +50,7 @@
 }
 
 \title{Some Thoughts On Learning, Teaching, {\it\&} Research\\Vài Suy Nghĩ Về Việc Học, Việc Dạy, {\it\&} Nghề Nghiên Cứu\\{\Large\sf A Short Novel -- 1 Tiểu Thuyết Ngắn}}
-\author{\sc Nguyễn Quản Bá Hồng\footnote{A Scientist- {\it\&} Creative Artist Wannabe. E-mail: {\tt nguyenquanbahong@gmail.com}. Bến Tre City, Việt Nam.}\and\sf Nguyễn Quản Trung Nhân\footnote{In the Void (?): Classified information (?).}}
+\author{\sc Nguyễn Quản Bá Hồng\footnote{A Scientist- {\it\&} Creative Artist Wannabe. E-mail: {\sf nguyenquanbahong@gmail.com}. Bến Tre \& Hồ Chí Minh Cities, Việt Nam.}\and\sf Nguyễn Quản Trung Nhân\footnote{In the {\sf Null{\tt/}Void} (?): {\tt Classified information (?)}.}}
 \date{Version{\tt/}Updated to \today}
 
 \begin{document}
@@ -64,6 +58,15 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 \dominitoc% Initialization
+% dedication page
+\clearpage
+\begin{center}
+	\thispagestyle{empty}
+	\vspace*{\fill}\it
+	Gửi tặng những đứa trẻ có hoàn cảnh khó khăn nhưng thích học,\\những đứa trẻ nhạy cảm dễ tổn thương trong các gia đình tan vỡ.
+	\vspace*{\fill}
+\end{center}
+\clearpage
 \tableofcontents
 
 \chapter*{Preface}
@@ -80,7 +83,9 @@
 
 \noindent{\sf[de]} Dieser Kurzroman besteht aus einigen Teilen meines Schreibens, die geteilt werden können {\it\&} Ich bin bereit, sie zu teilen, um meine Gedankenflüsse zu schärfen, meine wissenschaftliche Arbeit durch verschiedene äsomethingetische Formen auszubalancieren, {\it\&} um meine Übergänge vom Jungen- zum Mannesalter psychologisch und mental zu verfolgen, falls es welche gibt.
 
-\section*{Audiences}
+Tôi sắp 4 ngôn ngữ mà tôi có cơ hội tiếp xúc trong đời, tiếng Việt (tiếng mẹ đẻ), tiếng Anh, tiếng Pháp, tiếng Đức  Có thể bạn đã chú 
+
+\section*{Targeted Audiences -- Các Đối Tượng Độc Giả Được Hướng Đến}
 Tiểu thuyết này hướng đến các đối tượng độc giả sau:
 \begin{itemize}
 	\item Học sinh cấp 2 \& cấp 3, đặc biệt là học sinh thuộc các lớp chuyên của các môn Khoa Học Tự Nhiên, bao gồm chuyên Toán, chuyên Lý, chuyên Hóa, \& chuyên Tin.
@@ -88,6 +93,9 @@ Tiểu thuyết này hướng đến các đối tượng độc giả sau:
 	\item Các bậc phụ huynh muốn giáo dục con cái đúng cách nhưng chưa biết cách (không phải bậc phụ huynh nào cũng muốn giáo dục con cái của mình).
 	\item Bất kỳ ai đam mê Tâm Lý Học, Triết Học.
 \end{itemize}
+
+\section*{Languages}
+Tiểu thuyết này chủ yếu sử dụng tiếng Việt (ngôn ngữ mẹ đẻ của 2 tác giả), \& tiếng Anh, nhưng đôi lúc có nhiều đoạn hội thoại hoặc câu trích dẫn bằng tiếng Pháp \& tiếng Đức, vì 2 tác giả đã có thời gian du học ở 2 nước này, dù chưa bao giờ có được 1 trải nghiệm du học trọn vẹn \& đúng nghĩa, mà từ từ độc giả sẽ hiểu vì sao 2 tác giả lại nói như vậy trong suốt tiểu thuyết.
 
 %------------------------------------------------------------------------------%
 
